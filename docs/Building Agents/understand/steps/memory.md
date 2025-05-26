@@ -44,4 +44,4 @@ Storing more conversation turns in memory allows the agent to remember more cont
 
 ## Total Character Length Limit
 
-In addition to turn limits, memory has a total character cap to prevent performance issues. This limit is calculated as `500 characters * turn limit`. For example, with the default setting of 25 turns, the total memory length is 12,500 characters. If the memory exceeds this, older messages are removed until the total falls within the limit. Based on our research, only ~1% of conversations ever reach this limit.
+In addition to turn limits, memory has a total character cap to prevent performance issues. This limit is calculated as `500 characters * turn limit`. For example, with the default setting of 25 turns, the total memory length is 12,500 characters. If the memory exceeds this, older messages are removed until the total falls within the limit. Based on our research, only \~1% of conversations ever reach this limit.
