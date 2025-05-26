@@ -38,10 +38,10 @@ You can also invite users by a **Magic Link**. The magic link is just a URL that
 
 Each team member can be assigned the following roles, which come with the pre-set permissions:
 
-- **Viewer** - Can view, test and comment on assistants. (These are free unlimited seats on all plans).
-- **Editor** - Can do all the functions of a Viewer, plus ability to modify & edit the designs of assistants, access editors, upload, and export assistants.
-- **Admin** - Can do all the functions of an Editor, plus manage workspace settings, payment, and assign other team members to the role of Admin.
-- **Billing** - Can do all the functions of a Viewer, plus manage payment. (These are free seats on all plans).
+* **Viewer** - Can view, test and comment on assistants. (These are free unlimited seats on all plans).
+* **Editor** - Can do all the functions of a Viewer, plus ability to modify & edit the designs of assistants, access editors, upload, and export assistants.
+* **Admin** - Can do all the functions of an Editor, plus manage workspace settings, payment, and assign other team members to the role of Admin.
+* **Billing** - Can do all the functions of a Viewer, plus manage payment. (These are free seats on all plans).
 
 ## Adding and Removing Seats
 
