@@ -14,20 +14,20 @@ next:
 
 The Knowledge Base is a repository and management system for content that your AI Agent uses to provide accurate and contextually relevant responses. It allows you to:
 
-- Store and organize information your agent can reference
-- Provide context for more accurate and relevant responses
-- Easily update and maintain your agent's knowledge
+* Store and organize information your agent can reference
+* Provide context for more accurate and relevant responses
+* Easily update and maintain your agent's knowledge
 
 ## Supported Data Types and Best Practices
 
 Voiceflow's Knowledge Base supports various data types, but for optimal performance, consider the following recommendations:
 
-- Text-based Documents: These are the most preferred format for the Knowledge Base.
-  - Plain text (.txt) files are also excellent choices.
-- Web Documents: HTML and other web-based formats are generally well-parsed and can be good options.
-- PDFs: While PDFs are supported, they are not the ideal format for the Knowledge Base.
-  - PDF parsers generally don't perform as well as text-based document parsers.
-  - When possible, convert PDF content to plain text before uploading.
+* Text-based Documents: These are the most preferred format for the Knowledge Base.
+  * Plain text (.txt) files are also excellent choices.
+* Web Documents: HTML and other web-based formats are generally well-parsed and can be good options.
+* PDFs: While PDFs are supported, they are not the ideal format for the Knowledge Base.
+  * PDF parsers generally don't perform as well as text-based document parsers.
+  * When possible, convert PDF content to plain text before uploading.
 
 ### Advanced Knowledge Base Formats
 
@@ -39,11 +39,11 @@ The tabular data format is useful for structured information and allows for more
 
 **Key Features:**
 
-- Structured data representation in rows and columns
-- Ability to add detailed metadata and tags to each entry
-- Enhanced control over searchable fields
-- Improved precision in data retrieval
-- Example Structure: Here's how you might structure credit card application information using the tabular data format:
+* Structured data representation in rows and columns
+* Ability to add detailed metadata and tags to each entry
+* Enhanced control over searchable fields
+* Improved precision in data retrieval
+* Example Structure: Here's how you might structure credit card application information using the tabular data format:
 
 ```json JSON
 {  
@@ -85,31 +85,31 @@ Similarly, you could dynamically filter searches by things like the â€œuserTypeâ
 
 1. **Use Markdown and Keep It Simple:**
 
-- Format your documents in markdown for better structure and easier parsing.
-- Stick to simple, clear formatting to aid in parsing.\*\*
-- Note: Voiceflow also uses Markdown to format its text responses, ensuring consistency across your agent.
+* Format your documents in markdown for better structure and easier parsing.
+* Stick to simple, clear formatting to aid in parsing.\*\*
+* Note: Voiceflow also uses Markdown to format its text responses, ensuring consistency across your agent.
 
 2. **Organize Content Effectively:**
 
-- Break down large documents into smaller, topic-focused files.
-- Maintain consistent formatting and structure across your documents.
-- For structured data, use the tabular format to allow for more precise querying and filtering.
+* Break down large documents into smaller, topic-focused files.
+* Maintain consistent formatting and structure across your documents.
+* For structured data, use the tabular format to allow for more precise querying and filtering.
 
 3. **Optimize Searchability:**
 
-- Make fields searchable if users are likely to query that information directly.
-- Include frequently asked questions (FAQs) as searchable terms to improve information discovery.
-- Use meaningful tags (like "userType") to categorize information for easy filtering.
+* Make fields searchable if users are likely to query that information directly.
+* Include frequently asked questions (FAQs) as searchable terms to improve information discovery.
+* Use meaningful tags (like "userType") to categorize information for easy filtering.
 
 4. **Enhance with Metadata:**
 
-- Include relevant metadata that adds value, such as "lastUpdated" for content freshness and "pageLink" for navigation. For instance, you could use page link with a function to enable a user to click off to another webpage.
+* Include relevant metadata that adds value, such as "lastUpdated" for content freshness and "pageLink" for navigation. For instance, you could use page link with a function to enable a user to click off to another webpage.
 
 5. **User-Centric Approach:**
 
-- Structure your data with the end-user in mind, anticipating how they might search for information.
-- Regularly update and review your Knowledge Base to ensure content remains current and relevant.
-- Test your Knowledge Base with various user queries to ensure it provides accurate and helpful responses.
+* Structure your data with the end-user in mind, anticipating how they might search for information.
+* Regularly update and review your Knowledge Base to ensure content remains current and relevant.
+* Test your Knowledge Base with various user queries to ensure it provides accurate and helpful responses.
 
 By focusing on these key practices, you can significantly enhance the effectiveness of your Voiceflow Knowledge Base, making it more accessible, accurate, and user-friendly.
 
