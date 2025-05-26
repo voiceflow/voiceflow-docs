@@ -28,31 +28,8 @@ You can find the setup instructions and code on GitHub [here](https://github.com
 
 Here's an overview video of the Shopify integration, discussing the advantages of building this kind of AI integration with Voiceflow:
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fo-D4X1QCUv4%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Do-D4X1QCUv4&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fo-D4X1QCUv4%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=o-D4X1QCUv4",
-  "title": "Revolutionizing Shopify E-Commerce with Embedded AI Agents",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/o-D4X1QCUv4/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=o-D4X1QCUv4",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=o-D4X1QCUv4" title="Revolutionizing Shopify E-Commerce with Embedded AI Agents" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/o-D4X1QCUv4/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=o-D4X1QCUv4" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fo-D4X1QCUv4%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Do-D4X1QCUv4%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fo-D4X1QCUv4%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 You can also see a developer walkthrough of this integration.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FPQpQVdaGVtU%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DPQpQVdaGVtU&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPQpQVdaGVtU%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=PQpQVdaGVtU",
-  "title": "Integrating AI with Shopify Using Voiceflow: Technical Walkthrough",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/PQpQVdaGVtU/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=PQpQVdaGVtU",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/watch?v=PQpQVdaGVtU" title="Integrating AI with Shopify Using Voiceflow: Technical Walkthrough" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/PQpQVdaGVtU/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=PQpQVdaGVtU" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FPQpQVdaGVtU%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DPQpQVdaGVtU%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FPQpQVdaGVtU%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
