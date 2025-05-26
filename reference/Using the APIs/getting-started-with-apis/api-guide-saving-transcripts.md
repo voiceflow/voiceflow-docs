@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 📘 This article is part of a guide on getting started with Voiceflow APIs
-> 
+>
 > Start from the [beginning](https://docs.voiceflow.com/reference/api-guide-start) here.
 
 Looking at the Create Transcripts API, we can see a quick description of it as well as a code snippet showing how to use it. Transcripts in Voiceflow aren't automatically saved whenever a conversation happens, so we have to send a `create transcript` request after each interaction to save it.
@@ -189,7 +189,7 @@ After running this script through to the end, and indeed we can check our transc
 Treading transcripts like this can be super useful for analyzing how people use your Voiceflow agent, catch odd behavior or check AI token usage.
 
 > ✨ Extra Challenge
-> 
+>
 > Now try using the same method we showed above to write a compleltly seperate Python script to search for a transcript based on creation time, and then to read it's dialog. As a hint, you might want to use the **Fetch Project Transcripts** and **Get Transcript Dialog** endpoints. Good luck!
 
 Here's the entirely **finished** code.
