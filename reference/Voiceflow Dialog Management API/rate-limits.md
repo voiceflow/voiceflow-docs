@@ -10,9 +10,4 @@ metadata:
 next:
   description: ''
 ---
-[block:callout]
-{
-  "type": "warning",
-  "title": "WIP"
-}
-[/block]
+> 🚧 WIP
