@@ -14,7 +14,7 @@ There are a number of best practices when working with the DM API:
 
 ### Use version aliases
 
-In previous iterations of the DM API, you needed to specify the explicit `versionID` to interact  
+In previous iterations of the DM API, you needed to specify the explicit `versionID` to interact\
 with a particular version of the Voiceflow project. With the introduction of version aliases, this is unnecessary.
 
 A version alias will always refer to whichever version occupies its corresponding slot and you can avoid the hassle of updating an explicit version ID by simplying pushing a new version into the slot.
@@ -33,7 +33,7 @@ The `userId` can be used to identify the conversation session of your Voiceflow 
 
 While this may seem convenient, it is a potential security hazard. If your app is compromised by an attack, then it may be possible for attackers to scrape personal information off of the `userId`.
 
-Additionally, you should **avoid any `userId` collisions**. Since the `userId` identifies a conversation, if  
+Additionally, you should **avoid any`userId` collisions**. Since the `userId` identifies a conversation, if\
 two users have the same `userId`, then their conversation data may become mixed and leak information about one user to another. If one user gave sensitive information over their conversation, this may lead to a privacy leak.
 
 ### Use the `'production'` alias for production apps
