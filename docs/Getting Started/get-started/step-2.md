@@ -14,7 +14,7 @@ next:
       slug: step-3-deploy-assistant
       title: 'Step 3: Deploy Assistant'
 ---
-Each <<glossary:agent>> in Voiceflow has its own API key. You will need this if you are using our APIs to launch to production. You can skip this step if you're using our built in quick launch for Web Chat.
+Each <Glossary>agent</Glossary> in Voiceflow has its own API key. You will need this if you are using our APIs to launch to production. You can skip this step if you're using our built in quick launch for Web Chat.
 
 ## **Agent API Keys**
 
