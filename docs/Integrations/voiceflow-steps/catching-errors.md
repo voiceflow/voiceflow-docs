@@ -11,31 +11,937 @@ next:
   description: ''
 ---
 To capture an error message after a code step execution, use a `try...catch` statement to flag that an error is present and pass the message into a variable that can be returned in a text or speak step.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c0e1374-272387476_502377051237065_8100288661843553294_n_1.png",
-        "272387476_502377051237065_8100288661843553294_n (1).png",
-        477,
-        307,
-        "#f7f8f9"
-      ],
-      "caption": "Code Step Catch Error"
-    }
-  ]
-}
-[/block]
+
+<Image title="272387476_502377051237065_8100288661843553294_n (1).png" alt={477} src="https://files.readme.io/c0e1374-272387476_502377051237065_8100288661843553294_n_1.png">
+  Code Step Catch Error
+</Image>
+
 #### Sample Project file
-[block:code]
+
+```json catch_error.vf
 {
-  "codes": [
-    {
-      "code": "{\n  \"_version\": \"1.2\",\n  \"project\": {\n    \"_id\": \"621a46bb12fa84001c7a29bd\",\n    \"name\": \"Code Block // Catch Errors\",\n    \"creatorID\": 81810,\n    \"teamID\": \"9YnzG0XEbK\",\n    \"image\": \"https://s3.amazonaws.com/com.getstoryflow.api.images/1592498945123-icons8-error.png\",\n    \"platformData\": {\n      \"products\": {}\n    },\n    \"members\": [],\n    \"devVersion\": \"621a46bb12fa84001c7a29be\",\n    \"privacy\": \"private\",\n    \"platform\": \"alexa\",\n    \"_version\": 1.2,\n    \"prototype\": {\n      \"nlp\": {\n        \"type\": \"LUIS\",\n        \"appID\": \"4682741d-e3ac-4550-b724-8573739efb9e\",\n        \"resourceID\": \"https://us-0.cognitiveservices.azure.com/\"\n      },\n      \"data\": {},\n      \"lastTrainedTime\": 1645889240078,\n      \"trainedModel\": {\n        \"intents\": [\n          {\n            \"key\": \"VF.HELP\",\n            \"name\": \"VF.HELP\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"help\"\n              },\n              {\n                \"text\": \"help me\"\n              },\n              {\n                \"text\": \"i need help\"\n              },\n              {\n                \"text\": \"Help\"\n              }\n            ]\n          },\n          {\n            \"key\": \"VF.NO\",\n            \"name\": \"VF.NO\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"no\"\n              },\n              {\n                \"text\": \"nope\"\n              },\n              {\n                \"text\": \"nay\"\n              },\n              {\n                \"text\": \"nah\"\n              },\n              {\n                \"text\": \"no way\"\n              },\n              {\n                \"text\": \"negative\"\n              },\n              {\n                \"text\": \"No\"\n              }\n            ]\n          },\n          {\n            \"key\": \"VF.YES\",\n            \"name\": \"VF.YES\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"yes\"\n              },\n              {\n                \"text\": \"yea\"\n              },\n              {\n                \"text\": \"ok\"\n              },\n              {\n                \"text\": \"okay\"\n              },\n              {\n                \"text\": \"yup\"\n              },\n              {\n                \"text\": \"ya\"\n              },\n              {\n                \"text\": \"sure\"\n              },\n              {\n                \"text\": \"Yes\"\n              }\n            ]\n          },\n          {\n            \"key\": \"VF.STOP\",\n            \"name\": \"VF.STOP\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"stop\"\n              },\n              {\n                \"text\": \"Stop\"\n              }\n            ]\n          }\n        ],\n        \"slots\": []\n      }\n    },\n    \"createdAt\": \"2022-02-26T15:26:51.000Z\"\n  },\n  \"version\": {\n    \"_id\": \"621a46bb12fa84001c7a29be\",\n    \"projectID\": \"621a46bb12fa84001c7a29bd\",\n    \"creatorID\": 81810,\n    \"name\": \"Code Block // Catch Errors\",\n    \"variables\": [\n      \"access_token\",\n      \"error\",\n      \"errorMessage\",\n      \"debug\"\n    ],\n    \"platformData\": {\n      \"publishing\": {\n        \"forExport\": true,\n        \"hasAds\": false,\n        \"summary\": \"Enter your summary for the skill Code Block Catch Errors\",\n        \"invocationName\": \"Code Block Catch Errors\",\n        \"locales\": [\n          \"en-US\"\n        ],\n        \"category\": null,\n        \"personal\": false,\n        \"keywords\": \"\",\n        \"smallIcon\": \"https://s3.amazonaws.com/com.getstoryflow.api.images/1592498948485-icons8-error.png\",\n        \"largeIcon\": \"https://s3.amazonaws.com/com.getstoryflow.api.images/1592498945123-icons8-error.png\",\n        \"description\": \"Enter your description for the skill Code Block Catch Errors\",\n        \"invocations\": [\n          \"open Code Block Catch Errors\",\n          \"start Code Block Catch Errors\",\n          \"launch Code Block Catch Errors\"\n        ],\n        \"hasPurchase\": false,\n        \"forChildren\": false,\n        \"instructions\": \"Sample Instruction\",\n        \"privacyPolicy\": \"https://creator.voiceflow.com/creator/terms?name=Nicolas%20Arcay&skill=Code%20Block%20//%20Catch%20Errors&children=false\",\n        \"termsAndConditions\": \"https://creator.voiceflow.com/creator/terms?name=Nicolas%20Arcay&skill=Code%20Block%20//%20Catch%20Errors&children=false\",\n        \"updatesDescription\": \"\"\n      },\n      \"settings\": {\n        \"error\": {\n          \"voice\": \"Alexa\",\n          \"content\": \"\"\n        },\n        \"repeat\": \"ALL\",\n        \"events\": null,\n        \"session\": {\n          \"type\": \"restart\"\n        },\n        \"permissions\": [],\n        \"accountLinking\": null,\n        \"customInterface\": false\n      },\n      \"slots\": [],\n      \"intents\": [\n        {\n          \"key\": \"AMAZON.CancelIntent\",\n          \"name\": \"AMAZON.CancelIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.FallbackIntent\",\n          \"name\": \"AMAZON.FallbackIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.HelpIntent\",\n          \"name\": \"AMAZON.HelpIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.LoopOffIntent\",\n          \"name\": \"AMAZON.LoopOffIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.LoopOnIntent\",\n          \"name\": \"AMAZON.LoopOnIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.MoreIntent\",\n          \"name\": \"AMAZON.MoreIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.NextIntent\",\n          \"name\": \"AMAZON.NextIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.NoIntent\",\n          \"name\": \"AMAZON.NoIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.YesIntent\",\n          \"name\": \"AMAZON.YesIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.StopIntent\",\n          \"name\": \"AMAZON.StopIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.ResumeIntent\",\n          \"name\": \"AMAZON.ResumeIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.RepeatIntent\",\n          \"name\": \"AMAZON.RepeatIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.PreviousIntent\",\n          \"name\": \"AMAZON.PreviousIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.PauseIntent\",\n          \"name\": \"AMAZON.PauseIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.StartOverIntent\",\n          \"name\": \"AMAZON.StartOverIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.ShuffleOnIntent\",\n          \"name\": \"AMAZON.ShuffleOnIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.ShuffleOffIntent\",\n          \"name\": \"AMAZON.ShuffleOffIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        },\n        {\n          \"key\": \"AMAZON.SelectIntent\",\n          \"name\": \"AMAZON.SelectIntent\",\n          \"slots\": [],\n          \"inputs\": []\n        }\n      ],\n      \"status\": {\n        \"stage\": \"DEV\"\n      }\n    },\n    \"rootDiagramID\": \"621a46bb12fa84001c7a29c0\",\n    \"prototype\": {\n      \"data\": {\n        \"name\": \"Code Block // Catch Errors\",\n        \"locales\": [\n          \"en-US\"\n        ]\n      },\n      \"model\": {\n        \"intents\": [\n          {\n            \"key\": \"VF.HELP\",\n            \"name\": \"VF.HELP\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"help\"\n              },\n              {\n                \"text\": \"help me\"\n              },\n              {\n                \"text\": \"i need help\"\n              },\n              {\n                \"text\": \"Help\"\n              }\n            ]\n          },\n          {\n            \"key\": \"VF.NO\",\n            \"name\": \"VF.NO\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"no\"\n              },\n              {\n                \"text\": \"nope\"\n              },\n              {\n                \"text\": \"nay\"\n              },\n              {\n                \"text\": \"nah\"\n              },\n              {\n                \"text\": \"no way\"\n              },\n              {\n                \"text\": \"negative\"\n              },\n              {\n                \"text\": \"No\"\n              }\n            ]\n          },\n          {\n            \"key\": \"VF.YES\",\n            \"name\": \"VF.YES\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"yes\"\n              },\n              {\n                \"text\": \"yea\"\n              },\n              {\n                \"text\": \"ok\"\n              },\n              {\n                \"text\": \"okay\"\n              },\n              {\n                \"text\": \"yup\"\n              },\n              {\n                \"text\": \"ya\"\n              },\n              {\n                \"text\": \"sure\"\n              },\n              {\n                \"text\": \"Yes\"\n              }\n            ]\n          },\n          {\n            \"key\": \"VF.STOP\",\n            \"name\": \"VF.STOP\",\n            \"slots\": [],\n            \"inputs\": [\n              {\n                \"text\": \"stop\"\n              },\n              {\n                \"text\": \"Stop\"\n              }\n            ]\n          }\n        ],\n        \"slots\": []\n      },\n      \"context\": {\n        \"stack\": [\n          {\n            \"storage\": {},\n            \"variables\": {},\n            \"programID\": \"621a46bb12fa84001c7a29c0\"\n          }\n        ],\n        \"variables\": {}\n      },\n      \"settings\": {},\n      \"platform\": \"alexa\"\n    },\n    \"components\": [\n      {\n        \"sourceID\": \"621a46bb12fa84001c7a29bf\",\n        \"type\": \"DIAGRAM\"\n      },\n      {\n        \"sourceID\": \"621a46bb12fa84001c7a29c1\",\n        \"type\": \"DIAGRAM\"\n      },\n      {\n        \"sourceID\": \"621a46bb12fa84001c7a29c2\",\n        \"type\": \"DIAGRAM\"\n      }\n    ],\n    \"topics\": [\n      {\n        \"sourceID\": \"621a46bb12fa84001c7a29c0\",\n        \"type\": \"DIAGRAM\"\n      }\n    ]\n  },\n  \"diagrams\": {\n    \"621a46bb12fa84001c7a29bf\": {\n      \"_id\": \"621a46bb12fa84001c7a29bf\",\n      \"offsetX\": 361.81006617692776,\n      \"offsetY\": -161.72237149853413,\n      \"zoom\": 107.2755839029948,\n      \"modified\": 1645889232,\n      \"children\": [],\n      \"creatorID\": 81810,\n      \"variables\": [],\n      \"name\": \"Stop Flow\",\n      \"versionID\": \"621a46bb12fa84001c7a29be\",\n      \"nodes\": {\n        \"5f9f58c34b2e0220c2860639\": {\n          \"nodeID\": \"5f9f58c34b2e0220c2860639\",\n          \"type\": \"start\",\n          \"coords\": [\n            247.73741727884033,\n            452.15296437316766\n          ],\n          \"data\": {\n            \"name\": \"Start\",\n            \"color\": \"standard\",\n            \"steps\": [],\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": \"5f9f58c34b2e0220c286063b\",\n                \"id\": \"621a46cbdd3b2dd06dfd73fe\"\n              }\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286063a\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286063a\",\n          \"type\": \"block\",\n          \"coords\": [\n            660,\n            453.54871427430436\n          ],\n          \"data\": {\n            \"name\": \"Exit\",\n            \"color\": \"standard\",\n            \"steps\": [\n              \"5f9f58c34b2e0220c286063b\",\n              \"5f9f58c34b2e0220c286063c\"\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286063b\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286063b\",\n          \"type\": \"speak\",\n          \"data\": {\n            \"randomize\": false,\n            \"dialogs\": [\n              {\n                \"voice\": \"Alexa\",\n                \"content\": \"You said stop. This session is now ending.\"\n              }\n            ],\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": \"5f9f58c34b2e0220c286063c\",\n                \"id\": \"621a46cbdd3b2dd06dfd73ff\"\n              }\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286063c\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286063c\",\n          \"type\": \"exit\",\n          \"data\": {\n            \"ports\": []\n          }\n        }\n      },\n      \"type\": \"COMPONENT\"\n    },\n    \"621a46bb12fa84001c7a29c0\": {\n      \"_id\": \"621a46bb12fa84001c7a29c0\",\n      \"offsetX\": 728.6707387742962,\n      \"offsetY\": -161.49891649268352,\n      \"zoom\": 80,\n      \"modified\": 1645889271,\n      \"children\": [\n        \"621a46bb12fa84001c7a29bf\",\n        \"621a46bb12fa84001c7a29c1\",\n        \"621a46bb12fa84001c7a29c2\"\n      ],\n      \"creatorID\": 81810,\n      \"variables\": [],\n      \"name\": \"ROOT\",\n      \"versionID\": \"621a46bb12fa84001c7a29be\",\n      \"nodes\": {\n        \"5f9f58c34b2e0220c286063d\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286063d\",\n          \"type\": \"block\",\n          \"coords\": [\n            168.36122865790668,\n            452.25891232677327\n          ],\n          \"data\": {\n            \"name\": \"Code\",\n            \"color\": \"blue\",\n            \"steps\": [\n              \"5f9f58c34b2e0220c286063e\",\n              \"605b7a96d85ee075a9564f3e\"\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286063e\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286063e\",\n          \"type\": \"code\",\n          \"data\": {\n            \"code\": \"errorMessage = \\\"\\\";\\nerror = 0;\\n\\ntry {\\n  let debug = \\\"something\\\"\\n  // take = newDate(); // this will throw exception\\n  let json = JSON.parse('\\\"age\\\": 30 }'); // incomplete data\\n}\\ncatch (e) {\\n  error = 1;\\n  errorMessage = e.message;\\n}\",\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": \"605b7a96d85ee075a9564f3e\",\n                \"id\": \"5fd799d5a7df0d6382da66ca\"\n              },\n              {\n                \"type\": \"fail\",\n                \"target\": \"605b7a96d85ee075a9564f3e\",\n                \"id\": \"5fd799d5a7df0d6382da66cb\"\n              }\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c2860644\": {\n          \"nodeID\": \"5f9f58c34b2e0220c2860644\",\n          \"type\": \"start\",\n          \"coords\": [\n            -210.83842346787014,\n            451.8736456158544\n          ],\n          \"data\": {\n            \"name\": \"Start\",\n            \"color\": \"standard\",\n            \"steps\": [\n              \"5f9f58c34b2e0220c2860645\",\n              \"5f9f58c34b2e0220c2860646\"\n            ],\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": \"5f9f58c34b2e0220c286063e\",\n                \"id\": \"5fd799d5a7df0d6382da66d0\"\n              }\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c2860645\": {\n          \"nodeID\": \"5f9f58c34b2e0220c2860645\",\n          \"type\": \"command\",\n          \"data\": {\n            \"name\": \"Stop\",\n            \"next\": null,\n            \"ports\": [],\n            \"intent\": \"AMAZON.StopIntent\",\n            \"mappings\": [],\n            \"diagramID\": \"621a46bb12fa84001c7a29bf\"\n          }\n        },\n        \"5f9f58c34b2e0220c2860646\": {\n          \"nodeID\": \"5f9f58c34b2e0220c2860646\",\n          \"type\": \"command\",\n          \"data\": {\n            \"name\": \"Help\",\n            \"next\": null,\n            \"ports\": [],\n            \"intent\": \"AMAZON.HelpIntent\",\n            \"mappings\": [],\n            \"diagramID\": \"621a46bb12fa84001c7a29c1\"\n          }\n        },\n        \"605b7a96d85ee075a9564f3e\": {\n          \"nodeID\": \"605b7a96d85ee075a9564f3e\",\n          \"type\": \"flow\",\n          \"data\": {\n            \"diagramID\": \"621a46bb12fa84001c7a29c2\",\n            \"variableMap\": null,\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": null,\n                \"id\": \"605b7a96d85ee075a9564f41\"\n              }\n            ]\n          }\n        }\n      },\n      \"type\": \"TOPIC\"\n    },\n    \"621a46bb12fa84001c7a29c1\": {\n      \"_id\": \"621a46bb12fa84001c7a29c1\",\n      \"offsetX\": 272,\n      \"offsetY\": 104,\n      \"zoom\": 80,\n      \"modified\": 1604278467,\n      \"children\": [],\n      \"creatorID\": 81810,\n      \"variables\": [],\n      \"name\": \"Help Flow\",\n      \"versionID\": \"621a46bb12fa84001c7a29be\",\n      \"nodes\": {\n        \"5f9f58c34b2e0220c2860649\": {\n          \"nodeID\": \"5f9f58c34b2e0220c2860649\",\n          \"type\": \"start\",\n          \"coords\": [\n            360,\n            120\n          ],\n          \"data\": {\n            \"name\": \"Start\",\n            \"color\": \"standard\",\n            \"ports\": [\n              {\n                \"type\": \"\",\n                \"target\": \"5f9f58c34b2e0220c286064b\"\n              }\n            ],\n            \"steps\": []\n          }\n        },\n        \"5f9f58c34b2e0220c286064a\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286064a\",\n          \"type\": \"block\",\n          \"coords\": [\n            760,\n            120\n          ],\n          \"data\": {\n            \"name\": \"Help Message\",\n            \"color\": \"standard\",\n            \"steps\": [\n              \"5f9f58c34b2e0220c286064b\",\n              \"5f9f58c34b2e0220c286064c\"\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286064b\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286064b\",\n          \"type\": \"speak\",\n          \"data\": {\n            \"randomize\": false,\n            \"dialogs\": [\n              {\n                \"voice\": \"Alexa\",\n                \"content\": \"You said help. Do you want to continue?\"\n              }\n            ],\n            \"ports\": [\n              {\n                \"type\": \"\",\n                \"target\": \"5f9f58c34b2e0220c286064c\"\n              }\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286064c\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286064c\",\n          \"type\": \"interaction\",\n          \"data\": {\n            \"name\": \"Choice\",\n            \"else\": {\n              \"type\": \"path\",\n              \"randomize\": false,\n              \"reprompts\": []\n            },\n            \"choices\": [\n              {\n                \"intent\": \"AMAZON.YesIntent\",\n                \"mappings\": []\n              },\n              {\n                \"intent\": \"AMAZON.NoIntent\",\n                \"mappings\": []\n              }\n            ],\n            \"reprompt\": null,\n            \"ports\": [\n              {\n                \"type\": \"else\",\n                \"target\": null\n              },\n              {\n                \"type\": \"\",\n                \"target\": null\n              },\n              {\n                \"type\": \"\",\n                \"target\": \"5f9f58c34b2e0220c286064e\"\n              }\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286064d\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286064d\",\n          \"type\": \"block\",\n          \"coords\": [\n            1170,\n            260\n          ],\n          \"data\": {\n            \"name\": \"Exit\",\n            \"color\": \"standard\",\n            \"steps\": [\n              \"5f9f58c34b2e0220c286064e\"\n            ]\n          }\n        },\n        \"5f9f58c34b2e0220c286064e\": {\n          \"nodeID\": \"5f9f58c34b2e0220c286064e\",\n          \"type\": \"exit\",\n          \"data\": {\n            \"ports\": []\n          }\n        }\n      }\n    },\n    \"621a46bb12fa84001c7a29c2\": {\n      \"_id\": \"621a46bb12fa84001c7a29c2\",\n      \"offsetX\": 272,\n      \"offsetY\": 104,\n      \"zoom\": 80,\n      \"variables\": [],\n      \"children\": [],\n      \"versionID\": \"621a46bb12fa84001c7a29be\",\n      \"creatorID\": 81810,\n      \"name\": \"Error Flow\",\n      \"modified\": 1645889267,\n      \"nodes\": {\n        \"605b7a9cd85ee075a9564f45\": {\n          \"nodeID\": \"605b7a9cd85ee075a9564f45\",\n          \"type\": \"start\",\n          \"coords\": [\n            360,\n            120\n          ],\n          \"data\": {\n            \"name\": \"Start\",\n            \"color\": \"standard\",\n            \"steps\": [],\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": \"605b7aa7d85ee075a9564f6f\",\n                \"id\": \"605b7a9dd85ee075a9564f46\"\n              }\n            ]\n          }\n        },\n        \"605b7aa7d85ee075a9564f7c\": {\n          \"nodeID\": \"605b7aa7d85ee075a9564f7c\",\n          \"type\": \"speak\",\n          \"data\": {\n            \"randomize\": false,\n            \"dialogs\": [\n              {\n                \"voice\": \"Alexa\",\n                \"content\": \"Error: {{[errorMessage].errorMessage}} \"\n              }\n            ],\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": \"605b7ab2d85ee075a9564f94\",\n                \"id\": \"605b7aa7d85ee075a9564f7d\"\n              }\n            ]\n          }\n        },\n        \"605b7aa7d85ee075a9564f79\": {\n          \"nodeID\": \"605b7aa7d85ee075a9564f79\",\n          \"type\": \"speak\",\n          \"data\": {\n            \"randomize\": false,\n            \"dialogs\": [\n              {\n                \"voice\": \"Alexa\",\n                \"content\": \"ok \"\n              }\n            ],\n            \"ports\": [\n              {\n                \"type\": \"next\",\n                \"target\": null,\n                \"id\": \"605b7aa7d85ee075a9564f7a\"\n              }\n            ]\n          }\n        },\n        \"605b7aa7d85ee075a9564f75\": {\n          \"nodeID\": \"605b7aa7d85ee075a9564f75\",\n          \"type\": \"ifV2\",\n          \"data\": {\n            \"expressions\": [\n              {\n                \"type\": null,\n                \"value\": [\n                  {\n                    \"logicInterface\": \"variable\",\n                    \"type\": \"equals\",\n                    \"value\": [\n                      {\n                        \"type\": \"variable\",\n                        \"value\": \"error\"\n                      },\n                      {\n                        \"type\": \"value\",\n                        \"value\": \"0\"\n                      }\n                    ]\n                  }\n                ]\n              }\n            ],\n            \"noMatch\": {\n              \"type\": \"path\",\n              \"pathName\": \"No Match\"\n            },\n            \"ports\": [\n              {\n                \"type\": \"else\",\n                \"target\": \"605b7aa7d85ee075a9564f73\",\n                \"id\": \"605b7aa7d85ee075a9564f76\"\n              },\n              {\n                \"type\": \"1\",\n                \"target\": \"605b7aa7d85ee075a9564f79\",\n                \"id\": \"605b7aa7d85ee075a9564f77\",\n                \"data\": {}\n              }\n            ]\n          }\n        },\n        \"605b7aa7d85ee075a9564f73\": {\n          \"nodeID\": \"605b7aa7d85ee075a9564f73\",\n          \"type\": \"block\",\n          \"coords\": [\n            716.5000040979139,\n            319.77404503245214\n          ],\n          \"data\": {\n            \"name\": \"Error\",\n            \"color\": \"red\",\n            \"steps\": [\n              \"605b7aa7d85ee075a9564f7c\",\n              \"605b7ab2d85ee075a9564f94\"\n            ]\n          }\n        },\n        \"605b7aa7d85ee075a9564f71\": {\n          \"nodeID\": \"605b7aa7d85ee075a9564f71\",\n          \"type\": \"block\",\n          \"coords\": [\n            1097.0265565389077,\n            121.22594153297163\n          ],\n          \"data\": {\n            \"name\": \"Ok\",\n            \"color\": \"green\",\n            \"steps\": [\n              \"605b7aa7d85ee075a9564f79\"\n            ]\n          }\n        },\n        \"605b7aa7d85ee075a9564f6f\": {\n          \"nodeID\": \"605b7aa7d85ee075a9564f6f\",\n          \"type\": \"block\",\n          \"coords\": [\n            717.4999959020859,\n            119.77405846702845\n          ],\n          \"data\": {\n            \"name\": \"Block\",\n            \"color\": \"standard\",\n            \"steps\": [\n              \"605b7aa7d85ee075a9564f75\"\n            ]\n          }\n        },\n        \"605b7ab2d85ee075a9564f94\": {\n          \"nodeID\": \"605b7ab2d85ee075a9564f94\",\n          \"type\": \"exit\",\n          \"data\": {\n            \"ports\": []\n          }\n        }\n      },\n      \"type\": \"COMPONENT\"\n    }\n  },\n  \"variableStates\": []\n}",
-      "language": "json",
-      "name": "catch_error.vf"
+  "_version": "1.2",
+  "project": {
+    "_id": "621a46bb12fa84001c7a29bd",
+    "name": "Code Block // Catch Errors",
+    "creatorID": 81810,
+    "teamID": "9YnzG0XEbK",
+    "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1592498945123-icons8-error.png",
+    "platformData": {
+      "products": {}
+    },
+    "members": [],
+    "devVersion": "621a46bb12fa84001c7a29be",
+    "privacy": "private",
+    "platform": "alexa",
+    "_version": 1.2,
+    "prototype": {
+      "nlp": {
+        "type": "LUIS",
+        "appID": "4682741d-e3ac-4550-b724-8573739efb9e",
+        "resourceID": "https://us-0.cognitiveservices.azure.com/"
+      },
+      "data": {},
+      "lastTrainedTime": 1645889240078,
+      "trainedModel": {
+        "intents": [
+          {
+            "key": "VF.HELP",
+            "name": "VF.HELP",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "help"
+              },
+              {
+                "text": "help me"
+              },
+              {
+                "text": "i need help"
+              },
+              {
+                "text": "Help"
+              }
+            ]
+          },
+          {
+            "key": "VF.NO",
+            "name": "VF.NO",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "no"
+              },
+              {
+                "text": "nope"
+              },
+              {
+                "text": "nay"
+              },
+              {
+                "text": "nah"
+              },
+              {
+                "text": "no way"
+              },
+              {
+                "text": "negative"
+              },
+              {
+                "text": "No"
+              }
+            ]
+          },
+          {
+            "key": "VF.YES",
+            "name": "VF.YES",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "yes"
+              },
+              {
+                "text": "yea"
+              },
+              {
+                "text": "ok"
+              },
+              {
+                "text": "okay"
+              },
+              {
+                "text": "yup"
+              },
+              {
+                "text": "ya"
+              },
+              {
+                "text": "sure"
+              },
+              {
+                "text": "Yes"
+              }
+            ]
+          },
+          {
+            "key": "VF.STOP",
+            "name": "VF.STOP",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "stop"
+              },
+              {
+                "text": "Stop"
+              }
+            ]
+          }
+        ],
+        "slots": []
+      }
+    },
+    "createdAt": "2022-02-26T15:26:51.000Z"
+  },
+  "version": {
+    "_id": "621a46bb12fa84001c7a29be",
+    "projectID": "621a46bb12fa84001c7a29bd",
+    "creatorID": 81810,
+    "name": "Code Block // Catch Errors",
+    "variables": [
+      "access_token",
+      "error",
+      "errorMessage",
+      "debug"
+    ],
+    "platformData": {
+      "publishing": {
+        "forExport": true,
+        "hasAds": false,
+        "summary": "Enter your summary for the skill Code Block Catch Errors",
+        "invocationName": "Code Block Catch Errors",
+        "locales": [
+          "en-US"
+        ],
+        "category": null,
+        "personal": false,
+        "keywords": "",
+        "smallIcon": "https://s3.amazonaws.com/com.getstoryflow.api.images/1592498948485-icons8-error.png",
+        "largeIcon": "https://s3.amazonaws.com/com.getstoryflow.api.images/1592498945123-icons8-error.png",
+        "description": "Enter your description for the skill Code Block Catch Errors",
+        "invocations": [
+          "open Code Block Catch Errors",
+          "start Code Block Catch Errors",
+          "launch Code Block Catch Errors"
+        ],
+        "hasPurchase": false,
+        "forChildren": false,
+        "instructions": "Sample Instruction",
+        "privacyPolicy": "https://creator.voiceflow.com/creator/terms?name=Nicolas%20Arcay&skill=Code%20Block%20//%20Catch%20Errors&children=false",
+        "termsAndConditions": "https://creator.voiceflow.com/creator/terms?name=Nicolas%20Arcay&skill=Code%20Block%20//%20Catch%20Errors&children=false",
+        "updatesDescription": ""
+      },
+      "settings": {
+        "error": {
+          "voice": "Alexa",
+          "content": ""
+        },
+        "repeat": "ALL",
+        "events": null,
+        "session": {
+          "type": "restart"
+        },
+        "permissions": [],
+        "accountLinking": null,
+        "customInterface": false
+      },
+      "slots": [],
+      "intents": [
+        {
+          "key": "AMAZON.CancelIntent",
+          "name": "AMAZON.CancelIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.FallbackIntent",
+          "name": "AMAZON.FallbackIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.HelpIntent",
+          "name": "AMAZON.HelpIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.LoopOffIntent",
+          "name": "AMAZON.LoopOffIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.LoopOnIntent",
+          "name": "AMAZON.LoopOnIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.MoreIntent",
+          "name": "AMAZON.MoreIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.NextIntent",
+          "name": "AMAZON.NextIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.NoIntent",
+          "name": "AMAZON.NoIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.YesIntent",
+          "name": "AMAZON.YesIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.StopIntent",
+          "name": "AMAZON.StopIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.ResumeIntent",
+          "name": "AMAZON.ResumeIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.RepeatIntent",
+          "name": "AMAZON.RepeatIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.PreviousIntent",
+          "name": "AMAZON.PreviousIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.PauseIntent",
+          "name": "AMAZON.PauseIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.StartOverIntent",
+          "name": "AMAZON.StartOverIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.ShuffleOnIntent",
+          "name": "AMAZON.ShuffleOnIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.ShuffleOffIntent",
+          "name": "AMAZON.ShuffleOffIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.SelectIntent",
+          "name": "AMAZON.SelectIntent",
+          "slots": [],
+          "inputs": []
+        }
+      ],
+      "status": {
+        "stage": "DEV"
+      }
+    },
+    "rootDiagramID": "621a46bb12fa84001c7a29c0",
+    "prototype": {
+      "data": {
+        "name": "Code Block // Catch Errors",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [
+          {
+            "key": "VF.HELP",
+            "name": "VF.HELP",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "help"
+              },
+              {
+                "text": "help me"
+              },
+              {
+                "text": "i need help"
+              },
+              {
+                "text": "Help"
+              }
+            ]
+          },
+          {
+            "key": "VF.NO",
+            "name": "VF.NO",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "no"
+              },
+              {
+                "text": "nope"
+              },
+              {
+                "text": "nay"
+              },
+              {
+                "text": "nah"
+              },
+              {
+                "text": "no way"
+              },
+              {
+                "text": "negative"
+              },
+              {
+                "text": "No"
+              }
+            ]
+          },
+          {
+            "key": "VF.YES",
+            "name": "VF.YES",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "yes"
+              },
+              {
+                "text": "yea"
+              },
+              {
+                "text": "ok"
+              },
+              {
+                "text": "okay"
+              },
+              {
+                "text": "yup"
+              },
+              {
+                "text": "ya"
+              },
+              {
+                "text": "sure"
+              },
+              {
+                "text": "Yes"
+              }
+            ]
+          },
+          {
+            "key": "VF.STOP",
+            "name": "VF.STOP",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "stop"
+              },
+              {
+                "text": "Stop"
+              }
+            ]
+          }
+        ],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "storage": {},
+            "variables": {},
+            "programID": "621a46bb12fa84001c7a29c0"
+          }
+        ],
+        "variables": {}
+      },
+      "settings": {},
+      "platform": "alexa"
+    },
+    "components": [
+      {
+        "sourceID": "621a46bb12fa84001c7a29bf",
+        "type": "DIAGRAM"
+      },
+      {
+        "sourceID": "621a46bb12fa84001c7a29c1",
+        "type": "DIAGRAM"
+      },
+      {
+        "sourceID": "621a46bb12fa84001c7a29c2",
+        "type": "DIAGRAM"
+      }
+    ],
+    "topics": [
+      {
+        "sourceID": "621a46bb12fa84001c7a29c0",
+        "type": "DIAGRAM"
+      }
+    ]
+  },
+  "diagrams": {
+    "621a46bb12fa84001c7a29bf": {
+      "_id": "621a46bb12fa84001c7a29bf",
+      "offsetX": 361.81006617692776,
+      "offsetY": -161.72237149853413,
+      "zoom": 107.2755839029948,
+      "modified": 1645889232,
+      "children": [],
+      "creatorID": 81810,
+      "variables": [],
+      "name": "Stop Flow",
+      "versionID": "621a46bb12fa84001c7a29be",
+      "nodes": {
+        "5f9f58c34b2e0220c2860639": {
+          "nodeID": "5f9f58c34b2e0220c2860639",
+          "type": "start",
+          "coords": [
+            247.73741727884033,
+            452.15296437316766
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "5f9f58c34b2e0220c286063b",
+                "id": "621a46cbdd3b2dd06dfd73fe"
+              }
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286063a": {
+          "nodeID": "5f9f58c34b2e0220c286063a",
+          "type": "block",
+          "coords": [
+            660,
+            453.54871427430436
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "standard",
+            "steps": [
+              "5f9f58c34b2e0220c286063b",
+              "5f9f58c34b2e0220c286063c"
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286063b": {
+          "nodeID": "5f9f58c34b2e0220c286063b",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You said stop. This session is now ending."
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "5f9f58c34b2e0220c286063c",
+                "id": "621a46cbdd3b2dd06dfd73ff"
+              }
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286063c": {
+          "nodeID": "5f9f58c34b2e0220c286063c",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        }
+      },
+      "type": "COMPONENT"
+    },
+    "621a46bb12fa84001c7a29c0": {
+      "_id": "621a46bb12fa84001c7a29c0",
+      "offsetX": 728.6707387742962,
+      "offsetY": -161.49891649268352,
+      "zoom": 80,
+      "modified": 1645889271,
+      "children": [
+        "621a46bb12fa84001c7a29bf",
+        "621a46bb12fa84001c7a29c1",
+        "621a46bb12fa84001c7a29c2"
+      ],
+      "creatorID": 81810,
+      "variables": [],
+      "name": "ROOT",
+      "versionID": "621a46bb12fa84001c7a29be",
+      "nodes": {
+        "5f9f58c34b2e0220c286063d": {
+          "nodeID": "5f9f58c34b2e0220c286063d",
+          "type": "block",
+          "coords": [
+            168.36122865790668,
+            452.25891232677327
+          ],
+          "data": {
+            "name": "Code",
+            "color": "blue",
+            "steps": [
+              "5f9f58c34b2e0220c286063e",
+              "605b7a96d85ee075a9564f3e"
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286063e": {
+          "nodeID": "5f9f58c34b2e0220c286063e",
+          "type": "code",
+          "data": {
+            "code": "errorMessage = \"\";\nerror = 0;\n\ntry {\n  let debug = \"something\"\n  // take = newDate(); // this will throw exception\n  let json = JSON.parse('\"age\": 30 }'); // incomplete data\n}\ncatch (e) {\n  error = 1;\n  errorMessage = e.message;\n}",
+            "ports": [
+              {
+                "type": "next",
+                "target": "605b7a96d85ee075a9564f3e",
+                "id": "5fd799d5a7df0d6382da66ca"
+              },
+              {
+                "type": "fail",
+                "target": "605b7a96d85ee075a9564f3e",
+                "id": "5fd799d5a7df0d6382da66cb"
+              }
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c2860644": {
+          "nodeID": "5f9f58c34b2e0220c2860644",
+          "type": "start",
+          "coords": [
+            -210.83842346787014,
+            451.8736456158544
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [
+              "5f9f58c34b2e0220c2860645",
+              "5f9f58c34b2e0220c2860646"
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "5f9f58c34b2e0220c286063e",
+                "id": "5fd799d5a7df0d6382da66d0"
+              }
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c2860645": {
+          "nodeID": "5f9f58c34b2e0220c2860645",
+          "type": "command",
+          "data": {
+            "name": "Stop",
+            "next": null,
+            "ports": [],
+            "intent": "AMAZON.StopIntent",
+            "mappings": [],
+            "diagramID": "621a46bb12fa84001c7a29bf"
+          }
+        },
+        "5f9f58c34b2e0220c2860646": {
+          "nodeID": "5f9f58c34b2e0220c2860646",
+          "type": "command",
+          "data": {
+            "name": "Help",
+            "next": null,
+            "ports": [],
+            "intent": "AMAZON.HelpIntent",
+            "mappings": [],
+            "diagramID": "621a46bb12fa84001c7a29c1"
+          }
+        },
+        "605b7a96d85ee075a9564f3e": {
+          "nodeID": "605b7a96d85ee075a9564f3e",
+          "type": "flow",
+          "data": {
+            "diagramID": "621a46bb12fa84001c7a29c2",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "605b7a96d85ee075a9564f41"
+              }
+            ]
+          }
+        }
+      },
+      "type": "TOPIC"
+    },
+    "621a46bb12fa84001c7a29c1": {
+      "_id": "621a46bb12fa84001c7a29c1",
+      "offsetX": 272,
+      "offsetY": 104,
+      "zoom": 80,
+      "modified": 1604278467,
+      "children": [],
+      "creatorID": 81810,
+      "variables": [],
+      "name": "Help Flow",
+      "versionID": "621a46bb12fa84001c7a29be",
+      "nodes": {
+        "5f9f58c34b2e0220c2860649": {
+          "nodeID": "5f9f58c34b2e0220c2860649",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f58c34b2e0220c286064b"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f58c34b2e0220c286064a": {
+          "nodeID": "5f9f58c34b2e0220c286064a",
+          "type": "block",
+          "coords": [
+            760,
+            120
+          ],
+          "data": {
+            "name": "Help Message",
+            "color": "standard",
+            "steps": [
+              "5f9f58c34b2e0220c286064b",
+              "5f9f58c34b2e0220c286064c"
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286064b": {
+          "nodeID": "5f9f58c34b2e0220c286064b",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You said help. Do you want to continue?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f58c34b2e0220c286064c"
+              }
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286064c": {
+          "nodeID": "5f9f58c34b2e0220c286064c",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "path",
+              "randomize": false,
+              "reprompts": []
+            },
+            "choices": [
+              {
+                "intent": "AMAZON.YesIntent",
+                "mappings": []
+              },
+              {
+                "intent": "AMAZON.NoIntent",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null
+              },
+              {
+                "type": "",
+                "target": null
+              },
+              {
+                "type": "",
+                "target": "5f9f58c34b2e0220c286064e"
+              }
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286064d": {
+          "nodeID": "5f9f58c34b2e0220c286064d",
+          "type": "block",
+          "coords": [
+            1170,
+            260
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "standard",
+            "steps": [
+              "5f9f58c34b2e0220c286064e"
+            ]
+          }
+        },
+        "5f9f58c34b2e0220c286064e": {
+          "nodeID": "5f9f58c34b2e0220c286064e",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        }
+      }
+    },
+    "621a46bb12fa84001c7a29c2": {
+      "_id": "621a46bb12fa84001c7a29c2",
+      "offsetX": 272,
+      "offsetY": 104,
+      "zoom": 80,
+      "variables": [],
+      "children": [],
+      "versionID": "621a46bb12fa84001c7a29be",
+      "creatorID": 81810,
+      "name": "Error Flow",
+      "modified": 1645889267,
+      "nodes": {
+        "605b7a9cd85ee075a9564f45": {
+          "nodeID": "605b7a9cd85ee075a9564f45",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "605b7aa7d85ee075a9564f6f",
+                "id": "605b7a9dd85ee075a9564f46"
+              }
+            ]
+          }
+        },
+        "605b7aa7d85ee075a9564f7c": {
+          "nodeID": "605b7aa7d85ee075a9564f7c",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Error: {{[errorMessage].errorMessage}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "605b7ab2d85ee075a9564f94",
+                "id": "605b7aa7d85ee075a9564f7d"
+              }
+            ]
+          }
+        },
+        "605b7aa7d85ee075a9564f79": {
+          "nodeID": "605b7aa7d85ee075a9564f79",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "ok "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "605b7aa7d85ee075a9564f7a"
+              }
+            ]
+          }
+        },
+        "605b7aa7d85ee075a9564f75": {
+          "nodeID": "605b7aa7d85ee075a9564f75",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": null,
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "error"
+                      },
+                      {
+                        "type": "value",
+                        "value": "0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "path",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": "605b7aa7d85ee075a9564f73",
+                "id": "605b7aa7d85ee075a9564f76"
+              },
+              {
+                "type": "1",
+                "target": "605b7aa7d85ee075a9564f79",
+                "id": "605b7aa7d85ee075a9564f77",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "605b7aa7d85ee075a9564f73": {
+          "nodeID": "605b7aa7d85ee075a9564f73",
+          "type": "block",
+          "coords": [
+            716.5000040979139,
+            319.77404503245214
+          ],
+          "data": {
+            "name": "Error",
+            "color": "red",
+            "steps": [
+              "605b7aa7d85ee075a9564f7c",
+              "605b7ab2d85ee075a9564f94"
+            ]
+          }
+        },
+        "605b7aa7d85ee075a9564f71": {
+          "nodeID": "605b7aa7d85ee075a9564f71",
+          "type": "block",
+          "coords": [
+            1097.0265565389077,
+            121.22594153297163
+          ],
+          "data": {
+            "name": "Ok",
+            "color": "green",
+            "steps": [
+              "605b7aa7d85ee075a9564f79"
+            ]
+          }
+        },
+        "605b7aa7d85ee075a9564f6f": {
+          "nodeID": "605b7aa7d85ee075a9564f6f",
+          "type": "block",
+          "coords": [
+            717.4999959020859,
+            119.77405846702845
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "605b7aa7d85ee075a9564f75"
+            ]
+          }
+        },
+        "605b7ab2d85ee075a9564f94": {
+          "nodeID": "605b7ab2d85ee075a9564f94",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        }
+      },
+      "type": "COMPONENT"
     }
-  ]
+  },
+  "variableStates": []
 }
-[/block]
+```
