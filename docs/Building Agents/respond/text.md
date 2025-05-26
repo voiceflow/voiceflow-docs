@@ -14,7 +14,7 @@ next:
 
 The Text Step are the text messages shown in chat for all **Chat Assistants**, found in the **Talk** section of the **Steps** Menu. These are the text-responses your chat assistant/chatbot would respond back to your end-user.
 
-A text step is important for the assistant to communicate to the user with words. It can be used to greet the user, ask questions, give instructions, and inform users. You can add text markup, manually create different versions of the same text step by adding variants, and use curly braces "{}" to reference assistant variable values. 
+A text step is important for the assistant to communicate to the user with words. It can be used to greet the user, ask questions, give instructions, and inform users. You can add text markup, manually create different versions of the same text step by adding variants, and use curly braces "\{}" to reference assistant variable values. 
 
 To configure your **Text Step**, you can type what you want your assistant to respond/display to your user in the text input field. 
 
@@ -24,9 +24,9 @@ To configure your **Text Step**, you can type what you want your assistant to re
 
 For Chat Assistants, you can design **formatted text** responses using the Text Step and Markdown syntax.
 
-You can style your text formatting using the **Bold**, _Italics_, Underline and ~~Strikethrough~~ options provided. Additionally, you can embed a [hyperlink](<>) in your text! These options are all available in the editor options under the text editor.
+You can style your text formatting using the **Bold**, *Italics*, Underline and ~~Strikethrough~~ options provided. Additionally, you can embed a [hyperlink]() in your text! These options are all available in the editor options under the text editor.
 
-_Hyperlinking allows your assistant to have functionality such as opening a URL, calendar link, mail to, phone call and many more!_
+*Hyperlinking allows your assistant to have functionality such as opening a URL, calendar link, mail to, phone call and many more!*
 
 You can also configure Message Delay (measured in MS) by clicking the icon at the right-most of the Text editor menu.
 
