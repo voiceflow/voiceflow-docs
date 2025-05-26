@@ -12,7 +12,7 @@ next:
 ---
 # Customization & Configuration
 
-As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <<glossary:agent>> by setting the **project ID**, the **runtime URL** and a **version ID**.
+As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <Glossary>agent</Glossary> by setting the **project ID**, the **runtime URL** and a **version ID**.
 
 Below is an example of the default code snippet.
 
@@ -28,17 +28,15 @@ window.voiceflow.chat.load({
 
 You can add additional settings on top of the above configuration to further customize the Web Chat experience for your users.
 
-
-
 # Embed the Webchat in a Page
 
 To embed the Webchat within a section of your page rather than the default overlay mode, you can add the following to the webchat installation code.
 
-**Important:**You must indicate the HTML element ID that the embedded webchat should attach too. If you do not specify an element, it will look for and attach to any element with the ID `voiceflow-chat-frame`. If no element with that ID is found, then the widget will revert back into the default overlay mode.
+**Important:**&#x59;ou must indicate the HTML element ID that the embedded webchat should attach too. If you do not specify an element, it will look for and attach to any element with the ID `voiceflow-chat-frame`. If no element with that ID is found, then the widget will revert back into the default overlay mode.
 
-- `render.mode` can be set to `overlay` or `embedded`. When in `overlay` mode, chat will ignore any target passed. Otherwise, the chat will mount into the target via Shadow DOM treating target element as a host.
-- `render.target` should be a valid `HTMLElement` which will be the host element of the chat (aka the chat tree will be mounted into the target treating it as a container. If no target was provided, the chat will try to find a valid HTML element with `voiceflow-chat-frame id` to attach itself to it.
-- `autostart`: defaults to `true` in `render.mode: 'embedded'` and to `false` in `render.mode: 'bubble'.` Unless the session has been previously started and can be retrieved from your storage of choice, a new session will not be started if `autostart: false`.
+* `render.mode` can be set to `overlay` or `embedded`. When in `overlay` mode, chat will ignore any target passed. Otherwise, the chat will mount into the target via Shadow DOM treating target element as a host.
+* `render.target` should be a valid `HTMLElement` which will be the host element of the chat (aka the chat tree will be mounted into the target treating it as a container. If no target was provided, the chat will try to find a valid HTML element with `voiceflow-chat-frame id` to attach itself to it.
+* `autostart`: defaults to `true` in `render.mode: 'embedded'` and to `false` in `render.mode: 'bubble'.` Unless the session has been previously started and can be retrieved from your storage of choice, a new session will not be started if `autostart: false`.
 
 ```javascript
 /**
@@ -76,9 +74,7 @@ window.voiceflow.chat.load({
 });
 ```
 
-
-
-# Custom CSS: Override <<glossary:agent>> settings and styles
+# Custom CSS: Override <Glossary>agent</Glossary> settings and styles
 
 The below can be used to override the listed agent configuration settings. You can also add a link to your self-hosted stylesheet.
 
@@ -123,8 +119,6 @@ window.voiceflow.chat.load({
 
 ```
 
-
-
 # Proactive text message bubbles
 
 Create custom proactive text messages to draw attention to your Web Chat agent.
@@ -148,21 +142,7 @@ window.voiceflow.chat.proactive
 
 For example, you can render a proactive message bubble when your customer reaches a particular page on your website:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d24d40-proactive_message_bubble_demo.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/4d24d40-proactive_message_bubble_demo.png" />
 
 ```html
 <script>
