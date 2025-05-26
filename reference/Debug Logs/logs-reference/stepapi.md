@@ -11,47 +11,127 @@ next:
   description: ''
 ---
 ## Examples
-###Success
-[block:code]
+
+### Success
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.api\",\n  \"message\": {\n    \"componentName\": \"api\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"request\": {\n      \"method\": \"POST\",\n      \"url\": \"https://example.com/\",\n      \"body\": null,\n      \"bodyType\": null,\n      \"headers\": null,\n      \"query\": null\n    },\n    \"response\": {\n      \"statusCode\": 200,\n      \"statusText\": \"OK\",\n      \"body\": null,\n      \"headers\": null\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.api",
+  "message": {
+    "componentName": "api",
+    "stepID": "628469f0effe73d544505715",
+    "request": {
+      "method": "POST",
+      "url": "https://example.com/",
+      "body": null,
+      "bodyType": null,
+      "headers": null,
+      "query": null
+    },
+    "response": {
+      "statusCode": 200,
+      "statusText": "OK",
+      "body": null,
+      "headers": null
     }
-  ]
+  }
 }
-[/block]
+```
+
 ### Verbose success
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"verbose\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.api\",\n  \"message\": {\n    \"componentName\": \"api\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"request\": {\n      \"method\": \"POST\",\n      \"url\": \"https://example.com/?foo=bar\",\n      \"body\": \"{\\\"foo\\\": \\\"bar\\\"}\",\n      \"bodyType\": \"rawInput\",\n      \"headers\": {\n        \"Content-Type\": \"application/json\"\n      },\n      \"query\": {\n        \"foo\": \"bar\"\n      }\n    },\n    \"response\": {\n      \"statusCode\": 200,\n      \"statusText\": \"OK\",\n      \"body\": \"{\\\"foo\\\": \\\"bar\\\"}\",\n      \"headers\": {\n        \"Content-Type\": \"application/json\"\n      }\n    }\n  }\n}",
-      "language": "json"
+  "level": "verbose",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.api",
+  "message": {
+    "componentName": "api",
+    "stepID": "628469f0effe73d544505715",
+    "request": {
+      "method": "POST",
+      "url": "https://example.com/?foo=bar",
+      "body": "{\"foo\": \"bar\"}",
+      "bodyType": "rawInput",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "query": {
+        "foo": "bar"
+      }
+    },
+    "response": {
+      "statusCode": 200,
+      "statusText": "OK",
+      "body": "{\"foo\": \"bar\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
-  ]
+  }
 }
-[/block]
+```
+
 ### Error
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"error\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.api\",\n  \"message\": {\n    \"componentName\": \"api\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"request\": {\n      \"method\": \"POST\",\n      \"url\": \"https://example.com/\",\n      \"body\": null,\n      \"bodyType\": null,\n      \"headers\": null,\n      \"query\": null\n    },\n    \"response\": {\n      \"statusCode\": 500,\n      \"statusText\": \"Internal Server Error\",\n      \"body\": null,\n      \"headers\": null\n    }\n  }\n}",
-      "language": "json"
+  "level": "error",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.api",
+  "message": {
+    "componentName": "api",
+    "stepID": "628469f0effe73d544505715",
+    "request": {
+      "method": "POST",
+      "url": "https://example.com/",
+      "body": null,
+      "bodyType": null,
+      "headers": null,
+      "query": null
+    },
+    "response": {
+      "statusCode": 500,
+      "statusText": "Internal Server Error",
+      "body": null,
+      "headers": null
     }
-  ]
+  }
 }
-[/block]
+```
+
 ### Verbose error
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"verbose\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.api\",\n  \"message\": {\n    \"componentName\": \"api\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"request\": {\n      \"method\": \"POST\",\n      \"url\": \"https://example.com/?foo=bar\",\n      \"body\": \"{\\\"foo\\\":\\\"bar\\\"}\",\n      \"bodyType\": \"rawInput\",\n      \"headers\": {\n        \"Content-Type\": \"application/json\"\n      },\n      \"query\": {\n        \"foo\": \"bar\"\n      }\n    },\n    \"response\": {\n      \"statusCode\": 500,\n      \"statusText\": \"Internal Server Error\",\n      \"body\": \"{\\\"foo\\\":\\\"bar\\\"}\",\n      \"headers\": {\n        \"Content-Type\": \"application/json\"\n      }\n    }\n  }\n}",
-      "language": "json"
+  "level": "verbose",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.api",
+  "message": {
+    "componentName": "api",
+    "stepID": "628469f0effe73d544505715",
+    "request": {
+      "method": "POST",
+      "url": "https://example.com/?foo=bar",
+      "body": "{\"foo\":\"bar\"}",
+      "bodyType": "rawInput",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "query": {
+        "foo": "bar"
+      }
+    },
+    "response": {
+      "statusCode": 500,
+      "statusText": "Internal Server Error",
+      "body": "{\"foo\":\"bar\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
-  ]
+  }
 }
-[/block]
+```
