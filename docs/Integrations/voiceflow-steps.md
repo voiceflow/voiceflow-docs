@@ -23,6 +23,6 @@ next:
       slug: catching-errors
       title: Catching Code Step Errors
 ---
-Voiceflow steps like the API Step and Custom Action step can be used to integrate your Voiceflow <<glossary:agent>> with other systems. This allows you to design conversations with data that is relevant to your customers.
+Voiceflow steps like the API Step and Custom Action step can be used to integrate your Voiceflow <Glossary>agent</Glossary> with other systems. This allows you to design conversations with data that is relevant to your customers.
 
 Steps like the JavaScript Code Step can be used to transform API responses or text into a format that is suitable for the next steps in your design such as another API Step or a Text Step.
