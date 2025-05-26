@@ -12,24 +12,24 @@ next:
 ---
 # What is Voiceflow?
 
-Voiceflow is the fastest way to _**build and scale high complexity AI agents**_ with your team. 
+Voiceflow is the fastest way to ***build and scale high complexity AI agents*** with your team. 
 
 It is composed of the following products:
 
-1. **A vector database**: Quickly create a vector database to use with our built-in prompt manager for basic and advanced RAG solutions with the Voiceflow _Knowledge Base_.
-2. **A collaborative workflow builder**: Create complex flows with your team that leverage logic, variables, and JavaScript functions to accomplish tasks with _Workflows_. Collaborate and build in real-time.
-3. **JavaScript functions**: Send, receive, and manipulate data from other tools in your tech stack with _Functions_. Create them once and reuse them in your workflows.
-4. **A suite of APIs**: Connect your agent to any custom interface to build a native co-pilot, IVR, discord bot, slack agent, WhatsApp assistant and more. We also have an out-of-the-box _Webchat Widget_ that can be used natively with Voiceflow.
+1. **A vector database**: Quickly create a vector database to use with our built-in prompt manager for basic and advanced RAG solutions with the Voiceflow *Knowledge Base*.
+2. **A collaborative workflow builder**: Create complex flows with your team that leverage logic, variables, and JavaScript functions to accomplish tasks with *Workflows*. Collaborate and build in real-time.
+3. **JavaScript functions**: Send, receive, and manipulate data from other tools in your tech stack with *Functions*. Create them once and reuse them in your workflows.
+4. **A suite of APIs**: Connect your agent to any custom interface to build a native co-pilot, IVR, discord bot, slack agent, WhatsApp assistant and more. We also have an out-of-the-box *Webchat Widget* that can be used natively with Voiceflow.
 
 # How Voiceflow works
 
-Voiceflow is a collaborative tool that features a powerful collaborative low-code AI <<glossary:agent>> building platform. Agents built with Voiceflow are represented by structured [JSON files called .VF files](https://developer.voiceflow.com/docs/voiceflow-project-data-structure).
+Voiceflow is a collaborative tool that features a powerful collaborative low-code AI <Glossary>agent</Glossary> building platform. Agents built with Voiceflow are represented by structured [JSON files called .VF files](https://developer.voiceflow.com/docs/voiceflow-project-data-structure).
 
 The below Voiceflow Agent design is an example of what is structured using the .VF JSON file.
 
 You can find Voiceflow's Agent design platform documentation [here](https://learn.voiceflow.com/hc/en-us/articles/14538287359629-Introducing-Voiceflow-Docs-and-Guides).
 
-## Launch your <<glossary:agent>> directly
+## Launch your <Glossary>agent</Glossary> directly
 
 Agents built on Voiceflow offer a [Dialog Manager API](https://developer.voiceflow.com/reference/overview) which manages conversation state at runtime.
 
