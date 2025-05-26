@@ -30,14 +30,14 @@ For example, consider the phrase: "Check the deposit."
 
 This phrase could have multiple interpretations depending on the context:
 
-In banking, it might mean "Verify that a deposit has been made."  
-In geology, it could mean "Examine the sedimentary deposit."  
+In banking, it might mean "Verify that a deposit has been made."\
+In geology, it could mean "Examine the sedimentary deposit."\
 Gambling might mean, "Look at the money that's been bet."
 
 A Transformer would process this phrase by paying attention to surrounding words and context:
 
-If the preceding text mentions a bank account, the model would likely interpret "check" as a verb meaning "to verify" and "deposit" as a noun referring to money added to an account.  
-If the text discusses rock formations, the model might interpret "check" as "examine" and "deposit" as a geological formation.  
+If the preceding text mentions a bank account, the model would likely interpret "check" as a verb meaning "to verify" and "deposit" as a noun referring to money added to an account.\
+If the text discusses rock formations, the model might interpret "check" as "examine" and "deposit" as a geological formation.\
 If the context is about a casino, the model could interpret "check" as "look at" and "deposit" as the money placed for a bet.
 
 This attention mechanism allows the Transformer to understand not just the words themselves but their meaning in context. Based on the surrounding information, it can differentiate between "check" as a verb or a noun and "deposit" as money or sediment.
