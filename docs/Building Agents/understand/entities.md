@@ -14,7 +14,7 @@ An entity is a specific piece of information or data point that can be extracted
 
 # Managing Entities
 
-**How do I manage my conversation entities, slots, synonyms?**  
+**How do I manage my conversation entities, slots, synonyms?**\
 To view your assistant's entities, navigate to the **Entities** tab in the CMS.
 
 ![](https://files.readme.io/ff245ae-CleanShot_2024-06-06_at_14.35.362x.png)
@@ -27,11 +27,11 @@ To create a **New Entity**, hit the blue button in the top right of the CMS view
 
 When creating a new entity, you’ll need to enter:
 
-- **Entity Name** — you will notice the curly-braced {} in a colored box populate as you input a name; this will be how you invoke/input the entity in Intent utterances or any other applicable part of your assistant
-- **Entity Type** — the type of data the entity is capturing, either 
-- **Entity Values** — its potential values (available when using Custom Entities)
-- **Entity Synonyms (optional) ** — the alternative slot values/variations of the entity values that can classify the Entity slot, and are helpful to improve the recognition of the entity
-- **Entity Color** — this does not affect your end-user experience, it helps organize your Model Manager experience
+* **Entity Name** — you will notice the curly-braced \{} in a colored box populate as you input a name; this will be how you invoke/input the entity in Intent utterances or any other applicable part of your assistant
+* **Entity Type** — the type of data the entity is capturing, either 
+* **Entity Values** — its potential values (available when using Custom Entities)
+* **Entity Synonyms (optional)** — the alternative slot values/variations of the entity values that can classify the Entity slot, and are helpful to improve the recognition of the entity
+* **Entity Color** — this does not affect your end-user experience, it helps organize your Model Manager experience
 
 ## Entity Type
 
@@ -58,8 +58,8 @@ In Voiceflow, there are a 14 pre-defined entity types for English based projects
 9. **DATETIME**: Captures dates and times in various formats. If a user is making an appointment, they might say “21/02/2018” or “Today.”
 10. **CURRENCY**: Refers to monetary amounts in various currencies. This would be useful in transactions, like when a user states their budget is “5 pounds”.
 11. **AGE**: Indicates the age of a person. It could be used in any context where age is relevant, like a user stating “I am 54.”
-12. **KEY_PHRASE**: Deprecated: A concept or subject to capture. Best to use a custom entity.
-13. **URL**: Captures web addresses. When asking for a source of information, a user might provide “<https://en.wikipedia.org/.>"
+12. **KEY\_PHRASE**: Deprecated: A concept or subject to capture. Best to use a custom entity.
+13. **URL**: Captures web addresses. When asking for a source of information, a user might provide “[https://en.wikipedia.org/.](https://en.wikipedia.org/.)"
 14. **ORDINAL**: Recognizes ordinal numbers that denote position or sequence, like “first” in a race or “23rd” in a series.
 
 ## Extending System Defined Entities
