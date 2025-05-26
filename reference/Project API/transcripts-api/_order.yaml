@@ -2,3 +2,4 @@
 - get_transcripts-projectid-hasunreadtranscripts
 - put_transcripts
 - put_transcripts-projectid-transcriptid-annotation-utteranceaddedto
+- get_transcripts-projectid-transcriptid
