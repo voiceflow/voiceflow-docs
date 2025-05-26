@@ -24,30 +24,8 @@ The code and instructions for this project can be found on GitHub [here](https:/
 
 Here's a demo video showing the custom interface in action, and discussing it.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F-_grpoO6AJ0%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-_grpoO6AJ0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F-_grpoO6AJ0%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=-_grpoO6AJ0",
-  "title": "We Built a ChatGPT-Powered Video Game NPC",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/-_grpoO6AJ0/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=-_grpoO6AJ0",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=-_grpoO6AJ0" title="We Built a ChatGPT-Powered Video Game NPC" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/-_grpoO6AJ0/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=-_grpoO6AJ0" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252F-_grpoO6AJ0%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D-_grpoO6AJ0%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252F-_grpoO6AJ0%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 And here's a detailed walkthrough of the development of the project.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FKISOxSOAZWs&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKISOxSOAZWs&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2FKISOxSOAZWs%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=KISOxSOAZWs",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "http://i.ytimg.com/vi/KISOxSOAZWs/hqdefault.jpg",
-  "provider": "http://youtube.com",
-  "href": "https://www.youtube.com/watch?v=KISOxSOAZWs",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/watch?v=KISOxSOAZWs" favicon="https://www.google.com/favicon.ico" image="http://i.ytimg.com/vi/KISOxSOAZWs/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=KISOxSOAZWs" typeOfEmbed="youtube" title="undefined" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FKISOxSOAZWs%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DKISOxSOAZWs%26image%3Dhttp%253A%252F%252Fi.ytimg.com%252Fvi%252FKISOxSOAZWs%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
