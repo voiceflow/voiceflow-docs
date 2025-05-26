@@ -1,0 +1,191 @@
+---
+title: Terminology
+excerpt: ''
+deprecated: false
+hidden: false
+metadata:
+  title: ''
+  description: ''
+  robots: noindex
+next:
+  description: ''
+---
+[block:api-header]
+{
+  "title": "Industry Terms"
+}
+[/block]
+###Utterance
+
+An utterance is a phrase that a user might say (or type) to interact with a system.
+
+The following are all examples of utterances for an `order_food` intent.
+[block:code]
+{
+  "codes": [
+    {
+      "code": "INTENT: \"order_food\"\n\t- \"i am feeling hungry\"\n\t- \"i want takeout\"\n\t- \"i would like {food}\"",
+      "language": "yaml"
+    }
+  ]
+}
+[/block]
+###Intent
+
+An intent represents an action that a user might want to take. Each intent includes a collection of associated utterances. These utterances will be analyzed to determine whether a user triggers the associated intent with any of their interactions.
+
+In the following example the user has used one of the utterances of an `order_food` intent and the system responds accordingly.
+[block:code]
+{
+  "codes": [
+    {
+      "code": "USER: \"i want takeout\"\n* SYSTEM has recognized this utterance as part of the \"order_food\" intent *\nSYSTEM: \"what kind of food would you like?\"",
+      "language": "yaml"
+    }
+  ]
+}
+[/block]
+### Entity
+
+Used to builds an utterances that can resolve a dynamic value. Entities represent a value that can be provided by the user during their interaction with the system.
+
+In the following example, the entity `{food}` is being matched from the `order_food` intent with what the user said. This value can be extracted for the system to user later during the interaction, such as when responding.
+[block:code]
+{
+  "codes": [
+    {
+      "code": "USER: \"i would like a burrito\"\n* SYSTEM has recognized \"burrito\" as a valid value for the \"food\" entity *\nSYSTEM: \"what do you want in your burrito?\"",
+      "language": "yaml"
+    }
+  ]
+}
+[/block]
+### Interaction Model
+
+This represents the overall model for all paths that can be taken for designed conversation. It contains the definitions for all intents, utterances and entities.
+
+In essence this is a large state diagram that can be executed to drive a conversational experience.
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/5106d22-interactionmode.png",
+        "interactionmode.png",
+        1828,
+        1180,
+        "#e3dce9"
+      ]
+    }
+  ]
+}
+[/block]
+
+[block:api-header]
+{
+  "title": "Voiceflow-Specific Terms"
+}
+[/block]
+### Workspace
+
+A collection of *Projects* shared between multiple collaborators. Each collaborator has their own role within a *Workspace* which applies to all contained *Projects*.
+
+### Project
+
+A "codebase" for a Voiceflow application. Different types of *Projects* are limited to target deployment to specific platforms (such as Google Actions and Alexa). Each *Project* is made up of multiple flows (legacy) as well as topics (new) and components (new).
+
+### Diagram
+
+Each *Diagram* can contain references to multiple *Blocks*, *Steps*, *Links* and *Ports*. This graph structure is used as the basis for more concrete concepts such as *Topics* and *Components*. *Diagrams* can be referenced by the *Steps* that appear within them or other *Diagrams* in the same *Project*.
+
+### Flow (Legacy)
+
+*Flows* are a type of *Diagram*.
+
+*Flows* are used for organizing *Projects* as well as for encapsulation. Every *Flow* other than the "Home" *Flow* has its own separate set of variables. The “Home” *Flow* must contains a start *Block* which is the entry point for the conversation.
+
+### Topic
+
+*Topics* are a type of *Diagram*.
+
+*Topics* are used for organizing the logic in *Projects* into related collections of functionality. This paradigm is meant to encourage users to design projects with multiple top-level intents.
+
+### Component
+
+*Components* are a type of *Diagram*.
+
+*Components* are used for creating reusable logic and functionality. A single *Component* can be referenced multiple times throughout a *Project.*
+
+### Diagrams vs. Programs
+
+*Diagrams* can be thought of as the "uncompiled" code of a *Project*. A *Project* is visually represented in the *Canvas* as linked *Blocks* and *Steps.* A *Diagram* is the data structure behind this view and is stored in *MongoDB*.
+
+*Programs* can be thought of as the "compiled" code of a *Project*, which gets executed by our `runtime` services. As an analogy, in C++, *Diagrams* are like `.cc` source code files and *Programs* are the compiled `.exe` executables.
+
+### Variable
+
+Used to store any runtime information for the connected assistant. It can be accessed from the code *Step* for direct manipulation, or through the set and condition *Steps* for simpler operations.
+
+## Canvas
+
+The container that renders all of the *Blocks*, *Steps*, *Links* and *Ports*. It allows panning and zooming and many more advanced interactions.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/ce65701-Screen_Shot_2022-02-23_at_1.44.37_PM.png",
+        "Screen Shot 2022-02-23 at 1.44.37 PM.png",
+        1599,
+        902,
+        "#f2f1e6"
+      ]
+    }
+  ]
+}
+[/block]
+### Block
+
+A container for one or more *Steps*. Each *Step* is implicitly linked to the next one to form a sequence of operations.
+
+### Step
+
+The smallest unit of user-defined functionality in the platform. Each *Step* along a path will be executed sequentially during a conversation.
+
+### Port
+
+The starting point for drawing *Links* between *Steps*. Some *Steps* have a configurable number of *Ports* while others have no *Ports* at all.
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/b03f76a-Screen_Shot_2022-02-23_at_1.51.51_PM.png",
+        "Screen Shot 2022-02-23 at 1.51.51 PM.png",
+        1398,
+        910,
+        "#b0afaf"
+      ]
+    }
+  ]
+}
+[/block]
+### Link
+
+Used to connect a *Port* to another *Step* or *Block*. Links allows *Steps* that are not in the same *Block* to be executed in sequence. Some *Steps* have logic that allow for multiple *Links* to be defined, each with its own target *Step*.
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/cd6e1a4-Screen_Shot_2020-06-24_at_7.37.42_PM.png",
+        "Screen_Shot_2020-06-24_at_7.37.42_PM.png",
+        510,
+        392,
+        "#f7f8f8"
+      ]
+    }
+  ]
+}
+[/block]
