@@ -18,10 +18,10 @@ This tutorial uses Anthropic's Claude as an example of to use any Large Language
 
 You can find the video [here](https://www.loom.com/share/286bb4e13f5f4c3c9394c97b9a43c264?sid=a4530603-dd23-43be-ad39-89ad38ddaa5e). 
 
-_Note: Claude models are now available directly in Voiceflow! You can find them everywhere you use LLMs._
+*Note: Claude models are now available directly in Voiceflow! You can find them everywhere you use LLMs.*
 
 # Instructions & Voiceflow Project
 
 You can clone the Voiceflow project in this video by logging into Voiceflow, then clicking the link below. More detailed instructions can be found on the original blog post [here](https://www.voiceflow.com/blog/claude-llm-ai-assistant)
 
-<https://creator.voiceflow.com/dashboard?import=64a87312e67bcd0007037ec9>
+[https://creator.voiceflow.com/dashboard?import=64a87312e67bcd0007037ec9](https://creator.voiceflow.com/dashboard?import=64a87312e67bcd0007037ec9)
