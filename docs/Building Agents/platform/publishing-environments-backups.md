@@ -12,7 +12,7 @@ next:
 ---
 # Publishing
 
-_How to publish my Assistant? How to bring my Assistant to production? How do I make my Assistant live?_
+*How to publish my Assistant? How to bring my Assistant to production? How do I make my Assistant live?*
 
 Depending on your Assistant type, you can publish to production by navigating and clicking Publish (↻) on the top navigation bar header.
 
@@ -22,11 +22,11 @@ Every time that you publish, a production version will be created to save the st
 
 When prompted to publish a production version, you will have the option to give your new version a name.
 
-_**Note:** Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Version successfully published' to appear._
+***Note:** Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Version successfully published' to appear.*
 
 The action of publishing a new version will overwrite the existing/production (live) version of your assistant, which you can manage and monitor the progress, under Versions. Keep in mind this will leave your draft(s) untouched but will affect the production version. Learn more about versions here.
 
-_Read about production versioning and its significance in our development documentation here._
+*Read about production versioning and its significance in our development documentation here.*
 
 # Environments
 
@@ -45,8 +45,8 @@ To access the Environments feature:
 
 The Environments table displays your current workspaces:
 
-- **Development**: This is your sandbox, where you can test new features, debug, and make changes without impacting the live version.
-- **Production**: Once you've published your project, the production environment will appear here. This is the live version that is accessible to users.
+* **Development**: This is your sandbox, where you can test new features, debug, and make changes without impacting the live version.
+* **Production**: Once you've published your project, the production environment will appear here. This is the live version that is accessible to users.
 
 Both environments are always active, and are available through APIs. Learn more about [project and version IDs in the API reference](https://developer.voiceflow.com/v2.0/reference/project-ids-and-versions).
 
@@ -54,15 +54,15 @@ Both environments are always active, and are available through APIs. Learn more 
 
 ### Development Environment
 
-- You can use the development environment to build and test new features.
-- Changes made here do not affect your production project.
-- Once you are satisfied with the changes, you can publish them to make them live.
+* You can use the development environment to build and test new features.
+* Changes made here do not affect your production project.
+* Once you are satisfied with the changes, you can publish them to make them live.
 
 ### Production Environment
 
-- This environment reflects the live version of your project.
-- It should only be updated with fully tested and stable versions from the development environment.
-- The production environment is what your end-users interact with when you use the `production` version alias.
+* This environment reflects the live version of your project.
+* It should only be updated with fully tested and stable versions from the development environment.
+* The production environment is what your end-users interact with when you use the `production` version alias.
 
 ### Transitioning Between Environments
 
@@ -74,8 +74,8 @@ To promote a version from development to production:
 
 ### Best Practices
 
-- Keep a clear log of changes and updates made in the development environment to track what needs to be published using backups.
-- Only push thoroughly tested and reviewed changes to the production environment to maintain the integrity of the live project.
+* Keep a clear log of changes and updates made in the development environment to track what needs to be published using backups.
+* Only push thoroughly tested and reviewed changes to the production environment to maintain the integrity of the live project.
 
 # Backups
 
@@ -91,7 +91,7 @@ To create a version, use the keyboard shortcut Shift + ⌘ + S (Shift + Ctrl + S
 
 When prompted to create a New Version, you will have the option to give your new version a name.
 
-_**Note**: Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Saved new version'  + [Your Version Name] to appear._
+***Note**: Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Saved new version'  + [Your Version Name] to appear.*
 
 ## How to View, Manage, Rollback and Restore a Backup
 
@@ -129,13 +129,13 @@ Select Download to receive a project export (.vf) of your assistant content that
 
 If you want to roll back to a backup, click the Restore option in the above menu. 
 
-_**Note**: This action can NOT be undone. Make sure you’ve previewed the version and confirmed this sequence, and are expecting overwriting of your recent version(s)/change(s) before reverting._
+***Note**: This action can NOT be undone. Make sure you’ve previewed the version and confirmed this sequence, and are expecting overwriting of your recent version(s)/change(s) before reverting.*
 
 When you restore a backup, Voiceflow creates a new automatic backup of the current designer state. Once confirmed, Voiceflow will send a pop-up notification: 'Backup successfully restored' and refresh the tool with the new loaded version.
 
 # Legacy Versions
 
-_This section is only relevant to legacy users who used the version system before Backups were added. _
+*This section is only relevant to legacy users who used the version system before Backups were added.*
 
 The Legacy Versions table is where you'll find all past versions of your project that used to be in the now outdated versions table. Every version listed here can be accessed and managed using its specific versionID. It's important to remember that once you convert a version into a backup, you won't be able to access it with code anymore.
 
@@ -145,7 +145,7 @@ The Legacy Versions table is where you'll find all past versions of your project
 
 ### Options Available
 
-- **Convert to Backup**: This allows you to archive the version as a backup, which allows you to Preview, Restore, or Download the legacy version.  
+* **Convert to Backup**: This allows you to archive the version as a backup, which allows you to Preview, Restore, or Download the legacy version.\
   **Delete**: This permanently removes the version from the list, which should be used when you are certain that you no longer need that version.
 
 ### Conversion to Backup Process
