@@ -11,10 +11,10 @@ next:
   description: ''
 ---
 > 📘 This article is part of a guide on getting started with Voiceflow APIs
-> 
+>
 > Start from the [beginning](https://docs.voiceflow.com/reference/api-guide-start) here.
 
-Now, let's go into how to interpret this big array of JSON objects. Each of these objects is called a trace, which represent any _output_ from Voiceflow. Their most important fields are the `type` which tells you how to interpret the second part, the `payload` that actually stores the content you need to use the output. 
+Now, let's go into how to interpret this big array of JSON objects. Each of these objects is called a trace, which represent any *output* from Voiceflow. Their most important fields are the `type` which tells you how to interpret the second part, the `payload` that actually stores the content you need to use the output. 
 
 So a response from the DM API is made of an array of traces, and to parse them we have to iterate through the array of traces. You can learn more about other traces [here](https://developer.voiceflow.com/reference/trace-types).
 
