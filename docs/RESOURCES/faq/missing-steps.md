@@ -12,7 +12,7 @@ next:
 ---
 ![](https://files.readme.io/796d650-image.png)
 
-_Do you see a disappeared or missing speak step? Are you missing text step? Canvas not showing right blocks?_
+*Do you see a disappeared or missing speak step? Are you missing text step? Canvas not showing right blocks?*
 
 In Voiceflow, there are different assistant types - mainly (1) Voice & (2) Chat assistant types.
 
