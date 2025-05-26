@@ -13,6 +13,6 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 
-> 
+> 🚧
+>
 > This version of the Analytics API is now in legacy status. We're excited to announce that a new version will be released soon, powering the redesigned Analytics dashboard with improved performance and additional metrics.
