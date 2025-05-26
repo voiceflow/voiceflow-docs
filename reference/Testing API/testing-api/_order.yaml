@@ -5,3 +5,4 @@
 - get-test-spec
 - list-test-specs
 - get-test-run
+- generate-test-spec
