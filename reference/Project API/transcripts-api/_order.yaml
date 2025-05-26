@@ -1,3 +1,4 @@
 - fetchtranscripts
 - get_transcripts-projectid-hasunreadtranscripts
 - put_transcripts
+- put_transcripts-projectid-transcriptid-annotation-utteranceaddedto
