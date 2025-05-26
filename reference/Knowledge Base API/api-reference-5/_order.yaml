@@ -6,3 +6,4 @@
 - put_v1-knowledge-base-documentid-upload
 - put_v1-knowledge-base-docs-documentid-upload
 - patch_v1-knowledge-base-docs-documentid
+- patch_v1-knowledge-base-docs-documentid-chunk-chunkid
