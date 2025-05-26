@@ -10,51 +10,114 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Quick Reference"
-}
-[/block]
+## Quick Reference
 
-[block:parameters]
-{
-  "data": {
-    "0-0": "File format",
-    "0-1": "CSV",
-    "1-0": "**Data Support**",
-    "2-0": "Intents",
-    "2-1": "✅",
-    "3-1": "✅",
-    "4-1": "✅",
-    "5-1": "✅",
-    "3-0": "Training Phrases",
-    "4-0": "Entities",
-    "5-0": "Synonyms",
-    "6-0": "**Import Type** ",
-    "7-0": "Modify",
-    "7-1": "❌",
-    "h-0": "Data",
-    "h-1": "Support",
-    "8-0": "Overwrite",
-    "8-1": "✅"
-  },
-  "cols": 2,
-  "rows": 9
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Data
+      </th>
 
-[block:api-header]
-{
-  "title": "Video Walkthrough"
-}
-[/block]
+      <th style={{ textAlign: "left" }}>
+        Support
+      </th>
+    </tr>
+  </thead>
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FH77nQyUoG0w%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DH77nQyUoG0w&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FH77nQyUoG0w%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=H77nQyUoG0w&feature=youtu.be",
-  "title": "Voiceflow NLU Export: IBM Watson",
-  "favicon": "https://www.youtube.com/s/desktop/f03577db/img/favicon.ico",
-  "image": "https://i.ytimg.com/vi/H77nQyUoG0w/hqdefault.jpg"
-}
-[/block]
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        File format
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        CSV
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Data Support**
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Intents
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Training Phrases
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Entities
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Synonyms
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Import Type** 
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Modify
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ❌
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Overwrite
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## Video Walkthrough
+
+<Embed url="https://www.youtube.com/watch?v=H77nQyUoG0w&feature=youtu.be" title="Voiceflow NLU Export: IBM Watson" favicon="https://www.youtube.com/s/desktop/f03577db/img/favicon.ico" image="https://i.ytimg.com/vi/H77nQyUoG0w/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=H77nQyUoG0w&feature=youtu.be" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FH77nQyUoG0w%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DH77nQyUoG0w%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FH77nQyUoG0w%252Fhqdefault.jpg%26key%3Df2aa6fc3595946d0afc3d76cbbd25dc3%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
