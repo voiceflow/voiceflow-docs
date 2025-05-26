@@ -28,9 +28,9 @@ This LLM-driven approach enhances accuracy and adaptability, allowing your agent
 
 ***
 
-> 📘 
-> 
-> Rules, exit scenarios and automatic reprompt features are included as part of [new AI-powered entity collection](https://docs.voiceflow.com/changelog/ai-entity-collection) feature being rolled out to users. 
+> 📘
+>
+> Rules, exit scenarios and automatic reprompt features are included as part of [new AI-powered entity collection](https://docs.voiceflow.com/changelog/ai-entity-collection) feature being rolled out to users.
 
 ## Entity Extraction Rules: Fine-Tuning Data Capture
 
@@ -38,22 +38,22 @@ This LLM-driven approach enhances accuracy and adaptability, allowing your agent
 
 ### Why Use Entity Rules?
 
-- **Precision**: Define specific formats or content requirements.
-- **Validation**: Ensure data integrity by accepting only valid inputs.
-- **Guidance**: Help the LLM accurately interpret user responses.
+* **Precision**: Define specific formats or content requirements.
+* **Validation**: Ensure data integrity by accepting only valid inputs.
+* **Guidance**: Help the LLM accurately interpret user responses.
 
 ### How to Set Entity Rules
 
 **Navigate to Your Entity**: In the Entity CMS, select the entity you want to configure.
 
-- **Add a Rule**: Write a natural language statement that describes the validation criteria.
+* **Add a Rule**: Write a natural language statement that describes the validation criteria.
 
 ### Examples of Good Entity Capture Rules
 
-- **Zip Code**: "Must be exactly 5 digits long."
-- **Email Address**: "Must be a valid business email, not a personal email like Gmail or Yahoo."
-- **Phone Number**: "Should be a 10-digit number, possibly formatted with dashes or spaces."
-- **Order Number**: "Must start with 'ORD' followed by 7 digits."
+* **Zip Code**: "Must be exactly 5 digits long."
+* **Email Address**: "Must be a valid business email, not a personal email like Gmail or Yahoo."
+* **Phone Number**: "Should be a 10-digit number, possibly formatted with dashes or spaces."
+* **Order Number**: "Must start with 'ORD' followed by 7 digits."
 
 ### Best Practices for Entity Rules
 
@@ -69,20 +69,20 @@ This LLM-driven approach enhances accuracy and adaptability, allowing your agent
 
 ### How Automatic Reprompts Work
 
-- **Detection**: If the user's input is invalid or incomplete based on your entity rules, the system recognizes this.
-- **Generation**: The LLM crafts a personalized message prompting the user to provide the correct information.
-- **Response**: The user provides the needed input, and the conversation continues smoothly.
+* **Detection**: If the user's input is invalid or incomplete based on your entity rules, the system recognizes this.
+* **Generation**: The LLM crafts a personalized message prompting the user to provide the correct information.
+* **Response**: The user provides the needed input, and the conversation continues smoothly.
 
 ### Example of an Automatic Reprompt
 
-- **Scenario**: You're capturing an email address, and the user says, "It's john at email dot com."
-- **Reprompt**: "It seems there's a typo in the email address. Could you please provide a valid email in the format '[example@domain.com](mailto:example@domain.com)'?"
+* **Scenario**: You're capturing an email address, and the user says, "It's john at email dot com."
+* **Reprompt**: "It seems there's a typo in the email address. Could you please provide a valid email in the format '[example@domain.com](mailto:example@domain.com)'?"
 
 ### Benefits of Automatic Reprompts
 
-- **Personalization**: Messages are tailored to the specific issue, making them more helpful.
-- **Efficiency**: Reduces the need for manual error handling in your design.
-- **User Satisfaction**: Keeps users engaged by promptly addressing and resolving input issues.
+* **Personalization**: Messages are tailored to the specific issue, making them more helpful.
+* **Efficiency**: Reduces the need for manual error handling in your design.
+* **User Satisfaction**: Keeps users engaged by promptly addressing and resolving input issues.
 
 ***
 
@@ -96,21 +96,21 @@ Exit scenarios are predefined conditions under which the system stops attempting
 
 ### How to Set Up Exit Scenarios
 
-- **Define Trigger Phrases**: Specify phrases or responses that indicate the user wants to skip or cannot provide the information (e.g., "I don't know," "I'd rather not say").
-- **Configure the Exit Path**: Decide where the conversation should go next. This could be:
-  - **Main Path**: Proceed as if the entity was captured, perhaps with a default value.
-  - **Alternate Path**: Redirect to a different part of the conversation that doesn't require the entity.
+* **Define Trigger Phrases**: Specify phrases or responses that indicate the user wants to skip or cannot provide the information (e.g., "I don't know," "I'd rather not say").
+* **Configure the Exit Path**: Decide where the conversation should go next. This could be:
+  * **Main Path**: Proceed as if the entity was captured, perhaps with a default value.
+  * **Alternate Path**: Redirect to a different part of the conversation that doesn't require the entity.
 
 ### Example of an Exit Scenario
 
-- **Entity**: `PhoneNumber`
-- **Trigger Phrase**: "I don't have a phone."
-- **Exit Action**: The agent replies, "No problem, we'll proceed without a phone number," and continues the conversation.
+* **Entity**: `PhoneNumber`
+* **Trigger Phrase**: "I don't have a phone."
+* **Exit Action**: The agent replies, "No problem, we'll proceed without a phone number," and continues the conversation.
 
 ### Benefits of Using Exit Scenarios
 
-- **Conversation Flow**: Prevents the conversation from stalling due to repeated, unwanted prompts.
-- **Flexibility**: Allows your agent to handle various user behaviors smoothly.
+* **Conversation Flow**: Prevents the conversation from stalling due to repeated, unwanted prompts.
+* **Flexibility**: Allows your agent to handle various user behaviors smoothly.
 
 ***
 
@@ -122,26 +122,26 @@ Let's create a scenario to illustrate how entities, types, rules, automatic repr
 
 **Step 1: Create Entities**
 
-- **`StreetAddress`** (Custom)
-- **`City`** (Custom)
-- **`ZipCode`** (Number)
+* **`StreetAddress`** (Custom)
+* **`City`** (Custom)
+* **`ZipCode`** (Number)
 
 **Step 2: Apply Entity Rules**
 
-- ** Rule**: "Should include the street number and name."
-- **Rule**: "Must be exactly 5 digits."
+* **Rule** : "Should include the street number and name."
+* **Rule**: "Must be exactly 5 digits."
 
 **Step 3: Configure Automatic Reprompts**
 
-- If the **`StreetAddress`** is missing or incomplete:
-  - **Reprompt**: "Could you please provide your full street address, including the number and street name?"
-- If the **`ZipCode`** is invalid:
-  - **Reprompt**: "The zip code should be 5 digits. Could you double-check and provide it again?"
+* If the **`StreetAddress`** is missing or incomplete:
+  * **Reprompt**: "Could you please provide your full street address, including the number and street name?"
+* If the **`ZipCode`** is invalid:
+  * **Reprompt**: "The zip code should be 5 digits. Could you double-check and provide it again?"
 
 **Step 4: Set Up Exit Scenarios**
 
-- If the user says, "I don't feel comfortable sharing my address":
-  - **Exit Scenario**: Reply with "I understand. Would you like to proceed without scheduling a delivery?" and redirect the conversation accordingly.
+* If the user says, "I don't feel comfortable sharing my address":
+  * **Exit Scenario**: Reply with "I understand. Would you like to proceed without scheduling a delivery?" and redirect the conversation accordingly.
 
 ### Conversation Flow Example
 
