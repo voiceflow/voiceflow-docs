@@ -24,7 +24,7 @@ export default async function main(args) {
 
 ## Processing Input Variables
 
-The function accepts a single value, called the** arguments object**, `args`, which contains the data passed into the function when using the function step. In this case, the `args.inputVars` contains a single field called text.:
+The function accepts a single value, called the **arguments object**, `args`, which contains the data passed into the function when using the function step. In this case, the `args.inputVars` contains a single field called text.:
 
 ```javascript
 const { text } = args.inputVars;
@@ -63,19 +63,19 @@ return {
 
 The runtime commands include:
 
-- **Output Variables Command**: Assigns values to output variables.
-- **Next Command**: Directs the assistant to exit the function step through a specific port.
-- **Trace Command**: Generates traces that form part of the agent's response.
+* **Output Variables Command**: Assigns values to output variables.
+* **Next Command**: Directs the assistant to exit the function step through a specific port.
+* **Trace Command**: Generates traces that form part of the agent's response.
 
 > 🚧 Environment limitations
-> 
+>
 > Please note that certain JavaScript methods, such as `setTimeout()`, are not supported out-of-the-box due to their dependence on browser or Node.js runtime APIs and not part of the ECMAScript (JavaScript) language specification itself. This JavaScript reference [document](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) describes all built-in objects supported by functions code.
 
 # Making Network Requests
 
 Voiceflow functions have access to a modified `fetch` API for making network requests. This enables functions to interact with third-party APIs or your own backend services.
 
-Example: GET Request with the Fetch API  
+Example: GET Request with the Fetch API\
 Here's how to make a `GET` request to retrieve data from an API:
 
 ```javascript
@@ -122,26 +122,26 @@ When you run this function within a Voiceflow project, the assistant will recite
 # Specification
 
 > 🚧 Node modules imports
-> 
+>
 > Functions code does not fully support module imports, whether it be the CommonJS format or ESModule format.
 
 ## Function Code Specification
 
-- Written in JavaScript / ECMAScript.
-- The JavaScript engine is V8 and the code executed supports the ES6 standard.
-- Contains a default exported main function.
-- Accepts a single argument called the **argument object**. 
-- The argument object contains a field called `inputVars` containing input variable values passed by the step.
-- Returns runtime commands to dictate the assistant's actions.
-- Functions do not currently support importing modules.
+* Written in JavaScript / ECMAScript.
+* The JavaScript engine is V8 and the code executed supports the ES6 standard.
+* Contains a default exported main function.
+* Accepts a single argument called the **argument object**. 
+* The argument object contains a field called `inputVars` containing input variable values passed by the step.
+* Returns runtime commands to dictate the assistant's actions.
+* Functions do not currently support importing modules.
 
 ## Runtime Commands
 
 The `RuntimeCommands` is a JSON object, which when returned, specifies the behaviour of a function step. Three types of commands are supported:
 
-- **Next Command:** Dictates the path to follow after the function executes. 
-- **Output Variables Command:** Sets the output variables with the values to be used later in the conversation.
-- **Trace Command:** Produces traces as part of the agent's response.
+* **Next Command:** Dictates the path to follow after the function executes. 
+* **Output Variables Command:** Sets the output variables with the values to be used later in the conversation.
+* **Trace Command:** Produces traces as part of the agent's response.
 
 The schema for the runtime commands is given below as a TypeScript interface:
 
@@ -167,7 +167,7 @@ interface NextManyCommand {
 ```
 
 > 📘 Next command with a default port
-> 
+>
 > If the function has no paths defined, then a default port is automatically generated. You do not need to send a next command to leave through the default port.
 
 ### `on` query
@@ -433,21 +433,6 @@ export default async function main(args) {
 
 This debug trace would appear on the Prototype Tool and the Functions test modal:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2e2f52d-Screen_Shot_2023-12-18_at_1.47.26_AM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "35% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="35% " src="https://files.readme.io/2e2f52d-Screen_Shot_2023-12-18_at_1.47.26_AM.png" />
 
 Use debug traces to provide helpful error messages, so that designers can troubleshoot an issue and resolve bugs when using your function step.
