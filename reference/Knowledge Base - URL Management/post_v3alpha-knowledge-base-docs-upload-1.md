@@ -17,27 +17,67 @@ next:
 ---
 ## Request Fields
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Property",
-    "h-1": "Description & Example",
-    "0-0": "**Content-Type**  \n(header)",
-    "0-1": "application/json; charset=utf-8",
-    "1-0": "**overwrite**  \n(query parameter)",
-    "1-1": "Optional - Specify whether to overwrite existing data (optional).  \n\"True\" means you want to overwrite.",
-    "2-0": "**maxChunkSize**  \n(query parameter)",
-    "2-1": "Optional - Determine how granularly each document is broken up.  \nMax chunk size affects the total amount of chunks parsed from a document.  \n(i.e. larger chunks means less chunks retrieved)  \n  \n_Smaller chunk size means:_  \n- narrower context  \n- faster response  \n- less tokens consumed  \n- greater risk of less accurate answers  \n  \ntype: integer ; **default: 1000**; **Range available is 500-1500 tokens**.  \nOnce uploaded, you can view the chunks using the GET **Document Chunk Retrieval** Knowledge Base API."
-  },
-  "cols": 2,
-  "rows": 3,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Property
+      </th>
 
+      <th style={{ textAlign: "left" }}>
+        Description & Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Content-Type**
+        (header)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        application/json; charset=utf-8
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **overwrite**\
+        (query parameter)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Optional - Specify whether to overwrite existing data (optional).\
+        "True" means you want to overwrite.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **maxChunkSize**\
+        (query parameter)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Optional - Determine how granularly each document is broken up.\
+        Max chunk size affects the total amount of chunks parsed from a document.\
+        (i.e. larger chunks means less chunks retrieved)  
+
+        *Smaller chunk size means:*  
+
+        * narrower context  
+        * faster response  
+        * less tokens consumed  
+        * greater risk of less accurate answers  
+
+        type: integer ; **default: 1000**; **Range available is 500-1500 tokens**.\
+        Once uploaded, you can view the chunks using the GET **Document Chunk Retrieval** Knowledge Base API.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Example
 
