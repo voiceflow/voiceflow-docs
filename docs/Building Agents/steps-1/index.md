@@ -24,19 +24,19 @@ Building an agent in a deterministic way means designing a fixed, rule-based flo
 We have four types of steps that allow you to build deterministic agents.
 
 <Cards columns={4}>
-  <Card title="Talk steps" href="https://readme.com" icon="fa-messages" target="_blank">
+  <Card title="Talk steps" href="https://docs.voiceflow.com/docs/talk#/" icon="fa-messages" target="_blank">
     Send text, image, and interactive messages to the user.
   </Card>
 
-  <Card title="Listen steps" icon="fa-ear">
+  <Card title="Listen steps" href="https://docs.voiceflow.com/docs/listen#/" icon="fa-ear">
     Collect useful information from the user.
   </Card>
 
-  <Card title="Logic steps" icon="fa-gears">
+  <Card title="Logic steps" href="https://docs.voiceflow.com/docs/logic-1#/" icon="fa-gears">
     Dynamically route the conversation based on user input.
   </Card>
 
-  <Card title="Dev steps" icon="fa-code">
+  <Card title="Dev steps" href="https://docs.voiceflow.com/docs/dev#/" icon="fa-code">
     Add custom code, API calls, and more to your agent.
   </Card>
 </Cards>
