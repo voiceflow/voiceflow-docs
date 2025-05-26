@@ -14,7 +14,7 @@ next:
 ---
 # Customization and configuration
 
-As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <<glossary:agent>> by setting the **project ID**, the **runtime URL** and a **version ID**.
+As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <Glossary>agent</Glossary> by setting the **project ID**, the **runtime URL** and a **version ID**.
 
 Below is an example of the default code snippet.
 
@@ -38,11 +38,11 @@ You can add additional settings on top of the above configuration to further cus
 
 # Pass a version ID value or alias (optional)
 
-By default, version ID is set to **_development_** but if you use the code snippet in the Web Chat integration page, this is set to **_production_**. You can also use this to force a specific agent's project ID. 
+By default, version ID is set to ***development*** but if you use the code snippet in the Web Chat integration page, this is set to ***production***. You can also use this to force a specific agent's project ID. 
 
-Setting version ID to **_development_** is useful when you want to test a dev version of your <<glossary:agent>> or make changes to your Voiceflow project without impacting your actual agent on production. To see any changes you make in the Creator Tool in your Web Chat widget, click the "Run" button or use the `R` keyboard shortcut in the Creator Tool, so the updates get populated.
+Setting version ID to ***development*** is useful when you want to test a dev version of your <Glossary>agent</Glossary> or make changes to your Voiceflow project without impacting your actual agent on production. To see any changes you make in the Creator Tool in your Web Chat widget, click the "Run" button or use the `R` keyboard shortcut in the Creator Tool, so the updates get populated.
 
-Note: If the version ID is set to **_production_** before you publish your agent, the Web Chat widget will not render any system messages.
+Note: If the version ID is set to ***production*** before you publish your agent, the Web Chat widget will not render any system messages.
 
 ```javascript
 /**
