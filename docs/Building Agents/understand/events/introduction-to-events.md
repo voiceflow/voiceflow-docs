@@ -50,48 +50,48 @@ Events enable your agent to assist users at critical points in their journey, pr
 
 **Scenario 1: User Clicks a Checkout Button**
 
-- **Event**: `InitiateCheckout`
-  - **Trigger**: The user clicks the “Checkout” button in your e-commerce app or website.
-  - **Action**: The application sends an event request to the Voiceflow dialog manager with the event name `InitiateCheckout`.
-  - **Agent Action**: The agent initiates a workflow to assist the user with the checkout process, such as confirming the items, offering shipping options, or applying discounts.
-- **Workflow Message Example**:
-  - **Agent**: “You’re ready to check out! Would you like to review your order or proceed to payment?”
+* **Event**: `InitiateCheckout`
+  * **Trigger**: The user clicks the “Checkout” button in your e-commerce app or website.
+  * **Action**: The application sends an event request to the Voiceflow dialog manager with the event name `InitiateCheckout`.
+  * **Agent Action**: The agent initiates a workflow to assist the user with the checkout process, such as confirming the items, offering shipping options, or applying discounts.
+* **Workflow Message Example**:
+  * **Agent**: “You’re ready to check out! Would you like to review your order or proceed to payment?”
 
 <br />
 
 **Scenario 2: In-App Feature Usage**
 
-- **Event**: `FeatureTutorialStart`
-  - **Trigger**: The user accesses a new feature for the first time.
-  - **Action**: The application detects this and sends an event request named `FeatureTutorialStart`.
-  - **Agent Action**: The agent begins a flow to guide the user through a tutorial of the new feature.
-- **Workflow Message Example**:
-  - **Agent**: “I see you’re exploring our new dashboard. Would you like a quick tour to get familiar with its capabilities?”
+* **Event**: `FeatureTutorialStart`
+  * **Trigger**: The user accesses a new feature for the first time.
+  * **Action**: The application detects this and sends an event request named `FeatureTutorialStart`.
+  * **Agent Action**: The agent begins a flow to guide the user through a tutorial of the new feature.
+* **Workflow Message Example**:
+  * **Agent**: “I see you’re exploring our new dashboard. Would you like a quick tour to get familiar with its capabilities?”
 
 <br />
 
 **Scenario 3: User Sends a Command in a Messaging App**
 
-- **Event**: `ShowRecentTransactions`
-  - **Trigger**: In a messaging platform like Slack or Telegram, the user types a specific command, such as /recent_transactions.
-  - **Action**: The messaging platform sends an event request to the agent with the event name `ShowRecentTransactions`.
-  - **Agent Action**: The agent retrieves and presents the user’s recent transactions.
-- **Workflow Message Example**:
-  - **Agent**: “Here are your most recent transactions: [list of transactions]. Do you need help with anything else?”
+* **Event**: `ShowRecentTransactions`
+  * **Trigger**: In a messaging platform like Slack or Telegram, the user types a specific command, such as /recent\_transactions.
+  * **Action**: The messaging platform sends an event request to the agent with the event name `ShowRecentTransactions`.
+  * **Agent Action**: The agent retrieves and presents the user’s recent transactions.
+* **Workflow Message Example**:
+  * **Agent**: “Here are your most recent transactions: \[list of transactions]. Do you need help with anything else?”
 
 <br />
 
 **Scenario 4: User Navigates to a Specific Page**
 
-- **Event**: `PageVisitPricing`
-  - **Trigger**: The user navigates to the pricing page on your website.
-  - ** Action**: The website detects the page change and sends an event request named `PageVisitPricing`.
-  - **Agent Action**: The agent offers assistance related to pricing, such as explaining different plans or answering FAQs.
-- **Workflow Message Example**:
-  - **Agent**: “Looking at our pricing options? I’m here to help if you have any questions about our plans.”
+* **Event**: `PageVisitPricing`
+  * **Trigger**: The user navigates to the pricing page on your website.
+  * **Action** : The website detects the page change and sends an event request named `PageVisitPricing`.
+  * **Agent Action**: The agent offers assistance related to pricing, such as explaining different plans or answering FAQs.
+* **Workflow Message Example**:
+  * **Agent**: “Looking at our pricing options? I’m here to help if you have any questions about our plans.”
 
 ***
 
 ## Learn more
 
-- **[Using Events](https://docs.voiceflow.com/docs/using-the-events-cms)**: Learn how to use the events via API or Web chat.
+* **[Using Events](https://docs.voiceflow.com/docs/using-the-events-cms)**: Learn how to use the events via API or Web chat.
