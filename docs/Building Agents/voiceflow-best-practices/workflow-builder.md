@@ -19,9 +19,9 @@ Workflows are where the actual conversation logic resides. Each workflow should 
 1. **Single Main Flow:** Each workflow should encapsulate one primary conversation flow or functionality.
 2. **Multiple Triggers:** A workflow can be initiated by various triggers, such as:
 
-- Multiple intents (different ways a user might ask for the same information)
-- External triggers (e.g., API calls, scheduled events)
-- Button clicks or other UI interactions
+* Multiple intents (different ways a user might ask for the same information)
+* External triggers (e.g., API calls, scheduled events)
+* Button clicks or other UI interactions
 
 This design allows for flexibility in how users can access a particular functionality while maintaining a clear, focused purpose for each workflow.
 
@@ -31,8 +31,8 @@ This design allows for flexibility in how users can access a particular function
 
 **Triggers:**
 
-Intent: "What's my account balance?"  
-External: Scheduled daily balance notification  
+Intent: "What's my account balance?"\
+External: Scheduled daily balance notification\
 UI: "Check Balance" button click in the banking app
 
 While all these triggers lead to the same primary function (checking the account balance), having multiple entry points makes the Agent more flexible and user-friendly, accommodating various ways users might try to access this information.
@@ -46,7 +46,7 @@ The workflow itself would contain the steps to:
 5. Offer related actions (e.g., "Would you like to see recent transactions?" or "Do you want to set a balance alert?")
 
 > 💡 Pro tip
-> 
+>
 > When designing workflows, consider how users might try to access the functionality. Including multiple intents and triggers make your Agent more robust and user-friendly. However, to avoid confusion, do not overlap intents between different workflows.
 
 <br />
@@ -59,21 +59,21 @@ The canvas of the Workflow Builder is where you visually design and implement yo
 
 Components in Voiceflow are reusable modules that handle specific functions or tasks. They promote consistency and efficiency by allowing you to use the same functionality across different workflows.
 
-**Example:**  
+**Example:**\
 For our Banking Agent, some essential components might include:
 
-- **Account Authenticator:**
-  - Function: Verifies the user's identity before allowing access to sensitive information or actions.
-  - Usage: This component could be used in balance inquiries, transfers, or account settings changes workflows.
-- **Account Selector:**
-  - Function: Allows users to specify which account they're referring to (e.g., checking, savings, credit card).
-  - Usage: This could be used in balance inquiries, transaction history requests, or transfer workflows.
-- **Error Handling:**
-  - Function: Manages fallbacks when the Agent doesn't understand user input and handles various error scenarios.
-  - Usage: This component can be integrated into any workflow to provide consistent error management across the entire Agent.
-- **Transfer To Agent:**
-  - Function: Determines when to offer a handover to a human Agent and manages the transfer process.
-  - Usage: This can be triggered from the Error Handling Flow or directly from workflows dealing with complex or sensitive issues.
+* **Account Authenticator:**
+  * Function: Verifies the user's identity before allowing access to sensitive information or actions.
+  * Usage: This component could be used in balance inquiries, transfers, or account settings changes workflows.
+* **Account Selector:**
+  * Function: Allows users to specify which account they're referring to (e.g., checking, savings, credit card).
+  * Usage: This could be used in balance inquiries, transaction history requests, or transfer workflows.
+* **Error Handling:**
+  * Function: Manages fallbacks when the Agent doesn't understand user input and handles various error scenarios.
+  * Usage: This component can be integrated into any workflow to provide consistent error management across the entire Agent.
+* **Transfer To Agent:**
+  * Function: Determines when to offer a handover to a human Agent and manages the transfer process.
+  * Usage: This can be triggered from the Error Handling Flow or directly from workflows dealing with complex or sensitive issues.
 
 By creating these components, you ensure consistency in handling these common tasks across your Agent, and you can easily update them in one place if needed.
 
@@ -83,24 +83,24 @@ Actions in Voiceflow allow you to perform simple operations or navigate within y
 
 #### Key points about Actions:
 
-- They can be added from pre-existing steps
-- Actions appear as chips linked to a step's path exit on the canvas
-- Some actions have exits that allow you to move on after the action is executed
+* They can be added from pre-existing steps
+* Actions appear as chips linked to a step's path exit on the canvas
+* Some actions have exits that allow you to move on after the action is executed
 
 **Types of actions include:**
 
 1. **Navigation Actions:**
 
-- Go to Block: Jumps to a specific block in your Agent
-- Go to Intent: Moves to a specific intent
-- End: Terminates the current conversation flow
+* Go to Block: Jumps to a specific block in your Agent
+* Go to Intent: Moves to a specific intent
+* End: Terminates the current conversation flow
 
 2. **Backend Actions:**
 
-- Set Variable: Allows you to set or modify variable values
-- Open URL: Opens a specified URL (typically used in button steps)
-- API: Executes an API call
-- Custom Code: Runs a small piece of custom code
+* Set Variable: Allows you to set or modify variable values
+* Open URL: Opens a specified URL (typically used in button steps)
+* API: Executes an API call
+* Custom Code: Runs a small piece of custom code
 
 #### How add an Action:
 
@@ -111,29 +111,29 @@ Actions are particularly useful for creating more streamlined and efficient work
 
 ### Canvas Organization Techniques
 
-- Color Coding Blocks and Connection Lines
-- Color coding blocks and connection lines enables conversation design artifacts to be easily readable at a glance. This technique provides benefits for both designers and developers:
+* Color Coding Blocks and Connection Lines
+* Color coding blocks and connection lines enables conversation design artifacts to be easily readable at a glance. This technique provides benefits for both designers and developers:
   1. For designers:
-     - Use color to keep track of related groups of elements
-     - Color code different types of transitions between blocks
+     * Use color to keep track of related groups of elements
+     * Color code different types of transitions between blocks
   2. For developers:
-     - Colors provide an instant birds-eye view of the overall flow
-     - Colors help visualize relationships within an experience
+     * Colors provide an instant birds-eye view of the overall flow
+     * Colors help visualize relationships within an experience
 
 #### Precise Labeling
 
 Precise labels are crucial for:
 
-- Enabling searching across an assistant
-- Making it easy to design jumps across blocks, flows, intents, and domains
-- Allowing other designers to understand logic without needing to comprehend complex if-then situations
+* Enabling searching across an assistant
+* Making it easy to design jumps across blocks, flows, intents, and domains
+* Allowing other designers to understand logic without needing to comprehend complex if-then situations
 
 #### Layout Best Practices
 
 When laying out your blocks and arrows:
 
-- Aim for a logical, left-to-right or top-to-bottom flow
-- Minimize crossing arrows to reduce visual complexity
-- Group related blocks together
-- Use consistent spacing between blocks
-- Consider using swimlanes to separate different types of functionality or user paths
+* Aim for a logical, left-to-right or top-to-bottom flow
+* Minimize crossing arrows to reduce visual complexity
+* Group related blocks together
+* Use consistent spacing between blocks
+* Consider using swimlanes to separate different types of functionality or user paths
