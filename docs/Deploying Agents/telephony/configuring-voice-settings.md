@@ -10,56 +10,41 @@ metadata:
 next:
   description: ''
 ---
-> 📘 
-> 
-> The Twilio integration is currently in beta. If you are participating in the beta program, we'd love to hear your feedback! Please email your thoughts and experiences to [product@voiceflow.com.](mailto:product@voiceflow.com.)  
+> 📘
+>
+> The Twilio integration is currently in beta. If you are participating in the beta program, we'd love to hear your feedback! Please email your thoughts and experiences to [product@voiceflow.com.](mailto:product@voiceflow.com.)\
 > If you're interested in joining the beta to try out this exciting new capability, please visit our signup form [here](https://beta.proxy-voiceflow.com/?beta=voiceinvoiceflow) to request access. We'll notify you as soon as a spot becomes available.
-> 
+>
 > During the beta period, please keep in mind that:
-> 
-> - Some features may still be under active development
-> - Documentation may be incomplete or subject to change
-> 
+>
+> * Some features may still be under active development
+> * Documentation may be incomplete or subject to change
+>
 > We greatly appreciate your willingness to be an early adopter and help shape the future of voice AI!
 
 ## Overview
 
 The Voice settings allow you to fine-tune the behaviour of your voice agents during voice calls. By adjusting parameters like silence timeouts, audio cues, and ASR/TTS settings, you can make conversations more organic and enhance the caller experience. This guide will walk you through the available options and how to configure them for your voice agent.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7a79483b187d4a4491b450cf8a72df4f5e2382603c976342458fe13ec0dd67da-Capture_decran_le_2025-02-21_a_13.08.50.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "80% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="80% " src="https://files.readme.io/7a79483b187d4a4491b450cf8a72df4f5e2382603c976342458fe13ec0dd67da-Capture_decran_le_2025-02-21_a_13.08.50.png" />
 
 ## Getting Started
 
 To access the Voice behavior settings for your agent:
 
 1. Navigate to your project. 
-2. Navigate to the _Settings_ > _Behaviour_ tab.
-3. Select the _Voice_ tab.
+2. Navigate to the *Settings* > *Behaviour* tab.
+3. Select the *Voice* tab.
 
 You'll see several settings that control different aspects of the voice interaction.
 
 ## Key Concepts
 
-- **Audio Cue**: A short sound effect played to the caller to signal that the agent has received their input and is processing it.
-- **Punctuation Timeout:** How long the agent will wait after transcribing punctuation (period, question mark, etc.) before assuming the user is done speaking, and processing the turn.
-- **No Punctuation Timeout: **How long the agent will wait if it hasn’t transcribed punctuation before assuming the user is actually done speaking, and processing the turn.
-- **Interruption Threshold:** The number of words (or characters for eastern languages) of a user talking it takes to interrupt the agent's current speaking.
-- **Endpointing:** The amount of silence before finishing a chunk of user audio so it can be sent off for transcription (see more below).
+* **Audio Cue**: A short sound effect played to the caller to signal that the agent has received their input and is processing it.
+* **Punctuation Timeout:** How long the agent will wait after transcribing punctuation (period, question mark, etc.) before assuming the user is done speaking, and processing the turn.
+* **No Punctuation Timeout:** How long the agent will wait if it hasn’t transcribed punctuation before assuming the user is actually done speaking, and processing the turn.
+* **Interruption Threshold:** The number of words (or characters for eastern languages) of a user talking it takes to interrupt the agent's current speaking.
+* **Endpointing:** The amount of silence before finishing a chunk of user audio so it can be sent off for transcription (see more below).
 
 ## Transcription Settings
 
@@ -75,24 +60,24 @@ For example, while I say "I want 2 turtles", this is what is happening in the ba
 >
 > I want to turtles...
 >
-> I want 2 turtles. _(finalized chunk)_
+> I want 2 turtles. *(finalized chunk)*
 
-If the user takes a significant pause, it will also create a _chunk_, even if the sentence looks incomplete.  
+If the user takes a significant pause, it will also create a *chunk*, even if the sentence looks incomplete.\
 In the following example, two separate chunks are created.
 
 > Hi...
 >
-> Hi, my name is... _(pause)_
+> Hi, my name is... *(pause)*
 >
-> Hi, my name is _(finalized chunk)_
+> Hi, my name is *(finalized chunk)*
 >
 > ...
 >
-> Joe _(finalized chunk)_
+> Joe *(finalized chunk)*
 
 ### Endpointing
 
-**Endpointing** uses silence to detect when to finalize a _chunk_. A shorter period means faster latency. For example if I say:
+**Endpointing** uses silence to detect when to finalize a *chunk*. A shorter period means faster latency. For example if I say:
 
 > That's awesome!
 
@@ -102,7 +87,7 @@ In environments with loud background noises, **Endpointing** doesn't work well
 
 ### Punctuation/No Punctuation Timeout
 
-**After** a finalized _chunk_ is produced, we sometimes want to give the user a chance to continue speaking to form a complete utterance for your agent to process. 
+**After** a finalized *chunk* is produced, we sometimes want to give the user a chance to continue speaking to form a complete utterance for your agent to process. 
 
 Users can often speak in run-on sentences, take long pauses, or try to make corrections.
 
@@ -112,7 +97,7 @@ Users can often speak in run-on sentences, take long pauses, or try to make corr
 > 4. New York,
 > 5. Manhattan actually.
 
-Lines 2, 5: **Punctuation Timeout**  
+Lines 2, 5: **Punctuation Timeout**\
 Lines 1, 3, 4: **No Punctuation Timeout**
 
 If the most recent chunk ends in punctuation (!.?¡¿…), it will wait **Punctuation Timeout** seconds for the user to say something else before assuming the user is finished speaking, and processing the turn. This is usually when a user says a complete sentence.
@@ -129,11 +114,11 @@ Voiceflow provides default settings under the "Simplified" tab, with three optio
 
 If you wish to customize further, you can switch to the "Advanced" tab:
 
-- **Punctuation Timeout** and **No Punctuation Timeout** are the main levers to prevent broken up utterances.
-- Keep **Endpointing** low (~100ms) as long as the transcriptions are accurate - the words produced are what the user actually said. This helps transcribe audio as soon as possible, leading to better interruptions. The latency of your agent to respond to a spoken utterance will be _at least_ the endpointing time.
-- Start with longer timeout values (3-5 seconds) and gradually reduce them while monitoring the impact on call quality. Timeouts that are too short can lead to the agent interrupting the caller, and generally having to wait a second or two more for the transcription to be finalized is a nicer user experience than being missheard.
-- Keep **Punctuation Timeout** low, (less than 300ms) if you expect your users to speak simple _single_ sentences. If you’re expecting your users to have more organic and natural conversations with your agent, then it might make sense to increase the punctuation time to 1-2 seconds. This will give the impression of a patient agent listening carefully and really waiting for the user to be done.
-- Keep **No Punctuation Timeout** higher than your Punctuation Timeout, last _least_ 1 second, but often more like 3 seconds, to give users more time to complete their thoughts. _Tip: think about how long you would wait to speak if you're having a conversation with someone on the phone, and they just stop mid-sentence. From our research, it's probably more like 3+ seconds._
+* **Punctuation Timeout** and **No Punctuation Timeout** are the main levers to prevent broken up utterances.
+* Keep **Endpointing** low (\~100ms) as long as the transcriptions are accurate - the words produced are what the user actually said. This helps transcribe audio as soon as possible, leading to better interruptions. The latency of your agent to respond to a spoken utterance will be *at least* the endpointing time.
+* Start with longer timeout values (3-5 seconds) and gradually reduce them while monitoring the impact on call quality. Timeouts that are too short can lead to the agent interrupting the caller, and generally having to wait a second or two more for the transcription to be finalized is a nicer user experience than being missheard.
+* Keep **Punctuation Timeout** low, (less than 300ms) if you expect your users to speak simple *single* sentences. If you’re expecting your users to have more organic and natural conversations with your agent, then it might make sense to increase the punctuation time to 1-2 seconds. This will give the impression of a patient agent listening carefully and really waiting for the user to be done.
+* Keep **No Punctuation Timeout** higher than your Punctuation Timeout, last *least* 1 second, but often more like 3 seconds, to give users more time to complete their thoughts. *Tip: think about how long you would wait to speak if you're having a conversation with someone on the phone, and they just stop mid-sentence. From our research, it's probably more like 3+ seconds.*
 
 In an advanced implementation, it is possible to change the settings on-the-fly during the call, depending on the use case. [Reference](https://docs.voiceflow.com/docs/advanced-using-custom-voice-actions#update-asr-settings-mid-call)
 
@@ -160,15 +145,15 @@ Voiceflow does have backup handling for this: joining broken up utterances. If a
 Going back to our John Doe example, after the user is finished their sentence (assuming the silence was less than 3 seconds), `{last_utterance}` will actually be `Hi my name is John Doe from New York.`. Similarly, `{vf_memory}` variable will store this as one single utterance.
 
 > 🚧 A warning about Broken Up Uttereances
-> 
+>
 > Even though the utterances will be joined together, the agent will have still received the first, partial, utterance. That means that it might have moved on inside the conversational flow (to a later step or stopping point), which could include updating variables or making external API calls, **whose state will not be rolled back**. It's just taken as if the user had actually said:
-> 
+>
 > > User: Hi my name is John
 > >
 > > Agent: sorry I don't think...
 > >
-> > User: _Hi my name is John_ Doe from New York.
-> 
+> > User: *Hi my name is John* Doe from New York.
+>
 > For this reason, we recommend not having broken up utterances in the first place by adjusting your settings. These broken up utterances are also less of a problem for LLM-first steps, where they generally understand what's going on.
 
 ## Transcription Languages
@@ -191,22 +176,7 @@ If you want to support multiple languages on Twilio, you can use a DTMF menu to 
 2. Click the drop-down menu and select one of the preset sound effects. Hear a preview of the cue by selecting the play button in the dropdown.
 3. Test the audio cue by calling your agent and hearing it play after you finish speaking.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8b0f4b568d0cbf60ec08f02f49fd8466d02c438b586eb5ce35fb94d4e6409e89-CleanShot_2024-12-02_at_11.51.42.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "50% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="50% " src="https://files.readme.io/8b0f4b568d0cbf60ec08f02f49fd8466d02c438b586eb5ce35fb94d4e6409e89-CleanShot_2024-12-02_at_11.51.42.png" />
 
 ### Select TTS Voice
 
@@ -223,5 +193,5 @@ Explore the variety of TTS voices to find one that callers find natural and enga
 
 ### Agent is Interrupting Caller
 
-- Increase the (ASR) Silence Wait and (ASR) Utterance End timeout values to give callers more time to start and complete their statements.  
-- Make sure your agent prompts are worded clearly to elicit succinct responses from callers. Open-ended or ambiguous prompts may encourage rambling.
+* Increase the (ASR) Silence Wait and (ASR) Utterance End timeout values to give callers more time to start and complete their statements.  
+* Make sure your agent prompts are worded clearly to elicit succinct responses from callers. Open-ended or ambiguous prompts may encourage rambling.
