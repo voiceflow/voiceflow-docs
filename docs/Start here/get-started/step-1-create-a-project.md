@@ -26,8 +26,8 @@ This walkthrough follows the steps to create a new project from scratch. If you 
 
 In your workspace click the 'New Assistant' button on the top right. From there you can choose whether to build an AI Assistant or Design for an NLU Platform.
 
-- **AI Assistant:** If you are deploying to a channel directly with our API, or want to use AI features in your assistant use this.
-- **Designing for NLU Platform:** If you are working with an existing NLU platform (ie. Dialogflow, Lex, Rasa) and using Voiceflow just for design and export. Use this.
+* **AI Assistant:** If you are deploying to a channel directly with our API, or want to use AI features in your assistant use this.
+* **Designing for NLU Platform:** If you are working with an existing NLU platform (ie. Dialogflow, Lex, Rasa) and using Voiceflow just for design and export. Use this.
 
 This walkthrough will focus on building and deploying an AI Assistant. If you are designing for an NLU platform. Visit our guide to building for export [here](https://learn.voiceflow.com/hc/en-us/articles/10875693411085-How-Do-I-Design-a-Flow-).
 
@@ -35,6 +35,6 @@ This walkthrough will focus on building and deploying an AI Assistant. If you ar
 
 ## Whats Next?
 
-- **Add Data:** Using our knowledge base feature. You can upload any set of PDFs, Webpages, or Text files to power your assistant instantly.
-- **Preview:** Preview what your assistant will look like
-- **Deploy:** Use our API or Integrations to deploy to a website within minutes.
+* **Add Data:** Using our knowledge base feature. You can upload any set of PDFs, Webpages, or Text files to power your assistant instantly.
+* **Preview:** Preview what your assistant will look like
+* **Deploy:** Use our API or Integrations to deploy to a website within minutes.
