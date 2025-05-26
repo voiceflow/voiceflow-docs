@@ -28,13 +28,13 @@ Within this page, you can set general settings like chat persistence but also cu
 
 You can go a bit further and use your own front-end code to interact with the Chat Widget as you might also want to populate a specific user ID and/or use the available APIs to do the following actions:
 
-- Load a specific project
-- Set configuration settings
-- Open the Chat Widget
-- Close the Chat Widget
-- Hide the Chat Widget bubble
-- Show the Chat Widget bubble
-- Interact with the Dialog Manager API and show the result within the Chat Widget
+* Load a specific project
+* Set configuration settings
+* Open the Chat Widget
+* Close the Chat Widget
+* Hide the Chat Widget bubble
+* Show the Chat Widget bubble
+* Interact with the Dialog Manager API and show the result within the Chat Widget
 
 ### Configuration
 
@@ -54,8 +54,6 @@ window.voiceflow.chat.load({
 });
 ```
 
-
-
 ```jsx
 /**
 * [optional] userID to track users and persist/continue sessions
@@ -64,9 +62,7 @@ window.voiceflow.chat.load({
 userID: "string"
 ```
 
-
-
-This is an handy way to identify the user and share that info with your assistant as the built-in {user_id} variable in your Voiceflow project with be populated with that value.
+This is an handy way to identify the user and share that info with your assistant as the built-in \{user\_id} variable in your Voiceflow project with be populated with that value.
 
 ```jsx
 /**
@@ -79,8 +75,6 @@ user: {
 };
 ```
 
-
-
 Here you can set a name and an image that will be used in the transcripts linked to that user.
 
 ```jsx
@@ -92,9 +86,7 @@ Here you can set a name and an image that will be used in the transcripts linked
 versionID: "string"
 ```
 
-
-
-By default, versionID is set to **_development_** but if you use the code snippet in the Web Chat integration page, this is set to **_production_** instead. You can also use this to force a specific project id. This become handy when you want to test a dev version of your assistant and/or make changes to your Voiceflow project without impacting your actual assistant on prod.
+By default, versionID is set to ***development*** but if you use the code snippet in the Web Chat integration page, this is set to ***production*** instead. You can also use this to force a specific project id. This become handy when you want to test a dev version of your assistant and/or make changes to your Voiceflow project without impacting your actual assistant on prod.
 
 ```jsx
 /**
@@ -104,8 +96,6 @@ By default, versionID is set to **_development_** but if you use the code snippe
 
 url: "string"
 ```
-
-
 
 This setting is for **Enterprises** on **Private Clouds** as they need to use their dedicated runtime endpoint.
 
@@ -121,8 +111,6 @@ assistant: {
   color: "string"
 };
 ```
-
-
 
 This last one is to override the actual assistant configuration.
 
@@ -142,11 +130,9 @@ window.voiceflow.chat.load({
 })
 ```
 
-
-
 ### APIs
 
-Whenever the Chat Widget script is loaded it will register an API as **window.voiceflow.chat** with the following functions:
+Whenever the Chat Widget script is loaded it will register an API as **window\.voiceflow\.chat** with the following functions:
 
 ```jsx
 load({config})
@@ -157,15 +143,13 @@ hide()
 interact({action})
 ```
 
-
-
 > **load()** is what we’ve seen previously
 >
 > **open()** and **close()** allow you to **open** or **close** the widget window
 >
-> **show()** and **hide()** allow you to show or hide the chat bubble (_and the widget window if opened_)
+> **show()** and **hide()** allow you to show or hide the chat bubble (*and the widget window if opened*)
 >
-> **interact()** allow you to call the DM API interact endpoint to send a request and update the actual conversation in the widget. See doc here: <https://developer.voiceflow.com/reference/stateinteract-1>
+> **interact()** allow you to call the DM API interact endpoint to send a request and update the actual conversation in the widget. See doc here: [https://developer.voiceflow.com/reference/stateinteract-1](https://developer.voiceflow.com/reference/stateinteract-1)
 
 Example calls:
 
@@ -177,13 +161,9 @@ window.voiceflow.chat.load({
 });
 ```
 
-
-
 ```jsx
 window.voiceflow.chat.open();
 ```
-
-
 
 ```jsx
 window.voiceflow.chat.interact({
@@ -191,8 +171,6 @@ window.voiceflow.chat.interact({
 	payload: "Can I order a large pepperoni pizza"
 })
 ```
-
-
 
 ### Events
 
