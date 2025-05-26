@@ -20,4 +20,4 @@ You can apply and add the SSML effects available on your desired Speech step(s) 
 
 There are many components of SSML & properties you can add to your speech as effects such as Break, Volume, Speed/Rate, Emphasis and even Whispers! You can use the 'Search effects' bar in this menu to find your desired speech effect.
 
-_You can learn more in this doc on the [Speak Step here](https://developer.voiceflow.com/v2.0/docs/speak)._
+*You can learn more in this doc on the[Speak Step here](https://developer.voiceflow.com/v2.0/docs/speak).*
