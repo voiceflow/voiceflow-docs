@@ -19,9 +19,9 @@ Microsoft Teams is a collaboration platform that brings together chat, video mee
 This integration guide will provide you with the steps and information needed to integrate your assistant with Microsoft Teams.
 
 > 📘 Prerequisites
-> 
+>
 > Before starting the integration, you will need the following:
-> 
+>
 > 1. A Microsoft Teams account
 > 2. A new Microsoft Team App: [Setup Guide](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal)
 
@@ -29,4 +29,4 @@ This integration guide will provide you with the steps and information needed to
 
 You can find our open source code and step by step instructions on using our Dialog Manager API with it below.
 
-<https://github.com/voiceflow-gallagan/api-integration-msteams/tree/e7a30eb4164fc5fbe097f2d1d7e82746d383f1d8>
+[https://github.com/voiceflow-gallagan/api-integration-msteams/tree/e7a30eb4164fc5fbe097f2d1d7e82746d383f1d8](https://github.com/voiceflow-gallagan/api-integration-msteams/tree/e7a30eb4164fc5fbe097f2d1d7e82746d383f1d8)
