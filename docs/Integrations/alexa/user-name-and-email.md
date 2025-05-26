@@ -16,14 +16,14 @@ In this article we will create an Alexa skill in Voiceflow allowing us to reques
 
 With a similar design and the **Alexa Customer Profile API**, here are a list of user’s info you will be able to retrieve:
 
-- Full Name
-- Given Name (First Name)
-- Email Address
-- Phone Number
+* Full Name
+* Given Name (First Name)
+* Email Address
+* Phone Number
 
 ## Context
 
-In order to access user’s info in a skill, you will need to use the **Alexa Customer Profile API** with an **API token**. This token can be retrieved from your Alexa project’s {**\_system**} variable after the user has given us permission to access their data.
+In order to access user’s info in a skill, you will need to use the **Alexa Customer Profile API** with an **API token**. This token can be retrieved from your Alexa project’s \{**\_system**} variable after the user has given us permission to access their data.
 
 ## What we need?
 
@@ -49,19 +49,19 @@ And create the needed two variables:
 
 ![](https://files.readme.io/07415c8-CleanShot_2022-08-19_at_22.38.40.png)
 
-> 📘 
-> 
+> 📘
+>
 > You can use the names you want for those variables but be sure to update your project accordingly.
 
-Now we are going to populate our {**apiEndpoint**} and {**apiAccessToken**} variables with the corresponding data from the {**\_system**} variable.
+Now we are going to populate our \{**apiEndpoint**} and \{**apiAccessToken**} variables with the corresponding data from the \{**\_system**} variable.
 
 A Set step will do the job here:
 
 ![](https://files.readme.io/a7c6f75-CleanShot_2022-08-19_at_22.48.23.png)
 
-> 📘 
-> 
-> We use expressions here, so if none of those paths exist in the **{\_system}** variable, our **apiEndpoint** and **apiAccessToken** will be set to 0.
+> 📘
+>
+> We use expressions here, so if none of those paths exist in the **\{\_system}** variable, our **apiEndpoint** and **apiAccessToken** will be set to 0.
 
 ### Step 2 | Make API requests
 
@@ -79,9 +79,9 @@ And an example of a request shared on the Alexa documentation:
 
 As explained in the documentation, the endpoint for the **Alexa Customer Profile API** varies depending on the geographic location of your skill. This is the reason why we are grabbing that info from the **\_system** variable; to dynamically set the API endpoint.
 
-> 📘 
-> 
-> Any request to the **Alexa** **Customer** **Profile** **API** will need a token and an endpoint. This is why we need our **{apiEndpoint}** and **{apiAccessToken}** variables.
+> 📘
+>
+> Any request to the **Alexa** **Customer** **Profile** **API** will need a token and an endpoint. This is why we need our **\{apiEndpoint}** and **\{apiAccessToken}** variables.
 
 The API step setup is pretty simple, drag/drop the API step on your canvas and set it like this:
 
@@ -91,15 +91,15 @@ The API step setup is pretty simple, drag/drop the API step on your canvas and s
 {apiEndpoint}/v2/accounts/~current/settings/Profile.givenName
 ```
 
-As you can see, we are using the {**apiEndpoint**} variable in the URL with a **GET** method and the {**apiAccessToken**} in the headers as documented in the **Alexa Customer Profile API**.
+As you can see, we are using the \{**apiEndpoint**} variable in the URL with a **GET** method and the \{**apiAccessToken**} in the headers as documented in the **Alexa Customer Profile API**.
 
-The Profile.givenName return only the first name so the full response will be stored in the {**userName**} variable (_this one as to be created when mapping the response to it in the API step_).
+The Profile.givenName return only the first name so the full response will be stored in the \{**userName**} variable (*this one as to be created when mapping the response to it in the API step*).
 
 To do the **email request**, let’s just duplicate this API step.
 
 ![](https://files.readme.io/d14cd4a-CleanShot_2022-08-16_at_15.13.03.png)
 
-On the duplicated API step, we will have to change the endpoint and the variable mapping with a new variable called **{userEmail}**.
+On the duplicated API step, we will have to change the endpoint and the variable mapping with a new variable called **\{userEmail}**.
 
 ![](https://files.readme.io/0ed092f-CleanShot_2022-08-16_at_15.15.41.png)
 
@@ -107,12 +107,12 @@ On the duplicated API step, we will have to change the endpoint and the variable
 {apiEndpoint}/v2/accounts/~current/settings/Profile.email
 ```
 
-The last thing we want to do while setting up the API requests is to be sure to set our {**userName**} and {**userEmail**} variables to **0** in case the API calls return an error (_not a 200 code for example_).
+The last thing we want to do while setting up the API requests is to be sure to set our \{**userName**} and \{**userEmail**} variables to **0** in case the API calls return an error (*not a 200 code for example*).
 
 We can do this by linking two **Set steps**, one on each **API step Fail port**.
 
-> 📘 
-> 
+> 📘
+>
 > It’s always a good practice to reset your variables to 0 in case of error to be sure not to use previously stored data when using some conditions later on to check their values.
 
 ![](https://files.readme.io/ebcf190-CleanShot_2022-08-16_at_15.44.03.png)
@@ -139,10 +139,10 @@ In this **Condition step**, we will setup 4 **conditions**, using the **No Match
 
 With this, we will be able to redirect the user to different paths.
 
-- One if we have access to both info, **given name and email**
-- One if we don’t have access at all
-- One if we don’t have access to **given name**
-- One if we don’t have access to **email**
+* One if we have access to both info, **given name and email**
+* One if we don’t have access at all
+* One if we don’t have access to **given name**
+* One if we don’t have access to **email**
 
 ### Step 4 | **Permissions card** using \_response variable
 
@@ -220,8 +220,6 @@ And from there, activate the needed permissions:
 
 ![](https://files.readme.io/8b93dfd-CleanShot_2022-08-16_at_16.48.12.png)
 
-
-
 Finally, go to the **Test** tab, activate the **skill for development** if not already and run a **test**.
 
 ![](https://files.readme.io/22dc2a0-CleanShot_2022-08-16_at_16.51.23.png)
@@ -235,5 +233,5 @@ If you’ve already give access to **given name** and **email** you should have 
 ![](https://files.readme.io/f6eaa1a-CleanShot_2022-08-16_at_16.52.41.png)
 
 > 👍 Further reading
-> 
+>
 > Alexa Developer Documentation: [Request Customer Contact Information for Use in Your Skill](https://developer.amazon.com/en-US/docs/alexa/custom-skills/request-customer-contact-information-for-use-in-your-skill.html)
