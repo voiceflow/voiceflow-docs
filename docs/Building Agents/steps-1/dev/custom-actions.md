@@ -1,5 +1,5 @@
 ---
-title: Custom Action step
+title: Custom action step
 excerpt: ''
 deprecated: false
 hidden: false
