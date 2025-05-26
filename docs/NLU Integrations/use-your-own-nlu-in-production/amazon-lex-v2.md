@@ -10,17 +10,19 @@ metadata:
 next:
   description: ''
 ---
-##Overview
+## Overview
+
 In this guide, we will take a look at how to setup a custom NLU connection between Lex V2 and Voiceflow.
-[block:callout]
-{
-  "type": "info",
-  "title": "Resources",
-  "body": "- [Template source code on Github](https://github.com/zslamkov/voiceflow_lexv2)\n- [Voiceflow](https://www.voiceflow.com) **Chat Assistant** project"
-}
-[/block]
+
+> 📘 Resources
+>
+> * [Template source code on Github](https://github.com/zslamkov/voiceflow_lexv2)
+> * [Voiceflow](https://www.voiceflow.com) **Chat Assistant** project
+
 ## Prerequisites
+
 Here are the tools you will need for this project:
+
 1. Amazon Lex V2 Bot
 2. Voiceflow Account
 
@@ -29,11 +31,13 @@ Here are the tools you will need for this project:
 Install and run the project:
 
 1. Clone this repo:
+
 ```bash
 git clone https://github.com/zslamkov/voiceflow_lexv2.git
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
@@ -43,6 +47,7 @@ npm install
 To allow for all of our AWS requests to be signed with an AWSv4 signature, we will be using the [`aws-axios`](https://www.npmjs.com/package/aws4-axios) package.
 
 We can complete the connection with only a few lines of code
+
 ```js
 const client = axios.create();
 
@@ -63,17 +68,17 @@ client.interceptors.request.use(interceptor);
 ## Retrieve Intent Data
 
 We will be sending an unstructured utterance to the Lex V2 [`RecognizeText`](https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html) endpoint in order to receive a response with:
+
 1. The triggered intent name
 2. Entity key/values
 3. Confidence score
-[block:callout]
-{
-  "type": "warning",
-  "title": "INTENT AND SLOT NAMES MUST MATCH",
-  "body": "Make sure to have all slot and intent names in your Lex bot and Voiceflow interaction model match in order to trigger the right path."
-}
-[/block]
+
+> 🚧 INTENT AND SLOT NAMES MUST MATCH
+>
+> Make sure to have all slot and intent names in your Lex bot and Voiceflow interaction model match in order to trigger the right path.
+
 The below function illustrates the request and how to transform the response into a format ready for Voiceflow. 
+
 ```js
 async function detectIntent(textInput, sessionID) {
   const response = await client
@@ -115,13 +120,13 @@ The below app allows us to interact with our chat assistant via the CLI.
 
 We will be retrieving the `userID` by having the user enter their name. Once completed, we will send a launch request to Voiceflow to start the conversation and send the first steps to the channel. 
 
-
 ```js
 async function main() {
   const userID = await cli.prompt("> What is your name?");
   // send a simple launch request starting the dialog
   let isRunning = await interact(userID, { type: "launch" });
 ```
+
 Now on each new interaction from the user, we will be passing the userID and text input through the `detectIntent` function and returning the `intent` object that will be used in the next line of code to populate the request payload to Voiceflow. 
 
 ```js
@@ -148,6 +153,7 @@ main();
 ```
 
 ## Run
+
 What it might look like in action:
 
 ```
