@@ -27,6 +27,6 @@ window.voiceflow.chat.load({
 
 Available persistence options:
 
-- `'localStorage'` (default): Conversations persist across page refreshes and browser sessions
-- `'sessionStorage'`: Conversations persist across page refreshes but reset when all tabs are closed
-- `'memory'`: Conversations reset on each page refresh or new tab
+* `'localStorage'` (default): Conversations persist across page refreshes and browser sessions
+* `'sessionStorage'`: Conversations persist across page refreshes but reset when all tabs are closed
+* `'memory'`: Conversations reset on each page refresh or new tab
