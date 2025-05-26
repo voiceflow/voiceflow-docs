@@ -7,3 +7,4 @@
 - delete_transcripts-projectid-transcriptid
 - get_transcripts-projectid-transcriptid-export
 - delete_transcripts-projectid-transcriptid-report-tag-reporttagid
+- put_transcripts-projectid-transcriptid-report-tag-reporttagid
