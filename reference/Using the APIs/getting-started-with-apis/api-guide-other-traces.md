@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 📘 This article is part of a guide on getting started with Voiceflow APIs
-> 
+>
 > Start from the [beginning](https://docs.voiceflow.com/reference/api-guide-start) here.
 
 👉 Import [the second agent example project](https://github.com/SuperZooper3/Voiceflow-Getting-Started-APIs-Guide/blob/main/Voiceflow_API_Getting_Started_Part_2.vf). Make sure to run it, publish it, and the update the API key in your Python code.
@@ -398,7 +398,7 @@ Now, we can answer `2` to select a Shirt!
 Handling buttons is similar to how many other traces are handled, so as you expand your interface using the DM API, you'll implement more and more traces.
 
 > ✨ Extra Challenge
-> 
+>
 > The provided flow includes two images that are shared when you choose either a shirt or a hat. Try handling those traces and displaying the images from inside your Python script! As a hint, you could use matplotlib, pillow, or IPython.display to show the images. Good luck!
 
 One last trace that's important to handle is the **end** trace. It's triggered by Voiceflow when there's no more steps attached to a path, or you hit the end step. You might have seen it after choosing one of the options in your handy catch-all trace print: `{'type': 'end'}`. 
