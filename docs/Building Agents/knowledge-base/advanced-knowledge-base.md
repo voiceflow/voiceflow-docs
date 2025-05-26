@@ -18,19 +18,7 @@ If you want full control over your responses, you can use the KB Query API direc
 
 The video below shows an example of Pete from our team using this advanced method to prevent hallucinations for a bank. **Start at the 12:32 Timestamp.**
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FBHxhFd1vqkg%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBHxhFd1vqkg&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FBHxhFd1vqkg%2Fhqdefault.jpg&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=BHxhFd1vqkg",
-  "title": "Removing Hallucinations for a Wells Fargo Customer Support Banking Agent | Making Bots",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/BHxhFd1vqkg/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=BHxhFd1vqkg",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=BHxhFd1vqkg" title="Removing Hallucinations for a Wells Fargo Customer Support Banking Agent | Making Bots" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/BHxhFd1vqkg/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=BHxhFd1vqkg" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FBHxhFd1vqkg%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DBHxhFd1vqkg%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FBHxhFd1vqkg%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 # KB Query API
 
@@ -48,11 +36,11 @@ When you use metadata filters, the searches precisely retrieve the number of res
 
 ### Supported Types
 
-- **String**: For textual data.
-- **Number**: For numeric values.
-- **Boolean**: True or false values.
-- **Arrays**: Arrays containing any other supported type.
-- **Objects**: Nested JSON objects for hierarchical data structures.
+* **String**: For textual data.
+* **Number**: For numeric values.
+* **Boolean**: True or false values.
+* **Arrays**: Arrays containing any other supported type.
+* **Objects**: Nested JSON objects for hierarchical data structures.
 
 ### Metadata Size Limitations
 
@@ -86,28 +74,28 @@ The system supports up to 10kb of metadata per chunk, allowing for detailed and 
 
 ## Metadata Query Language
 
-> 📘 
-> 
+> 📘
+>
 > Voiceflow's filtering query language is based on [MongoDB’s query and projection operators](https://docs.mongodb.com/manual/reference/operator/query/).
 
 Voiceflow's query language for chunkDB is inspired by MongoDB, designed specifically for conversational metadata and supports a variety of operators for both straightforward and complex queries.
 
 ### Supported Operators
 
-- **Equality and Comparison**
-  - `$eq`: Equal to
-  - `$ne`: Not equal to
-  - `$gt`: Greater than
-  - `$gte`: Greater than or equal to
-  - `$lt`: Less than
-  - `$lte`: Less than or equal to
-- **Array Operations**
-  - `$in`: Matches any of the values specified in an array
-  - `$nin`: Does not match any of the values specified in an array
-  - `$all`: Matches all values specified in an array
-- **Logical Operators**
-  - `$and`: Logical AND that combines multiple conditions
-  - `$or`: Logical OR that combines multiple conditions
+* **Equality and Comparison**
+  * `$eq`: Equal to
+  * `$ne`: Not equal to
+  * `$gt`: Greater than
+  * `$gte`: Greater than or equal to
+  * `$lt`: Less than
+  * `$lte`: Less than or equal to
+* **Array Operations**
+  * `$in`: Matches any of the values specified in an array
+  * `$nin`: Does not match any of the values specified in an array
+  * `$all`: Matches all values specified in an array
+* **Logical Operators**
+  * `$and`: Logical AND that combines multiple conditions
+  * `$or`: Logical OR that combines multiple conditions
 
 ### Querying Nested Objects
 
