@@ -22,12 +22,12 @@ Below are key trace types that you will encounter.
 
 This trace type is returned for the following Voiceflow elements:
 
-- Text Step
-- Response AI Step
-- No match re-prompt
-- No reply re-prompt
-- Global No Match
-- Global No Reply
+* Text Step
+* Response AI Step
+* No match re-prompt
+* No reply re-prompt
+* Global No Match
+* Global No Reply
 
 Example payload:
 
@@ -72,12 +72,12 @@ Example payload:
 
 This trace type is returned for the following Voiceflow elements:
 
-- Speak Step
-- Audio Step
-- No match reprompt
-- No reply reprompt
-- Global No Match
-- Global No Reply
+* Speak Step
+* Audio Step
+* No match reprompt
+* No reply reprompt
+* Global No Match
+* Global No Reply
 
 Speak Step example:
 
@@ -315,8 +315,8 @@ The below example trace is for a Button step with two buttons and no intents:
 
 Notes on the above example:
 
-- The `request.type` values for these buttons would be Voiceflow-generated path IDs for the next elements.
-- In this case, upon button click: call the Dialog Manager API with the path ID as the `action.type` value to retrieve the next elements. For example, if the `request.type` value for the button is “path-xyz”, the request body would look like the below. (`request.payload.label`  value is optional; if included in the request, the value will be set as the `last_utterance` variable value)
+* The `request.type` values for these buttons would be Voiceflow-generated path IDs for the next elements.
+* In this case, upon button click: call the Dialog Manager API with the path ID as the `action.type` value to retrieve the next elements. For example, if the `request.type` value for the button is “path-xyz”, the request body would look like the below. (`request.payload.label`  value is optional; if included in the request, the value will be set as the `last_utterance` variable value)
 
 ```json
 {
@@ -373,8 +373,8 @@ The below example trace is for a Button step with two buttons with intents attac
 
 Notes on the above example:
 
-- The `request.type` values for these buttons are “intent” and both have `intent.name` values in the payload.
-- In this case, upon button click: call the Dialog Manager API with the intent name to retrieve the next elements. For example, if the `request.type` value is “intent” and the `request.payload.intent.name` is “forgot_password”, the request body would look like the below. [Alternatively, you could use a "text" request (e.g. `{ "action": { "type": "text", "payload": "Forgot Password" } }`); this option would first pass the payload value through intent detection.]
+* The `request.type` values for these buttons are “intent” and both have `intent.name` values in the payload.
+* In this case, upon button click: call the Dialog Manager API with the intent name to retrieve the next elements. For example, if the `request.type` value is “intent” and the `request.payload.intent.name` is “forgot\_password”, the request body would look like the below. [Alternatively, you could use a "text" request (e.g. `{ "action": { "type": "text", "payload": "Forgot Password" } }`); this option would first pass the payload value through intent detection.]
 
 ```json
 {
@@ -447,7 +447,7 @@ Example with the Action Body format set to “JSON” in the Creator App:
 
 This trace will be returned when an End action is reached in the design.
 
-Example for a Chat <<glossary:Agent>>:
+Example for a Chat <Glossary>Agent</Glossary>:
 
 ```json
 {
@@ -456,7 +456,7 @@ Example for a Chat <<glossary:Agent>>:
 }
 ```
 
-Example for a Voice <<glossary:Agent>>:
+Example for a Voice <Glossary>Agent</Glossary>:
 
 ```json
 {
