@@ -26,10 +26,10 @@ Hallucinations in LLMs primarily happen because of the fundamental way these mod
 
 Here are a few examples why an LLM may hallucinate.
 
-- **Prediction vs. Accuracy:** LLMs are designed to generate the most probable next token, not necessarily the most accurate one. This means they're outputting what's most likely according to their training data, rather than what's factually correct.
-- **Limited Context:** The model only has access to a finite amount of context (the input prompt and its training data), which may not always be sufficient to generate accurate responses.
-- **Training Data Biases:** If the training data contains inaccuracies or biases, these can be reflected in the model's outputs.
-- **Lack of Real Understanding: **Despite their sophistication, LLMs don't truly understand the content they're generating. They're pattern-matching machines, not reasoning engines.
+* **Prediction vs. Accuracy:** LLMs are designed to generate the most probable next token, not necessarily the most accurate one. This means they're outputting what's most likely according to their training data, rather than what's factually correct.
+* **Limited Context:** The model only has access to a finite amount of context (the input prompt and its training data), which may not always be sufficient to generate accurate responses.
+* **Training Data Biases:** If the training data contains inaccuracies or biases, these can be reflected in the model's outputs.
+* **Lack of Real Understanding:** Despite their sophistication, LLMs don't truly understand the content they're generating. They're pattern-matching machines, not reasoning engines.
 
 As a result, when faced with ambiguous prompts or queries about topics not well-represented in their training data, LLMs may generate plausible-sounding but incorrect information (or bullshit as François Chollet says) by combining unrelated pieces of data or extrapolating beyond their training. 
 
