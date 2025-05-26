@@ -12,8 +12,8 @@ next:
 ---
 The **Image Step** allows you to include Images and/or GIFs in your voice and chat assistants.
 
-- For **chat-based** assistants, your visuals will show up as in-line visuals within the chat dialog.
-- For **voice-based** assistants, your visuals will appear on your device's screen, in parallel with the voice-based interactions.
+* For **chat-based** assistants, your visuals will show up as in-line visuals within the chat dialog.
+* For **voice-based** assistants, your visuals will appear on your device's screen, in parallel with the voice-based interactions.
 
 ![](https://files.readme.io/cb7cf7a-image.png)
 
@@ -31,6 +31,6 @@ You can also **use a link** to an image directly, and paste it directly on the '
 
 ## Dynamic Images
 
-Furthermore, you can also use a variable (using '**{**' ) to populate the image link filed and serve the updated image dynamically once the step is hit. You can use this to show different flags, like in the example below!
+Furthermore, you can also use a variable (using '**\{**' ) to populate the image link filed and serve the updated image dynamically once the step is hit. You can use this to show different flags, like in the example below!
 
 ![](https://files.readme.io/73a1db2-image.png)
