@@ -16,22 +16,7 @@ You can enable call recordings by navigating to Settings > Behaviour > Voice and
 
 By enabling call recording, you acknowledge that you are solely responsible for ensuring compliance with all applicable laws regarding call recording and consent. Voiceflow does not record, store, or access any call recordings (this is all managed by you on your Twilio account), and will not be liable for any misuse of this recording feature.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/12a9a65c66ec3816f437f4568c29bede8dea742290e4fda07bafbe247f1ebf16-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "60% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="60% " src="https://files.readme.io/12a9a65c66ec3816f437f4568c29bede8dea742290e4fda07bafbe247f1ebf16-image.png" />
 
 > ❗️ Note: Call recordings are currently only supported on Twilio, and not for the voice widget.
 
