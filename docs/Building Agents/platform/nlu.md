@@ -24,7 +24,7 @@ You can ensure that your Voiceflow conversation prototype is trained with the mo
 
 Voiceflow will prompt you if your Assistant needs training to create a high-fidelity testing experience. In entering Test mode, you will be prompted or see a display message in the Training window drop-down (above the Dialog window drop-down).
 
-_**Tip:** Always train your model after adding or modifying your Intents, Utterances and Entities. This ensures you’re testing with the most up-to-date model, and is best practice._
+***Tip:** Always train your model after adding or modifying your Intents, Utterances and Entities. This ensures you’re testing with the most up-to-date model, and is best practice.*
 
 ![](https://files.readme.io/ec1bf07-CleanShot_2024-06-06_at_10.36.392x.png)
 
