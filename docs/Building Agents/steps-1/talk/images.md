@@ -1,5 +1,5 @@
 ---
-title: Images
+title: Image step
 excerpt: How do I add images to my conversation design or assistant?
 deprecated: false
 hidden: false
