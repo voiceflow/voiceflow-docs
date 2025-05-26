@@ -25,9 +25,9 @@ A **secret** consists of a **name** and associated **values**. Projects own a co
 A secret's values come in two types: **default values** and **override value**.  Default values are owned by the **project** and each secret always has exactly one default value. Override values are owned by an **environment** within a project and each secret may optionally have an override within in an environment.
 
 > 📘 Projects and Environments
-> 
-> Recall that Voiceflow projects come with multiple **environments**, which are different version of your project's source content. In fact, the legacy implementation of environments was called _versions_.
-> 
+>
+> Recall that Voiceflow projects come with multiple **environments**, which are different version of your project's source content. In fact, the legacy implementation of environments was called *versions*.
+>
 > Environments are used to manage your project's development and deployment. Projects come with two built-in environments: the **development** and **production** environments. The development environment is what you edit with the Voiceflow canvas, while the production environment is the version that is automatically created (or updated) when you build your assistant.
 
 To execute an assistant on the Voiceflow Runtime, we must specify an environment for that assistant to execute in. On the Voiceflow canvas, you test your assistant by executing in the development environment. For production, you would make calls to execute your assistant in the production environment
