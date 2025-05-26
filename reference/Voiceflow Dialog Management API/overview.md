@@ -10,11 +10,10 @@ metadata:
 next:
   description: ''
 ---
-The Dialog Manager API (DM API) allows any application to talk with a Voiceflow diagram using HTTP calls  
+The Dialog Manager API (DM API) allows any application to talk with a Voiceflow diagram using HTTP calls\
 to the **interact endpoint**.
 
-Conversation State
-------------------
+## Conversation State
 
 The DM API automatically creates and manages the conversation state. Identical requests to the DM API may produce different responses depending on your diagram's logic and the previous request that the API received.
 
@@ -22,7 +21,7 @@ Note that this means the DM API is **not a REST API** as it does not satisfy the
 
 ### Tracking conversation state
 
-All endpoints take in a `userID` parameter, which is used to identify the caller and assign them a unique  
+All endpoints take in a `userID` parameter, which is used to identify the caller and assign them a unique\
 conversation state object.
 
 #### Multiple conversation sessions
@@ -43,19 +42,18 @@ There are a few best practices to defining a `userID` format:
 
 1. **Unique** - The `userID` should be unique to each user. Otherwise, if two users share the same `userID`, the Voiceflow app may leak information about user A's conversation to user B, which is a potential privacy violation.
 
-2. **Non-sensitive** - It is not recommended to use sensitive or private information in the `userID` such  
+2. **Non-sensitive** - It is not recommended to use sensitive or private information in the `userID` such\
    as emails, real names, or phone numbers. 
 
-versionID
----------
+## versionID
 
 DM API endpoints also accept a `versionID` header whose value is a **version alias** that points to a particular version of your Voiceflow project.
 
 The currently supported aliases are:
 
-- `development` - The version displayed on the Voiceflow Creator's canvas
+* `development` - The version displayed on the Voiceflow Creator's canvas
 
-- `production` - The version that has been published 
+* `production` - The version that has been published 
 
 Use the `development` alias whenever you are experimenting with your API and the `production` version when integrating Voiceflow with your web app.
 
