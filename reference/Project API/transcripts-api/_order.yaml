@@ -3,3 +3,4 @@
 - put_transcripts
 - put_transcripts-projectid-transcriptid-annotation-utteranceaddedto
 - get_transcripts-projectid-transcriptid
+- patch_transcripts-projectid-transcriptid
