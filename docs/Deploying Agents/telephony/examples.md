@@ -12,12 +12,9 @@ next:
 ---
 Below are 4 different templates from starter to advanced to get you started on Voice.
 
-[block:html]
-{
-  "html": "<div style=\"position: relative; padding-bottom: 65.55285540704739%; height: 0;\"><iframe src=\"https://www.loom.com/embed/da9dca4a728b4ff5ab9907c528fe70d3?sid=7f5e1838-b82c-40cd-9a43-ef72a50a5a85\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>"
-}
-[/block]
-
+<HTMLBlock>{`
+<div style="position: relative; padding-bottom: 65.55285540704739%; height: 0;"><iframe src="https://www.loom.com/embed/da9dca4a728b4ff5ab9907c528fe70d3?sid=7f5e1838-b82c-40cd-9a43-ef72a50a5a85" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+`}</HTMLBlock>
 
 <br />
 
@@ -61,15 +58,4 @@ This agent allows the customer to call into a number, record a message, and then
 
 [Download Template](https://creator.voiceflow.com/dashboard?import=674f6ff1929911ac4b5b7982)
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FRgd0UCNAigo%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRgd0UCNAigo&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FRgd0UCNAigo%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=Rgd0UCNAigo",
-  "title": "We built a Slack voicemail inbox using Voiceflow",
-  "favicon": "https://www.youtube.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/Rgd0UCNAigo/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=Rgd0UCNAigo",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/watch?v=Rgd0UCNAigo" title="We built a Slack voicemail inbox using Voiceflow" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/Rgd0UCNAigo/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=Rgd0UCNAigo" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FRgd0UCNAigo%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DRgd0UCNAigo%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FRgd0UCNAigo%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
