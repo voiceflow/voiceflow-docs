@@ -34,69 +34,27 @@ next:
 
 # Prerequisite
 
-- [Replit](https://www.replit.com/) account
-- [Slack API](https://api.slack.com/) access
-- [Voiceflow](https://www.voiceflow.com) **Chat Assistant** project
+* [Replit](https://www.replit.com/) account
+* [Slack API](https://api.slack.com/) access
+* [Voiceflow](https://www.voiceflow.com) **Chat Assistant** project
 
 # Setup
 
 ### Create your Slack App
 
-> Go to to <https://api.slack.com/apps?new_app=1> to **create your Slack app**
+> Go to to [https://api.slack.com/apps?new\_app=1](https://api.slack.com/apps?new_app=1) to **create your Slack app**
 >
 > Select **From an app manifest**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/8455349-slack-create-app.png",
-        "slack-create-app.png",
-        513
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/8455349-slack-create-app.png" />
 
 > Select the **workspace** you want to publish the app to
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0431d77-slack-select-workspace.png",
-        "slack-select-workspace.png",
-        511
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/0431d77-slack-select-workspace.png" />
 
 > Choose **JSON** on the next screen and replace evrything with the manifest bellow
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/55d99d3-slack-manifest.png",
-        "slack-manifest.png",
-        514
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/55d99d3-slack-manifest.png" />
 
 ```json
 {
@@ -167,149 +125,37 @@ next:
 
 > **Review** the app details and comfirm by clicking on **Create**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/dc6b51d-slack-app-review.png",
-        "slack-app-review.png",
-        512
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/dc6b51d-slack-app-review.png" />
 
 > **Install** the newly created app on your workspace
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bddc4c4-slack-install.png",
-        "slack-install.png",
-        979
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/bddc4c4-slack-install.png" />
 
 > Click on **Allow** to finish to install the app on your Workspace
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7358d50-slack-allow.png",
-        "slack-allow.png",
-        572
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/7358d50-slack-allow.png" />
 
 ### Generate a signin key and tokens
 
 > On the main screen, you want to **copy the secret key** and **keep it for later**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/801c740-slack-signin-secret.png",
-        "slack-signin-secret.png",
-        679
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/801c740-slack-signin-secret.png" />
 
 > Scroll down and click on **Generate Token and Scopes**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/64b1d0b-slack-app-level-tokens.png",
-        "slack-app-level-tokens.png",
-        681
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/64b1d0b-slack-app-level-tokens.png" />
 
 > Give this Token a **name** and add the **connections:write** scope to it. Then click on **Generate**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a048b7f-slack-app-level-scope.png",
-        "slack-app-level-scope.png",
-        513
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/a048b7f-slack-app-level-scope.png" />
 
 > Copy the **app token** and **save it for later**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5a21372-slack-app-token.png",
-        "slack-app-token.png",
-        511
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/5a21372-slack-app-token.png" />
 
 > Go to the **OAuth & Permissions** section, copy the **Bot User OAuth Token** from there and save it for later
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/974a2c8-slack-bot-user-token.png",
-        "slack-bot-user-token.png",
-        969
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/974a2c8-slack-bot-user-token.png" />
 
 > You should now have:
 
@@ -327,63 +173,35 @@ a **bot token**
 >
 > On your project, click on **Integration** from the left sidebar (or press the **3** key)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/af0cf6a-voiceflow-integration.png",
-        "voiceflow-integration.png",
-        351
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/af0cf6a-voiceflow-integration.png" />
 
 > Click **Copy** to copy your Voiceflow Dialog API Key and save it for later
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fc371df-voiceflow-copy.png",
-        "voiceflow-copy.png",
-        1066
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/fc371df-voiceflow-copy.png" />
 
 # To Deploy on Replit
 
 ### ->  [Fork on Replit](https://replit.com/@niko-voiceflow/voiceflow-slackbot?v=1)
 
-_Click this link to fork the project on Replit to your account._
+*Click this link to fork the project on Replit to your account.*
 
 ### Setup the Replit secrets
 
 > Set new Secrets with the following info
 
-**SLACK\_APP\_TOKEN**  
+**SLACK\_APP\_TOKEN**\
 Slack **app secret** (starting with **xapp-**)
 
-**SLACK\_BOT\_TOKEN**  
+**SLACK\_BOT\_TOKEN**\
 Slack **bot token** (starting with **xoxb-**)
 
-**SLACK\_SIGNING\_SECRET**  
+**SLACK\_SIGNING\_SECRET**\
 Slack app **signing secret**
 
-**VOICEFLOW\_VERSION\_ID**  
+**VOICEFLOW\_VERSION\_ID**\
 Voiceflow **project version ID** (Needed if you want to save transcripts, will default to 'production' otherwise)
 
-**VOICEFLOW\_API\_KEY**  
+**VOICEFLOW\_API\_KEY**\
 Voiceflow **project API key** (from the Integration section)
 
 In the Secrets tab, you can click on Edit as JSON button and paste the following JSON (do not forget to update the keys values):
@@ -403,19 +221,19 @@ In the Secrets tab, you can click on Edit as JSON button and paste the following
 
 > Set new Secrets with the following info
 
-**SLACK\_APP\_TOKEN**  
+**SLACK\_APP\_TOKEN**\
 Slack **app secret** (starting with **xapp-**)
 
-**SLACK\_BOT\_TOKEN**  
+**SLACK\_BOT\_TOKEN**\
 Slack **bot token** (starting with **xoxb-**)
 
-**SLACK\_SIGNING\_SECRET**  
+**SLACK\_SIGNING\_SECRET**\
 Slack app **signing secret**
 
-**VOICEFLOW\_VERSION\_ID**  
+**VOICEFLOW\_VERSION\_ID**\
 Voiceflow **project version ID** (Needed if you want to save transcripts, will default to 'production' otherwise)
 
-**VOICEFLOW\_API\_KEY**  
+**VOICEFLOW\_API\_KEY**\
 Voiceflow **project API key** (from the Integration section)
 
 In the Secrets tab, you can click on Edit as JSON button and paste the following JSON (do not forget to update the keys values):
@@ -430,8 +248,6 @@ In the Secrets tab, you can click on Edit as JSON button and paste the following
   "SLACK_SIGNING_SECRET":"XXXXXXX"
 }
 ```
-
-
 
 # Slack
 
@@ -439,70 +255,14 @@ In the Secrets tab, you can click on Edit as JSON button and paste the following
 
 > On your **Slack workspace**, click on **Apps** > **Add apps**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/84ffbd2-slack-add-app.png",
-        "slack-add-app.png",
-        855
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/84ffbd2-slack-add-app.png" />
 
 > **Search** for 'Voiceflow Slack Demo' or the app name you've created earlier on Slack API website and **click on it** in the Search results list to install it
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d7b8c8-slack-install-app.png",
-        "slack-install-app.png",
-        848
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/4d7b8c8-slack-install-app.png" />
 
 > The app is now available and you can click on **Messages** to start interacting with your bot.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a36dc87-slack-try-app.png",
-        "slack-try-app.png",
-        849
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/a36dc87-slack-try-app.png" />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ae76f9d-slack-bot.png",
-        "slack-bot.png",
-        775
-      ],
-      "align": "center",
-      "sizing": "80"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="80%" src="https://files.readme.io/ae76f9d-slack-bot.png" />
