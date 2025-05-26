@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 🚧 Sunset of Microsoft Teams integration
-> 
+>
 > On November 8th, 2023, the Microsoft Teams project integration will be sunset. We recommend utilizing our [Dialog API](https://developer.voiceflow.com/reference/stateinteract-1) to integrate with this channel.
 
 # Get started
@@ -23,9 +23,9 @@ Microsoft Teams is a collaboration platform that brings together chat, video mee
 This integration guide will provide you with the steps and information needed to integrate your assistant with Microsoft Teams.
 
 > 📘 Prerequisites
-> 
+>
 > Before starting the integration, you will need the following:
-> 
+>
 > 1. A Microsoft Teams account
 > 2. A new Microsoft Team App: [Setup Guide](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal)
 
@@ -47,8 +47,8 @@ Once created, you can begin working on your assistant design.
 
 First thing to do is go ahead and connect your assistant to a Microsoft bot. To do this, you will need a retrieve both a: 
 
-- Bot ID; and
-- Client Secret. 
+* Bot ID; and
+* Client Secret. 
 
 In the Microsoft Developer portal:
 
@@ -58,7 +58,7 @@ In the Microsoft Developer portal:
 
    ![](https://files.readme.io/3df68c8-Screen_Shot_2023-01-03_at_12.13.34_PM.png)
 
-3. Inside Bot management, click on **“+ New Bot”  **
+3. Inside Bot management, click on **“+ New Bot”**
 
    ![](https://files.readme.io/3cc2d38-Screen_Shot_2023-01-03_at_12.13.46_PM.png)
 
@@ -116,7 +116,7 @@ In the Microsoft Developer portal:
 
 The following steps require admin privileges on Microsoft Teams. Microsoft implies that this role should be assigned to the organization’s IT admin.
 
-1. Visit the Microsoft Teams admin center: <https://admin.teams.microsoft.com/>
+1. Visit the Microsoft Teams admin center: [https://admin.teams.microsoft.com/](https://admin.teams.microsoft.com/)
 
 2. Sign in with a Microsoft Teams admin account
 
