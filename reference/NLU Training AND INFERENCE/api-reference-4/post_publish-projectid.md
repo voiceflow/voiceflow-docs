@@ -33,6 +33,6 @@ Voiceflow NLU is a powerful model that is quick to train and supports 30+ langua
 
 # Benchmarking the VFNLU
 
-If you're interested in comparing the VFNLU to other vendors, you can run your own projects through this api or with some helper code at <https://github.com/voiceflow/vfnlu-tests/tree/main/src/benchmarks>
+If you're interested in comparing the VFNLU to other vendors, you can run your own projects through this api or with some helper code at [https://github.com/voiceflow/vfnlu-tests/tree/main/src/benchmarks](https://github.com/voiceflow/vfnlu-tests/tree/main/src/benchmarks)
 
 ![](https://files.readme.io/f288eda-image.png)
