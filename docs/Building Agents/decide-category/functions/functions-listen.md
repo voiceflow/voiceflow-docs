@@ -61,16 +61,16 @@ export default async function main(args) {
 
 The next command defines how your function handles user input and controls the conversation flow.
 
-- `listen` **(Boolean)**:
-  - `true`: Agent waits for immediate user input at this function step.
-  - `false`: Agent continues execution without waiting, but events persist.
-- `to` **(Array)**:
-  - An array of conditional transfers.
-  - Each transfer includes
-  - `on`: A MongoDB-style query to match incoming events.
-  - `dest`: The path to exit through if the condition is met.
-- `defaultTo` **(String)**:
-  - The path to exit through if none of the conditions in to are met.
+* `listen` **(Boolean)**:
+  * `true`: Agent waits for immediate user input at this function step.
+  * `false`: Agent continues execution without waiting, but events persist.
+* `to` **(Array)**:
+  * An array of conditional transfers.
+  * Each transfer includes
+  * `on`: A MongoDB-style query to match incoming events.
+  * `dest`: The path to exit through if the condition is met.
+* `defaultTo` **(String)**:
+  * The path to exit through if none of the conditions in to are met.
 
 ```javascript
 {
@@ -307,9 +307,9 @@ export default async function main(args) {
 
 Listen events defined in your function **persist for the duration of the conversation session**. This means:
 
-- **Event Availability:** If you generate a component (e.g., a carousel with buttons), the events associated with those buttons remain available throughout the conversation.
-- **Delayed Interaction:** Users can interact with those buttons at any point during the session, and the agent will respond accordingly, even if the conversation has moved on from the point where the function was executed.
-- **Function Paths:** When an event is triggered, the agent will refer back to the original function and proceed down the relevant path defined in your function code.
+* **Event Availability:** If you generate a component (e.g., a carousel with buttons), the events associated with those buttons remain available throughout the conversation.
+* **Delayed Interaction:** Users can interact with those buttons at any point during the session, and the agent will respond accordingly, even if the conversation has moved on from the point where the function was executed.
+* **Function Paths:** When an event is triggered, the agent will refer back to the original function and proceed down the relevant path defined in your function code.
 
 #### Using Listen Functionality
 
@@ -320,16 +320,16 @@ To utilize this feature, you define the events and paths within your function's 
 
 ***
 
-#### **Option 1: `listen: true` (Agent Pauses Execution)**
+#### **Option 1:`listen: true` (Agent Pauses Execution)**
 
 When you set `listen: true` in the `next` command:
 
-- **Agent Behavior:**
-  - The agent **pauses execution** at the function step.
-  - It **waits for user input** before proceeding.
-- **Use Case:**
-  - Ideal when you want the user to make an immediate choice or selection.
-  - Common in scenarios where the next action depends on the user's immediate response.
+* **Agent Behavior:**
+  * The agent **pauses execution** at the function step.
+  * It **waits for user input** before proceeding.
+* **Use Case:**
+  * Ideal when you want the user to make an immediate choice or selection.
+  * Common in scenarios where the next action depends on the user's immediate response.
 
 **Example:**
 
@@ -374,23 +374,23 @@ export default async function main(args) {
 }
 ```
 
-- **Implications:**
-  - The agent will wait at this function step until the user interacts.
-  - The conversation flow is paused, ensuring the user’s immediate input is handled before proceeding.
+* **Implications:**
+  * The agent will wait at this function step until the user interacts.
+  * The conversation flow is paused, ensuring the user’s immediate input is handled before proceeding.
 
 #### Option 2: listen: false (Agent Continues Execution, Events Persist)
 
 When you set `listen: false` in the next command:
 
-- **Agent Behavior:**
-  - The agent **does not pause execution** at the function step.
-  - It **continues down the default path immediately.**
-- **Event Persistence:**
-  - The events defined in your function’s next command **persist throughout the session.**
-  - Users can trigger these events at any point later in the conversation.
-- **Use Case:**
-- Ideal when you want to present options or actions that the user might engage with later.
-- Useful for non-blocking interactions where the agent should continue without waiting.
+* **Agent Behavior:**
+  * The agent **does not pause execution** at the function step.
+  * It **continues down the default path immediately.**
+* **Event Persistence:**
+  * The events defined in your function’s next command **persist throughout the session.**
+  * Users can trigger these events at any point later in the conversation.
+* **Use Case:**
+* Ideal when you want to present options or actions that the user might engage with later.
+* Useful for non-blocking interactions where the agent should continue without waiting.
 
 **Example:**
 
@@ -449,9 +449,9 @@ export default async function main(args) {
 }
 ```
 
-- **Implications:**
-  - The agent proceeds immediately to `default_path` without waiting.
-  - The events (`item_selected`) remain available to be triggered later in the session.  
+* **Implications:**
+  * The agent proceeds immediately to `default_path` without waiting.
+  * The events (`item_selected`) remain available to be triggered later in the session.\
     •	When the user selects an item, the agent will refer back to this function and proceed down the relevant path (`item_1_selected` or `item_2_selected`).
 
 **Important Note:** You must explicitly set `listen: false` in the next command to enable this behaviour. Omitting listen or setting it to true will cause the function to fail.
