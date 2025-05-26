@@ -34,7 +34,7 @@ For a session on the **Test Tool**, when the test ends, you will be shown an opt
 
 ![](https://files.readme.io/1c8ee0a-image.png)
 
-You can also manually save a transcript at any point in the conversation by using the _Save Transcript_ button in the Test Tool. On the Test Tool, transcripts are **not saved automatically**, so if you have an interesting conversation, make sure to click save.
+You can also manually save a transcript at any point in the conversation by using the *Save Transcript* button in the Test Tool. On the Test Tool, transcripts are **not saved automatically**, so if you have an interesting conversation, make sure to click save.
 
 ![](https://files.readme.io/92a76c3-CleanShot_2024-06-24_at_15.04.592x.png)
 
