@@ -20,7 +20,7 @@ Make sure to train your test assistant if you’ve made changes to your intents,
 
 You can also toggle specific testing conditions with variables or personas by clicking the arrow located next to **Run Test** and by choosing **'Select variable state'.**
 
-_Tip: You can quickly launch the Test modal by hitting ‘R’_
+*Tip: You can quickly launch the Test modal by hitting ‘R’*
 
 **Testing from any block**
 
@@ -34,9 +34,9 @@ You can also start a test from any block on the canvas. Hover over the block’s
 
 You can switch between voice, chat or button inputs during your test. Choose your input by clicking on a respective icon above the test input. Once you’ve selected your input:
 
-- Voice: Hold the spacebar to submit an input. Make sure you’ve enabled your mic.
-- Chat: Type in the test input and hit enter/return.
-- Button: Click the button. (Note: buttons are set using Choice Steps)
+* Voice: Hold the spacebar to submit an input. Make sure you’ve enabled your mic.
+* Chat: Type in the test input and hit enter/return.
+* Button: Click the button. (Note: buttons are set using Choice Steps)
 
 **Mute Dialog Audio**
 
@@ -86,23 +86,23 @@ Test Personas (AKA Variable States) let you define variable pre-sets for the sce
 
 **Creating a Test Persona**
 
-- To create a persona, enter Test mode. 
-- From the ‘Select a Persona’ dropdown, hit "Add New".
+* To create a persona, enter Test mode. 
+* From the ‘Select a Persona’ dropdown, hit "Add New".
 
 ![](https://files.readme.io/9073b6c-CleanShot_2024-07-11_at_11.04.302x.png)
 
-- Enter a name for your persona (e.g., Authenticated User)
-- Choose a starting block — this defines where the test conversation will begin.
-- Lastly, choose the variables and values you want to associate with the persona.
-- Once saved, the persona will automatically be applied to your Test.
+* Enter a name for your persona (e.g., Authenticated User)
+* Choose a starting block — this defines where the test conversation will begin.
+* Lastly, choose the variables and values you want to associate with the persona.
+* Once saved, the persona will automatically be applied to your Test.
 
 ![](https://files.readme.io/5f4a442-CleanShot_2024-07-11_at_11.04.022x.png)
 
 **‍Applying a Persona to a Test**
 
-- To apply a Persona to your test, either choose a persona from the left sidebar or from the selector in the Test Dialog.
-- Once you’ve selected one, hit ‘Run Test’
-- You can reset the test’s selected persona by clearing it in the Test Dialog or the left sidebar. 
+* To apply a Persona to your test, either choose a persona from the left sidebar or from the selector in the Test Dialog.
+* Once you’ve selected one, hit ‘Run Test’
+* You can reset the test’s selected persona by clearing it in the Test Dialog or the left sidebar. 
 
 ![](https://files.readme.io/098367d-CleanShot_2024-07-11_at_11.05.072x.png)
 
@@ -110,17 +110,17 @@ Note: Personas can also be applied to Shared Prototypes
 
 **‍Manually changing Test Persona values**
 
-- To run a Test using different state values, click into the desired variable input in the left sidebar
-- Update the value and run your test
+* To run a Test using different state values, click into the desired variable input in the left sidebar
+* Update the value and run your test
 
 Note: You can choose to save your updated state values by hitting the update icon in the left sidebar
 
 **‍Modifying Test Personas**
 
-- To edit the name, starting block or variables for an existing persona, select the ‘Edit Persona’ icon from the left sidebar dropdown.
-- Make your desired updates and hit ‘Save’
+* To edit the name, starting block or variables for an existing persona, select the ‘Edit Persona’ icon from the left sidebar dropdown.
+* Make your desired updates and hit ‘Save’
 
 **Deleting Test Personas**
 
-- To delete a persona, select the ‘Edit Persona’ icon from the left sidebar dropdown
-- From the management screen, select 'Delete Persona' from the context (...) menu
+* To delete a persona, select the ‘Edit Persona’ icon from the left sidebar dropdown
+* From the management screen, select 'Delete Persona' from the context (...) menu
