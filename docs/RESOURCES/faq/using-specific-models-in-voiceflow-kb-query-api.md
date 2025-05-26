@@ -33,17 +33,17 @@ Here's an example of how to structure your settings object:
 
 The following models are currently available:
 
-- gpt-3.5-turbo
-- gpt-4-turbo
-- gpt-4
-- claude-instant-v1
-- claude-v1
-- claude-v2
-- claude-3-haiku
-- claude-3-sonnet
-- claude-3.5-sonnet
-- claude-3-opus
-- gemini-pro-1.5
+* gpt-3.5-turbo
+* gpt-4-turbo
+* gpt-4
+* claude-instant-v1
+* claude-v1
+* claude-v2
+* claude-3-haiku
+* claude-3-sonnet
+* claude-3.5-sonnet
+* claude-3-opus
+* gemini-pro-1.5
 
 ## What's the default model if I don't specify one?
 
