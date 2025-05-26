@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-# Custom CSS: Override <<glossary:agent>> settings and styles
+# Custom CSS: Override <Glossary>agent</Glossary> settings and styles
 
 The below can be used to override the listed agent configuration settings. You can also add a link to your self-hosted stylesheet.
 
