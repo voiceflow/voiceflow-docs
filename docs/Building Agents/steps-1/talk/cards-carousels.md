@@ -1,5 +1,5 @@
 ---
-title: Cards and Carousels
+title: Card step and Carousel step
 excerpt: ''
 deprecated: false
 hidden: false
