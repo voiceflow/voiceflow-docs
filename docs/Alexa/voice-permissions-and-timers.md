@@ -27,22 +27,20 @@ For this project, we are going to use the **Connections.SendRequest directive** 
 1. Your skill initiates the permission request.
 2. Alexa asks the user if they want to grant permission to create a specific timer.
 3. The user responds to the permission request.
-   - **If the user grants permission**, your skill can then create the timer. You don't need to send a card to the Alexa app, requesting for permissions.
-   - **If the user doesn't grant permission**, then your skill can't create a timer. Your skill should provide a fallback workflow if the user doesn't grant permission to create a timer.
+   * **If the user grants permission**, your skill can then create the timer. You don't need to send a card to the Alexa app, requesting for permissions.
+   * **If the user doesn't grant permission**, then your skill can't create a timer. Your skill should provide a fallback workflow if the user doesn't grant permission to create a timer.
 
 ***
-
-
 
 ### Step 1 | Generate the Voice Permissions directive
 
 As always when we want to integrate a new feature into our Voiceflow project, a good starting point is the Alexa Developers Documentation.
 
-For this project, you can find it here: <https://developer.amazon.com/en-US/docs/alexa/smapi/voice-permissions-for-timers.html>
+For this project, you can find it here: [https://developer.amazon.com/en-US/docs/alexa/smapi/voice-permissions-for-timers.html](https://developer.amazon.com/en-US/docs/alexa/smapi/voice-permissions-for-timers.html)
 
 As you can see, the process needs to send a directive and check an event for the response.
 
-Based on that response (**ACCEPTED**, **DENIED**, or **NOT_ANSWERED**), we will handle the logic to redirect our user.
+Based on that response (**ACCEPTED**, **DENIED**, or **NOT\_ANSWERED**), we will handle the logic to redirect our user.
 
 To start, we will need to use a Directive step to send the Connects.SendRequest directive with the following payload.
 
@@ -64,8 +62,6 @@ To start, we will need to use a Directive step to send the Connects.SendRequest 
 }
 ```
 
-
-
 ![Directive Step](https://files.readme.io/b082365-CleanShot_2022-08-25_at_14.14.59.png)
 
 ### Step 2 | Get response from Alexa with the Event step
@@ -84,23 +80,21 @@ From the response (data) we want to extract the status’s value that is in the 
 data.paylaod.status
 ```
 
-
-
-We map this value to the {**permissionStatus**} variable.
+We map this value to the \{**permissionStatus**} variable.
 
 ### Step 3 | Create our logic based on permission status
 
 As seen in the documentation, the status can have one of the following values:
 
-- **ACCEPTED**
-- **DENIED**
-- **NOT_ANSWERED**
+* **ACCEPTED**
+* **DENIED**
+* **NOT\_ANSWERED**
 
 We just need to add a Condition step to handle **ACCEPTED** or **DENIED** 
 
 ![](https://files.readme.io/ea39da3-CleanShot_2022-08-25_at_14.17.18.png)
 
-To be sure that the {**permissionStatus**} value is not populated with the value of a previous session (as variables declared in your project are persistent between sessions), we want to reset it to **0** each time the user start the skill.
+To be sure that the \{**permissionStatus**} value is not populated with the value of a previous session (as variables declared in your project are persistent between sessions), we want to reset it to **0** each time the user start the skill.
 
 For this, we are using a Set step in our very first block as the first step.
 
@@ -108,19 +102,19 @@ For this, we are using a Set step in our very first block as the first step.
 
 ### Step 4 | Setting up the Alexa Timers API call
 
-In this step we are going to use the Alexa Timers API (<https://developer.amazon.com/en-US/docs/alexa/smapi/alexa-timers-api-reference.html>)
+In this step we are going to use the Alexa Timers API ([https://developer.amazon.com/en-US/docs/alexa/smapi/alexa-timers-api-reference.html](https://developer.amazon.com/en-US/docs/alexa/smapi/alexa-timers-api-reference.html))
 
 As you can read in the documentation, we will need to setup our API call with the corresponding endpoint as well as the user’s token.
 
-Those information are available in the **\_system** variable so we can use a Set step to populate the {**apiEndpoint**} and {**apiAccessToken**} variables.
+Those information are available in the **\_system** variable so we can use a Set step to populate the \{**apiEndpoint**} and \{**apiAccessToken**} variables.
 
 ![](https://files.readme.io/4850644-CleanShot_2022-08-25_at_14.29.58.png)
 
-Like we’ve done for the {**permissionStatus**}, we can reset the {**apiAccessToken**} in the beginning of our project to be sure that the {**apiAccessToken**} hasn’t the value from a previous session.
+Like we’ve done for the \{**permissionStatus**}, we can reset the \{**apiAccessToken**} in the beginning of our project to be sure that the \{**apiAccessToken**} hasn’t the value from a previous session.
 
 ![](https://files.readme.io/af38d73-CleanShot_2022-08-25_at_20.38.47.png)
 
-Regarding the **API Step**, you want to use the full endpoint, {**apiEndpoint**}+the request path.
+Regarding the **API Step**, you want to use the full endpoint, \{**apiEndpoint**}+the request path.
 
 In our case we want to **create** a timer so the path will be **/v1/alerts/timers** and the full URL:
 
@@ -128,11 +122,9 @@ In our case we want to **create** a timer so the path will be **/v1/alerts/timer
 {apiEndpoint}/v1/alerts/timers
 ```
 
-
-
 Still from the documentation, we know that the method need to be a POST.
 
-In the **Headers**, the **Authorization** uses the {**apiAccessToken**} and we are setting the content type to **application/json**.
+In the **Headers**, the **Authorization** uses the \{**apiAccessToken**} and we are setting the content type to **application/json**.
 
 ```bash
 Authorization:
@@ -141,8 +133,6 @@ Bearer {apiAccessToken}
 Content-type
 application/json
 ```
-
-
 
 ![](https://files.readme.io/d8579c2-CleanShot_2022-08-25_at_20.45.52.png)
 
@@ -154,7 +144,7 @@ Be sure to select the Raw format for the Body
 
 For this example, we are going to use the following payload to create a 10 seconds timer.
 
-Again, do not hesitate to refer to the Alexa Timer API documentation for more details on the different settings available (<https://developer.amazon.com/en-US/docs/alexa/smapi/alexa-timers-api-reference.html>)
+Again, do not hesitate to refer to the Alexa Timer API documentation for more details on the different settings available ([https://developer.amazon.com/en-US/docs/alexa/smapi/alexa-timers-api-reference.html](https://developer.amazon.com/en-US/docs/alexa/smapi/alexa-timers-api-reference.html))
 
 ```bash
 {
@@ -182,11 +172,9 @@ Again, do not hesitate to refer to the Alexa Timer API documentation for more de
 }
 ```
 
-
-
 While this call will create a timer, you might also want to use some of the other calls available to Read, Pause, Resume or Cancel a timer from its Id.
 
-For this, we want to populate the {**timerID}** variable with that information from the API step response.
+For this, we want to populate the \{**timerID}** variable with that information from the API step response.
 
 ![](https://files.readme.io/ad949e5-CleanShot_2022-08-25_at_20.57.01.png)
 
@@ -220,19 +208,13 @@ The **Alexa Developer Console** will be able to run your test but **without trig
 
 ***
 
-
-
 ### Video
 
 A video covering this project is available here:
 
-[block:html]
-{
-  "html": "<div style=\"position: relative; padding-bottom: 41.328125%; height: 0;\"><iframe src=\"https://www.loom.com/embed/da1126a004004d50a31c887851e9d9db\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>"
-}
-[/block]
-
-
+<HTMLBlock>{`
+<div style="position: relative; padding-bottom: 41.328125%; height: 0;"><iframe src="https://www.loom.com/embed/da1126a004004d50a31c887851e9d9db" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+`}</HTMLBlock>
 
 ### Information
 
