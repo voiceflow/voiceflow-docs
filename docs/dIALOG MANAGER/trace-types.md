@@ -22,12 +22,12 @@ Below are key trace types that you will encounter.
 
 This trace type is returned for the following Voiceflow elements:
 
-- Text Step
-- Response AI Step
-- No match re-prompt
-- No reply re-prompt
-- Global No Match
-- Global No Reply
+* Text Step
+* Response AI Step
+* No match re-prompt
+* No reply re-prompt
+* Global No Match
+* Global No Reply
 
 Example payload:
 
@@ -72,12 +72,12 @@ Example payload:
 
 This trace type is returned for the following Voiceflow elements:
 
-- Speak Step
-- Audio Step
-- No match reprompt
-- No reply reprompt
-- Global No Match
-- Global No Reply
+* Speak Step
+* Audio Step
+* No match reprompt
+* No reply reprompt
+* Global No Match
+* Global No Reply
 
 Speak Step example:
 
