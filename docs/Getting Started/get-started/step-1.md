@@ -16,7 +16,7 @@ next:
 ---
 Agents are the core of Voiceflow. Each agent is defined by the workflows driving its internal logic, but represents a single “application”.
 
-## **Step 1: Create a new <<glossary:agent>>**
+## **Step 1: Create a new<Glossary>agent</Glossary>**
 
 In your workspace, click the 'New Agent' button on the top right. Give your agent a name.
 
