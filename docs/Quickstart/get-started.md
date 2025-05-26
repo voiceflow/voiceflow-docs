@@ -15,14 +15,14 @@ next:
       title: interact
 ---
 > 📘 Welcome to Voiceflow
-> 
+>
 > Voiceflow is the industry leading conversation design tool for teams to design, prototype and launch voice, messaging & chat assistants.
-> 
+>
 > Here, you have access to our growing collection of guides, tutorials and reference docs to learn throughout the conversation lifecycle, from interacting with the [Dialog Manager API](https://developer.voiceflow.com/reference/overview) or [connecting with a custom NLU/NLP](https://developer.voiceflow.com/reference/custom-nlp-nlu).
-> 
-> - **Creator Tool Guides**: If you're just getting started with Voiceflow, check out our Creator docs [here](https://www.voiceflow.com/docs/workspaces-organizing-your-workspace)
-> - **API Reference**: Just want details on the API? Then jump over to our [API reference page](https://developer.voiceflow.com/reference/stateinteract-1)
-> - **Community**: Please make sure to [join our community](https://community.voiceflow.com/) to ask questions and be inspired by others building conversations.
+>
+> * **Creator Tool Guides**: If you're just getting started with Voiceflow, check out our Creator docs [here](https://www.voiceflow.com/docs/workspaces-organizing-your-workspace)
+> * **API Reference**: Just want details on the API? Then jump over to our [API reference page](https://developer.voiceflow.com/reference/stateinteract-1)
+> * **Community**: Please make sure to [join our community](https://community.voiceflow.com/) to ask questions and be inspired by others building conversations.
 
 With the Dialog Manager API, you can efficiently integrate your conversation designs into a production-ready client app or messaging channel.
 
@@ -31,34 +31,23 @@ By the end of this guide, we will have connected our conversation design to a si
 ## Get started
 
 > 🚧 First steps
-> 
-> Before you start with the Dialog Manager API, you need to create a project on your Voiceflow [workspace](https://creator.voiceflow.com/).  
+>
+> Before you start with the Dialog Manager API, you need to create a project on your Voiceflow [workspace](https://creator.voiceflow.com/).\
 > Need help? Access a number of prebuilt templates from our [**Template Library**](https://www.voiceflow.com/templates).
 
-**Clone the starter pack**  
+**Clone the starter pack**\
 Download the API Examples repo found [here](https://github.com/voiceflow/api-examples) to access a variety of prebuilt API examples, including Node.js, Python, Rust and HTML.
 
-**Authentication**  
+**Authentication**\
 We'll need to access the `Project API key` for the design we want to connect into our app. To obtain the API Key:
 
 1. Open the project you want
 2. Select on the **Integrations** tab (shortcut: `3`)
 3. Copy the `Dialog API Key`
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4528604-Access_API_Keys.png",
-        "Access API Keys.png",
-        3398
-      ],
-      "caption": "Access project API Key"
-    }
-  ]
-}
-[/block]
+<Image title="Access API Keys.png" alt={3398} src="https://files.readme.io/4528604-Access_API_Keys.png">
+  Access project API Key
+</Image>
 
 ## Launch
 
@@ -75,7 +64,7 @@ Example:
 
 **Node.js** 
 
-1. If you do not have node, install _Node.js_ and npm from [nodejs.org](https://nodejs.org/en/), or follow an equivalent guide.
+1. If you do not have node, install *Node.js* and npm from [nodejs.org](https://nodejs.org/en/), or follow an equivalent guide.
 2. In this folder, run `npm install.`
 3. Replace `'YOUR_API_KEY_HERE'` in `index.js` with your Dialog Manager API Key. 
 4. run `npm` start to start your chat!
@@ -104,30 +93,8 @@ The end! Start me again with `npm start`
 
 ## Video Walkthrough
 
-
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FwRsKbRiFz6g%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DwRsKbRiFz6g&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=wRsKbRiFz6g&feature=youtu.be",
-  "title": "Get started with Voiceflow's Dialog Manager API",
-  "favicon": "https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/watch?v=wRsKbRiFz6g&feature=youtu.be"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=wRsKbRiFz6g&feature=youtu.be" title="Get started with Voiceflow's Dialog Manager API" favicon="https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico" provider="youtube.com" href="https://www.youtube.com/watch?v=wRsKbRiFz6g&feature=youtu.be" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FwRsKbRiFz6g%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DwRsKbRiFz6g%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 **Dialog Manager API Examples** 
 
-
-[block:embed]
-{
-  "html": false,
-  "url": "https://github.com/voiceflow/api-examples",
-  "title": "GitHub - voiceflow/api-examples: examples implementing the voiceflow dialog manager API",
-  "favicon": "https://github.com/favicon.ico",
-  "image": "https://opengraph.githubassets.com/d5a9bd46f368f48bf1772a03d599fa9b4aac8f857b866e5fee879c9d47857638/voiceflow/api-examples",
-  "provider": "github.com",
-  "href": "https://github.com/voiceflow/api-examples"
-}
-[/block]
+<Embed url="https://github.com/voiceflow/api-examples" title="GitHub - voiceflow/api-examples: examples implementing the voiceflow dialog manager API" favicon="https://github.com/favicon.ico" image="https://opengraph.githubassets.com/d5a9bd46f368f48bf1772a03d599fa9b4aac8f857b866e5fee879c9d47857638/voiceflow/api-examples" provider="github.com" href="https://github.com/voiceflow/api-examples" />
