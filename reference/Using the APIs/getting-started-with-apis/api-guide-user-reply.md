@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 📘 This article is part of a guide on getting started with Voiceflow APIs
-> 
+>
 > Start from the [beginning](https://docs.voiceflow.com/reference/api-guide-start) here.
 
 Let's make a basic input loop now so that we can talk back and forth with our Voiceflow agent. Inside the loop, we'll take input from the user to be sent to Voiceflow agent, and then format it into a response **text** payload `{ 'type': 'text', 'payload': nextInput }`.
