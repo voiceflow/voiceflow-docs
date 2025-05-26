@@ -14,15 +14,15 @@ next:
 
 While it's challenging to completely eliminate hallucinations, there are several key strategies to reduce their occurrence:
 
-- **Grounding to a source of truth:** Provide the LLM with verified, factual information. This can be done through:  
+* **Grounding to a source of truth:** Provide the LLM with verified, factual information. This can be done through:\
   In-prompt grounding: Include relevant facts directly in the prompt.
-- **Retrieval-Augmented Generation (RAG):** Retrieve information from a curated knowledge base before generating a response.
-- **Fine-tuning on domain-specific data:** For specialized applications, train the model on high-quality, relevant data.
-- **Prompt engineering:** Carefully craft prompts to guide the model towards accurate responses, including instructions to avoid speculation or indicate uncertainty.
-- **Output filtering:** Implement post-processing to filter out likely hallucinations, such as fact-checking against a database.
-- **Human-in-the-loop:** For critical applications, incorporate human review and verification of LLM outputs.
+* **Retrieval-Augmented Generation (RAG):** Retrieve information from a curated knowledge base before generating a response.
+* **Fine-tuning on domain-specific data:** For specialized applications, train the model on high-quality, relevant data.
+* **Prompt engineering:** Carefully craft prompts to guide the model towards accurate responses, including instructions to avoid speculation or indicate uncertainty.
+* **Output filtering:** Implement post-processing to filter out likely hallucinations, such as fact-checking against a database.
+* **Human-in-the-loop:** For critical applications, incorporate human review and verification of LLM outputs.
 
-By combining these strategies and continuously refining your approach, you can significantly reduce the occurrence and impact of hallucinations in LLM applications.  
+By combining these strategies and continuously refining your approach, you can significantly reduce the occurrence and impact of hallucinations in LLM applications.\
 A framework to reduce hallucinations
 
 ## Hallucination mitigation framework example
@@ -55,8 +55,8 @@ Here, we use smaller, cost-effective LLMs (e.g., Haiku or GPT-4-mini) to optimiz
 
 For this framework, we use two core mitigation techniques:
 
-- Prompt engineering: Crafting the input to extract the most relevant informatio
-- Grounding: Preparing to link the response to a verified source of truth
+* Prompt engineering: Crafting the input to extract the most relevant informatio
+* Grounding: Preparing to link the response to a verified source of truth
 
 ### Step 2: Knowledge Base Query
 
@@ -100,15 +100,4 @@ This framework ensures that responses are grounded in verified information, redu
 
 Watch below to see the framework in action:
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FK-WDEKex6gM%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DK-WDEKex6gM&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FK-WDEKex6gM%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/embed/K-WDEKex6gM?si=eua7NJt4_2xVcA9W",
-  "title": "Hallucination Mitigation Framework",
-  "favicon": "https://www.youtube.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/K-WDEKex6gM/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/embed/K-WDEKex6gM?si=eua7NJt4_2xVcA9W",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/embed/K-WDEKex6gM?si=eua7NJt4_2xVcA9W" title="Hallucination Mitigation Framework" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/K-WDEKex6gM/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/embed/K-WDEKex6gM?si=eua7NJt4_2xVcA9W" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FK-WDEKex6gM%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DK-WDEKex6gM%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FK-WDEKex6gM%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
