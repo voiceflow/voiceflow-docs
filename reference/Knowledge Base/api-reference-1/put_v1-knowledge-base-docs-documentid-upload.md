@@ -17,29 +17,82 @@ next:
 ---
 ## Request Fields
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Property",
-    "h-1": "Description & Example",
-    "0-0": "**Content-Type**  \n(header)",
-    "0-1": "application/json; charset=utf-8",
-    "1-0": "**documentID**  \n(path variable)",
-    "1-1": "A unique identifier of the document object (a string).  \nTo get the list of documentID's, use the **GET Document List** Knowledge Base API.",
-    "2-0": "**maxChunkSize**  \n(query parameter)",
-    "2-1": "Optional - Determine how granularly each document is broken up.  \nMax chunk size affects the total amount of chunks parsed from a document.  \n(i.e. larger chunks means less chunks retrieved)  \n  \n_Smaller chunk size means:_  \n  \n- narrower context\n- faster response\n- less tokens consumed\n- greater risk of less accurate answerstype: integer ; **default: 1000**; **Range available is 500-1500 tokens**.  \n  Once uploaded, you can view the chunks using the GET **Document Chunk Retrieval** Knowledge Base API.",
-    "3-0": "**JSON script**  \n(body, raw)",
-    "3-1": "Format Example:  \n{  \n    \"data\": {  \n        \"type\": \"url\",  \n        \"url\": \"<https://voiceflow.com/\">  \n    }  \n}"
-  },
-  "cols": 2,
-  "rows": 4,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Property
+      </th>
 
+      <th style={{ textAlign: "left" }}>
+        Description & Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Content-Type**
+        (header)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        application/json; charset=utf-8
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **documentID**\
+        (path variable)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A unique identifier of the document object (a string).\
+        To get the list of documentID's, use the **GET Document List** Knowledge Base API.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **maxChunkSize**\
+        (query parameter)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Optional - Determine how granularly each document is broken up.\
+        Max chunk size affects the total amount of chunks parsed from a document.\
+        (i.e. larger chunks means less chunks retrieved)  
+
+        *Smaller chunk size means:*  
+
+        * narrower context
+        * faster response
+        * less tokens consumed
+        * greater risk of less accurate answerstype: integer ; **default: 1000**; **Range available is 500-1500 tokens**.\
+          Once uploaded, you can view the chunks using the GET **Document Chunk Retrieval** Knowledge Base API.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **JSON script**\
+        (body, raw)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Format Example:\
+        \{\
+            "data": \{\
+                "type": "url",\
+                "url": "[https://voiceflow.com/"](https://voiceflow.com/")\
+            }\
+        }
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Sample Response
 
