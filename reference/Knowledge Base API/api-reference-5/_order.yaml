@@ -5,3 +5,4 @@
 - get_v1-knowledge-base-docs-documentid
 - put_v1-knowledge-base-documentid-upload
 - put_v1-knowledge-base-docs-documentid-upload
+- patch_v1-knowledge-base-docs-documentid
