@@ -14,26 +14,16 @@ next:
 
 The Agent step is Voiceflow's most powerful tool for creating intelligent, conversational AI agents. This guide will walk you through how to use this feature to build agents that can handle complex interactions, access knowledge base, follow customized paths, and execute functions—all within a single step.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DwkN04Nr7KSs&type=text%2Fhtml&schema=google&display_name=YouTube&src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FwkN04Nr7KSs\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD",
-  "favicon": "https://www.youtube.com/favicon.ico",
-  "provider": "google.com",
-  "href": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD" favicon="https://www.youtube.com/favicon.ico" provider="google.com" href="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD" typeOfEmbed="youtube" title="undefined" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Furl%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DwkN04Nr7KSs%26type%3Dtext%252Fhtml%26schema%3Dgoogle%26display_name%3DYouTube%26src%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FwkN04Nr7KSs%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 ## Introduction to the Agent step
 
 The Agent step provides a comprehensive solution for creating AI agents that can:
 
-- Intelligently respond to user queries
-- Search knowledge base for relevant information
-- Follow specific conversation paths based on user intent
-- Execute functions to interact with external services
+* Intelligently respond to user queries
+* Search knowledge base for relevant information
+* Follow specific conversation paths based on user intent
+* Execute functions to interact with external services
 
 **To add an Agent step to your canvas:**
 
@@ -47,13 +37,13 @@ The Agent step provides a comprehensive solution for creating AI agents that can
 
 Effective prompting is the foundation of a successful agent. The instructions you provide serve as the agent's "brain" and determine how it will interact with users:
 
-- **Clear Directives**: Be specific about your agent's role and how it should respond in different scenarios
-- **Personality Design**: Define your agent's tone, level of formality, and communication style
-- **Knowledge Parameters**: Indicate what domain knowledge your agent should rely on and when it should search external resources
-- **Context Awareness**: Include instructions for handling sensitive topics or escalating to human support when necessary
+* **Clear Directives**: Be specific about your agent's role and how it should respond in different scenarios
+* **Personality Design**: Define your agent's tone, level of formality, and communication style
+* **Knowledge Parameters**: Indicate what domain knowledge your agent should rely on and when it should search external resources
+* **Context Awareness**: Include instructions for handling sensitive topics or escalating to human support when necessary
 
-> 📘 
-> 
+> 📘
+>
 > Learn more about crafting great prompts [here](https://docs.voiceflow.com/docs/crafting-great-prompts)
 
 Good prompting helps your agent understand what information to prioritize, when to use the knowledge base, and how to respond to user queries in a consistent manner. Taking time to craft detailed, thoughtful instructions will dramatically improve your agent's performance and reduce the need for additional steps in your flow.
@@ -75,9 +65,9 @@ Functions allow your agent to connect with external services and retrieve or upd
 
 The `LLM Description` field is where you provide detailed instructions that help the LLM understand:
 
-- When to call this function
-- What the function does
-- What information is needed to use it
+* When to call this function
+* What the function does
+* What information is needed to use it
 
 For example, for an order lookup function:
 
@@ -95,9 +85,9 @@ For each input variable your function requires:
 
 The description for each input variable helps the LLM understand:
 
-- What information to collect
-- How to validate it
-- When to request it from the user
+* What information to collect
+* How to validate it
+* When to request it from the user
 
 For example, for an Order ID variable:
 
@@ -109,27 +99,27 @@ For example, for an Order ID variable:
 
 #### Order Lookup Function
 
-> **Function Name**: Get Order by ID  
+> **Function Name**: Get Order by ID\
 > **LLM Description**: "Use this function to retrieve a customer's order details from Shopify when they ask about their order status, delivery date, shipping address, or tracking information. The function requires a valid order ID to proceed."
 >
-> **Input Variable Name**: orderID  
+> **Input Variable Name**: orderID\
 > **LLM Variable Description**: "The customer's order ID. This should be a 10-digit number that starts with 'ORD-'. Ask the customer to provide this number if they haven't already."
 
 #### Inventory Check Function
 
-> **Function Name**: Check Product Availability  
+> **Function Name**: Check Product Availability\
 > **LLM Description**: "Use this function when a customer asks if a product is in stock, available in a specific size or color, or when it might be back in stock. This function requires a product ID or SKU number to check availability."
 >
-> **Input Variable Name**: productSKU  
+> **Input Variable Name**: productSKU\
 > **LLM Variable Description**: "The SKU or product ID of the item the customer is inquiring about. Valid SKUs are alphanumeric codes that typically start with 'P-' followed by numbers. If the customer mentions a product name but not the SKU, ask them for more specific information about which product they're interested in."
 
 ## Paths
 
 Paths allow your agent to handle specific conversation flows and take appropriate actions:
 
-- **Automatic Routing**: The agent detects user intent and automatically routes to the appropriate path
-- **Variable Collection**: You can require specific data to be collected before entering a path
-- **Seamless Integration**: Paths work within natural conversation, without requiring specific commands
+* **Automatic Routing**: The agent detects user intent and automatically routes to the appropriate path
+* **Variable Collection**: You can require specific data to be collected before entering a path
+* **Seamless Integration**: Paths work within natural conversation, without requiring specific commands
 
 **To create a path:**
 
@@ -145,20 +135,20 @@ Paths allow your agent to handle specific conversation flows and take appropriat
 
 #### Order Return Path
 
-> **Path Name**: Process Order Return  
+> **Path Name**: Process Order Return\
 > **LLM Description**: "Trigger this path when the user wants to return an item they purchased, expresses dissatisfaction with their order, mentions that an item is defective, or asks about the return policy. The user might use phrases like 'I want to return', 'how do I send this back', 'my product is broken', or 'does this have a warranty'."
 >
-> **Required Variable**: orderID  
+> **Required Variable**: orderID\
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
 
 This description helps the LLM understand exactly when to trigger the return process. It includes both direct mentions of returns and indirect signals of return intent, providing a comprehensive set of triggers for the path. The variable description ensures the agent knows how to collect and validate the required information before proceeding.
 
 #### Promo Code Path
 
-> **Path Name**: Get a Promo Code  
+> **Path Name**: Get a Promo Code\
 > **Description**: "Trigger this path when the user asks for a promo code or a discount, or says things are too expensive. Look for phrases like 'do you have any discounts', 'that's too much money', 'any coupon codes', or 'how can I save on my order'."
 >
-> **Required Variable**: email  
+> **Required Variable**: email\
 > **Variable Description**: "The user's email address where we'll send promotional materials. Only accept inputs that follow a valid email format (contains @ symbol and appropriate domain extension). If the user is hesitant, explain that we need their email to deliver the promo code and track usage. Do not proceed with providing the discount code until a valid email is collected."
 
 This description helps the LLM recognize when a user is seeking a discount, either directly or indirectly. The required variable description provides clear guidance on what constitutes a valid email address and how to handle user hesitation, ensuring you collect quality customer data before providing them with the promotional code.
@@ -167,9 +157,9 @@ This description helps the LLM recognize when a user is seeking a discount, eith
 
 When you enable knowledge base integration, your agent can automatically search for information it doesn't know:
 
-- **Automatic Queries**: Your agent will search the knowledge base without requiring a separate search step
-- **Contextual Responses**: The agent intelligently combines its built-in knowledge with information from your knowledge base
-- **Knowledge Weighting**: You can adjust how much the agent relies on its built-in knowledge versus your knowledge base through the instructions
+* **Automatic Queries**: Your agent will search the knowledge base without requiring a separate search step
+* **Contextual Responses**: The agent intelligently combines its built-in knowledge with information from your knowledge base
+* **Knowledge Weighting**: You can adjust how much the agent relies on its built-in knowledge versus your knowledge base through the instructions
 
 For example, if a user asks about a password reset but that information isn't in your knowledge base, the agent can provide general guidance. But when asked about email confirmation—which is in your knowledge base—it can provide specific, accurate information from your documentation.
 
@@ -181,6 +171,6 @@ The UI shows a toggle for "Access to knowledge base" which you can enable to giv
 
 For even more powerful implementations:
 
-- **Multiple Agent steps**: Chain several Agent steps together for complex workflows
-- **Custom Functions**: Develop your own functions to connect with any service your business uses
-- **Prompt Refinement**: Continuously refine your agent's instructions based on conversation logs and user feedback
+* **Multiple Agent steps**: Chain several Agent steps together for complex workflows
+* **Custom Functions**: Develop your own functions to connect with any service your business uses
+* **Prompt Refinement**: Continuously refine your agent's instructions based on conversation logs and user feedback
