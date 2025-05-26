@@ -15,27 +15,56 @@ next:
 ---
 ### Pagination
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Property",
-    "h-1": "Description & Example",
-    "0-0": "**page**  \n(query parameter)",
-    "0-1": "Optional pagination parameter - The page number to retrieve, defaults to 1 (which is the minimum). Order is by the date updated, descending.",
-    "1-0": "**limit**  \n(query parameter)",
-    "1-1": "Optional pagination parameter- The number of documents to return per page.  \nDefaults to 10, range is 1-100.",
-    "2-0": "**documentType**  \n(query parameter)",
-    "2-1": "Optional pagination parameter - Filter the document list by type (url, pdf, text, docx).  \nDefaults to all."
-  },
-  "cols": 2,
-  "rows": 3,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Property
+      </th>
 
+      <th style={{ textAlign: "left" }}>
+        Description & Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **page**
+        (query parameter)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Optional pagination parameter - The page number to retrieve, defaults to 1 (which is the minimum). Order is by the date updated, descending.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **limit**\
+        (query parameter)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Optional pagination parameter- The number of documents to return per page.\
+        Defaults to 10, range is 1-100.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **documentType**\
+        (query parameter)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Optional pagination parameter - Filter the document list by type (url, pdf, text, docx).\
+        Defaults to all.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Filtering KB doc list by KB tags using query parameters:
 
