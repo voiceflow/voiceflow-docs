@@ -22,9 +22,9 @@ Please note that PII Redaction is disabled by default for all existing and new a
 
 ## Testing PII Redaction:
 
-- To test PII Redaction, you must interact with your agent in a `production` environment.
-- PII Redaction will not work during development testing (in-app omnipresent testing or the canvas console) to allow for easier debugging.
-- To test, use the Voiceflow Web Widget snippet with the version ID set to "production" and publish your agent.
+* To test PII Redaction, you must interact with your agent in a `production` environment.
+* PII Redaction will not work during development testing (in-app omnipresent testing or the canvas console) to allow for easier debugging.
+* To test, use the Voiceflow Web Widget snippet with the version ID set to "production" and publish your agent.
 
 ## Viewing Redacted Transcripts:
 
@@ -34,9 +34,9 @@ Please note that PII Redaction is disabled by default for all existing and new a
 
 ### Fetching Unredacted Transcripts via API:
 
-- During the beta, you can fetch unredacted transcripts via the Transcripts API within a two-day time-to-live (TTL) period.
-- To retrieve unredacted transcripts, you must pass `encrypted=true` as a query parameter in your API request.
-- Example API request:
+* During the beta, you can fetch unredacted transcripts via the Transcripts API within a two-day time-to-live (TTL) period.
+* To retrieve unredacted transcripts, you must pass `encrypted=true` as a query parameter in your API request.
+* Example API request:
   ```
   curl --request GET \
        --url https://api.voiceflow.com/v2/transcripts/xyz/xyz?encrypted=true \
@@ -45,13 +45,13 @@ Please note that PII Redaction is disabled by default for all existing and new a
 
 ## Important Notes:
 
-- During the beta, you cannot unredact the redacted information directly from the Transcripts UI.
-- After the two-day TTL expires, unredacted transcripts will no longer be accessible by anyone, including Voiceflow.
+* During the beta, you cannot unredact the redacted information directly from the Transcripts UI.
+* After the two-day TTL expires, unredacted transcripts will no longer be accessible by anyone, including Voiceflow.
 
 ## Credit Consumption:
 
-- During the beta period, using PII Redaction will consume credits/tokens from your account's quota.
-- For testing purposes, you can disregard the token accumulation during the beta and focus on thoroughly testing the feature.
+* During the beta period, using PII Redaction will consume credits/tokens from your account's quota.
+* For testing purposes, you can disregard the token accumulation during the beta and focus on thoroughly testing the feature.
 
 ## Feedback and Support:
 
