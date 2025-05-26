@@ -16,12 +16,12 @@ Voiceflow is primarily a platform for building **advanced AI agents**, and is qu
 
 Think about Voiceflow as the orchestration layer between your front-end, back-end services, and AI models.
 
-Voiceflow holds the agent logic and stores where the users are in their conversation (their _conversation state_). It is able to send and receive messages from your front-end interface (whether that is the first party web chat, a custom web app, Slack etc.) and push/pull data from your back-end services (like a database, CMS, or any other service with an API).
+Voiceflow holds the agent logic and stores where the users are in their conversation (their *conversation state*). It is able to send and receive messages from your front-end interface (whether that is the first party web chat, a custom web app, Slack etc.) and push/pull data from your back-end services (like a database, CMS, or any other service with an API).
 
 Voiceflow also has a number of AI models that it is connected to, so you can use them out of the box.
 
 > 📘 Our product focus
-> 
+>
 > At Voiceflow we prioritize **extensibility and customization**. So rather than create many out of the box integrations, we have instead focused on creating powerful developer tools and APIs so you can connect to your tools in your way.
 
 ![](https://files.readme.io/0bdbb59-CleanShot_2024-06-20_at_15.27.362x.png)
@@ -32,42 +32,16 @@ Voiceflow also has a number of AI models that it is connected to, so you can use
 
 Voiceflow is able to send and receive data from other services in two ways.
 
-1. **The API Step:** This is a step in Voiceflow that allows you to make an API call to any service and store the response in _variables_.
+1. **The API Step:** This is a step in Voiceflow that allows you to make an API call to any service and store the response in *variables*.
 2. **Functions:** Custom functions allow you to write a JavaScript function that can use a fetch request. You can therefore use this to send/receive data, transform data, and even return traces imitating any step from text or image, or even custom traces like a [Custom Action](https://developer.voiceflow.com/v2.0/docs/custom-actions).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/1b17a03-CleanShot_2024-06-20_at_15.39.582x.png",
-        null,
-        "This function makes a call to the Zendesk API to create a ticket containing information about the customer."
-      ],
-      "align": "center",
-      "caption": "This function makes a call to the Zendesk API to create a ticket containing information about the customer."
-    }
-  ]
-}
-[/block]
+<Image alt="This function makes a call to the Zendesk API to create a ticket containing information about the customer." align="center" src="https://files.readme.io/1b17a03-CleanShot_2024-06-20_at_15.39.582x.png">
+  This function makes a call to the Zendesk API to create a ticket containing information about the customer.
+</Image>
 
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7f74d6f-CleanShot_2024-06-20_at_15.40.422x.png",
-        null,
-        "This is what the function looks like when it is added to a workflow."
-      ],
-      "align": "center",
-      "caption": "This is what the function looks like when it is added to a workflow."
-    }
-  ]
-}
-[/block]
-
+<Image alt="This is what the function looks like when it is added to a workflow." align="center" src="https://files.readme.io/7f74d6f-CleanShot_2024-06-20_at_15.40.422x.png">
+  This is what the function looks like when it is added to a workflow.
+</Image>
 
 ## Using AI Models in Voiceflow
 
@@ -84,9 +58,9 @@ LLMs can be leveraged in the following ways (we are adding more each week)
 
 If you have a self-hosted model or want to use a model outside the ones we provide, you can use a function or an API call to send and receive information to a custom model, so you can **BYO model**.
 
-- Response and Set AI can be mimicked using custom functions that are either returning traces of text, or updating variables. For an example of this, see the [GPT 4o function](https://www.voiceflow.com/function/connect-to-gpt-4o) we made an hour after release.
-- Knowledge Base Synthesis can be done in a custom function with a BYO model by using the KB API with **synthesis disabled** and then using your own model through API calls to synthesize an answer.
-- LLM intent classification unfortunately can't currently be easily mimicked.
+* Response and Set AI can be mimicked using custom functions that are either returning traces of text, or updating variables. For an example of this, see the [GPT 4o function](https://www.voiceflow.com/function/connect-to-gpt-4o) we made an hour after release.
+* Knowledge Base Synthesis can be done in a custom function with a BYO model by using the KB API with **synthesis disabled** and then using your own model through API calls to synthesize an answer.
+* LLM intent classification unfortunately can't currently be easily mimicked.
 
 # Deploying your Agents
 
@@ -104,9 +78,9 @@ You can learn more about the [web chat here](https://developer.voiceflow.com/v2.
 
 ## Custom front-end interfaces
 
-Voiceflow is able to interact with any front-end interface. It does this through the Dialog Manager API through sending a variety of message types called _traces_. Our web chat implements all these traces out of the box, so to make a custom interface you would choose how you handle each trace type (text, images, buttons, etc.).
+Voiceflow is able to interact with any front-end interface. It does this through the Dialog Manager API through sending a variety of message types called *traces*. Our web chat implements all these traces out of the box, so to make a custom interface you would choose how you handle each trace type (text, images, buttons, etc.).
 
-A trace is a standard format in which Voiceflow sends a message. Below is an example of an _image trace_ where Voiceflow is sending an image.
+A trace is a standard format in which Voiceflow sends a message. Below is an example of an *image trace* where Voiceflow is sending an image.
 
 ```
 {
@@ -123,9 +97,9 @@ A trace is a standard format in which Voiceflow sends a message. Below is an exa
 
 You can use these to render an image on your front-end. There are a variety of built-in trace types that you can find here: [See all trace types.](https://developer.voiceflow.com/v2.0/reference/trace-types)
 
-If there is a type of message that Voiceflow does not have, you can create a _custom trace_ to render things like file upload, calendar pickers, or trigger any kind of custom functionality. This is available when using our built-in webchat widget or your own custom interface.
+If there is a type of message that Voiceflow does not have, you can create a *custom trace* to render things like file upload, calendar pickers, or trigger any kind of custom functionality. This is available when using our built-in webchat widget or your own custom interface.
 
-You would use our _custom action_ functionality to do this. You can see an [example of how a custom action is used](https://developer.voiceflow.com/v2.0/docs/render-custom-widgets-effects#3-trigger-the-extension-with-a-custom-action) with our webchat to render a custom widget.
+You would use our *custom action* functionality to do this. You can see an [example of how a custom action is used](https://developer.voiceflow.com/v2.0/docs/render-custom-widgets-effects#3-trigger-the-extension-with-a-custom-action) with our webchat to render a custom widget.
 
 ## Custom back-end apps
 
@@ -137,19 +111,7 @@ This can be used for everything from creating pretty custom chat agent UIs like 
 
 Or fully custom interfaces like an AI enhanced article reader, Voiceflow in Minecraft or even in Unity! 
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FDxIsHNxr_0g%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDxIsHNxr_0g&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDxIsHNxr_0g%2Fhqdefault.jpg&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=DxIsHNxr_0g",
-  "title": "An Embedded AI Article Reader Developed in Voiceflow",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/DxIsHNxr_0g/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=DxIsHNxr_0g",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=DxIsHNxr_0g" title="An Embedded AI Article Reader Developed in Voiceflow" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/DxIsHNxr_0g/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=DxIsHNxr_0g" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FDxIsHNxr_0g%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DDxIsHNxr_0g%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FDxIsHNxr_0g%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 You can learn more about building custom interfaces [here](https://developer.voiceflow.com/v2.0/docs/custom-interfaces-overview).
 
