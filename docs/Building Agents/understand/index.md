@@ -1,5 +1,5 @@
 ---
-title: Understand
+title: Capturing Data
 excerpt: ''
 deprecated: false
 hidden: false
