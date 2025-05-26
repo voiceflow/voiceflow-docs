@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-_What are Intents? What are Entities? How do Intents and Entities differ?_
+*What are Intents? What are Entities? How do Intents and Entities differ?*
 
 Before we dive deeper into managing your conversation model, it's important to set a baseline understanding of the conversational components and fundamentals that will allow you to build dynamic, non-linear conversations.
 
@@ -18,8 +18,8 @@ This can be best explained with a conceptual example: “What cake do I buy for 
 
 On analyzing the above statement, we can understand two basic things:
 
-- The person is interested in buying a cake
-- The occasion is a birthday
+* The person is interested in buying a cake
+* The occasion is a birthday
 
 The former is the **Intent**, the latter, an **Entity**.‍ These are the building blocks for most conversation queries.
 
@@ -31,9 +31,9 @@ In the graphic above, we can understand that the user’s intention is to access
 
 To break it down further, let’s define a few terms.
 
-- **Intent** — Intention, or purpose of the user in the conversational flow
-- **Entity** — A data point or value which you can extract from a conversation (and can be slotted into a category/type)
-- **Utterance** — The input(s)/response that your end-users provide to your conversational experience
+* **Intent** — Intention, or purpose of the user in the conversational flow
+* **Entity** — A data point or value which you can extract from a conversation (and can be slotted into a category/type)
+* **Utterance** — The input(s)/response that your end-users provide to your conversational experience
 
 Your conversational interface will derive intents and entities from utterances.
 
@@ -45,15 +45,4 @@ The **Trigger** step (which used to be known as the intent step) can be used to 
 
 Therefore, while developing and designing a flexible and dynamic conversation, user/customer intents and entity recognition is crucial.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FEjvLSO4we40%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DEjvLSO4we40&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEjvLSO4we40%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=EjvLSO4we40",
-  "title": "Capturing and Manipulating Information with Entities, Logic, and Intents",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/EjvLSO4we40/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=EjvLSO4we40",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/watch?v=EjvLSO4we40" title="Capturing and Manipulating Information with Entities, Logic, and Intents" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/EjvLSO4we40/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=EjvLSO4we40" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FEjvLSO4we40%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DEjvLSO4we40%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FEjvLSO4we40%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
