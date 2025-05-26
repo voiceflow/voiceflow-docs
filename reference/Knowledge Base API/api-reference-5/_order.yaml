@@ -3,3 +3,4 @@
 - delete_v1-knowledge-base-docs-documentid
 - get_v1-knowledge-base-docs
 - get_v1-knowledge-base-docs-documentid
+- put_v1-knowledge-base-documentid-upload
