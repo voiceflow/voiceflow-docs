@@ -1,5 +1,5 @@
 ---
-title: Messages
+title: Message step
 excerpt: ''
 deprecated: false
 hidden: false
