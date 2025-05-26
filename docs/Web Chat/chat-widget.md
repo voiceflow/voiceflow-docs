@@ -28,11 +28,11 @@ next:
       slug: web-chat-api
       title: Custom Triggers
 ---
-With the Web Chat integration in Voiceflow it’s easy to implement and push your <<glossary:agent>> to production. Our Web Chat widget and JavaScript API allows you to customize the appearance UI elements, specify between development and production versions of your design, pass data upon launch, programmatically show and hide the widget, and more.
+With the Web Chat integration in Voiceflow it’s easy to implement and push your <Glossary>agent</Glossary> to production. Our Web Chat widget and JavaScript API allows you to customize the appearance UI elements, specify between development and production versions of your design, pass data upon launch, programmatically show and hide the widget, and more.
 
 # Installation Code
 
-The **Web Chat** integration page in the Creator Tool provides code snippet you can use in your website / web app to start sharing your <<glossary:agent>> with users.
+The **Web Chat** integration page in the Creator Tool provides code snippet you can use in your website / web app to start sharing your <Glossary>agent</Glossary> with users.
 
 ![](https://files.readme.io/81e1edd-Untitled.png)
 
@@ -50,7 +50,7 @@ All of the below tags are supported when used in the text step on Web Chat.
 ['a','audio','b','blockquote','br','code','dd','del','details','div','dl','dt','em','h1','h2','h3','h4','h5','h6','hr','i','img','input','ins','kbd','li','ol','p','picture','pre','q','rp','rt','ruby','s','samp','section','source','span','strike','strong','sub','summary','sup','table','tbody','td','tfoot','th','thead','tr','tt','ul','var','video']
 ```
 
-**Note: ** By default, dangerous HTML elements such as Iframe require additional configuration.
+**Note:** By default, dangerous HTML elements such as Iframe require additional configuration.
 
 ### Enabling dangerous HTML elements
 
@@ -69,9 +69,9 @@ window.voiceflow.chat.load({
 
 You can go a bit further and use your own front-end code to interact with the Web Chat widget as you might also want to populate a specific user ID and/or use the available API to do the following actions:
 
-- Load a specific <<glossary:agent>>
-- Set configuration settings when the Web Chat widget loads
-- Open or close the Web Chat widget
-- Show or hide the Web Chat widget launch bubble
-- Interact with the Dialog Manager API and show the result within the Chat Widget
-- Show or clear proactive text messages above your widget launch bubble
+* Load a specific <Glossary>agent</Glossary>
+* Set configuration settings when the Web Chat widget loads
+* Open or close the Web Chat widget
+* Show or hide the Web Chat widget launch bubble
+* Interact with the Dialog Manager API and show the result within the Chat Widget
+* Show or clear proactive text messages above your widget launch bubble
