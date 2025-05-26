@@ -16,7 +16,7 @@ Leverage our Dialog Manager API or Knowledge Base API in your voice-based integr
 
 Some examples of voice-based interfaces using voiceflow are
 
-- [Alexa](https://xavidop.me/alexa/2023-11-21-voiceflow-alexa/)
-- [Twilio Voice IVR](https://developer.voiceflow.com/v2.0/docs/twilio-voice)
-- [TTS with ElevenLabs](https://developer.voiceflow.com/v2.0/docs/elevenlabs-api-integration)
-- [Automatic Speech Recognition with Whisper](https://developer.voiceflow.com/v2.0/docs/voiceflow-asr-demo-whisper-base-model)
+* [Alexa](https://xavidop.me/alexa/2023-11-21-voiceflow-alexa/)
+* [Twilio Voice IVR](https://developer.voiceflow.com/v2.0/docs/twilio-voice)
+* [TTS with ElevenLabs](https://developer.voiceflow.com/v2.0/docs/elevenlabs-api-integration)
+* [Automatic Speech Recognition with Whisper](https://developer.voiceflow.com/v2.0/docs/voiceflow-asr-demo-whisper-base-model)
