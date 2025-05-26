@@ -13,10 +13,10 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 
-> 
+> 🚧
+>
 > The Tags API is a legacy API. We recommend adding tags at metadata to your documents moving forward.
-> 
+>
 > Future features will not be compatible with the Tags API.
 
 ## Example
