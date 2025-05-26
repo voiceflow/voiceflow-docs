@@ -18,22 +18,9 @@ The DM API automatically creates and manages the conversation state. Identical r
 
 Note that this means the DM API is **not a REST API** as it does not satisfy the [statelessness property](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm). The DM API's responses depend not only on the request, but also stored state within the server. Keep this in mind while working with the DM API.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/41792f7-image.png",
-        null,
-        "A diagram of how a conversation through the Dialog Management API works with example payloads, traces received, visual representations, and an example of how to integrate the Dialog Management API deeply into an app through a custom action."
-      ],
-      "align": "center",
-      "caption": "A diagram of how a conversation through the Dialog Management API works with example payloads, traces received, visual representations, and an example of how to integrate the Dialog Management API deeply into an app through a custom action."
-    }
-  ]
-}
-[/block]
-
+<Image alt="A diagram of how a conversation through the Dialog Management API works with example payloads, traces received, visual representations, and an example of how to integrate the Dialog Management API deeply into an app through a custom action." align="center" src="https://files.readme.io/41792f7-image.png">
+  A diagram of how a conversation through the Dialog Management API works with example payloads, traces received, visual representations, and an example of how to integrate the Dialog Management API deeply into an app through a custom action.
+</Image>
 
 ### Tracking conversation state
 
@@ -57,7 +44,7 @@ There are a few best practices to defining a `userID` format:
 
 1. **Unique** - The `userID` should be unique to each user. Otherwise, if two users share the same `userID`, the Voiceflow app may leak information about user A's conversation to user B, which is a potential privacy violation.
 
-2. **Non-sensitive** - It is not recommended to use sensitive or private information in the `userID` such  
+2. **Non-sensitive** - It is not recommended to use sensitive or private information in the `userID` such\
    as emails, real names, or phone numbers. 
 
 ## versionID
@@ -66,9 +53,9 @@ DM API endpoints also accept a `versionID` header whose value is a **version ali
 
 The currently supported aliases are:
 
-- `development` - The version displayed on the Voiceflow Creator's canvas
+* `development` - The version displayed on the Voiceflow Creator's canvas
 
-- `production` - The version that has been published 
+* `production` - The version that has been published 
 
 Use the `development` alias whenever you are experimenting with your API, and the `production` version when integrating Voiceflow with your web app. Learn more about version and project IDs [here](https://developer.voiceflow.com/v2.0/reference/project-ids-and-versions).
 
