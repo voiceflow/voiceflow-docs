@@ -2,3 +2,4 @@
 - get_v3alpha-knowledge-base-tags
 - get_v3alpha-knowledge-base-tags-tagid
 - delete_v3alpha-knowledge-base-tags-tagid
+- patch_v3alpha-knowledge-base-tags-tagid
