@@ -14,27 +14,13 @@ next:
       slug: step-1-get-api-key
       title: 'Step 2: Get API Key'
 ---
-Agents are the core of Voiceflow. Each <<glossary:agent>> is powered by the data you add to it.
+Agents are the core of Voiceflow. Each <Glossary>agent</Glossary> is powered by the data you add to it.
 
-## **Step 1: Create a new <<glossary:agent>>**
+## **Step 1: Create a new<Glossary>agent</Glossary>**
 
 In your workspace click the 'New Assistant' button on the top right. Give your agent a name and select whether it is a 'Chat' or 'Voice' agent.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/84a040c-Screen_Shot_2023-11-09_at_2.57.14_PM.png",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/84a040c-Screen_Shot_2023-11-09_at_2.57.14_PM.png" />
 
 This walkthrough will focus on building and deploying an agent. If you are designing for an NLU platform. Visit our guide to building for export [here](https://learn.voiceflow.com/hc/en-us/articles/10875693411085-How-Do-I-Design-a-Flow-).
 
