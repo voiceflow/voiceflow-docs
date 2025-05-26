@@ -13,11 +13,11 @@ next:
   description: ''
 ---
 > 🚧 Beta Feature
-> 
+>
 > This feature is in beta and is subject to change.
 
 > 📘 Teams and Enterprise Feature
-> 
+>
 > This feature is exclusive to Voiceflow workspaces with the Teams or Enterprise plan.
 
 # Overview
@@ -34,54 +34,23 @@ To use the LLM fallback, we must first create a **fallback configuration** to sp
 
 1. Open the **Content Management System (CMS) view** of your agent and navigate to **Settings** (red box)
 
-   [block:image]{"images":[{"image":["https://files.readme.io/b02a12c87e455751f960418778adca81f91b59892909081ff859d0afed4dd6d0-1-cms.png","",""],"align":"center","sizing":"800px","border":true}]}[/block]
+   <Image align="center" className="border" width="800px" border={true} src="https://files.readme.io/b02a12c87e455751f960418778adca81f91b59892909081ff859d0afed4dd6d0-1-cms.png" />
 2. In Settings, navigate to **AI models**
 
-   [block:image]{"images":[{"image":["https://files.readme.io/8983e14b111c0f32255dc268bfeecb5013a46820bd6c653575c0e3cced8ee3df-2-settings.png","",""],"align":"center","border":true}]}[/block]
-3. You should arrive at the** AI models **page shown below.
+   <Image align="center" className="border" border={true} src="https://files.readme.io/8983e14b111c0f32255dc268bfeecb5013a46820bd6c653575c0e3cced8ee3df-2-settings.png" />
+3. You should arrive at the **AI models**page shown below.
 
-   [block:image]{"images":[{"image":["https://files.readme.io/8b351033b9c93c8ad9f5ab0433eed525f00b00cb9989b83f17fb9eb39cfe6290-3-fallback.png","",""],"align":"center","border":true}]}[/block]
+   <Image align="center" className="border" border={true} src="https://files.readme.io/8b351033b9c93c8ad9f5ab0433eed525f00b00cb9989b83f17fb9eb39cfe6290-3-fallback.png" />
 
 ## Configuring a fallback configuration
 
 Configuring a fallback configuration is straightforward. For each 3rd-party LLM provider (OpenAI, Anthropic, and Gemini), you can set a fallback model by opening the dropdown on an input in the right column and selecting a model from the list.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d5b82049373d6f0a3fcb44366da0cc8f194227e78facd86a7d183c1dca0f7df-4-configuration.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "600px",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="600px" border={true} src="https://files.readme.io/4d5b82049373d6f0a3fcb44366da0cc8f194227e78facd86a7d183c1dca0f7df-4-configuration.png" />
 
 As an example, in the image below, we have configured Claude 3.5 Haiku as the fallback for any OpenAI model, Gemini 1.5 Pro as the fallback for any Anthropic model, and GPT-3.5 Turbo as the fallback for any Google model.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b9d622e1b2ed14fd03257cd4359dd16c6e3633db0026d7654ddb8d59d5f93d6f-Screenshot_2025-02-18_at_12.20.27_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/b9d622e1b2ed14fd03257cd4359dd16c6e3633db0026d7654ddb8d59d5f93d6f-Screenshot_2025-02-18_at_12.20.27_PM.png" />
 
 <br />
 
@@ -91,93 +60,33 @@ Once a fallback configuration is set, then LLM fallback is automatically enabled
 
 While LLM fallback is enabled and no outages occur, your Voiceflow agent will behave exactly as before. For example, consider a project with a single Prompt step with the following prompt which is configured to use **Claude 3.5 - Haiku** as its LLM.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/bd0be941566ee1b828572321b388afd5b433a0bcf7120cfdf7e0221f2b249d25-Screenshot_2025-02-18_at_12.38.05_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/bd0be941566ee1b828572321b388afd5b433a0bcf7120cfdf7e0221f2b249d25-Screenshot_2025-02-18_at_12.38.05_PM.png" />
 
 When we interact with the agent, it will behave as expected. Here our agent lists out three Canadian companies.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/39bd72012f6b4282d70f39a9d035a5de57eab7f237f024b5d13ed75092eaba47-Screenshot_2025-02-18_at_12.36.17_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/39bd72012f6b4282d70f39a9d035a5de57eab7f237f024b5d13ed75092eaba47-Screenshot_2025-02-18_at_12.36.17_PM.png" />
 
 Imagine now that Anthropic is suffering an outage and so Claude 3.5 - Haiku is unavailable. In the previous section, we set the fallback model of Claude 3.5 - Haiku to be Gemini 1.5 Pro. When we execute the Prompt step during this outage, the agent will continue to work properly because after detecting that Claude 3.5 - Haiku is unavailable, it sends a request to Gemini 1.5 Pro to handle our request instead.
 
-This behaviour is logged as a debug trace with the text _"'Anthropic, claude-3.5-haiku' on the fallback chain suffered an outage, falling back to 'google, gemini-pro-1.5'"_ on the Prototype Tool:
+This behaviour is logged as a debug trace with the text *"'Anthropic, claude-3.5-haiku' on the fallback chain suffered an outage, falling back to 'google, gemini-pro-1.5'"* on the Prototype Tool:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/17cc99d50a7fd6c7ab7d7e08858b4de6fd81fc28ea52dd8bcb035409329b88d1-Screenshot_2025-02-18_at_12.44.26_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/17cc99d50a7fd6c7ab7d7e08858b4de6fd81fc28ea52dd8bcb035409329b88d1-Screenshot_2025-02-18_at_12.44.26_PM.png" />
 
 Thus, as we can see, LLM fallback increases the availability of Voiceflow agents through fallback configurations providing redundant models to fallback on.
 
 > ❗️ Fallback and non-outage errors
-> 
+>
 > LLM fallback only triggers if an LLM fails for an **outage-related reason**, that is, the 3rd-party LLM provider responded with an error which Voiceflow's outage detection system classifies as an outage.
-> 
+>
 > In practice, this includes nearly all errors from LLMs, but on the rare occasion that an error is classified as a non-outage, it is treated as user error that you as the Voiceflow user need to correct. 
-> 
+>
 > **For non-outages, Voiceflow agents do not perform LLM fallback at all**, as the cause of the issue is not the unavailability of 3rd-party LLM providers, but instead a problem with the Voiceflow agent's design, and thus, user action is required to fix the agent as this is not an error scenario the fallback is meant to handle.
 
 ## Interpreting a fallback configuration
 
 In this section, we will describe the complete behaviour of the LLM fallback system. Recall that in previous sections, we set the following fallback configuration:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b9d622e1b2ed14fd03257cd4359dd16c6e3633db0026d7654ddb8d59d5f93d6f-Screenshot_2025-02-18_at_12.20.27_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/b9d622e1b2ed14fd03257cd4359dd16c6e3633db0026d7654ddb8d59d5f93d6f-Screenshot_2025-02-18_at_12.20.27_PM.png" />
 
 This fallback configuration can be interpreted as meaning the following:
 
@@ -185,9 +94,9 @@ This fallback configuration can be interpreted as meaning the following:
 2. If any Anthropic model (Claude 3.5 - Haiku, Claude 3.5 - Sonnet, etc) suffers an outage, then fall back to Gemini 1.5 - Pro
 3. If any Google model (Gemini 1.5 Pro) suffers an outage, fall back to GPT-3.5 Turbo
 
-Note that fallbacks **cascade**, meaning that if a fallback model is itself suffering an outage, then we fallback _again_ onto another model determined by the fallback configuration. This repeats until an available model is found or all fallback models are exhausted. 
+Note that fallbacks **cascade**, meaning that if a fallback model is itself suffering an outage, then we fallback *again* onto another model determined by the fallback configuration. This repeats until an available model is found or all fallback models are exhausted. 
 
-For example, imagine if a Prompt step called GPT-4o (an OpenAI model), but OpenAI's _and_ Anthropic services are suffering an outage. Therefore, GPT-4o has configured Claude 3.5 - Haiku to be its fallback model, but Claude 3.5 - Haiku is itself unavailable and act in place of GPT-4o. In this situation, the LLM fallback system will behave as follows:
+For example, imagine if a Prompt step called GPT-4o (an OpenAI model), but OpenAI's *and* Anthropic services are suffering an outage. Therefore, GPT-4o has configured Claude 3.5 - Haiku to be its fallback model, but Claude 3.5 - Haiku is itself unavailable and act in place of GPT-4o. In this situation, the LLM fallback system will behave as follows:
 
 1. Detected that GPT-4o (OpenAI) is suffering an outage, try to fallback to Claude 3.5 - Haiku
 2. Detected that Claude 3.5 - Haiku (Anthropic) is suffering an outage, try to fallback to Gemini 1.5 Pro
@@ -195,25 +104,9 @@ For example, imagine if a Prompt step called GPT-4o (an OpenAI model), but OpenA
 
 In the Voiceflow Prototype Tool, you will see a debug trace reflecting this behaviour:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/490fb44d822f7c17f5b53189be8d10fafed18e5d7b98ec8ededfcf14b0692ca2-Screenshot_2025-02-18_at_1.20.51_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "300px",
-      "border": true
-    }
-  ]
-}
-[/block]
+<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/490fb44d822f7c17f5b53189be8d10fafed18e5d7b98ec8ededfcf14b0692ca2-Screenshot_2025-02-18_at_1.20.51_PM.png" />
 
-
-In the highly unlikely event that _all_ supported 3rd-party LLM providers are suffering simultaneous outages, cascading behaviour has the risk of putting the LLM fallback system in an infinite loop by following the fallback configuration indefinitely. 
+In the highly unlikely event that *all* supported 3rd-party LLM providers are suffering simultaneous outages, cascading behaviour has the risk of putting the LLM fallback system in an infinite loop by following the fallback configuration indefinitely. 
 
 Fortunately, the LLM fallback system explicitly checks for this possibility and the fallback process will terminate if it detects that it is revisiting previously visited fallback models, preventing an infinite loop. Concretely, if we again consider a Prompt step contacting GPT-4o and assume that all LLM providers are down, the fallback system behaves as follows:
 
@@ -225,23 +118,7 @@ Fortunately, the LLM fallback system explicitly checks for this possibility and 
 
 In this worst-case scenario, fallback cannot help since there is nothing left to fallback to. The fallback system terminates and emits a debug trace indicating that an across-the-board outage has taken down the Voiceflow agent. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d56fb5932a6cc7a9d9e7f9c86535cbc02105a8ad65c5c32671a3ab4e6a87d682-Screenshot_2025-02-18_at_1.16.23_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "300px",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/d56fb5932a6cc7a9d9e7f9c86535cbc02105a8ad65c5c32671a3ab4e6a87d682-Screenshot_2025-02-18_at_1.16.23_PM.png" />
 
 <br />
 
@@ -371,6 +248,6 @@ Future improvements will extend the coverage of fallback to internal Voiceflow L
 
 # Definition of outage
 
-The LLM fallback system includes an **outage detection system (ODS)** which checks LLM responses for possible outage-related failure. The responses to LLM requests sent by _all_ Voiceflow agents are inspected this way (regardless if they have a paid plan with access to LLM fallback) and this data is aggregated to flag potential outages on an LLM.
+The LLM fallback system includes an **outage detection system (ODS)** which checks LLM responses for possible outage-related failure. The responses to LLM requests sent by *all* Voiceflow agents are inspected this way (regardless if they have a paid plan with access to LLM fallback) and this data is aggregated to flag potential outages on an LLM.
 
 The ODS defines an **outage** as an issue that disrupts the availability of a Voiceflow agent, which is caused by Voiceflow or 3rd-party LLM providers (OpenAI, Anthropic, Google, etc). An outage excludes anything that would be considered a **user error**, that is, a mistake caused by a Voiceflow user that causes their agent to behave incorrectly. Additionally, this definition excludes issues which are caused by non-LLM 3rd-party providers (e.g. AWS downtime).
