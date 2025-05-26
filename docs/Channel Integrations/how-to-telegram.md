@@ -14,23 +14,12 @@ next:
 
 In this guide, we are creating a Telegram bot that is connected directly with a Voiceflow CxD.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/236a926-telegram_gif.gif",
-        "telegram_gif.gif",
-        1464
-      ],
-      "caption": "Telegram bot"
-    }
-  ]
-}
-[/block]
+<Image title="telegram_gif.gif" alt={1464} src="https://files.readme.io/236a926-telegram_gif.gif">
+  Telegram bot
+</Image>
 
 > 🚧 Before you start
-> 
+>
 > 1. **Create a Voiceflow project**: you need to first build a chat project on [Voiceflow](https://creator.voiceflow.com/)
 > 2. **Find your Project API Key**: Follow these [instructions](https://developer.voiceflow.com/reference/project) to obtain your API key.
 > 3. [Template source code on Github](https://github.com/zslamkov/voiceflow_telegram)
@@ -43,20 +32,9 @@ If you open a chat with a BotFather, click on the “Start” button.
 
 We should create a new bot by clicking `/newbot` command. Next, you should enter any name for the bot. In this example, we named it VF Game.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/b38ea87-Screen_Shot_2022-03-15_at_9.54.16_AM.png",
-        "Screen Shot 2022-03-15 at 9.54.16 AM.png",
-        1077
-      ],
-      "caption": "BotFather"
-    }
-  ]
-}
-[/block]
+<Image title="Screen Shot 2022-03-15 at 9.54.16 AM.png" alt={1077} src="https://files.readme.io/b38ea87-Screen_Shot_2022-03-15_at_9.54.16_AM.png">
+  BotFather
+</Image>
 
 The Telegram setup is completed! Remember to add your Telegram token to your `.env` file in the property `BOT_TOKEN`
 
@@ -73,11 +51,9 @@ bot.hears('hi', (ctx) => ctx.reply('Hey there')) // listen and handle when user 
 bot.launch() // start
 ```
 
-
-
 ## Voiceflow setup
 
-First, create a new function that takes Telegraf `ctx`, `userID` and a `request` in as arguments:  
+First, create a new function that takes Telegraf `ctx`, `userID` and a `request` in as arguments:\
 `async function interact(ctx, chatID, request){}`
 
 Inside the function, make an API call to the Voiceflow `/interact` endpoint.
@@ -94,8 +70,6 @@ const response = await axios({
         }
     });
 ```
-
-
 
 Expect Voiceflow to return an array. Iterate over the array to map the various response types to an operation.
 
@@ -122,8 +96,6 @@ for (const trace of response.data) {
     }
 ```
 
-
-
 Everything is ready. Let's continue with our Telegrom bot code. Let's replace the start standard replay for this one, getting the correct replay from Voiceflow:
 
 ```javascript
@@ -132,8 +104,6 @@ bot.start(async (ctx) => {
     await interact(ctx, ctx.message.chat.id, {type: "launch"});
 });
 ```
-
-
 
 Then we replace the hi utterance for a regex like (.+). This means that the bot will hear for everything. All the text recieved we will pass directly to Voiceflow and the we mange the state of the conversation: if it is ended or if it is not ended yet:
 
@@ -147,27 +117,11 @@ bot.hears(ANY_WORD_REGEX, async (ctx) => {
     });
 ```
 
-
-
 ## Video Walkthrough
 
 In the video below, we cover the entire integration between Voiceflow and Telegram.
 
-
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FsRLLWcnLurg%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsRLLWcnLurg&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FsRLLWcnLurg%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=sRLLWcnLurg&feature=youtu.be",
-  "title": "How to build a Telegram bot using Voiceflow's Dialog Manager",
-  "favicon": "https://www.youtube.com/s/desktop/a1277e8a/img/favicon.ico",
-  "image": "https://i.ytimg.com/vi/sRLLWcnLurg/hqdefault.jpg",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/watch?v=sRLLWcnLurg&feature=youtu.be"
-}
-[/block]
-
-
-
+<Embed url="https://www.youtube.com/watch?v=sRLLWcnLurg&feature=youtu.be" title="How to build a Telegram bot using Voiceflow's Dialog Manager" favicon="https://www.youtube.com/s/desktop/a1277e8a/img/favicon.ico" image="https://i.ytimg.com/vi/sRLLWcnLurg/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=sRLLWcnLurg&feature=youtu.be" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FsRLLWcnLurg%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DsRLLWcnLurg%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FsRLLWcnLurg%252Fhqdefault.jpg%26key%3Df2aa6fc3595946d0afc3d76cbbd25dc3%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 ## Sample Code
 
@@ -234,13 +188,9 @@ process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
 ```
 
-
-
 # Voiceflow Community Challenge
 
 ***
-
-
 
 When your bot is part of a group chat, make sure that it can maintain context with the various users 
 
