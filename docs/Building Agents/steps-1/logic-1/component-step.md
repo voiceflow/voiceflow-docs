@@ -1,5 +1,5 @@
 ---
-title: Component step
+title: 'TODO: Component step'
 deprecated: false
 hidden: false
 metadata:
