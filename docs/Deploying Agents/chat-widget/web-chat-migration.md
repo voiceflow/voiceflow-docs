@@ -16,7 +16,7 @@ Welcome to our migration guide for Voiceflow's new webchat experience. This guid
 
 ## Key Changes and Timeline
 
-**The legacy webchat will be deprecated on June 15th, 2025. **To ensure uninterrupted service and access to new features, you should migrate to the new version before this date. The legacy version will continue to function normally during the migration period, giving you time to test and validate the new implementation.
+**The legacy webchat will be deprecated on June 15th, 2025.** To ensure uninterrupted service and access to new features, you should migrate to the new version before this date. The legacy version will continue to function normally during the migration period, giving you time to test and validate the new implementation.
 
 ## Updating Your Webchat Implementation
 
@@ -34,7 +34,7 @@ To get started:
 
 <br />
 
-_Example Old Snippet (Legacy Version):_
+*Example Old Snippet (Legacy Version):*
 
 ```javascript
 <script type="text/javascript">
@@ -52,7 +52,7 @@ _Example Old Snippet (Legacy Version):_
 </script>
 ```
 
-_New Snippet:_
+*New Snippet:*
 
 ```javascript
 <script type="text/javascript">
@@ -89,9 +89,9 @@ window.voiceflow.chat.load({
 
 Available persistence options:
 
-- `'localStorage'` (default): Conversations persist across page refreshes and browser sessions
-- `'sessionStorage'`: Conversations persist across page refreshes but reset when all tabs are closed
-- `'memory'`: Conversations reset on each page refresh or new tab
+* `'localStorage'` (default): Conversations persist across page refreshes and browser sessions
+* `'sessionStorage'`: Conversations persist across page refreshes but reset when all tabs are closed
+* `'memory'`: Conversations reset on each page refresh or new tab
 
 ### 3. Custom CSS and Styling
 
@@ -99,11 +99,11 @@ If you're using custom CSS to style your webchat, most of your existing styles s
 
 Important notes about CSS compatibility:
 
-- Most existing class names are preserved and still target the correct elements
-- Some components may have different internal structure or additional wrapper elements
-- Certain elements (like timestamps) have been removed or restructured
-- New features and components may use new class names
-- Some elements might require updated CSS selectors due to structural changes
+* Most existing class names are preserved and still target the correct elements
+* Some components may have different internal structure or additional wrapper elements
+* Certain elements (like timestamps) have been removed or restructured
+* New features and components may use new class names
+* Some elements might require updated CSS selectors due to structural changes
 
 We strongly recommend:
 
@@ -144,6 +144,6 @@ Before deploying to production, we recommend:
 
 If you encounter any issues during migration or have questions about specific features:
 
-- Join our community forum at <https://link.voiceflow.com/community>
+* Join our community forum at [https://link.voiceflow.com/community](https://link.voiceflow.com/community)
 
 We're here to ensure your migration is successful and to help you take advantage of all the new features and improvements in our latest webchat version.
