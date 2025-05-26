@@ -22,4 +22,4 @@ You can find the video [here](https://www.loom.com/share/02833f38e3a6461983a2d7c
 
 You can find our open source code and step-by-step instructions on using our Dialog Manager API with it below.
 
-<https://github.com/voiceflow-gallagan/langchain-local-knowledgebase/tree/c466af6c6818c31a5f7d131374cdd07a128182ad>
+[https://github.com/voiceflow-gallagan/langchain-local-knowledgebase/tree/c466af6c6818c31a5f7d131374cdd07a128182ad](https://github.com/voiceflow-gallagan/langchain-local-knowledgebase/tree/c466af6c6818c31a5f7d131374cdd07a128182ad)
