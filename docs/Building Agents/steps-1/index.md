@@ -21,8 +21,10 @@ Building an agent in an agentic way means giving the agent the autonomy to reaso
 
 Building an agent in a deterministic way means designing a fixed, rule-based flow where every user interaction follows a predefined path. This approach gives you full control over the conversation logic and is useful when consistency, structure, or compliance is required.
 
+We have four types of steps that allow you to build deterministic agents.
+
 <Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
+  <Card title="Talk steps" href="https://readme.com" icon="fa-home" target="_blank">
     Neque porro quisquam est qui dolorem ipsum quia
   </Card>
 
