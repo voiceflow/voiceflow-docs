@@ -24,19 +24,19 @@ Building an agent in a deterministic way means designing a fixed, rule-based flo
 We have four types of steps that allow you to build deterministic agents.
 
 <Cards columns={4}>
-  <Card title="Talk steps" href="https://readme.com" icon="fa-home" target="_blank">
-    Neque porro quisquam est qui dolorem ipsum quia
+  <Card title="Talk steps" href="https://readme.com" icon="fa-messages" target="_blank">
+    Send text, image, and interactive messages to the user.
   </Card>
 
-  <Card title="Second Card" icon="fa-user">
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  <Card title="Listen steps" icon="fa-ear">
+    Collect useful information from the user.
   </Card>
 
-  <Card title="Third Card" icon="fa-star">
-    > Ut enim ad minim veniam, quis nostrud ullamco
+  <Card title="Logic steps" icon="fa-gears">
+    Dynamically route the conversation based on user input.
   </Card>
 
-  <Card title="Fourth Card" icon="fa-question">
-    **Excepteur sint occaecat cupidatat non proident**
+  <Card title="Dev steps" icon="fa-code">
+    Add custom code, API calls, and more to your agent.
   </Card>
 </Cards>
