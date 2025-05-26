@@ -14,7 +14,7 @@ next:
       slug: step-3-deploy-assistant
       title: 'Step 3: Deploy Assistant'
 ---
-Each <<glossary:agent>> in Voiceflow has its own API key. You will need this if you are using our APIs to launch to production. You can skip this step if you're using our built in quick launch for Web Chat.
+Each <Glossary>agent</Glossary> in Voiceflow has its own API key. You will need this if you are using our APIs to launch to production. You can skip this step if you're using our built in quick launch for Web Chat.
 
 ## **Agent API Keys**
 
@@ -28,17 +28,4 @@ To access the API key for a specific agent:
 2. Select on the Integrations tab (shortcut: 3)
 3. Copy the API Key.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/81d9a62-Screen_Shot_2024-03-10_at_8.25.43_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/81d9a62-Screen_Shot_2024-03-10_at_8.25.43_PM.png" />
