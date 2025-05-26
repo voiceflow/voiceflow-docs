@@ -1,5 +1,5 @@
 ---
-title: KB Search step
+title: KB search step
 excerpt: ''
 deprecated: false
 hidden: false
