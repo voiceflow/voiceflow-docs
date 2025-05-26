@@ -12,7 +12,7 @@ next:
 ---
 Actions let you easily do things other than going down a path on the exit of step. This can include setting variables, going to a trigger or even jumping back to other blocks without having to add an arrow. They can only be added from a pre-existing step.
 
-**Note:** Actions execute small behaviors _in_ your agent, and are different from [Custom Actions](https://developer.voiceflow.com/v2.0/docs/custom-actions) that send a customizable trace to your agent for displaying. Actions are useful for cleaning up your agent's logic, and custom actions are mainly for special deployments and for developers.
+**Note:** Actions execute small behaviors *in* your agent, and are different from [Custom Actions](https://developer.voiceflow.com/v2.0/docs/custom-actions) that send a customizable trace to your agent for displaying. Actions are useful for cleaning up your agent's logic, and custom actions are mainly for special deployments and for developers.
 
 Most of their behavior can be replicated with either path arrows or just adding steps, but action chips can make it easier to understand simple actions rather than tracing through blocks.
 
