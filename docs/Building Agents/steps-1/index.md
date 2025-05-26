@@ -24,7 +24,7 @@ Building an agent in a deterministic way means designing a fixed, rule-based flo
 We have four types of steps that allow you to build deterministic agents.
 
 <Cards columns={4}>
-  <Card title="Talk steps" href="https://docs.voiceflow.com/docs/talk#/" icon="fa-messages" target="_blank">
+  <Card title="Talk steps" href="https://docs.voiceflow.com/docs/talk#/" icon="fa-messages">
     Send text, image, and interactive messages to the user.
   </Card>
 
