@@ -34,11 +34,11 @@ The LLM-based intent classifier introduces a novel hybrid methodology, blending 
 
 ## Key Features
 
-- **Efficient Agent Building**: Unlike traditional models that require extensive datasets for training, our approach necessitates only a handful of sample utterances and an intent description. This streamlined process reduces the workload and accelerates the development of sophisticated conversational agents, enabling teams to focus on refining interactions rather than compiling large datasets.
-- **Performance Enhancement**: Leveraging LLMs significantly improves intent recognition accuracy, enabling the system to understand and classify a wide array of user intents with minimal ambiguity. This results in more relevant and accurate responses, enhancing user interaction quality.
-- **Predictability Through Hybrid Approach**: By combining the strengths of LLMs with traditional NLU techniques, this feature offers a balanced and predictable approach to intent classification. This hybrid model ensures reliability in classification while embracing the advanced capabilities of LLMs for context understanding and ambiguity resolution.
-- **Customization Flexibility**: The system is designed with customization at its core. Developers can modify the prompt wrapper code to perfectly align with their specific use case, allowing for a tailored conversational experience that meets the unique needs of their application.
+* **Efficient Agent Building**: Unlike traditional models that require extensive datasets for training, our approach necessitates only a handful of sample utterances and an intent description. This streamlined process reduces the workload and accelerates the development of sophisticated conversational agents, enabling teams to focus on refining interactions rather than compiling large datasets.
+* **Performance Enhancement**: Leveraging LLMs significantly improves intent recognition accuracy, enabling the system to understand and classify a wide array of user intents with minimal ambiguity. This results in more relevant and accurate responses, enhancing user interaction quality.
+* **Predictability Through Hybrid Approach**: By combining the strengths of LLMs with traditional NLU techniques, this feature offers a balanced and predictable approach to intent classification. This hybrid model ensures reliability in classification while embracing the advanced capabilities of LLMs for context understanding and ambiguity resolution.
+* **Customization Flexibility**: The system is designed with customization at its core. Developers can modify the prompt wrapper code to perfectly align with their specific use case, allowing for a tailored conversational experience that meets the unique needs of their application.
 
 > 📘 Example template
-> 
-> Download our Banking Agent template [here](https://drive.google.com/uc?export=download&id=1hNdxZ4KSiBWVO0R8l7vCNVFmsQsiLKG_) to start testing immediately.
+>
+> Download our Banking Agent template [here](https://drive.google.com/uc?export=download\&id=1hNdxZ4KSiBWVO0R8l7vCNVFmsQsiLKG_) to start testing immediately.
