@@ -29,8 +29,6 @@ For this project, as we want to use the **Voice-Forward feature**, we are going 
 
 ***
 
-
-
 ## Step 1 | Create an Alexa project
 
 The first thing we want to setup is our **Alexa project**. We don’t need to design it for now, we only want to upload it to **Alexa** to get access to it within the **Alexa Developer Console** for the next step.
@@ -93,29 +91,25 @@ Add the 3 URLs from the **Alexa Developer Console** and click on **Save**.
 
 To fill all the information needed here you can refer to the **Configure an Authorization Code Grant documentation** at the bottom of this article but to help you with this process, here is what you will need to do to setup the **Login with Amazon account linking**:
 
-_Your Web Authorization URI_:
+*Your Web Authorization URI*:
 
 ```bash
 https://www.amazon.com/ap/oa
 ```
 
-
-
-_Access Token URI_:
+*Access Token URI*:
 
 ```bash
 https://api.amazon.com/auth/o2/token
 ```
 
-
-
-_Your Client ID & Client Secret_
+*Your Client ID & Client Secret*
 
 You can get this information from the **Login with Amazon** page:
 
 ![](https://files.readme.io/693bc52-CleanShot_2022-09-09_at_14.19.37.png)
 
-_Your Authentication Scheme_:
+*Your Authentication Scheme*:
 
 ```bash
 HTTP Basic
@@ -127,8 +121,6 @@ Scope:
 profile
 postal_code
 ```
-
-
 
 ![](https://files.readme.io/cd22ac1-CleanShot_2022-09-09_at_14.16.16.png)
 
@@ -150,37 +142,31 @@ And **activate the following permissions**:
 
 On the project, let’s add a simple Welcome **Speak step** followed by a **Set step**.
 
-In the **Set step**, we are going to create and populate the {**apiEndpoint**} and {**consentToken**} with some data form the **\_system** variable.
+In the **Set step**, we are going to create and populate the \{**apiEndpoint**} and \{**consentToken**} with some data form the **\_system** variable.
 
 In our case, we want the **access token** returned by the **account linking**, the **api endpoint** to use in our API call as well as the **consent token** to authorize those calls.
 
 ![](https://files.readme.io/c136480-CleanShot_2022-09-09_at_14.36.53.png)
 
-{**apiEndpoint**}
+\{**apiEndpoint**}
 
 ```bash
 _system.apiEndpoint || 0
 ```
 
-
-
-{**consentToken**}
+\{**consentToken**}
 
 ```bash
 _system.user.permissions.consentToken || 0
 ```
 
-
-
-{**accessToken**}
+\{**accessToken**}
 
 ```bash
 _system.user.accessToken || 0
 ```
 
-
-
-The following step in block is a **Condition** to check the {**accessToken**} variable value:
+The following step in block is a **Condition** to check the \{**accessToken**} variable value:
 
 ![](https://files.readme.io/24390e2-CleanShot_2022-09-09_at_14.31.53.png)
 
@@ -205,8 +191,6 @@ Drag a **Directive step** on the canvas and populate it with the following code:
 }
 ```
 
-
-
 If you want to learn more about this directive, do not hesitate to check the **Voice-Forward Account Linking link in the Documentation section** of the article.
 
 Thanks to that directive, Alexa will handle most of the process here:
@@ -225,8 +209,6 @@ _response = {
 }
 ```
 
-
-
 **This will allow the skill to keep listening for any event**.
 
 We are looking for two events here, the **Task.CompleteTask** and the **SessionResumedRequest** so let’s create two **Event steps** to handle that.
@@ -243,8 +225,6 @@ Set the Event Request Name to:
 Task.CompleteTask
 ```
 
-
-
 We are not really using any data from it so you can ignore the Request Mapping part.
 
 The **SessionResumedRequest** is the one we are looking for to handle the account linking process.
@@ -257,36 +237,32 @@ Set the Event Request Name to:
 SessionResumedRequest
 ```
 
-
-
 And the Request Mapping as follow:
 
 ```bash
 data.cause.result.status > {status}
 ```
 
-
-
-Now that we have the **Event** info mapped to our {**status**} variable, we can use it in a **Conditions** **step** to redirect the user.
+Now that we have the **Event** info mapped to our \{**status**} variable, we can use it in a **Conditions** **step** to redirect the user.
 
 ![](https://files.readme.io/7640bee-CleanShot_2022-09-09_at_14.59.52.png)
 
 ![](https://files.readme.io/e854e15-CleanShot_2022-09-09_at_14.59.29.png)
 
-Again, you can find more details in the documentation at the bottom of the article but to summarize, if the {**status**} variable value is:
+Again, you can find more details in the documentation at the bottom of the article but to summarize, if the \{**status**} variable value is:
 
-> **USER_REQUIREMENTS_NOT_MET** > We want to generate an Account Linking card and allow the user to authenticate within the Alexa app.
+> **USER\_REQUIREMENTS\_NOT\_MET** > We want to generate an Account Linking card and allow the user to authenticate within the Alexa app.
 >
 > **LINKED** > The user successfully link their account
 >
 > **DENIED** > The user says “No” to the prompt
 
-- The **_DENIED_** port doesn’t need to be linked to anything, if the user refuse the link their account, Alexa will say “Okay, you can link your account at any time by going to the skills section of your Alexa app.” and we can exit the skill.
-- The **_Else_** port will redirect the user to the Javascript step to let the session open.
-- The **_LINKED_** port will follow the pass to tell the user that their account has been linked and the 2 API calls we will make to retrieve user’s info.
-- The **_USER_REQUIREMENTS_NOT_MET_** port is linked to another Directive step to generate the Account Linking card and exit the skill.
+* The ***DENIED*** port doesn’t need to be linked to anything, if the user refuse the link their account, Alexa will say “Okay, you can link your account at any time by going to the skills section of your Alexa app.” and we can exit the skill.
+* The ***Else*** port will redirect the user to the Javascript step to let the session open.
+* The ***LINKED*** port will follow the pass to tell the user that their account has been linked and the 2 API calls we will make to retrieve user’s info.
+* The ***USER\_REQUIREMENTS\_NOT\_MET*** port is linked to another Directive step to generate the Account Linking card and exit the skill.
 
-Let’s create the **Account Linking card** with a **Directive step** so we can link the **_USER_REQUIREMENTS_NOT_MET_** port to it.
+Let’s create the **Account Linking card** with a **Directive step** so we can link the ***USER\_REQUIREMENTS\_NOT\_MET*** port to it.
 
 Drag a **Directive step** and paste the following code in it:
 
@@ -307,9 +283,7 @@ Drag a **Directive step** and paste the following code in it:
 }
 ```
 
-
-
-Then link it to the **_USER_REQUIREMENTS_NOT_MET_** port.
+Then link it to the ***USER\_REQUIREMENTS\_NOT\_MET*** port.
 
 ![](https://files.readme.io/530e79f-CleanShot_2022-09-09_at_15.12.37.png)
 
@@ -317,7 +291,7 @@ While we are here, let’s also link the **Else** **port** to our **Javascript**
 
 ![](https://files.readme.io/899b19e-CleanShot_2022-09-09_at_15.13.15.png)
 
-For the **LINKED** port, we are going to create the ‘**Access**’ **block** with a **Speak** **step** for the confirmation message, 2 **API steps** to retrieve user’s info (_name and email_) and a final **Speak step** to debug the info.
+For the **LINKED** port, we are going to create the ‘**Access**’ **block** with a **Speak** **step** for the confirmation message, 2 **API steps** to retrieve user’s info (*name and email*) and a final **Speak step** to debug the info.
 
 It will look to something similar to this:
 
@@ -333,8 +307,6 @@ Headers > Authorization: Bearer {consentToken}
 Mapping > response to {name}
 ```
 
-
-
 ![](https://files.readme.io/4b856ae-CleanShot_2022-09-09_at_15.21.08.png)
 
 The second **API step** will get the user’s email by making the following request:
@@ -345,11 +317,9 @@ Headers > Authorization: Bearer {consentToken}
 Mapping > response to {email}
 ```
 
-
-
 ![](https://files.readme.io/827ad76-CleanShot_2022-09-09_at_15.24.10.png)
 
-In the last **Speak step** we are simply debugging the {**name**} and {**email**} variables values.
+In the last **Speak step** we are simply debugging the \{**name**} and \{**email**} variables values.
 
 If you’ve followed this guide so far, this is how your project should look like.
 
@@ -363,8 +333,6 @@ If you’ve followed this guide so far, this is how your project should look lik
 </aside>
 
 ***
-
-
 
 ### Information
 
