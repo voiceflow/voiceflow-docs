@@ -75,8 +75,6 @@ Then the client app will receive a list of traces in the response as usual, but 
 ]
 ```
 
-
-
 Your client code might extract this last trace, detect that it is a custom "Pay Credit Card" trace, and then perform some logic such as calling the Stripe API to charge your user's credit card. 
 
 ```js
@@ -105,8 +103,6 @@ if (customActionTrace.type === "Pay Credit Card") {
 }
 ```
 
-
-
 Finally, the client application should send an appropriate response based on the results of the logic in step 3. For example, if the Stripe API reported that the user's credit card was successfuly charged, we might send back the following:
 
 ```json
@@ -114,8 +110,6 @@ Finally, the client application should send an appropriate response based on the
   "action": { "type": "success" }
 }
 ```
-
-
 
 where a value of `"success"` for `type` might indicate that your Voiceflow diagram should execute the logic corresponding to a successful credit card payment. Your diagram might then print a confirmation message such as "your order was successful!".
 
