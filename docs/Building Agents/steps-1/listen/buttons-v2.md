@@ -1,5 +1,5 @@
 ---
-title: Buttons
+title: Button step
 excerpt: ''
 deprecated: false
 hidden: false
