@@ -1,5 +1,5 @@
 ---
-title: Capture
+title: Capture step
 excerpt: ''
 deprecated: false
 hidden: false
