@@ -16,7 +16,7 @@ next:
   description: ''
 ---
 > 🚧 Testing APIs are currently under Public Preview
-> 
+>
 > To add your project to the Public Preview, contact your customer success manager, or contact the Voiceflow team via the discord channel.
 
 ## Example Requests
@@ -103,7 +103,7 @@ If you have specific transcripts you'd like to test, supply them via the `transc
             "matchField": "exact"
           }
         }
-      ]
+      ],
       [
         {
           "role": "user",
@@ -114,7 +114,7 @@ If you have specific transcripts you'd like to test, supply them via the `transc
           "validationOptions": {
             "text": "The Denver Nuggets won the NBA championship in 2023."
           }
-        },
+        }
       ]
     ]
   }
