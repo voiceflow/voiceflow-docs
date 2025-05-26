@@ -24,9 +24,9 @@ next:
 Voiceflow's Web Chat can be used together with any API-enabled live agent platform to create a seamless handoff experience between your Voiceflow assistant and a support agent.
 
 > 🚧 Live Agent Platform Requirements
-> 
+>
 > In order to integrate effectively, make sure your live agent platform has the following features:
-> 
+>
 > 1. a documented API (or an SDK) that can be used to:
 >    1. create a new conversation with an agent.
 >    2. add a new user-sent message to an existing conversation.
@@ -40,68 +40,30 @@ The solution outlined in this guide requires an intermediary server that will ma
 
 What we will cover:
 
-- What the user experience might look like.
-- Overview of the example project's key components.
-- What you need to get started.
-- Configuration guidelines for Voiceflow, Intercom, and your clone of the demo-react-chat project.
+* What the user experience might look like.
+* Overview of the example project's key components.
+* What you need to get started.
+* Configuration guidelines for Voiceflow, Intercom, and your clone of the demo-react-chat project.
 
 > 📘 Watch the following video tutorial for a walkthrough of the demo code:
 
-
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Faee69aOnjSw%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Daee69aOnjSw&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Faee69aOnjSw%2Fhqdefault.jpg&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=youtube\" width=\"100%\" style=\"aspect-ratio: 640 / 400\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=aee69aOnjSw",
-  "title": "How to build a live chat handoff from Voiceflow to Intercom",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/aee69aOnjSw/hqdefault.jpg",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/watch?v=aee69aOnjSw",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=aee69aOnjSw" title="How to build a live chat handoff from Voiceflow to Intercom" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/aee69aOnjSw/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=aee69aOnjSw" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Faee69aOnjSw%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Daee69aOnjSw%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Faee69aOnjSw%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22100%25%22%20style%3D%22aspect-ratio%3A%20640%20%2F%20400%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 # User experience demo
 
 When a customer reaches a point where a live agent's support is needed, you can automatically transition them from interacting with your Voiceflow assistant to a live agent using Intercom.
 
-
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.loom.com%2Fembed%2F86049b8284344dfcb5dc3722038ccc4a&display_name=Loom&url=https%3A%2F%2Fwww.loom.com%2Fshare%2F86049b8284344dfcb5dc3722038ccc4a%3Fsid%3De1fc05db-331a-4fb3-ab70-78e2e75e40a1&image=https%3A%2F%2Fcdn.loom.com%2Fsessions%2Fthumbnails%2F86049b8284344dfcb5dc3722038ccc4a-00001.gif&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=loom\" width=\"100%\" style=\"aspect-ratio: 640 / 400\" scrolling=\"no\" title=\"Loom embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.loom.com/share/86049b8284344dfcb5dc3722038ccc4a?sid=e1fc05db-331a-4fb3-ab70-78e2e75e40a1",
-  "title": "Demo - Voiceflow to Intercom Live Chat Handoff",
-  "image": "https://cdn.loom.com/sessions/thumbnails/86049b8284344dfcb5dc3722038ccc4a-00001.gif",
-  "provider": "loom.com",
-  "href": "https://www.loom.com/share/86049b8284344dfcb5dc3722038ccc4a?sid=e1fc05db-331a-4fb3-ab70-78e2e75e40a1",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.loom.com/share/86049b8284344dfcb5dc3722038ccc4a?sid=e1fc05db-331a-4fb3-ab70-78e2e75e40a1" title="Demo - Voiceflow to Intercom Live Chat Handoff" image="https://cdn.loom.com/sessions/thumbnails/86049b8284344dfcb5dc3722038ccc4a-00001.gif" provider="loom.com" href="https://www.loom.com/share/86049b8284344dfcb5dc3722038ccc4a?sid=e1fc05db-331a-4fb3-ab70-78e2e75e40a1" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.loom.com%252Fembed%252F86049b8284344dfcb5dc3722038ccc4a%26display_name%3DLoom%26url%3Dhttps%253A%252F%252Fwww.loom.com%252Fshare%252F86049b8284344dfcb5dc3722038ccc4a%253Fsid%253De1fc05db-331a-4fb3-ab70-78e2e75e40a1%26image%3Dhttps%253A%252F%252Fcdn.loom.com%252Fsessions%252Fthumbnails%252F86049b8284344dfcb5dc3722038ccc4a-00001.gif%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dloom%22%20width%3D%22100%25%22%20style%3D%22aspect-ratio%3A%20640%20%2F%20400%22%20scrolling%3D%22no%22%20title%3D%22Loom%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 # Key solution components
 
 Following are key components of the example project's solution:
 
-- **[@voiceflow/react-chat](https://www.npmjs.com/package/@voiceflow/react-chat)** - a library available on `npm` that contains a ReactJS component library. This library can be used to build a custom Voiceflow Web Chat experience. These components can be viewed in our storybook at any time.
-- **webchat-server** - a simple NodeJS server that maintains a WebSocket connection with the front-end. The server makes requests to the target live agent platform.
-- **webchat-app** - a simple ReactJS web app that contains our custom Voiceflow Web Chat with live agent integration.
+* **[@voiceflow/react-chat](https://www.npmjs.com/package/@voiceflow/react-chat)** - a library available on `npm` that contains a ReactJS component library. This library can be used to build a custom Voiceflow Web Chat experience. These components can be viewed in our storybook at any time.
+* **webchat-server** - a simple NodeJS server that maintains a WebSocket connection with the front-end. The server makes requests to the target live agent platform.
+* **webchat-app** - a simple ReactJS web app that contains our custom Voiceflow Web Chat with live agent integration.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2859c4e-live-agent-handoff-simple-architecture-diagram.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/2859c4e-live-agent-handoff-simple-architecture-diagram.png" />
 
 # What you need to get started
 
@@ -138,25 +100,12 @@ Once the example project is imported:
 4. Copy the project's [Dialog Manager API Key](ref:project).
 
 > 📘 The `talk_to_agent` Custom Action's "Stop on action" toggle must remain enabled.
-> 
+>
 > When this Step is reached, the conversation with the assistant will stop. This allows your custom app to initiate a conversation with the live chat platform.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f3e8df5-Screenshot_2023-08-21_at_10.43.21_AM.png",
-        "",
-        "Custom Action step with \"Stop on action\" enabled."
-      ],
-      "align": "center",
-      "border": true,
-      "caption": "Custom Action step with \"Stop on action\" enabled."
-    }
-  ]
-}
-[/block]
+<Image alt="Custom Action step with &#x22;Stop on action&#x22; enabled." align="center" border={true} src="https://files.readme.io/f3e8df5-Screenshot_2023-08-21_at_10.43.21_AM.png">
+  Custom Action step with "Stop on action" enabled.
+</Image>
 
 ## Create an Intercom app and obtain an access token
 
@@ -196,7 +145,7 @@ In your Intercom app's Webhooks tab:
 
 In your demo-react-chat project:
 
-- Under the main demo-react-chat directory, run `yarn dev`. Your demo app will be available locally at `http://127.0.0.1:3006`.
+* Under the main demo-react-chat directory, run `yarn dev`. Your demo app will be available locally at `http://127.0.0.1:3006`.
 
 In your browser with your demo app open:
 
