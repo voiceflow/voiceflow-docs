@@ -38,10 +38,10 @@ If you are on an enterprise account, please contact your account representative 
 
 Each plan has a different free token quota. This quota represents the free monthly tokens that are included with your account. These reset each month.
 
-- Starter Plan: 100,000 Tokens
-- Pro Plan: 10,000,000 Tokens
-- Teams: 30,000,000 Tokens
-- Enterprise: Custom
+* Starter Plan: 100,000 Tokens
+* Pro Plan: 10,000,000 Tokens
+* Teams: 30,000,000 Tokens
+* Enterprise: Custom
 
 Additional tokens purchased are in addition to your monthly quota. They are a one time purchase and do not expire or reset. You will see them added to your monthly token quota as in the example below.
 
@@ -67,22 +67,7 @@ No, you cannot purchase more tokens on a free plan. You must upgrade to a paid p
 
 A token represents a chunk of a word and is used by Large Language Models (LLMs) like GPT 4 to encode words. On average, tokens represent about three letters. It's not an easy-to-understand process, and is defined by encoding models, but if you want to play around with what token to character conversions are you can use [this OpenAI website](https://platform.openai.com/tokenizer) (token encodings will differ between providers).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9c4b587-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="400px" src="https://files.readme.io/9c4b587-image.png" />
 
 Voiceflow is billed by our LLM providers (OpenAI, Anthropic, Google, etc...) by the tokens at their own prices. We then apply a multiplication factor based on how much more expensive their per token rates are than the rates for the Voiceflow tokens, since no matter which model you're using, it pulls from the same Voiceflow token pool.
 
@@ -96,18 +81,6 @@ It is important to note, that the "Max Token" slider on the AI steps (shown belo
 
 Depending on the LLM provider and the cost of each model, there's an associated token multiplier, which represents how “expensive” a model is to use. We're updating token multipliers regularly, so check from inside the Voiceflow platform for the most up-to-date multipliers. You can see them anywhere you can pick a model, like in the Set AI step.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/d87f3874396a8937e42ea8b34900a01c27678bf1773f3e8088e416331a22cc83-image.png",
-        null,
-        "These are the multipliers for some of the models included in Voiceflow as of March 5th, 2025. For the full list of models, look in the product. Up to date models from OpenAI, Anthropic, Google, Deepseek, and Llama are available."
-      ],
-      "align": "center",
-      "caption": "These are the multipliers for some of the models included in Voiceflow as of March 5th, 2025. For the full list of models, look in the product. Up to date models from OpenAI, Anthropic, Google, Deepseek, and Llama are available."
-    }
-  ]
-}
-[/block]
+<Image alt="These are the multipliers for some of the models included in Voiceflow as of March 5th, 2025. For the full list of models, look in the product. Up to date models from OpenAI, Anthropic, Google, Deepseek, and Llama are available." align="center" src="https://files.readme.io/d87f3874396a8937e42ea8b34900a01c27678bf1773f3e8088e416331a22cc83-image.png">
+  These are the multipliers for some of the models included in Voiceflow as of March 5th, 2025. For the full list of models, look in the product. Up to date models from OpenAI, Anthropic, Google, Deepseek, and Llama are available.
+</Image>
