@@ -20,11 +20,11 @@ Voiceflow offers a suite of APIs to launch and host AI Agents, as well as build 
 
 ## Popular APIs
 
-- **[Dialog Manager API](https://developer.voiceflow.com/reference/overview): **launch your Agent with hosted dialog state management and build custom interfaces or integrations
-- **[Knowledge Management API](https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload):** manage Knowledge Base data automatically with a CRUD API
-- **[Knowledge Query API](https://developer.voiceflow.com/reference/post_knowledge-base-query):** query your managed Knowledge Base data outside your agent
-- **[Analytics API](https://developer.voiceflow.com/reference/querypubliccontroller_queryusage):** retrieve Agent usage and analytics data
-- **[Transcripts API](https://developer.voiceflow.com/reference/fetchtranscripts)** save and retrieve end-user conversation transcripts
+* **[Dialog Manager API](https://developer.voiceflow.com/reference/overview):** launch your Agent with hosted dialog state management and build custom interfaces or integrations
+* **[Knowledge Management API](https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload):** manage Knowledge Base data automatically with a CRUD API
+* **[Knowledge Query API](https://developer.voiceflow.com/reference/post_knowledge-base-query):** query your managed Knowledge Base data outside your agent
+* **[Analytics API](https://developer.voiceflow.com/reference/querypubliccontroller_queryusage):** retrieve Agent usage and analytics data
+* **[Transcripts API](https://developer.voiceflow.com/reference/fetchtranscripts)** save and retrieve end-user conversation transcripts
 
 These APIs can be used together with Voiceflow's Agent building platform to create custom solutions.
 
@@ -42,4 +42,4 @@ Using our Dialog API directly gives you the flexibility to launch to any channel
 
 ## Discord
 
-_Join our discord [here](https://discord.gg/JXRbEv7nD2) to get help and see what people are building!_👾
+*Join our discord[here](https://discord.gg/JXRbEv7nD2) to get help and see what people are building!*&#xD83D;�
