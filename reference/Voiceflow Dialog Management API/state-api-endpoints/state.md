@@ -25,15 +25,15 @@ We will cover each property below, as well as an overview of the Voiceflow conte
 
 The stack is an array of flows that are currently active in the conversation. Each flow contains:
 
-- A `programID`: the ID of the flow, which can be found in the URL of the address bar `<https://creator.voiceflow.com/project/{versionID}/canvas/{**programID**>)`
-- `nodeID`: current block this flow is on
-- `variables`: flow-scoped variables
-- `storage`: internal flow parameters for runtime
-- `commands`
+* A `programID`: the ID of the flow, which can be found in the URL of the address bar `<https://creator.voiceflow.com/project/{versionID}/canvas/{**programID**>)`
+* `nodeID`: current block this flow is on
+* `variables`: flow-scoped variables
+* `storage`: internal flow parameters for runtime
+* `commands`
 
 In the example below, you can see that there are three flows available on the stack (`620e669eac2f70001cf9d85a`, `620e669eac2f70001cf9d85b` and `620e669eac2f70001cf9d85c`) and we are currently sitting on flow `620e669eac2f70001cf9d85c`, as denoted by the `nodeID` pointing to a block within this flow.
 
-**Note:** the `programID` of the first flow in the stack is always the `versionID` of the <<glossary:Agent>>.
+**Note:** the `programID` of the first flow in the stack is always the `versionID` of the <Glossary>Agent</Glossary>.
 
 **Example stack**
 
@@ -137,14 +137,4 @@ The difference between **Entities** and **Variables** is how they are assigned v
 
 In this video, we'll explain Voiceflow's entire Context Model in more detail.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FIUp1Kz-2xVY%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DIUp1Kz-2xVY&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FIUp1Kz-2xVY%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=IUp1Kz-2xVY&ab_channel=TylerHan",
-  "title": "Voiceflow Context Model - Intents, Commands, and Flows",
-  "favicon": "https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico",
-  "image": "https://i.ytimg.com/vi/IUp1Kz-2xVY/hqdefault.jpg",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/watch?v=IUp1Kz-2xVY&ab_channel=TylerHan"
-}
-[/block]
+<Embed url="https://www.youtube.com/watch?v=IUp1Kz-2xVY&ab_channel=TylerHan" title="Voiceflow Context Model - Intents, Commands, and Flows" favicon="https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico" image="https://i.ytimg.com/vi/IUp1Kz-2xVY/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=IUp1Kz-2xVY&ab_channel=TylerHan" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FIUp1Kz-2xVY%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DIUp1Kz-2xVY%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FIUp1Kz-2xVY%252Fhqdefault.jpg%26key%3Df2aa6fc3595946d0afc3d76cbbd25dc3%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
