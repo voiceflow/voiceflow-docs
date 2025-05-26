@@ -15,22 +15,22 @@ next:
 #### Use Voiceflow Dialog Manager API to run a Whatsapp assistant
 
 > 🚧 Before you start
-> 
-> - [Clone project from Github](https://github.com/voiceflow/example-integration-whatsapp)
-> - [Whatsapp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/)
-> - Install ngrok, more details here: <https://ngrok.com/download>
-> - [Voiceflow](https://www.voiceflow.com) **Chat Assistant** project
+>
+> * [Clone project from Github](https://github.com/voiceflow/example-integration-whatsapp)
+> * [Whatsapp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/)
+> * Install ngrok, more details here: [https://ngrok.com/download](https://ngrok.com/download)
+> * [Voiceflow](https://www.voiceflow.com) **Chat Assistant** project
 
 # Create an app on Facebook Developers portal
 
-Follow the Get started guide here to create your app and get your WhatsApp token:  
-<https://developers.facebook.com/docs/whatsapp/cloud-api/get-started>
+Follow the Get started guide here to create your app and get your WhatsApp token:\
+[https://developers.facebook.com/docs/whatsapp/cloud-api/get-started](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started)
 
 ![](https://files.readme.io/23aa0c2-get-started_1.png)
 
 ## The App
 
-Once registered as a dev, go to <https://developers.facebook.com/apps/>
+Once registered as a dev, go to [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/)
 
 Create a new app by clicking on **Create App**.
 
@@ -72,8 +72,8 @@ Save it as we will need it in the new step.
 
 # Webhook
 
-Before going further, let's start populating our `.env` file with our token.  
-In the root of the app directory, create the `.env` file.  
+Before going further, let's start populating our `.env` file with our token.\
+In the root of the app directory, create the `.env` file.\
 We are going to populate this file with the needed info for the WhatsApp webhook as well as the Voiceflow project.
 
 ```
@@ -83,8 +83,6 @@ VF_PROJECT_API = ''
 VF_PROJECT_VERSION = 'production'
 PORT = '3000'
 ```
-
-
 
 For now, you can paste the token for the `WHATSAPP_TOKEN` variable, you can use anything for the `VERIFY_TOKEN` or leave it to 'voiceflow'.
 
@@ -104,7 +102,7 @@ This is where you will need to set your **webhook's callback URL** and your **Ve
 
 ![](https://files.readme.io/9e4f8b2-edit-webhook-2.png)
 
-For the **Verify token**, put what you've set in your `.env` file (**voiceflow** by default).  
+For the **Verify token**, put what you've set in your `.env` file (**voiceflow** by default).\
 For the Callback URL, we will need to start the app.
 
 From the root of the directory, start the app with `npm start`.
@@ -157,7 +155,7 @@ In Voiceflow Creator, open a Chat project and go to the Integrations:
 
 On the Integrations page, you want to copy the API key
 
-Now, paste it in your .env file for the **VF_PROJECT_API** variable:  
+Now, paste it in your .env file for the **VF\_PROJECT\_API** variable:\
 `VF_PROJECT_API='VF.DM.62xxxxxxxxxxxxxxxxxxxxxxx`
 
 Back on Voiceflow Creator, go to the **Designer** view and click on the **Publish** button:
@@ -180,6 +178,6 @@ That's it, start interacting on WhatsApp with your Voiceflow project.
 
 ### Documentation
 
-Cloud API: <https://developers.facebook.com/docs/whatsapp/cloud-api>  
-Voiceflow Dialog Manager API: <https://developer.voiceflow.com/reference>  
-Project Versioning in Voiceflow: <https://www.voiceflow.com/docs/documentation-project-versioning>
+Cloud API: [https://developers.facebook.com/docs/whatsapp/cloud-api](https://developers.facebook.com/docs/whatsapp/cloud-api)\
+Voiceflow Dialog Manager API: [https://developer.voiceflow.com/reference](https://developer.voiceflow.com/reference)\
+Project Versioning in Voiceflow: [https://www.voiceflow.com/docs/documentation-project-versioning](https://www.voiceflow.com/docs/documentation-project-versioning)
