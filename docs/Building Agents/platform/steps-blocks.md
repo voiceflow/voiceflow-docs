@@ -28,15 +28,15 @@ Designing on Voiceflow starts at the step-level, which includes adding, editing 
 
 **Steps** are located in the floating banner and represent different pieces of functionality for building your conversational experience. Steps are categorized under:
 
-- Event: represents a starting point for a conversational flow, usually triggered by an intent
-- AI: steps that leverage generative AI
-- Talk: allows the conversational assistant to convey information to the user through different mediums
-- Listen: includes different types of user inputs
-- Logic: controls assistant decision-making between different conversational flows and stores relevant data
-- Dev: enables both executable and mocked code snippets for complex development needs
-- Library: stores block [templates](https://developer.voiceflow.com/v2.0/docs/template-library) for easily replicable blocks and steps on the canvas
+* Event: represents a starting point for a conversational flow, usually triggered by an intent
+* AI: steps that leverage generative AI
+* Talk: allows the conversational assistant to convey information to the user through different mediums
+* Listen: includes different types of user inputs
+* Logic: controls assistant decision-making between different conversational flows and stores relevant data
+* Dev: enables both executable and mocked code snippets for complex development needs
+* Library: stores block [templates](https://developer.voiceflow.com/v2.0/docs/template-library) for easily replicable blocks and steps on the canvas
 
-_Tip: Sometimes, you will only visually see Talk, Listen and Logic appear in this sidebar, but you can hover over this sidebar and click the down arrowhead symbol (⌄) to have Developer and Library also appear._
+*Tip: Sometimes, you will only visually see Talk, Listen and Logic appear in this sidebar, but you can hover over this sidebar and click the down arrowhead symbol (⌄) to have Developer and Library also appear.*
 
 When creating an assistant, you will notice that the start step appears by default. This is where your conversation will always start from. This step cannot be deleted, but you can rename and change its color to suit your design workflow & organizational needs.
 
@@ -55,8 +55,8 @@ As an example, a support chat assistant might:
    2. “Check refund status” button path
       1. It is connected to a text step that asks the user to provide their refund request identification number: “Please enter the ID number of your refund request.”
       2. A capture step is then used to capture the entire user response and apply it to a variable.
-      3. To search a database of refund requests to determine the status of one request in particular, you can use an [API step](https://developer.voiceflow.com/v2.0/docs/api-step) to query a database using the user-provided request ID. Alternatively, you can use a custom action as a placeholder step. The refund status is stored in a [variable](https://developer.voiceflow.com/v2.0/docs/variables-set) called {refund_status}.
-      4. The assistant then relays the queried refund status (or a placeholder value), and thanks the user for using the assistant: “Your refund status is {refund_status}. Thanks for speaking with me today!”
+      3. To search a database of refund requests to determine the status of one request in particular, you can use an [API step](https://developer.voiceflow.com/v2.0/docs/api-step) to query a database using the user-provided request ID. Alternatively, you can use a custom action as a placeholder step. The refund status is stored in a [variable](https://developer.voiceflow.com/v2.0/docs/variables-set) called \{refund\_status}.
+      4. The assistant then relays the queried refund status (or a placeholder value), and thanks the user for using the assistant: “Your refund status is \{refund\_status}. Thanks for speaking with me today!”
 
 ![](https://files.readme.io/2ac3daf-image.png)
 
@@ -72,7 +72,7 @@ To add steps to the [Canvas](https://developer.voiceflow.com/v2.0/docs/canvas), 
 
 Once you've added your first step, you can also connect your Start chip from its end port/node.
 
-_Tip: Add Steps quickly by search (press ⬆️ Shift + ␣ Space and start typing)._
+*Tip: Add Steps quickly by search (press ⬆️ Shift + ␣ Space and start typing).*
 
 ![](https://files.readme.io/93b8b79-image.png)
 
