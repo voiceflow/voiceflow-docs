@@ -14,22 +14,7 @@ Webhooks allow you to receive real-time event notifications when calls start and
 
 Add your webhook URL under **Settings > Behavior > Voice > Call events webhook**.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0013315f5f5cb155195c11b88fc21853f75cc8c66d266c8e53eafbbcc3096244-Capture_decran_le_2025-04-02_a_09.07.34.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "70% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="70% " src="https://files.readme.io/0013315f5f5cb155195c11b88fc21853f75cc8c66d266c8e53eafbbcc3096244-Capture_decran_le_2025-04-02_a_09.07.34.png" />
 
 # Events
 
@@ -39,8 +24,8 @@ Voiceflow will send POST requests to your webhook URL on the following events.
 
 This event is sent when the following call types are made:
 
-- Twilio inbound / outbound / prototype-outbound call
-- web widget voice call is made (including during testing on `creator.voiceflow.com`)
+* Twilio inbound / outbound / prototype-outbound call
+* web widget voice call is made (including during testing on `creator.voiceflow.com`)
 
 ```typescript
 {
@@ -145,7 +130,7 @@ Depending on `data.platform`, the metadata for the call will change.
 }
 ```
 
-The _to_ and _from_ number depends on the type of call.
+The *to* and *from* number depends on the type of call.
 
 For example, for an `"inbound"` call, from is the `userNumber` and to is the `agentNumber`, while it is the inverse for `"outbound"`.
 
@@ -162,6 +147,6 @@ No additional metadata currently. In the future, this may include browser and ge
 
 # Best Practices
 
-- Check `type` when evaluating response. There may be additional types of events in the future with a different shaped request body, as well as new properties and metadata.
-- Check `data.platform` before evaluating `data.metadata`, for example it's possible that `data.metadata.callSid` doesn't exist because it's a `"web-voice"` call.
-- You can check `data.projectID` if you want to share the same endpoint between different projects.
+* Check `type` when evaluating response. There may be additional types of events in the future with a different shaped request body, as well as new properties and metadata.
+* Check `data.platform` before evaluating `data.metadata`, for example it's possible that `data.metadata.callSid` doesn't exist because it's a `"web-voice"` call.
+* You can check `data.projectID` if you want to share the same endpoint between different projects.
