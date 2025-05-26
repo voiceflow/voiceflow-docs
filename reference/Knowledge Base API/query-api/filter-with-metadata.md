@@ -14,9 +14,9 @@ next:
 
 Our new query filtering capabilities enable users to perform precise searches within their data using a robust set of operators. You can apply various filters to your data, such as:
 
-- **Equality and Comparison:** `$eq`, `$ne`, `$gt`, `$gte`, `$lt`, `$lte`
-- **Array Operations**: `$in`, `$nin`, `$all`
-- **Logical Operators**: `$and`, `$or`
+* **Equality and Comparison:** `$eq`, `$ne`, `$gt`, `$gte`, `$lt`, `$lte`
+* **Array Operations**: `$in`, `$nin`, `$all`
+* **Logical Operators**: `$and`, `$or`
 
 This means you can now create complex queries to retrieve exactly what you need, whether it’s finding products under a certain price, filtering by multiple tags, or combining multiple conditions.
 
@@ -99,7 +99,7 @@ curl --request POST \
 
 Here are some practical examples to demonstrate the power of query filtering using the Query API:
 
-- **Match All Specific Tags:** Identify chunks that include every specified tag in the list. (file upload example)
+* **Match All Specific Tags:** Identify chunks that include every specified tag in the list. (file upload example)
 
 ```json
 {  
@@ -111,7 +111,7 @@ Here are some practical examples to demonstrate the power of query filtering usi
 }
 ```
 
-- **Match Any of the Specified Tags:** Find chunks containing any of the tags listed. (file upload example)
+* **Match Any of the Specified Tags:** Find chunks containing any of the tags listed. (file upload example)
 
 ```json
 {  
@@ -123,7 +123,7 @@ Here are some practical examples to demonstrate the power of query filtering usi
 }
 ```
 
-- **Exclude Chunks With Certain Metadata**: Filter out chunks that include any of the tags specified. (table example)
+* **Exclude Chunks With Certain Metadata**: Filter out chunks that include any of the tags specified. (table example)
 
 ```json
 {
@@ -136,7 +136,7 @@ Here are some practical examples to demonstrate the power of query filtering usi
 
 ```
 
-- **Combination of Conditions:** Search for chunks that either contain a specific tag or match a text value exactly. (file upload example)
+* **Combination of Conditions:** Search for chunks that either contain a specific tag or match a text value exactly. (file upload example)
 
 ```json
 {
