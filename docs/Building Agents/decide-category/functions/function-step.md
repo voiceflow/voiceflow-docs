@@ -40,28 +40,13 @@ Next we will be setting up the selected function to integrate with your project.
 1. **Input Variable Mapping**
    1. Map the input variables by assigning values or variables from your project to the function's parameters.
       1. **Note:** Copies of these variables are made when they're passed to the function, so any changes you might make inside the function won't be reflected on the variable passed in. To have a variable updated, put it in the output section.
-   2. _Example_: { text } is assigned to receive a value or variable from your flow that contains the text you wish to process.
+   2. *Example*: \{ text } is assigned to receive a value or variable from your flow that contains the text you wish to process.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7f687c4-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="500px" src="https://files.readme.io/7f687c4-image.png" />
 
 2. **Output Variable Mapping**
    1. Define which variable in your flow will receive the output of the function.
-   2. _Example_: The output of the function, { output }, is applied to {target_variable}.
+   2. *Example*: The output of the function, \{ output }, is applied to \{target\_variable}.
 
 ## Using the Function Step
 
