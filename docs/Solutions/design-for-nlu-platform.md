@@ -19,11 +19,11 @@ Voiceflow's Connected Workflow Solution allows for Voiceflow to be used as a col
 ### How it works
 
 1. **(Optional) Import existing Assistant content into Voiceflow**
-   - Use an Importer if available
+   * Use an Importer if available
 2. **Non-technical teams create Assistant content in Voiceflow's Creator tool**
-   - Design, test and iterate rapidly in Voiceflow's Creator tool
+   * Design, test and iterate rapidly in Voiceflow's Creator tool
 3. **Development teams pull Assistant content from Voiceflow using the Project API**
-   - Use or build an [Adapter](<>)
+   * Use or build an [Adapter]()
 
 ### Problem it solves
 
