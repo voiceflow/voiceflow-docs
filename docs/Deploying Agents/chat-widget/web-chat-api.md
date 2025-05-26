@@ -16,7 +16,7 @@ The Web Chat API allows you to open, close and do much more with the Webchat. Th
 
 # Web Chat API
 
-When the Web Chat widget script is loaded, it will register an API as **window.voiceflow.chat** with the following methods:
+When the Web Chat widget script is loaded, it will register an API as **window\.voiceflow\.chat** with the following methods:
 
 ## Load
 
@@ -111,7 +111,7 @@ Note: the `event.data` value is a JSON string if it contains a `voiceflow:*` eve
 
 > **voiceflow:open** - widget is opened
 >
-> **voiceflow:save_session** - a save event is triggered to cache the conversation state/history
+> **voiceflow:save\_session** - a save event is triggered to cache the conversation state/history
 >
 > **voiceflow:interact** - the user sent an action and got a response from the server
 >
