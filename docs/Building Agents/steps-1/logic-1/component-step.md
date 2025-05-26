@@ -1,7 +1,7 @@
 ---
 title: 'TODO: Component step'
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
