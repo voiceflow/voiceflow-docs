@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 📘 This article is part of a guide on getting started with Voiceflow APIs
-> 
+>
 > Start from the [beginning](https://docs.voiceflow.com/reference/api-guide-start) here.
 
 The most commonly used API with Voiceflow is the Dialog Manager API.  It's what drives the conversations on the webchat widget and acts as the backbone of any conversion happening with a Voiceflow agent. 
