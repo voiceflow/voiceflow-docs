@@ -14,9 +14,9 @@ VoiceFlow is an NLU-agnostic Assistant design and development platform. Because 
 
 If you are designing your Assistants in Voiceflow, and then handing off these designs off to be implemented on a third-party NLU platform, this process can be painful:
 
-- It requires manual context transfer from designers to developers
-- Time is wasted manually re-creating data from Voiceflow in another platform
-- Iteration is hard because each change requires a new handoff
+* It requires manual context transfer from designers to developers
+* Time is wasted manually re-creating data from Voiceflow in another platform
+* Iteration is hard because each change requires a new handoff
 
 To address these issues, we recommend that Conversational AI Teams on Voiceflow build an Exporter to adapt all relevant Assistant data created as part of their Voiceflow design process into production-ready data sets.
 
@@ -25,16 +25,16 @@ To address these issues, we recommend that Conversational AI Teams on Voiceflow 
 You can categorize a Voiceflow Assistant into three primary data sets:
 
 1. NLU Model
-   - Intents and Training Phrases
-   - Entity Types, Values and Synonyms
+   * Intents and Training Phrases
+   * Entity Types, Values and Synonyms
 2. Logic 
-   - Intent-based Routes
-   - Condition-based Routes
-   - Parameters
-   - Event Handlers
+   * Intent-based Routes
+   * Condition-based Routes
+   * Parameters
+   * Event Handlers
 3. Response Content
-   - Agent Responses
-   - Webhook Fulfillment
+   * Agent Responses
+   * Webhook Fulfillment
 
 ![](https://files.readme.io/31dfee1-Group_36.png)
 
@@ -46,7 +46,7 @@ When you have a Voiceflow Assistant design ready for export to an NLU, the workf
 
 ![](https://files.readme.io/c08ed5d-Group_35.png)
 
-### Pull your .VF Project Data: 
+### Pull your .VF Project Data:
 
 Your Voiceflow Assistant data structure is represented in a structured JSON format, that includes the individual data sets, and the relationship between the nodes in your design. You can find a detailed breakdown for the .VF Project JSON structure [here](https://developer.voiceflow.com/docs/voiceflow-project-data-structure). 
 
