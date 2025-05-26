@@ -1,5 +1,5 @@
 ---
-title: Prompt
+title: Prompt step
 excerpt: ''
 deprecated: false
 hidden: false
