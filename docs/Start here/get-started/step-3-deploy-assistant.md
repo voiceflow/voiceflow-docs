@@ -21,14 +21,12 @@ There are two ways to launch an assistant
 
 On an AI project, click the integrations tab for the various quick launch instructions and settings. Details instructions on each channel are included below. We only support chat based channels on quick launch currently.
 
-- [Webchat](https://developer.voiceflow.com/docs/chat-widget)
-- [Whatsapp](https://developer.voiceflow.com/docs/whatsapp)
-- [Twilio SMS](https://developer.voiceflow.com/docs/twilio-sms)
-- [Microsoft Teams](https://developer.voiceflow.com/docs/microsoft-teams)
+* [Webchat](https://developer.voiceflow.com/docs/chat-widget)
+* [Whatsapp](https://developer.voiceflow.com/docs/whatsapp)
+* [Twilio SMS](https://developer.voiceflow.com/docs/twilio-sms)
+* [Microsoft Teams](https://developer.voiceflow.com/docs/microsoft-teams)
 
 ![](https://files.readme.io/fbfa13a-CleanShot_2023-07-14_at_15.52.26.png)
-
-
 
 ## **Custom Launch**
 
