@@ -10,18 +10,14 @@ metadata:
 next:
   description: ''
 ---
-Overview
-========
+# Overview
 
 There are two API key formats that can be used to access the Dialog Manager API.
 
 1. Dialog Manager API keys
 2. Workspace API keys 
 
-
-
-Dialog Manager vs. Workspace API Keys
-=====================================
+# Dialog Manager vs. Workspace API Keys
 
 It is **recommended** to use a **Dialog Manager API Key** to access the Dialog Manager API. A DM API key has the prefix `VF.DM.` and provides the most up-to-date features such as version aliasing.
 
