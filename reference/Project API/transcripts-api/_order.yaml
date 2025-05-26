@@ -4,3 +4,4 @@
 - put_transcripts-projectid-transcriptid-annotation-utteranceaddedto
 - get_transcripts-projectid-transcriptid
 - patch_transcripts-projectid-transcriptid
+- delete_transcripts-projectid-transcriptid
