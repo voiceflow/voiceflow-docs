@@ -15,7 +15,7 @@ next:
 In this article, we will work on an integration for Microsoft Teams and the Voiceflow Dialog Manager API.
 
 > 🚧 Before you start
-> 
+>
 > 1. **Create a Voiceflow project**: you need to first build a chat project on [Voiceflow](https://creator.voiceflow.com/).
 > 2. **Find your Project API Key**: Follow these [instructions](https://developer.voiceflow.com/reference/project) to obtain your API key.
 > 3. Microsoft Teams account
@@ -53,24 +53,22 @@ We want to create a new Bot so click on the **Create a new bot** link
 
 ![](https://files.readme.io/68d9c6f-CleanShot_2022-08-18_at_21.58.50.png)
 
-Keep that page **open** as we will need it later to fill the **Bot endpoint **address and generate a **client secret**:
+Keep that page **open** as we will need it later to fill the **Bot endpoint** address and generate a **client secret**:
 
 ![](https://files.readme.io/97e6086-CleanShot_2022-08-18_at_20.24.25.png)
 
 ## 2. Setting up the code
 
-> 🚧 
-> 
+> 🚧
+>
 > For the following step, we are assuming that your dev environment is already setup
 
-In a directory, clone the following Git repository and install the dependencies: <https://github.com/voiceflow-gallagan/api-integration-msteams>
+In a directory, clone the following Git repository and install the dependencies: [https://github.com/voiceflow-gallagan/api-integration-msteams](https://github.com/voiceflow-gallagan/api-integration-msteams)
 
 ```shell
 git clone https://github.com/voiceflow-gallagan/api-integration-msteams.git
 cd api-integration-msteams && npm i
 ```
-
-
 
 Open the **.env.template** file in the editor of your choice:
 
@@ -84,16 +82,14 @@ TUNNEL_SUBDOMAIN='voiceflow-teams'
 PORT=3978
 ```
 
+Update the **TUNNEL\_SUBDOMAIN** with the subdomain of your choice. Try to use something “unique” as we will use it to generate a tunnel so you will be able to test your Bot in Teams.
 
+For the **VOICEFLOW\_API\_KEY**, simply copy/paste it form your Voiceflow’s project.
 
-Update the **TUNNEL_SUBDOMAIN** with the subdomain of your choice. Try to use something “unique” as we will use it to generate a tunnel so you will be able to test your Bot in Teams.
-
-For the **VOICEFLOW_API_KEY**, simply copy/paste it form your Voiceflow’s project.
-
-- open your Chat project in Voiceflow
-- click on the Integrations button in the sidebar (shortcut: 4)
-- copy your Dialog API key
-- paste it in the **.env.template** file
+* open your Chat project in Voiceflow
+* click on the Integrations button in the sidebar (shortcut: 4)
+* copy your Dialog API key
+* paste it in the **.env.template** file
 
 ![](https://files.readme.io/7efd358-CleanShot_2022-08-18_at_21.40.08.png)
 
@@ -106,8 +102,6 @@ But first, let’s finish to setup our Bot, in the Endpoint address field, type 
 ```text
 https://<your subdomain>.loca.lt/api/messages
 ```
-
-
 
 ![](https://files.readme.io/ed6d3f7-CleanShot_2022-08-18_at_21.45.39.png)
 
@@ -139,7 +133,7 @@ Go back to the **Apps** tab and click on the **app** you’ve created
 
 ![](https://files.readme.io/eecffc3-CleanShot_2022-08-18_at_21.54.41.png)
 
-From the** left panel**, click on **App features** and select **Bot** in the **App features** list:
+From the **left panel**, click on **App features** and select **Bot** in the **App features** list:
 
 ![](https://files.readme.io/6fc7714-CleanShot_2022-08-18_at_20.02.49.png)
 
@@ -159,8 +153,6 @@ You are ready to test your bot, rename the .env.template to .env and launch the 
 npm test
 ```
 
-
-
 he console should give the following output:
 
 ![](https://files.readme.io/29227b5-CleanShot_2022-08-18_at_22.25.58.png)
@@ -171,8 +163,6 @@ Microsoft share a test tool to help you debugging your Bot, to start testing, do
 https://github.com/microsoft/BotFramework-Emulator/releases
 ```
 
-
-
 Install the **Bot Framework Emulator** and open it to create a **Bot configuration**
 
 ![](https://files.readme.io/0bba566-CleanShot_2022-08-18_at_22.11.12.png)
@@ -182,8 +172,6 @@ For the endpoint URL, we are testing locally so use (edit the port if you choose
 ```
 http://localhost:3978/api/messages
 ```
-
-
 
 Use the Application Id and Password (secret) info from your .env file
 
