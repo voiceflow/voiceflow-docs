@@ -1,5 +1,5 @@
 ---
-title: Decide
+title: Developer Features
 excerpt: ''
 deprecated: false
 hidden: false
