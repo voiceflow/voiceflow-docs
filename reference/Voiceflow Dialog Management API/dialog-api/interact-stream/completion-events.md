@@ -12,22 +12,7 @@ next:
 ---
 When conversing with LLMs such as ChatGPT or Claude, you notice that unlike human communications, where we send complete message by complete message, it "streams" in the text one piece at a time, and not even necessarily in complete words. LLMs work by generating their responses token by token.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f595d7adc0237b1c8c8a839629543dda9a6a03cf3c8608b0b189c378b7faae34-Screenshot_2024-09-25_at_10.01.15_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "60% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="60% " src="https://files.readme.io/f595d7adc0237b1c8c8a839629543dda9a6a03cf3c8608b0b189c378b7faae34-Screenshot_2024-09-25_at_10.01.15_PM.png" />
 
 It can take quite long for an LLM to write a complete paragraph — even for the fastest models.
 
@@ -35,7 +20,7 @@ With the **Response AI / Prompt** step, by default the API will wait for the ent
 
 By setting the `?completion_events=true` query parameter in the [Interact Stream](https://docs.voiceflow.com/reference/stateinteractstream) API, Voiceflow will return output from the **Response AI / Prompt** steps as a text stream as it's generated, which can be shown to the user on an interface capable of handling partial responses. 
 
-> 📘 Only the  **Response AI / Prompt ** step produces completion events
+> 📘 Only the  **Response AI / Prompt** step produces completion events
 
 #### Example Response `completion_events=false`
 
@@ -127,13 +112,13 @@ event: end
 id: 7
 ```
 
-With `completion_events` turned on, it still takes the same total time to get the entire message, but the user will be able to see the first chunk of text within milliseconds: _Welcome to our servi..."_
+With `completion_events` turned on, it still takes the same total time to get the entire message, but the user will be able to see the first chunk of text within milliseconds: *Welcome to our servi..."*
 
 Enabling `completion_events` means the API will return a `completion` trace instead of a `text` (or `speak`) trace. There is a `payload.state` property which is one of three values:
 
-- `state: "start"` to signal the start of a completion stream.
-- `state: "content"` to stream in additional text to the same text block, under the `content` property
-- `state: "end"` to signal that the completion is now finished, and the final LLM token usage
+* `state: "start"` to signal the start of a completion stream.
+* `state: "content"` to stream in additional text to the same text block, under the `content` property
+* `state: "end"` to signal that the completion is now finished, and the final LLM token usage
 
 These trace types facilitate the delivery of text streaming as the large language model (LLM) generates the response message. Note, the `content` data may not always be in complete sentences or words. 
 
@@ -147,5 +132,5 @@ See our [`streaming-wizard`](https://github.com/voiceflow/streaming-wizard) demo
 
 It may be jarring to pair this with existing deterministic messages that come out fully completed. Some messages stream in, while others are sent as whole. To mitigate this, you can either:
 
-- create a fake streaming effect for deterministic messages that matches what messages streamed through completion events look like
-- accumulate enough completion traces  to form a complete sentence, and send group streamed responses into sentences before displaying them. Look for delimiters such as `.` `?` `!` `;` `\n` (newline). You can then send the completion as a group of smaller complete messages.
+* create a fake streaming effect for deterministic messages that matches what messages streamed through completion events look like
+* accumulate enough completion traces  to form a complete sentence, and send group streamed responses into sentences before displaying them. Look for delimiters such as `.` `?` `!` `;` `\n` (newline). You can then send the completion as a group of smaller complete messages.
