@@ -10,69 +10,324 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Quick Reference"
-}
-[/block]
+## Quick Reference
 
-[block:parameters]
-{
-  "data": {
-    "0-0": "File format",
-    "0-1": "XML",
-    "1-0": "**Data Support**",
-    "2-0": "Intents",
-    "2-1": "✅",
-    "3-1": "✅",
-    "4-1": "✅",
-    "5-1": "✅",
-    "3-0": "Training Phrases",
-    "4-0": "Entities",
-    "5-0": "Synonyms",
-    "6-0": "**Import Type** ",
-    "7-0": "Modify",
-    "7-1": "❌",
-    "h-0": "Data",
-    "h-1": "Support",
-    "8-0": "Overwrite",
-    "8-1": "✅"
-  },
-  "cols": 2,
-  "rows": 9
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Data
+      </th>
 
-[block:api-header]
-{
-  "title": "Video Walkthrough"
-}
-[/block]
+      <th style={{ textAlign: "left" }}>
+        Support
+      </th>
+    </tr>
+  </thead>
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F6HvXyCFCpfY%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6HvXyCFCpfY&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F6HvXyCFCpfY%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=6HvXyCFCpfY&feature=youtu.be",
-  "title": "Voiceflow NLU Export: Nuance Mix",
-  "favicon": "https://www.youtube.com/s/desktop/01f7cad5/img/favicon.ico",
-  "image": "https://i.ytimg.com/vi/6HvXyCFCpfY/hqdefault.jpg"
-}
-[/block]
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        File format
+      </td>
 
-[block:api-header]
-{
-  "title": "Sample Export"
-}
-[/block]
+      <td style={{ textAlign: "left" }}>
+        XML
+      </td>
+    </tr>
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<project xmlns:nuance=\"https://developer.nuance.com/mix/nlu/trsx\" xml:lang=\"en-US\" nuance:version=\"2.5\">\n  <metadata>\n    <entry key=\"short_name\">VF Burger</entry>\n    <entry key=\"source\">Voiceflow</entry>\n    <entry key=\"voiceflow_platform_type\">chatbot</entry>\n    <entry key=\"voiceflow_project_id\">62430560456f30001d59c471</entry>\n  </metadata>\n  <ontology>\n    <intents>\n      <intent name=\"place_order_3q9945n8\">\n        <links>\n          <link conceptref=\"sandwich_449h45os\"/>\n          <link conceptref=\"side_vr9o456k\"/>\n          <link conceptref=\"drink_dra045d9\"/>\n        </links>\n      </intent>\n    </intents>\n    <concepts>\n      <concept name=\"sandwich_449h45os\"/>\n      <concept name=\"side_vr9o456k\"/>\n      <concept name=\"drink_dra045d9\"/>\n    </concepts>\n  </ontology>\n  <dictionaries>\n    <dictionary conceptref=\"sandwich_449h45os\">\n      <entry literal=\"burger\" value=\"Hamburger\"/>\n      <entry literal=\"single\" value=\"Hamburger\"/>\n      <entry literal=\"plain burger\" value=\"Hamburger\"/>\n      <entry literal=\"Hamburger\" value=\"Hamburger\"/>\n      <entry literal=\"cheeseburg\" value=\"Cheeseburger\"/>\n      <entry literal=\"a cheeseburger\" value=\"Cheeseburger\"/>\n      <entry literal=\"cheese burger\" value=\"Cheeseburger\"/>\n      <entry literal=\"Cheeseburger\" value=\"Cheeseburger\"/>\n      <entry literal=\"chicken\" value=\"Super Chicken\"/>\n      <entry literal=\"chicken sandwich\" value=\"Super Chicken\"/>\n      <entry literal=\"Super Chicken\" value=\"Super Chicken\"/>\n      <entry literal=\"fish sandwich\" value=\"Fish Burger\"/>\n      <entry literal=\"fish filet\" value=\"Fish Burger\"/>\n      <entry literal=\"fish\" value=\"Fish Burger\"/>\n      <entry literal=\"Fish Burger\" value=\"Fish Burger\"/>\n      <entry literal=\"vegetable sandwich\" value=\"Veggie Burger\"/>\n      <entry literal=\"vegetarian sandwich\" value=\"Veggie Burger\"/>\n      <entry literal=\"veggie sandwich\" value=\"Veggie Burger\"/>\n      <entry literal=\"Veggie Burger\" value=\"Veggie Burger\"/>\n    </dictionary>\n    <dictionary conceptref=\"side_vr9o456k\">\n      <entry literal=\"fry\" value=\"Fries\"/>\n      <entry literal=\"a fries\" value=\"Fries\"/>\n      <entry literal=\"some fries\" value=\"Fries\"/>\n      <entry literal=\"french fries\" value=\"Fries\"/>\n      <entry literal=\"Fries\" value=\"Fries\"/>\n      <entry literal=\"gravy\" value=\"Poutine\"/>\n      <entry literal=\"fries and gravy\" value=\"Poutine\"/>\n      <entry literal=\"Poutine\" value=\"Poutine\"/>\n      <entry literal=\"onion\" value=\"Onion Rings\"/>\n      <entry literal=\"rings\" value=\"Onion Rings\"/>\n      <entry literal=\"onions\" value=\"Onion Rings\"/>\n      <entry literal=\"Onion Rings\" value=\"Onion Rings\"/>\n      <entry literal=\"Salad\" value=\"Salad\"/>\n    </dictionary>\n    <dictionary conceptref=\"drink_dra045d9\">\n      <entry literal=\"coca cola\" value=\"Coke\"/>\n      <entry literal=\"pepsi\" value=\"Coke\"/>\n      <entry literal=\"Coke\" value=\"Coke\"/>\n      <entry literal=\"seven up\" value=\"Sprite\"/>\n      <entry literal=\"7 up\" value=\"Sprite\"/>\n      <entry literal=\"Sprite\" value=\"Sprite\"/>\n      <entry literal=\"barks\" value=\"Root Beer\"/>\n      <entry literal=\"barks root beer\" value=\"Root Beer\"/>\n      <entry literal=\"barqs\" value=\"Root Beer\"/>\n      <entry literal=\"Root Beer\" value=\"Root Beer\"/>\n      <entry literal=\"cold tea\" value=\"Iced Tea\"/>\n      <entry literal=\"nestea\" value=\"Iced Tea\"/>\n      <entry literal=\"Iced Tea\" value=\"Iced Tea\"/>\n      <entry literal=\"Water\" value=\"Water\"/>\n    </dictionary>\n  </dictionaries>\n  <samples>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"drink_dra045d9\">Coke</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"side_vr9o456k\">Fries</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">I'd like to order a combo</sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"sandwich_449h45os\">Hamburger</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">fry</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">coca cola</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      need a\n      <annotation conceptref=\"sandwich_449h45os\">burger</annotation>\n      and a\n      <annotation conceptref=\"side_vr9o456k\">a fries</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">pepsi</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      My order is\n      <annotation conceptref=\"sandwich_449h45os\">single</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      I want a\n      <annotation conceptref=\"sandwich_449h45os\">plain burger</annotation>\n      with\n      <annotation conceptref=\"drink_dra045d9\">Sprite</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"sandwich_449h45os\">Cheeseburger</annotation>\n      please\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"sandwich_449h45os\">cheeseburg</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      Give me a\n      <annotation conceptref=\"sandwich_449h45os\">a cheeseburger</annotation>\n      and\n      <annotation conceptref=\"side_vr9o456k\">some fries</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      I'd like to order a\n      <annotation conceptref=\"sandwich_449h45os\">cheese burger</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">french fries</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">seven up</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"sandwich_449h45os\">Super Chicken</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">Poutine</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">7 up</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      need a\n      <annotation conceptref=\"sandwich_449h45os\">chicken</annotation>\n      and a\n      <annotation conceptref=\"side_vr9o456k\">gravy</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">Root Beer</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      I want a\n      <annotation conceptref=\"sandwich_449h45os\">chicken sandwich</annotation>\n      with\n      <annotation conceptref=\"drink_dra045d9\">barks</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      I'd like to order a\n      <annotation conceptref=\"sandwich_449h45os\">Fish Burger</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">fries and gravy</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">barks root beer</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"drink_dra045d9\">barqs</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"sandwich_449h45os\">fish sandwich</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">Onion Rings</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">Iced Tea</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      need a\n      <annotation conceptref=\"sandwich_449h45os\">fish filet</annotation>\n      and a\n      <annotation conceptref=\"side_vr9o456k\">onion</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">cold tea</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      I want a\n      <annotation conceptref=\"sandwich_449h45os\">fish</annotation>\n      with\n      <annotation conceptref=\"drink_dra045d9\">nestea</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      I'd like to order a\n      <annotation conceptref=\"sandwich_449h45os\">Veggie Burger</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">rings</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">Water</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"side_vr9o456k\">onions</annotation>\n    </sample>\n    <sample intentref=\"place_order_3q9945n8\" count=\"1\">\n      <annotation conceptref=\"sandwich_449h45os\">vegetable sandwich</annotation>\n      with\n      <annotation conceptref=\"side_vr9o456k\">Salad</annotation>\n      and a\n      <annotation conceptref=\"drink_dra045d9\">pepsi</annotation>\n    </sample>\n  </samples>\n</project>",
-      "language": "xml",
-      "name": "project_burger.xml"
-    }
-  ]
-}
-[/block]
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Data Support**
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Intents
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Training Phrases
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Entities
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Synonyms
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Import Type** 
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Modify
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ❌
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Overwrite
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## Video Walkthrough
+
+<Embed url="https://www.youtube.com/watch?v=6HvXyCFCpfY&feature=youtu.be" title="Voiceflow NLU Export: Nuance Mix" favicon="https://www.youtube.com/s/desktop/01f7cad5/img/favicon.ico" image="https://i.ytimg.com/vi/6HvXyCFCpfY/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=6HvXyCFCpfY&feature=youtu.be" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252F6HvXyCFCpfY%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D6HvXyCFCpfY%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252F6HvXyCFCpfY%252Fhqdefault.jpg%26key%3Df2aa6fc3595946d0afc3d76cbbd25dc3%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+
+## Sample Export
+
+```xml project_burger.xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns:nuance="https://developer.nuance.com/mix/nlu/trsx" xml:lang="en-US" nuance:version="2.5">
+  <metadata>
+    <entry key="short_name">VF Burger</entry>
+    <entry key="source">Voiceflow</entry>
+    <entry key="voiceflow_platform_type">chatbot</entry>
+    <entry key="voiceflow_project_id">62430560456f30001d59c471</entry>
+  </metadata>
+  <ontology>
+    <intents>
+      <intent name="place_order_3q9945n8">
+        <links>
+          <link conceptref="sandwich_449h45os"/>
+          <link conceptref="side_vr9o456k"/>
+          <link conceptref="drink_dra045d9"/>
+        </links>
+      </intent>
+    </intents>
+    <concepts>
+      <concept name="sandwich_449h45os"/>
+      <concept name="side_vr9o456k"/>
+      <concept name="drink_dra045d9"/>
+    </concepts>
+  </ontology>
+  <dictionaries>
+    <dictionary conceptref="sandwich_449h45os">
+      <entry literal="burger" value="Hamburger"/>
+      <entry literal="single" value="Hamburger"/>
+      <entry literal="plain burger" value="Hamburger"/>
+      <entry literal="Hamburger" value="Hamburger"/>
+      <entry literal="cheeseburg" value="Cheeseburger"/>
+      <entry literal="a cheeseburger" value="Cheeseburger"/>
+      <entry literal="cheese burger" value="Cheeseburger"/>
+      <entry literal="Cheeseburger" value="Cheeseburger"/>
+      <entry literal="chicken" value="Super Chicken"/>
+      <entry literal="chicken sandwich" value="Super Chicken"/>
+      <entry literal="Super Chicken" value="Super Chicken"/>
+      <entry literal="fish sandwich" value="Fish Burger"/>
+      <entry literal="fish filet" value="Fish Burger"/>
+      <entry literal="fish" value="Fish Burger"/>
+      <entry literal="Fish Burger" value="Fish Burger"/>
+      <entry literal="vegetable sandwich" value="Veggie Burger"/>
+      <entry literal="vegetarian sandwich" value="Veggie Burger"/>
+      <entry literal="veggie sandwich" value="Veggie Burger"/>
+      <entry literal="Veggie Burger" value="Veggie Burger"/>
+    </dictionary>
+    <dictionary conceptref="side_vr9o456k">
+      <entry literal="fry" value="Fries"/>
+      <entry literal="a fries" value="Fries"/>
+      <entry literal="some fries" value="Fries"/>
+      <entry literal="french fries" value="Fries"/>
+      <entry literal="Fries" value="Fries"/>
+      <entry literal="gravy" value="Poutine"/>
+      <entry literal="fries and gravy" value="Poutine"/>
+      <entry literal="Poutine" value="Poutine"/>
+      <entry literal="onion" value="Onion Rings"/>
+      <entry literal="rings" value="Onion Rings"/>
+      <entry literal="onions" value="Onion Rings"/>
+      <entry literal="Onion Rings" value="Onion Rings"/>
+      <entry literal="Salad" value="Salad"/>
+    </dictionary>
+    <dictionary conceptref="drink_dra045d9">
+      <entry literal="coca cola" value="Coke"/>
+      <entry literal="pepsi" value="Coke"/>
+      <entry literal="Coke" value="Coke"/>
+      <entry literal="seven up" value="Sprite"/>
+      <entry literal="7 up" value="Sprite"/>
+      <entry literal="Sprite" value="Sprite"/>
+      <entry literal="barks" value="Root Beer"/>
+      <entry literal="barks root beer" value="Root Beer"/>
+      <entry literal="barqs" value="Root Beer"/>
+      <entry literal="Root Beer" value="Root Beer"/>
+      <entry literal="cold tea" value="Iced Tea"/>
+      <entry literal="nestea" value="Iced Tea"/>
+      <entry literal="Iced Tea" value="Iced Tea"/>
+      <entry literal="Water" value="Water"/>
+    </dictionary>
+  </dictionaries>
+  <samples>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="drink_dra045d9">Coke</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="side_vr9o456k">Fries</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">I'd like to order a combo</sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="sandwich_449h45os">Hamburger</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">fry</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">coca cola</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      need a
+      <annotation conceptref="sandwich_449h45os">burger</annotation>
+      and a
+      <annotation conceptref="side_vr9o456k">a fries</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">pepsi</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      My order is
+      <annotation conceptref="sandwich_449h45os">single</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      I want a
+      <annotation conceptref="sandwich_449h45os">plain burger</annotation>
+      with
+      <annotation conceptref="drink_dra045d9">Sprite</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="sandwich_449h45os">Cheeseburger</annotation>
+      please
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="sandwich_449h45os">cheeseburg</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      Give me a
+      <annotation conceptref="sandwich_449h45os">a cheeseburger</annotation>
+      and
+      <annotation conceptref="side_vr9o456k">some fries</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      I'd like to order a
+      <annotation conceptref="sandwich_449h45os">cheese burger</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">french fries</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">seven up</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="sandwich_449h45os">Super Chicken</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">Poutine</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">7 up</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      need a
+      <annotation conceptref="sandwich_449h45os">chicken</annotation>
+      and a
+      <annotation conceptref="side_vr9o456k">gravy</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">Root Beer</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      I want a
+      <annotation conceptref="sandwich_449h45os">chicken sandwich</annotation>
+      with
+      <annotation conceptref="drink_dra045d9">barks</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      I'd like to order a
+      <annotation conceptref="sandwich_449h45os">Fish Burger</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">fries and gravy</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">barks root beer</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="drink_dra045d9">barqs</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="sandwich_449h45os">fish sandwich</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">Onion Rings</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">Iced Tea</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      need a
+      <annotation conceptref="sandwich_449h45os">fish filet</annotation>
+      and a
+      <annotation conceptref="side_vr9o456k">onion</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">cold tea</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      I want a
+      <annotation conceptref="sandwich_449h45os">fish</annotation>
+      with
+      <annotation conceptref="drink_dra045d9">nestea</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      I'd like to order a
+      <annotation conceptref="sandwich_449h45os">Veggie Burger</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">rings</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">Water</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="side_vr9o456k">onions</annotation>
+    </sample>
+    <sample intentref="place_order_3q9945n8" count="1">
+      <annotation conceptref="sandwich_449h45os">vegetable sandwich</annotation>
+      with
+      <annotation conceptref="side_vr9o456k">Salad</annotation>
+      and a
+      <annotation conceptref="drink_dra045d9">pepsi</annotation>
+    </sample>
+  </samples>
+</project>
+```
