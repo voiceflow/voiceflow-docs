@@ -18,9 +18,9 @@ In this tutorial you'll learn how to test your NLU focused on intent and entitie
 
 Clone the [nlu-testing-example](https://github.com/voiceflow/nlu-testing-example)
 
-### Step 1 - Create your <<glossary:agent>>
+### Step 1 - Create your <Glossary>agent</Glossary>
 
-Create your agent, through scratch or the [NLU_test_v1.vf](https://github.com/voiceflow/nlu-testing-example/blob/master/examples/NLU_test_v1.vf)
+Create your agent, through scratch or the [NLU\_test\_v1.vf](https://github.com/voiceflow/nlu-testing-example/blob/master/examples/NLU_test_v1.vf)
 
 ![](https://files.readme.io/617e57c-image.png)
 
@@ -36,7 +36,7 @@ Create your DM API key
 
 ![](https://files.readme.io/7c7b267-image.png)
 
-### Step 4 - Open examples/voiceflow.py
+### Step 4 - Open examples/voiceflow\.py
 
 Paste your key and run the file
 
@@ -50,7 +50,7 @@ Open the `examples/utterance_results.csv` and `examples/entity_results.csv`to se
 
 ### Step 6 - Update your training data and retrain
 
-Add utterances to address the _poutine test_ example and the _assist me_ example. You can also just upload [NLU_test_v2.vf](https://github.com/voiceflow/nlu-testing-example/blob/master/examples/NLU_test_v2.vf) as a new project and create the new dialog manager api key.
+Add utterances to address the *poutine test* example and the *assist me* example. You can also just upload [NLU\_test\_v2.vf](https://github.com/voiceflow/nlu-testing-example/blob/master/examples/NLU_test_v2.vf) as a new project and create the new dialog manager api key.
 
 ![](https://files.readme.io/8bb54f8-image.png)
 
@@ -58,8 +58,6 @@ All your test cases pass!
 
 ### Video Tutorial
 
-[block:html]
-{
-  "html": "<div style=\"position: relative; padding-bottom: 56.25%; height: 0;\"><iframe src=\"https://www.loom.com/embed/83f26874d5e74429bce69a4406b406ef\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>"
-}
-[/block]
+<HTMLBlock>{`
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/83f26874d5e74429bce69a4406b406ef" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+`}</HTMLBlock>
