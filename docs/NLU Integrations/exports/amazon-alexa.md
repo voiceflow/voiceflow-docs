@@ -10,53 +10,255 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Quick Reference"
-}
-[/block]
+## Quick Reference
 
-[block:parameters]
-{
-  "data": {
-    "0-0": "File format",
-    "0-1": "JSON",
-    "1-0": "**Data Support**",
-    "2-0": "Intents",
-    "2-1": "✅",
-    "3-1": "✅",
-    "4-1": "✅",
-    "5-1": "✅",
-    "3-0": "Training Phrases",
-    "4-0": "Slots",
-    "5-0": "Synonyms",
-    "6-0": "**Import Type** ",
-    "7-0": "Modify",
-    "7-1": "❌",
-    "h-0": "Data",
-    "h-1": "Support",
-    "8-0": "Overwrite",
-    "8-1": "✅"
-  },
-  "cols": 2,
-  "rows": 9
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Data
+      </th>
 
-[block:api-header]
-{
-  "title": "Sample Export"
-}
-[/block]
+      <th style={{ textAlign: "left" }}>
+        Support
+      </th>
+    </tr>
+  </thead>
 
-[block:code]
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        File format
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        JSON
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Data Support**
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Intents
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Training Phrases
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Slots
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Synonyms
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Import Type** 
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Modify
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ❌
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Overwrite
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## Sample Export
+
+```json voice_project.json
 {
-  "codes": [
-    {
-      "code": "{\n   \"interactionModel\":{\n      \"dialog\":{\n         \"delegationStrategy\":\"ALWAYS\",\n         \"intents\":[\n            {\n               \"name\":\"AMAZON.StopIntent\",\n               \"prompts\":{\n                  \n               },\n               \"confirmationRequired\":false,\n               \"slots\":[\n                  \n               ]\n            }\n         ]\n      },\n      \"languageModel\":{\n         \"intents\":[\n            {\n               \"name\":\"AMAZON.RepeatIntent\"\n            },\n            {\n               \"name\":\"AMAZON.FallbackIntent\",\n               \"samples\":[\n                  \n               ]\n            },\n            {\n               \"name\":\"Number\",\n               \"samples\":[\n                  \"I want to learn about the number intent\",\n                  \"Number intent please\",\n                  \"I want to test the number intent\",\n                  \"Test the number intent\",\n                  \"I want to test number intent\",\n                  \"What about the number intent\",\n                  \"I want to know about number intent\",\n                  \"Show me number intent\",\n                  \"Number please\",\n                  \"Number\",\n                  \"Number intent\",\n                  \"Activate number intent\",\n                  \"I want to activate the number intent\"\n               ]\n            },\n            {\n               \"name\":\"Email\",\n               \"samples\":[\n                  \"I want to learn about e-mail\",\n                  \"Email intent please\",\n                  \"I want to test email intent\",\n                  \"I want to know about email intent\",\n                  \"Email intent\",\n                  \"Email please\",\n                  \"I want to activate the email intent\",\n                  \"Activate email intent\",\n                  \"Show me the email intent\",\n                  \"What about the email intent\",\n                  \"Test the email intent\",\n                  \"I want to test the email intent\",\n                  \"Email\"\n               ]\n            },\n            {\n               \"name\":\"Phonenumber\",\n               \"samples\":[\n                  \"I want to learn about the phone number\",\n                  \"Phone number intent please\",\n                  \"I want to test the phone number intent\",\n                  \"What about the phone number intent\",\n                  \"Phone number intent\",\n                  \"Phone number please\",\n                  \"Show me phone number intent\",\n                  \"I want to test phone number intent\",\n                  \"Test the phone number intent\",\n                  \"I want to activate phone number\",\n                  \"Activate phone number\",\n                  \"Phone\",\n                  \"Mobile\",\n                  \"Phone number\"\n               ]\n            },\n            {\n               \"name\":\"Custom\",\n               \"samples\":[\n                  \"I want to learn about a custom intent\",\n                  \"Custom intent please\",\n                  \"I want to test the custom intent\",\n                  \"I want to know about custom intent\",\n                  \"What about the custom intent\",\n                  \"Custom intent\",\n                  \"Custom please\",\n                  \"I want to test custom intent\",\n                  \"Test the custom intent\",\n                  \"Show me the custom intent\",\n                  \"I want to activate the custom intent\",\n                  \"Activate custom intent\",\n                  \"Custom\"\n               ]\n            },\n            {\n               \"name\":\"AMAZON.YesIntent\",\n               \"samples\":[\n                  \"yes\",\n                  \"yea\",\n                  \"ok\",\n                  \"okay\",\n                  \"yup\",\n                  \"ya\",\n                  \"sure\"\n               ]\n            },\n            {\n               \"name\":\"AMAZON.NoIntent\",\n               \"samples\":[\n                  \"no\",\n                  \"nope\",\n                  \"nay\",\n                  \"nah\",\n                  \"no way\",\n                  \"negative\"\n               ]\n            },\n            {\n               \"name\":\"AMAZON.StopIntent\",\n               \"samples\":[\n                  \n               ]\n            }\n         ],\n         \"invocationName\":\"intent step component\",\n         \"modelConfiguration\":{\n            \"fallbackIntentSensitivity\":{\n               \"level\":\"LOW\"\n            }\n         }\n      }\n   }\n}",
-      "language": "json",
-      "name": "voice_project.json"
-    }
-  ]
+   "interactionModel":{
+      "dialog":{
+         "delegationStrategy":"ALWAYS",
+         "intents":[
+            {
+               "name":"AMAZON.StopIntent",
+               "prompts":{
+                  
+               },
+               "confirmationRequired":false,
+               "slots":[
+                  
+               ]
+            }
+         ]
+      },
+      "languageModel":{
+         "intents":[
+            {
+               "name":"AMAZON.RepeatIntent"
+            },
+            {
+               "name":"AMAZON.FallbackIntent",
+               "samples":[
+                  
+               ]
+            },
+            {
+               "name":"Number",
+               "samples":[
+                  "I want to learn about the number intent",
+                  "Number intent please",
+                  "I want to test the number intent",
+                  "Test the number intent",
+                  "I want to test number intent",
+                  "What about the number intent",
+                  "I want to know about number intent",
+                  "Show me number intent",
+                  "Number please",
+                  "Number",
+                  "Number intent",
+                  "Activate number intent",
+                  "I want to activate the number intent"
+               ]
+            },
+            {
+               "name":"Email",
+               "samples":[
+                  "I want to learn about e-mail",
+                  "Email intent please",
+                  "I want to test email intent",
+                  "I want to know about email intent",
+                  "Email intent",
+                  "Email please",
+                  "I want to activate the email intent",
+                  "Activate email intent",
+                  "Show me the email intent",
+                  "What about the email intent",
+                  "Test the email intent",
+                  "I want to test the email intent",
+                  "Email"
+               ]
+            },
+            {
+               "name":"Phonenumber",
+               "samples":[
+                  "I want to learn about the phone number",
+                  "Phone number intent please",
+                  "I want to test the phone number intent",
+                  "What about the phone number intent",
+                  "Phone number intent",
+                  "Phone number please",
+                  "Show me phone number intent",
+                  "I want to test phone number intent",
+                  "Test the phone number intent",
+                  "I want to activate phone number",
+                  "Activate phone number",
+                  "Phone",
+                  "Mobile",
+                  "Phone number"
+               ]
+            },
+            {
+               "name":"Custom",
+               "samples":[
+                  "I want to learn about a custom intent",
+                  "Custom intent please",
+                  "I want to test the custom intent",
+                  "I want to know about custom intent",
+                  "What about the custom intent",
+                  "Custom intent",
+                  "Custom please",
+                  "I want to test custom intent",
+                  "Test the custom intent",
+                  "Show me the custom intent",
+                  "I want to activate the custom intent",
+                  "Activate custom intent",
+                  "Custom"
+               ]
+            },
+            {
+               "name":"AMAZON.YesIntent",
+               "samples":[
+                  "yes",
+                  "yea",
+                  "ok",
+                  "okay",
+                  "yup",
+                  "ya",
+                  "sure"
+               ]
+            },
+            {
+               "name":"AMAZON.NoIntent",
+               "samples":[
+                  "no",
+                  "nope",
+                  "nay",
+                  "nah",
+                  "no way",
+                  "negative"
+               ]
+            },
+            {
+               "name":"AMAZON.StopIntent",
+               "samples":[
+                  
+               ]
+            }
+         ],
+         "invocationName":"intent step component",
+         "modelConfiguration":{
+            "fallbackIntentSensitivity":{
+               "level":"LOW"
+            }
+         }
+      }
+   }
 }
-[/block]
+```
