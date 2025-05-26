@@ -12,19 +12,7 @@ next:
 ---
 In this guide, we'll walk you through using your first Voiceflow API with a simple Python interface to chat with your agent. You can also find a video version of the same guide below.
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FKUqpPeJ6DkQ%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKUqpPeJ6DkQ&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKUqpPeJ6DkQ%2Fhqdefault.jpg&key=02466f963b9b4bb8845a05b53d3235d7&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=KUqpPeJ6DkQ",
-  "title": "Getting Started with Voiceflow APIs",
-  "favicon": "https://www.google.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/KUqpPeJ6DkQ/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=KUqpPeJ6DkQ",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=KUqpPeJ6DkQ" title="Getting Started with Voiceflow APIs" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/KUqpPeJ6DkQ/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=KUqpPeJ6DkQ" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FKUqpPeJ6DkQ%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DKUqpPeJ6DkQ%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FKUqpPeJ6DkQ%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 This guide will primarily be taught in Python is easy to get started with, and the lessons learned here should be applicable to any programming language. 
 
@@ -32,15 +20,15 @@ There will still be JavaScript NodeJS equivalents in a second tab on all the cod
 
 You'll learn:
 
-- How to get your Voiceflow Project API key
-- Using the Dialog Manager API (DM API)
-  - How to send requests to Voiceflow APIs
-  - How to start a conversation
-  - How to parse the output traces
-  - How to send user replies
-  - How to deal with other traces (button, end, and more)
-- Using the Transcripts and other APIs
-  - Saving your user transcript
+* How to get your Voiceflow Project API key
+* Using the Dialog Manager API (DM API)
+  * How to send requests to Voiceflow APIs
+  * How to start a conversation
+  * How to parse the output traces
+  * How to send user replies
+  * How to deal with other traces (button, end, and more)
+* Using the Transcripts and other APIs
+  * Saving your user transcript
 
 We encourage you to follow along step by step, but if you ever get lost or would jump ahead to the [finished code](https://github.com/SuperZooper3/Voiceflow-Getting-Started-APIs-Guide/blob/main/VoiceflowAPIGuide_Finished.py) (for both **Python and JavaScript**), you can find it here. Whenever you see 👉, that means that there's a **step to take** in the guide. Speaking of which…
 
@@ -61,7 +49,7 @@ const axios = require('axios');
 
 ![](https://files.readme.io/fcd626a-image.png)
 
-👉 Once you've imported the project, run a test from inside Voiceflow by clicking the run button in the top right. Make any changes you want to, and then click _Publish_ in the top right. This puts out a version of your Voiceflow agent that we can work with. There's no need to give it a name. If you forget to publish, your agent won't work and the returned JSON will just be `[]`.
+👉 Once you've imported the project, run a test from inside Voiceflow by clicking the run button in the top right. Make any changes you want to, and then click *Publish* in the top right. This puts out a version of your Voiceflow agent that we can work with. There's no need to give it a name. If you forget to publish, your agent won't work and the returned JSON will just be `[]`.
 
 ![](https://files.readme.io/7ea0217-image.png)
 
