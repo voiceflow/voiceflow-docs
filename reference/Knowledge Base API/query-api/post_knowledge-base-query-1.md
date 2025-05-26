@@ -17,17 +17,17 @@ This API endpoint allows you to query the Voiceflow Knowledge Base and retrieve 
 
 ## Available Models
 
-- gpt-3.5-turbo
-- gpt-4-turbo
-- gpt-4
-- claude-instant-v1
-- claude-v1
-- claude-v2
-- claude-3-haiku
-- claude-3-sonnet
-- claude-3.5-sonnet
-- claude-3-opus
-- gemini-pro-1.5
+* gpt-3.5-turbo
+* gpt-4-turbo
+* gpt-4
+* claude-instant-v1
+* claude-v1
+* claude-v2
+* claude-3-haiku
+* claude-3-sonnet
+* claude-3.5-sonnet
+* claude-3-opus
+* gemini-pro-1.5
 
 ## Examples
 
