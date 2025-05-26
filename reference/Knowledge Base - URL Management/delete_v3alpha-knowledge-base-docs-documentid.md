@@ -15,23 +15,33 @@ next:
 ---
 ## Request Fields
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Property",
-    "h-1": "Description & Example",
-    "0-0": "**documentID**  \n(path variable)",
-    "0-1": "A unique identifier of the document object (a string).  \nTo get the list of documentID's, use the **GET Document List** Knowledge Base API."
-  },
-  "cols": 2,
-  "rows": 1,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Property
+      </th>
 
+      <th style={{ textAlign: "left" }}>
+        Description & Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **documentID**
+        (path variable)
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A unique identifier of the document object (a string).\
+        To get the list of documentID's, use the **GET Document List** Knowledge Base API.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Sample Response
 
