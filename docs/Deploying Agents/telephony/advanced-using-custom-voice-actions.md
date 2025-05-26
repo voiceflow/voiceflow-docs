@@ -1,0 +1,255 @@
+---
+title: Advanced - Using custom voice actions
+excerpt: ''
+deprecated: false
+hidden: false
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+## Overview
+
+Custom actions allow you to extend the functionality of your voice agents and implement advanced telephony workflows. By leveraging custom actions, you can:
+
+- Create interactive voice response (IVR) menus with DTMF (touch-tone) input 
+- Capture and validate caller input, such as account numbers or PINs
+- Transfer calls to external phone numbers based on caller responses
+- Dynamically update the agent's ASR settings during the conversation
+
+This guide will show you how to set up and use custom actions to build sophisticated voice experiences.
+
+## Getting Started
+
+To add a custom action to your canvas:
+
+1. Drag the "Custom action" step from the Dev section in the steps toolbar.
+2. Enter a name for your action in the block's settings panel
+3. Select "Stop on action" if you want the action to interrupt the agent's speech
+4. Define the expected inputs and outputs for your action in the "Body" section using JSON notation
+
+## Key Concepts
+
+- **DTMF (Dual-Tone Multi-Frequency):** The touch tones generated when a caller presses keys on their phone keypad. Each number key corresponds to a unique frequency pair.
+- **DTMF Input**: Collecting caller input by having them press number keys on their phone in response to your agent's prompts. Useful for navigating menus, entering data, or making selections.
+- **Call Transfer**: Programmatically forwarding an in-progress call to a different phone number, such as to route the caller to a live agent or another department.
+- **ASR Settings:** The configuration options that control the agent's automatic speech recognition (ASR) behavior, such as the language model, recognition timeout, and confidence threshold.
+
+## How To
+
+### Retrieve Call Metadata
+
+As part of the initial launch request (at the start step), we will include: 
+
+- `userNumber` - phone number of the user
+- `agentNumber` - phone number of the agent (you may have multiple numbers attached to the same agent)
+- `callType` - if this is an inbound or outbound call
+
+```typescript
+{
+  type: "launch",
+  payload: {
+    callType: "inbound" | "outbound",
+    userNumber: string,
+    agentNumber: string
+  }
+}
+```
+
+You can access this information through the `last_event` variable in a Javascript step. For example:
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/a4da522d2ed4b32d2057a97bb82317bb6f85d78f02ff59db6fb8074ddf1c082f-Screenshot_2024-12-13_at_9.10.20_AM.png",
+        "",
+        ""
+      ],
+      "align": "center"
+    }
+  ]
+}
+[/block]
+
+
+### Set Up a DTMF Menu
+
+1. Add a Message step to your flow and have your agent prompt the caller to select from a numbered list of options ("Press 1 for Sales, 2 for Support...).
+2. Drag a Custom action step onto the canvas and name it "DTMF".
+3. Enable the "Stop on action" option.
+4. Under Paths you can add `DTMF 1`, `DTMF 2`, etc. The `default` path will be followed if the user presses or says something that is not setup as its own discrete path in the step configuration. 
+5. Add connections from the custom action step to other steps representing each menu option.
+6. In each connected block, check for the DTMF input using the `last_event.data` variable (e.g., `last_event.data == "1"` for the first option).
+7. Route the caller to the appropriate flow based on their DTMF selection.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/a497442567e0dd09cc8d0eed9039caaa78c2d8959956ab914fa34affcb1914d5-image.png",
+        null,
+        ""
+      ],
+      "align": "center"
+    }
+  ]
+}
+[/block]
+
+
+### Capture a PIN Code
+
+Following the same steps above to capture the keys a user presses, we will now set up a design to use this method for capturing user input.
+
+1. Drag a Custom action step onto canvas and name it "DTMF".
+2. Enable the "Stop on action " option.
+3. Setup `default` path only as this will allow for any keys during capture to be registered as part of the loop.
+4. Use a Javascript step to validate the captured digit and to continue once input length has been met. 
+   1. We can make use of the `last_event` built-in variable inside the Javascript step
+   2. The name of a DTMF event is always called `DTMF {DIGIT}`, so we can just look for events that start with DTMF and pluck out the digit at the end. When you turn this into a loop, you are now collecting numbers from the user (see image below for example).
+5. Design appropriate flows for valid and invalid PIN scenarios.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/0b77151c821687409c437c6db962d97caa7b2ae1770c38b46f2d7a7c318987e2-image.png",
+        null,
+        ""
+      ],
+      "align": "center"
+    }
+  ]
+}
+[/block]
+
+
+### Transfer Call to Agent
+
+1. At the point in your flow where you want to transfer the call, add a Custom action step.
+2. Name the block "forward-call".
+3. In the Body field, enter:
+   ```json
+   {
+     "number": "+1415XXXXXXX"
+   }
+   ```
+4. Add a Message step before the Transfer explaining to the caller that they will be transferred.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/206192c16308632a518016a711e1dd0967b43fd49f002bc4eb4a3aa4424e364c-image.png",
+        null,
+        ""
+      ],
+      "align": "center",
+      "sizing": "50% "
+    }
+  ]
+}
+[/block]
+
+
+<br />
+
+### Update ASR Settings Mid-Call
+
+1. Identify points in your flow where you expect the caller's speech patterns to change (e.g., switching languages, long vs. short inputs).
+2. Drag a Custom action step onto canvas and name it "asr".
+3. Enable the "Stop on action " option.
+4. In the Body field, specify the ASR parameters you want to modify. Here are the available settings:
+   ```json
+   {
+     "settings": {
+       "locale": string,
+       "punctuationWaitMS": number,
+       "partialWaitMS": number, // no punctuation wait
+       "silenceWaitMS": number,
+     }
+   }
+   ```
+   1. Example usage
+      ```json
+      {
+        "settings": {
+          "locale": "fr",
+          "punctuationWaitMS": 5000
+        }
+      }
+      ```
+5. Thoroughly test your flow and ASR performance after each settings change.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/db8d9f2dd55b346ad5715a43654c9801d9aa070e4b6f48dd33029f0544e7c352-image.png",
+        null,
+        ""
+      ],
+      "align": "center",
+      "sizing": "75% "
+    }
+  ]
+}
+[/block]
+
+
+### Prevent Interruptions
+
+By default, the call is always interruptable - the agent will stop talking when a user speaks over it.  
+Upon the next utterance, the previous flow will be cancelled (the steps that haven't run won't be run). 
+
+For more info on this, reference: <https://docs.voiceflow.com/docs/interruption-behavior>
+
+However there is a special use case - for critical long runnning actions, we don't want any interruptions until the action is completed. Even with a human, sometimes you might be put on hold while something is happening.
+
+For example, if it takes up to 15 seconds to book an airline ticket, we should not let the user interrupt until the booking is complete and we confirm it back with them. 
+
+To achieve this, create a custom action step labelled "**interruption**", in the body you can set `"allowInterrupts"` to `true` or `false`.
+
+- `true`: the user can now interrupt the bot for the rest of the call
+- `false`: the user can no longer interrupt the bot for the rest of the call, anything they say while the bot is not listening _is ignored_.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/e7165978948f8210f75fdadeecbdf85c8b28a554c1445be7fe6ff0423147a1a0-Capture_decran_le_2025-02-19_a_16.08.01.png",
+        "",
+        ""
+      ],
+      "align": "center"
+    }
+  ]
+}
+[/block]
+
+
+Once this action is hit, the setting applies for the rest of the call. So ideally after your uninterruptable action is performed, you can turn it off again with `allowInterrupts: true`.
+
+## Best Practices & Tips
+
+- Use DTMF menus judiciously to avoid overloading callers with too many options. Limit menus to 3-5 clearly differentiated choices.
+- When capturing data like PINs, use a Message step to confirm the caller's input before proceeding.
+- Be mindful of the caller's experience when transferring calls - provide estimated wait times or option to continue talking to AI agent.
+- Test your ASR settings changes with a diverse set of voices and accents to ensure they improve recognition accuracy for your target audience.
+
+## Troubleshooting
+
+### Caller Hears Silence After Entering PIN
+
+- Check that your PIN validation code is executing quickly and not hanging the conversation
+- Use a Message step to confirm the caller's PIN was received before processing it
+- Investigate transcript logs and test your PIN flow to debug any issues.
