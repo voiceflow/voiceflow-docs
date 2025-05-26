@@ -5,3 +5,4 @@
 - get_transcripts-projectid-transcriptid
 - patch_transcripts-projectid-transcriptid
 - delete_transcripts-projectid-transcriptid
+- get_transcripts-projectid-transcriptid-export
