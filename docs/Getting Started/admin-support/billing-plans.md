@@ -14,23 +14,7 @@ next:
 
 You can go find all the plans available on the [pricing page](https://www.voiceflow.com/pricing).
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5671380e9d5f5014ab22c37cbe9c874ac25ef2821ab6eda886f7d5e71c565780-CleanShot_2025-04-29_at_15.35.32.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true,
-      "caption": ""
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/5671380e9d5f5014ab22c37cbe9c874ac25ef2821ab6eda886f7d5e71c565780-CleanShot_2025-04-29_at_15.35.32.png" />
 
 # Manage Billing (Pro)
 
