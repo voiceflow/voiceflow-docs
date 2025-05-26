@@ -22,7 +22,7 @@ After adding a Capture step to your assistant, we can see that we have the optio
 
 ![](https://files.readme.io/e0e9539-image.png)
 
-_You also have the option of adding Actions, No Match, No Reply and can add/configure additional Captures._
+*You also have the option of adding Actions, No Match, No Reply and can add/configure additional Captures.*
 
 Note that in conversation design, the Capture is ultimately waiting on user input. This means you're not able to add steps behind capture within a block - the step should end a “turn” in the conversation you’re designing.
 
@@ -30,7 +30,7 @@ The power of the Capture step is leveraging it to personalize conversations by a
 
 All in all, capture steps are useful in capturing an entire user reply and applying it to a variable, or specific entities in a user response.
 
-_**Tip:** On Voiceflow, there are now multiple ways in order to save user information. The **Capture** step is for saving user input to variables, and **Choice or Button** steps are to guide the conversation with exact matches or [intents](https://developer.voiceflow.com/v2.0/docs/intents)._
+***Tip:** On Voiceflow, there are now multiple ways in order to save user information. The **Capture** step is for saving user input to variables, and **Choice or Button** steps are to guide the conversation with exact matches or [intents](https://developer.voiceflow.com/v2.0/docs/intents).*
 
 Capture is different to a choice step, as capture only record values and do not correspond to intents or pathway decision-making. If the user response does not match the capture step's expected entity type (such as the user typing a word instead of an expected number), or the user does not respond in a given time, the capture step can be configured to ask for the value again using a reprompt. 
 
@@ -56,8 +56,8 @@ Alternatively, you can pick to capture entities within your users' response. Thi
 
 You can now enter the workflow for Entity Creation & Editing, Type, Color, and NLU configurations (slot values & synonyms) right inside the Capture Step!
 
-- To **Create a New Entity**, select the bottom-menu option and configure your newly created Entity in the modal that appears
-- To **Edit a Selected Entity**, select your desired Entity in the entity dropdown menu in the Capture step. Then, select the pencil icon located to the left of the Entity name in this selector menu.
+* To **Create a New Entity**, select the bottom-menu option and configure your newly created Entity in the modal that appears
+* To **Edit a Selected Entity**, select your desired Entity in the entity dropdown menu in the Capture step. Then, select the pencil icon located to the left of the Entity name in this selector menu.
 
 ![](https://files.readme.io/8b21539-image.png)
 
@@ -65,7 +65,7 @@ You can now enter the workflow for Entity Creation & Editing, Type, Color, and N
 
 In some cases, the user’s response may not contain the entity you want to capture. Adding an Entity Prompt lets your assistant ask and follow-up with the user for the required information.
 
-_**For example**, let’s say we want the user to provide their favorite color. If they respond instead with ‘hello’, this will trigger the entity prompt and the assistant will request a valid response from the user._
+***For example**, let’s say we want the user to provide their favorite color. If they respond instead with ‘hello’, this will trigger the entity prompt and the assistant will request a valid response from the user.*
 
 You can input your desired Entity Prompt responses in the field. And similar to Text steps, Entity Prompt fields support markup styling. Should you not require an entity reprompt anymore, you can delete it with the (-) icon.
 
@@ -79,14 +79,14 @@ In addition to configuring your Capture step, you can use [Actions](https://deve
 
 Under the Capture step, you can perform these nested actions per Capture:
 
-- **Go to Block**- Goes to a specific block referenced within the assistant
-- **Go to Intent**- Goes to an existing intent contained in the assistant
-- **End**- Ends the conversation at its current state
-- **Set variable**-Allows you to set and change the value of variables
-- **API**- Allows you to set up, configure and execute API calls & functions
-- **Code**- Allows you to set up and code custom JavaScript functions & commands
+* **Go to Block**- Goes to a specific block referenced within the assistant
+* **Go to Intent**- Goes to an existing intent contained in the assistant
+* **End**- Ends the conversation at its current state
+* **Set variable**-Allows you to set and change the value of variables
+* **API**- Allows you to set up, configure and execute API calls & functions
+* **Code**- Allows you to set up and code custom JavaScript functions & commands
 
-_Tip: Learn more about [Actions in depth and detail here](https://developer.voiceflow.com/v2.0/docs/actions)._
+*Tip: Learn more about[Actions in depth and detail here](https://developer.voiceflow.com/v2.0/docs/actions).*
 
 ## No Match/No Reply — Configurations on Capture Step
 
@@ -97,7 +97,7 @@ There may be instances where the user says something completely unrelated (No Ma
 
 For either of these cases, you can guide your users to an alternative conversation path with a **‘No Match’ or 'No Reply'** response, under the **Capture** step.
 
-_Tip: You can configure **No Reply** by hitting the settings icon at the footer of the Capture step editor, and hit '**Add no match**.' The instructions below apply to both No Match and No Reply._
+*Tip: You can configure**No Reply** by hitting the settings icon at the footer of the Capture step editor, and hit '**Add no match**.' The instructions below apply to both No Match and No Reply.*
 
 ![](https://files.readme.io/ed0a340-image.png)
 
@@ -111,4 +111,4 @@ You can rename the label of the No Match path, so that it can be easily referenc
 
 You can also use [Actions](https://developer.voiceflow.com/v2.0/docs/actions) to nest navigation and backend logic in a No Match within the Capture step.
 
-_**Tip:** You can configure your **No Reply** response message, the time delay before triggering no reply response(s), and connect it to a conversation path similar to the **No Match** workflow outlined above._
+***Tip:** You can configure your **No Reply** response message, the time delay before triggering no reply response(s), and connect it to a conversation path similar to the **No Match** workflow outlined above.*
