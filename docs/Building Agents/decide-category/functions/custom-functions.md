@@ -14,9 +14,9 @@ In Voiceflow, functions allow you to create reusable, user-defined steps that ca
 
 ## Example functions
 
-**Extract Chunks from a Knowledge Base Response:**[Click to Download](https://drive.google.com/uc?export=download&id=15t2e-Rei3Pj-xbqezjo6qNYe9N04pEwA)
+**Extract Chunks from a Knowledge Base Response:**[Click to Download](https://drive.google.com/uc?export=download\&id=15t2e-Rei3Pj-xbqezjo6qNYe9N04pEwA)
 
-**Send a Query to Mistral 7xB and Parse Answer (via. together.ai):** [Click to Download](https://drive.google.com/uc?export=download&id=1d2nRcmVXYVzdmyYhBwKjTQLHbo9HH9VM)
+**Send a Query to Mistral 7xB and Parse Answer (via. together.ai):** [Click to Download](https://drive.google.com/uc?export=download\&id=1d2nRcmVXYVzdmyYhBwKjTQLHbo9HH9VM)
 
 **The function** [marketplace](https://www.voiceflow.com/resources-template?products=Function) :You can find a large collection of Voiceflow and community-made functions on our marketplace that you can study for inspiration and code formatting.
 
@@ -70,6 +70,6 @@ Additionally, your documentation should be **aimed towards a non-technical audie
 
 ### Learn more
 
-- [Implementing Function Code](https://docs.voiceflow.com/docs/developing-functions-copy-1): Learn how to write function code, process inputs and outputs, and make network requests within Voiceflow.
-- [Function Step](https://docs.voiceflow.com/docs/functions): Learn how to use the function step within your Voiceflow projects by visiting the Function Step documentation.
-- [Voiceflow Marketplace](https://www.voiceflow.com/resources-template?products=Function): Discover pre-made functions and get inspiration from the Voiceflow Function Marketplace.
+* [Implementing Function Code](https://docs.voiceflow.com/docs/developing-functions-copy-1): Learn how to write function code, process inputs and outputs, and make network requests within Voiceflow.
+* [Function Step](https://docs.voiceflow.com/docs/functions): Learn how to use the function step within your Voiceflow projects by visiting the Function Step documentation.
+* [Voiceflow Marketplace](https://www.voiceflow.com/resources-template?products=Function): Discover pre-made functions and get inspiration from the Voiceflow Function Marketplace.
