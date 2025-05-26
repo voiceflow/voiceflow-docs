@@ -18,7 +18,7 @@ Voiceflow offers you the ability to export the native training data direct to yo
 
 ### Manual Export
 
-For these Integrations we will create export files pre-formatted for upload directly into your NLU platform. 
+For these Integrations we will create export files pre-formatted for upload directly into your NLU platform.
 
 ### Integrations Supported per NLU
 
