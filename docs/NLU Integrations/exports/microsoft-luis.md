@@ -10,53 +10,1602 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Quick Reference"
-}
-[/block]
+## Quick Reference
 
-[block:parameters]
-{
-  "data": {
-    "0-0": "File format",
-    "0-1": "JSON",
-    "1-0": "**Data Support**",
-    "2-0": "Intents",
-    "2-1": "✅",
-    "3-1": "✅",
-    "4-1": "✅",
-    "5-1": "✅",
-    "3-0": "Training Phrases",
-    "4-0": "Entities",
-    "5-0": "Synonyms",
-    "6-0": "**Import Type** ",
-    "7-0": "Modify",
-    "7-1": "❌",
-    "h-0": "Data",
-    "h-1": "Support",
-    "8-0": "Overwrite",
-    "8-1": "✅"
-  },
-  "cols": 2,
-  "rows": 9
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "left" }}>
+        Data
+      </th>
 
-[block:api-header]
-{
-  "title": "Sample Export"
-}
-[/block]
+      <th style={{ textAlign: "left" }}>
+        Support
+      </th>
+    </tr>
+  </thead>
 
-[block:code]
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        File format
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        JSON
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Data Support**
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Intents
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Training Phrases
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Entities
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Synonyms
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        **Import Type** 
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Modify
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ❌
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Overwrite
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ✅
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## Sample Export
+
+```json project_burger.json
 {
-  "codes": [
-    {
-      "code": "{\n   \"name\":\"6203f8ed4fbf39001b95e759\",\n   \"desc\":\"\",\n   \"culture\":\"en-us\",\n   \"intents\":[\n      {\n         \"name\":\"place_order_demo\"\n      },\n      {\n         \"name\":\"dm_316c6d5f13_place_order_demo\"\n      }\n   ],\n   \"entities\":[\n      {\n         \"name\":\"sandwich_demo\",\n         \"features\":[\n            \n         ]\n      },\n      {\n         \"name\":\"side_demo\",\n         \"features\":[\n            \n         ]\n      },\n      {\n         \"name\":\"drink_demo\",\n         \"features\":[\n            \n         ]\n      }\n   ],\n   \"patterns\":[\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"{drink_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"{side_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"{sandwich_demo} with {side_demo} and a {drink_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"need a {sandwich_demo} and a {side_demo} and a {drink_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"My order is {sandwich_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"I want a {sandwich_demo} with {drink_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"{sandwich_demo} please\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"{sandwich_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"Give me a {sandwich_demo} and {side_demo}\"\n      },\n      {\n         \"intent\":\"place_order_demo\",\n         \"pattern\":\"I'd like to order a {sandwich_demo} with {side_demo} and a {drink_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} How about a {sandwich_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} I want a {sandwich_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} {sandwich_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} a {sandwich_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} {sandwich_demo} please\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} give me a {sandwich_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} I asked for {side_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} some {side_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} {side_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} I want {side_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} {side_demo} please\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} give me {side_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} {drink_demo} please\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} I asked for a {drink_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} {drink_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} a {drink_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} I want a {drink_demo}\"\n      },\n      {\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"pattern\":\"{dm_316c6d5f13} give me a {drink_demo}\"\n      }\n   ],\n   \"settings\":[\n      \n   ],\n   \"versionId\":\"0.1\",\n   \"composites\":[\n      \n   ],\n   \"utterances\":[\n      {\n         \"text\":\"Coke\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":3,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"Fries\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":4,\n               \"entity\":\"side_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I'd like to order a combo\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Hamburger with fry and a coca cola\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":8,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":15,\n               \"endPos\":17,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":25,\n               \"endPos\":33,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"need a burger and a a fries and a pepsi\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":7,\n               \"endPos\":12,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":20,\n               \"endPos\":26,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":34,\n               \"endPos\":38,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"My order is single\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":12,\n               \"endPos\":17,\n               \"entity\":\"sandwich_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I want a plain burger with Sprite\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":9,\n               \"endPos\":20,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":27,\n               \"endPos\":32,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"Cheeseburger please\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":11,\n               \"entity\":\"sandwich_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"cheeseburg\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":9,\n               \"entity\":\"sandwich_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"Give me a a cheeseburger and some fries\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":10,\n               \"endPos\":23,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":29,\n               \"endPos\":38,\n               \"entity\":\"side_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I'd like to order a cheese burger with french fries and a seven up\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":32,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":39,\n               \"endPos\":50,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":58,\n               \"endPos\":65,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"Super Chicken with Poutine and a 7 up\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":12,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":19,\n               \"endPos\":25,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":33,\n               \"endPos\":36,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"need a chicken and a gravy and a Root Beer\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":7,\n               \"endPos\":13,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":21,\n               \"endPos\":25,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":33,\n               \"endPos\":41,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I want a chicken sandwich with barks\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":9,\n               \"endPos\":24,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":31,\n               \"endPos\":35,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I'd like to order a Fish Burger with fries and gravy and a barks root beer\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":30,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":37,\n               \"endPos\":51,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":59,\n               \"endPos\":73,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"barqs\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":4,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"fish sandwich with Onion Rings and a Iced Tea\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":12,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":19,\n               \"endPos\":29,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":37,\n               \"endPos\":44,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"need a fish filet and a onion and a cold tea\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":7,\n               \"endPos\":16,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":24,\n               \"endPos\":28,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":36,\n               \"endPos\":43,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I want a fish with nestea\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":9,\n               \"endPos\":12,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":19,\n               \"endPos\":24,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"I'd like to order a Veggie Burger with rings and a Water\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":32,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":39,\n               \"endPos\":43,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":51,\n               \"endPos\":55,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"onions\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":5,\n               \"entity\":\"side_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"vegetable sandwich with Salad and a Sprite\",\n         \"intent\":\"place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":0,\n               \"endPos\":17,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":24,\n               \"endPos\":28,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":36,\n               \"endPos\":41,\n               \"entity\":\"drink_demo\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 How about a Hamburger\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":23,\n               \"endPos\":31,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want a burger\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":25,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 single\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":16,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a plain burger\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":13,\n               \"endPos\":24,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 Cheeseburger please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":22,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 give me a cheeseburg\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":21,\n               \"endPos\":30,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a cheeseburger\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":24,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 How about a cheese burger\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":23,\n               \"endPos\":35,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want a Super Chicken\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":32,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 chicken\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":17,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a chicken sandwich\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":13,\n               \"endPos\":28,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 Fish Burger please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":21,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 give me a fish sandwich\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":21,\n               \"endPos\":33,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 fish filet\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":20,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 How about a fish\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":23,\n               \"endPos\":26,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want a Veggie Burger\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":32,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 vegetable sandwich\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":28,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a vegetarian sandwich\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":13,\n               \"endPos\":31,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 veggie sandwich please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":25,\n               \"entity\":\"sandwich_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I asked for Fries\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":23,\n               \"endPos\":27,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 some fry\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":16,\n               \"endPos\":18,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a fries\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":17,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want some fries\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":18,\n               \"endPos\":27,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 french fries please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":22,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 give me Poutine\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":19,\n               \"endPos\":25,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 gravy\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":15,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I asked for fries and gravy\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":23,\n               \"endPos\":37,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 some Onion Rings\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":16,\n               \"endPos\":26,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 onion\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":15,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want rings\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":18,\n               \"endPos\":22,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 onions please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":16,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 give me Salad\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":19,\n               \"endPos\":23,\n               \"entity\":\"side_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 Coke please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":14,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I asked for a coca cola\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":25,\n               \"endPos\":33,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 pepsi\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":15,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a Sprite\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":13,\n               \"endPos\":18,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want a seven up\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":27,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 give me a 7 up\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":21,\n               \"endPos\":24,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 Root Beer\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":19,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 barks please\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":15,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I asked for a barks root beer\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":25,\n               \"endPos\":39,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 barqs\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":15,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 a Iced Tea\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":13,\n               \"endPos\":20,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 I want a cold tea\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":20,\n               \"endPos\":27,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 give me a nestea\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":21,\n               \"endPos\":26,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"316c6d5f13 Water\",\n         \"intent\":\"dm_316c6d5f13_place_order_demo\",\n         \"entities\":[\n            {\n               \"startPos\":11,\n               \"endPos\":15,\n               \"entity\":\"drink_demo\"\n            },\n            {\n               \"startPos\":0,\n               \"endPos\":10,\n               \"entity\":\"dm_316c6d5f13\"\n            }\n         ]\n      },\n      {\n         \"text\":\"Time flies like an arrow, but fruit flies like a banana\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"The quick brown fox jumps over the lazy dog\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Pack my box with five dozen liquor jugs\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"The five boxing wizards jump quickly\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"The horse raced past the barn fell\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Her scream silenced the rowdy teenagers\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Be careful with that butter knife\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"It didn't make sense unless you had the power to eat colors\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"The gloves protect my feet from excess work\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"She had some amazing news to share but nobody to share it with\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"All you need to do is pick up the pen and begin\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"What’s your very first memory\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Is there anything about yourself you’ve never told another soul\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Free if you bring a gnome costume\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Pink horses galloped across the sea\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"You bite up because of your lower jaw\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"I'd rather be a bird than a fish\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Seek success, but always be prepared for random cats\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"The ants enjoyed the barbecue more than the family\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"It was getting dark, and we weren’t there yet\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"The tree fell unexpectedly short\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"If you could domesticate any animal in the world, which would you pick\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"Why do you do what you do\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      },\n      {\n         \"text\":\"When is the last time you experienced nostalgia\",\n         \"intent\":\"None\",\n         \"entities\":[\n            \n         ]\n      }\n   ],\n   \"closedLists\":[\n      \n   ],\n   \"phraselists\":[\n      {\n         \"name\":\"sandwich_demo\",\n         \"mode\":true,\n         \"words\":\"Hamburger,burger,single,plainburger,Cheeseburger,cheeseburg,acheeseburger,cheeseburger,SuperChicken,chicken,chickensandwich,FishBurger,fishsandwich,fishfilet,fish,VeggieBurger,vegetablesandwich,vegetariansandwich,veggiesandwich\",\n         \"activated\":true,\n         \"enabledForAllModels\":false\n      },\n      {\n         \"name\":\"side_demo\",\n         \"mode\":true,\n         \"words\":\"Fries,fry,afries,somefries,frenchfries,Poutine,gravy,friesandgravy,OnionRings,onion,rings,onions,Salad\",\n         \"activated\":true,\n         \"enabledForAllModels\":false\n      },\n      {\n         \"name\":\"drink_demo\",\n         \"mode\":true,\n         \"words\":\"Coke,cocacola,pepsi,Sprite,sevenup,7up,RootBeer,barks,barksrootbeer,barqs,IcedTea,coldtea,nestea,Water\",\n         \"activated\":true,\n         \"enabledForAllModels\":false\n      }\n   ],\n   \"modelFeatures\":[\n      {\n         \"name\":\"sandwich_demo\",\n         \"mode\":true,\n         \"words\":\"Hamburger,burger,single,plainburger,Cheeseburger,cheeseburg,acheeseburger,cheeseburger,SuperChicken,chicken,chickensandwich,FishBurger,fishsandwich,fishfilet,fish,VeggieBurger,vegetablesandwich,vegetariansandwich,veggiesandwich\",\n         \"activated\":true,\n         \"enabledForAllModels\":false\n      },\n      {\n         \"name\":\"side_demo\",\n         \"mode\":true,\n         \"words\":\"Fries,fry,afries,somefries,frenchfries,Poutine,gravy,friesandgravy,OnionRings,onion,rings,onions,Salad\",\n         \"activated\":true,\n         \"enabledForAllModels\":false\n      },\n      {\n         \"name\":\"drink_demo\",\n         \"mode\":true,\n         \"words\":\"Coke,cocacola,pepsi,Sprite,sevenup,7up,RootBeer,barks,barksrootbeer,barqs,IcedTea,coldtea,nestea,Water\",\n         \"activated\":true,\n         \"enabledForAllModels\":false\n      }\n   ],\n   \"hierarchicals\":[\n      \n   ],\n   \"regexFeatures\":[\n      \n   ],\n   \"prebuiltEntities\":[\n      \n   ],\n   \"tokenizerVersion\":\"1.0.0\",\n   \"luis_schema_version\":\"7.0.0\",\n   \"patternAnyEntities\":[\n      \n   ],\n   \"regex_entities\":[\n      {\n         \"name\":\"dm_316c6d5f13\",\n         \"regexPattern\":\"316c6d5f13\"\n      }\n   ]\n}",
-      "language": "json",
-      "name": "project_burger.json"
-    }
-  ]
+   "name":"6203f8ed4fbf39001b95e759",
+   "desc":"",
+   "culture":"en-us",
+   "intents":[
+      {
+         "name":"place_order_demo"
+      },
+      {
+         "name":"dm_316c6d5f13_place_order_demo"
+      }
+   ],
+   "entities":[
+      {
+         "name":"sandwich_demo",
+         "features":[
+            
+         ]
+      },
+      {
+         "name":"side_demo",
+         "features":[
+            
+         ]
+      },
+      {
+         "name":"drink_demo",
+         "features":[
+            
+         ]
+      }
+   ],
+   "patterns":[
+      {
+         "intent":"place_order_demo",
+         "pattern":"{drink_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"{side_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"{sandwich_demo} with {side_demo} and a {drink_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"need a {sandwich_demo} and a {side_demo} and a {drink_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"My order is {sandwich_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"I want a {sandwich_demo} with {drink_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"{sandwich_demo} please"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"{sandwich_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"Give me a {sandwich_demo} and {side_demo}"
+      },
+      {
+         "intent":"place_order_demo",
+         "pattern":"I'd like to order a {sandwich_demo} with {side_demo} and a {drink_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} How about a {sandwich_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} I want a {sandwich_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} {sandwich_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} a {sandwich_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} {sandwich_demo} please"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} give me a {sandwich_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} I asked for {side_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} some {side_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} {side_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} I want {side_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} {side_demo} please"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} give me {side_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} {drink_demo} please"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} I asked for a {drink_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} {drink_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} a {drink_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} I want a {drink_demo}"
+      },
+      {
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "pattern":"{dm_316c6d5f13} give me a {drink_demo}"
+      }
+   ],
+   "settings":[
+      
+   ],
+   "versionId":"0.1",
+   "composites":[
+      
+   ],
+   "utterances":[
+      {
+         "text":"Coke",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":3,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"Fries",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":4,
+               "entity":"side_demo"
+            }
+         ]
+      },
+      {
+         "text":"I'd like to order a combo",
+         "intent":"place_order_demo",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Hamburger with fry and a coca cola",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":8,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":15,
+               "endPos":17,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":25,
+               "endPos":33,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"need a burger and a a fries and a pepsi",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":7,
+               "endPos":12,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":20,
+               "endPos":26,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":34,
+               "endPos":38,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"My order is single",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":12,
+               "endPos":17,
+               "entity":"sandwich_demo"
+            }
+         ]
+      },
+      {
+         "text":"I want a plain burger with Sprite",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":9,
+               "endPos":20,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":27,
+               "endPos":32,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"Cheeseburger please",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":11,
+               "entity":"sandwich_demo"
+            }
+         ]
+      },
+      {
+         "text":"cheeseburg",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":9,
+               "entity":"sandwich_demo"
+            }
+         ]
+      },
+      {
+         "text":"Give me a a cheeseburger and some fries",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":10,
+               "endPos":23,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":29,
+               "endPos":38,
+               "entity":"side_demo"
+            }
+         ]
+      },
+      {
+         "text":"I'd like to order a cheese burger with french fries and a seven up",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":32,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":39,
+               "endPos":50,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":58,
+               "endPos":65,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"Super Chicken with Poutine and a 7 up",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":12,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":19,
+               "endPos":25,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":33,
+               "endPos":36,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"need a chicken and a gravy and a Root Beer",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":7,
+               "endPos":13,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":21,
+               "endPos":25,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":33,
+               "endPos":41,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"I want a chicken sandwich with barks",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":9,
+               "endPos":24,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":31,
+               "endPos":35,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"I'd like to order a Fish Burger with fries and gravy and a barks root beer",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":30,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":37,
+               "endPos":51,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":59,
+               "endPos":73,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"barqs",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":4,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"fish sandwich with Onion Rings and a Iced Tea",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":12,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":19,
+               "endPos":29,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":37,
+               "endPos":44,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"need a fish filet and a onion and a cold tea",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":7,
+               "endPos":16,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":24,
+               "endPos":28,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":36,
+               "endPos":43,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"I want a fish with nestea",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":9,
+               "endPos":12,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":19,
+               "endPos":24,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"I'd like to order a Veggie Burger with rings and a Water",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":32,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":39,
+               "endPos":43,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":51,
+               "endPos":55,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"onions",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":5,
+               "entity":"side_demo"
+            }
+         ]
+      },
+      {
+         "text":"vegetable sandwich with Salad and a Sprite",
+         "intent":"place_order_demo",
+         "entities":[
+            {
+               "startPos":0,
+               "endPos":17,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":24,
+               "endPos":28,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":36,
+               "endPos":41,
+               "entity":"drink_demo"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 How about a Hamburger",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":23,
+               "endPos":31,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want a burger",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":25,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 single",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":16,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a plain burger",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":13,
+               "endPos":24,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 Cheeseburger please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":22,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 give me a cheeseburg",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":21,
+               "endPos":30,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a cheeseburger",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":24,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 How about a cheese burger",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":23,
+               "endPos":35,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want a Super Chicken",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":32,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 chicken",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":17,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a chicken sandwich",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":13,
+               "endPos":28,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 Fish Burger please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":21,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 give me a fish sandwich",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":21,
+               "endPos":33,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 fish filet",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":20,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 How about a fish",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":23,
+               "endPos":26,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want a Veggie Burger",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":32,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 vegetable sandwich",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":28,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a vegetarian sandwich",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":13,
+               "endPos":31,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 veggie sandwich please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":25,
+               "entity":"sandwich_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I asked for Fries",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":23,
+               "endPos":27,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 some fry",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":16,
+               "endPos":18,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a fries",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":17,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want some fries",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":18,
+               "endPos":27,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 french fries please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":22,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 give me Poutine",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":19,
+               "endPos":25,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 gravy",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":15,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I asked for fries and gravy",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":23,
+               "endPos":37,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 some Onion Rings",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":16,
+               "endPos":26,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 onion",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":15,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want rings",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":18,
+               "endPos":22,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 onions please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":16,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 give me Salad",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":19,
+               "endPos":23,
+               "entity":"side_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 Coke please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":14,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I asked for a coca cola",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":25,
+               "endPos":33,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 pepsi",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":15,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a Sprite",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":13,
+               "endPos":18,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want a seven up",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":27,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 give me a 7 up",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":21,
+               "endPos":24,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 Root Beer",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":19,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 barks please",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":15,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I asked for a barks root beer",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":25,
+               "endPos":39,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 barqs",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":15,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 a Iced Tea",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":13,
+               "endPos":20,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 I want a cold tea",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":20,
+               "endPos":27,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 give me a nestea",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":21,
+               "endPos":26,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"316c6d5f13 Water",
+         "intent":"dm_316c6d5f13_place_order_demo",
+         "entities":[
+            {
+               "startPos":11,
+               "endPos":15,
+               "entity":"drink_demo"
+            },
+            {
+               "startPos":0,
+               "endPos":10,
+               "entity":"dm_316c6d5f13"
+            }
+         ]
+      },
+      {
+         "text":"Time flies like an arrow, but fruit flies like a banana",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"The quick brown fox jumps over the lazy dog",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Pack my box with five dozen liquor jugs",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"The five boxing wizards jump quickly",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"The horse raced past the barn fell",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Her scream silenced the rowdy teenagers",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Be careful with that butter knife",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"It didn't make sense unless you had the power to eat colors",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"The gloves protect my feet from excess work",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"She had some amazing news to share but nobody to share it with",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"All you need to do is pick up the pen and begin",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"What’s your very first memory",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Is there anything about yourself you’ve never told another soul",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Free if you bring a gnome costume",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Pink horses galloped across the sea",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"You bite up because of your lower jaw",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"I'd rather be a bird than a fish",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Seek success, but always be prepared for random cats",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"The ants enjoyed the barbecue more than the family",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"It was getting dark, and we weren’t there yet",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"The tree fell unexpectedly short",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"If you could domesticate any animal in the world, which would you pick",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"Why do you do what you do",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      },
+      {
+         "text":"When is the last time you experienced nostalgia",
+         "intent":"None",
+         "entities":[
+            
+         ]
+      }
+   ],
+   "closedLists":[
+      
+   ],
+   "phraselists":[
+      {
+         "name":"sandwich_demo",
+         "mode":true,
+         "words":"Hamburger,burger,single,plainburger,Cheeseburger,cheeseburg,acheeseburger,cheeseburger,SuperChicken,chicken,chickensandwich,FishBurger,fishsandwich,fishfilet,fish,VeggieBurger,vegetablesandwich,vegetariansandwich,veggiesandwich",
+         "activated":true,
+         "enabledForAllModels":false
+      },
+      {
+         "name":"side_demo",
+         "mode":true,
+         "words":"Fries,fry,afries,somefries,frenchfries,Poutine,gravy,friesandgravy,OnionRings,onion,rings,onions,Salad",
+         "activated":true,
+         "enabledForAllModels":false
+      },
+      {
+         "name":"drink_demo",
+         "mode":true,
+         "words":"Coke,cocacola,pepsi,Sprite,sevenup,7up,RootBeer,barks,barksrootbeer,barqs,IcedTea,coldtea,nestea,Water",
+         "activated":true,
+         "enabledForAllModels":false
+      }
+   ],
+   "modelFeatures":[
+      {
+         "name":"sandwich_demo",
+         "mode":true,
+         "words":"Hamburger,burger,single,plainburger,Cheeseburger,cheeseburg,acheeseburger,cheeseburger,SuperChicken,chicken,chickensandwich,FishBurger,fishsandwich,fishfilet,fish,VeggieBurger,vegetablesandwich,vegetariansandwich,veggiesandwich",
+         "activated":true,
+         "enabledForAllModels":false
+      },
+      {
+         "name":"side_demo",
+         "mode":true,
+         "words":"Fries,fry,afries,somefries,frenchfries,Poutine,gravy,friesandgravy,OnionRings,onion,rings,onions,Salad",
+         "activated":true,
+         "enabledForAllModels":false
+      },
+      {
+         "name":"drink_demo",
+         "mode":true,
+         "words":"Coke,cocacola,pepsi,Sprite,sevenup,7up,RootBeer,barks,barksrootbeer,barqs,IcedTea,coldtea,nestea,Water",
+         "activated":true,
+         "enabledForAllModels":false
+      }
+   ],
+   "hierarchicals":[
+      
+   ],
+   "regexFeatures":[
+      
+   ],
+   "prebuiltEntities":[
+      
+   ],
+   "tokenizerVersion":"1.0.0",
+   "luis_schema_version":"7.0.0",
+   "patternAnyEntities":[
+      
+   ],
+   "regex_entities":[
+      {
+         "name":"dm_316c6d5f13",
+         "regexPattern":"316c6d5f13"
+      }
+   ]
 }
-[/block]
+```
