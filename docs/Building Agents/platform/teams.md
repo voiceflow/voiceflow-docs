@@ -48,7 +48,7 @@ As with many conversation designers, you will quickly realize the importance of 
 
 Let **Canvas Markup** be the perfect companion in your conversation design process to make your workflow easier & smoother. 
 
-_Note: this would be more interactive engagement across designer(s) and more involved, rather than simply communicating with stakeholders using Commenting features on Voiceflow._
+*Note: this would be more interactive engagement across designer(s) and more involved, rather than simply communicating with stakeholders using Commenting features on Voiceflow.*
 
 **Canvas Markup** lets you annotate assistant designs, so your team has all the necessary context, in the way that works best for your team. This could include additional information on technical requirements, visual aids to illustrate the conversation flow and more!
 
@@ -64,13 +64,13 @@ Leveraging **Canvas Markup** on Voiceflow is the easiest way to leave visual ele
 
 **Canvas Markup** helps you consolidate a great deal of contextual information directly on the Canvas. You can use Canvas Markup to communicate user interactions, indicate revisions, link to key documents, and provide the context stakeholders need to flesh out your voice experience from a bird’s-eye view.
 
-_**Note**: Canvas Markup is purely for communication purposes across designers, editors & stakeholders on-canvas, on-tool.  You should note that any Canvas Markup does not relate to or impact the conversation flow or actions, and it's purely visual._
+***Note**: Canvas Markup is purely for communication purposes across designers, editors & stakeholders on-canvas, on-tool.  You should note that any Canvas Markup does not relate to or impact the conversation flow or actions, and it's purely visual.*
 
 Broadly speaking, markup comprises a set of symbols, or a language, that can be used to provide instructions. In the context of Voiceflow:
 
-- Import images and resize, rotate and move them anywhere on the canvas
-- Add text using custom fonts, weights, decorations, or color
-- Hyperlink to important documents and resources
+* Import images and resize, rotate and move them anywhere on the canvas
+* Add text using custom fonts, weights, decorations, or color
+* Hyperlink to important documents and resources
 
 ## Text markup
 
@@ -122,7 +122,7 @@ To remove an image, simply hit [Del] on your keyboard. You can also right-click 
 
 You can use comments to collaborate on assistants with workspace teammates. To post a comment, click the message icon on the assistant's top menu. Once you’ve entered commenting mode, you can click a spot on the canvas to leave your comment. You can affix a comment anywhere on the canvas, including blocks and steps.
 
-_Note: You can use hotkeys to open [C] and close [Esc] commenting mode._
+*Note: You can use hotkeys to open[C] and close [Esc] commenting mode.*
 
 ![](https://files.readme.io/25654ee-CleanShot_2024-06-06_at_11.08.312x.png)
 
