@@ -36,4 +36,4 @@ You can also use the [KB API](https://developer.voiceflow.com/reference/post_kno
 
 <br />
 
-For more details checkout the cookbook recipe _[Advanced Rag Filtering and Tagging](https://dash.readme.com/project/voiceflow-developer/v1.2/docs/advanced-rag-filtering-and-tagging)_
+For more details checkout the cookbook recipe *[Advanced Rag Filtering and Tagging](https://dash.readme.com/project/voiceflow-developer/v1.2/docs/advanced-rag-filtering-and-tagging)*
