@@ -25,4 +25,4 @@ An interaction is defined as any user input (e.g. an utterance or button click) 
 | Next 10 Million        | $0.0075         |
 | Above 15 Million       | $0.0065         |
 
-_Committed usage discounts are available on Enterprise plan_
+*Committed usage discounts are available on Enterprise plan*
