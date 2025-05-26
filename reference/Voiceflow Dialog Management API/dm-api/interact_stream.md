@@ -13,8 +13,8 @@ metadata:
 next:
   description: ''
 ---
-> 📘 
-> 
+> 📘
+>
 > This feature is currently in beta as we continue to refine functionalities and enhance performance based on customer feedback and our development roadmap. We appreciate your contributions to help us improve this service.
 
 This endpoint initiates a streaming interaction session with a Voiceflow agent. Clients connect to this endpoint to send and receive server-side events (SSE) using the `text/event-stream` format. This allows for continuous interaction without the need to poll or initiate multiple HTTP requests.
@@ -115,4 +115,4 @@ curl --request POST \
     }
 ```
 
-You can check out an example project here using the API: <https://github.com/voiceflow/streaming-wizard>
+You can check out an example project here using the API: [https://github.com/voiceflow/streaming-wizard](https://github.com/voiceflow/streaming-wizard)
