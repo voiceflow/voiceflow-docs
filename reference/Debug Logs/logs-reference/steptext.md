@@ -11,13 +11,39 @@ next:
   description: ''
 ---
 ## Examples
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.text\",\n  \"message\": {\n    \"componentName\": \"text\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"plainContent\": \"Hello, world!\",\n    \"richContent\": {\n      \"id\": \"jg8h3bv3\",\n      \"content\": [\n        {\n          \"children\": [\n            {\n              \"text\": \"Hello\",\n              \"italic\": true\n            },\n            {\n              \"text\": \", \"\n            },\n            {\n              \"text\": \"world\",\n              \"fontWeight\": \"700\"\n            },\n            {\n              \"text\": \"!\"\n            }\n          ]\n        }\n      ]\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.text",
+  "message": {
+    "componentName": "text",
+    "stepID": "628469f0effe73d544505715",
+    "plainContent": "Hello, world!",
+    "richContent": {
+      "id": "jg8h3bv3",
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Hello",
+              "italic": true
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "world",
+              "fontWeight": "700"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      ]
     }
-  ]
+  }
 }
-[/block]
+```
