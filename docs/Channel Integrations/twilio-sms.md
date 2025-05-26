@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 👍 This integration is currently in beta
-> 
+>
 > This integration is free-to-use while it is in beta.
 
 # Get started
@@ -23,9 +23,9 @@ Twilio is a cloud communications platform that allows companies to easily send a
 Whether you only want to prototype your assistant through SMS or launch it to all of your users, both paths are available as part of this integration.
 
 > 📘 Prerequisites
-> 
+>
 > Before starting the integration, you will need the following:
-> 
+>
 > 1. A Twilio account
 > 2. A Twilio phone number
 > 3. A Twilio messaging service
@@ -37,10 +37,10 @@ This integration guide will provide you with the steps and information needed to
 First, you will need to:
 
 1. Select Create Project
-2. Give your assistant a name and select the _Launch and Host_ project type
-3. Select _Channel_ -> _Twilio SMS_
+2. Give your assistant a name and select the *Launch and Host* project type
+3. Select *Channel* -> *Twilio SMS*
 4. Select the language of your assistant
-5. Click _Create_
+5. Click *Create*
 
 ![](https://files.readme.io/1fde668-Screen_Shot_2023-01-10_at_8.59.21_AM.png)
 
@@ -48,7 +48,7 @@ First, you will need to:
 
 To test your SMS assistant before taking it to production, you can take advantage of our SMS sandbox. 
 
-First, select the _Test via SMS_ button from the _Run_ dropdown. 
+First, select the *Test via SMS* button from the *Run* dropdown. 
 
 ![](https://files.readme.io/c77e6e6-Screen_Shot_2023-01-10_at_8.59.49_AM.png)
 
@@ -60,17 +60,17 @@ Once the model has completed training, you should receive an outbound message fr
 
 ![](https://files.readme.io/b339530-Screen_Shot_2023-01-10_at_9.09.04_AM.png)
 
-Continue to make changes to your assistant design and test again by selecting the _Test via SMS_ option.
+Continue to make changes to your assistant design and test again by selecting the *Test via SMS* option.
 
 # Launch on Twilio SMS
 
-> 📘 
-> 
-> _To connect your assistant to Twilio, you will be connecting to a Twilio messaging service where you phone numbers are assigned. For more information about how to setup a Twilio messaging service, see [here](https://support.twilio.com/hc/en-us/articles/223181308-Getting-started-with-Messaging-Services)._
+> 📘
+>
+> *To connect your assistant to Twilio, you will be connecting to a Twilio messaging service where you phone numbers are assigned. For more information about how to setup a Twilio messaging service, see[here](https://support.twilio.com/hc/en-us/articles/223181308-Getting-started-with-Messaging-Services).*
 
 You’ll need to gather your Twilio account SID and API key.
 
-First, navigate to the _Integration_ page of your assistant (shortcut: 4) as shown below. Here you will be adding your credentials that we will be going over in the next steps.
+First, navigate to the *Integration* page of your assistant (shortcut: 4) as shown below. Here you will be adding your credentials that we will be going over in the next steps.
 
 ![](https://files.readme.io/3c2b47b-Screen_Shot_2023-01-10_at_9.11.45_AM.png)
 
@@ -80,7 +80,7 @@ Login to your Twilio console. In the Account Info box you’ll see your Account 
 
 ![](https://files.readme.io/2a41828-Screen_Shot_2023-01-10_at_7.44.43_PM.png)
 
-Next, you will need to retrieve an API key SID and Secret. Navigate to the [API key management page](https://www.twilio.com/console/project/api-keys). Click the blue _Create API key_ button to create a new key. Make sure the type is set to Standard.
+Next, you will need to retrieve an API key SID and Secret. Navigate to the [API key management page](https://www.twilio.com/console/project/api-keys). Click the blue *Create API key* button to create a new key. Make sure the type is set to Standard.
 
 ![](https://files.readme.io/c7aa94e-Screen_Shot_2023-01-10_at_7.39.50_PM.png)
 
@@ -88,7 +88,7 @@ Note your API key **SID** and **secret** to add to the Voiceflow integration pag
 
 ## Select a Twilio Messaging Service
 
-With the Account SID and API key, you're ready to complete the integration. Once your credentials have been added, you will be able to select a messaging service from the dropdown. In this case, we have selected the service named _SMS Demo_. 
+With the Account SID and API key, you're ready to complete the integration. Once your credentials have been added, you will be able to select a messaging service from the dropdown. In this case, we have selected the service named *SMS Demo*. 
 
 ![](https://files.readme.io/a160d1b-Screen_Shot_2023-01-10_at_7.18.27_PM.png)
 
@@ -100,7 +100,7 @@ Once you've successfully selected an applicable messaging service, you're ready 
 
 ## Publish
 
-Final step is to navigate back to the canvas and select _Publish_. If successful, you will see the Successfully Published modal appear as shown below. 
+Final step is to navigate back to the canvas and select *Publish*. If successful, you will see the Successfully Published modal appear as shown below. 
 
 ![](https://files.readme.io/b9b2617-Screen_Shot_2023-01-10_at_7.18.58_PM.png)
 
