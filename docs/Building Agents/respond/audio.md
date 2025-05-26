@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 
-> 
-> Audio steps are no longer supported in new projects. 
+> 🚧
+>
+> Audio steps are no longer supported in new projects.
 
-_**What is Audio Step? How can I add sound or short custom audio?**_
+***What is Audio Step? How can I add sound or short custom audio?***
 
 The Audio Step allows you to add short audio files that are less than 240 seconds in length and up to 10mb to your voice assistants.
 
