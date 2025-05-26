@@ -14,37 +14,23 @@ The API Step allows you to make custom API calls to connect your assistant with 
 
 The API block consists of several parts:
 
-- The request **type** — GET, POST, PUT, DELETE, PATCH
-- The **endpoint** — request URL or {variable}
-- **Headers**, **parameters**, and **body** — respective parameter keys & values (can input raw body content code)
-- **Capture** Response — entering respective keys & saving/capturing to variables
-- **Send** Request — a button to test the API Step or call/request directly from Canvas
+* The request **type** — GET, POST, PUT, DELETE, PATCH
+* The **endpoint** — request URL or \{variable}
+* **Headers**, **parameters**, and **body** — respective parameter keys & values (can input raw body content code)
+* **Capture** Response — entering respective keys & saving/capturing to variables
+* **Send** Request — a button to test the API Step or call/request directly from Canvas
 
 ![](https://files.readme.io/6b71e44ac054a7db0101f55156f5a00e015425ec7c5c7058c0fda1a5f1d9fad9-CleanShot_2024-12-17_at_10.39.24.png)
 
 There are 5 standard request types available through the API block.
 
-- **GET** — Retrieves information from your data source
-- **POST** — Creates information in your data source
-- **PUT** — Completely updates information in your data source
-- **DELETE** — Deletes information in your data source
-- **PATCH** — Partially updates information in your data source
+* **GET** — Retrieves information from your data source
+* **POST** — Creates information in your data source
+* **PUT** — Completely updates information in your data source
+* **DELETE** — Deletes information in your data source
+* **PATCH** — Partially updates information in your data source
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6e1cc0fcbd1b49b580221b2ea55923146b4ad46ae608a52514e424137a827ae8-CleanShot_2024-12-17_at_10.41.21.png",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/6e1cc0fcbd1b49b580221b2ea55923146b4ad46ae608a52514e424137a827ae8-CleanShot_2024-12-17_at_10.41.21.png" />
 
 Depending on your assistant design, you should consider using an API step for functions that involve retrieving data from an external database or sending data to another source. Some use cases involve making a new Zendesk (or other similar customer support platforms) ticket request, sending and getting data from an Airtable database, or registering a potential client prospect in an internal repository.
 
@@ -52,7 +38,7 @@ Depending on your assistant design, you should consider using an API step for fu
 
 ## Endpoint
 
-The endpoint is the URL that points to your API. Similar to website URL, your endpoint URL is where your requests will be sent to speak with your API. You can also configure endpoints with { variables } by simply putting them into the link string.
+The endpoint is the URL that points to your API. Similar to website URL, your endpoint URL is where your requests will be sent to speak with your API. You can also configure endpoints with \{ variables } by simply putting them into the link string.
 
 An example API endpoint could look like the following:
 
@@ -103,7 +89,7 @@ You can map the **name** to a variable using `response.name`.
 
 ## Failure Paths
 
-Should you wish to expose a path if the request returns an error, you can optionally toggle on the _Failure path_ and it will render a new port for you to connect into your fallback flow. 
+Should you wish to expose a path if the request returns an error, you can optionally toggle on the *Failure path* and it will render a new port for you to connect into your fallback flow. 
 
 ![](https://files.readme.io/6432b2068bdbea0319bbe278808b5fd7984dabc0ed45ec99eaa47e18f824570f-CleanShot_2024-12-17_at_10.53.30.png)
 
@@ -115,8 +101,8 @@ You can click on the copy icon beside portions of the JSON to copy the object pa
 
 ### Troubleshooting tips
 
-- Double-check the API documentation for what content types are accepted and compare your configuration to any example requests.
-- Re-test the API call using a tool like cURL, Postman or Insomnia.
-- If the API endpoint accepts JSON body content and the API returns errors regarding missing fields or incorrect body format, try the following steps:
-  - Validate the [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) format. Use an online JSON formatter or validator to check if the JSON body format is correct. For example, JSON supports straight quotes (i.e., ' or ") and not curly quotes (i.e., “ and “). Some text editors automatically use curly quotes, which is not valid JSON syntax.
-  - Check if there are any unexpected, hidden characters. Use an online tool to reveal hidden characters. Sometimes, a copy-paste of Canvas Steps or text between apps may introduce invisible characters, which are still processed by the API call and may cause errors.
+* Double-check the API documentation for what content types are accepted and compare your configuration to any example requests.
+* Re-test the API call using a tool like cURL, Postman or Insomnia.
+* If the API endpoint accepts JSON body content and the API returns errors regarding missing fields or incorrect body format, try the following steps:
+  * Validate the [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) format. Use an online JSON formatter or validator to check if the JSON body format is correct. For example, JSON supports straight quotes (i.e., ' or ") and not curly quotes (i.e., “ and “). Some text editors automatically use curly quotes, which is not valid JSON syntax.
+  * Check if there are any unexpected, hidden characters. Use an online tool to reveal hidden characters. Sometimes, a copy-paste of Canvas Steps or text between apps may introduce invisible characters, which are still processed by the API call and may cause errors.
