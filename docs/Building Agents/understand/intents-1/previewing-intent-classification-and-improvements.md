@@ -22,62 +22,62 @@ Testing your intent classification ensures your agent understands user queries a
 
 1. **Access Preview**:
 
-   - In the Intent CMS, click the **"Preview"** button located in the header.
+   * In the Intent CMS, click the **"Preview"** button located in the header.
 
 2. **Input Your Utterance**:
 
-   - Type a user query into the **"Utterance"** field of the preview modal. Use phrases that represent what users might say.
+   * Type a user query into the **"Utterance"** field of the preview modal. Use phrases that represent what users might say.
 
 3. **Send the Query**:
 
-   - Click **"Send"** to process the utterance using the intent classification method you've selected.
+   * Click **"Send"** to process the utterance using the intent classification method you've selected.
 
 4. **Review the Response**:
 
-   - **LLM Classification** (if enabled):
+   * **LLM Classification** (if enabled):
 
-     - Displays the intent triggered by the LLM.
+     * Displays the intent triggered by the LLM.
 
-   - **NLU Classification**:
+   * **NLU Classification**:
 
-     - Shows up to 10 intents triggered by the NLU, sorted by confidence score.
+     * Shows up to 10 intents triggered by the NLU, sorted by confidence score.
 
-   - _Note_: Only intents used in your agent will appear in the results.
+   * *Note*: Only intents used in your agent will appear in the results.
 
 5. **Provide Feedback**:
 
-   - Click the thumbs up or thumbs down icon to indicate if the classification was correct.
+   * Click the thumbs up or thumbs down icon to indicate if the classification was correct.
 
-   - If you select thumbs down, you can specify the intended intent.
+   * If you select thumbs down, you can specify the intended intent.
 
    ![](https://files.readme.io/4a75a4d-image.png)
 
 6. **Refine and Iterate**:
 
-   - Based on the results, adjust your intents, utterances, or settings to improve accuracy.
+   * Based on the results, adjust your intents, utterances, or settings to improve accuracy.
 
-   - Use **"Re-use last utterance"** to retest with the same input after making changes.
+   * Use **"Re-use last utterance"** to retest with the same input after making changes.
 
 ### Testing Strategies
 
-- **Test with Variety**:
+* **Test with Variety**:
 
-  - Use a wide range of utterances, including different phrasings, slang, and common misspellings.
+  * Use a wide range of utterances, including different phrasings, slang, and common misspellings.
 
-- **Edge Cases**:
+* **Edge Cases**:
 
-  - Include ambiguous or complex queries to test how the agent handles them.
+  * Include ambiguous or complex queries to test how the agent handles them.
 
-- **Test Different Settings**:
+* **Test Different Settings**:
 
-  - Experiment with model settings in the preview (e.g., AI model, temperature).
+  * Experiment with model settings in the preview (e.g., AI model, temperature).
 
-  - Changes in the preview are temporary and do not affect the agent globally.
+  * Changes in the preview are temporary and do not affect the agent globally.
 
-- **Monitor Confidence Levels**:
+* **Monitor Confidence Levels**:
 
-  - Low confidence scores may indicate the need for more training data or clearer intent definitions.
+  * Low confidence scores may indicate the need for more training data or clearer intent definitions.
 
 ### Applying Successful Changes
 
-- If satisfied with the preview results, manually update the global settings in the Intent CMS to apply them to your agent.
+* If satisfied with the preview results, manually update the global settings in the Intent CMS to apply them to your agent.
