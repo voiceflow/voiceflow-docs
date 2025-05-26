@@ -16,10 +16,10 @@ next:
 | :--------------- | :------ |
 | File format      | CSV     |
 | **Data Support** |         |
-| Intents          | ✅       |
-| Training Phrases | ✅       |
-| Entities         | ❌       |
-| Synonyms         | ❌       |
+| Intents          | ✅      |
+| Training Phrases | ✅      |
+| Entities         | ❌      |
+| Synonyms         | ❌      |
 | **Import Type**  |         |
-| Modify           | ❌       |
-| Overwrite        | ✅       |
+| Modify           | ❌      |
+| Overwrite        | ✅      |
