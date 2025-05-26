@@ -1,5 +1,5 @@
 ---
-title: Choice
+title: Choice step
 excerpt: ''
 deprecated: false
 hidden: false
