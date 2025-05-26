@@ -11,14 +11,21 @@ next:
   description: ''
 ---
 ## Examples
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.condition\",\n  \"message\": {\n    \"componentName\": \"condition\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"path\": {\n      \"componentName\": \"speak\",\n      \"stepID\": \"62c47ac699eca10006f20cbb\"\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.condition",
+  "message": {
+    "componentName": "condition",
+    "stepID": "628469f0effe73d544505715",
+    "path": {
+      "componentName": "speak",
+      "stepID": "62c47ac699eca10006f20cbb"
     }
-  ]
+  }
 }
-[/block]
+```
+
 `path` is `null` when the chosen condition does not connect to a node on the canvas.
