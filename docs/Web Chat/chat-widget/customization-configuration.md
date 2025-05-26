@@ -12,7 +12,7 @@ next:
 ---
 # Customization & Configuration
 
-As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <<glossary:agent>> by setting the **project ID**, the **runtime URL** and a **version ID**.
+As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <Glossary>agent</Glossary> by setting the **project ID**, the **runtime URL** and a **version ID**.
 
 Below is an example of the default code snippet.
 
@@ -30,7 +30,7 @@ You can add additional settings on top of the above configuration to further cus
 
 # Pass a custom userID (optional)
 
-Below is an handy way to identify the user and share that info with your <<glossary:agent>>. If you pass a `userID`, the value will be set as the built-in {user_id} variable in your Voiceflow <<glossary:agent>>.
+Below is an handy way to identify the user and share that info with your <Glossary>agent</Glossary>. If you pass a `userID`, the value will be set as the built-in \{user\_id} variable in your Voiceflow <Glossary>agent</Glossary>.
 
 ```javascript
 /**
@@ -59,8 +59,8 @@ You can pass values to the `last_event` system variable upon `load()`. Use the J
 
 Please note:
 
-- The `last_event` variable is set upon each new user event in the conversation (e.g. widget loaded, intent triggered, button clicked). If you want to set variables with default values, set them immediately after the Start intent in your agent's design.
-- Code Steps cannot be used to create new variables. Any variables that you want to use after the Code Step is executed must already exist before being referenced in the Code Step. For example, in the screenshot below, the `user_name` and `user_email` variables would need to be created in your <<glossary:agent>> before you could set them using values from the `last_event` payload.
+* The `last_event` variable is set upon each new user event in the conversation (e.g. widget loaded, intent triggered, button clicked). If you want to set variables with default values, set them immediately after the Start intent in your agent's design.
+* Code Steps cannot be used to create new variables. Any variables that you want to use after the Code Step is executed must already exist before being referenced in the Code Step. For example, in the screenshot below, the `user_name` and `user_email` variables would need to be created in your <Glossary>agent</Glossary> before you could set them using values from the `last_event` payload.
 
 ```javascript
 /**
@@ -78,21 +78,7 @@ launch: {
 }
 ```
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
 
 **Example**
 
@@ -121,7 +107,7 @@ window.voiceflow.chat.load({
 
 # Pass user info for the Transcripts view (optional)
 
-Here you can set a name and an image that will be used in the transcripts linked to that user. Note: this will not populate any variables or entities in your <<glossary:agent>>.
+Here you can set a name and an image that will be used in the transcripts linked to that user. Note: this will not populate any variables or entities in your <Glossary>agent</Glossary>.
 
 ```javascript
 /**
