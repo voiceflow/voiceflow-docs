@@ -4,3 +4,4 @@
 - delete_v3alpha-knowledge-base-tags-tagid
 - patch_v3alpha-knowledge-base-tags-tagid
 - post_v3alpha-knowledge-base-docs-documentid-tags-attach
+- post_v3alpha-knowledge-base-docs-documentid-tags-detach
