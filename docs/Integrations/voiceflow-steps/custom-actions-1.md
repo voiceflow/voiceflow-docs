@@ -12,19 +12,19 @@ next:
 ---
 # Overview
 
-The **Custom Action step** allows you to perform any kind of integration to a Voiceflow <<glossary:agent>>. It also allows you to dynamically render Voiceflow chat elements like Carousels, Cards, and Buttons in Voiceflow-built chat interfaces such as the Test Tool, Prototype Tool and Web Chat.
+The **Custom Action step** allows you to perform any kind of integration to a Voiceflow <Glossary>agent</Glossary>. It also allows you to dynamically render Voiceflow chat elements like Carousels, Cards, and Buttons in Voiceflow-built chat interfaces such as the Test Tool, Prototype Tool and Web Chat.
 
 ![](https://files.readme.io/3f13d52-Screenshot_2023-02-27_at_5.06.36_PM.png)
 
 ## Custom Action step configuration
 
-- **Custom Action name:** the string you enter in this field will be the trace “type” value.
-  - To render a default Voiceflow step, use the step’s [trace type](doc:trace-types) value. For example, if you want to render a Carousel, the Custom Action name value should be “carousel”.
-- **Action Body:** the value passed here will be included in the Custom Action trace payload.
-  - To render a default Voiceflow step, select “JSON”, and pass the corresponding [trace](doc:trace-types) payload in the body.
-- **Paths: **the available action paths after the Custom Action is executed. You can set custom paths to navigate your user to the best next step for their conversation.
-- **Stop on action:** this toggle determines if the Voiceflow conversation will continue immediately after the Custom Action is executed or if it stops. Enable this setting when you want an action outside of Voiceflow to occur before moving forward (e.g. trigger a live chat handoff, wait for a user to select a Carousel button).
-- **Global Listen:** by default, Voiceflow listen steps actively listen for user events only until the event is detected. When this setting is enabled, any of the Custom Action’s elements that can be interacted with will continue to listen for a user event such as a button click; this is useful if you want to allow your user to select a Carousel Button later in a conversation.
+* **Custom Action name:** the string you enter in this field will be the trace “type” value.
+  * To render a default Voiceflow step, use the step’s [trace type](doc:trace-types) value. For example, if you want to render a Carousel, the Custom Action name value should be “carousel”.
+* **Action Body:** the value passed here will be included in the Custom Action trace payload.
+  * To render a default Voiceflow step, select “JSON”, and pass the corresponding [trace](doc:trace-types) payload in the body.
+* **Paths:** the available action paths after the Custom Action is executed. You can set custom paths to navigate your user to the best next step for their conversation.
+* **Stop on action:** this toggle determines if the Voiceflow conversation will continue immediately after the Custom Action is executed or if it stops. Enable this setting when you want an action outside of Voiceflow to occur before moving forward (e.g. trigger a live chat handoff, wait for a user to select a Carousel button).
+* **Global Listen:** by default, Voiceflow listen steps actively listen for user events only until the event is detected. When this setting is enabled, any of the Custom Action’s elements that can be interacted with will continue to listen for a user event such as a button click; this is useful if you want to allow your user to select a Carousel Button later in a conversation.
 
 Note about user events: the `last_event` system variable will capture the trace of the last user event such as a button selection, carousel button selection, and when an intent is triggered. The type of this is `{ type: string, payload: object | string }`
 
@@ -48,7 +48,7 @@ Here is how a Custom Action works:
 
 2. Your **client** sends an interact request normally, but also specifies the name of Custom Action steps that the Voiceflow diagram should stop on.
 
-3. Our **DM API** executes your diagram normally, but returns early if it encounters one of the Custom Actions specified in Step 1 and sends back a corresponding Custom Action trace, e.g, a `"dial"` type trace defined by your Voiceflow <<glossary:agent>>.
+3. Our **DM API** executes your diagram normally, but returns early if it encounters one of the Custom Actions specified in Step 1 and sends back a corresponding Custom Action trace, e.g, a `"dial"` type trace defined by your Voiceflow <Glossary>agent</Glossary>.
 
 4. Your **client** receives the Custom Action trace. Your code can detect this trace and perform any necessary processing.
 
@@ -136,13 +136,4 @@ Voiceflow steps have corresponding [traces](doc:trace-types), which are in JSON 
 
 A Custom Action can be useful when you have an API that returns an unknown number of items such as a list of products that you want to render in a Carousel, or a list of order IDs that you want to display as a set of Buttons.
 
-[block:embed]
-{
-  "html": "<iframe width=\"100%\" style=\"aspect-ratio: 21 / 9\"  src=\"https://www.youtube.com/embed/2V46rOkkprg?si=fMhtdl3ezz4-PC3y\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
-  "url": "https://www.youtube.com/embed/2V46rOkkprg?si=sdtqLtTAkdYAcVbD",
-  "title": "",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/embed/2V46rOkkprg?si=sdtqLtTAkdYAcVbD",
-  "typeOfEmbed": "youtube"
-}
-[/block]
+<Embed url="https://www.youtube.com/embed/2V46rOkkprg?si=sdtqLtTAkdYAcVbD" title="" provider="youtube.com" href="https://www.youtube.com/embed/2V46rOkkprg?si=sdtqLtTAkdYAcVbD" typeOfEmbed="youtube" html="%3Ciframe%20width%3D%22100%25%22%20style%3D%22aspect-ratio%3A%2021%20%2F%209%22%20%20src%3D%22https%3A%2F%2Fwww.youtube.com%2Fembed%2F2V46rOkkprg%3Fsi%3DfMhtdl3ezz4-PC3y%22%20title%3D%22YouTube%20video%20player%22%20frameborder%3D%220%22%20allow%3D%22accelerometer%3B%20autoplay%3B%20clipboard-write%3B%20encrypted-media%3B%20gyroscope%3B%20picture-in-picture%3B%20web-share%22%20allowfullscreen%3E%3C%2Fiframe%3E" />
