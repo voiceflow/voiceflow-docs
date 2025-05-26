@@ -14,7 +14,7 @@ next:
 
 Flows in Voiceflow are a made of a variety of steps, and the steps have corresponding JSON traces. Step traces are used by Web Chat — and can be used by custom integrations — to determine what should be presented to the user upon events such as conversation launch, utterance submission, and button selection.
 
-In short, traces represent every _output_ from Voiceflow. The Dialog Manager API interact endpoint returns an array of trace objects.
+In short, traces represent every *output* from Voiceflow. The Dialog Manager API interact endpoint returns an array of trace objects.
 
 All trace objects returned by the Dialog Manager API have a `type` attribute that identifies the type of element and a `payload` object with additional data such as a step’s response content or a button’s label. 
 
@@ -26,12 +26,12 @@ Below are key trace types that you will encounter.
 
 This trace type is returned for the following Voiceflow elements:
 
-- Text Step
-- Response AI Step
-- No match re-prompt
-- No reply re-prompt
-- Global No Match
-- Global No Reply
+* Text Step
+* Response AI Step
+* No match re-prompt
+* No reply re-prompt
+* Global No Match
+* Global No Reply
 
 Example payload:
 
@@ -77,12 +77,12 @@ Example payload:
 
 This trace type is returned for the following Voiceflow elements:
 
-- Speak Step
-- Audio Step
-- No match reprompt
-- No reply reprompt
-- Global No Match
-- Global No Reply
+* Speak Step
+* Audio Step
+* No match reprompt
+* No reply reprompt
+* Global No Match
+* Global No Reply
 
 Speak Step example:
 
@@ -327,8 +327,8 @@ The below example trace is for a Button step with two buttons and no intents:
 
 Notes on the above example:
 
-- The `request.type` values for these buttons would be Voiceflow-generated path IDs for the next elements.
-- In this case, upon button click: call the Dialog Manager API with the path ID as the `action.type` value to retrieve the next elements. For example, if the `request.type` value for the button is “path-xyz”, the request body would look like the below. (`request.payload.label`  value is optional; if included in the request, the value will be set as the `last_utterance` variable value)
+* The `request.type` values for these buttons would be Voiceflow-generated path IDs for the next elements.
+* In this case, upon button click: call the Dialog Manager API with the path ID as the `action.type` value to retrieve the next elements. For example, if the `request.type` value for the button is “path-xyz”, the request body would look like the below. (`request.payload.label`  value is optional; if included in the request, the value will be set as the `last_utterance` variable value)
 
 ```json
 {
@@ -386,8 +386,8 @@ The below example trace is for a Button step with two buttons with intents attac
 
 Notes on the above example:
 
-- The `request.type` values for these buttons are “intent” and both have `intent.name` values in the payload.
-- In this case, upon button click: call the Dialog Manager API with the intent name to retrieve the next elements. For example, if the `request.type` value is “intent” and the `request.payload.intent.name` is “forgot_password”, the request body would look like the below. [Alternatively, you could use a "text" request (e.g. `{ "action": { "type": "text", "payload": "Forgot Password" } }`); this option would first pass the payload value through intent detection.]
+* The `request.type` values for these buttons are “intent” and both have `intent.name` values in the payload.
+* In this case, upon button click: call the Dialog Manager API with the intent name to retrieve the next elements. For example, if the `request.type` value is “intent” and the `request.payload.intent.name` is “forgot\_password”, the request body would look like the below. [Alternatively, you could use a "text" request (e.g. `{ "action": { "type": "text", "payload": "Forgot Password" } }`); this option would first pass the payload value through intent detection.]
 
 ```json
 {
@@ -462,7 +462,7 @@ Example with the Action Body format set to “JSON” in the Creator App:
 
 This trace will be returned when an End action is reached in the design.
 
-Example for a Chat <<glossary:Agent>>:
+Example for a Chat <Glossary>Agent</Glossary>:
 
 ```json
 {
@@ -472,7 +472,7 @@ Example for a Chat <<glossary:Agent>>:
 }
 ```
 
-Example for a Voice <<glossary:Agent>>:
+Example for a Voice <Glossary>Agent</Glossary>:
 
 ```json
 {
@@ -484,8 +484,8 @@ Example for a Voice <<glossary:Agent>>:
 
 You might encounter these traces while working with Interaction Streaming APIs:
 
-- `"completion-start"`
-- `"completion-continue"`
-- `"completion-end"`
+* `"completion-start"`
+* `"completion-continue"`
+* `"completion-end"`
 
 Learn more about them [here](https://docs.voiceflow.com/reference/stream-completion-events-1).
