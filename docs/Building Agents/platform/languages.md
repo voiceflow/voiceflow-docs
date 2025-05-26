@@ -16,7 +16,9 @@ Languages in Voiceflow are dealt with in 4 broad sections, and are handled sligh
 2. **The AI Responses**: This is dictated by the AI model. Ensure to **specify the language** that you want the AI to respond in clearly in the prompt and instructions.
 3. **Intents**: Intents can be captured **regardless of the language** of the utterance being classified or the example phrases given, for both LLM and NLU intent classification. You do not need to change any settings for this behavior to happen, it's intrinsic to the way the intent classification models are trained. 
 
-   [block:image]{"images":[{"image":["https://files.readme.io/75be570-CleanShot_2024-06-14_at_09.22.312x.png",null,"An example of intent classification working with a Spanish utterance on intents defined in English."],"align":"center","sizing":"400px","caption":"An example of intent classification working with a Spanish utterance on intents defined in English."}]}[/block]
+   <Image alt="An example of intent classification working with a Spanish utterance on intents defined in English." align="center" width="400px" src="https://files.readme.io/75be570-CleanShot_2024-06-14_at_09.22.312x.png">
+     An example of intent classification working with a Spanish utterance on intents defined in English.
+   </Image>
 4. **Entities**: Depending on which language is selected, the default [entity types](https://developer.voiceflow.com/v2.0/docs/entities) available **might be limited**. This is selected when you **create a project**. Once you have selected it, you cannot change the language of the prebuilt training data for a specific project. 
 
 Currently, the best way to support multiple languages is to build out multiple flows for different languages within an agent, or create multiple copies of the same agent in different languages and then host a different version on different languages of your website. Improving multilingual support in agents is on our road map.
