@@ -14,25 +14,11 @@ Sometimes you'll want to create your own entity type when the built-in options d
 
 In this video example, we will be creating an entity type that is specifically for zip codes. 
 
-
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FBA9EeICzzG4%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBA9EeICzzG4&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FBA9EeICzzG4%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=BA9EeICzzG4&feature=youtu.be",
-  "title": "Voiceflow - Custom Entity Types",
-  "favicon": "https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico",
-  "image": "https://i.ytimg.com/vi/BA9EeICzzG4/hqdefault.jpg",
-  "provider": "youtube.com",
-  "href": "https://www.youtube.com/watch?v=BA9EeICzzG4&feature=youtu.be"
-}
-[/block]
-
-
-
+<Embed url="https://www.youtube.com/watch?v=BA9EeICzzG4&feature=youtu.be" title="Voiceflow - Custom Entity Types" favicon="https://www.youtube.com/s/desktop/ecd7151d/img/favicon.ico" image="https://i.ytimg.com/vi/BA9EeICzzG4/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=BA9EeICzzG4&feature=youtu.be" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FBA9EeICzzG4%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DBA9EeICzzG4%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FBA9EeICzzG4%252Fhqdefault.jpg%26key%3Df2aa6fc3595946d0afc3d76cbbd25dc3%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 **The RegEx Library**
 
-You can find a number of other regular expressions to create your own entity types at <https://uibakery.io/regex-library>
+You can find a number of other regular expressions to create your own entity types at [https://uibakery.io/regex-library](https://uibakery.io/regex-library)
 
 **Here is the code used in the Code Step** 
 
