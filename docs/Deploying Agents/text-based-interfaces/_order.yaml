@@ -4,3 +4,4 @@
 - deploy-slack
 - deploy-telegram
 - deploy-twilio-sms
+- deploy-ms-teams
