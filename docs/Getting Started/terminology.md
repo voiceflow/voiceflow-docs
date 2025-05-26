@@ -14,7 +14,7 @@ next:
 
 ### Dialog Management
 
-A design system that offers a flexible way to design customer-centric, conversational experiences. This system involves designing and managing the state of the dialog between your <<glossary:Agent>> and customer.
+A design system that offers a flexible way to design customer-centric, conversational experiences. This system involves designing and managing the state of the dialog between your <Glossary>Agent</Glossary> and customer.
 
 ### Utterance
 
@@ -65,60 +65,60 @@ In essence, this is a large state diagram that can be executed to drive a conver
 
 ### Workspace
 
-A collection of _agents_ shared between multiple collaborators. Each collaborator has their own role within a _Workspace_ which applies to all contained _agents_.
+A collection of *agents* shared between multiple collaborators. Each collaborator has their own role within a *Workspace* which applies to all contained *agents*.
 
 ### Agent
 
-Refers to one project in your Workspace. Also used interchangeably with the term “assistant” and “project”. A “codebase” for a Voiceflow application. Each _Project_ is made up of NLU training, response and logic data. Response and logic data are represented by flows, topics, and components.
+Refers to one project in your Workspace. Also used interchangeably with the term “assistant” and “project”. A “codebase” for a Voiceflow application. Each *Project* is made up of NLU training, response and logic data. Response and logic data are represented by flows, topics, and components.
 
 ### Diagram
 
-The technical word for the flows that your agent contains. Each _Diagram_ can contain references to multiple _Blocks_, _Steps_, _Links,_ and _Ports_. This graph structure is used as the basis for more concrete concepts, such as _Topics_ and _Components_. _Diagrams_ can be referenced by the _Steps_ that appear within them or other _Diagrams_ in the same _Project_.
+The technical word for the flows that your agent contains. Each *Diagram* can contain references to multiple *Blocks*, *Steps*, *Links,* and *Ports*. This graph structure is used as the basis for more concrete concepts, such as *Topics* and *Components*. *Diagrams* can be referenced by the *Steps* that appear within them or other *Diagrams* in the same *Project*.
 
 ### Workflow
 
-_Workflows_ are the non-technical word for _Diagram_.
+*Workflows* are the non-technical word for *Diagram*.
 
-_Workflows_ are used for organizing _agents_ as well as for encapsulation. Every _Workflow_ other than the “Home” _Workflow_ has its own separate set of variables. The “Home” _workflow_ must contain a start _Block_ which is the entry point for the conversation.
+*Workflows* are used for organizing *agents* as well as for encapsulation. Every *Workflow* other than the “Home” *Workflow* has its own separate set of variables. The “Home” *workflow* must contain a start *Block* which is the entry point for the conversation.
 
 ### Component
 
-_Components_ are a type of _Diagram_.
+*Components* are a type of *Diagram*.
 
-_Components_ are used for creating reusable logic and functionality. A single _Component_ can be referenced multiple times throughout a _Project._
+*Components* are used for creating reusable logic and functionality. A single *Component* can be referenced multiple times throughout a *Project.*
 
 ### Diagrams vs. Programs
 
-_Diagrams_ can be thought of as the source code of a _Project_. A _Project_ is visually represented in the _Canvas_ as linked _Blocks_ and _Steps._ A _Diagram_ is the data structure behind this view and is stored in _MongoDB_.
+*Diagrams* can be thought of as the source code of a *Project*. A *Project* is visually represented in the *Canvas* as linked *Blocks* and *Steps.* A *Diagram* is the data structure behind this view and is stored in *MongoDB*.
 
-_Programs_ can be thought of as the “compiled” code of a _Project_, which gets executed by our `runtime` services. As an analogy, in C++, _Diagrams_ are like `.cc` source code files and _Programs_ are the compiled `.exe` executables.
+*Programs* can be thought of as the “compiled” code of a *Project*, which gets executed by our `runtime` services. As an analogy, in C++, *Diagrams* are like `.cc` source code files and *Programs* are the compiled `.exe` executables.
 
 ### Variable
 
-Used to store any runtime information for the connected agent. It can be accessed from the code _Step_ for direct manipulation, or through the set and condition _Steps_ for simpler operations.
+Used to store any runtime information for the connected agent. It can be accessed from the code *Step* for direct manipulation, or through the set and condition *Steps* for simpler operations.
 
 ## Canvas
 
-The container that renders all the _Blocks_, _Steps_, _Links_, and _Ports_. It allows panning and zooming and many more advanced interactions.
+The container that renders all the *Blocks*, *Steps*, *Links*, and *Ports*. It allows panning and zooming and many more advanced interactions.
 
 ![](https://files.readme.io/ce65701-Screen_Shot_2022-02-23_at_1.44.37_PM.png "Screen Shot 2022-02-23 at 1.44.37 PM.png")
 
 ### Block
 
-A container for one or more _Steps_. Each _Step_ is implicitly linked to the next one to form a sequence of operations.
+A container for one or more *Steps*. Each *Step* is implicitly linked to the next one to form a sequence of operations.
 
 ### Step
 
-The smallest unit of user-defined functionality in the platform. Each _Step_ along a path will be executed sequentially during a conversation.
+The smallest unit of user-defined functionality in the platform. Each *Step* along a path will be executed sequentially during a conversation.
 
 ### Port
 
-The starting point for drawing _Links_ between _Steps_. Some _Steps_ have a configurable number of _Ports_ while others have no _Ports_ at all.
+The starting point for drawing *Links* between *Steps*. Some *Steps* have a configurable number of *Ports* while others have no *Ports* at all.
 
 ![](https://files.readme.io/b03f76a-Screen_Shot_2022-02-23_at_1.51.51_PM.png "Screen Shot 2022-02-23 at 1.51.51 PM.png")
 
 ### Link
 
-Used to connect a _Port_ to another _Step_ or _Block_. Links allows _Steps_ that are not in the same _Block_ to be executed in sequence. Some _Steps_ have logic that allow for multiple _Links_ to be defined, each with its own target _Step_.
+Used to connect a *Port* to another *Step* or *Block*. Links allows *Steps* that are not in the same *Block* to be executed in sequence. Some *Steps* have logic that allow for multiple *Links* to be defined, each with its own target *Step*.
 
 ![](https://files.readme.io/cd6e1a4-Screen_Shot_2020-06-24_at_7.37.42_PM.png "Screen_Shot_2020-06-24_at_7.37.42_PM.png")
