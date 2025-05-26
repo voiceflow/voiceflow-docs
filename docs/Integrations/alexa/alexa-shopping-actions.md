@@ -18,26 +18,26 @@ In this article we will learn how to setup and use **Alexa Shopping Actions** in
 
 # Context
 
-With Alexa Shopping Actions, you can build a custom skill that recommends physical products with [Alexa shopping](https://www.amazon.com/alexa-voice-shopping/b?ie=UTF8&node=14552177011). Customers can buy the recommended product or add it to their Amazon Shopping Cart or Wish List without leaving the skill. For example, your role-playing skill might offer the customer the opportunity to buy the corresponding board game. Customers pay for products by using the payment options associated with their Amazon account.
+With Alexa Shopping Actions, you can build a custom skill that recommends physical products with [Alexa shopping](https://www.amazon.com/alexa-voice-shopping/b?ie=UTF8\&node=14552177011). Customers can buy the recommended product or add it to their Amazon Shopping Cart or Wish List without leaving the skill. For example, your role-playing skill might offer the customer the opportunity to buy the corresponding board game. Customers pay for products by using the payment options associated with their Amazon account.
 
 # **Restrictions**
 
 The following restrictions apply to skills that use Alexa Shopping Actions:
 
-- To use Alexa Shopping in your skill, customers must enable voice purchasing in the Alexa app.
-- To purchase products in your skill, customers must have a default 1-click setting enabled on their Amazon account.
-- You can't use Alexa Shopping Actions in child-directed skills.
-- You can't use Alexa Shopping Actions in Health Insurance Portability and Accountability Act (HIPAA) skills.
+* To use Alexa Shopping in your skill, customers must enable voice purchasing in the Alexa app.
+* To purchase products in your skill, customers must have a default 1-click setting enabled on their Amazon account.
+* You can't use Alexa Shopping Actions in child-directed skills.
+* You can't use Alexa Shopping Actions in Health Insurance Portability and Accountability Act (HIPAA) skills.
 
 The following products on the Amazon retail website aren't eligible for Alexa Shopping Actions:
 
-- Prime Pantry.
-- Subscriptions.
-- Products with customization features, such as t-shirt sizes or a subscription option.
-- Grocery and consumable products from subsidiaries, such as Whole Foods and Prime Now.
-- Video and e-gift cards.
-- [In-skill purchasing](https://developer.amazon.com/en-US/docs/alexa/in-skill-purchase/isp-overview.html) products.
-- Products with age restrictions, alcohol, or explicit content might not be available in all locales.
+* Prime Pantry.
+* Subscriptions.
+* Products with customization features, such as t-shirt sizes or a subscription option.
+* Grocery and consumable products from subsidiaries, such as Whole Foods and Prime Now.
+* Video and e-gift cards.
+* [In-skill purchasing](https://developer.amazon.com/en-US/docs/alexa/in-skill-purchase/isp-overview.html) products.
+* Products with age restrictions, alcohol, or explicit content might not be available in all locales.
 
 ## **How it works**
 
@@ -46,8 +46,6 @@ The following products on the Amazon retail website aren't eligible for Alexa Sh
 3. Upload to the **Alexa Developer Console** and activate **Alexa Shopping Actions**
 
 ***
-
-
 
 ## Step 1 | Create the Directive
 
@@ -69,12 +67,10 @@ Now, we want to create **3 new variables** and set their **values to 0**.
 Add a Set step, create the following variables:
 
 ```bash
-{statusCode}
-{resultCode}
-{addResult}
+`{statusCode}`
+`{resultCode}`
+`{addResult}`
 ```
-
-
 
 And set their values to 0
 
@@ -97,8 +93,6 @@ The new step in this combine block is the Directive step. Based on the Amazon do
 }
 ```
 
-
-
 Here, the only thing you might want to change is the **ASIN** value.
 
 For this project, I will let the user add the following product to their shopping cart
@@ -110,14 +104,14 @@ Of course, you want to double check that the product is eligible first.
 <aside>
 ⚠️ The following products on the Amazon retail website aren't eligible for Alexa Shopping Actions:
 
-- Prime Pantry.
-- Subscriptions.
-- Products with customization features, such as t-shirt sizes or a subscription option.
-- Grocery and consumable products from subsidiaries, such as Whole Foods and Prime Now.
-- Video and e-gift cards.
-- [In-skill purchasing](https://developer.amazon.com/en-US/docs/alexa/in-skill-purchase/isp-overview.html) products.
-- Products with age restrictions, alcohol, or explicit content might not be available in all locales.
-  </aside>
+* Prime Pantry.
+* Subscriptions.
+* Products with customization features, such as t-shirt sizes or a subscription option.
+* Grocery and consumable products from subsidiaries, such as Whole Foods and Prime Now.
+* Video and e-gift cards.
+* [In-skill purchasing](https://developer.amazon.com/en-US/docs/alexa/in-skill-purchase/isp-overview.html) products.
+* Products with age restrictions, alcohol, or explicit content might not be available in all locales.
+</aside>
 
 You can find the **ASIN** in the product URL or on the product page:
 
@@ -133,30 +127,26 @@ _response = {
 }
 ```
 
-
-
 ## Step 2 | Handle the Event
 
 When we will reach the Directive step, Alexa will handle the conversation for us, sharing details about the product linked to the **ASIN** and asking the user if they want to add it to their shopping cart.
 
-We want to handle all the possible status and to do so, we will have to map the full response to the {directiveResponse} variable.
+We want to handle all the possible status and to do so, we will have to map the full response to the `{directiveResponse}` variable.
 
 ![](https://files.readme.io/3794f33-CleanShot_2022-09-20_at_14.07.14.png)
 
 ```bash
-data > {directiveResponse}
+data > `{directiveResponse}`
 ```
 
-
-
 <aside>
-💡 Here we are mapping the full response so we can use the {directiveResponse} as an object in the next Javascript step.
+💡 Here we are mapping the full response so we can use the `{directiveResponse}` as an object in the next Javascript step.
 
 </aside>
 
 ## Step 3 | Do some logic
 
-The next step is a **Javascript** one. This will allow us to handle our logic based on the {**directiveResponse**} object.
+The next step is a **Javascript** one. This will allow us to handle our logic based on the `{**directiveResponse**}` object.
 
 ![](https://files.readme.io/c26ec4d-CleanShot_2022-09-20_at_14.10.10.png)
 
@@ -197,13 +187,11 @@ if(statusCode == 200){
 }
 ```
 
-
-
-As you can read from this code, it’s just a matter of populating the {**addResult**} variable based on the **statusCode** and the **resultCode** items from the response.
+As you can read from this code, it’s just a matter of populating the `{**addResult**}` variable based on the **statusCode** and the **resultCode** items from the response.
 
 This should cover most of the possible code, you can go deeper by reading the full Amazon documentation shared in our doc links at the end of this article.
 
- Adding a final **Conditions** step to this combine block will allow us to redirect the user based on the {**addResult**} variable value.
+Adding a final **Conditions** step to this combine block will allow us to redirect the user based on the `{**addResult**}` variable value.
 
 ![](https://files.readme.io/a06146d-CleanShot_2022-09-20_at_14.15.02.png)
 
@@ -219,8 +207,6 @@ addResult is invalid
 addResult is retrylatererror
 addResult is error
 ```
-
-
 
 We’ve also added the **No Match** path, renamed it to **Else** and link it to the existing **Javascript** step to set the shouldEndSession to null.
 
@@ -249,8 +235,6 @@ Go back to the **Build** tab and test your skill
 ![](https://files.readme.io/89ec123-CleanShot_2022-09-20_at_14.27.39.png)
 
 ***
-
-
 
 ### Information
 
