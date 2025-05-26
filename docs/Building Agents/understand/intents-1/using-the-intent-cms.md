@@ -19,80 +19,65 @@ next:
 
 ## Creating a New Intent
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/02cf9841369c7890a047b580b52c58bcb4505df7931d7b10b1f365cedf0fafc7-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "50% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="50% " src="https://files.readme.io/02cf9841369c7890a047b580b52c58bcb4505df7931d7b10b1f365cedf0fafc7-image.png" />
 
 <br />
 
 1. **Click on "New Intent"**: Located in the upper right area of the Intent CMS.
 
-   - _Note_: Intents and entities created in the Intent CMS are available globally within your assistant.
+   * *Note*: Intents and entities created in the Intent CMS are available globally within your assistant.
 
 2. **Fill in Intent Details**:
 
-   - **Name**: Enter a descriptive name (e.g., `BookAppointment`).
-   - **Description**: Provide a clear explanation starting with "Trigger this intent when..." (e.g., "Trigger this intent when the user wants to schedule a new appointment.").
-   - **Utterances**: Add example phrases users might say (e.g., "I need to book an appointment," "Can I schedule a meeting?").
+   * **Name**: Enter a descriptive name (e.g., `BookAppointment`).
+   * **Description**: Provide a clear explanation starting with "Trigger this intent when..." (e.g., "Trigger this intent when the user wants to schedule a new appointment.").
+   * **Utterances**: Add example phrases users might say (e.g., "I need to book an appointment," "Can I schedule a meeting?").
 
 3. **Add Required Entities** (if applicable):
 
-   - **Click the "+" Icon** next to **Required Entities**.
-   - **Select or Create Entities** (e.g., `Date`, `Time`, `ServiceType`).
-   - **Enter Reprompt Text**: Provide messages to prompt the user if the entity is missing (e.g., "What date works best for you?").
+   * **Click the "+" Icon** next to **Required Entities**.
+   * **Select or Create Entities** (e.g., `Date`, `Time`, `ServiceType`).
+   * **Enter Reprompt Text**: Provide messages to prompt the user if the entity is missing (e.g., "What date works best for you?").
 
 4. **Save the Intent**:
 
-   - Click **"Create Intent"** to add it to your CMS.
+   * Click **"Create Intent"** to add it to your CMS.
 
 ## Editing an Intent
 
 1. **Select the Intent**:
 
-   - Click on the intent you wish to edit from the intent list.
+   * Click on the intent you wish to edit from the intent list.
 
 2. **Modify Details**:
 
-   - **Name**: Update the intent name if necessary.
+   * **Name**: Update the intent name if necessary.
 
-   - **Description**: Ensure it accurately reflects the intent's purpose.
+   * **Description**: Ensure it accurately reflects the intent's purpose.
 
-   - **Utterances**:
+   * **Utterances**:
 
-     - **Add Utterances**: Click the "+" icon to add more example phrases.
-     - **Edit or Remove Utterances**: Click on an utterance to edit, or use the "-" icon to delete it.
-     - **Generate Utterances**: Use the "Generate" feature to have an LLM create additional examples.
+     * **Add Utterances**: Click the "+" icon to add more example phrases.
+     * **Edit or Remove Utterances**: Click on an utterance to edit, or use the "-" icon to delete it.
+     * **Generate Utterances**: Use the "Generate" feature to have an LLM create additional examples.
 
-   - **Required Entities**:
+   * **Required Entities**:
 
-     - **Add or Remove Entities**: Click the "+" or "-" icons.
-     - **Edit Reprompt Text**: Update the messages for prompting users.
+     * **Add or Remove Entities**: Click the "+" or "-" icons.
+     * **Edit Reprompt Text**: Update the messages for prompting users.
 
 ![](https://files.readme.io/da002cab9356273238da39263e01b17d14ddd8b0c277db90bac0dc81f4a76ddf-image.png)
 
 ## Deleting an Intent
 
-- **Single Intent**:
+* **Single Intent**:
 
   1. Select the intent you want to delete.
   2. Click the **"..."** (more options) button in the editor view.
   3. Choose **"Delete"** from the dropdown menu.
   4. Confirm the deletion when prompted.
 
-- **Bulk Delete**:
+* **Bulk Delete**:
 
   1. Select multiple intents by checking the boxes next to their names.
   2. Click the **"Delete"** button in the bulk action toolbar above the table.
@@ -100,41 +85,41 @@ next:
 
 ## Organizing Intents
 
-- **Sorting**: Use the sorting options to organize intents by:
+* **Sorting**: Use the sorting options to organize intents by:
 
-  - **Alphabetical Order**: A-Z or Z-A.
-  - **Confidence Score**: High to low or low to high.
-  - **Last Editor**: Group intents edited by specific team members.
-  - **Updated Date**: Most recent to oldest.
+  * **Alphabetical Order**: A-Z or Z-A.
+  * **Confidence Score**: High to low or low to high.
+  * **Last Editor**: Group intents edited by specific team members.
+  * **Updated Date**: Most recent to oldest.
 
-- **Naming Conventions**:
+* **Naming Conventions**:
 
-  - Use consistent naming.
-  - Make names descriptive and indicative of the user's goal.
+  * Use consistent naming.
+  * Make names descriptive and indicative of the user's goal.
 
-- **Descriptions**:
+* **Descriptions**:
 
-  - Ensure descriptions are clear and start with "Trigger this intent when...".
-  - Descriptions are used by [LLMs for intent classification](https://docs.voiceflow.com/docs/intent-classification-methods).
+  * Ensure descriptions are clear and start with "Trigger this intent when...".
+  * Descriptions are used by [LLMs for intent classification](https://docs.voiceflow.com/docs/intent-classification-methods).
 
 ## Tips for Managing Intents
 
-- **Keep Intents Focused**:
+* **Keep Intents Focused**:
 
-  - Each intent should represent a specific user goal or action.
+  * Each intent should represent a specific user goal or action.
 
-- **Avoid Overlapping Intents**:
+* **Avoid Overlapping Intents**:
 
-  - Ensure intents are distinct to prevent confusion during intent recognition.
+  * Ensure intents are distinct to prevent confusion during intent recognition.
 
-- **Regularly Update Utterances**:
+* **Regularly Update Utterances**:
 
-  - Incorporate real user inputs and feedback to improve accuracy.
+  * Incorporate real user inputs and feedback to improve accuracy.
 
-- **Monitor Intent Performance**:
+* **Monitor Intent Performance**:
 
-  - Use analytics to identify intents that may need refinement.
+  * Use analytics to identify intents that may need refinement.
 
-- **Use Representative Utterances**:
+* **Use Representative Utterances**:
 
-  - Include various phrasings, synonyms, and expressions users might use.
+  * Include various phrasings, synonyms, and expressions users might use.
