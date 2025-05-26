@@ -29,21 +29,7 @@ window.voiceflow.chat.proactive
   )
 ```
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d24d40-proactive_message_bubble_demo.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/4d24d40-proactive_message_bubble_demo.png" />
 
 For example, you can render a proactive message bubble when your customer reaches a particular page on your website:
 
