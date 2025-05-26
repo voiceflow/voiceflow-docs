@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 
-> 
+> 🚧
+>
 > Speak steps are no longer supported in new projects
 
-_How do I make my assistant speak / talk? How do I talk to or respond to my user with TTS?_
+*How do I make my assistant speak / talk? How do I talk to or respond to my user with TTS?*
 
 The **Speak Step** is used to make any voice assistant speak using text-to-speech. This is what your user hears or sees as a response from the voice-based conversation experience. A speak step is important for the assistant to verbally communicate to the user. It can be used to greet the user, ask questions, give instructions, and inform users. 
 
@@ -26,22 +26,7 @@ To configure your **Speak Step**, you can type what you want your assistant to s
 
 You can preview how your Speak Step will sound by clicking the Play button in the bottom-left corner of the text input field.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/19fd162-CleanShot_2024-06-14_at_15.40.552x.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="500px" src="https://files.readme.io/19fd162-CleanShot_2024-06-14_at_15.40.552x.png" />
 
 The audio will play from your default audio output device. On first play, it may take a few seconds to render.
 
