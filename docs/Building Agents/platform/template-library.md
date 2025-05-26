@@ -14,21 +14,7 @@ If you find yourself copy and pasting the same set of blocks again and again, an
 
 Block templates are reusable, changeable sequences of steps that make it simple to repeatedly duplicate generic structures. A template can contain either [a single block (with one or more steps)](https://developer.voiceflow.com/v2.0/docs/steps-blocks), or a larger flow with multiple blocks. Voiceflow provides a few starting templates as examples, with an API call, a basic conversation path, and a template to save information.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2ed9604-CleanShot_2024-06-19_at_14.45.49.gif",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/2ed9604-CleanShot_2024-06-19_at_14.45.49.gif" />
 
 ## Using templates
 
