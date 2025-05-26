@@ -11,13 +11,21 @@ next:
   description: ''
 ---
 ## Examples
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"global.nlu.intent_resolved\",\n  \"message\": {\n    \"resolvedIntent\": \"place_order\",\n    \"confidence\": 0.956,\n    \"utterance\": \"i would like to buy a burger\",\n    \"entities\": {\n      \"shop_item\": {\n        \"value\": \"burger\"\n      }\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "global.nlu.intent_resolved",
+  "message": {
+    "resolvedIntent": "place_order",
+    "confidence": 0.956,
+    "utterance": "i would like to buy a burger",
+    "entities": {
+      "shop_item": {
+        "value": "burger"
+      }
     }
-  ]
+  }
 }
-[/block]
+```
