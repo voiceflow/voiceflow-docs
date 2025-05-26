@@ -11,25 +11,46 @@ next:
   description: ''
 ---
 ## Examples
+
 ### Non-verbose
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.exit\",\n  \"message\": {\n    \"componentName\": \"exit\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"state\": null\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.exit",
+  "message": {
+    "componentName": "exit",
+    "stepID": "628469f0effe73d544505715",
+    "state": null
+  }
 }
-[/block]
+```
+
 ### Verbose
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.exit\",\n  \"message\": {\n    \"componentName\": \"exit\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"state\": {\n      \"stack\": [],\n      \"storage\": {},\n      \"variables\": {\n        \"sessions\": 1,\n        \"user_id\": \"7e386c6f-ba55-47a4-bd24-c9b367f32600\",\n        \"timestamp\": 1655302530,\n        \"platform\": \"voiceflow\",\n        \"locale\": 0,\n        \"url_count\": 0,\n        \"intent_confidence\": 0,\n        \"last_utterance\": \"\"\n      }\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.exit",
+  "message": {
+    "componentName": "exit",
+    "stepID": "628469f0effe73d544505715",
+    "state": {
+      "stack": [],
+      "storage": {},
+      "variables": {
+        "sessions": 1,
+        "user_id": "7e386c6f-ba55-47a4-bd24-c9b367f32600",
+        "timestamp": 1655302530,
+        "platform": "voiceflow",
+        "locale": 0,
+        "url_count": 0,
+        "intent_confidence": 0,
+        "last_utterance": ""
+      }
     }
-  ]
+  }
 }
-[/block]
+```
