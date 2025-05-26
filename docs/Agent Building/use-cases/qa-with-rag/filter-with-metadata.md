@@ -20,11 +20,11 @@ When you use metadata filters, the searches precisely retrieve the number of res
 
 ### Supported Types
 
-- **String**: For textual data.
-- **Number**: For numeric values.
-- **Boolean**: True or false values.
-- **Arrays**: Arrays containing any other supported type.
-- **Objects**: Nested JSON objects for hierarchical data structures.
+* **String**: For textual data.
+* **Number**: For numeric values.
+* **Boolean**: True or false values.
+* **Arrays**: Arrays containing any other supported type.
+* **Objects**: Nested JSON objects for hierarchical data structures.
 
 ### Metadata Size Limitations
 
@@ -58,28 +58,28 @@ The system supports up to 10kb of metadata per chunk, allowing for detailed and 
 
 ## Metadata Query Language
 
-> 📘 
-> 
+> 📘
+>
 > Voiceflow's filtering query language is based on [MongoDB’s query and projection operators](https://docs.mongodb.com/manual/reference/operator/query/).
 
 Voiceflow's query language for chunkDB is inspired by MongoDB, designed specifically for conversational metadata and supports a variety of operators for both straightforward and complex queries.
 
 ### Supported Operators
 
-- **Equality and Comparison**
-  - `$eq`: Equal to
-  - `$ne`: Not equal to
-  - `$gt`: Greater than
-  - `$gte`: Greater than or equal to
-  - `$lt`: Less than
-  - `$lte`: Less than or equal to
-- **Array Operations**
-  - `$in`: Matches any of the values specified in an array
-  - `$nin`: Does not match any of the values specified in an array
-  - `$all`: Matches all values specified in an array
-- **Logical Operators**
-  - `$and`: Logical AND that combines multiple conditions
-  - `$or`: Logical OR that combines multiple conditions
+* **Equality and Comparison**
+  * `$eq`: Equal to
+  * `$ne`: Not equal to
+  * `$gt`: Greater than
+  * `$gte`: Greater than or equal to
+  * `$lt`: Less than
+  * `$lte`: Less than or equal to
+* **Array Operations**
+  * `$in`: Matches any of the values specified in an array
+  * `$nin`: Does not match any of the values specified in an array
+  * `$all`: Matches all values specified in an array
+* **Logical Operators**
+  * `$and`: Logical AND that combines multiple conditions
+  * `$or`: Logical OR that combines multiple conditions
 
 ### Querying Nested Objects
 
