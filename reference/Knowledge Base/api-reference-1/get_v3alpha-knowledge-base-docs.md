@@ -14,54 +14,92 @@ next:
   description: ''
 ---
 > 📘 All requests to any Knowledge Base APIs require a Dialog Manager API Key.
-> 
+>
 > To obtain this key, go to the Integration tab on the project you uploaded data sources to and click the "Copy API key" button.
-> 
+>
 > ![](https://files.readme.io/cbc3534-CleanShot_2023-10-05_at_09.02.272x.png)
 
 ## Request Fields
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Property",
-    "h-1": "Description & Example",
-    "0-0": "**Authorization**  \n(header)",
-    "0-1": "**Dialog Manager API Key**"
-  },
-  "cols": 2,
-  "rows": 1,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Property
+      </th>
 
+      <th>
+        Description & Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **Authorization**
+        (header)
+      </td>
+
+      <td>
+        **Dialog Manager API Key**
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Pagination
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Property",
-    "h-1": "Description & Example",
-    "0-0": "**page**  \n(query parameter)",
-    "0-1": "Optional pagination parameter - The page number to retrieve, defaults to 1 (which is the minimum). Order is by the date updated, descending.",
-    "1-0": "**limit**  \n(query parameter)",
-    "1-1": "Optional pagination parameter- The number of documents to return per page.  \nDefaults to 10, range is 1-100.",
-    "2-0": "**documentType**  \n(query parameter)",
-    "2-1": "Optional pagination parameter - Filter the document list by type (url, pdf, text, docx).  \nDefaults to all."
-  },
-  "cols": 2,
-  "rows": 3,
-  "align": [
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Property
+      </th>
 
+      <th>
+        Description & Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **page**
+        (query parameter)
+      </td>
+
+      <td>
+        Optional pagination parameter - The page number to retrieve, defaults to 1 (which is the minimum). Order is by the date updated, descending.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **limit**\
+        (query parameter)
+      </td>
+
+      <td>
+        Optional pagination parameter- The number of documents to return per page.\
+        Defaults to 10, range is 1-100.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **documentType**\
+        (query parameter)
+      </td>
+
+      <td>
+        Optional pagination parameter - Filter the document list by type (url, pdf, text, docx).\
+        Defaults to all.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Filtering KB doc list by KB tags using query parameters:
 
@@ -76,8 +114,6 @@ Case 2: User wants a list of KB documents that don't have any KB tags attached:
 Case 3: User wants a list of KB documents that have any KB tag attached:
 
 `/docs?includeAllTagged=true`
-
-
 
 ***
 
