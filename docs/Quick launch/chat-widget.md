@@ -32,12 +32,12 @@ Within this page, you can set general settings like chat persistence but also cu
 
 You can go a bit further and use your own front-end code to interact with the Web Chat widget as you might also want to populate a specific user ID and/or use the available API to do the following actions:
 
-- Load a specific project
-- Set configuration settings when the Web Chat widget loads
-- Open or close the Web Chat widget
-- Show or hide the Web Chat widget launch bubble
-- Interact with the Dialog Manager API and show the result within the Chat Widget
-- Show or clear proactive text messages above your widget launch bubble
+* Load a specific project
+* Set configuration settings when the Web Chat widget loads
+* Open or close the Web Chat widget
+* Show or hide the Web Chat widget launch bubble
+* Interact with the Dialog Manager API and show the result within the Chat Widget
+* Show or clear proactive text messages above your widget launch bubble
 
 # Configuration
 
@@ -59,7 +59,7 @@ You can add additional settings on top of the above configuration to further cus
 
 ## Pass a userID (optional)
 
-Below is an handy way to identify the user and share that info with your assistant. If you pass a `userID`, the value will be set as the built-in {user_id} variable in your Voiceflow project.
+Below is an handy way to identify the user and share that info with your assistant. If you pass a `userID`, the value will be set as the built-in \{user\_id} variable in your Voiceflow project.
 
 ```javascript
 /**
@@ -107,25 +107,11 @@ launch: {
 };
 ```
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
 
 ## Pass a versionID value or alias (optional)
 
-By default, versionID is set to **_development_** but if you use the code snippet in the Web Chat integration page, this is set to **_production_**. You can also use this to force a specific project id. This is handy when you want to test a dev version of your assistant and/or make changes to your Voiceflow project without impacting your actual assistant on production. (Note: If the versionID is set to **_production_** before you publish your assistant, the Web Chat widget will not render any system messages.)
+By default, versionID is set to ***development*** but if you use the code snippet in the Web Chat integration page, this is set to ***production***. You can also use this to force a specific project id. This is handy when you want to test a dev version of your assistant and/or make changes to your Voiceflow project without impacting your actual assistant on production. (Note: If the versionID is set to ***production*** before you publish your assistant, the Web Chat widget will not render any system messages.)
 
 ```javascript
 /**
@@ -189,7 +175,7 @@ window.voiceflow.chat.load({
 
 # Web Chat API
 
-When the Web Chat widget script is loaded it will register an API as **window.voiceflow.chat** with the following methods:
+When the Web Chat widget script is loaded it will register an API as **window\.voiceflow\.chat** with the following methods:
 
 ## load
 
@@ -234,21 +220,7 @@ window.voiceflow.chat.proactive
 
 For example, you can render a proactive message bubble when your customer reaches a particular page on your website:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d24d40-proactive_message_bubble_demo.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/4d24d40-proactive_message_bubble_demo.png" />
 
 ```html
 <script>
@@ -326,6 +298,6 @@ Note: the event.data value is a JSON string if it contains a `voiceflow:*` event
 
 > **voiceflow:open** - widget is opened
 >
-> **voiceflow:save_session** - message is sent by the user
+> **voiceflow:save\_session** - message is sent by the user
 >
 > **voiceflow:close** - widget is minimized or closed
