@@ -21,7 +21,7 @@ next:
 
 1. **Click on the 'New entity' button** located in the upper right area of the screen within the Entities CMS interface.
 2. A dialog box will appear prompting you to define the new entity.
-3. **Enter a name** for the entity in the 'Name' field. The name should represent the kind of information the entity will hold, like "city_name" or "product_type".
+3. **Enter a name** for the entity in the 'Name' field. The name should represent the kind of information the entity will hold, like "city\_name" or "product\_type".
 4. Choose a **'Data type'** from the drop-down menu. This could be 'Custom' for unique data types or something predefined like 'Number', 'Date', etc.
 5. Under 'Values', **enter possible values** that the entity can take. You can also add synonyms for each value to ensure that the AI recognizes different variations of the same value.
 6. Once completed, **click 'Create entity'** to save the new entity to your CMS.
@@ -61,9 +61,9 @@ These are the entities that can be defined by the conversation designer as per t
 
 ### System-Defined Entities (legacy)
 
-> 🚧 
-> 
-> With the introduction of entity collection using LLMs, system-defined entity types should be complemented with entity rules that specify the entity value requirements. 
+> 🚧
+>
+> With the introduction of entity collection using LLMs, system-defined entity types should be complemented with entity rules that specify the entity value requirements.
 
 The system entities are commonly used entities that are pre-defined in the system. In Voiceflow, there are 14 pre-defined entity types for English-based projects:
 
@@ -80,8 +80,8 @@ The system entities are commonly used entities that are pre-defined in the syste
 | DATETIME     | Captures dates and times in various formats, like "21/02/2018" or "Today."                                                                                                                  |
 | CURRENCY     | Refers to monetary amounts in various currencies.                                                                                                                                           |
 | AGE          | Indicates the age of a person, like "I am 54."                                                                                                                                              |
-| KEY_PHRASE   | _Deprecated_: A concept or subject to capture. Best to use a custom entity.                                                                                                                 |
-| URL          | Captures web addresses like "<https://en.wikipedia.org>."                                                                                                                                   |
+| KEY\_PHRASE  | *Deprecated*: A concept or subject to capture. Best to use a custom entity.                                                                                                                 |
+| URL          | Captures web addresses like "[https://en.wikipedia.org](https://en.wikipedia.org)."                                                                                                         |
 | ORDINAL      | Recognizes ordinal numbers, like "first" in a race or "23rd" in a series.                                                                                                                   |
 
 ### Extending System Defined Entities
@@ -93,9 +93,9 @@ If you have a specific pattern that you are expecting, you can extend the entity
 
 ## Tips for Entity Management
 
-- **Understand your domain**: Create entities that capture the essential information relevant to your application's domain.
-- **Define clear purposes**: Each entity should have a clear purpose, like "flight_date" for capturing dates related to flights.
-- **Granularity matters**: Design entities to be as granular as needed for your application. For example, "departure_city" and "arrival_city" are better than a single "city" entity.
-- **Consider synonyms and variations**: Include common synonyms and variations, like "beverage," "drink," "soda," and "pop."
-- **Regularly expand entities**: As you gather more data from user interactions, expand your entities to include new phrases and terms.
-- **Avoid overlapping entities**: Ensure entities are distinct and don’t capture information that could be better suited to another entity.
+* **Understand your domain**: Create entities that capture the essential information relevant to your application's domain.
+* **Define clear purposes**: Each entity should have a clear purpose, like "flight\_date" for capturing dates related to flights.
+* **Granularity matters**: Design entities to be as granular as needed for your application. For example, "departure\_city" and "arrival\_city" are better than a single "city" entity.
+* **Consider synonyms and variations**: Include common synonyms and variations, like "beverage," "drink," "soda," and "pop."
+* **Regularly expand entities**: As you gather more data from user interactions, expand your entities to include new phrases and terms.
+* **Avoid overlapping entities**: Ensure entities are distinct and don’t capture information that could be better suited to another entity.
