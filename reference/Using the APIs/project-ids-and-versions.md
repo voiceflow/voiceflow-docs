@@ -20,51 +20,23 @@ Voiceflow agents use versions to be able to choose a specific version of their a
 
 The two main versions available are:
 
-- development:  A new development version is compiled each time you click on the Play button
+* development:  A new development version is compiled each time you click on the Play button
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/593ba78-CleanShot_2024-06-24_at_14.30.202x.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/593ba78-CleanShot_2024-06-24_at_14.30.202x.png" />
 
+* production: A new production version is published each time you click on the Publish button
 
-- production: A new production version is published each time you click on the Publish button
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/fd76511-CleanShot_2024-06-24_at_14.33.002x.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/fd76511-CleanShot_2024-06-24_at_14.33.002x.png" />
 
 A **development** version is meant to be used for testing purpose, when you are making changes to your agent and want to test them before pushing those changes to your live agent (production). A **production** version should be a stable, tested version you want to use in production while you’re working on the development version of your agent in Voiceflow Creator.
 
 Each version has a unique version ID associated, but your current production and development version can often be referred to using their **alias**. The production version's alias is `production` and the development version's alias is `development`. This is useful because it means you don't have to update the version ID being used in your code if you publish a new version.
 
-**Note:** _A couple of APIs might still next the exact version ID instead of an alias like in the versions API._
+**Note:** *A couple of APIs might still next the exact version ID instead of an alias like in the versions API.*
 
 When you make a request to the DM API without passing any version in the header, we **default to the development** version (same goes for the Chat Widget snippet code). 
 
-_Below, a DM API launch request using the **development** version of an agent_
+*Below, a DM API launch request using the**development** version of an agent*
 
 ```curl
 curl --request POST \
@@ -79,7 +51,7 @@ curl --request POST \
 }'
 ```
 
-_Below, some Chat Widget snippet code loading the **production** version of an agent_
+*Below, some Chat Widget snippet code loading the**production** version of an agent*
 
 ```html
 <script type="text/javascript">
