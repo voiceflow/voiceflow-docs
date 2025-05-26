@@ -10,25 +10,13 @@ metadata:
 next:
   description: ''
 ---
-In his guide, we will cover the composition of the **_Voiceflow Project_** file (`.vf` file)
+In his guide, we will cover the composition of the ***Voiceflow Project*** file (`.vf` file)
 
 It's broken up into 3 parts: **Project**, **Version**, and **Diagram**, each of which will be covered here.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4fe9be0-Frame_18.png",
-        "Frame 18.png",
-        2610
-      ],
-      "align": "center",
-      "caption": "Voiceflow project file export"
-    }
-  ]
-}
-[/block]
+<Image title="Frame 18.png" alt={2610} align="center" src="https://files.readme.io/4fe9be0-Frame_18.png">
+  Voiceflow project file export
+</Image>
 
 ## Project
 
@@ -36,15 +24,13 @@ It's broken up into 3 parts: **Project**, **Version**, and **Diagram**, each of 
 
 ![](https://files.readme.io/ecc700f-project.png "project.png")
 
-
-
-- `_id` unique ObjectId Identifying this particular **project**
-- `name` name of the project
-- `teamID` **team/workspace** that this project belongs to, hash-id string
-- `devVersion` ObjectId pointer to the main working **version** on the project
-- `platform` the channel of the project _(alexa, google, chatbot, twilio, etc...)_
-- `platformData` project metadata for the particular platform type
-- `members` distinct metadata for members working on the project -(configurations or settings that different members might have)
+* `_id` unique ObjectId Identifying this particular **project**
+* `name` name of the project
+* `teamID` **team/workspace** that this project belongs to, hash-id string
+* `devVersion` ObjectId pointer to the main working **version** on the project
+* `platform` the channel of the project *(alexa, google, chatbot, twilio, etc...)*
+* `platformData` project metadata for the particular platform type
+* `members` distinct metadata for members working on the project -(configurations or settings that different members might have)
 
 ...other fields with more additional metadata for various functions
 
@@ -54,21 +40,19 @@ A **project** can contain many versions, the `devVersion` is the main working ve
 
 ![](https://files.readme.io/5a1a8d8-versions.png "versions.png")
 
-
-
-- `_id` unique ObjectId Identifying this particular version
-- `name` name of the version (i.e. "backup save before change X")
-- `projectID` project that this version belongs to
-- `rootDiagramID` ObjectId pointer to the **home/root diagram**. This is the starting point.
-- `platformData` version metadata for the particular platform type
-  - `intents`
-  - `slots`
-- `variables` array of global variable names  
+* `_id` unique ObjectId Identifying this particular version
+* `name` name of the version (i.e. "backup save before change X")
+* `projectID` project that this version belongs to
+* `rootDiagramID` ObjectId pointer to the **home/root diagram**. This is the starting point.
+* `platformData` version metadata for the particular platform type
+  * `intents`
+  * `slots`
+* `variables` array of global variable names\
   ...other fields with more additional metadata for various functions
 
 ## Diagrams (Topics and Flows)
 
-**Version**: A version contains many diagrams, with the rootDiagram being the entry point during runtime.  
+**Version**: A version contains many diagrams, with the rootDiagram being the entry point during runtime.\
 Can find all diagrams of a version searching against the versionID index.
 
 These might also be referred to as topic, or component. Both are types of diagrams. An older name for diagrams is "flow"
@@ -77,41 +61,25 @@ These might also be referred to as topic, or component. Both are types of diagra
 
 **Components**: components are modular, reusable pieces. You can think of components similar to functions in programming. When a component gets called, it is added to the "call stack", and pops off when it is finished.
 
-- `_id` unique ObjectId Identifying this particular **diagram**
-- `name` name of the diagram
-- `type` type of diagram: `TOPIC` or `COMPONENT`
-- `versionID` **version** that this **diagram** belongs to
-- `nodes` dictionary of all the **nodes** in the diagram, referenced by their `nodeID`. This is where most of the data lives.
-- `variables` array of diagram-level variable names (local variables)  
+* `_id` unique ObjectId Identifying this particular **diagram**
+* `name` name of the diagram
+* `type` type of diagram: `TOPIC` or `COMPONENT`
+* `versionID` **version** that this **diagram** belongs to
+* `nodes` dictionary of all the **nodes** in the diagram, referenced by their `nodeID`. This is where most of the data lives.
+* `variables` array of diagram-level variable names (local variables)\
   ...other fields with more additional metadata
 
 ### Nodes
 
 Every node has:
 
-- unique `nodeID` (only needs to be unique per diagram)
-- `type` canonical type of node
-- `data` that houses metadata for the node.
+* unique `nodeID` (only needs to be unique per diagram)
+* `type` canonical type of node
+* `data` that houses metadata for the node.
 
 > **blocks** or **steps** are types of **nodes**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/be327a6-nodes.png",
-        "nodes.png",
-        1502
-      ],
-      "align": "center",
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
-
-
+<Image align="center" width="smart" src="https://files.readme.io/be327a6-nodes.png" />
 
 A **block** is comprised of **steps**, and usually, the last **step** in the **block** will have **ports**. There are "implicit" **ports** between **steps** within the same **block**.
 
@@ -125,23 +93,7 @@ Markup, images + text on canvas with no functional purpose, are special types of
 
 **Blocks** contain a `steps` property in `data` that references their children steps, in this case, a speak step + a choice step are always of `type: block`.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ebb4e97-block.png",
-        "block.png",
-        1202
-      ],
-      "align": "center",
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
-
-
+<Image align="center" width="smart" src="https://files.readme.io/ebb4e97-block.png" />
 
 Below is what the above "Greetings" block looks like in JSON form.
 
@@ -164,28 +116,9 @@ Below is what the above "Greetings" block looks like in JSON form.
 },
 ```
 
-
-
 #### Steps
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/265607d-Screen_Shot_2021-11-21_at_5.09.16_PM.png",
-        "Screen Shot 2021-11-21 at 5.09.16 PM.png",
-        1258
-      ],
-      "align": "center",
-      "sizing": "80",
-      "border": true
-    }
-  ]
-}
-[/block]
-
-
+<Image align="center" className="border" width="80%" border={true} src="https://files.readme.io/265607d-Screen_Shot_2021-11-21_at_5.09.16_PM.png" />
 
 See what the "choice" step looks like in JSON form below:
 
@@ -212,8 +145,6 @@ See what the "choice" step looks like in JSON form below:
   }
 }
 ```
-
-
 
 `type` is the canonical type of the step. There will always be `ports` under the `data`, which target another node. 
 
