@@ -10,23 +10,20 @@ metadata:
 next:
   description: ''
 ---
-Introduction
-------------
+## Introduction
 
 In this article we will go over the use of the **Directive step** and the new Alexa **Response Builder** available on the **Alexa Developer Console**.
 
-Context
--------
+## Context
 
-The **Alexa Developer Console** provide two ways of generating visual responses with **APL (**Alexa Presentation Language**)**.
+The **Alexa Developer Console** provide two ways of generating visual responses with **APL (**&#x41;lexa Presentation Languag&#x65;**)**.
 
-- The Multimodal Response Builder
-- The APL Authoring Tool (for advanced users)
+* The Multimodal Response Builder
+* The APL Authoring Tool (for advanced users)
 
 For this project, we are going to use the **Multimodal Response Builder** with a template to build a video player.
 
-What we need?
--------------
+## What we need?
 
 We will need a new **Alexa project** to upload to the **Alexa Developer Console**, a **Code step** and a **Conditions step** to check that the device support **APL** and a **Directive step** to display our **APL** document on the device.
 
@@ -126,8 +123,8 @@ Save your change by clicking on Save Interfaces button at the top of the page.
 
 ![](https://files.readme.io/5a9667b-CleanShot_2022-08-17_at_15.40.32.png)
 
-> 🚧 
-> 
+> 🚧
+>
 > You might need to wait around 3-5 minutes for the changes to populate before being able to fully test the skill.
 
 Go to the **Test** tab, be sure to check the **Device Display** settings and run a test.
@@ -152,7 +149,7 @@ Here for example, I’m updating the **Control** **Type** property
 
 ![](https://files.readme.io/9b7219a-CleanShot_2022-08-17_at_19.19.18.png)
 
-You can tweak and change all the properties available but do not forget to click the** Next: Preview & Test **button and then on the Done! button when you’re done to populate your changes.
+You can tweak and change all the properties available but do not forget to click the **Next: Preview & Test**button and then on the Done! button when you’re done to populate your changes.
 
 ![](https://files.readme.io/a207b7d-CleanShot_2022-08-17_at_18.56.39.png)
 
@@ -192,9 +189,9 @@ Let’s update the **headerTitle** value to use a variable we can populate befor
 "headerTitle": "{videoTitle}"
 ```
 
-> 📘 
-> 
-> You can use **{variables}** in the **Directive** code anywhere you need them. As we’ve done for the **headerTitle** property, you can do the same with the **backgroundImage** for example.
+> 📘
+>
+> You can use **\{variables}** in the **Directive** code anywhere you need them. As we’ve done for the **headerTitle** property, you can do the same with the **backgroundImage** for example.
 
 As we are using a variable now we want to populate it with a value. We are using a Set step to do that.
 
@@ -202,8 +199,8 @@ As we are using a variable now we want to populate it with a value. We are using
 
 Upload you project to Alexa when you’re ready to test you changes.
 
-> 🚧 
-> 
+> 🚧
+>
 > You might need to wait around 3-5 minutes for the changes to populate before being able to fully test the skill.
 
 You should be able to see your changes (here the header title and the video control).
@@ -211,9 +208,9 @@ You should be able to see your changes (here the header title and the video cont
 ![](https://files.readme.io/d9df224-CleanShot_2022-08-17_at_20.08.15.png)
 
 > 📘 Further reading
-> 
+>
 > [Multimodal Response Builder](https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/apl-authoring-tool.html#use-mmrb)
-> 
+>
 > [APL Authoring Tool](https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/apl-authoring-tool.html#use-auth-tool)
-> 
+>
 > [Directives & Requests](https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/what-makes-up-apl-visual-response.html#send-your-document-and-data-source-to-alexa)
