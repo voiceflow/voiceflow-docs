@@ -11,47 +11,77 @@ next:
   description: ''
 ---
 ## Examples
+
 ### Follow path
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.buttons\",\n  \"message\": {\n    \"componentName\": \"buttons\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"intent\": null,\n    \"url\": null,\n    \"path\": {\n      \"componentName\": \"speak\",\n      \"stepID\": \"62c47ac699eca10006f20cbb\"\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.buttons",
+  "message": {
+    "componentName": "buttons",
+    "stepID": "628469f0effe73d544505715",
+    "intent": null,
+    "url": null,
+    "path": {
+      "componentName": "speak",
+      "stepID": "62c47ac699eca10006f20cbb"
     }
-  ]
+  }
 }
-[/block]
+```
+
 ### URL + follow path
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.buttons\",\n  \"message\": {\n    \"componentName\": \"buttons\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"intent\": null,\n    \"url\": \"https://example.com\",\n    \"path\": {\n      \"componentName\": \"speak\",\n      \"stepID\": \"62c47ac699eca10006f20cbb\"\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.buttons",
+  "message": {
+    "componentName": "buttons",
+    "stepID": "628469f0effe73d544505715",
+    "intent": null,
+    "url": "https://example.com",
+    "path": {
+      "componentName": "speak",
+      "stepID": "62c47ac699eca10006f20cbb"
     }
-  ]
+  }
 }
-[/block]
+```
+
 ### Go to intent
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.buttons\",\n  \"message\": {\n    \"componentName\": \"buttons\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"intent\": \"place_order\",\n    \"url\": null,\n    \"path\": null\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.buttons",
+  "message": {
+    "componentName": "buttons",
+    "stepID": "628469f0effe73d544505715",
+    "intent": "place_order",
+    "url": null,
+    "path": null
+  }
 }
-[/block]
+```
+
 ### URL + go to intent
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.buttons\",\n  \"message\": {\n    \"componentName\": \"buttons\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"intent\": \"place_order\",\n    \"url\": \"https://example.com\",\n    \"path\": null\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.buttons",
+  "message": {
+    "componentName": "buttons",
+    "stepID": "628469f0effe73d544505715",
+    "intent": "place_order",
+    "url": "https://example.com",
+    "path": null
+  }
 }
-[/block]
+```
