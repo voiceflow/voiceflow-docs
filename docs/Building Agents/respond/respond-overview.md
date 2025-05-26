@@ -34,10 +34,10 @@ You're never going to get it right on the first time. Our advice is to start sma
 AI often responds directly through text, with the [Response AI](https://developer.voiceflow.com/v2.0/docs/response-ai-set-ai) step. You can also use AI in more nuanced ways by using [Set AI](https://developer.voiceflow.com/v2.0/docs/response-ai-set-ai) to store an AI answer, that can then be parsed to fill out suggested buttons, choose a direction to branch in your agent, or more.
 
 > 📘 Using an external model
-> 
+>
 > If you cant find the AI model you want to use in Voiceflow, you can always use the API step or create a Function to send and recieve a message from an external model!
-> 
-> [block:embed]{"html":"<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fskel9AlZnkw%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dskel9AlZnkw&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fskel9AlZnkw%2Fhqdefault.jpg&key=7788cb384c9f4d5dbbdbeffd9fe4b92f&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>","url":"https://www.youtube.com/watch?v=skel9AlZnkw","title":"Using Voiceflow with Mistral AI or Open Sourced AI Model","favicon":"https://www.google.com/favicon.ico","image":"https://i.ytimg.com/vi/skel9AlZnkw/hqdefault.jpg","provider":"https://www.youtube.com/","href":"https://www.youtube.com/watch?v=skel9AlZnkw","typeOfEmbed":"youtube"}[/block]
+>
+> <Embed url="https://www.youtube.com/watch?v=skel9AlZnkw" title="Using Voiceflow with Mistral AI or Open Sourced AI Model" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/skel9AlZnkw/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=skel9AlZnkw" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fskel9AlZnkw%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Dskel9AlZnkw%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fskel9AlZnkw%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 # Response outputs
 
