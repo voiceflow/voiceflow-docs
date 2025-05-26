@@ -30,47 +30,17 @@ Selecting this will bring up your computer's file navigation/upload menu. Ensure
 
 You can export Voiceflow files (.vf) onto your workspace by navigating to your workspace Dashboard and clicking the  three dots and then to `Download (.vf)`.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/5954345-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "700px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="700px" src="https://files.readme.io/5954345-image.png" />
 
 You can also export from inside a project itself by clicking the Voiceflow logo in the top left.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/20fe83c-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "300px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="300px" src="https://files.readme.io/20fe83c-image.png" />
 
 You can also export your project as:
 
-- **PDF**: exporting your screens and design into a PDF file
-- **Image (PNG)**: a snapshot of the current canvas screen in an image-file format
-- **Dialogs (CSV)**: a .CSV file of the Agent dialogs.
+* **PDF**: exporting your screens and design into a PDF file
+* **Image (PNG)**: a snapshot of the current canvas screen in an image-file format
+* **Dialogs (CSV)**: a .CSV file of the Agent dialogs.
 
 # Importing functions
 
@@ -84,41 +54,11 @@ You can export [functions](https://developer.voiceflow.com/v2.0/docs/custom-func
 
 ![](https://files.readme.io/9834d28-image.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/48c51c5-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "0px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="0px" src="https://files.readme.io/48c51c5-image.png" />
 
 Or from the function editing view in the three dots in the top right.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/03bf86c-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="400px" src="https://files.readme.io/03bf86c-image.png" />
 
 You can also export multiple functions at once from the main CMS view by checking the boxes to the left of the functions you want to export, which will export them all as one bulk file.
 
