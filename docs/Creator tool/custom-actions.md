@@ -61,20 +61,9 @@ Where the `type` of the request is the same as the name of the path you've label
 
 The below illustration describes the custom action workflow. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4f671b4-Group_1_1.png",
-        "Group 1 (1).png",
-        2340
-      ],
-      "caption": "Custom Action Diagram"
-    }
-  ]
-}
-[/block]
+<Image title="Group 1 (1).png" alt={2340} src="https://files.readme.io/4f671b4-Group_1_1.png">
+  Custom Action Diagram
+</Image>
 
 In summary, here's what's happening:
 
