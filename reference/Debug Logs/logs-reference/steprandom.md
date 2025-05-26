@@ -11,14 +11,21 @@ next:
   description: ''
 ---
 ## Examples
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"level\": \"info\",\n  \"timestamp\": \"2022-06-15T14:15:30.150Z\",\n  \"kind\": \"step.random\",\n  \"message\": {\n    \"componentName\": \"random\",\n    \"stepID\": \"628469f0effe73d544505715\",\n    \"path\": {\n      \"componentName\": \"speak\",\n      \"stepID\": \"62c47ac699eca10006f20cbb\"\n    }\n  }\n}",
-      "language": "json"
+  "level": "info",
+  "timestamp": "2022-06-15T14:15:30.150Z",
+  "kind": "step.random",
+  "message": {
+    "componentName": "random",
+    "stepID": "628469f0effe73d544505715",
+    "path": {
+      "componentName": "speak",
+      "stepID": "62c47ac699eca10006f20cbb"
     }
-  ]
+  }
 }
-[/block]
+```
+
 `path` is `null` when the chosen path does not connect to a node on the canvas.
