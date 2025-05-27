@@ -374,7 +374,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const asrCreditsPerVoiceMinute = asr ? (asr.creditsPerBaseUnit * asrUtilizationRate) : 0;
     
     const voiceCreditsPerMinute = voiceHosting + llmCreditsPerVoiceMinute + ttsCreditsPerVoiceMinute + asrCreditsPerVoiceMinute;
-    const voiceTotalCredits = voiceCreditsPerMinute * voiceMinutes;
+    const voiceTotalCredits = voiceCreditsPerMinute * (billingPeriod === 'Year' ? voiceMinutes / 12 : voiceMinutes);
 
     // Chat AI calculations
     const chatHosting = 1; // Fixed Voiceflow Chat AI Hosting credits per message
@@ -387,7 +387,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     // Calculate credits using the new structure
     const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerBaseUnit * effectiveLlmTokensPerMessage) : 0;
     const chatCreditsPerMessage = chatHosting + llmCreditsPerChatMessage;
-    const chatTotalCredits = chatCreditsPerMessage * chatMessages;
+    const chatTotalCredits = chatCreditsPerMessage * (billingPeriod === 'Year' ? chatMessages / 12 : chatMessages);
 
     const totalCredits = voiceTotalCredits + chatTotalCredits;
     
@@ -532,17 +532,17 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * 0.005)}</span>
                 </div>
               </div>
-              {/* Voice Minutes Input (moved below summary) */}
+              {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  Call Minutes per Month
+                  {billingPeriod === 'Year' ? 'Call Minutes per Year' : 'Call Minutes per Month'}
                 </label>
                 <input 
                   type="number" 
                   value={voiceMinutes}
                   onChange={(e) => setVoiceMinutes(Number(e.target.value))}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
-                  placeholder="Enter call minutes"
+                  placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
                 />
                 <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
                   Credits per minute: 10.00
@@ -624,17 +624,17 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.chatCreditsPerMessage * 0.005)}</span>
                 </div>
               </div>
-              {/* Chat Messages Input (moved below summary) */}
+              {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  Messages per Month
+                  {billingPeriod === 'Year' ? 'Messages per Year' : 'Messages per Month'}
                 </label>
                 <input 
                   type="number" 
                   value={chatMessages}
                   onChange={(e) => setChatMessages(Number(e.target.value))}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
-                  placeholder="Enter messages"
+                  placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
                 />
                 <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
                   Credits per message: 1.00
