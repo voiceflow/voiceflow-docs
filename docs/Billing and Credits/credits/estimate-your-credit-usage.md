@@ -21,4 +21,4 @@ If you're not sure which plan to choose, or want to estimate how many credits yo
 
 We've collected some tips from our community about how they optimize their agents to use less credits. Check out the course below to learn how!
 
-> undefined
+<LinkCard type="Course" title="Optimize your AI agent to use less credits" description="Save money while building powerful AI agents. We'll show you our tips on how to reduce how many credits you're using." href="https://www.voiceflow.com/lessons/what-are-credits" imageSrc="https://cdn.prod.website-files.com/657639ebfb91510f45654149/67f7f24a1b2cf13a2bc90086_Credits.png" />
