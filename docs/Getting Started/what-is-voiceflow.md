@@ -19,3 +19,9 @@ Voiceflow agents are:
 * **Fast:** respond in real-time, with minimal latency - even when handling complex conversations or multiple integrations.
 * **Powerful:** leverage leading LLMs, APIs, and business logic to automate real work - not just replies.
 * **Flexible**: build agentic and deterministic workflows, connect to all the tools you already use (even custom ones), and control every aspect of your agent's conversations.
+
+<br />
+
+## Try out Voiceflow
+
+<CourseCard title="Build an AI Support Agent" description="Build your first AI agent in 15 minutes or less." href="https://www.voiceflow.com/lessons/welcome-to-build-an-ai-support-agent" imageSrc="https://cdn.prod.website-files.com/657639ebfb91510f45654149/67cb720e1f90849808752fcf_Support%20Course%20Jacklyn%20(5).png" />
