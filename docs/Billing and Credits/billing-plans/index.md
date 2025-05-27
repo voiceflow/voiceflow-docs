@@ -46,4 +46,4 @@ All Voiceflow plans include one editor seat, meaning one person can edit all of 
 
 ## Credits
 
-Credits are the currency that Voiceflow uses to bill for usage. Each plan includes a specific number of credits. Credit charges are incurred when your agent does actions such as sending a message, calling a phone number, or generating text using AI. [You can learn more about credits here](https://www.voiceflow.com/pathways/introducing-voiceflow-credits).
+Credits are the currency that Voiceflow uses to bill for usage. Each plan includes a specific number of credits. Credit charges are incurred when your agent does actions such as sending a message, calling a phone number, or generating text using AI. [You can learn more about credits here](doc:credits).
