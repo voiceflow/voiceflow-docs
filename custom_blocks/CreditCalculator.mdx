@@ -87,13 +87,20 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const tts = findService('tts', selectedTTS);
     const asr = findService('asr', selectedASR);
     
-    // Assume average tokens per minute for voice (approximation)
-    const avgTokensPerVoiceMinute = 500; // This is an estimation
-    const avgCharsPerVoiceMinute = 2000; // This is an estimation
+    // Voice AI assumptions from the sheet
+    const ttsUtilizationRate = 0.70; // 70%
+    const ttsCharsPerMinute = 700;
+    const asrUtilizationRate = 0.85; // 85%
+    const llmInputTokenPercent = 0.70; // 70%
+    const llmTokensPerMinute = 600;
     
-    const llmCreditsPerVoiceMinute = llmVoice ? (llmVoice.creditsPerUnit * avgTokensPerVoiceMinute / 1000) : 0;
-    const ttsCreditsPerVoiceMinute = tts ? (tts.creditsPerUnit * avgCharsPerVoiceMinute / 1000) : 0;
-    const asrCreditsPerVoiceMinute = asr ? asr.creditsPerUnit : 0;
+    // Calculate effective usage
+    const effectiveTtsCharsPerMinute = ttsCharsPerMinute * ttsUtilizationRate; // 490 chars
+    const effectiveLlmTokensPerMinute = llmTokensPerMinute * llmInputTokenPercent; // 420 tokens
+    
+    const llmCreditsPerVoiceMinute = llmVoice ? (llmVoice.creditsPerUnit * effectiveLlmTokensPerMinute / 1000) : 0;
+    const ttsCreditsPerVoiceMinute = tts ? (tts.creditsPerUnit * effectiveTtsCharsPerMinute / 1000) : 0;
+    const asrCreditsPerVoiceMinute = asr ? (asr.creditsPerUnit * asrUtilizationRate) : 0;
     
     const voiceCreditsPerMinute = voiceHosting + llmCreditsPerVoiceMinute + ttsCreditsPerVoiceMinute + asrCreditsPerVoiceMinute;
     const voiceTotalCredits = voiceCreditsPerMinute * voiceMinutes;
@@ -102,10 +109,11 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const chatHosting = 1; // Fixed Voiceflow Chat AI Hosting credits per message
     const llmChat = findService('llm', selectedLLMChat);
     
-    // Assume average tokens per chat message
-    const avgTokensPerChatMessage = 500; // This is an estimation
+    // Chat AI assumptions from the sheet
+    const llmTokensPerMessage = 600;
+    const effectiveLlmTokensPerMessage = llmTokensPerMessage * llmInputTokenPercent; // 420 tokens
     
-    const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerUnit * avgTokensPerChatMessage / 1000) : 0;
+    const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerUnit * effectiveLlmTokensPerMessage / 1000) : 0;
     const chatCreditsPerMessage = chatHosting + llmCreditsPerChatMessage;
     const chatTotalCredits = chatCreditsPerMessage * chatMessages;
 
@@ -120,7 +128,18 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       chatCreditsPerMessage,
       chatTotalCredits,
       totalCredits,
-      recommendedPlan
+      recommendedPlan,
+      // Add individual service breakdowns for display
+      voiceBreakdown: {
+        hosting: voiceHosting,
+        llm: llmCreditsPerVoiceMinute,
+        tts: ttsCreditsPerVoiceMinute,
+        asr: asrCreditsPerVoiceMinute
+      },
+      chatBreakdown: {
+        hosting: chatHosting,
+        llm: llmCreditsPerChatMessage
+      }
     });
   }, [voiceMinutes, chatMessages, selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR]);
 
