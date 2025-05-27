@@ -6,7 +6,8 @@ import { useState, useEffect } from 'react';
 export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => {
   // THIS IS PRETTY MUCH ENTIRELY GENERATED WITH CURSOR
   // I DON'T RECOMMEND MODIFYING IT MANUALLY IF YOU CAN AVOID IT
-  
+
+
   // Define all data inside the component to avoid MDX parsing issues
   const creditsData = {
     orchestration: [
@@ -355,10 +356,9 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     
     // Calculate effective usage
     const effectiveTtsCharsPerMinute = ttsCharsPerMinute * ttsUtilizationRate; // 490 chars
-    const effectiveLlmTokensPerMinute = llmTokensPerMinute * llmInputTokenPercent; // 420 tokens
     
     // Calculate credits using the new structure
-    const llmCreditsPerVoiceMinute = llmVoice ? (llmVoice.creditsPerBaseUnit * effectiveLlmTokensPerMinute) : 0;
+    const llmCreditsPerVoiceMinute = llmVoice ? (llmVoice.creditsPerBaseUnit * llmTokensPerMinute) : 0;
     const ttsCreditsPerVoiceMinute = tts ? (tts.creditsPerBaseUnit * effectiveTtsCharsPerMinute) : 0;
     const asrCreditsPerVoiceMinute = asr ? (asr.creditsPerBaseUnit * asrUtilizationRate) : 0;
     
