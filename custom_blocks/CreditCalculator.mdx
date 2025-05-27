@@ -396,6 +396,12 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
     const recommendedPlan = recommended ? `${recommended.name} (${recommended.credits.toLocaleString()} credits/${billingPeriod.toLowerCase()})` : "ENTERPRISE";
 
+    // Find the recommended plan object for cost calculation
+    const planUnitCost = recommended ? recommended.unitCost : (billingPeriod === 'Year' ? 0.0054 : 0.005);
+    const estimatedMonthlyCost = billingPeriod === 'Year'
+      ? (totalCredits * planUnitCost) / 12
+      : totalCredits * planUnitCost;
+
     setCalculations({
       voiceCreditsPerMinute,
       voiceTotalCredits,
@@ -403,6 +409,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       chatTotalCredits,
       totalCredits,
       recommendedPlan,
+      estimatedMonthlyCost,
       // Add individual service breakdowns for display
       voiceBreakdown: {
         hosting: voiceHosting,
@@ -447,7 +454,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
               <div className="text-blue-100">Recommended Plan</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400">{formatCurrency(calculations.totalCredits * 0.005)}</div>
+              <div className="text-3xl font-bold text-emerald-400">{formatCurrency(calculations.estimatedMonthlyCost)}</div>
               <div className="text-blue-100">Estimated Cost/Month</div>
             </div>
           </div>
