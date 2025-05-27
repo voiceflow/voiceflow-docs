@@ -459,7 +459,7 @@ export const CreditCalculator = () => {
       {/* Calculator Selector */}
       <div className="mb-8">
         <div className="flex flex-wrap items-center gap-4 text-left">
-          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm building a</h2>
+          <span className="text-base font-normal text-gray-900 dark:text-white whitespace-nowrap">I'm building a</span>
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => setActiveTab("voice")}
@@ -485,9 +485,10 @@ export const CreditCalculator = () => {
             </button>
           </div>
         </div>
+        <br />
         {/* Billing Period Selector */}
         <div className="flex flex-wrap items-center gap-4 text-left">
-          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm billed</h2>
+          <span className="text-base font-normal text-gray-900 dark:text-white whitespace-nowrap">I'm billed</span>
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => setBillingPeriod("Month")}
