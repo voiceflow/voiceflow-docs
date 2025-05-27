@@ -24,8 +24,6 @@ Voiceflow allows you to build powerful and flexible AI agents, but you can start
 
 We're going to build an AI agent for Beaver Realty, a real estate company based in Toronto. To get started, click the link below to clone the template into your workspace.
 
-<br />
-
 <LinkCard type="template" title="Beaver Realty agent template" description="Start with this template, then customize it to fit your business." href="https://creator.voiceflow.com/dashboard?import=683611f0d5ef682cf60c5d92" />
 
 <br />
