@@ -10,7 +10,7 @@ metadata:
 ---
 ## What are credits?
 
-Credits are a currency used across Voiceflow, and are how you're billed for your agent's usage. Certain actions performed by one of your agents will consume credits. Your credit balance is managed at workspace level, meaning that a single credit balance is shared by all agents in a workspace.
+Credits are a currency used across Voiceflow and are how you're billed for your agent's usage. Certain actions performed by one of your agents will consume credits. Your credit balance is managed at workspace level, meaning that a single credit balance is shared by all agents in a workspace.
 
 Each plan includes a certain amount of credits. [You can learn more on our pricing page.](https://www.voiceflow.com/pricing)
 
