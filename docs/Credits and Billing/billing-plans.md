@@ -28,6 +28,8 @@ Voiceflow offers four plans:
 
 [You can learn more about each of Voiceflow's plans on the our pricing page.](https://www.voiceflow.com/pricing)
 
+<Image align="center" src="https://files.readme.io/6bef6e410322c698eee30e39f28cb535e3cf8fce41fd3f6460faabeb2c019768-Frame_48095748_1.png" />
+
 # Manage Billing (Pro)
 
 Under the Team & Billing section, access the Billing page to manage your Workspace’s subscription information. In this view, you can view current and previous billing history, update payment details and schedule seat changes.
