@@ -15,6 +15,8 @@ If you're not sure which plan to choose, or want to estimate how many credits yo
 
 <CreditCalculator />
 
+<br />
+
 ## Optimize your agent to use less credits
 
 We've collected some tips from our community about how they optimize their agents to use less credits. Check out the course below to learn how!
