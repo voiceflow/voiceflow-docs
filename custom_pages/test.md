@@ -1,7 +1,7 @@
 ---
 title: test
 fullscreen: false
-hidden: false
+hidden: true
 ---
 | test | test | test |
 | :--- | :--- | :--- |
