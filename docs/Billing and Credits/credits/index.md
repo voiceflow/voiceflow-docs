@@ -25,7 +25,7 @@ Most actions performed by an AI agent on the Voiceflow platform will consume cre
 * **LLM (Large Language Model) Usage**: LLMs are used for various features, including the [Prompt step](doc:prompt-step), [Agent step](doc:agents), [prompt-based logic](https://docs.voiceflow.com/docs/logic#/), and [intent detection](https://docs.voiceflow.com/docs/intents#/). Credits are billed **at-cost** for LLM usage - more powerful models like GPT-4 Turbo will consume more credits per use than more lightweight models such as GPT-4o mini.
 * **TTS (Text-to-Speech) Usage** TTS generation for voice agents is charged per character and is an additional cost to call minutes.
 
-<br />
+Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
 
 <LinkCard type="Tool" title="Credit usage estimator" description="Estimate how many credits your agents will consume per month and have the best value plan recommende to you." href="./estimate-your-credit-usage#credits-estimation-calculator" />
 
