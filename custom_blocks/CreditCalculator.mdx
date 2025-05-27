@@ -532,9 +532,13 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   {billingPeriod === 'Year' ? 'Call Minutes per Year' : 'Call Minutes per Month'}
                 </label>
                 <input 
-                  type="number" 
-                  value={voiceMinutes}
-                  onChange={(e) => setVoiceMinutes(e.target.value === '' ? 0 : Number(e.target.value))}
+                  type="text" 
+                  value={voiceMinutesInput}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setVoiceMinutesInput(value);
+                    setVoiceMinutes(value === '' ? 0 : Number(value));
+                  }}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
                   placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
                 />
@@ -609,9 +613,13 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   {billingPeriod === 'Year' ? 'Messages per Year' : 'Messages per Month'}
                 </label>
                 <input 
-                  type="number" 
-                  value={chatMessages}
-                  onChange={(e) => setChatMessages(e.target.value === '' ? 0 : Number(e.target.value))}
+                  type="text" 
+                  value={chatMessagesInput}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setChatMessagesInput(value);
+                    setChatMessages(value === '' ? 0 : Number(value));
+                  }}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
                   placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
                 />
