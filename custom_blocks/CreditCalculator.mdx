@@ -444,7 +444,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       {/* Calculator Selector */}
       <div className="mb-8">
         <div className="flex flex-wrap items-center gap-4 text-left">
-          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm building a...</h2>
+          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm building a</h2>
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => setActiveTab("voice")}
@@ -454,7 +454,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
               `}
             >
-              <span role="img" aria-label="voice" className="text-lg">🔊</span>
+              <i className="fas fa-microphone text-lg"></i>
               Voice Agent
             </button>
             <button
@@ -465,7 +465,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-300"}
               `}
             >
-              <span role="img" aria-label="chat" className="text-lg">💬</span>
+              <i className="fas fa-comments text-lg"></i>
               Chat Agent
             </button>
           </div>
