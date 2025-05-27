@@ -537,7 +537,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                         {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
                       </span>
                     ) : (
-                      <span className="text-base font-bold text-red-600 dark:text-red-400">Enterprise</span>
+                      <span className="text-base font-bold">Enterprise</span>
                     );
                   })()}
                 </div>
@@ -643,7 +643,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                         {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
                       </span>
                     ) : (
-                      <span className="text-base font-bold text-red-600 dark:text-red-400">Enterprise</span>
+                      <span className="text-base font-bold">Enterprise</span>
                     );
                   })()}
                 </div>
