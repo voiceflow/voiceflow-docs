@@ -28,4 +28,4 @@ We're going to build an AI agent for Beaver Realty, a real estate company based 
 
 <br />
 
-<Image align="center" src="https://files.readme.io/f593b1b718ce39e9ef2e0f2d2d9d67e0bb4661fd723018a8e6040d6a05977a97-CleanShot_2025-05-27_at_15.34.07.gif" />
+<Image align="center" className="border" border={true} src="https://files.readme.io/f593b1b718ce39e9ef2e0f2d2d9d67e0bb4661fd723018a8e6040d6a05977a97-CleanShot_2025-05-27_at_15.34.07.gif" />
