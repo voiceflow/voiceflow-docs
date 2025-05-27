@@ -18,7 +18,7 @@ See how your agent is performing by visiting the analytics dashboard, which can 
 
 The dashboard now offers a comprehensive set of visualizations, providing deeper insights into your agent's performance:
 
-* **Tokens Usage**: Monitor AI token consumption over time across all models, giving you a clear picture of your assistant's resource utilization.
+* **Credits Usage**: Monitor AI credit consumption over time across all models, giving you a clear picture of your assistant's resource utilization.
 * **Total Interactions**: Keep track of the total number of interactions (requests) between users and your assistant over time, providing insights into engagement levels.
 * **Latency Monitoring**: Measure the average response time of your assistant to ensure optimal performance and identify any potential bottlenecks.
 * **Total Call Minutes**: Gain visibility into the cumulative duration of voice calls in minutes, helping you understand the volume and significance of voice interactions.
