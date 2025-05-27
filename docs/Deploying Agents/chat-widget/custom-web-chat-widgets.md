@@ -83,7 +83,7 @@ An extension called **Custom\_Form** is written. This extension contains a field
 
 **Where do I add this on my website?**
 
-If you are using a Website builder you can add this **above** the chat widget script before the </body> tag on your website. You can also include it on a separate file in your website and import the extension as shown in the github repository.
+If you are using a Website builder you can add this **above** the chat widget script before the \</body> tag on your website. You can also include it on a separate file in your website and import the extension as shown in the github repository.
 
 ```
 <script>
