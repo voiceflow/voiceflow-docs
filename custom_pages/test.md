@@ -12,4 +12,4 @@ hidden: false
 
 <br />
 
-<CreditTable />
+<CreditsTable />
