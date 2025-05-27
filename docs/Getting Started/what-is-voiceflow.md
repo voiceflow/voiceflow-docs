@@ -8,10 +8,6 @@ hidden: false
 metadata:
   robots: index
 ---
-> ℹ️ Prefer to have someone build an AI agent for you?
->
-> If you're interested in integrating AI agents into your business but would prefer to not build them yourself, reach out to one of our [Voiceflow Experts](https://www.voiceflow.com/experts) who'll be happy to help you out.
-
 Voiceflow is a collaborative low-code platform for building and deploying customer-facing AI agents. You can build [chat](doc:chat-widget) and [voice](doc:telephony) agents, or use our [API](ref:api-overview) to reply to conversations happening in your existing tools.
 
 Voiceflow agents are:
