@@ -1,12 +1,27 @@
 ---
-name: CourseCallout
+name: Callout
 ---
-export const CourseCard = ({
+export const Callout = ({
+  type = 'Course',
   title = 'PLEASE SET TITLE',
   description = 'PLEASE SET DESCRIPTION',
   href = 'PLEASE SET LINK',
   imageSrc = 'PLEASE SET IMAGE URL',
 }) => {
+  // Convert type to sentence case for display
+  const displayType = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+  
+  // Get the appropriate action text based on type
+  const getActionText = (type) => {
+    const typeMap = {
+      'Template': 'View template',
+      'Tool': 'Try tool',
+      'Course': 'Go to course',
+      'Video': 'Watch video'
+    };
+    return typeMap[type] || 'View more';
+  };
+
   return (
     <a
       href={href}
@@ -17,7 +32,7 @@ export const CourseCard = ({
         {/* Left Content */}
         <div className="flex-1 p-6" style={{ textDecoration: 'none' }}>
           <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2" style={{ textDecoration: 'none' }}>
-            Course
+            {displayType}
           </div>
           <h2
             className="text-xl font-semibold text-gray-900 dark:text-white mb-2"
@@ -35,7 +50,7 @@ export const CourseCard = ({
             className="text-blue-600 dark:text-blue-400 font-medium inline-flex items-center"
             style={{ textDecoration: 'none' }}
           >
-            Go to course →
+            {getActionText(type)} →
           </span>
         </div>
 
@@ -43,7 +58,7 @@ export const CourseCard = ({
         <div className="md:w-1/3 h-56 md:h-auto max-h-64 overflow-hidden">
           <img
             src={imageSrc}
-            alt="Integration visual"
+            alt={`${displayType} visual`}
             className="w-full h-full object-cover"
           />
         </div>
