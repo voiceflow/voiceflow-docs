@@ -135,7 +135,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div className="max-w-6xl mx-auto p-6 min-h-screen">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{header}</h1>
@@ -379,51 +379,6 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
               </div>
             )}
           </div>
-        </div>
-      </div>
-
-      {/* Plans Overview */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Choose Your Plan</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {plans.map((plan) => (
-            <div 
-              key={plan.name}
-              className={`relative rounded-xl p-6 text-center transition-all duration-200 hover:transform hover:scale-105 ${
-                plan.name === calculations.recommendedPlan 
-                  ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg ring-4 ring-blue-200 dark:ring-blue-800' 
-                  : 'bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500'
-              }`}
-            >
-              {plan.name === calculations.recommendedPlan && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-                    RECOMMENDED
-                  </span>
-                </div>
-              )}
-              <h3 className={`text-lg font-bold mb-2 ${
-                plan.name === calculations.recommendedPlan ? 'text-white' : 'text-gray-900 dark:text-white'
-              }`}>
-                {plan.name}
-              </h3>
-              <div className={`text-3xl font-bold mb-1 ${
-                plan.name === calculations.recommendedPlan ? 'text-white' : 'text-gray-900 dark:text-white'
-              }`}>
-                {formatNumber(plan.creditsPerMonth)}
-              </div>
-              <p className={`text-sm ${
-                plan.name === calculations.recommendedPlan ? 'text-blue-100' : 'text-gray-600 dark:text-gray-300'
-              }`}>
-                credits/month
-              </p>
-              <div className={`text-lg font-semibold mt-2 ${
-                plan.name === calculations.recommendedPlan ? 'text-white' : 'text-gray-700 dark:text-gray-200'
-              }`}>
-                {formatCurrency(plan.creditsPerMonth * 0.005)}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
