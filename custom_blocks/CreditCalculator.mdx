@@ -523,7 +523,7 @@ export const CreditCalculator = () => {
               {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  {billingPeriod === 'Year' ? 'Call Minutes per Year' : 'Call Minutes per Month'}
+                  {billingPeriod === 'Year' ? 'Call inutes per year' : 'Call minutes per month'}
                 </label>
                 <input 
                   type="text" 
@@ -543,7 +543,7 @@ export const CreditCalculator = () => {
               {/* Service Configuration */}
               <div className="space-y-6">
                 <div>
-                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM Model</label>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
                   <select 
                     value={selectedLLMVoice}
                     onChange={(e) => setSelectedLLMVoice(e.target.value)}
@@ -561,7 +561,7 @@ export const CreditCalculator = () => {
                 </div>
 
                 <div>
-                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-Speech</label>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-speech</label>
                   <select 
                     value={selectedTTS}
                     onChange={(e) => setSelectedTTS(e.target.value)}
@@ -579,7 +579,7 @@ export const CreditCalculator = () => {
                 </div>
 
                 <div>
-                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-Text</label>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-text</label>
                   <select 
                     value={selectedASR}
                     onChange={(e) => setSelectedASR(e.target.value)}
@@ -604,7 +604,7 @@ export const CreditCalculator = () => {
               {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  {billingPeriod === 'Year' ? 'Messages per Year' : 'Messages per Month'}
+                  {billingPeriod === 'Year' ? 'Messages per year' : 'Messages per month'}
                 </label>
                 <input 
                   type="text" 
@@ -624,7 +624,7 @@ export const CreditCalculator = () => {
               {/* Service Configuration */}
               <div className="space-y-6">
                 <div>
-                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM Model</label>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
                   <select 
                     value={selectedLLMChat}
                     onChange={(e) => setSelectedLLMChat(e.target.value)}
@@ -651,19 +651,19 @@ export const CreditCalculator = () => {
         <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
-              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Minute</div>
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per minute</div>
               <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{calculations.voiceCreditsPerMinute.toFixed(2)}</div>
             </div>
             <div className="flex justify-between items-center">
-              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</div>
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per minute</div>
               <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * (billingPeriod === 'Year' ? 0.0045 : 0.005))}</div>
             </div>
             <div className="flex justify-between items-center">
-              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits Required</div>
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits required</div>
               <div className="text-2xl font-bold text-gray-900 dark:text-white">{formatNumber(calculations.voiceTotalCredits)}</div>
             </div>
             <div className="flex justify-between items-center">
-              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended Plan</div>
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended plan</div>
               {(() => {
                 const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
                 return plan ? (
@@ -676,13 +676,13 @@ export const CreditCalculator = () => {
               })()}
             </div>
             <div className="flex justify-between items-center">
-              <div className="text-base font-medium text-gray-700 dark:text-gray-300">{billingPeriod === 'Year' ? 'Annual Cost' : 'Monthly Cost'}</div>
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">{billingPeriod === 'Year' ? 'Annual cost' : 'Monthly cost'}</div>
               {(() => {
                 const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
                 return plan ? (
                   <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></div>
                 ) : (
-                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Contact Sales</div>
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Contact sales</div>
                 );
               })()}
             </div>
