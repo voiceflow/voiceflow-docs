@@ -20,10 +20,6 @@ Voiceflow is the *fastest* way to build a high complexity agent with your team, 
 
 Check out our [Quick Start Guide](https://developer.voiceflow.com/v2.0/docs/quick-start-overview) to understand the main components of Voiceflow, and here are the main sections of our documentation.
 
-<br />
-
-<CourseCard title="Build a Smart Agent with Voiceflow & Zapier" description="Learn how to trigger Zaps and build intelligent workflows using your Voiceflow agent." href="https://yourlink.com" imageSrc="https://cdn.prod.website-files.com/657639ebfb91510f45654149/6825f7d08970fd6593b3bcd7_Zendesk.png" />
-
 # Building Agents
 
 This is all about creating your MVP agent in Voiceflow. Our recommendation is to start with a simple use case, deploy it to production, then start improving and expanding it as you learn how your customers interact with it.
