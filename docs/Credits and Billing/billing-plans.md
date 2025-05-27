@@ -1,6 +1,8 @@
 ---
-title: Billing and plans
-excerpt: ''
+title: How does Voiceflow billing work?
+excerpt: >-
+  Voiceflow offers a flexible and transparent billing system designed to
+  accommodate teams of all sizes. We'll dive into the details in this doc.
 deprecated: false
 hidden: false
 metadata:
@@ -26,7 +28,7 @@ Plan ahead for headcount changes by scheduling potential seat increases or reduc
 
 ## Cancelling your subscription
 
-To cancel your Pro subscription, simply hit the ‘Cancel Subscription’ button at the bottom of the page. You’ll be downgraded to our Free tier on your next billing cycle. 
+To cancel your Pro subscription, simply hit the ‘Cancel Subscription’ button at the bottom of the page. You’ll be downgraded to our Free tier on your next billing cycle.
 
 **Note**: You may lose access to some features when you downgrade. Check out what’s included in our packages [here](https://www.voiceflow.com/pricing).
 
