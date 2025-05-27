@@ -1,5 +1,5 @@
 ---
-title: Automating 70% of support tickets
+title: Automating 70% of support tickets at Trilogy
 deprecated: false
 hidden: false
 link:
