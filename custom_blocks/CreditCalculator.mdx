@@ -328,6 +328,8 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
   // State for user inputs
   const [voiceMinutes, setVoiceMinutes] = useState(500);
   const [chatMessages, setChatMessages] = useState(1000);
+  const [voiceMinutesInput, setVoiceMinutesInput] = useState("500");
+  const [chatMessagesInput, setChatMessagesInput] = useState("1000");
   const [selectedLLMVoice, setSelectedLLMVoice] = useState("gpt-4.1-2025-04-14");
   const [selectedLLMChat, setSelectedLLMChat] = useState("gpt-4o-mini-2024-07-18");
   const [selectedTTS, setSelectedTTS] = useState("Eleven Labs - TTS - Flash/Turbo");
@@ -374,7 +376,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const asrCreditsPerVoiceMinute = asr ? (asr.creditsPerBaseUnit * asrUtilizationRate) : 0;
     
     const voiceCreditsPerMinute = voiceHosting + llmCreditsPerVoiceMinute + ttsCreditsPerVoiceMinute + asrCreditsPerVoiceMinute;
-    const voiceTotalCredits = voiceCreditsPerMinute * voiceMinutes;
+    const voiceTotalCredits = voiceCreditsPerMinute * (voiceMinutes || 0);
 
     // Chat AI calculations
     const chatHosting = 1; // Fixed Voiceflow Chat AI Hosting credits per message
@@ -387,7 +389,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     // Calculate credits using the new structure
     const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerBaseUnit * effectiveLlmTokensPerMessage) : 0;
     const chatCreditsPerMessage = chatHosting + llmCreditsPerChatMessage;
-    const chatTotalCredits = chatCreditsPerMessage * chatMessages;
+    const chatTotalCredits = chatCreditsPerMessage * (chatMessages || 0);
 
     const totalCredits = voiceTotalCredits + chatTotalCredits;
     
@@ -532,7 +534,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                 <input 
                   type="number" 
                   value={voiceMinutes}
-                  onChange={(e) => setVoiceMinutes(Number(e.target.value))}
+                  onChange={(e) => setVoiceMinutes(e.target.value === '' ? 0 : Number(e.target.value))}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
                   placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
                 />
@@ -556,7 +558,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: {Math.round(calculations.voiceBreakdown?.llm || 0)}
+                    Credits per minute: {calculations.voiceBreakdown?.llm?.toFixed(2) || '0.00'}
                   </div>
                 </div>
 
@@ -574,7 +576,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: {Math.round(calculations.voiceBreakdown?.tts || 0)}
+                    Credits per minute: {calculations.voiceBreakdown?.tts?.toFixed(2) || '0.00'}
                   </div>
                 </div>
 
@@ -592,7 +594,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: {Math.round(calculations.voiceBreakdown?.asr || 0)}
+                    Credits per minute: {calculations.voiceBreakdown?.asr?.toFixed(2) || '0.00'}
                   </div>
                 </div>
               </div>
@@ -609,12 +611,12 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                 <input 
                   type="number" 
                   value={chatMessages}
-                  onChange={(e) => setChatMessages(Number(e.target.value))}
+                  onChange={(e) => setChatMessages(e.target.value === '' ? 0 : Number(e.target.value))}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
                   placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
                 />
                 <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                  Credits per message: {Math.round(calculations.chatBreakdown?.llm || 0)}
+                  Credits per message: 1.00
                 </div>
               </div>
               {/* Service Configuration */}
@@ -633,7 +635,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per message: {Math.round(calculations.chatBreakdown?.llm || 0)}
+                    Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
                   </div>
                 </div>
               </div>
@@ -648,7 +650,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Minute</div>
-              <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{Math.round(calculations.voiceCreditsPerMinute)}</div>
+              <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{calculations.voiceCreditsPerMinute.toFixed(2)}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</div>
@@ -692,7 +694,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</div>
-              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{Math.round(calculations.chatCreditsPerMessage)}</div>
+              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(2)}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Message</div>
