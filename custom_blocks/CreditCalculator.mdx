@@ -634,43 +634,43 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       {/* Voice summary box OUTSIDE the container */}
       {activeTab === "voice" && (
         <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Minute</span>
-            <span className="text-xl font-bold text-blue-700 dark:text-blue-300">{calculations.voiceCreditsPerMinute.toFixed(2)}</span>
-          </div>
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Total Credits</span>
-            <span className="text-2xl font-bold text-gray-900 dark:text-white">{formatNumber(calculations.voiceTotalCredits)}</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</span>
-            <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * 0.005)}</span>
-          </div>
-          {/* Recommended Plan for Voice */}
-          <div className="flex justify-between items-center mt-3">
-            <span className="text-base text-gray-700 dark:text-gray-300">Recommended Plan</span>
-            {(() => {
-              const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
-              return plan ? (
-                <span className="text-base text-blue-700 dark:text-blue-300">
-                  {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)}
-                </span>
-              ) : (
-                <span className="text-base text-blue-700 dark:text-blue-300">Enterprise</span>
-              );
-            })()}
-          </div>
-          {/* Monthly/Annual Cost for Voice */}
-          <div className="flex justify-between items-center mt-1">
-            <span className="text-base text-gray-700 dark:text-gray-300">{billingPeriod === 'Year' ? 'Annual Cost' : 'Monthly Cost'}</span>
-            {(() => {
-              const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
-              return plan ? (
-                <span className="text-base text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></span>
-              ) : (
-                <span className="text-base text-blue-700 dark:text-blue-300">Contact Sales</span>
-              );
-            })()}
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between items-center mb-2">
+              <div>
+                <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Minute</div>
+                <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{calculations.voiceCreditsPerMinute.toFixed(2)}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</div>
+                <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * 0.005)}</div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center mb-2">
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Total Credits</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">{formatNumber(calculations.voiceTotalCredits)}</div>
+            </div>
+            <div className="flex justify-between items-center mb-2">
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended Plan</div>
+              {(() => {
+                const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
+                return plan ? (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300">
+                    {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()})
+                  </div>
+                ) : (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300">Contact Sales</div>
+                );
+              })()}
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">{billingPeriod === 'Year' ? 'Annual Cost' : 'Monthly Cost'}</div>
+              {(() => {
+                const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
+                return plan ? (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></div>
+                ) : null;
+              })()}
+            </div>
           </div>
         </div>
       )}
@@ -678,43 +678,43 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       {/* Chat summary box OUTSIDE the container */}
       {activeTab === "chat" && (
         <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</span>
-            <span className="text-xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(2)}</span>
-          </div>
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Total Credits</span>
-            <span className="text-2xl font-bold text-gray-900 dark:text-white">{formatNumber(calculations.chatTotalCredits)}</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Message</span>
-            <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.chatCreditsPerMessage * 0.005)}</span>
-          </div>
-          {/* Recommended Plan for Chat */}
-          <div className="flex justify-between items-center mt-3">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended Plan</span>
-            {(() => {
-              const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
-              return plan ? (
-                <span className="text-base font-bold text-blue-700 dark:text-blue-300">
-                  {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)}
-                </span>
-              ) : (
-                <span className="text-base font-bold text-blue-700 dark:text-blue-300">Enterprise</span>
-              );
-            })()}
-          </div>
-          {/* Monthly/Annual Cost for Chat */}
-          <div className="flex justify-between items-center mt-1">
-            <span className="text-base text-gray-700 dark:text-gray-300">{billingPeriod === 'Year' ? 'Annual Cost' : 'Monthly Cost'}</span>
-            {(() => {
-              const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
-              return plan ? (
-                <span className="text-base text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></span>
-              ) : (
-                <span className="text-base text-blue-700 dark:text-blue-300">Contact Sales</span>
-              );
-            })()}
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between items-center mb-2">
+              <div>
+                <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</div>
+                <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(2)}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Message</div>
+                <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.chatCreditsPerMessage * 0.005)}</div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center mb-2">
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Total Credits</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">{formatNumber(calculations.chatTotalCredits)}</div>
+            </div>
+            <div className="flex justify-between items-center mb-2">
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended Plan</div>
+              {(() => {
+                const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
+                return plan ? (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300">
+                    {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()})
+                  </div>
+                ) : (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300">Contact Sales</div>
+                );
+              })()}
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="text-base font-medium text-gray-700 dark:text-gray-300">{billingPeriod === 'Year' ? 'Annual Cost' : 'Monthly Cost'}</div>
+              {(() => {
+                const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
+                return plan ? (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></div>
+                ) : null;
+              })()}
+            </div>
           </div>
         </div>
       )}
