@@ -16,7 +16,7 @@ There are three aspects to Voiceflow's billing system that you should be aware o
 
 * **Plans:** these are billed as a monthly or annual subscription per workspace, and control which Voiceflow features you have access to.
 * **Editor Seats:** all plans include one editor seat. Additional editor seats can be added onto any paid plan.
-* **Credits:** these are how you're billed for usage on Voiceflow. Each plan includes a specified amount of credits.
+* **Credits:** these are how you're billed for usage on Voiceflow. Each plan includes a specified amount of credits. You cannot buy additional credits outside of upgrading your plan.
 
 ## Plans
 
