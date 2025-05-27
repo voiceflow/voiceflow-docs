@@ -479,7 +479,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           {activeTab === "voice" && (
             <div className="p-0 mb-8">
               
-              {/* Voice Minutes Input */}
+              {/* Voice Minutes Input (moved and refactored) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                   Call Minutes per Month
@@ -488,9 +488,12 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   type="number" 
                   value={voiceMinutes}
                   onChange={(e) => setVoiceMinutes(Number(e.target.value))}
-                  className="w-full px-6 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
                   placeholder="Enter call minutes"
                 />
+                <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  Credits per minute: 10.00
+                </div>
               </div>
               
               {/* Usage Summary */}
@@ -511,16 +514,6 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
 
               {/* Service Configuration */}
               <div className="space-y-6">
-                <div>
-                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Call Minutes</label>
-                  <select disabled className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white cursor-not-allowed">
-                    <option>Voiceflow</option>
-                  </select>
-                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: 10.00
-                  </div>
-                </div>
-                
                 <div>
                   <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM Model</label>
                   <select 
@@ -581,7 +574,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           {activeTab === "chat" && (
             <div className="p-0 mb-8">
               
-              {/* Chat Messages Input */}
+              {/* Chat Messages Input (moved and refactored) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                   Messages per Month
@@ -590,9 +583,12 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   type="number" 
                   value={chatMessages}
                   onChange={(e) => setChatMessages(Number(e.target.value))}
-                  className="w-full px-6 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
                   placeholder="Enter messages"
                 />
+                <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  Credits per message: 1.00
+                </div>
               </div>
               
               {/* Usage Summary */}
@@ -613,16 +609,6 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
 
               {/* Service Configuration */}
               <div className="space-y-6">
-                <div>
-                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Messages</label>
-                  <select disabled className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white cursor-not-allowed">
-                    <option>Voiceflow</option>
-                  </select>
-                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per message: 1.00
-                  </div>
-                </div>
-                
                 <div>
                   <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM Model</label>
                   <select 
