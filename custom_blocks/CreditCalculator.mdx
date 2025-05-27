@@ -517,13 +517,13 @@ export const CreditCalculator = () => {
       {/* Calculator Tabs */}
       <div className="mb-8">
         {/* Tab Content */}
-        <div className="p-8 bg-white dark:bg-gray-800 border border-blue-500 rounded-xl">
+        <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
           {activeTab === "voice" && (
             <div className="p-0 mb-8">
               {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  {billingPeriod === 'Year' ? 'Call inutes per year' : 'Call minutes per month'}
+                  {billingPeriod === 'Year' ? 'Call minutes per year' : 'Call minutes per month'}
                 </label>
                 <input 
                   type="text" 
