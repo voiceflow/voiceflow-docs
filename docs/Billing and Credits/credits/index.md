@@ -27,7 +27,7 @@ Most actions performed by an AI agent on the Voiceflow platform will consume cre
 
 Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
 
-<LinkCard type="Tool" title="Credit usage estimator" description="Estimate how many credits your agents will consume per month and have the best value plan recommende to you." href="./estimate-your-credit-usage#credits-estimation-calculator" />
+<LinkCard type="Tool" title="Credit usage estimator" description="Estimate how many credits your agents will consume per month and have the best value plan recommended to you." href="./estimate-your-credit-usage#credits-estimation-calculator" />
 
 <br />
 
