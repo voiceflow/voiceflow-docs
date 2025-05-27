@@ -12,11 +12,21 @@ metadata:
 next:
   description: ''
 ---
-# Plans
+There are three aspects to Voiceflow's billing system that you should be aware of:
 
-You can go find all the plans available on the [pricing page](https://www.voiceflow.com/pricing).
+* **Plans:** these are billed as a monthly or annual subscription, and control which Voiceflow features you have access to.
+* **Editor Seats:** all plans include one editor seat. Additional editor seats can be added onto any paid plan.
+* **Credits:** these are how you're billed for usage on Voiceflow. Each plan includes a specified amount of credits.
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/5671380e9d5f5014ab22c37cbe9c874ac25ef2821ab6eda886f7d5e71c565780-CleanShot_2025-04-29_at_15.35.32.png" />
+## Plans
+
+Voiceflow offers four plans:
+
+* The **Starter** plan is designed for users to try out building with Voiceflow. It isn't designed for production usage, and has a hard credit limit.
+* The **Pro** and **Business** plans start at $60 per month and are designed for agencies and growing businesses to build on Voiceflow. Many companies run production workloads on these plans.
+* The **Enterprise** plan is designed for larger businesses are running very large workloads or would prefer to pay by invoice. Features such as single-sign-on, private cloud, and custom limits are only available in the Enterprise plan.
+
+[You can learn more about each of Voiceflow's plans on the our pricing page.](https://www.voiceflow.com/pricing)
 
 # Manage Billing (Pro)
 
