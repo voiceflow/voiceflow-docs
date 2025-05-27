@@ -436,6 +436,13 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num);
   };
 
+  // Helper to get recommended plan for a given total credits and billing period
+  const getRecommendedPlan = (totalCredits, billingPeriod) => {
+    const filteredPlans = plans.filter(plan => plan.period === billingPeriod);
+    const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
+    return recommended;
+  };
+
   return (
     <div className="max-w-6xl mx-auto p-6 min-h-screen">
       {/* Header */}
@@ -519,6 +526,20 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                 <div className="flex justify-between items-center">
                   <span className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</span>
                   <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * 0.005)}</span>
+                </div>
+                {/* Recommended Plan for Voice */}
+                <div className="flex justify-between items-center mt-3">
+                  <span className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended Plan</span>
+                  {(() => {
+                    const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
+                    return plan ? (
+                      <span className="text-base font-bold text-blue-700 dark:text-blue-300">
+                        {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
+                      </span>
+                    ) : (
+                      <span className="text-base text-gray-500">No plan available</span>
+                    );
+                  })()}
                 </div>
               </div>
               {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
@@ -611,6 +632,20 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                 <div className="flex justify-between items-center">
                   <span className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Message</span>
                   <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.chatCreditsPerMessage * 0.005)}</span>
+                </div>
+                {/* Recommended Plan for Chat */}
+                <div className="flex justify-between items-center mt-3">
+                  <span className="text-base font-medium text-gray-700 dark:text-gray-300">Recommended Plan</span>
+                  {(() => {
+                    const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
+                    return plan ? (
+                      <span className="text-base font-bold text-blue-700 dark:text-blue-300">
+                        {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
+                      </span>
+                    ) : (
+                      <span className="text-base text-gray-500">No plan available</span>
+                    );
+                  })()}
                 </div>
               </div>
               {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
