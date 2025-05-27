@@ -111,7 +111,7 @@ Of course, you want to double check that the product is eligible first.
 * Video and e-gift cards.
 * [In-skill purchasing](https://developer.amazon.com/en-US/docs/alexa/in-skill-purchase/isp-overview.html) products.
 * Products with age restrictions, alcohol, or explicit content might not be available in all locales.
-  </aside>
+</aside>
 
 You can find the **ASIN** in the product URL or on the product page:
 
