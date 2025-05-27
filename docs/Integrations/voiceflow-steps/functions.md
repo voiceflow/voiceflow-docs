@@ -278,7 +278,7 @@ For example, in the example above, we defined the following choice trace:
 }
 ```
 
-<br>
+<br/>
 
 Clicking on “Button A” sends the following request payload to the `general-runtime`
 
@@ -310,7 +310,7 @@ Recall that our next many command was defined like so:
 
 Therefore, clicking “ButtonA” will cause the function step to leave from `'path-A'`
 
-<br>
+<br/>
 
 ## Listen functionality with carousel and card
 
@@ -431,7 +431,7 @@ export default async function main(args) {
 }
 ```
 
-<br>
+<br/>
 
 # Specification
 
@@ -548,7 +548,7 @@ Suppose we are given the following request objects:
 { type: 'event_A', payload: { label: 'another example' } } // does not match
 ```
 
-<br>
+<br/>
 
 ## Supported Traces
 
