@@ -7,8 +7,6 @@ metadata:
 ---
 Agents on Voiceflow can be built in three ways: using an agentic approach, a deterministic approach, or a combination of both.
 
-<br />
-
 ## Agentic approach
 
 Building an agent in an agentic way means giving the agent the autonomy to reason, automatically make decisions, and respond dynamically based on context, rather than following a fixed flow. This can be done using Voiceflow's [Agent step](doc:agents).
@@ -18,8 +16,6 @@ Building an agent in an agentic way means giving the agent the autonomy to reaso
     Combine a prompt, tools, and paths to intelligent conversational agents.
   </Card>
 </Cards>
-
-<br />
 
 ## Deterministic approach
 
