@@ -1,6 +1,5 @@
 ---
-title: Agent Analytics
-excerpt: Assistant analytics - How do I see overall usage?
+title: Analytics
 deprecated: false
 hidden: false
 metadata:
