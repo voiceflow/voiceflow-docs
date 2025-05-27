@@ -10,19 +10,31 @@ export const CourseCard = ({
   return (
     <a
       href={href}
-      className="block group no-underline decoration-none"
+      className="block group no-underline"
+      style={{ textDecoration: 'none' }}
     >
       <div className="flex flex-col md:flex-row bg-white dark:bg-[#1A1D21] rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 my-6 transition-shadow hover:shadow-lg">
         {/* Left Content */}
-        <div className="flex-1 p-6 decoration-none">
-          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2 decoration-none">
+        <div className="flex-1 p-6" style={{ textDecoration: 'none' }}>
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2" style={{ textDecoration: 'none' }}>
             Course
           </div>
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 decoration-none">
+          <h2
+            className="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+            style={{ textDecoration: 'none' }}
+          >
             {title}
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-4 decoration-none">{description}</p>
-          <span className="text-blue-600 dark:text-blue-400 font-medium inline-flex items-center decoration-none">
+          <p
+            className="text-gray-600 dark:text-gray-300 mb-4"
+            style={{ textDecoration: 'none' }}
+          >
+            {description}
+          </p>
+          <span
+            className="text-blue-600 dark:text-blue-400 font-medium inline-flex items-center"
+            style={{ textDecoration: 'none' }}
+          >
             Go to course →
           </span>
         </div>
