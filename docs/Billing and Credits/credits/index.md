@@ -38,6 +38,7 @@ While usage of your agent will incur credit charges, many actions do not cost cr
 * Messages sent from inside Voiceflow Creator while building an agent do not consume credits. However, any LLM or TTS usage incurred while generating these messages **will** incur credit charges.
 * Querying or adding data to the Knowledge Base will never consume credits.
 * Connecting to integrations through tools or functions or using the API step does not consume credits. However, any messages sent as a result of these actions will incur credit charges.
+* Proactive messages sent using the [proactive messages feature](doc:proactive-messages) aren't considered messages and don't incur credit charges.
 * Deploying and backing up your agent, adding editors to your workspace, and any other action that isn't direct usage of your agent will not consume credits.
 
 <br />
