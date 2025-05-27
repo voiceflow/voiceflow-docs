@@ -428,7 +428,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
 
   // Helper function to format numbers
   const formatNumber = (num) => {
-    return new Intl.NumberFormat().format(Math.round(num * 100) / 100);
+    return new Intl.NumberFormat().format(Math.round(num));
   };
 
   // Helper function to format currency
@@ -556,7 +556,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: {calculations.voiceBreakdown?.llm?.toFixed(2) || '0.00'}
+                    Credits per minute: {Math.round(calculations.voiceBreakdown?.llm || 0)}
                   </div>
                 </div>
 
@@ -574,7 +574,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: {calculations.voiceBreakdown?.tts?.toFixed(2) || '0.00'}
+                    Credits per minute: {Math.round(calculations.voiceBreakdown?.tts || 0)}
                   </div>
                 </div>
 
@@ -592,7 +592,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per minute: {calculations.voiceBreakdown?.asr?.toFixed(2) || '0.00'}
+                    Credits per minute: {Math.round(calculations.voiceBreakdown?.asr || 0)}
                   </div>
                 </div>
               </div>
@@ -614,7 +614,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
                 />
                 <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                  Credits per message: 1.00
+                  Credits per message: {Math.round(calculations.chatBreakdown?.llm || 0)}
                 </div>
               </div>
               {/* Service Configuration */}
@@ -633,7 +633,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
+                    Credits per message: {Math.round(calculations.chatBreakdown?.llm || 0)}
                   </div>
                 </div>
               </div>
@@ -648,7 +648,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Minute</div>
-              <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{calculations.voiceCreditsPerMinute.toFixed(2)}</div>
+              <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">{Math.round(calculations.voiceCreditsPerMinute)}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</div>
@@ -692,7 +692,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</div>
-              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(2)}</div>
+              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{Math.round(calculations.chatCreditsPerMessage)}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Message</div>
