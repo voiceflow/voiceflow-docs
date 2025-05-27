@@ -443,32 +443,32 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
 
       {/* Calculator Selector */}
       <div className="mb-8">
-        <div className="mb-3 text-left">
-          <h2 className="text-lg font-medium text-gray-900 dark:text-white">I'm building a...</h2>
-        </div>
-        <div className="flex gap-3 items-center">
-          <button
-            onClick={() => setActiveTab("voice")}
-            className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
-              ${activeTab === "voice"
-                ? "bg-blue-50 dark:bg-blue-900/20 border-blue-400 dark:border-blue-500 text-blue-800 dark:text-blue-200"
-                : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
-            `}
-          >
-            <span role="img" aria-label="voice" className="text-lg">🔊</span>
-            Voice Agent
-          </button>
-          <button
-            onClick={() => setActiveTab("chat")}
-            className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
-              ${activeTab === "chat"
-                ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-400 dark:border-emerald-500 text-emerald-800 dark:text-emerald-200"
-                : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-300"}
-            `}
-          >
-            <span role="img" aria-label="chat" className="text-lg">💬</span>
-            Chat Agent
-          </button>
+        <div className="flex flex-wrap items-center gap-4 text-left">
+          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm building a...</h2>
+          <div className="flex gap-3 flex-wrap">
+            <button
+              onClick={() => setActiveTab("voice")}
+              className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
+                ${activeTab === "voice"
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-400 dark:border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
+              `}
+            >
+              <span role="img" aria-label="voice" className="text-lg">🔊</span>
+              Voice Agent
+            </button>
+            <button
+              onClick={() => setActiveTab("chat")}
+              className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
+                ${activeTab === "chat"
+                  ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-400 dark:border-emerald-500 text-emerald-800 dark:text-emerald-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-300"}
+              `}
+            >
+              <span role="img" aria-label="chat" className="text-lg">💬</span>
+              Chat Agent
+            </button>
+          </div>
         </div>
       </div>
 
