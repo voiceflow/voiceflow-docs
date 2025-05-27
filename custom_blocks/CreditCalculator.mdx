@@ -459,14 +459,14 @@ export const CreditCalculator = () => {
       {/* Calculator Selector */}
       <div className="mb-8">
         <div className="flex flex-wrap items-center gap-4 text-left">
-          <h2 className="text-lg font-medium text-[#1A1D21] whitespace-nowrap">I'm building a</h2>
+          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm building a</h2>
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => setActiveTab("voice")}
               className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
                 ${activeTab === "voice"
-                  ? "bg-[#1A1D21] bg-opacity-5 border-gray-200 dark:border-gray-700 text-gray-700 hover:border-gray-300"
-                  : "bg-[#1A1D21] border-gray-300 text-gray-700 hover:border-gray-300"}
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
               `}
             >
               <i className="fas fa-microphone text-lg"></i>
@@ -476,8 +476,8 @@ export const CreditCalculator = () => {
               onClick={() => setActiveTab("chat")}
               className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
                 ${activeTab === "chat"
-                  ? "bg-[#1A1D21] bg-opacity-5 border-gray-200 dark:border-gray-700 text-gray-700 hover:border-gray-300"
-                  : "bg-[#1A1D21] border-gray-300 text-gray-700 hover:border-gray-300"}
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
               `}
             >
               <i className="fas fa-comments text-lg"></i>
@@ -487,14 +487,14 @@ export const CreditCalculator = () => {
         </div>
         {/* Billing Period Selector */}
         <div className="flex flex-wrap items-center gap-4 text-left">
-          <h2 className="text-lg font-medium text-[#1A1D21] whitespace-nowrap">I'm billed</h2>
+          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm billed</h2>
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => setBillingPeriod("Month")}
               className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
                 ${billingPeriod === "Month"
-                  ? "bg-[#1A1D21] bg-opacity-5 border-gray-200 dark:border-gray-700 text-gray-700 hover:border-gray-300"
-                  : "bg-[#1A1D21] border-gray-300 text-gray-700 hover:border-gray-300"}
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
               `}
             >
               Monthly
@@ -503,8 +503,8 @@ export const CreditCalculator = () => {
               onClick={() => setBillingPeriod("Year")}
               className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
                 ${billingPeriod === "Year"
-                  ? "bg-[#1A1D21] bg-opacity-5 border-gray-200 dark:border-gray-700 text-gray-700 hover:border-gray-300"
-                  : "bg-[#1A1D21] border-gray-300 text-gray-700 hover:border-gray-300"}
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
               `}
             >
               Annually (10% discount)
@@ -516,7 +516,7 @@ export const CreditCalculator = () => {
       {/* Calculator Tabs */}
       <div className="mb-8">
         {/* Tab Content */}
-        <div className="p-8 bg-[#1A1D21] border border-gray-200 dark:border-gray-700 rounded-xl">
+        <div className="p-8 bg-white dark:bg-gray-800 border border-blue-500 rounded-xl">
           {activeTab === "voice" && (
             <div className="p-0 mb-8">
               {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
@@ -532,7 +532,7 @@ export const CreditCalculator = () => {
                     setVoiceMinutesInput(value);
                     setVoiceMinutes(value === '' ? 0 : Number(value));
                   }}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-gray-500/20 focus:border-gray-500 transition-all duration-200 text-lg"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
                   placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
                 />
                 <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -546,7 +546,7 @@ export const CreditCalculator = () => {
                   <select 
                     value={selectedLLMVoice}
                     onChange={(e) => setSelectedLLMVoice(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-gray-500/20 focus:border-gray-500 transition-all duration-200"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
                   >
                     {creditsData.llm.map((llm) => (
                       <option key={llm.item} value={llm.item}>
@@ -564,7 +564,7 @@ export const CreditCalculator = () => {
                   <select 
                     value={selectedTTS}
                     onChange={(e) => setSelectedTTS(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-gray-500/20 focus:border-gray-500 transition-all duration-200"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
                   >
                     {creditsData.tts.map((tts) => (
                       <option key={tts.item} value={tts.item}>
@@ -582,7 +582,7 @@ export const CreditCalculator = () => {
                   <select 
                     value={selectedASR}
                     onChange={(e) => setSelectedASR(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-gray-500/20 focus:border-gray-500 transition-all duration-200"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
                   >
                     {creditsData.asr.map((asr) => (
                       <option key={asr.item} value={asr.item}>
@@ -627,7 +627,7 @@ export const CreditCalculator = () => {
                   <select 
                     value={selectedLLMChat}
                     onChange={(e) => setSelectedLLMChat(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-gray-500/20 focus:border-gray-500 transition-all duration-200"
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
                   >
                     {creditsData.llm.map((llm) => (
                       <option key={llm.item} value={llm.item}>
@@ -647,7 +647,7 @@ export const CreditCalculator = () => {
 
       {/* Voice summary box OUTSIDE the container */}
       {activeTab === "voice" && (
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700">
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Minute</div>
@@ -691,7 +691,7 @@ export const CreditCalculator = () => {
 
       {/* Chat summary box OUTSIDE the container */}
       {activeTab === "chat" && (
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700">
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</div>
