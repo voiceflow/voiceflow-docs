@@ -325,10 +325,8 @@ export function CreditsPricingTable() {
                     <tr>
                       <th style={{ textAlign: 'left' }}>Vendor</th>
                       <th style={{ textAlign: 'left' }}>Item</th>
-                      <th style={{ textAlign: 'left' }}>Unit Type</th>
                       <th style={{ textAlign: 'left' }}>Unit</th>
                       <th style={{ textAlign: 'left' }}>Credits per Unit</th>
-                      <th style={{ textAlign: 'left' }}>Credits per Base Unit</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -336,10 +334,8 @@ export function CreditsPricingTable() {
                       <tr key={index}>
                         <td style={{ textAlign: 'left' }}>{item.vendor}</td>
                         <td style={{ textAlign: 'left' }}>{item.item}</td>
-                        <td style={{ textAlign: 'left' }}>{item.unitType}</td>
                         <td style={{ textAlign: 'left' }}>{item.unit}</td>
                         <td style={{ textAlign: 'left' }}>{item.creditsPerUnit}</td>
-                        <td style={{ textAlign: 'left' }}>{item.creditsPerBaseUnit}</td>
                       </tr>
                     ))}
                   </tbody>
