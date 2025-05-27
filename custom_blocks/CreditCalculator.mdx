@@ -596,7 +596,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
               </div>
               
               {/* Usage Summary */}
-              <div className="rounded-xl p-6 mb-8 border-2 border-blue-500 bg-[#1a2341] dark:bg-[#1a2341]">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</span>
                   <span className="text-xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(2)}</span>
