@@ -9,11 +9,13 @@ Voiceflow's [credit system](doc:credits) is designed to make costs transparent a
 
 If you're not sure which plan to choose, or want to estimate how many credits your agents will consume, we've built a calculator to help. Please note that all numbers shown are estimates and may vary based on your use-case.
 
+<br />
+
 ## Credits estimation calculator
 
 <CreditCalculator />
 
-## Need help optimizing your agent?
+## Optimize your agent to use less credits
 
 We've collected some tips from our community about how they optimize their agents to use less credits. Check out the course below to learn how!
 
