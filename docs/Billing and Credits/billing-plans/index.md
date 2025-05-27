@@ -34,7 +34,7 @@ Voiceflow offers four plans designed to fit any size of business. Each plan is b
 
 <br />
 
-## Editor Seats
+## Editor seats
 
 All Voiceflow plans include one editor seat, meaning one person can edit all of the agents inside a workspace. If you'd like to work with a team, you can add additional editor seats to your workspace at a fixed price of $50 per editor on the Pro and Business plans. A single editor seat provides access to all agents in a workspace, although you can choose to restrict editors to specific project if you'd prefer.
 
