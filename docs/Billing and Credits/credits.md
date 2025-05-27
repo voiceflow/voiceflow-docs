@@ -41,3 +41,13 @@ While usage of your agent will incur credit charges, many actions do not cost cr
 ## What happens if I run out of credits?
 
 If your workspace's credit balance is depleted, AI agents associated with that workspace will stop sending and replying to messages in production. To reactivate your agents, [upgrade your Voiceflow plan to one that includes more credits.](doc:managing-your-voiceflow-plan)
+
+<br />
+
+## How can I optimize my agent to use less credits?
+
+We're on your side - we bill LLM and TTS usage **at cost**, meaning we don't make any profit from you using these features. We also pass along any bulk discounts we get from our providers onto you. This means it's in our best interest to help you optimize your agent to use the least credits possible when building with LLMs and TTS.
+
+We've put together our tips on optimizing agents in the course below, and update whenever we hear new ideas from our community.
+
+<CourseCard title="Optimize your AI agent to use less credits" description="Save money while building powerful AI agents. We'll show you our tips on how to reduce how many credits you're using." href="https://www.voiceflow.com/lessons/what-are-credits" imageSrc="https://cdn.prod.website-files.com/657639ebfb91510f45654149/67f7f24a1b2cf13a2bc90086_Credits.png" />
