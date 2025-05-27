@@ -8,7 +8,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Voiceflow is a collaborative low-code platform for building and deploying customer-facing AI agents. You can build [chat](doc:chat-widget) and [voice](doc:telephony) agents, or use our [API](ref:api-overview)Voiceflow API Overview to reply to conversations happening in your existing tools.
+Voiceflow is a collaborative low-code platform for building and deploying customer-facing AI agents. You can build [chat](doc:chat-widget) and [voice](doc:telephony) agents, or use our [API](ref:api-overview) to reply to conversations happening in your existing tools.
 
 Voiceflow agents are:
 
