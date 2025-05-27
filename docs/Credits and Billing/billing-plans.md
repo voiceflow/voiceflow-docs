@@ -20,6 +20,8 @@ There are three aspects to Voiceflow's billing system that you should be aware o
 
 ## Plans
 
+<Image align="center" src="https://files.readme.io/84ba690cd0554f4a4a303c2b3f336f2e0a5c9749f8a953ffc4bf5bfc50049e8b-Frame_48095748_2.png" />
+
 Voiceflow offers four plans:
 
 * The **Starter** plan is designed for users to try out building with Voiceflow. It isn't designed for production usage, and has a hard credit limit.
@@ -27,8 +29,6 @@ Voiceflow offers four plans:
 * The **Enterprise** plan is designed for larger businesses are running very large workloads or would prefer to pay by invoice. Features such as single-sign-on, private cloud, and custom limits are only available in the Enterprise plan.
 
 [You can learn more about each of Voiceflow's plans on the our pricing page.](https://www.voiceflow.com/pricing)
-
-<Image align="center" src="https://files.readme.io/84ba690cd0554f4a4a303c2b3f336f2e0a5c9749f8a953ffc4bf5bfc50049e8b-Frame_48095748_2.png" />
 
 # Manage Billing (Pro)
 
