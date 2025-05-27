@@ -67,9 +67,9 @@ Here's an example of a complete request specifying a model:
 }
 ```
 
-## Will using a different model affect my token usage?
+## Will using a different model affect my credit usage?
 
-Yes, different models may consume different amounts of tokens, which can affect your usage and costs. Be sure to monitor your token consumption when switching between models.
+Yes, different models may consume different amounts of tokens, which can affect your usage and costs. Be sure to monitor your credit consumption when switching between models.
 
 ## Are all models equally suitable for all types of queries?
 
