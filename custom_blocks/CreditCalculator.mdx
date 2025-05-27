@@ -653,7 +653,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
               const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
               return plan ? (
                 <span className="text-base text-blue-700 dark:text-blue-300">
-                  {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
+                  {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)}
                 </span>
               ) : (
                 <span className="text-base text-blue-700 dark:text-blue-300">Enterprise</span>
@@ -666,7 +666,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
             {(() => {
               const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
               return plan ? (
-                <span className="text-base text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)}</span>
+                <span className="text-base text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></span>
               ) : (
                 <span className="text-base text-blue-700 dark:text-blue-300">Contact Sales</span>
               );
@@ -697,7 +697,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
               const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
               return plan ? (
                 <span className="text-base font-bold text-blue-700 dark:text-blue-300">
-                  {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
+                  {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)}
                 </span>
               ) : (
                 <span className="text-base font-bold text-blue-700 dark:text-blue-300">Enterprise</span>
@@ -710,7 +710,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
             {(() => {
               const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
               return plan ? (
-                <span className="text-base text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)}</span>
+                <span className="text-base text-blue-700 dark:text-blue-300">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></span>
               ) : (
                 <span className="text-base text-blue-700 dark:text-blue-300">Contact Sales</span>
               );
