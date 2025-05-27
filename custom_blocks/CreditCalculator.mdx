@@ -394,7 +394,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     // Determine recommended plan
     const filteredPlans = plans.filter(plan => plan.period === billingPeriod);
     const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
-    const recommendedPlan = recommended ? `${recommended.name} (${recommended.credits.toLocaleString()} credits/${billingPeriod.toLowerCase()})` : "ENTERPRISE";
+    const recommendedPlan = recommended || null;
 
     // Find the recommended plan object for cost calculation
     const planUnitCost = recommended ? recommended.unitCost : (billingPeriod === 'Year' ? 0.0054 : 0.005);
@@ -440,7 +440,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
   const getRecommendedPlan = (totalCredits, billingPeriod) => {
     const filteredPlans = plans.filter(plan => plan.period === billingPeriod);
     const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
-    return recommended;
+    return recommended || null;
   };
 
   return (
@@ -537,7 +537,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                         {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
                       </span>
                     ) : (
-                      <span className="text-base text-gray-500">No plan available</span>
+                      <span className="text-base font-bold text-red-600 dark:text-red-400">Enterprise</span>
                     );
                   })()}
                 </div>
@@ -643,7 +643,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                         {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()}) - {formatCurrency(plan.price)} / {plan.period.toLowerCase()}
                       </span>
                     ) : (
-                      <span className="text-base text-gray-500">No plan available</span>
+                      <span className="text-base font-bold text-red-600 dark:text-red-400">Enterprise</span>
                     );
                   })()}
                 </div>
