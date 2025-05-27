@@ -415,7 +415,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 min-h-screen rounded-2xl border-2 border-blue-500 bg-[#232b3a] dark:bg-[#232b3a]">
+    <div className="max-w-6xl mx-auto p-6 min-h-screen">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{header}</h1>
@@ -475,9 +475,9 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       {/* Calculator Tabs */}
       <div className="mb-8">
         {/* Tab Content */}
-        <div className="p-8 bg-white dark:bg-gray-800">
+        <div className="p-8 bg-white dark:bg-gray-800 border border-blue-500 rounded-xl">
           {activeTab === "voice" && (
-            <div>
+            <div className="p-0 mb-8">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Voice AI Calculator</h2>
               </div>
@@ -582,7 +582,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           )}
 
           {activeTab === "chat" && (
-            <div>
+            <div className="p-0 mb-8">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Chat AI Calculator</h2>
               </div>
