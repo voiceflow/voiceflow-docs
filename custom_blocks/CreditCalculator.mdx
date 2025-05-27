@@ -374,7 +374,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const asrCreditsPerVoiceMinute = asr ? (asr.creditsPerBaseUnit * asrUtilizationRate) : 0;
     
     const voiceCreditsPerMinute = voiceHosting + llmCreditsPerVoiceMinute + ttsCreditsPerVoiceMinute + asrCreditsPerVoiceMinute;
-    const voiceTotalCredits = voiceCreditsPerMinute * (billingPeriod === 'Year' ? voiceMinutes / 12 : voiceMinutes);
+    const voiceTotalCredits = voiceCreditsPerMinute * voiceMinutes;
 
     // Chat AI calculations
     const chatHosting = 1; // Fixed Voiceflow Chat AI Hosting credits per message
@@ -387,7 +387,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     // Calculate credits using the new structure
     const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerBaseUnit * effectiveLlmTokensPerMessage) : 0;
     const chatCreditsPerMessage = chatHosting + llmCreditsPerChatMessage;
-    const chatTotalCredits = chatCreditsPerMessage * (billingPeriod === 'Year' ? chatMessages / 12 : chatMessages);
+    const chatTotalCredits = chatCreditsPerMessage * chatMessages;
 
     const totalCredits = voiceTotalCredits + chatTotalCredits;
     
