@@ -14,6 +14,8 @@ Credits are a currency used across Voiceflow and are how you're billed for your 
 
 Each plan includes a certain amount of credits. [You can learn more on our pricing page.](https://www.voiceflow.com/pricing)
 
+<br />
+
 ## What actions consume credits?
 
 Most actions performed by an AI agent on the Voiceflow platform will consume credits. The specific amounts vary depending on the type of action:  
@@ -33,3 +35,9 @@ While usage of your agent will incur credit charges, many actions do not cost cr
 * Querying or adding data to the Knowledge Base will never consume credits.
 * Connecting to integrations through tools or functions or using the API step does not consume credits. However, any messages sent as a result of these actions will incur credit charges.
 * Deploying and backing up your agent, adding editors to your workspace, and any other action that isn't direct usage of your agent will not consume credits.
+
+<br />
+
+## What happens if I run out of credits?
+
+If your workspace's credit balance is depleted, AI agents associated with that workspace will stop sending and replying to messages in production. To reactivate your agents, [upgrade your Voiceflow plan to one that includes more credits.](doc:managing-your-voiceflow-plan)
