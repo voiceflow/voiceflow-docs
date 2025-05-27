@@ -656,7 +656,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()})
                   </div>
                 ) : (
-                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Contact Sales</div>
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Enterprise</div>
                 );
               })()}
             </div>
@@ -666,7 +666,9 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                 const plan = getRecommendedPlan(calculations.voiceTotalCredits, billingPeriod);
                 return plan ? (
                   <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></div>
-                ) : null;
+                ) : (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Contact Sales</div>
+                );
               })()}
             </div>
           </div>
@@ -698,7 +700,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     {plan.name} ({plan.credits.toLocaleString()} credits/{plan.period.toLowerCase()})
                   </div>
                 ) : (
-                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Contact Sales</div>
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Enterprise</div>
                 );
               })()}
             </div>
@@ -708,7 +710,9 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                 const plan = getRecommendedPlan(calculations.chatTotalCredits, billingPeriod);
                 return plan ? (
                   <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">{formatCurrency(plan.price)} <span className="text-gray-500">{billingPeriod === 'Year' ? 'per year' : 'per month'}</span></div>
-                ) : null;
+                ) : (
+                  <div className="text-base font-bold text-blue-700 dark:text-blue-300 text-right">Contact Sales</div>
+                );
               })()}
             </div>
           </div>
