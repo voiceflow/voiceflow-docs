@@ -9,3 +9,7 @@ hidden: false
 | test | test | test |
 | test | test | test |
 | test | test | test |
+
+<br />
+
+<CreditTable />
