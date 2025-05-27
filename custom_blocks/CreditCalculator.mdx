@@ -364,7 +364,6 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const ttsUtilizationRate = 0.70; // 70%
     const ttsCharsPerMinute = 700;
     const asrUtilizationRate = 0.85; // 85%
-    const llmInputTokenPercent = 0.70; // 70%
     const llmTokensPerMinute = 600;
     
     // Calculate effective usage
@@ -384,10 +383,9 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     
     // Chat AI assumptions from the sheet
     const llmTokensPerMessage = 600;
-    const effectiveLlmTokensPerMessage = llmTokensPerMessage * llmInputTokenPercent; // 420 tokens
     
     // Calculate credits using the new structure
-    const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerBaseUnit * effectiveLlmTokensPerMessage) : 0;
+    const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerBaseUnit * llmTokensPerMessage) : 0;
     const chatCreditsPerMessage = chatHosting + llmCreditsPerChatMessage;
     const chatTotalCredits = chatCreditsPerMessage * (chatMessages || 0);
 
