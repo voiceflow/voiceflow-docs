@@ -1,5 +1,5 @@
 ---
-title: Support ticket automation
+title: Automating 70% of support tickets
 deprecated: false
 hidden: false
 link:
