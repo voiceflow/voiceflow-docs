@@ -398,9 +398,10 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
 
     // Find the recommended plan object for cost calculation
     const planUnitCost = recommended ? recommended.unitCost : (billingPeriod === 'Year' ? 0.0054 : 0.005);
-    const estimatedMonthlyCost = billingPeriod === 'Year'
-      ? (totalCredits * planUnitCost) / 12
+    const estimatedCost = billingPeriod === 'Year'
+      ? totalCredits * planUnitCost
       : totalCredits * planUnitCost;
+    const estimatedCostLabel = billingPeriod === 'Year' ? 'Estimated Cost/Year' : 'Estimated Cost/Month';
 
     setCalculations({
       voiceCreditsPerMinute,
@@ -409,7 +410,8 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
       chatTotalCredits,
       totalCredits,
       recommendedPlan,
-      estimatedMonthlyCost,
+      estimatedCost,
+      estimatedCostLabel,
       // Add individual service breakdowns for display
       voiceBreakdown: {
         hosting: voiceHosting,
@@ -454,8 +456,8 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
               <div className="text-blue-100">Recommended Plan</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400">{formatCurrency(calculations.estimatedMonthlyCost)}</div>
-              <div className="text-blue-100">Estimated Cost/Month</div>
+              <div className="text-3xl font-bold text-emerald-400">{formatCurrency(calculations.estimatedCost)}</div>
+              <div className="text-blue-100">{calculations.estimatedCostLabel}</div>
             </div>
           </div>
         </div>
