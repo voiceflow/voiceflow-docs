@@ -433,7 +433,18 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
 
   // Helper function to format currency
   const formatCurrency = (num) => {
-    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num);
+    if (num < 0.01) {
+      return new Intl.NumberFormat('en-US', { 
+        style: 'currency', 
+        currency: 'USD',
+        minimumFractionDigits: 4,
+        maximumFractionDigits: 4 
+      }).format(num);
+    }
+    return new Intl.NumberFormat('en-US', { 
+      style: 'currency', 
+      currency: 'USD' 
+    }).format(num);
   };
 
   // Helper to get recommended plan for a given total credits and billing period
@@ -622,7 +633,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                     ))}
                   </select>
                   <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Credits per message: {calculations.chatBreakdown?.llm?.toFixed(4) || '0.0000'}
+                    Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
                   </div>
                 </div>
               </div>
@@ -641,7 +652,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Minute</div>
-              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * 0.005)}</div>
+              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.voiceCreditsPerMinute * (billingPeriod === 'Year' ? 0.0045 : 0.005))}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Total Credits</div>
@@ -681,11 +692,11 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Credits per Message</div>
-              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(4)}</div>
+              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{calculations.chatCreditsPerMessage.toFixed(2)}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Cost per Message</div>
-              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.chatCreditsPerMessage * 0.005)}</div>
+              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(calculations.chatCreditsPerMessage * (billingPeriod === 'Year' ? 0.0045 : 0.005))}</div>
             </div>
             <div className="flex justify-between items-center">
               <div className="text-base font-medium text-gray-700 dark:text-gray-300">Total Credits</div>
