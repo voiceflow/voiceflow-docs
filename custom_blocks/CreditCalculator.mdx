@@ -443,26 +443,6 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{header}</h1>
       </div>
 
-      {/* Usage Summary */}
-      <div className="mb-8">
-        <div className="rounded-xl p-6 shadow-lg border-2 border-blue-500 bg-[#1a2341] dark:bg-[#1a2341]">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-200">{formatNumber(calculations.totalCredits)}</div>
-              <div className="text-blue-100">Total Credits/Month</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-200">{calculations.recommendedPlan}</div>
-              <div className="text-blue-100">Recommended Plan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400">{formatCurrency(calculations.estimatedCost)}</div>
-              <div className="text-blue-100">{calculations.estimatedCostLabel}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Calculator Selector */}
       <div className="mb-8">
         <div className="flex flex-wrap items-center gap-4 text-left">
