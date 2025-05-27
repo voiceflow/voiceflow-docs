@@ -555,7 +555,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   >
                     {creditsData.llm.map((llm) => (
                       <option key={llm.item} value={llm.item}>
-                        {llm.item}
+                        {llm.vendor} - {llm.item}
                       </option>
                     ))}
                   </select>
@@ -636,7 +636,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
                   >
                     {creditsData.llm.map((llm) => (
                       <option key={llm.item} value={llm.item}>
-                        {llm.item}
+                        {llm.vendor} - {llm.item}
                       </option>
                     ))}
                   </select>
