@@ -5,6 +5,8 @@ hidden: true
 metadata:
   robots: index
 ---
+Voiceflow's [credit system](doc:credits) is designed to make costs transparent and easy to understand. Credits are shared between all agents in a workspace, and each plan includes a specific number of credits. You can learn more about Voiceflow's plans on our [pricing page](https://voiceflow.com/pricing) .
+
 <CreditCalculator />
 
 ## Need help optimizing your agent?
