@@ -170,7 +170,7 @@ There are different “scopes” where you can use a Teams application. As menti
 
    ![](https://files.readme.io/919f1c0-Screen_Shot_2023-01-03_at_1.39.37_PM.png)
 
-3. Interact with the bot by using @My Bot Name <my-message>, e.g, @Hello Voiceflow this is my message  
+3. Interact with the bot by using @My Bot Name \<my-message>, e.g, @Hello Voiceflow this is my message  
 
    ![](https://files.readme.io/9fe1203-Screen_Shot_2023-01-03_at_1.39.42_PM.png)
 
@@ -208,6 +208,6 @@ There are different “scopes” where you can use a Teams application. As menti
 
    ![](https://files.readme.io/6097fa0-Screen_Shot_2023-01-03_at_1.58.54_PM.png)
 
-5. Interact with the bot by using @Hello Voiceflow <my-message>   
+5. Interact with the bot by using @Hello Voiceflow \<my-message>   
 
    ![](https://files.readme.io/057f16c-Screen_Shot_2023-01-03_at_1.59.04_PM.png)
