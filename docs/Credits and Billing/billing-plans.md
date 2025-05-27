@@ -28,7 +28,7 @@ Voiceflow offers four plans:
 
 [You can learn more about each of Voiceflow's plans on the our pricing page.](https://www.voiceflow.com/pricing)
 
-<Image align="center" src="https://files.readme.io/6bef6e410322c698eee30e39f28cb535e3cf8fce41fd3f6460faabeb2c019768-Frame_48095748_1.png" />
+<Image align="center" src="https://files.readme.io/84ba690cd0554f4a4a303c2b3f336f2e0a5c9749f8a953ffc4bf5bfc50049e8b-Frame_48095748_2.png" />
 
 # Manage Billing (Pro)
 
