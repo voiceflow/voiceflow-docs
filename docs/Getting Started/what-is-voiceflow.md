@@ -16,8 +16,6 @@ Voiceflow agents are:
 * **Powerful:** leverage leading LLMs, APIs, and business logic to automate real work - not just replies.
 * **Flexible**: build agentic and deterministic workflows, connect to all the tools you already use (even custom ones), and control every aspect of your agent's conversations.
 
-<br />
-
 ## Try out Voiceflow
 
 The best way to learn about Voiceflow is to build an agent for yourself. Building and deploying your first agent takes minutes - check out the course below to get started and build a **real** AI agent.
