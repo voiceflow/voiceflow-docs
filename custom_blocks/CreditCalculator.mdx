@@ -309,10 +309,20 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
   };
 
   const plans = [
-    { name: "STARTER", creditsPerMonth: 10000 },
-    { name: "PRO", creditsPerMonth: 50000 },
-    { name: "BUSINESS", creditsPerMonth: 100000 },
-    { name: "ENTERPRISE", creditsPerMonth: 500000 }
+    // Monthly
+    { name: "PRO", period: "Month", credits: 10000, price: 60, unitCost: 0.006 },
+    { name: "PRO", period: "Month", credits: 15000, price: 90, unitCost: 0.006 },
+    { name: "PRO", period: "Month", credits: 20000, price: 120, unitCost: 0.006 },
+    { name: "BUSINESS", period: "Month", credits: 30000, price: 150, unitCost: 0.005 },
+    { name: "BUSINESS", period: "Month", credits: 50000, price: 250, unitCost: 0.005 },
+    { name: "BUSINESS", period: "Month", credits: 100000, price: 500, unitCost: 0.005 },
+    // Annual
+    { name: "PRO", period: "Year", credits: 120000, price: 648, unitCost: 0.0054 },
+    { name: "PRO", period: "Year", credits: 180000, price: 972, unitCost: 0.0054 },
+    { name: "PRO", period: "Year", credits: 240000, price: 1296, unitCost: 0.0054 },
+    { name: "BUSINESS", period: "Year", credits: 360000, price: 1620, unitCost: 0.0045 },
+    { name: "BUSINESS", period: "Year", credits: 600000, price: 2700, unitCost: 0.0045 },
+    { name: "BUSINESS", period: "Year", credits: 1200000, price: 5400, unitCost: 0.0045 },
   ];
 
   // State for user inputs
@@ -323,6 +333,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
   const [selectedTTS, setSelectedTTS] = useState("Eleven Labs - TTS - Flash/Turbo");
   const [selectedASR, setSelectedASR] = useState("Deepgram - STT");
   const [activeTab, setActiveTab] = useState("voice"); // New state for active tab
+  const [billingPeriod, setBillingPeriod] = useState("Month");
   
   // Calculation state
   const [calculations, setCalculations] = useState({
@@ -381,7 +392,9 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
     const totalCredits = voiceTotalCredits + chatTotalCredits;
     
     // Determine recommended plan
-    const recommendedPlan = plans.find(plan => plan.creditsPerMonth >= totalCredits)?.name || "ENTERPRISE";
+    const filteredPlans = plans.filter(plan => plan.period === billingPeriod);
+    const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
+    const recommendedPlan = recommended ? `${recommended.name} (${recommended.credits.toLocaleString()} credits/${billingPeriod.toLowerCase()})` : "ENTERPRISE";
 
     setCalculations({
       voiceCreditsPerMinute,
@@ -402,7 +415,7 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
         llm: llmCreditsPerChatMessage
       }
     });
-  }, [voiceMinutes, chatMessages, selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR]);
+  }, [voiceMinutes, chatMessages, selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR, billingPeriod]);
 
   // Helper function to format numbers
   const formatNumber = (num) => {
@@ -467,6 +480,32 @@ export const CreditCalculator = ({ header = "Voiceflow Credits Estimator" }) => 
             >
               <i className="fas fa-comments text-lg"></i>
               Chat Agent
+            </button>
+          </div>
+        </div>
+        {/* Billing Period Selector */}
+        <div className="flex flex-wrap items-center gap-4 text-left mt-6">
+          <h2 className="text-lg font-medium text-gray-900 dark:text-white whitespace-nowrap">I'm billed</h2>
+          <div className="flex gap-3 flex-wrap">
+            <button
+              onClick={() => setBillingPeriod("Month")}
+              className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
+                ${billingPeriod === "Month"
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
+              `}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setBillingPeriod("Year")}
+              className={`px-5 py-2 rounded-lg border transition-all duration-200 flex items-center gap-2 text-base font-normal
+                ${billingPeriod === "Year"
+                  ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 text-blue-800 dark:text-blue-200"
+                  : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-300"}
+              `}
+            >
+              Annually
             </button>
           </div>
         </div>
