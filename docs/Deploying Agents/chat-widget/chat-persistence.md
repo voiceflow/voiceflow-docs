@@ -1,6 +1,6 @@
 ---
 title: Chat persistence
-excerpt: ''
+excerpt: Choose how conversations are stored.
 deprecated: false
 hidden: false
 metadata:
@@ -10,23 +10,31 @@ metadata:
 next:
   description: ''
 ---
-In webchat, chat persistence is configured directly in the snippet rather than through the UI. This gives you more control and flexibility over conversation persistence across sessions and browser tabs.
+When using Voiceflow’s webchat, you control chat persistence (how conversations are remembered) directly within the JavaScript snippet - not through the Voiceflow UI. This allows for more flexibility based on how you want your users' conversations to persist across sessions and browser tabs.
 
-To configure persistence, add the `persistence` property to your assistant configuration:
+## What is chat persistence?
 
-```javascript
-window.voiceflow.chat.load({
+Chat persistence determines whether users will return to an ongoing conversation or start fresh when they reload a page, open a new tab, or come back later. You can choose between different persistence strategies to match your desired user experience.
+
+## How to configure persistence
+
+To set your preferred persistence behavior, add the persistence property inside the assistant object in your webchat snippet:
+
+```
+window.voiceflow.chat.load({  
   verify: { projectID: 'your-project-id' },
   url: 'your-runtime-url',
   versionID: 'production',
   assistant: {
-    persistence: 'localStorage' // Configure persistence here
+    persistence: 'localStorage' // Set your preferred persistence option here
   }
 });
 ```
 
-Available persistence options:
+Voiceflow supports three persistence options: `localStorage`, `sessionStorage`, and `memory`.
 
-* `'localStorage'` (default): Conversations persist across page refreshes and browser sessions
-* `'sessionStorage'`: Conversations persist across page refreshes but reset when all tabs are closed
-* `'memory'`: Conversations reset on each page refresh or new tab
+| Option             | Behavior                                                                                                       |
+| ------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `'localStorage'`   | **Default.** Conversations persist across page reloads and browser sessions. Useful for returning users.       |
+| `'sessionStorage'` | Conversations persist across page reloads within a single browser session, but reset when all tabs are closed. |
+| `'memory'`         | Conversations reset on every page reload or new tab. Best for ephemeral or private sessions.                   |
