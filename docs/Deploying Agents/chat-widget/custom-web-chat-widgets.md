@@ -243,7 +243,7 @@ For a number of other examples including file upload, forms, timers, date picker
 
 <br />
 
-<LinkCard type="Repo" title="Form extension demo" description="Add a form to your agent. Features waiting and done animatinos." href="https://github.com/voiceflow-gallagan/voiceflow-form-extension-demo" imageSrc="https://files.readme.io/ce7d6a8bfda19281a4c1518573122d11f20f5373dc9335afb838ab030f544050-Credits_1.png" />
+<LinkCard type="Repo" title="Form extension demo" description="Add a form to your agent. Features waiting and done animatinos." href="https://github.com/voiceflow-gallagan/voiceflow-form-extension-demo" imageSrc="https://files.readme.io/5114eba7d58c54d312d092e4236d1eadf35c5c86bac38d5b9944c08beef07aa2-Credits_2.png" />
 
 <br />
 
