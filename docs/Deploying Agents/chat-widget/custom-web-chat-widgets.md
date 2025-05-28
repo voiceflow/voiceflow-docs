@@ -14,6 +14,10 @@ next:
 
 Voiceflow's extensions feature lets you add advanced functionality to your web chat experience. Extensions allow your assistant to render custom widgets or trigger custom effects directly on your website.
 
+<Image align="center" src="https://files.readme.io/d4bdbf6-extensions.gif" />
+
+<br />
+
 There are two types of extensions:
 
 * **Response extensions**: these render interactive widgets inside the web chat window like file uploads, calendar pickers, or payment modals.
@@ -26,8 +30,6 @@ There are two types of extensions:
 > Want to jump into code? [Find examples on GitHub](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5).
 
 <br />
-
-<Image align="center" border={false} caption="Here's an example of two extensions in action - the form is a response extension, and the confetti is an effect extension." src="https://files.readme.io/d4bdbf6-extensions.gif" />
 
 ## How extensions work
 
