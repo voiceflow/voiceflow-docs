@@ -11,6 +11,8 @@ Once you've build an awesome agent, it's time to launch it to production. To use
 
 To publish a production version of your agent, click the green ***Publish*** button in the top right corner of the canvas. You can also optionally add a custom name and release notes for your version.
 
+<Video src="hhttps://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSoUqfrPgQC79nZF1sPaJTXmIcz5SWNAHtxVbj" />
+
 <br />
 
 ## Viewing release history
