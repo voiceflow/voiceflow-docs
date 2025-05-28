@@ -20,10 +20,6 @@ window.voiceflow.chat.load({
 });
 ```
 
-```json Response Example
-{"This code does not return any data."}
-```
-
 # Load the widget
 
 <!-- javascript@1-7 -->
