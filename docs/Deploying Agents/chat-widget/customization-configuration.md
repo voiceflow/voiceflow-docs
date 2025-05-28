@@ -1,5 +1,5 @@
 ---
-title: Adding custom variables
+title: Passing custom variables into web chat
 excerpt: Send custom variables on web chat load like userID, email, and more.
 deprecated: false
 hidden: false
