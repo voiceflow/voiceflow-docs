@@ -11,9 +11,9 @@ metadata:
 
 The first extension that many users build is a form extension. We'll walk you through a full example that creates a form with name, email, and phone fields.
 
-<br />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSY3bOkwRLqS74rbVsgFnoXQRxeBvDfjhUtWTm" />
 
-<Image align="center" src="https://files.readme.io/38847f8-CleanShot_2024-02-29_at_09.53.45_1.gif" />
+<br />
 
 ## Step 1: Create the extension
 
