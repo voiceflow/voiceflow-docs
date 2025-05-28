@@ -37,6 +37,6 @@ You can find this code from the Interfaces tab inside Voiceflow's editor.
 
 # Wait three seconds then open the web chat popup
 
-<!-- javascript@ -->
+<!-- javascript@12-16 -->
 
 We use .then() so that widget won't try to open before its loaded.
