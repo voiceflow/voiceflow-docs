@@ -1,6 +1,6 @@
 ---
 title: Web chat widget
-excerpt: ''
+excerpt: Add your agent to your website in minutes.
 deprecated: false
 hidden: false
 metadata:
