@@ -1,5 +1,5 @@
 ---
-title: Legacy Webchat
+title: Legacy webchat
 excerpt: ''
 deprecated: false
 hidden: false
