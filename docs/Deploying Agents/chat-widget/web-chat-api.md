@@ -29,6 +29,8 @@ Once the widget script is loaded, it registers the API as `window.voiceflow.chat
 
 ## Examples
 
+<TutorialTile emoji="🦉" slug="automatically-open-web-chat-after-3-seconds" title="Automatically open web chat after 3 seconds" />
+
 <br />
 
 ## Additional example calls
