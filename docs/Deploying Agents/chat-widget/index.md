@@ -12,6 +12,8 @@ next:
 ---
 The quickest way to launch your agent is using our web chat widget. Web chat can be deployed to production in minutes, and is ideal for customer support or lead capture.
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSm0VVMS3vgzMhu7msD2nISacpBK5UHfikJy9X" />
+
 ![](https://files.readme.io/420b11e-CleanShot_2024-06-17_at_09.54.17.gif)
 
 <br />
