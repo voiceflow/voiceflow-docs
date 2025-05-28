@@ -1,6 +1,6 @@
 ---
-title: Custom styling
-excerpt: ''
+title: Custom web chat styling
+excerpt: Customize the web chat widget to fully fit your brand.
 deprecated: false
 hidden: false
 metadata:
@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-# Custom CSS: Override <Glossary>agent</Glossary> settings and styles
+While for most users, [the web chat widget's built-in customization is enough](https://docs.voiceflow.com/docs/chat-widget#customizing-your-widget), advanced users may wish to modify the widget's CSS directly.
 
 The below can be used to override the listed agent configuration settings. You can also add a link to your self-hosted stylesheet.
 
