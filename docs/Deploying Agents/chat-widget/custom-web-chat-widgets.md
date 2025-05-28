@@ -241,12 +241,4 @@ name = last_event.payload.name
 
 For a number of other examples including file upload, forms, timers, date pickers, thumbs up/down and more please see the video and GitHub repo below.
 
-<br />
-
-<LinkCard type="Repo" title="Form extension demo" description="Add a form to your agent. Features waiting and done animatinos." href="https://github.com/voiceflow-gallagan/voiceflow-form-extension-demo" imageSrc="https://files.readme.io/5114eba7d58c54d312d092e4236d1eadf35c5c86bac38d5b9944c08beef07aa2-Credits_2.png" />
-
-<br />
-
-[https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5)
-
-<Embed url="https://www.youtube.com/watch?v=xY0vNkzFzAI" href="https://www.youtube.com/watch?v=xY0vNkzFzAI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FxY0vNkzFzAI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DxY0vNkzFzAI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FxY0vNkzFzAI%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+<LinkCard type="Repo" title="Sample extensions repo" description="Disable/enable the input field, embed videos and maps, accept input via a form, and trigger a confetti animation with these sample extensions." href="https://github.com/voiceflow-gallagan/vf-extensions-demo/" imageSrc="https://files.readme.io/5114eba7d58c54d312d092e4236d1eadf35c5c86bac38d5b9944c08beef07aa2-Credits_2.png" />
