@@ -192,25 +192,51 @@ Voiceflow's web chat elements use class names prefixed with `.vfrc`. To customiz
   /\* .vfrc-footer--watermark {} \*/
 </Accordion>
 
-If you don't want to host your css stylesheet, you can also convert your CSS into a data URL. Here is an example of a full widget using that method. This CSS turns the agent messages black.
+For example, you could change the background of agent messages like this:
+
+```javascript
+.vfrc-system-response .vfrc-message {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+```
+
+<br />
+
+### Option A: Link a self-hosted stylesheet
+
+You can host your CSS file and provide the link in the `assistant.stylesheet` property:
+
+```javascript
+assistant: {
+  stylesheet: 'https://yourdomain.com/custom-styles.css'
+}
+```
+
+<br />
+
+### Option B: Embed CSS via data URL
+
+If you don’t want to host a CSS file externally, you can encode your CSS as a base64 data URL and include it inline:
 
 ```
 <script type="text/javascript">
   (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: 'PROJECT_ID' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          assistant: {
-            stylesheet: "data:text/css;base64,LnZmcmMtc3lzdGVtLXJlc3BvbnNlIC52ZnJjLW1lc3NhZ2UgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwMDAwOyBjb2xvcjogI0ZGRkZGRjsgfQ==" // link to your self-hosted stylesheet
-          }
-        });
-      };
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
-      v.type = "text/javascript"; 
-      s.parentNode.insertBefore(v, s);
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function() {
+      window.voiceflow.chat.load({
+        verify: { projectID: 'PROJECT_ID' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        assistant: {
+          stylesheet: 'data:text/css;base64,LnZmcmMtc3lzdGVtLXJlc3BvbnNlIC52ZnJjLW1lc3NhZ2UgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwMDAwOyBjb2xvcjogI0ZGRkZGRjsgfQ==' // the base64-encoded data URL containing your stylesheet
+        }
+      });
+    };
+    v.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
+    v.type = 'text/javascript';
+    s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
 ```
