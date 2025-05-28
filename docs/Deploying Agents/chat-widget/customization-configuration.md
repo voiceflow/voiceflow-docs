@@ -58,7 +58,7 @@ window.voiceflow.chat.load({
 
 # Pass custom variable values (optional)
 
-You can pre-fill variables when the assistant loads by using the `launch.event.payload` field. These values populate the last\_event system variable and can be used in a [JavaScript step](doc:javascript-step) at the beginning of the conversation.
+You can pre-fill variables when the assistant loads by using the `launch.event.payload` field. Here's how:
 
 ```javascript
 window.voiceflow.chat.load({
@@ -80,9 +80,9 @@ window.voiceflow.chat.load({
 
 ```
 
-<Image align="center" src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
+These values populate the last\_event system variable and can be used in a [JavaScript step](doc:javascript-step) at the beginning of the conversation.
 
-<br />
+<Image align="center" src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
 
 > ❗️
 >
