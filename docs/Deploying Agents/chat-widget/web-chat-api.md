@@ -33,22 +33,6 @@ Once the widget script is loaded, it registers the API as `window.voiceflow.chat
 
 <br />
 
-## Additional example calls
-
-Open the Web Chat widget with after 1s
-
-```javascript
-window.voiceflow.chat.load({
-  verify: { projectID: "63906a46223f6a0007741929" },
-  url: "https://general-runtime.voiceflow.com",
-  versionID: "production"
-}).then(() => {
-  setTimeout(function () {
-    window.voiceflow.chat.open();
-  }, 1000)
-});
-```
-
 Open the Web Chat widget and trigger a specific intent
 
 ```javascript
