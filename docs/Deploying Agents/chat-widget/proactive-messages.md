@@ -1,6 +1,6 @@
 ---
 title: Proactive messages
-excerpt: ''
+excerpt: Send messages to the user before they start chatting.
 deprecated: false
 hidden: false
 metadata:
@@ -10,6 +10,12 @@ metadata:
 next:
   description: ''
 ---
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSnzvO3ayLLDzbg1qhkwJW5SmtN92ciaEe8MjI" />
+
+Proactive messages allow you to send messages to the user before they open the chat widget. These messages do not appear in transcripts, and do not consume credits. You can add and remove proactive messages to your web chat widget using the `window.voiceflow.chat.proactive` method.
+
+<br />
+
 Create custom proactive text messages to draw attention to your Web Chat agent.
 
 `proactive.clear()` clears any previous proactive messages.
