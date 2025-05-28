@@ -28,7 +28,7 @@ Before you can add your agent to your website, you'll need to [publish a product
 
 ## Customizing your widget
 
-Your agent should fit your brand, so we provide a variety of customization options. From the widget settings page, scroll down and you'll be able to set your agent's brand colours, icons, launcher type, and the interface you'd like to use. You can also optionally add legal text or privacy policy links.
+Your agent should fit your brand, so we provide a variety of customization options. From the widget settings page, scroll down and you'll be able to set your agent's brand colours, icons, launcher type, and the interface you'd like to use. You can also optionally add placeholder and privacy policy links.
 
 <Image align="center" src="https://files.readme.io/dafdecf7bb148515422a3217daee20e2c298ca1ac6f90f56d3adc0bc4fa1452d-Frame_48095751.png" />
 
@@ -36,7 +36,13 @@ Paid users can also disable Voiceflow branding from this page.
 
 <br />
 
-Remember that all these customization options work together to create a cohesive chat experience. Take time to ensure your choices align with your brand guidelines and user experience goals.
+## Setting your widget's security settings
+
+Three security settings are available at the bottom of the widget settings page. These are:
+
+* **Approved domains** - if you'd like to restrict your widget so it only works on specified websites, you can manage the whitelist here.
+* **Legal disclaimer** - certain company policies or local regulations may require a legal disclaimer to be shown and accepted before the agent is used. This can be enabled and customized using this setting.
+* **Chat transcript saving** - if disabled, conversations with the agent via the chat widget won't be saved as a [transcript](doc:transcripts). This can be useful when sensitive information is being processed.
 
 <br />
 
