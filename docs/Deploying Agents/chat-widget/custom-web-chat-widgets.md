@@ -35,17 +35,11 @@ There are two types of extensions:
 
 Extensions are triggered by a [Custom action step](doc:custom-actions) or a [Function step](doc:function-step) in your Voiceflow assistant. You define them in your site’s code and register them in the [web chat snippet](https://docs.voiceflow.com/docs/chat-widget#how-to-add-your-agents-widget-to-your-website).
 
-> 📘 Find the examples repo [here](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5)
+An extension follows the pattern below:
 
-<Embed url="https://www.youtube.com/watch?v=xY0vNkzFzAI" href="https://www.youtube.com/watch?v=xY0vNkzFzAI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FxY0vNkzFzAI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DxY0vNkzFzAI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FxY0vNkzFzAI%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+### Response Extension
 
-Extensions allows you to use the **custom action step** or a **function** in your Voiceflow design to trigger a piece of custom code (the extension) in the code of your website. An example of a form is shown below.
-
-An extension follows the pattern below
-
-**Response Extension**
-
-```
+```javascript
 interface ResponseExtension {
 	name: string,
 	type: "response",
@@ -54,7 +48,7 @@ interface ResponseExtension {
 }
 ```
 
-**Effects Extension**
+### Effects Extension
 
 ```
 interface EffectExtension {
@@ -65,20 +59,22 @@ interface EffectExtension {
 }
 ```
 
-To activate these extensions, you would include them in your Web Chat installation code in the following way.
+### Registering extensions in the web chat widget
+
+Once you've defined your extensions, register them using the `assistant.extensions` property in your `chat.load()` script:
 
 ```
 window.voiceflow.chat.load({
-	...config,
-	assistant: {
-		extensions: [extension1, extension2, extension3, ...etc]
-	}
+  verify: { projectID: 'YOUR_PROJECT_ID' },
+  url: 'https://general-runtime.voiceflow.com',
+  versionID: 'production',
+  assistant: {
+    extensions: [extension1, extension2, extension3] // your extension's name goes here
+  }
 });
 ```
 
-These extensions can be triggered in your design using the **custom action step** or a **function**.
-
-Let's walk through an example of a simple form below.
+There’s no limit to the number of extensions you can include.
 
 # Example 1: Custom Form
 
