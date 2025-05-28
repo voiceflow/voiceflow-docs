@@ -1,10 +1,10 @@
 ---
 title: Open the webchat after one second
-description: Recipe Description
+description: A simple example of hooking into the webchat widget and performing an action
 hidden: false
 recipe:
   color: '#018FF4'
-  icon: 🦉
+  icon: 💬
 ---
 ```javascript JavaScript
 window.voiceflow.chat.load({
