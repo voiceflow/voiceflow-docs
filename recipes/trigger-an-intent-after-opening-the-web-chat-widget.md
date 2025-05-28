@@ -1,7 +1,7 @@
 ---
 title: Trigger an intent after opening the web chat widget
 description: This example waits for 2 seconds, then automatically triggers an intent.
-hidden: true
+hidden: false
 recipe:
   color: '#018FF4'
   icon: 🪄
