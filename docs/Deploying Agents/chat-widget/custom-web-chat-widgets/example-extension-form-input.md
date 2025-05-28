@@ -5,19 +5,21 @@ hidden: false
 metadata:
   robots: index
 ---
-# Example 1: Custom Form
+> 📘 Learn about extensions first!
+>
+> If you haven't already, we recommend reading the [custom forms and extensions](doc:custom-web-chat-widgets) page before following this guide. That page will give you a bunch of extra context about what is going on here!
+
+The first extension that many users build is a form extension. We'll walk you through a full example that creates a form with name, email, and phone fields.
+
+<br />
 
 <Image align="center" src="https://files.readme.io/38847f8-CleanShot_2024-02-29_at_09.53.45_1.gif" />
 
-## 1. Create the extension
+## Step 1: create the extension
 
-An extension called **Custom\_Form** is written. This extension contains a field for name, email, and phone number. It also has a submit button. It also contains custom CSS that styles the form to appear like it does above.
+Here's the code for our extension. Add this script above the web chat widget script and before the \</body> tag on your website.
 
-**Where do I add this on my website?**
-
-If you are using a Website builder you can add this **above** the chat widget script before the \</body> tag on your website. You can also include it on a separate file in your website and import the extension as shown in the github repository.
-
-```
+```javascript
 <script>
 const FormExtension = {
   name: 'Forms',
@@ -114,54 +116,62 @@ const FormExtension = {
 </script>
 ```
 
-You can get the full sample of extensions [here](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5).
+<br />
 
-## 2. Modify the Chat Widget Installation Code
+## Step 2: Register the extension
 
-The Web Chat widget is modified to include the extension **Custom\_Form**
+Update your `chat.load()` code to register the extension:
 
 ```
 window.voiceflow.chat.load({
-  verify: {
-    projectID: "<ID>"
-  },
-  url: "https://general-runtime.voiceflow.com",
-  versionID: "production",
-	assistant: {
-		extensions: [FormExtension]
-	}
+  verify: { projectID: '<ID>' },
+  url: 'https://general-runtime.voiceflow.com',
+  versionID: 'production',
+  assistant: {
+    extensions: [FormExtension]
+  }
 });
 ```
 
-There is no limit on the number of extensions you can add.
+<br />
 
-## 3. Trigger the Extension with a Custom Action
+## Step 3: Trigger the extension
 
-A custom action is added to the flow with the name **Custom\_Form**. We have turned the 'stop on action' setting on. This means that when this step is reached, the extension will be triggered and the agent will wait for a response to be received before proceeding.
-
-![](https://files.readme.io/7e42c92-CleanShot_2024-03-06_at_17.11.072x.png)
+Add a [Custom action step](doc:custom-actions) in your Voiceflow workflow with the name `Custom_Form`. Then, add a path called `Response_Submitted` and enable the "stop on action" setting so the agent waits for input before continuing.
 
 <Image align="center" width="-4px" src="https://files.readme.io/703b286-CleanShot_2024-03-06_at_17.54.452x.png" />
 
-When a user reaches the custom action, it will send the following **trace** to the Web Chat. This is what triggers the extension to appear.
+When triggered, your agent's web chat widget receives a trace like the one shown below. This is what triggers the extension to appear.
 
+```javascript
+{  
+  "type": "Custom_Form",
+  "payload": "{}",
+  "defaultPath": 0,
+  "paths": [
+    { "event": { "type": "Response_Submitted" } }
+  ]
+}
 ```
-  {
-    "type": "Custom_Form",
-    "payload": "{ }",
-    "defaultPath": 0,
-    "paths": [
-      { "event": { "type": "Response_Submitted" } }
-    ]
-  }
-```
 
-## 4. Retrieve the response
+<br />
 
-Responses from the custom action are saved in a variable called `last_event`in Voiceflow. This can be accessed and parsed using the JavaScript step.
+## Step 4: Retrieve user input
 
-```
+Once the form is submitted, the values are stored in the last\_event system variable. Access them in a [JavaScript step](doc:javascript-step).
+
+<br />
+
+<Image align="center" src="https://files.readme.io/a332ec4cf1940f717aa7d2f04cbfcf4aeb95d2b9adde40c378da375a531657e7-7e42c92-CleanShot_2024-03-06_at_17.11.072x.png" />
+
+```javascript
 name = last_event.payload.name
 ```
 
-![](https://files.readme.io/8f2c30c-CleanShot_2024-03-06_at_19.50.492x.png)
+<br />
+
+## Congratulations!
+
+You just built your first extension! Check out our extensions repo for examples of more extensions you can build.
+
+<LinkCard type="Repo" title="Sample extensions repo" description="Disable/enable the input field, embed videos and maps, accept input via a form, and trigger a confetti animation with these sample extensions." href="https://github.com/voiceflow-gallagan/vf-extensions-demo/" imageSrc="https://files.readme.io/a3380247509557ff965053f21f3769a5ff94b262b7f65e5f59051738a1d3fbd0-Agent_Step_Course.png" />
