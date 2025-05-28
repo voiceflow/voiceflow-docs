@@ -203,6 +203,10 @@ For example, you could change the background of agent messages like this:
 
 <br />
 
+Once you've written your CSS, there's two ways to pass it into your widget.
+
+<br />
+
 ### Option A: Link a self-hosted stylesheet
 
 You can host your CSS file and provide the link in the `assistant.stylesheet` property:
