@@ -59,6 +59,8 @@ To see your latest changes when testing a development version, click the **Run**
 
 > ℹ️ This feature is only available to Enterprise customers.
 
+<br />
+
 The `url` property defines the runtime endpoint the widget communicates with. This is especially important for Enterprise users running on Private Cloud environments. If you're not on Private Cloud, you can safely use the default:
 
 ```javascript
