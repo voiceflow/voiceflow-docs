@@ -1,6 +1,6 @@
 ---
 title: Chat persistence
-excerpt: Choose how conversations are stored.
+excerpt: Control whether conversations persist between browser sessions and pages.
 deprecated: false
 hidden: false
 metadata:
