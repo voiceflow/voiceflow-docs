@@ -1,0 +1,30 @@
+---
+name: Video
+---
+export function Video({ src }) {
+  return (
+    <div style={{ 
+      width: '100%', 
+      margin: '2rem auto',
+      borderRadius: '8px',
+      overflow: 'hidden'
+    }}>
+      <video
+        src={src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          width: '100%',
+          height: 'auto',
+          display: 'block'
+        }}
+      />
+    </div>
+  );
+}
+
+export default Video; 
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSm0VVMS3vgzMhu7msD2nISacpBK5UHfikJy9X" />
