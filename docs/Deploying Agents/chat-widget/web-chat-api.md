@@ -31,48 +31,9 @@ Once the widget script is loaded, it registers the API as `window.voiceflow.chat
 
 <TutorialTile emoji="🦉" slug="automatically-open-web-chat-after-3-seconds" title="Automatically open web chat after 3 seconds" />
 
+<TutorialTile emoji="🦉" slug="trigger-an-intent-after-opening-the-web-chat-widget" title="Trigger an intent after opening the web chat widget" />
+
 <br />
-
-Open the Web Chat widget and trigger a specific intent
-
-```javascript
-window.voiceflow.chat.load({
-  verify: { projectID: '63906a46223f6a0007741929' },
-  url: 'https://general-runtime.voiceflow.com',
-  versionID: 'production'
-}).then(() => {
-  setTimeout(function () {
-    window.voiceflow.chat.open();
-  }, 1000);
-  setTimeout(function () {
-    window.voiceflow.chat.interact({
-      type: "intent",
-      payload: {
-        intent: {
-          name: "account_services"
-        },
-        entities: []
-      }
-    })
-  }, 2000);
-});
-```
-
-You can insert these custom triggers into the body of the webchat widget.
-
-```javascript
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          [THEY GO HERE!!]     <---------------------------------------------
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
-```
 
 # Events
 
