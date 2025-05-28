@@ -44,6 +44,12 @@ Three security settings are available at the bottom of the widget settings page.
 
 <br />
 
+## Making changes to the widget after launch
+
+If you'd like to change any of the widget's settings - for example, modifying your colours, fonts, and icons - you'll need to [publish a new version of your agent to production](doc:publishing-agents) for the changes to take effect.
+
+<br />
+
 ## Additional customizations
 
 If you're a developer, you can hook into the widget through [custom actions](doc:custom-actions) and [extensions](doc:custom-web-chat-widgets). Take a read of the other pages in this section of the docs to learn more.
