@@ -20,7 +20,7 @@ Chat persistence determines whether users will return to an ongoing conversation
 
 To set your preferred persistence behavior, add the persistence property inside the assistant object in your webchat snippet:
 
-```
+```javascript
 window.voiceflow.chat.load({  
   verify: { projectID: 'your-project-id' },
   url: 'your-runtime-url',
