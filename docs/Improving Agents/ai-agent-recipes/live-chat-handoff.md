@@ -3,8 +3,8 @@ title: Live Chat Handoff
 excerpt: >-
   Use our open source chat widget and custom action step to do a handoff to a
   live chat platform
-deprecated: false
-hidden: false
+deprecated: true
+hidden: true
 metadata:
   title: ''
   description: ''
