@@ -34,15 +34,7 @@ You can extend this setup with optional parameters for advanced customization, i
 
 ## Passing in a custom userID (optional)
 
-You can assign a unique ID to each user with the userID property. This ID becomes available in your agent as the built-in `{user_id}` variable.
-
-This is useful for:
-
-* Identifying users across sessions
-* Persisting conversation history
-* Personalizing interactions
-
-Here's an example:
+You can assign a unique ID to each user with the userID property. This ID becomes available in your agent as the built-in `{user_id}` variable. This is useful for identifying users across sessions, persisting conversation history, and personalizing interactions. Here's an example:
 
 ```javascript
 window.voiceflow.chat.load({
