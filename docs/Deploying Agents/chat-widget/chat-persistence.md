@@ -31,9 +31,9 @@ window.voiceflow.chat.load({
 });
 ```
 
-Voiceflow supports three persistence options: `localStorage`, `sessionStorage`, and `memory`.
-
 <br />
+
+Voiceflow supports three persistence options: `localStorage`, `sessionStorage`, and `memory`.
 
 | Option             | Behavior                                                                                                       |
 | ------------------ | -------------------------------------------------------------------------------------------------------------- |
