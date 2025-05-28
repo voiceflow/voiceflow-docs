@@ -3,7 +3,7 @@ title: Send a proactive message when the user visits a certain page
 description: >-
   Learn how to clear existing proactive messages and send a new one, but only on
   certain pages.
-hidden: true
+hidden: false
 recipe:
   color: '#018FF4'
   icon: 🥾
@@ -43,7 +43,6 @@ recipe:
 <!-- javascript@1-11,19-23 -->
 
 You can find this code from the Interfaces tab inside Voiceflow's editor.
-
 
 # Detect when the web chat has loaded
 
