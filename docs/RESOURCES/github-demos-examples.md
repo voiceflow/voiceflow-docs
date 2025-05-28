@@ -5,10 +5,6 @@ hidden: true
 metadata:
   robots: index
 ---
-<Embed typeOfEmbed="github" url="https://github.com/voiceflow/demos-n-examples" />
-
-<Embed typeOfEmbed="github" url="https://github.com/voiceflow/demos-n-examples.git" />
-
 <HTMLBlock>{`
 <iframe 
   src="https://voiceflow.github.io/demos-n-examples/" 
