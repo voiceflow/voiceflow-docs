@@ -160,8 +160,6 @@ When triggered, your agent's web chat widget receives a trace like the one shown
 
 Once the form is submitted, the values are stored in the last\_event system variable. Access them in a [JavaScript step](doc:javascript-step).
 
-<br />
-
 <Image align="center" src="https://files.readme.io/a332ec4cf1940f717aa7d2f04cbfcf4aeb95d2b9adde40c378da375a531657e7-7e42c92-CleanShot_2024-03-06_at_17.11.072x.png" />
 
 ```javascript
