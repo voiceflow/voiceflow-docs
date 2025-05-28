@@ -10,57 +10,187 @@ metadata:
 next:
   description: ''
 ---
-While for most users, [the web chat widget's built-in customization is enough](https://docs.voiceflow.com/docs/chat-widget#customizing-your-widget), advanced users may wish to modify the widget's CSS directly.
+For most use cases, the built-in widget customization options are more than enough. But if you're an advanced user looking for more visual control, you can customize the widget’s appearance with your own CSS.
 
-The below can be used to override the listed agent configuration settings. You can also add a link to your self-hosted stylesheet.
+<br />
 
-If you use custom CSS to style your Web Chat, target elements that begin with `.vfrc`. You can find the [list of classes in our react-chat repository on GitHub](https://github.com/voiceflow/react-chat/blob/master/packages/react-chat/src/styles.css).
+## Styling methods
+
+There are two primary ways to style the web chat widget:
+
+1. Use the built-in configuration fields (e.g. header image, colors, input placeholder)
+2. Override the widget’s CSS using your own stylesheet (either hosted or embedded)
+
+<br />
+
+## Method 1: Built-in styling options
+
+Voiceflow lets you control the widget’s appearance directly in your `chat.load()` configuration using the assistant object. Here’s an example with optional styling parameters:
+
+<br />
 
 ```javascript
-/**
-* [optional] override configured agent definitions on integrations tab
-*/
-
 window.voiceflow.chat.load({
-  verify: {
-    projectID: "<ID>"
-  },
-  url: "https://general-runtime.voiceflow.com",
-  versionID: "production",
+  verify: { projectID: '<your-project-id>' },
+  url: 'https://general-runtime.voiceflow.com',
+  versionID: 'production',
   assistant: {
-    type: 'chat'
-    renderMode: 'embed' | 'widget' | 'popover',
+    type: 'chat',
+    renderMode: 'widget', // also accepts 'embed' or 'popover'
 
-    // Widget header
     header: {
-      hideImage: true | false,
-      imageUrl: 'https://company_domain.com/custom_image.jpg',
-      title: 'My Assistant'
-    },
-  
-    // Welcome message
-    banner: {
-      hide: true | false,
-      title: 'Welcome',
-      description: 'How can I help you today?',
-      imageUrl: 'https://company_domain.com/custom_image.jpg'
+      hideImage: false,
+      imageUrl: 'https://yourdomain.com/logo.png',
+      title: 'Chat with Support'
     },
 
-    // Agent avatar
-    avatar: {
-      hide: true | false,
-      imageUrl: 'https://company_domain.com/custom_image.jpg'
+    banner: {
+      hide: false,
+      title: 'Welcome!',
+      description: 'How can I help you today?',
+      imageUrl: 'https://yourdomain.com/banner.jpg'
     },
-  
-    // input
-    inputPlaceholder: 'Message...'
-    // color: "string",
-    stylesheet: "string" //link to your self-hosted stylesheet
+
+    avatar: {
+      hide: false,
+      imageUrl: 'https://yourdomain.com/avatar.png'
+    },
+
+    inputPlaceholder: 'Type your message here...',
+    
+    // Optional external stylesheet
+    stylesheet: 'https://yourdomain.com/styles.css'
   }
 });
-
-
 ```
+
+<br />
+
+## Method 2: Custom CSS styling
+
+To go beyond basic styling, you can use your own CSS rules to override the default widget styles.
+
+### How to target web chat elements
+
+Voiceflow's web chat elements use class names prefixed with `.vfrc`. To customize these, create CSS rules targeting those classes.
+
+<Accordion title="View the full list of supported classes" icon="fa-code">
+  /\*
+  PAGE CONTENTS
+
+  Customize the page that the chat bubble lives on
+  \*/
+
+  /\* .voiceflow-chat {} \*/
+
+  /\* .vfrc-launcher {} \*/
+
+  /\* .vfrc-chat--overlay {} \*/
+
+  /\* .vfrc-prompt {} \*/
+
+  /\*
+  CHAT WIDGET HEADER
+
+  Customize the content, controls and styling included in your chat widget header, including the Assistant Information.
+  Note that changes to the assistant information here will be shared across other elements that consume this styling.
+  \*/
+
+  /\* .vfrc-header {} \*/
+
+  /\* .vfrc-assistant-info {} \*/
+
+  /\* .vfrc-assistant-info--title {} \*/
+
+  /\* .vfrc-assistant-info--description {} \*/
+
+  /\* .vfrc-avatar {} \*/
+
+  /\* .vfrc-icon {} \*/
+
+  /\*
+  CHAT MESSAGE BODY
+
+  Customize the layout and display of the chat body, and the conversation's metadata
+  \*/
+
+  /\* .vfrc-chat {} \*/
+
+  /\* .vfrc-chat--dialog {} \*/
+
+  /\* .vfrc-chat--spacer {} \*/
+
+  /\* .vfrc-chat--session-time {} \*/
+
+  /\* .vfrc-chat--status {} \*/
+
+  /\* .vfrc-message {} \*/
+
+  /\* .vfrc-timestamp {} \*/
+
+  /\*
+  ASSISTANT RESPONSES
+
+  Customize the style and layout of assistant response messages.
+  \*/
+
+  /\* .vfrc-system-response--indicator {} \*/
+
+  /\* .vfrc-system-response {} \*/
+
+  /\* .vfrc-system-response--controls {} \*/
+
+  /\* .vfrc-system-response--list {} \*/
+
+  /\* .vfrc-system-response--actions {} \*/
+
+  /\* .vfrc-button {} \*/
+
+  /\* .vfrc-image {} \*/
+
+  /\* .vfrc-image--background {} \*/
+
+  /\* .vfrc-card--content {} \*/
+
+  /\* .vfrc-card--header {} \*/
+
+  /\* .vfrc-card--description {} \*/
+
+  /\* .vfrc-carousel {} \*/
+
+  /\* .vfrc-carousel--button {} \*/
+
+  /\* Targeted styling for just the Assistant messages. */
+  /* .vfrc-system-response .vfrc-message {} \*/
+
+  /\* Targeted styling for just the Assistant buttons. */
+  /* .vfrc-system-response .vfrc-button {} \*/
+
+  /\*
+  USER RESPONSES
+
+  Customize the style and layout of users response messages.
+  \*/
+
+  /\* .vfrc-user-response {} \*/
+
+  /\* Targeted styling for just the User messages */
+  /* .vfrc-user-response .vfrc-message {} \*/
+
+  /\*
+  FOOTER
+
+  Customize the layout and appearance of the message input field and the VF Branding
+  \*/
+
+  /\* .vf-footer {} \*/
+
+  /\* .vfrc-input {} \*/
+
+  /\* .vfrc-chat-input--button {} \*/
+
+  /\* .vfrc-footer--watermark {} \*/
+</Accordion>
 
 If you don't want to host your css stylesheet, you can also convert your CSS into a data URL. Here is an example of a full widget using that method. This CSS turns the agent messages black.
 
