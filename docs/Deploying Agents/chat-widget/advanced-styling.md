@@ -219,7 +219,7 @@ assistant: {
 
 If you don’t want to host a CSS file externally, you can encode your CSS as a base64 data URL and include it inline:
 
-```
+```javascript
 <script type="text/javascript">
   (function(d, t) {
     var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
