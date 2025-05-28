@@ -1,5 +1,5 @@
 ---
-title: Voice (Phone Number)
+title: Voice (phone number)
 excerpt: ''
 deprecated: false
 hidden: false
