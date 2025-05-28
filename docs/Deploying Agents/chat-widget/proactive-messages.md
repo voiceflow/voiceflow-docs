@@ -16,13 +16,9 @@ Proactive messages allow you to send messages to the user before they open the c
 
 <br />
 
-<br />
+## Sending proactive messages
 
-Create custom proactive text messages to draw attention to your Web Chat agent.
-
-`proactive.clear()` clears any previous proactive messages.
-
-`proactive.push(...messages)` renders one or more proactive text messages:
+To send a proactive message to the user, use the `window.voiceflow.chat.proactive.push()` method. You can send one or more messages to the user at the same time.
 
 ```javascript
 // one message  
@@ -36,6 +32,16 @@ window.voiceflow.chat.proactive
     { type: 'text', payload: { message: '2!' } }  
   )
 ```
+
+<br />
+
+<br />
+
+Create custom proactive text messages to draw attention to your Web Chat agent.
+
+`proactive.clear()` clears any previous proactive messages.
+
+`proactive.push(...messages)` renders one or more proactive text messages:
 
 <Image align="center" src="https://files.readme.io/4d24d40-proactive_message_bubble_demo.png" />
 
