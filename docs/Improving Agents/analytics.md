@@ -13,6 +13,8 @@ See how your agent is performing by visiting the analytics dashboard, which can 
 
 ![](https://files.readme.io/7735078b7c6419f30f92fc8a1e9a001f210ea0a98b81194396cec84f8b423e7d-image.png)
 
+<Image align="center" src="https://files.readme.io/98302b3fec04c023acdd12ceb4e34c3663de21e9ca0fbe3e26773561df90a133-CleanShot_2025-05-28_at_11.08.452x.png" />
+
 ## What data does the dashboard include?
 
 The dashboard now offers a comprehensive set of visualizations, providing deeper insights into your agent's performance:
