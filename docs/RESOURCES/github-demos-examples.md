@@ -1,5 +1,5 @@
 ---
-title: Github demos & examples
+title: Demos & examples on Github
 deprecated: false
 hidden: true
 metadata:
