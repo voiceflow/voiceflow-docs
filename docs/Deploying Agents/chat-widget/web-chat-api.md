@@ -10,7 +10,24 @@ metadata:
 next:
   description: ''
 ---
-The Web Chat API allows you to open, close and do much more with the Webchat. This also allows you to trigger the Web Chat to start from a specific intent on your canvas.
+Voiceflow’s web chat API gives you full programmatic control over how the chat widget behaves on your site. You can open or close the chat, show or hide the launcher, and even trigger specific conversation intents - all using JavaScript.
+
+## Web chat API methods
+
+Once the widget script is loaded, it registers the API as `window.voiceflow.chat`. Here are the main methods you can use:
+
+| Method                 | Description                                                                                                                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `load({ config })`     | Initializes the Web Chat widget with the specified config. Required to get the widget running.                                                                                                                        |
+| `open()`               | Opens the chat window.                                                                                                                                                                                                |
+| `close()`              | Closes the chat window.                                                                                                                                                                                               |
+| `show()`               | Displays the chat launcher bubble. If hidden, calling this will show it again.                                                                                                                                        |
+| `hide()`               | Hides the chat launcher and the widget if it's open.                                                                                                                                                                  |
+| `interact({ action })` | Sends a simulated user action to the Dialog API. Can be used to trigger specific intents or events. See the [interact endpoint documentation](https://developer.voiceflow.com/reference/stateinteract-1) for details. |
+
+<br />
+
+<br />
 
 # Web Chat API
 
