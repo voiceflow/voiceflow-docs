@@ -12,25 +12,28 @@ next:
 ---
 # Overview
 
-The new **extensions** feature allows you to render custom responses and effects inside of your Voiceflow Web Chat.
+Voiceflow's extensions feature lets you add advanced functionality to your web chat experience. Extensions allow your assistant to render custom widgets or trigger custom effects directly on your website.
 
-There are two types of **extensions**:
+There are two types of extensions:
 
-**Response**: These are extensions that render a custom widget inside the Voiceflow Web Chat. This includes examples like:
+* **Response extensions**: these render interactive widgets inside the web chat window like file uploads, calendar pickers, or payment modals.
+* **Effect extensions**: these don’t render a UI element but can trigger changes elsewhere on your site, such as updating a status icon, deep-linking a user, or running custom scripts.
 
-* File Upload
-* Calendar Picker
-* Payment Modal
+> 📘
+>
+> Want to jump into code? [Find examples on GitHub](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5).
 
-**Effects** These are extensions that don't render a widget, you may use these to change a status icon on your page, deep link someone within your app, or trigger a custom piece of code.
+<br />
 
-<Image align="center" src="https://files.readme.io/d4bdbf6-extensions.gif" />
+<Image align="center" border={false} caption="Here's an example of two extensions in action - the form is a response extension, and the confetti is an effect extension." src="https://files.readme.io/d4bdbf6-extensions.gif" />
 
-## How it works
+## How extensions work
+
+Extensions are triggered by a [Custom action step](doc:custom-actions) or a [Function step](doc:function-step) in your Voiceflow assistant. You define them in your site’s code and register them in the [web chat snippet](https://docs.voiceflow.com/docs/chat-widget#how-to-add-your-agents-widget-to-your-website).
 
 > 📘 Find the examples repo [here](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5)
 
-<Embed url="https://www.youtube.com/watch?v=xY0vNkzFzAI" title="Chat Widget Extensions | BETA" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/xY0vNkzFzAI/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=xY0vNkzFzAI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FxY0vNkzFzAI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DxY0vNkzFzAI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FxY0vNkzFzAI%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+<Embed url="https://www.youtube.com/watch?v=xY0vNkzFzAI" href="https://www.youtube.com/watch?v=xY0vNkzFzAI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FxY0vNkzFzAI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DxY0vNkzFzAI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FxY0vNkzFzAI%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 Extensions allows you to use the **custom action step** or a **function** in your Voiceflow design to trigger a piece of custom code (the extension) in the code of your website. An example of a form is shown below.
 
@@ -201,7 +204,7 @@ window.voiceflow.chat.load({
 });
 ```
 
-There is no limit on the number of extensions you can add. 
+There is no limit on the number of extensions you can add.
 
 ## 3. Trigger the Extension with a Custom Action
 
@@ -238,6 +241,12 @@ name = last_event.payload.name
 
 For a number of other examples including file upload, forms, timers, date pickers, thumbs up/down and more please see the video and GitHub repo below.
 
+<br />
+
+<LinkCard type="Repo" title="Form extension demo" description="Add a form to your agent. Features waiting and done animatinos." href="https://github.com/voiceflow-gallagan/voiceflow-form-extension-demo" />
+
+<br />
+
 [https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5)
 
-<Embed url="https://www.youtube.com/watch?v=xY0vNkzFzAI" title="Chat Widget Extensions | BETA" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/xY0vNkzFzAI/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=xY0vNkzFzAI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FxY0vNkzFzAI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DxY0vNkzFzAI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FxY0vNkzFzAI%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+<Embed url="https://www.youtube.com/watch?v=xY0vNkzFzAI" href="https://www.youtube.com/watch?v=xY0vNkzFzAI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FxY0vNkzFzAI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DxY0vNkzFzAI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FxY0vNkzFzAI%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
