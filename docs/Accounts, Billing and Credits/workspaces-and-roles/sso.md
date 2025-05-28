@@ -1,5 +1,5 @@
 ---
-title: Single Sign-On (SSO) and SAML support
+title: Single Sign-On (SSO) and SAML
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+> ℹ️ This feature is restricted to Enterprise customers
+
 This document serves as a comprehensive overview on how to configure your Single Sign-On (SSO) and SAML authentication on Voiceflow, and manage your member access.
 
 With Voiceflow's SAML authentication support, **Enterprise** customers are able to manage access to their organization's workspace. All access will be provisioned using your chosen identity management provider, and that will be used to dictate who can Sign Up and Sign In to Voiceflow.
@@ -77,7 +79,7 @@ Attribute and Claims → leave default
 | Voiceflow                   | Azure                                      | Data Direction | Example                                                                      |
 | :-------------------------- | :----------------------------------------- | :------------- | :--------------------------------------------------------------------------- |
 | Audience URI (SP Entity ID) | Identifier (EntityID)                      | VF → Azure     | [https://voiceflow.com](https://voiceflow.com)                               |
-| ACS/Callback URL            | Reply URL (Assertion Customer Service URL) | VF → Azure     | [https://api.](https://api.)`<something>`.voiceflow\.com/                      |
+| ACS/Callback URL            | Reply URL (Assertion Customer Service URL) | VF → Azure     | [https://api.](https://api.)`<something>`.voiceflow\.com/                    |
 | Entity ID URL               | Azure ID Identifier                        | Azure → VF     | [https://sts.windows.net/……](https://sts.windows.net/……)                     |
 | IdP SSO Target URL          | Login URL                                  | Azure → VF     | [https://login.microsoftonline.com/……](https://login.microsoftonline.com/……) |
 | X.509 Certificate           | Certificate (Base64)                       | Azure → VF     | —Begin Certificate —— ……                                                     |
