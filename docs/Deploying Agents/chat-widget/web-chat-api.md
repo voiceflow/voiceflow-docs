@@ -27,7 +27,7 @@ Once the widget script is loaded, it registers the API as `window.voiceflow.chat
 
 <br />
 
-## Examples
+### Examples
 
 <TutorialTile emoji="🦉" slug="automatically-open-web-chat-after-3-seconds" title="Automatically open web chat after 3 seconds" />
 
@@ -35,9 +35,9 @@ Once the widget script is loaded, it registers the API as `window.voiceflow.chat
 
 <br />
 
-# Events
+## Events
 
-Once loaded, the Web Chat widget also send messages (events) you can monitor to trigger a specific action in your front-end code.
+The Web Chat widget can also emit events that you can listen to using the message event listener.
 
 ```javascript
 window.addEventListener('message', (event) => {
@@ -45,14 +45,11 @@ window.addEventListener('message', (event) => {
 }, false);
 ```
 
-Note: the `event.data` value is a JSON string if it contains a `voiceflow:*` event type (e.g. `data: '{"type":"voiceflow:open"}'`).
+Note: If the event is triggered by Voiceflow, it will be a stringified JSON object with a type beginning in `voiceflow:`. Useful events include:
 
-`event.data` type `voiceflow:*` values that may be useful include:
-
-> **voiceflow:open** - widget is opened
->
-> **voiceflow:save\_session** - a save event is triggered to cache the conversation state/history
->
-> **voiceflow:interact** - the user sent an action and got a response from the server
->
-> **voiceflow:close** - widget is minimized or closed
+| Event type               | Description                                                   |
+| ------------------------ | ------------------------------------------------------------- |
+| `voiceflow:open`         | The widget was opened                                         |
+| `voiceflow:close`        | The widget was minimized or closed                            |
+| `voiceflow:interact`     | The assistant responded to an interaction                     |
+| `voiceflow:save_session` | A save event occurred to cache the current conversation state |
