@@ -50,7 +50,7 @@ interface ResponseExtension {
 
 ### Effects Extension
 
-```
+```javascript
 interface EffectExtension {
 	name: string,
 	type: "effect",
@@ -63,7 +63,7 @@ interface EffectExtension {
 
 Once you've defined your extensions, register them using the `assistant.extensions` property in your `chat.load()` script:
 
-```
+```javascript
 window.voiceflow.chat.load({
   verify: { projectID: 'YOUR_PROJECT_ID' },
   url: 'https://general-runtime.voiceflow.com',
