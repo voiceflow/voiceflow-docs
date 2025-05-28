@@ -33,6 +33,8 @@ window.voiceflow.chat.proactive
   )
 ```
 
+<TutorialTile emoji="🦉" slug="send-multiple-proactive-messages" title="Send multiple proactive messages" />
+
 <br />
 
 <br />
