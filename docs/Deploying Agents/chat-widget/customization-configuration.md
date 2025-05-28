@@ -84,13 +84,12 @@ These values populate the last\_event system variable and can be used in a [Java
 
 <Image align="center" src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
 
-> ❗️
->
-> Heads up! The JavaScript step can't create new variables. For the example in the screenshot above to work, you'd need to have already created the `user_name` and `user_email` variables like normal.
-
 <br />
 
-One important thing to note: the `last_event` variable is set upon each new user event in the conversation (for example, when the widget loads, an intent is triggered, or a button is clicked). If you'd like to set variables with default values, set them immediately after the Start step in your agent's design.
+There's two important things to note when working with custom variables:
+
+1. The JavaScript step can't create new variables. For the example in the screenshot above to work, you'd need to have already created the `user_name` and `user_email` variables like normal.
+2. The `last_event` variable is set upon each new user event in the conversation (for example, when the widget loads, an intent is triggered, or a button is clicked). If you'd like to set variables with default values, set them immediately after the Start step in your agent's design.
 
 # Annotating transcripts with user metadata (optional)
 
