@@ -46,7 +46,7 @@ Three security settings are available at the bottom of the widget settings page.
 
 ## Making changes to the widget after launch
 
-If you'd like to change any of the widget's settings - for example, modifying your colours, fonts, and icons - you'll need to [publish a new version of your agent to production](doc:publishing-agents) for the changes to take effect.
+If you'd like to change any of the widget's settings after releasing your agent - for example, modifying your colours, fonts, and icons - you'll need to [publish a new version of your agent to production](doc:publishing-agents) for the changes to take effect.
 
 <br />
 
