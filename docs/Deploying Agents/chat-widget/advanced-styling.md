@@ -68,6 +68,8 @@ window.voiceflow.chat.load({
 
 To go beyond basic styling, you can use your own CSS rules to override the default widget styles.
 
+<br />
+
 ### How to target web chat elements
 
 Voiceflow's web chat elements use class names prefixed with `.vfrc`. To customize these, create CSS rules targeting those classes.
