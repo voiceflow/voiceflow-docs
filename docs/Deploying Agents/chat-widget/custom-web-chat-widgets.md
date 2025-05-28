@@ -19,6 +19,8 @@ There are two types of extensions:
 * **Response extensions**: these render interactive widgets inside the web chat window like file uploads, calendar pickers, or payment modals.
 * **Effect extensions**: these don’t render a UI element but can trigger changes elsewhere on your site, such as updating a status icon, deep-linking a user, or running custom scripts.
 
+<br />
+
 > 📘
 >
 > Want to jump into code? [Find examples on GitHub](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5).
