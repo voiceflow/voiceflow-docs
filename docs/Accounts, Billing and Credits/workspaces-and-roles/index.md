@@ -1,5 +1,5 @@
 ---
-title: Workspaces and Roles
+title: Workspaces and roles
 deprecated: false
 hidden: false
 metadata:
