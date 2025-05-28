@@ -37,33 +37,16 @@ window.voiceflow.chat.proactive
 
 <br />
 
+## Clearing messages
+
+You can use the `window.voiceflow.chat.proactive.clear()` method to hide all the proactive messages that have been sent to a user.
+
 <br />
 
-Create custom proactive text messages to draw attention to your Web Chat agent.
+## Triggering proactive messages when certain things happen
 
-`proactive.clear()` clears any previous proactive messages.
+One great use-case for proactive messages is to trigger them when the user does a specific action. For example, you could offer a promo code if the user navigates away from the checkout page, or suggest product recommendations if the user is clicking on lots of similar products.
 
-`proactive.push(...messages)` renders one or more proactive text messages:
+Here's an example of clearing existing messages and showing a new one if the user visits a certain page.
 
-<Image align="center" src="https://files.readme.io/4d24d40-proactive_message_bubble_demo.png" />
-
-For example, you can render a proactive message bubble when your customer reaches a particular page on your website:
-
-```html
-<script>
-...
-  window.voiceflow.chat.load({ ... }).then(() => {
-    if (window.location.href.includes('https://store.com/products/fire_sneakers') {
-      window.voiceflow.chat.proactive.clear(); // clear all previous messages
-      window.voiceflow.chat.proactive.push({ 
-        type: 'text', 
-        payload: { message: 'Are you interested in some 🔥🔥🔥 sneakers?' }
-      }, { 
-        type: 'text', 
-        payload: { message: 'Click on the chat to learn more!' }
-      })
-    }
-  })
-...
-</script>
-```
+<TutorialTile emoji="🦉" slug="send-a-proactive-message-when-the-user-visits-a-certain-page" title="Send a proactive message when the user visits a certain page" />
