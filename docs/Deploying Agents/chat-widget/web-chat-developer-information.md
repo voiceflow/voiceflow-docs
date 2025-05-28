@@ -30,7 +30,7 @@ Certain elements, such as `<script>` and `<iframe>` tags are blocked by default.
 
 To enable dangerous HTML elements such as `<iframe>`, set the following configuration to true on your web chat installation code. By default, this value is false.
 
-```
+```javascript
 window.voiceflow.chat.load({
   ...
   allowDangerousHTML: true
