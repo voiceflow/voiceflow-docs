@@ -27,8 +27,6 @@ There are two primary ways to style the web chat widget:
 
 Voiceflow lets you control the widget’s appearance directly in your `chat.load()` configuration using the assistant object. Here’s an example with optional styling parameters:
 
-<br />
-
 ```javascript
 window.voiceflow.chat.load({
   verify: { projectID: '<your-project-id>' },
