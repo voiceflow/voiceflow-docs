@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-When using Voiceflow’s webchat, you control chat persistence (how conversations are remembered) directly within the JavaScript snippet - not through the Voiceflow UI. This allows for more flexibility based on how you want your users' conversations to persist across sessions and browser tabs.
+When using Voiceflow’s web chat widget, you control chat persistence (how conversations are remembered) directly within the JavaScript snippet - not through the Voiceflow UI. This allows for more flexibility based on how you want your users' conversations to persist across sessions and browser tabs.
 
 ## What is chat persistence?
 
