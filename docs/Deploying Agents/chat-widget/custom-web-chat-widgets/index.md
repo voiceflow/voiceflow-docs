@@ -76,8 +76,6 @@ window.voiceflow.chat.load({
 
 There’s no limit to the number of extensions you can include.
 
-<br />
-
 ## Examples
 
 We recommend starting with an example extension before building your own. Our simplest example is a form input extension. Find out how to build it in the doc below.
