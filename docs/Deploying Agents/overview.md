@@ -16,7 +16,7 @@ Once you've built your agent, it's time to deploy it! We support three different
     Send or receive phone calls with your agent.
   </Card>
 
-  <Card title="Custom Interfaces" icon="fa-rocket" href="https://docs.voiceflow.com/docs/custom-channel-api#/">
+  <Card title="Custom Interfaces" icon="fa-code" href="https://docs.voiceflow.com/docs/custom-channel-api#/">
     Use Voiceflow's API to build native interfaces.
   </Card>
 </Cards>
