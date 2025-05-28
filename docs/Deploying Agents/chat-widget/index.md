@@ -14,7 +14,7 @@ The quickest way to launch your agent is using our web chat widget. Web chat can
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSm0VVMS3vgzMhu7msD2nISacpBK5UHfikJy9X" />
 
-<Image align="center" src="https://files.readme.io/f4966820cb32bd854c7a29b3d35283288039843a79cf8ec0bfac8a3912ec82cf-Frame_48095750_1.png" />
+<Image align="center" src="https://files.readme.io/091c04cdb845290d957dc80ee24838ca1a4862007b6901dea727069bbc286c53-Frame_48095750_2.png" />
 
 <br />
 
