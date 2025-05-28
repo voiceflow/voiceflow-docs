@@ -78,12 +78,12 @@ There’s no limit to the number of extensions you can include.
 
 <br />
 
-## Basic example: custom form input
+## Examples
 
-<br />
+We recommend starting with an example extension before building your own. Our simplest example is a form input extension. Find out how to build it in the doc below.
 
-# Other Examples
+<LinkCard type="Doc" title="Building a form input extension" description="Build your first extension in just a couple of minutes." href="https://docs.voiceflow.com/docs/example-extension-form-input#/" imageSrc="https://files.readme.io/5114eba7d58c54d312d092e4236d1eadf35c5c86bac38d5b9944c08beef07aa2-Credits_2.png" />
 
-For a number of other examples including file upload, forms, timers, date pickers, thumbs up/down and more please see the video and GitHub repo below.
+When you're ready to start experimenting with other types of extensions, visit our sample extensions repo, which has a bunch of different examples for you to try out.
 
-<LinkCard type="Repo" title="Sample extensions repo" description="Disable/enable the input field, embed videos and maps, accept input via a form, and trigger a confetti animation with these sample extensions." href="https://github.com/voiceflow-gallagan/vf-extensions-demo/" imageSrc="https://files.readme.io/5114eba7d58c54d312d092e4236d1eadf35c5c86bac38d5b9944c08beef07aa2-Credits_2.png" />
+<LinkCard type="Repo" title="Sample extensions repo" description="Disable/enable the input field, embed videos and maps, accept input via a form, and trigger a confetti animation with these sample extensions." href="https://github.com/voiceflow-gallagan/vf-extensions-demo/" imageSrc="https://files.readme.io/a3380247509557ff965053f21f3769a5ff94b262b7f65e5f59051738a1d3fbd0-Agent_Step_Course.png" />
