@@ -1,5 +1,5 @@
 ---
-title: Web Chat Widget
+title: Web chat widget
 excerpt: ''
 deprecated: false
 hidden: false
