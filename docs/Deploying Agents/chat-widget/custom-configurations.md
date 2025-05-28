@@ -1,8 +1,8 @@
 ---
-title: Modify configurations
+title: Setting the version and runtime URL
 excerpt: >-
-  This allows you to point to different versions of your web chat, different
-  agents, or a different runtime if you are on a private cloud environment
+  Customize the version of your agent that the web chat widget uses, and set the
+  runtime environment.
 deprecated: false
 hidden: false
 metadata:
