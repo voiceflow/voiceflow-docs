@@ -16,6 +16,8 @@ When using Voiceflow’s webchat, you control chat persistence (how conversation
 
 Chat persistence determines whether users will return to an ongoing conversation or start fresh when they reload a page, open a new tab, or come back later. You can choose between different persistence strategies to match your desired user experience.
 
+<br />
+
 ## How to configure persistence
 
 To set your preferred persistence behavior, add the persistence property inside the assistant object in your webchat snippet:
