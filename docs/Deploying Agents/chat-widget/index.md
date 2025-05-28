@@ -16,6 +16,18 @@ The quickest way to launch your agent is using our web chat widget. Web chat can
 
 <Image align="center" src="https://files.readme.io/f4966820cb32bd854c7a29b3d35283288039843a79cf8ec0bfac8a3912ec82cf-Frame_48095750_1.png" />
 
+<br />
+
+## How to add your agent's widget to your website
+
+Before you can add your agent to your website, you'll need to [publish a production version of it](doc:publishing-agents). Once your agent is published, head over to interfaces section of your agent's settings, select widget, then copy-paste the code into your website's codebase. If you're not a developer and aren't sure where to add this code, we recommend asking ChatGPT "*How can I add custom JavaScript to a \[your website platform here] website?*".
+
+![](https://files.readme.io/23dc2430f1efa289c8cb2de3b694c932b907f2e72143322b075b60918cb7f433-CleanShot_2025-05-27_at_21.23.212x.png)
+
+<br />
+
+<br />
+
 ## Configuring the Webchat's Appearance and Functionality
 
 > 📘
