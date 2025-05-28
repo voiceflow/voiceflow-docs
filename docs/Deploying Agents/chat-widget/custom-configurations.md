@@ -40,11 +40,7 @@ Here’s an example of the default script snippet you’ll find in your [web cha
 
 The `versionID` specifies which version of your agent to load. If not set, this will default to `development`. The code snippet provided in your agent's integration settings automatically sets this to `production`.
 
-> ⚠️
->
-> Note: If `versionID` is set to `production` before publishing your agent, the web chat widget will not render any messages.
-
-Use `development` to test and iterate on your agent without affecting your production setup. This is helpful while actively building in Voiceflow's creator tool.
+Use `development` to test and iterate on your agent without affecting your production setup. This is helpful while actively building in Voiceflow's creator tool. Note that if `versionID` is set to `production` before publishing your agent, the web chat widget will not render any messages.
 
 ```javascript
 // Optional versionID configuration
