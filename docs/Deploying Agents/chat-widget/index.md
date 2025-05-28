@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-The quickest way to launch your agent is using our web chat widget. Web chat can be deployed to production in minutes, and is ideal for customer support or lead capture. Web chat supports three different interfaces: widget, popover, and embedded.
+The quickest way to launch your agent is using our web chat widget. Web chat can be deployed to production in minutes, and is ideal for customer support or lead capture. Web chat supports three different interfaces: widget, popover, and embedded. The web chat widget also supports voice input.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSm0VVMS3vgzMhu7msD2nISacpBK5UHfikJy9X" />
 
