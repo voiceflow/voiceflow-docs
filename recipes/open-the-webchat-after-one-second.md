@@ -21,7 +21,7 @@ window.voiceflow.chat.load({
 ```
 
 ```json Response Example
-{"success":true}
+{"success":true}a
 ```
 
 # Load the widget
