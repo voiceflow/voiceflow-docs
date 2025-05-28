@@ -1,5 +1,5 @@
 ---
-title: Webchat migration
+title: Migrating to the new web chat
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Migrating to the New Voiceflow Webchat
-
 Welcome to our migration guide for Voiceflow's new webchat experience. This guide will walk you through the necessary steps to upgrade from the legacy webchat to our latest version, ensuring a smooth transition while maintaining your existing customizations where possible.
 
 ## Key Changes and Timeline
@@ -121,7 +119,7 @@ If you're using custom UI extensions with the current webchat, you'll be pleased
 2. Test your extensions thoroughly in a development environment
 3. Deploy updated extensions alongside the new webchat snippet
 
-### 5. Proactive Messages
+### 5) Proactive Messages
 
 Please note that proactive messages are temporarily unavailable in the new webchat version. We are actively working on implementing this feature, and it will be available soon. In the meantime, you have two options:
 
