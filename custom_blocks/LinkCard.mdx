@@ -2,67 +2,67 @@
 name: LinkCard
 ---
 export const LinkCard = ({
-  type = 'Course',
-  title = 'PLEASE SET TITLE',
-  description = 'PLEASE SET DESCRIPTION',
-  href = 'PLEASE SET LINK',
-  imageSrc = 'https://files.readme.io/e6a879f3e3738e82831b51b5dc9c5b76313ceb32cccdde02eda3e1efbe1b1130-card.png',
-}) => {
-  // Convert type to sentence case for display
-  const displayType = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
-  
-  // Get the appropriate action text based on type
-  const getActionText = (type) => {
-    const typeMap = {
-      'Template': 'View template',
-      'Tool': 'Try tool',
-      'Course': 'Go to course',
-      'Video': 'Watch video'
+    type = 'Course',
+    title = 'PLEASE SET TITLE',
+    description = 'PLEASE SET DESCRIPTION',
+    href = 'PLEASE SET LINK',
+    imageSrc = 'https://files.readme.io/e6a879f3e3738e82831b51b5dc9c5b76313ceb32cccdde02eda3e1efbe1b1130-card.png',
+  }) => {
+    // Convert type to sentence case for display
+    const displayType = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+    
+    // Get the appropriate action text based on type
+    const getActionText = (type) => {
+      const typeMap = {
+        'Template': 'View template',
+        'Tool': 'Try tool',
+        'Course': 'Go to course',
+        'Video': 'Watch video'
+      };
+      return typeMap[type] || 'View more';
     };
-    return typeMap[type] || 'View more';
-  };
-
-  return (
-    <a
-      href={href}
-      className="block group no-underline"
-      style={{ textDecoration: 'none' }}
-    >
-      <div className="flex flex-col md:flex-row bg-white dark:bg-[#1A1D21] rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 my-6 transition-shadow hover:shadow-lg">
-        {/* Left Content */}
-        <div className="flex-1 p-6" style={{ textDecoration: 'none' }}>
-          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2" style={{ textDecoration: 'none' }}>
-            {displayType}
+  
+    return (
+      <a
+        href={href}
+        className="block group no-underline"
+        style={{ textDecoration: 'none' }}
+      >
+        <div className="flex flex-col md:flex-row bg-white dark:bg-[#1A1D21] rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 my-6 transition-shadow hover:shadow-lg">
+          {/* Left Content */}
+          <div className="flex-1 p-6" style={{ textDecoration: 'none' }}>
+            <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2" style={{ textDecoration: 'none' }}>
+              {displayType}
+            </div>
+            <h2
+              className="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+              style={{ textDecoration: 'none' }}
+            >
+              {title}
+            </h2>
+            <p
+              className="text-gray-600 dark:text-gray-300 mb-4"
+              style={{ textDecoration: 'none' }}
+            >
+              {description}
+            </p>
+            <span
+              className="text-blue-600 dark:text-blue-400 font-medium inline-flex items-center"
+              style={{ textDecoration: 'none' }}
+            >
+              {getActionText(type)} →
+            </span>
           </div>
-          <h2
-            className="text-xl font-semibold text-gray-900 dark:text-white mb-2"
-            style={{ textDecoration: 'none' }}
-          >
-            {title}
-          </h2>
-          <p
-            className="text-gray-600 dark:text-gray-300 mb-4"
-            style={{ textDecoration: 'none' }}
-          >
-            {description}
-          </p>
-          <span
-            className="text-blue-600 dark:text-blue-400 font-medium inline-flex items-center"
-            style={{ textDecoration: 'none' }}
-          >
-            {getActionText(type)} →
-          </span>
+  
+          {/* Right Full Image */}
+          <div className="hidden md:block md:w-1/3 h-32 md:h-full max-h-32 md:max-h-full overflow-hidden">
+            <img
+              src={imageSrc}
+              alt={`${displayType} visual`}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-
-        {/* Right Full Image */}
-        <div className="hidden md:block md:w-1/3 h-32 md:h-auto max-h-32 overflow-hidden">
-          <img
-            src={imageSrc}
-            alt={`${displayType} visual`}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </a>
-  );
-};
+      </a>
+    );
+  };
