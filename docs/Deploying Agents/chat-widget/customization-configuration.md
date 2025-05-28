@@ -80,7 +80,13 @@ window.voiceflow.chat.load({
 
 ```
 
-<Image align="center" border={false} caption="Heads up! The JavaScript step can't create new variables. For the example in the screenshot above to work, you'd need to have already created the `user_name` and `user_email` variables like usual." src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
+<Image align="center" src="https://files.readme.io/12eca38-Screenshot_2023-11-09_at_3.03.02_PM.png" />
+
+<br />
+
+> ❗️
+>
+> Heads up! The JavaScript step can't create new variables. For the example in the screenshot above to work, you'd need to have already created the `user_name` and `user_email` variables like normal.
 
 One important thing to note: the `last_event` variable is set upon each new user event in the conversation (for example, when the widget loads, an intent is triggered, or a button is clicked). If you'd like to set variables with default values, set them immediately after the Start step in your agent's design.
 
