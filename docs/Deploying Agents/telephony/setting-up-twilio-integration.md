@@ -10,14 +10,16 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
-
 The Twilio integration enables you to connect your Twilio account to Voiceflow, allowing your voice agents to receive phone calls using real phone numbers. This integration bridges the gap between Voiceflow's AI orchestration capabilities and the telephony network, opening up exciting new use cases such as:
 
 * Customer support hotlines powered by intelligent voice agents
 * Voice-based sales and lead qualification workflows
 * Appointment scheduling
 * Contactless pickup and delivery coordination for restaurants and retailers
+
+<br />
+
+<Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
 
 ## Video Tutorial
 
