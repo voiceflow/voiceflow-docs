@@ -1,12 +1,12 @@
 ---
 name: LinkCard
 ---
-export const Callout = ({
+export const LinkCard = ({
   type = 'Course',
   title = 'PLEASE SET TITLE',
   description = 'PLEASE SET DESCRIPTION',
   href = 'PLEASE SET LINK',
-  imageSrc = 'PLEASE SET IMAGE URL',
+  imageSrc = 'https://files.readme.io/e6a879f3e3738e82831b51b5dc9c5b76313ceb32cccdde02eda3e1efbe1b1130-card.png',
 }) => {
   // Convert type to sentence case for display
   const displayType = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
@@ -55,7 +55,7 @@ export const Callout = ({
         </div>
 
         {/* Right Full Image */}
-        <div className="hidden md:block md:w-1/3 h-32 md:h-auto max-h-32 overflow-hidden">
+        <div className="md:w-1/3 h-56 md:h-auto max-h-64 overflow-hidden">
           <img
             src={imageSrc}
             alt={`${displayType} visual`}
