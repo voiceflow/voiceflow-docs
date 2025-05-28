@@ -28,16 +28,28 @@ window.voiceflow.chat.load({
 
 You can add additional settings on top of the above configuration to further customize the Web Chat experience for your users.
 
-# Pass a custom userID (optional)
+## Passing in a custom userID
 
-Below is a handy way to identify the user and share that info with your <Glossary>agent</Glossary>. If you pass a `userID`, the value will be set as the built-in \{user\_id} variable in your Voiceflow <Glossary>agent</Glossary>.
+You can assign a unique ID to each user with the userID property. This ID becomes available in your agent as the built-in \{user\_id} variable.
+
+This is useful for:
+
+* Identifying users across sessions
+* Persisting conversation history
+* Personalizing interactions
+
+<br />
 
 ```javascript
-/**
-* [optional] userID to track users and persist/continue sessions
-*/
+window.voiceflow.chat.load({
+  verify: {
+    projectID: '<your-project-id>'
+  },
+  url: 'https://general-runtime.voiceflow.com',
+  versionID: 'production',
+  userID: 'user_12345'
+});
 
-userID: "string"
 ```
 
 **Example**
