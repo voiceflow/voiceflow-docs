@@ -1,8 +1,8 @@
 ---
 title: GPT-4o with fallback to Claude 3 Sonnet
 excerpt: ''
-deprecated: false
-hidden: false
+deprecated: true
+hidden: true
 metadata:
   title: GPT-4o with fallback to Claude 3 Sonnet
   description: >-
