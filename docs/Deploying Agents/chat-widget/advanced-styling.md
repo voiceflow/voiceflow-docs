@@ -192,6 +192,8 @@ Voiceflow's web chat elements use class names prefixed with `.vfrc`. To customiz
   /\* .vfrc-footer--watermark {} \*/
 </Accordion>
 
+<br />
+
 For example, you could change the background of agent messages like this:
 
 ```javascript
@@ -200,8 +202,6 @@ For example, you could change the background of agent messages like this:
   color: #FFFFFF;
 }
 ```
-
-<br />
 
 Once you've written your CSS, there's two ways to pass it into your widget.
 
