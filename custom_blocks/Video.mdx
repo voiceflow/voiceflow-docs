@@ -1,15 +1,20 @@
 ---
 name: Video
 ---
+import { useState, useEffect } from 'react';
+
 export function Video({ src }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <div style={{ 
       width: '100%', 
+      maxWidth: '800px', 
       margin: '2rem auto',
-      marignBottom: 0,
-      borderRadius: '4px',
+      borderRadius: '8px',
       overflow: 'hidden',
-      backgroundColor: "#3E4852"
+      position: 'relative',
+      paddingBottom: '56.25%' // 16:9 aspect ratio (9/16 = 0.5625)
     }}>
       <video
         src={src}
@@ -17,14 +22,20 @@ export function Video({ src }) {
         muted
         loop
         playsInline
+        onLoadedData={() => setIsLoaded(true)}
         style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
           width: '100%',
-          height: 'auto',
-          display: 'block'
+          height: '100%',
+          objectFit: 'cover',
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out'
         }}
       />
     </div>
   );
 }
 
-export default Video;
+export default Video; 
