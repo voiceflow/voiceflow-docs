@@ -35,6 +35,8 @@ window.voiceflow.chat.load({
 
 Voiceflow supports three persistence options: `localStorage`, `sessionStorage`, and `memory`.
 
+<br />
+
 | Option             | Behavior                                                                                                       |
 | ------------------ | -------------------------------------------------------------------------------------------------------------- |
 | `'localStorage'`   | **Default.** Conversations persist across page reloads and browser sessions. Useful for returning users.       |
