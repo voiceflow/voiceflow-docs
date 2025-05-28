@@ -1,7 +1,7 @@
 ---
 title: Automatically open web chat after 3 seconds
 description: Programatically open the web chat widget on a webpage.
-hidden: true
+hidden: false
 recipe:
   color: '#018FF4'
   icon: 🕒
@@ -34,9 +34,6 @@ recipe:
 <!-- javascript@1-11,17-20 -->
 
 You can find this code from the Interfaces tab inside Voiceflow's editor.
-
-
-
 
 # Wait three seconds then open the web chat popup
 
