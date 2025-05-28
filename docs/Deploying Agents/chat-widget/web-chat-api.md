@@ -1,8 +1,6 @@
 ---
 title: Custom triggers
-excerpt: >-
-  Using the Web Chat API you can do actions like open, close, show, hide and
-  much more with the Web Chat programatically.
+excerpt: Programatically show, hide, and interact with the web chat widget.
 deprecated: false
 hidden: false
 metadata:
