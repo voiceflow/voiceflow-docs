@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
 Voiceflow's extensions feature lets you add advanced functionality to your web chat experience. Extensions allow your assistant to render custom widgets or trigger custom effects directly on your website.
 
 <Image align="center" src="https://files.readme.io/d4bdbf6-extensions.gif" />
