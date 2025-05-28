@@ -15,7 +15,7 @@ The first extension that many users build is a form extension. We'll walk you th
 
 <Image align="center" src="https://files.readme.io/38847f8-CleanShot_2024-02-29_at_09.53.45_1.gif" />
 
-## Step 1: create the extension
+## Step 1: Create the extension
 
 Here's the code for our extension. Add this script above the web chat widget script and before the \</body> tag on your website.
 
