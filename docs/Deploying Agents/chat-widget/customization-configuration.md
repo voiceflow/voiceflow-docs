@@ -10,23 +10,27 @@ metadata:
 next:
   description: ''
 ---
-# Customization & Configuration
+When embedding Voiceflow’s web chat on your site, you can go beyond the default setup by passing additional parameters to the `window.voiceflow.chat.load()` function. This allows you to personalize the experience, pass metadata, and pre-fill variables for your assistant.
 
-As you can see in the default snippet code available in your Web Chat agent's integration page,  we use the **chat.load()** function to load a <Glossary>agent</Glossary> by setting the **project ID**, the **runtime URL** and a **version ID**.
+Here’s how to use and customize the chat.load() snippet.
 
-Below is an example of the default code snippet.
+# Basic configuration
+
+The default configuration snippet loads your assistant by specifying the projectID, runtime URL, and versionID. If you [copy the code](doc:chat-widget) from the Interfaces tab of Voiceflow's editor, these values will already be set.
 
 ```javascript
 window.voiceflow.chat.load({
   verify: {
-    projectID: "<ID>"
+    projectID: "YOUR_PROJECT_ID"
   },
   url: "https://general-runtime.voiceflow.com",
   versionID: "production"
 });
 ```
 
-You can add additional settings on top of the above configuration to further customize the Web Chat experience for your users.
+You can extend this setup with optional parameters for advanced customization, including tracking users, pre-filling variables, and annotating transcript metadata.
+
+<br />
 
 ## Passing in a custom userID (optional)
 
