@@ -26,7 +26,9 @@ Once enabled, Twilio will automatically handle the recording of your calls.
 
 <br />
 
-<Image align="center" width="60% " src="https://files.readme.io/12a9a65c66ec3816f437f4568c29bede8dea742290e4fda07bafbe247f1ebf16-image.png" />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSq73XJyBe98Elmq4kxJ1Vv0CSoXDObGzif7WU" />
+
+<br />
 
 > ❗️ Note: Call recordings are currently only supported on Twilio, and not for the voice widget.
 
