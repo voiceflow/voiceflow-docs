@@ -42,18 +42,14 @@ If the previous turn has made it to **"next state"**, we are no longer interrupt
 
 > 📘 Audio does not represent current state
 >
-> What the agent is speaking to the user has a slight delay and the actual state of the conversation is likely ahead of the speech (speech is buffered).
+> There’s a slight delay between the agent's current state and what the user hears. This is due to TTS buffering and background execution.
 >
-> For example when we hit "message 1":
+> Here's an example of this in action:
 >
-> 1. "*GET - long API call"* is next and starts running (background task).
-> 2. generate the Text-to-Speech audio
-> 3. play the audio, this takes even longer
+> * As soon as Message 1 is triggered, the API call begins immediately in the background.
+> * The text-to-speech audio for Message 1 is generated and starts playing after a delay.
+> * By the time the user hears Message 3, the system has likely already moved to the next step.
 >
 > <Image align="center" src="https://files.readme.io/909ddd22690f4e66d5e04126f15e6567068d5bb1de016fe2b7b298d128e567a2-Capture_decran_le_2024-12-20_a_12.20.31.png" />
 >
-> In the current example, the API step has already started the call by the time the first message is speaking.
 >
-> By the time "message 3 / last message" is speaking, the turn is done and the user already is on **"next state"**.
->
-> This is done for maximum latency gains during voice conversations - and minimize awkward silences, but can be hard to debug.
