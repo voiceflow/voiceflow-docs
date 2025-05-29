@@ -1,6 +1,6 @@
 ---
-title: Interruption Behavior
-excerpt: How to manage interruptions to the bot during the call
+title: Interruption behavior
+excerpt: Managing interuptions to the agent during calls.
 deprecated: false
 hidden: false
 metadata:
