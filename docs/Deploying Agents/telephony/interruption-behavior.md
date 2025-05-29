@@ -50,6 +50,6 @@ There’s a slight delay between the agent's current state and what the user hea
 
 Here's what this looks like visually:
 
-<Image align="center" src="https://files.readme.io/dabe8fd8adbedfcaa112611037c7aff8d1f551a40714388ea8c3fc4c3cd618fc-Frame_48095753.png" />
+<Image align="center" src="https://files.readme.io/99650ed596f1d51395a7c48cdeba7b1e3247d59dbe7b5e6acb1ed3685c824daf-Frame_48095753_1.png" />
 
 This design reduces latency and awkward silences but may make debugging difficult since audio does not always reflect real-time state.
