@@ -2,7 +2,7 @@
 title: Managing interuptions
 excerpt: Humans might talk over your agent. Here's how to handle that.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
