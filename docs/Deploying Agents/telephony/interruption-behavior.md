@@ -18,7 +18,7 @@ During voice interactions, users may interrupt the agent while it's speaking. Ha
 
 Voiceflow's interruption behaviour settings can be found by visiting **Agent Settings > Behaviour > Voice**. Most users will find that the simple controls that allow you to set the balance of speed vs accuracy are good enough for their use-case. We recommend experimenting with this slider and seeing which option works best for your agent.
 
-<br />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSw351PLqEGMDpIXu5W2NnhOr30QY4UBJcmZFA" />
 
 <br />
 
