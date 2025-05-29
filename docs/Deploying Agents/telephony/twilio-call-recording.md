@@ -12,7 +12,7 @@ next:
 ---
 Voiceflow supports call recording for Twilio-powered voice experiences, including both inbound and outbound calls. This feature allows you to automatically record conversations handled through your Voiceflow agent when connected via Twilio, enabling quality assurance and compliance check workflows.
 
-## How to enable call recording
+## Enabling and disabling call recording
 
 > ⚠️
 >
@@ -26,8 +26,14 @@ Call recording can be enabled by opening the settings tab of your agent, opening
 
 <br />
 
-> ❗️ Note: Call recordings are currently only supported on Twilio, and not for the voice widget.
+## Listening to call recordings
 
-To listen back to your call recordings, you can go to your Twilio console, and then navigate to Monitor > Logs > call recordings.
+Calls can be listened to from your [Twilio console](https://console.twilio.com/). Login to your Twilio account, then navigate to **Monitor > Logs > Call recordings** to listen to recordings.
 
-![](https://files.readme.io/b54b57640c7f6d1e99ab1b93e71afcec3ea4727e4b87a6271722f7ae8270add7-image.png)
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSKowMrczNIhSvxwGVX58OPtY0fWsCKNQblBjr" />
+
+<br />
+
+## Limitations
+
+Please note that only calls routed through a phone number are able to be recorded. Voice calls over the web (for example, through the [web chat widget](doc:chat-widget) cannot be recorded at this time.
