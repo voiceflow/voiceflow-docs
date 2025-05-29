@@ -69,47 +69,6 @@ You can add voice support to your agent in just a few minutes. Follow the instru
 
 <br />
 
-## Getting Started
-
-To set up the Twilio integration, you'll need to have a Twilio account with an active phone number, as well as Editor permissions in your Voiceflow workspace. Here's how to get started:
-
-1. **Generate Twilio API credentials**
-   1. Log in to your Twilio console and navigate to the Account Info section on the dashboard.
-   2. Save the Account SID and Auth token for your account.
-
-> ❗️
->
-> Before proceeding, ensure you've setup a phone number in your Twilio account that is ready to connect to your agent.
-
-2. **Enable the integration in Voiceflow (from Workspace)**
-
-   1. Open your Voiceflow workspace and go to *Phone Numbers*.
-
-      ![](https://files.readme.io/d47acc945735bf7ca7efe30fec612b62797d31344ab340c03e256e86fe750dfd-CleanShot_2024-12-02_at_11.28.29.png)
-   2. Click *Import Numbers* and input the number you want to use.
-   3. Enter your Twilio Account SID, Auth Token.
-   4. *Optionally*, add a friendly name for your number.
-   5. Click *Import* to connect your accounts.
-
-   <Image align="center" src="https://files.readme.io/811b8ce14d0283eff8498b64bbc5300e1c79050df1904ebfd86ebe4476c4336c-CleanShot_2024-12-02_at_11.29.53.png" />
-
-3. **Enable the integration in Voiceflow (from Agent)**
-   1. Open your Voiceflow agent and go to the *Integrations* > *Telephony* tab.
-   2. Follow same steps as above.
-
-4. **Assign a phone number to your agent**
-
-   1. Open your agent and go to the *Integrations* > *Telephony* tab.
-   2. Under *Phone Numbers*, click *Assign existing number*.
-
-      ![](https://files.readme.io/17989c07ffd31d7c8ccd5b60b5cb2afd506f6448d041f03a74e56442a7d3e193-CleanShot_2024-12-02_at_11.57.37.png)
-   3. Choose a number and the environment (Development/Production) to route calls to.
-      > 📘
-      >
-      > Reminder: Agents come with two built-in environments: the **development** and **production** environments. The development environment is what you edit with the Voiceflow canvas, while the production environment is the version that is automatically created (or updated) when you publish your agent.
-
-5. **Test the integration by calling your agent from a real phone.**
-
 ## Change the Agent Assigned to a Phone Number
 
 1. Go to the *Integrations* > *Telephony* tab for the agent you want to unassign.
