@@ -1,5 +1,5 @@
 ---
-title: Voiceflow billing
+title: Billing
 excerpt: >-
   Voiceflow offers a flexible and transparent billing system designed to
   accommodate teams of all sizes. We'll dive into the details in this doc.
