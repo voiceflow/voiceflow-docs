@@ -28,7 +28,7 @@ If you receive an `integration authorization error` when connecting your phone n
 
 <br />
 
-## Calls Not Routing to Voiceflow Agent
+## Calls not routing to your Voiceflow agent
 
 * Ensure that the **Routing** region is US. If it is not, please select US and then press 're-route' to save, you should see a URL that starts with [https://runtime-api.voiceflow.com/](https://runtime-api.voiceflow.com/)... in the 'A call comes in' section.
 
