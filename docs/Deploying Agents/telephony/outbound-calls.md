@@ -35,24 +35,42 @@ To trigger an outbound call, your app must make a `POST` request to a Voiceflow 
 
 The API is presented in a `curl` format. It must include an `Authorization` header with the [associated API Key](https://docs.voiceflow.com/docs/step-2) of the agent. This is under **Integration** > **API Keys**
 
-### API Information
+<br />
+
+## API reference
+
+### Endpoint
 
 `POST https://runtime-api.voiceflow.com/v1alpha1/phone-number/<PHONE_NUMBER_ID>/outbound`
 
-#### Headers
+<br />
 
-* `Authorization`: [`<DM API Key>`](https://docs.voiceflow.com/docs/step-2)
+### Headers
 
-#### Body
+| Header          | Value                                                                                |
+| --------------- | ------------------------------------------------------------------------------------ |
+| `Authorization` | `Bearer <your DM API Key>` ([How to get it](https://docs.voiceflow.com/docs/step-2)) |
 
-```typescript
+<br />
+
+### Body
+
+```json
 {
-  "to": string,
-  "variables": {} // object containing any voiceflow variables you want to assign during launch
+  "to": "+15551234567",
+  "variables": {
+    "user_name": "Jane",
+    "account_type": "Premium"
+  }
 }
 ```
 
-You can use the `variables` property in the body of the request to provide additional context or metadata about the particular user the call is being made to.
+* `to`: The phone number to call (E.164 format).
+* `variables`: Optional. A JSON object with any Voiceflow variables to inject at launch.
+
+<br />
+
+<br />
 
 The number of outbound calls you can make concurrently is [limited by your plan](https://docs.voiceflow.com/docs/setting-up-twilio-integration#sorry-no-agents-are-available-to-take-your-call-at-this-time) and is in a shared pool with inbound calls.
 
