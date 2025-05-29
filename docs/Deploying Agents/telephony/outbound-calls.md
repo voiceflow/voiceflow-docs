@@ -21,7 +21,7 @@ Voiceflow supports outbound calling using Twilio, allowing your agent to initiat
 
 > 📘 Alpha Version
 >
-> Outbound calls are currently in an alpha version and the API endpoint, `/v1alpha1/` may be subject to change during development.
+> Outbound calls are currently in alpha and the API endpoint, `/v1alpha1/` may be subject to change during development.
 
 <br />
 
@@ -29,7 +29,7 @@ Voiceflow supports outbound calling using Twilio, allowing your agent to initiat
 
 To trigger an outbound call, your app must make a `POST` request to a Voiceflow API endpoint associated with your agent. You can find this endpoint by navigating to **Interfaces > Telephony > View Outbound API**. Each agent has a unique API URL based on its internal ID.
 
-<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSKowMrczNIhSvxwGVX58OPtY0fWsCKNQblBjr" />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSuiqTm5fjpsnQSycmdlxWUPV8E9XNA5F0vJYD" />
 
 <br />
 
