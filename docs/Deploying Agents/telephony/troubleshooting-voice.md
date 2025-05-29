@@ -16,6 +16,12 @@ Certain voice features have limits. These are:
 
 <br />
 
+## Sorry, no agents are available to take your call at this time.
+
+* If you hear this message from the agent it means you've hit the limit for concurrent sessions for your workspace's plan. [Upgrade your plan to increase this limit](https://voiceflow.com/pricing).
+
+<br />
+
 ## Integration authorization error
 
 If you receive an `integration authorization error` when connecting your phone number to your agent, double check that you've entered your Twilio credentials (account SID, auth token, and phone number) correctly. If you have and the.issue persists, check if your Twilio account is suspended due to lack of funds.
@@ -35,7 +41,3 @@ If you receive an `integration authorization error` when connecting your phone n
 * Confirm that the phone number has been properly assigned to the correct agent and environment in Voiceflow.
 * Check that the agent's Interaction Endpoint URL has been correctly configured in the Twilio phone number's webhook settings.
 * Verify that the agent is reachable and not throwing errors by testing it in the Voiceflow prototype tool.
-
-### Sorry, no agents are available to take your call at this time.
-
-* If you hear this message from the agent it means you've hit the limit for concurrent sessions for your plan. See "**number of concurrent calls**".
