@@ -36,19 +36,17 @@ If you'd like full control over how your agent handles interruptions, you can to
 
 ## Interruption State
 
-Reference the sample agent below. After the user says something, there are a series of simple message steps broken up by long running API / Prompt steps.
+Message steps are professed effectively instantaneously, but other steps (including the [API step](doc:api-stept), [Function step](doc:function-step), and [Prompt step](doc:prompt-step)) are blocking and take time to process. Take a look at our example agent below: after the user says something, there are a series of simple message steps broken up by long running API and Prompt steps.
 
 <Image align="center" src="https://files.readme.io/e11c3fae9ec0ccc46daa6855306f8821c80060d93a8d857491385fa27dd8f280-Capture_decran_le_2024-12-20_a_11.46.34.png" />
 
-Message steps are always nearly instanteous, but other steps (API, Functions, Prompts) are blocking and take some time before we can proceed.
+When an interruption happens, as the previous turn hasn't made it to the "next state" block, we will always start at the capture step in the "starting point" block. The previous turn will also stop executing.
 
-When an interruption happens, as the previous turn hasn't made it to **"next state"**, we will always start at the capture step under **"starting point"**.
+For example if the interruption happened during the `GET - long API call` API step, it will no longer call `long LLM prompt` and use up tokens in the background. If the previous turn has made it to `next state`, we are no longer interrupting, but rather just starting the next turn normally.
 
-The previous turn will also stop executing. For example if the interruption happened during "*GET - long API call"*, it will no longer call *"long LLM prompt"* and use up tokens in the background.
+<br />
 
-If the previous turn has made it to **"next state"**, we are no longer interrupting, but rather just starting the next turn normally.
-
-## Audio does not represent current state
+### Audio does not represent current state
 
 There’s a slight delay between the agent's current state and what the user hears. This is due to TTS buffering and background execution. Here's an example of this in action:
 
