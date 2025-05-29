@@ -1,5 +1,5 @@
 ---
-title: Automatically open web chat after 3 seconds
+title: 'Web chat: automatically open web chat after 3 seconds'
 description: Programatically open the web chat widget on a webpage.
 hidden: false
 recipe:
