@@ -16,7 +16,7 @@ Certain voice features have limits. These are:
 
 <br />
 
-## Sorry, no agents are available to take your call at this time.
+## "Sorry, no agents are available to take your call at this time" when calling your agent
 
 * If you hear this message from the agent it means you've hit the limit for concurrent sessions for your workspace's plan. [Upgrade your plan to increase this limit](https://voiceflow.com/pricing).
 
