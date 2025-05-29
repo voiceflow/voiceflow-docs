@@ -41,7 +41,7 @@ The API is shown in a `curl` format. It must include an `Authorization` header w
 
 ### Endpoint
 
-`POST https://runtime-api.voiceflow.com/v1alpha1/phone-number/<PHONE_NUMBER_ID>/outbound`
+`POST https://runtime-api.voiceflow.com/v1alpha1/phone-number/<AGENT_ID>/outbound`
 
 <br />
 
