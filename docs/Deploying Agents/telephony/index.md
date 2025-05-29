@@ -16,6 +16,10 @@ Voiceflow integrates with Twilio, allowing you to connect a phone number to your
 
 <br />
 
+> ℹ️
+>
+> To use our voice features, you'll need a [Twilio account](https://twilio.com). A free trial account is enough to test out our voice integration.
+
 <br />
 
 ## Video Tutorial
