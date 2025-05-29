@@ -5,7 +5,8 @@ deprecated: false
 hidden: false
 link:
   new_tab: true
-  url: https://github.com/voiceflow/demos-n-examples/tree/master/voiceflow-discord
+  url: >-
+    https://github.com/voiceflow-gallagan/voiceflow-discord/tree/a06d35bd66840975c050f8d99dac8ada21baf80a
 metadata:
   title: ''
   description: ''
