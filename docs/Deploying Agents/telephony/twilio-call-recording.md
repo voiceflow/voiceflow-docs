@@ -1,6 +1,6 @@
 ---
-title: Twilio Call Recording
-excerpt: ''
+title: Call recording
+excerpt: Monitor your agent's calls and measure quality.
 deprecated: false
 hidden: false
 metadata:
@@ -10,11 +10,23 @@ metadata:
 next:
   description: ''
 ---
-Voiceflow supports enabling call recording for your Twilio projects, on both inbound and outbound calls.
+Voiceflow supports call recording for Twilio-powered voice experiences, including both inbound and outbound calls.
 
-You can enable call recordings by navigating to Settings > Behaviour > Voice and scrolling to the bottom.
+<br />
 
-By enabling call recording, you acknowledge that you are solely responsible for ensuring compliance with all applicable laws regarding call recording and consent. Voiceflow does not record, store, or access any call recordings (this is all managed by you on your Twilio account), and will not be liable for any misuse of this recording feature.
+## How to enable call recording
+
+> ⚠️
+>
+> You are solely responsible for complying with applicable laws related to call recording and consent in your region. Voiceflow does not access, store, or manage any call recordings. All recordings are handled directly by your Twilio account. Voiceflow is not liable for any misuse of the recording feature.
+
+1. Go to your Voiceflow project’s Settings.
+2. Navigate to Behaviour > Voice.
+3. Scroll to the bottom and enable Call Recording.
+
+Once enabled, Twilio will automatically handle the recording of your calls.
+
+<br />
 
 <Image align="center" width="60% " src="https://files.readme.io/12a9a65c66ec3816f437f4568c29bede8dea742290e4fda07bafbe247f1ebf16-image.png" />
 
