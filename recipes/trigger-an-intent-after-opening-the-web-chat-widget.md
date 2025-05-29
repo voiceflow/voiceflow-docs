@@ -1,5 +1,5 @@
 ---
-title: Trigger an intent after opening the web chat widget
+title: 'Web chat: trigger an intent after opening the web chat widget'
 description: This example waits for 2 seconds, then automatically triggers an intent.
 hidden: false
 recipe:
