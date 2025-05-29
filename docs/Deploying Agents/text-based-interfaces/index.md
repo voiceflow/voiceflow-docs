@@ -1,5 +1,5 @@
 ---
-title: Custom interfaces
+title: Custom interfaces (API)
 excerpt: ''
 deprecated: false
 hidden: false
