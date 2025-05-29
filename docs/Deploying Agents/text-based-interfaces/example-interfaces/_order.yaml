@@ -1,4 +1,5 @@
 - deploy-discord
 - deploy-slack
 - deploy-telegram
+- deploy-twilio-sms
 - deploy-whatsapp
