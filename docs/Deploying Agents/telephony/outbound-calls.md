@@ -33,7 +33,7 @@ To trigger an outbound call, your app must make a `POST` request to a Voiceflow 
 
 <br />
 
-The API is presented in a `curl` format. It must include an `Authorization` header with the [associated API Key](https://docs.voiceflow.com/docs/step-2) of the agent. This is under **Integration** > **API Keys**
+The API is shown in a `curl` format. It must include an `Authorization` header with the [associated API Key](http://docs.voiceflow.com/reference/how-to-get-your-voiceflow-project-api-key#/) of the agent. This can be found under **Interfaces > API keys**.
 
 <br />
 
@@ -47,9 +47,9 @@ The API is presented in a `curl` format. It must include an `Authorization` head
 
 ### Headers
 
-| Header          | Value                                                                                |
-| --------------- | ------------------------------------------------------------------------------------ |
-| `Authorization` | `Bearer <your DM API Key>` ([How to get it](https://docs.voiceflow.com/docs/step-2)) |
+| Header          | Value                                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `Authorization` | `Bearer <your DM API Key>` ([How to get it](http://docs.voiceflow.com/reference/how-to-get-your-voiceflow-project-api-key#/)) |
 
 <br />
 
