@@ -20,17 +20,19 @@ Voiceflow's interruption behaviour settings can be found by visiting **Agent Set
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSw351PLqEGMDpIXu5W2NnhOr30QY4UBJcmZFA" />
 
+### Advanced options
+
+If you'd like full control over how your agent handles interruptions, you can toggle the interruption behaviour settings to advanced mode.
+
+<Image align="center" src="https://files.readme.io/5c446f5ceea626f43d679a90bdd880d9ef3d785aa525974e799cf0f267e13c63-CleanShot_2025-05-29_at_16.16.532x_1.png" />
+
 <br />
 
-### Interruption Threshold
+* **On punctuation** and **On no punctuation** allow you to control how many seconds to wait if the transcription of the user's message ends with or without punctuation.
+* **Interruption threshold** is the number of spoken words needed to stop the agent’s audio mid-sentence. The agent will stop talking once the threshold is met. However, it continues executing the current step in the background until a full interruption is triggered.
+* **Endpointing** refers to the number is milliseconds that your agent will wait before transcribing a portion of speech.
 
-The first setting is **Interruption Threshold** which is the number of words before the agent will stop talking. The Automatic Speech Recognition (ASR) is always running and will have "partial" transcriptions.
-
-*The agent will still be running in the background*, but will no longer talk over the user.
-
-### Full Interruption
-
-A full interruption is when an **full utterance** is resolved by the ASR, and the next turn begins before the previous one ends. A utterance is determined by the other Telephony settings such as *Silence Wait*, *Utterance End*, *Punctuation Wait*, etc.
+<br />
 
 ## Interruption State
 
