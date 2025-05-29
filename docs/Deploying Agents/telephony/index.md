@@ -22,7 +22,11 @@ Voiceflow integrates with Twilio, allowing you to connect a phone number to your
 >
 > To use our voice features, you'll need a [Twilio account](https://twilio.com) and a Twilio phone number. A free trial account is enough to test out our voice integration.
 
+<br />
+
 You can add voice support to your agent in just a few minutes. Follow the instructions in the video below to get setup.
+
+<br />
 
 <Embed url="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DOKwNac44-ok&q=EhAmAB8YEA2fMYrcc8iUu1GVGLPSvLoGIjDrnnTqeKP4K7-hiv2U51OmGdOsPwq0Kw4zlZx1O4gsqj18tKsPOTkPhxbu41laVS8yAXJaAUM" href="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DOKwNac44-ok&q=EhAmAB8YEA2fMYrcc8iUu1GVGLPSvLoGIjDrnnTqeKP4K7-hiv2U51OmGdOsPwq0Kw4zlZx1O4gsqj18tKsPOTkPhxbu41laVS8yAXJaAUM" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Furl%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DOKwNac44-ok%26type%3Dtext%252Fhtml%26schema%3Dgoogle%26display_name%3DYouTube%26src%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FOKwNac44-ok%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
