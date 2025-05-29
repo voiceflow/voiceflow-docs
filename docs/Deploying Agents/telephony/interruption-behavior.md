@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-A Voiceflow agent operates on a turn by turn basis, and the user is always at a particular "state" at any point in time, a specific step on a workflow/component.
+Voiceflow voice agents operate on a turn-by-turn model. At any given moment, the user is at a specific state in the conversation, which is tied to a step in the workflow (e.g. a [message step](doc:message), [capture step](doc:capture-v2), or [API step](doc:api-step)).
 
-During conversations, the user can cut off the agent at any given point, and it can be tricky to manage this.
+During voice interactions, users may interrupt the agent while it's speaking. Handling these interruptions correctly is important for maintaining a natural and functional experience.
 
 ## Voice Interruption
 
@@ -32,9 +32,9 @@ Reference the sample agent below. After the user says something, there are a ser
 
 <Image align="center" src="https://files.readme.io/e11c3fae9ec0ccc46daa6855306f8821c80060d93a8d857491385fa27dd8f280-Capture_decran_le_2024-12-20_a_11.46.34.png" />
 
-Message steps are always nearly instanteous, but other steps (API, Functions, Prompts) are blocking and take some time before we can proceed. 
+Message steps are always nearly instanteous, but other steps (API, Functions, Prompts) are blocking and take some time before we can proceed.
 
-When an interruption happens, as the previous turn hasn't made it to **"next state"**, we will always start at the capture step under **"starting point"**. 
+When an interruption happens, as the previous turn hasn't made it to **"next state"**, we will always start at the capture step under **"starting point"**.
 
 The previous turn will also stop executing. For example if the interruption happened during "*GET - long API call"*, it will no longer call *"long LLM prompt"* and use up tokens in the background.
 
