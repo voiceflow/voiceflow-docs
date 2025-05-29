@@ -22,4 +22,4 @@ Voiceflow agents are:
 
 The best way to learn about Voiceflow is to build an agent for yourself. Building and deploying your first agent takes minutes - check out the course below to get started and build a **real** AI agent.
 
-<LinkCard type="course" title="Build an AI Support Agent" description="Build your first AI agent in 15 minutes or less. Start for free." href="https://www.voiceflow.com/lessons/welcome-to-build-an-ai-support-agent" imageSrc="https://cdn.prod.website-files.com/657639ebfb91510f45654149/67cb720e1f90849808752fcf_Support%20Course%20Jacklyn%20(5).png" />
+<LinkCard type="course" title="Build an AI Support Agent" description="Build your first AI agent in 15 minutes or less. Start for free." href="https://www.voiceflow.com/lessons/welcome-to-build-an-ai-support-agent" />
