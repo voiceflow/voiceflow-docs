@@ -6,22 +6,20 @@ hidden: false
 metadata:
   robots: index
 ---
-### Limits
+## Limits
 
-* **number of concurrent calls:**
-  * **Starter**: 1 call
-  * **Pro**: 5 calls
-  * **Team**: 15 calls
-  * **Enterprise**: 100 calls
-* **maximum duration of call:** after 30 minutes, the call will automatically end
-* **maximum user silence:** after 3 minutes, if the user does not speak or interact within this time, the call will end
+Certain voice features have limits. These are:
 
-### Integration Authorization Error
+* **Number of concurrent calls**: this is limited by your [workspace's plan](https://voiceflow.com) .
+* **Maximum duration of call:** all calls automatically end after 30 minutes.
+* **Maximum user silence:** if the user does not speak or interact for three minutes, all calls will automatically end.
+
+## Integration Authorization Error
 
 * Double check that you've entered your Twilio credentials (Account SID, Auth Token, Phone Number) correctly.
 * If issue persists, check if your Twilio account is suspended due to lack of funds.
 
-### Calls Not Routing to Voiceflow Agent
+## Calls Not Routing to Voiceflow Agent
 
 * Ensure that the **Routing** region is US. If it is not, please select US and then press 're-route' to save, you should see a URL that starts with [https://runtime-api.voiceflow.com/](https://runtime-api.voiceflow.com/)... in the 'A call comes in' section.
 
