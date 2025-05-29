@@ -40,16 +40,14 @@ The previous turn will also stop executing. For example if the interruption happ
 
 If the previous turn has made it to **"next state"**, we are no longer interrupting, but rather just starting the next turn normally.
 
-> 📘 Audio does not represent current state
->
-> There’s a slight delay between the agent's current state and what the user hears. This is due to TTS buffering and background execution.
->
-> Here's an example of this in action:
->
-> * As soon as Message 1 is triggered, the API call begins immediately in the background.
-> * The text-to-speech audio for Message 1 is generated and starts playing after a delay.
-> * By the time the user hears Message 3, the system has likely already moved to the next step.
->
-> <Image align="center" src="https://files.readme.io/909ddd22690f4e66d5e04126f15e6567068d5bb1de016fe2b7b298d128e567a2-Capture_decran_le_2024-12-20_a_12.20.31.png" />
->
->
+## Audio does not represent current state
+
+There’s a slight delay between the agent's current state and what the user hears. This is due to TTS buffering and background execution. Here's an example of this in action:
+
+* As soon as Message 1 is triggered, the API call begins immediately in the background.
+* The text-to-speech audio for Message 1 is generated and starts playing after a delay.
+* By the time the user hears Message 3, the system has likely already moved to the next step.
+
+<Image align="center" src="https://files.readme.io/909ddd22690f4e66d5e04126f15e6567068d5bb1de016fe2b7b298d128e567a2-Capture_decran_le_2024-12-20_a_12.20.31.png" />
+
+This design reduces latency and awkward silences but may make debugging difficult since audio does not always reflect real-time state.
