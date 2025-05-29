@@ -18,13 +18,9 @@ Voiceflow supports call recording for Twilio-powered voice experiences, includin
 >
 > You are solely responsible for complying with applicable laws related to call recording and consent in your region. Voiceflow does not access, store, or manage any call recordings. All recordings are handled directly by your Twilio account. Voiceflow is not liable for any misuse of the recording feature.
 
-1. Go to your Voiceflow project’s settings.
-2. Navigate to Behaviour > Voice.
-3. Scroll to the bottom and enable Call Recording.
-
-Once enabled, Twilio will automatically handle the recording of your calls.
-
 <br />
+
+Call recording can be enabled by opening the settings tab of your agent, opening **Behaviour** settings, then selecting **Voice**. The **save call recordings** toggle can be found bottom of this page.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSq73XJyBe98Elmq4kxJ1Vv0CSoXDObGzif7WU" />
 
