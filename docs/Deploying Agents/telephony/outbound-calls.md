@@ -27,11 +27,11 @@ Voiceflow supports outbound calling using Twilio, allowing your agent to initiat
 
 ## How it works
 
-Under **Integration** > **Telephony** after assigning a number to an agent, you can "View" the outbound call API for that number. Each assigned number will have a unique API URL, corresponding to their internal ID.
+To trigger an outbound call, your app must make a `POST` request to a Voiceflow API endpoint associated with your agent. You can find this endpoint by navigating to **Interfaces > Telephony > View Outbound API**. Each agent has a unique API URL based on its internal ID.
 
-<Image align="center" src="https://files.readme.io/79fd01c1b813367b662fce296a799976c804eedac2d3706b69259c072d348106-Capture_decran_le_2024-12-19_a_18.42.44.png" />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSKowMrczNIhSvxwGVX58OPtY0fWsCKNQblBjr" />
 
-<Image align="center" src="https://files.readme.io/b587512ab656ad543b9dade9b3b0e545960d12fffdc12d3d337273b4c2aa0563-Capture_decran_le_2024-12-19_a_18.56.58.png" />
+<br />
 
 The API is presented in a `curl` format. It must include an `Authorization` header with the [associated API Key](https://docs.voiceflow.com/docs/step-2) of the agent. This is under **Integration** > **API Keys**
 
