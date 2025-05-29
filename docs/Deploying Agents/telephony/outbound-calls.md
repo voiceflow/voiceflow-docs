@@ -47,9 +47,10 @@ The API is shown in a `curl` format. It must include an `Authorization` header w
 
 ### Headers
 
-| Header          | Value                                                                                                                         |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `Authorization` | `Bearer <your DM API Key>` ([How to get it](http://docs.voiceflow.com/reference/how-to-get-your-voiceflow-project-api-key#/)) |
+| Header          | Value                                                                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `Authorization` | `Bearer <your Voiceflow API Key>` ([How to get it](http://docs.voiceflow.com/reference/how-to-get-your-voiceflow-project-api-key#/)) |
+| `Content-Type`  | `application/json`                                                                                                                   |
 
 <br />
 
