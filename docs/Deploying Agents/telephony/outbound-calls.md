@@ -10,9 +10,11 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 Comply with your local regulations regarding automated calls
+Voiceflow supports outbound calling using Twilio, allowing your agent to initiate a call to any number via API. This is useful for automating voice actions - such as welcome calls, reminders, or follow-ups - triggered from tools like Zapier or your own scripts.
+
+> ⚠️ Comply with your local regulations regarding automated calls
 >
-> In many regions, it is a violation of law to create automated outbound calls without consent. This may lead to your Twilio number or account being suspended and potentially incur fines.
+> In many regions, it is a violation of law to create automated outbound calls without consent. This may lead to your Twilio number or account being suspended and potentially incur fines. You are solely responsible for ensuring compliance with all relevant regulations.
 >
 > * [Twilio Phone Number Regulations](https://www.twilio.com/en-us/guidelines/regulatory)
 > * [Twilio Voice Guidelines](https://www.twilio.com/en-us/guidelines/voice)
@@ -21,7 +23,9 @@ next:
 >
 > Outbound calls are currently in an alpha version and the API endpoint, `/v1alpha1/` may be subject to change during development.
 
-By calling an API endpoint, your Voiceflow agent will initiate a call with a provided outbound number. This is powerful when used with scripts, or automation tools like zapier to trigger upon external events (i.e. when a user signs up, send an outbound call).
+<br />
+
+## How it works
 
 Under **Integration** > **Telephony** after assigning a number to an agent, you can "View" the outbound call API for that number. Each assigned number will have a unique API URL, corresponding to their internal ID.
 
@@ -56,7 +60,7 @@ The number of outbound calls you can make concurrently is [limited by your plan]
 
 ### 500 Internal Server Error
 
-It is possible your number does not have the necessary permissions to make outbound calls. There are often strict regulations depending on the region. 
+It is possible your number does not have the necessary permissions to make outbound calls. There are often strict regulations depending on the region.
 
 Try enabling the permission for the region with the link below.\
 [https://www.twilio.com/console/voice/calls/geo-permissions/low-risk](https://www.twilio.com/console/voice/calls/geo-permissions/low-risk)
