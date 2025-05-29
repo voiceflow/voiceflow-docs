@@ -10,18 +10,6 @@ metadata:
 next:
   description: ''
 ---
-> 📘
->
-> The Twilio integration is currently in beta. If you are participating in the beta program, we'd love to hear your feedback! Please email your thoughts and experiences to [product@voiceflow.com.](mailto:product@voiceflow.com.)\
-> If you're interested in joining the beta to try out this exciting new capability, please visit our signup form [here](https://beta.proxy-voiceflow.com/?beta=voiceinvoiceflow) to request access. We'll notify you as soon as a spot becomes available.
->
-> During the beta period, please keep in mind that:
->
-> * Some features may still be under active development
-> * Documentation may be incomplete or subject to change
->
-> We greatly appreciate your willingness to be an early adopter and help shape the future of voice AI!
-
 ## Overview
 
 The Voice settings allow you to fine-tune the behaviour of your voice agents during voice calls. By adjusting parameters like silence timeouts, audio cues, and ASR/TTS settings, you can make conversations more organic and enhance the caller experience. This guide will walk you through the available options and how to configure them for your voice agent.
@@ -32,7 +20,7 @@ The Voice settings allow you to fine-tune the behaviour of your voice agents dur
 
 To access the Voice behavior settings for your agent:
 
-1. Navigate to your project. 
+1. Navigate to your project.
 2. Navigate to the *Settings* > *Behaviour* tab.
 3. Select the *Voice* tab.
 
@@ -81,19 +69,19 @@ In the following example, two separate chunks are created.
 
 > That's awesome!
 
-We will wait the **Endpointing** period before deciding to finalize the chunk. If your **Endpointing** is 1 second, that adds up to 1 second of latency to resolving any response. 
+We will wait the **Endpointing** period before deciding to finalize the chunk. If your **Endpointing** is 1 second, that adds up to 1 second of latency to resolving any response.
 
 In environments with loud background noises, **Endpointing** doesn't work well because there isn’t actually a period of silence. That means we will often fall back on other methods to finalize a transcript (like timeouts), this can cause additional latency. You can learn more [here](https://developers.deepgram.com/docs/endpointing).
 
 ### Punctuation/No Punctuation Timeout
 
-**After** a finalized *chunk* is produced, we sometimes want to give the user a chance to continue speaking to form a complete utterance for your agent to process. 
+**After** a finalized *chunk* is produced, we sometimes want to give the user a chance to continue speaking to form a complete utterance for your agent to process.
 
 Users can often speak in run-on sentences, take long pauses, or try to make corrections.
 
 > 1. Hey my name is
 > 2. Joe.
-> 3. And I live in 
+> 3. And I live in
 > 4. New York,
 > 5. Manhattan actually.
 
@@ -193,5 +181,5 @@ Explore the variety of TTS voices to find one that callers find natural and enga
 
 ### Agent is Interrupting Caller
 
-* Increase the (ASR) Silence Wait and (ASR) Utterance End timeout values to give callers more time to start and complete their statements.  
+* Increase the (ASR) Silence Wait and (ASR) Utterance End timeout values to give callers more time to start and complete their statements.
 * Make sure your agent prompts are worded clearly to elicit succinct responses from callers. Open-ended or ambiguous prompts may encourage rambling.
