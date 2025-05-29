@@ -1,5 +1,5 @@
 ---
-title: Send a proactive message when the user visits a certain page
+title: 'Web chat: send a proactive message when the user visits a certain page'
 description: >-
   Learn how to clear existing proactive messages and send a new one, but only on
   certain pages.
