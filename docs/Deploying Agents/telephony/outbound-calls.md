@@ -1,6 +1,6 @@
 ---
 title: Outbound Calls
-excerpt: Use your Voiceflow agent to make automated outbound calls
+excerpt: Make your agent call phone numbers - programatically.
 deprecated: false
 hidden: false
 metadata:
