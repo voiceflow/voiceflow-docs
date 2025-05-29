@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Voiceflow supports call recording for Twilio-powered voice experiences, including both inbound and outbound calls.
+Voiceflow supports call recording for Twilio-powered voice experiences, including both inbound and outbound calls. This feature allows you to automatically record conversations handled through your Voiceflow agent when connected via Twilio, enabling quality assurance and compliance check workflows.
 
 <br />
 
