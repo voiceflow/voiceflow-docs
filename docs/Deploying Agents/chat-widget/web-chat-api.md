@@ -12,6 +12,10 @@ next:
 ---
 Voiceflow’s web chat API gives you full programmatic control over how the chat widget behaves on your site. You can open or close the chat, show or hide the launcher, and even trigger specific conversation intents - all using JavaScript.
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSTXynpiIVZwt6aHz0RnDBqreWK9vPsufLgj2p" />
+
+<br />
+
 ## Web chat API methods
 
 Once the widget script is loaded, it registers the API as `window.voiceflow.chat`. Here are the main methods you can use:
