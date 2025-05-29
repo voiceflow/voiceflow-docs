@@ -12,7 +12,7 @@ next:
 ---
 Voiceflow’s web chat API gives you full programmatic control over how the chat widget behaves on your site. You can open or close the chat, show or hide the launcher, and even trigger specific conversation intents - all using JavaScript.
 
-<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSgaXf43dtVY8pvMo6K2ksaDj0z4g5XZ7nI3hA" />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSlgC6H96094EsumPty2pBL3kDrzTnQ6SWYIVN" />
 
 <br />
 
