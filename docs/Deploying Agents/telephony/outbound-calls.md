@@ -19,7 +19,7 @@ Voiceflow supports outbound calling using Twilio, allowing your agent to initiat
 > * [Twilio Phone Number Regulations](https://www.twilio.com/en-us/guidelines/regulatory)
 > * [Twilio Voice Guidelines](https://www.twilio.com/en-us/guidelines/voice)
 
-> 📘 Alpha Version
+> ℹ️ Outbound calling is currently in alpha
 >
 > Outbound calls are currently in alpha and the API endpoint, `/v1alpha1/` may be subject to change during development.
 
