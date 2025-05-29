@@ -3,4 +3,5 @@
 - deploy-slack
 - deploy-telegram
 - deploy-twilio-sms
+- custom-interface-unity
 - deploy-whatsapp
