@@ -1,6 +1,6 @@
 ---
-title: Interruption behavior
-excerpt: Managing interuptions to the agent during calls.
+title: Managing interuptions
+excerpt: Humans might talk over your agent. Here's how to handle that.
 deprecated: false
 hidden: false
 metadata:
