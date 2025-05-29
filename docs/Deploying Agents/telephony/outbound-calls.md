@@ -1,5 +1,5 @@
 ---
-title: Outbound Calls
+title: Outbound calls
 excerpt: Make your agent call phone numbers - programatically.
 deprecated: false
 hidden: false
