@@ -70,15 +70,14 @@ The API is shown in a `curl` format. It must include an `Authorization` header w
 
 <br />
 
-<br />
+## Call limits
 
-The number of outbound calls you can make concurrently is [limited by your plan](https://docs.voiceflow.com/docs/setting-up-twilio-integration#sorry-no-agents-are-available-to-take-your-call-at-this-time) and is in a shared pool with inbound calls.
+Outbound calls share the same concurrency pool as inbound calls. The number of simultaneous calls you can make is [determined by your plan limits](https://voiceflow.com/pricing).
+
+<br />
 
 ## Troubleshooting
 
 ### 500 Internal Server Error
 
-It is possible your number does not have the necessary permissions to make outbound calls. There are often strict regulations depending on the region.
-
-Try enabling the permission for the region with the link below.\
-[https://www.twilio.com/console/voice/calls/geo-permissions/low-risk](https://www.twilio.com/console/voice/calls/geo-permissions/low-risk)
+If you're seeing a 500 error, your Twilio number may not have outbound permissions for the region you're calling. Make sure the region is enabled in your [Twilio geo-permissions dashboard](https://www.twilio.com/console/voice/calls/geo-permissions/low-risk).
