@@ -12,13 +12,13 @@ next:
 ---
 Voiceflow integrates with Twilio, allowing you to connect a phone number to your agent. Agents with a phone number connected can receive inbound calls and programatically make outbound calls, subject to concurrency limits [associated with your plan](https://voiceflow.com/pricing). Our voice integration is often used for customer support hotlines, lead qualification workflows, and appointment scheduling.
 
-<Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
-
-<br />
-
 > ℹ️
 >
 > To use our voice features, you'll need a [Twilio account](https://twilio.com). A free trial account is enough to test out our voice integration.
+
+<Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
+
+<br />
 
 <br />
 
