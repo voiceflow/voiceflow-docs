@@ -1,5 +1,5 @@
 ---
-title: Send multiple proactive messages
+title: 'Web chat: send multiple proactive messages'
 description: >-
   Send messages before a user opens the web chat widget, without incurring
   credit fees.
