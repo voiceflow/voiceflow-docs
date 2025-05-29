@@ -28,7 +28,7 @@ If you'd like full control over how your agent handles interruptions, you can to
 
 <br />
 
-* **On punctuation** and **On no punctuation** allow you to control how many seconds to wait if the transcription of the user's message ends with or without punctuation.
+* **On punctuation** and **on no punctuation** allow you to control how many seconds to wait if the transcription of the user's message ends with or without punctuation.
 * **Interruption threshold** is the number of spoken words needed to stop the agent’s audio mid-sentence. The agent will stop talking once the threshold is met. However, it continues executing the current step in the background until a full interruption is triggered.
 * **Endpointing** refers to the number is milliseconds that your agent will wait before transcribing a portion of speech.
 
