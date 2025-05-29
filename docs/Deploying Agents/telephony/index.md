@@ -14,8 +14,6 @@ Voiceflow integrates with Twilio, allowing you to connect a phone number to your
 
 <Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
 
-<br />
-
 ## Setting up voice
 
 To use our voice features, you'll need a [Twilio account](https://twilio.com) and a Twilio phone number. A free trial account is enough to test out our voice integration. Once you've created a Twilio account, follow the instructions below to connect a phone number to your agent.
