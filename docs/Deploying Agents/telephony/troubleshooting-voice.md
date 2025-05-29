@@ -14,10 +14,13 @@ Certain voice features have limits. These are:
 * **Maximum duration of call:** all calls automatically end after 30 minutes.
 * **Maximum user silence:** if the user does not speak or interact for three minutes, all calls will automatically end.
 
-## Integration Authorization Error
+<br />
 
-* Double check that you've entered your Twilio credentials (Account SID, Auth Token, Phone Number) correctly.
-* If issue persists, check if your Twilio account is suspended due to lack of funds.
+## Integration authorization error
+
+If you receive an `integration authorization error` when connecting your phone number to your agent, double check that you've entered your Twilio credentials (account SID, auth token, and phone number) correctly. If you have and the.issue persists, check if your Twilio account is suspended due to lack of funds.
+
+<br />
 
 ## Calls Not Routing to Voiceflow Agent
 
