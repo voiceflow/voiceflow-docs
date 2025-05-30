@@ -30,5 +30,5 @@ voiceflow agent [flags]
 
 ## See also
 
-* [voiceflow](/cmd/voiceflow/)	 - Voiceflow CLI
-* [voiceflow agent export](/cmd/voiceflow_agent_export/)	 - Export a voiceflow project into a file
+* [voiceflow](/cmd/voiceflow/) - Voiceflow CLI
+* [voiceflow agent export](/cmd/voiceflow_agent_export/) - Export a voiceflow project into a file
