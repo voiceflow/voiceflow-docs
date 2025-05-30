@@ -22,4 +22,4 @@ You can contact us via email at: [xavierportillaedo@gmail.com](mailto:xavierport
 
 Follow [@xavidop on Twitter](https://x.com/xavidop) for updates and announcements.
 
-Visit our [links](/links) section for more information about staying connected with us.
+Visit our [links](/docs/links) section for more information about staying connected with us.
