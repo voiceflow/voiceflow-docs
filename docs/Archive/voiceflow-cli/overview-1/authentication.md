@@ -15,6 +15,6 @@ The `voiceflow-cli` source code is open source, you can check it out [here](http
 
 The base URL for the Voiceflow API is `https://<api>.<subdomain>.voiceflow.com`. The default value is without subdomain: `https://<api>.voiceflow.com`. If you are using a different Voiceflow environment, you can pass the subdomain using the `--voiceflow-subdomain` flag.
 
-## Open AI PI Key
+## Open AI API Key
 
 `voiceflow-cli` uses Open AI APIs. To interact with Open AI you will need an API Key. You can get your API Key in your Open AI account. You can pass the API Key to the CLI using the `--openai-api-key` flag or by setting the `OPENAI_API_KEY` environment variable. `voiceflow-cli` also works with `.env` files. You can create a `.env` file in the root of your project and add the `OPENAI_API_KEY` variable to it.
