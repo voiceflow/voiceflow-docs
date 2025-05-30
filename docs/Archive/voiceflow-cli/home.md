@@ -1,7 +1,7 @@
 ---
 title: Home
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
