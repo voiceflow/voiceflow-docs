@@ -17,6 +17,6 @@ The Knowledge Base is a repository and management system for content that your A
 
 ## Reference
 
-The `voiceflow-cli` has a command that allows you to interact with your Vocieflow Knowledge bases from your terminal or from your CI pipelines.
+The `voiceflow-cli` has a command that allows you to interact with your Voiceflow Knowledge bases from your terminal or from your CI pipelines.
 
 To know more, you can run the `voiceflow kb` command. For the usage, please refer to this [page](/cmd/voiceflow_kb).
