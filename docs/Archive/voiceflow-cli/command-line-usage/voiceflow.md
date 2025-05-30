@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# voiceflow
-
 Voiceflow CLI
 
 ## Synopsis
