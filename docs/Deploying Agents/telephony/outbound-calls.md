@@ -71,7 +71,7 @@ The API is shown in a `curl` format. It must include an `Authorization` header w
 
 <br />
 
-## Call limits
+## Concurrency limits
 
 Outbound calls share the same concurrency pool as inbound calls. The number of simultaneous calls you can make is [determined by your plan limits](https://voiceflow.com/pricing).
 
