@@ -13,6 +13,6 @@ A Voiceflow agent is a conversational AI that can be used to create voice and ch
 
 ## Reference
 
-The `voiceflow-cli` has a command that allows you to interact with your Vocieflow Agents from your terminal or from your CI pipelines.
+The `voiceflow-cli` has a command that allows you to interact with your Voiceflow Agents from your terminal or from your CI pipelines.
 
 To know more, you can run the `voiceflow agent` command. For the usage, please refer to this [page](/cmd/voiceflow_agent).
