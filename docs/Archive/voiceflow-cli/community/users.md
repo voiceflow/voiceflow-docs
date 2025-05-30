@@ -21,15 +21,4 @@ Here's a running list of some organizations using voiceflow-cli\[^1]:
 
 <br />
 
-\<!-- &#x20;
-Hey! Thanks for looking into this file!
-If you're going to edit it, please:
-
-* keep a-z ordering :)
-  * edit only the USERS.md file at the repository's root folder
-    * /www/docs/users.md is auto-copied from /USERS.md\
-      \-->
-
-<br />
-
 [^1]: Entries were either added by the companies themselves or by the maintainers after seeing it in the wild.
