@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# Install
-
 You can use `voiceflow-cli` by installing a pre-compiled binary (in several ways), using Docker, or compiling it from source. In the below sections, you can find the steps for each approach.
 
 ## Install a pre-compiled binary
