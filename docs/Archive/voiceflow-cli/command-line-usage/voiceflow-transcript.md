@@ -30,7 +30,7 @@ voiceflow transcript [flags]
 
 ## See also
 
-* [voiceflow](/cmd/voiceflow/)	 - Voiceflow CLI
-* [voiceflow transcript fetch](/cmd/voiceflow_transcript_fetch/)	 - Fetch one transcripts from a project
-* [voiceflow transcript fetch-all](/cmd/voiceflow_transcript_fetch-all/)	 - Fetch all transcripts from a project
-* [voiceflow transcript to-test](/cmd/voiceflow_transcript_to-test/)	 - Transforms a transcript into a test
+* [voiceflow](/cmd/voiceflow/) - Voiceflow CLI
+* [voiceflow transcript fetch](/cmd/voiceflow_transcript_fetch/) - Fetch one transcripts from a project
+* [voiceflow transcript fetch-all](/cmd/voiceflow_transcript_fetch-all/) - Fetch all transcripts from a project
+* [voiceflow transcript to-test](/cmd/voiceflow_transcript_to-test/) - Transforms a transcript into a test
