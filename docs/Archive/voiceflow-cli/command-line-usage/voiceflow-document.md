@@ -30,6 +30,6 @@ voiceflow document [flags]
 
 ## See also
 
-* [voiceflow](/cmd/voiceflow/)	 - Voiceflow CLI
-* [voiceflow document upload-file](/cmd/voiceflow_document_upload-file/)	 - Upload a dile to a knowledge base
-* [voiceflow document upload-url](/cmd/voiceflow_document_upload-url/)	 - Upload a URL to a knowledge base
+* [voiceflow](/cmd/voiceflow/) - Voiceflow CLI
+* [voiceflow document upload-file](/cmd/voiceflow_document_upload-file/) - Upload a dile to a knowledge base
+* [voiceflow document upload-url](/cmd/voiceflow_document_upload-url/) - Upload a URL to a knowledge base
