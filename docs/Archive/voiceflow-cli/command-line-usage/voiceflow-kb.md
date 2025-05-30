@@ -30,5 +30,5 @@ voiceflow kb [flags]
 
 ## See also
 
-* [voiceflow](/cmd/voiceflow/)	 - Voiceflow CLI
-* [voiceflow kb query](/cmd/voiceflow_kb_query/)	 - Query a knowledge base
+* [voiceflow](/cmd/voiceflow/) - Voiceflow CLI
+* [voiceflow kb query](/cmd/voiceflow_kb_query/) - Query a knowledge base
