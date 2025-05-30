@@ -32,5 +32,5 @@ voiceflow analytics [flags]
 
 ## See also
 
-* [voiceflow](/cmd/voiceflow/)	 - Voiceflow CLI
-* [voiceflow analytics fetch](/cmd/voiceflow_analytics_fetch/)	 - Fetch all project analytics. They could write into a file
+* [voiceflow](/cmd/voiceflow/) - Voiceflow CLI
+* [voiceflow analytics fetch](/cmd/voiceflow_analytics_fetch/) - Fetch all project analytics. They could write into a file
