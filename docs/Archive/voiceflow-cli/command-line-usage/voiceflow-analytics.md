@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# voiceflow analytics
-
 Actions on analytics
 
 ```
