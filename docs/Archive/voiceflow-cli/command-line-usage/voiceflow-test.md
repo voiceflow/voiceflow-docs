@@ -30,5 +30,5 @@ voiceflow test [flags]
 
 ## See also
 
-* [voiceflow](/cmd/voiceflow/)	 - Voiceflow CLI
-* [voiceflow test execute](/cmd/voiceflow_test_execute/)	 - Execute a suite
+* [voiceflow](/cmd/voiceflow/) - Voiceflow CLI
+* [voiceflow test execute](/cmd/voiceflow_test_execute/) - Execute a suite
