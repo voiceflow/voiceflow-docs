@@ -10,9 +10,9 @@ It is useful for your day-to-day tasks or if you want to integrate it with your 
 
 ## Get started
 
-* [How to install the tool](/overview/install)
-* [Authentication](/overview/authentication)
-* [Read the FAQ](/overview/faq)
+* [How to install the tool](/docs/install)
+* [Authentication](/docs/authentication)
+* [Read the FAQ](/docs/faq)
 
 ## Got questions, comments or suggestions?
 
