@@ -1,5 +1,5 @@
 ---
-title: Quick Start
+title: Quick start
 deprecated: false
 hidden: false
 metadata:
