@@ -5,9 +5,9 @@ hidden: false
 metadata:
   robots: index
 ---
-# Audio input
+## Audio input
 
-## Suite file
+### Suite file
 
 ```yaml
 # suite.yaml
@@ -22,7 +22,7 @@ tests:
     file: ./test.yaml
 ```
 
-## Test file
+### Test file
 
 ```yaml
 # test.yaml
