@@ -1,5 +1,5 @@
 ---
-title: Knowledge Base
+title: Knowledge base
 deprecated: false
 hidden: false
 metadata:
