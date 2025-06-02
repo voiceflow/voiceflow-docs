@@ -1,5 +1,5 @@
 ---
-title: Fetch
+title: Fetch analytics
 deprecated: false
 hidden: false
 metadata:
