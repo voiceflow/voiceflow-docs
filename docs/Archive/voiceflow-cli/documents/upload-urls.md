@@ -5,54 +5,54 @@ hidden: false
 metadata:
   robots: index
 ---
-# Upload URLs to the Knowledge Base
+## Upload URLs to the Knowledge Base
 
 With the `vocieflow-cli` you can upload content from a URL to your Voiceflow Knowledge Base with customizable processing options. This is useful when you want to perform a automations around your knowledge base. The `voiceflow-cli` has one command that allows you to update your knowledge base from your terminal:
 
-## Command Usage
+### Command Usage
 
 ```bash
 voiceflow document upload-url [flags]
 ```
 
-### Aliases
+#### Aliases
 
 * `ur`
 * `upload-urls`
 
-## Parameters
+### Parameters
 
-### Required Flags
+#### Required Flags
 
 * `--url`: URL to upload content from
 * `--name`: Name for the uploaded document
 
-### Processing Options
+#### Processing Options
 
 * `--max-chunk-size`: Maximum size of content chunks
 * `--markdown-conversion`: Convert content to markdown format
 * `--overwrite`: Overwrite existing document if present
 
-### LLM Processing Options
+#### LLM Processing Options
 
 * `--llm-generated-q`: Enable LLM-generated questions
 * `--llm-prepend-context`: Prepend context using LLM
 * `--llm-based-chunking`: Use LLM for content chunking
 * `--llm-content-summarization`: Enable content summarization
 
-### Metadata
+#### Metadata
 
 * `--tags`: Array of tags to associate with the document
 
-## Examples
+### Examples
 
-### Basic Upload
+#### Basic Upload
 
 ```bash
 voiceflow document upload-url --url https://docs.example.com/api --name "API Documentation"
 ```
 
-### Advanced Upload with LLM Processing
+#### Advanced Upload with LLM Processing
 
 ```bash
 voiceflow document upload-url \
@@ -65,7 +65,7 @@ voiceflow document upload-url \
   --tags api,documentation
 ```
 
-### Upload with Overwrite
+#### Upload with Overwrite
 
 ```bash
 voiceflow document upload-url \
