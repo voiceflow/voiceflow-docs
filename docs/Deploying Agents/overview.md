@@ -5,7 +5,13 @@ hidden: false
 metadata:
   robots: index
 ---
-Once you've built your agent, it's time to deploy it! We support three different ways of deploying your agent: webchat, voice, and custom interfaces.
+Once you've built your agent, it's time to deploy it! We support three different ways of deploying your agent: web chat, voice, and custom interfaces.
+
+<br />
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSgMPegIdtVY8pvMo6K2ksaDj0z4g5XZ7nI3hA" />
+
+<br />
 
 <Cards columns={3}>
   <Card title="Web Chat Widget" href="https://docs.voiceflow.com/docs/chat-widget#/" icon="fa-comments">
