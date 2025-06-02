@@ -1,12 +1,10 @@
 ---
-title: Transcripts to test
+title: Transform transcripts into tests
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-# Transform transcripts into tests
-
 ## Overview
 
 Convert a Voiceflow transcript into a reusable [test case](/tests/tests).
