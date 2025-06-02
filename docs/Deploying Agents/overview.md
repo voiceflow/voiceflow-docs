@@ -7,7 +7,7 @@ metadata:
 ---
 Once you've built your agent, it's time to deploy it! We support three different ways of deploying your agent: web chat, voice, and custom interfaces.
 
-<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSCMeyAdmAZ1uJnhMWEeaXOB04ijdT3gSrDmyL" />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSdhyk8j4Z6IzDukOKQEicw3Wavh1MY9AdmGHj" />
 
 <br />
 
