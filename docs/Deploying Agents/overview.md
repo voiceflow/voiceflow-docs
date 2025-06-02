@@ -9,18 +9,16 @@ Once you've built your agent, it's time to deploy it! We support three different
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSdhyk8j4Z6IzDukOKQEicw3Wavh1MY9AdmGHj" />
 
-<br />
-
 <Cards columns={3}>
   <Card title="Web Chat Widget" href="https://docs.voiceflow.com/docs/chat-widget#/" icon="fa-comments">
     Embed chat onto a webpage and customize it to fit your brand
   </Card>
 
-  <Card title="Voice Calling" icon="fa-phone" href="https://docs.voiceflow.com/docs/setting-up-twilio-integration">
+  <Card title="Voice Calling" icon="fa-phone" href="https://docs.voiceflow.com/docs/chat-widget#/">
     Send or receive phone calls with your agent.
   </Card>
 
-  <Card title="Custom Interfaces" icon="fa-code" href="https://docs.voiceflow.com/docs/custom-channel-api#/">
+  <Card title="Custom Interfaces" icon="fa-code" href="https://docs.voiceflow.com/docs/custom-interfaces#/">
     Use Voiceflow's API to build native interfaces.
   </Card>
 </Cards>
