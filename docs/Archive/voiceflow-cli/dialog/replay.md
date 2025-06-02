@@ -9,7 +9,7 @@ metadata:
 sidebar_position: 2
 ---
 
-# Replay Command
+# Replay command
 
 The `replay` command allows you to replay previously recorded conversations with your Voiceflow project. This is useful for testing changes to your project with consistent inputs, demonstrating flows, or debugging issues.
 
@@ -53,7 +53,7 @@ voiceflow dialog replay -f my-conversation.json -e production
 
 Replays the conversation using your production environment settings.
 
-## How Replay Works
+## How replay works
 
 The `replay` command:
 
@@ -62,7 +62,7 @@ The `replay` command:
 3. Displays the responses from your Voiceflow project for each interaction
 4. Adds brief pauses between interactions to simulate natural conversation timing
 
-## Creating Recording Files
+## Creating recording files
 
 To create a file for replay, use the `dialog start` command with the `--record-file` option:
 
