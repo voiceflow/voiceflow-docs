@@ -21,7 +21,7 @@ brew install xavidop/tap/voiceflow
 
 Alternatively, you can install the Voiceflow CLI via Chocolatey (Windows) or APT (Linux). [Click here to learn more.](doc:cli-install)
 
-<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSxkKo0EIimEag8BWSoQbTdFYpDN5wRPeli0j2" />
+<br />
 
 Check to see if your Voiceflow CLI was successfully installed by running this command into your terminal:
 
@@ -30,8 +30,6 @@ voiceflow --help
 ```
 
 You should see a list of commands like in the video below, that means it worked. You’re set!
-
-<br />
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSxkKo0EIimEag8BWSoQbTdFYpDN5wRPeli0j2" />
 
