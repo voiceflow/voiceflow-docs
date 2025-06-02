@@ -61,7 +61,7 @@ export VF_API_KEY=YOUR_KEY
 
 <br />
 
-## 4. **Upload a URL to your agent's Knowledge Base**:
+## 4. **Upload data to your agent's Knowledge Base**:
 
 ```bash
 voiceflow document upload-url --url https://docs.voiceflow.com/docs/cli-quick-start.md --name "Quick Start"
@@ -69,9 +69,6 @@ voiceflow document upload-url --url https://docs.voiceflow.com/docs/cli-quick-st
 
 You’ll see a pending message while it processes.
 
-<br />
+To check if your data was successfully updated to the agent's Knowledge Base, go back to your Voiceflow browser, and head over to the 'Knowledge base' button in your sidebar. You should see your newly updated file as shown below.
 
-### 5. Check your Knowledge Base at creator
-
-* Go back to your Voiceflow browser, and head over to the 'Knowledge base' button in your sidebar
-* You should see your newly updated file as shown below
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSP20Noz7lF9by0OHwa4UL5XrKMoYGdeckgTqN" />
