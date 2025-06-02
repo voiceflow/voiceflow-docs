@@ -9,7 +9,7 @@ metadata:
 sidebar_position: 2
 ---
 
-# Replay command
+## Replay command
 
 The `replay` command allows you to replay previously recorded conversations with your Voiceflow project. This is useful for testing changes to your project with consistent inputs, demonstrating flows, or debugging issues.
 
