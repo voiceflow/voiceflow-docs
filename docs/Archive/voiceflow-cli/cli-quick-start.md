@@ -69,6 +69,6 @@ voiceflow document upload-url --url https://docs.voiceflow.com/docs/cli-quick-st
 
 You’ll see a pending message while it processes.
 
-To check if your data was successfully updated to the agent's Knowledge Base, go back to your Voiceflow browser, and head over to the 'Knowledge Base' button in your sidebar. You should see your newly updated file as shown below.
+To check if your data was successfully updated to the agent's Knowledge Base, go back to your Voiceflow project, and head over to the 'Knowledge Base' button in your sidebar. You should see your newly updated file as shown below.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSP20Noz7lF9by0OHwa4UL5XrKMoYGdeckgTqN" />
