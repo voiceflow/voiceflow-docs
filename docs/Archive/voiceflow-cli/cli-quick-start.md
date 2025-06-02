@@ -57,6 +57,8 @@ Run the following command, making sure you replace `YOUR_KEY` with the copied AP
 export VF_API_KEY=YOUR_KEY
 ```
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSsKfjoUzzvNuIPLsxO2KUc05GVE9RlySWktCi" />
+
 <br />
 
 ## 4. **Upload a URL to your agent's Knowledge Base**:
