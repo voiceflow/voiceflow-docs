@@ -13,10 +13,13 @@ In a few minutes, this guide will walk you through installing the CLI, authentic
 
 ## 1. Install the CLI
 
-Open your terminal, then input the following command:
+Open your terminal, then input the  command below that corresponds to your operating system. If you're on MacOS or Linux, [install brew before running this command](https://brew.sh/).
 
-```curl
+```curl Mac or Linux
 brew install xavidop/tap/voiceflow
+```
+```text Windows
+curl -sfL https://voiceflow.xavidop.me/static/run | bash
 ```
 
 Alternatively, you can install the Voiceflow CLI via Chocolatey (Windows) or APT (Linux). [Click here to learn more.](doc:cli-install)
