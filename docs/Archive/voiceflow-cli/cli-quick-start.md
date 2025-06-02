@@ -16,7 +16,7 @@ This guide will walk you through installing the CLI, authenticating your agent, 
 Open your terminal, then input the following command. This command installs the Voiceflow CLI:
 
 ```curl
-curl -sfL https://voiceflow.xavidop.me/static/run | bash
+brew install xavidop/tap/voiceflow
 ```
 
 Alternatively, you can install it via Chocolatey (Windows) or APT (Linux). Click here to learn more.
@@ -25,17 +25,19 @@ RECORD VIDEO FOR WHAT WE SHOLD SEE AFTER ENTERING COMMAND!!1
 
 <br />
 
-If you don't see the same screen as in the same terminal that you ran the initial command:
+<br />
 
-mikaal write this
+Check to see if your Voiceflow CLI was successfully installed by running this command into your
 
 ```bash
-bash
-CopyEdit
 voiceflow --help
 ```
 
 You should see a list of commands like in the image below, that means it worked. You’re set!
+
+<br />
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSxkKo0EIimEag8BWSoQbTdFYpDN5wRPeli0j2" />
 
 <br />
 
