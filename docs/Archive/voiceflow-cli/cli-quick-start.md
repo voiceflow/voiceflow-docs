@@ -78,3 +78,5 @@ To check if your data was successfully updated to the agent's Knowledge Base, go
 <br />
 
 ## Congratulations!
+
+You just successfully installed the CLI, authenticated your agent, and uploaded your first document to the Knowledge Base. From here, you can explore the full range of CLI commands to test your agent, fetch transcripts, and automate your workflows. Happy building!
