@@ -9,7 +9,7 @@ Do you or your company use voiceflow-cli?\
 You can help keep the project bug-free and feature rich by sponsoring the
 project and its maintainers.
 
-## GitHub Sponsors
+## GitHub sponsors
 
 GitHub Sponsors is a great way to contribute directly to the primary maintainer,\
 [xavidop](https://github.com/xavidop).
