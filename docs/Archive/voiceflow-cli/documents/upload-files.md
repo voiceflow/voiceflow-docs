@@ -1,5 +1,5 @@
 ---
-title: Upload Files
+title: Upload files
 deprecated: false
 hidden: false
 metadata:
