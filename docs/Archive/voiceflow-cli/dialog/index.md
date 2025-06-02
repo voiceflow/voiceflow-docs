@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-## Dialog Commands
-
 The `dialog` commands allow you to interact with your Voiceflow project through a conversational interface. You can start new conversations, record them for later use, replay previous conversations, and create tests from your interactions.
 
 ### Available Commands
