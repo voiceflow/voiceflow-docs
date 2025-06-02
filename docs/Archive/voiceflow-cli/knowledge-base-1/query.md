@@ -5,21 +5,21 @@ hidden: false
 metadata:
   robots: index
 ---
-# Export an agent
+## Export an agent
 
 With the `voiceflow-cli` you can query your agents' knowledge base. This is useful when you want to perform a query on your knowledge base. The `voiceflow-cli` has one command that allows you to query your knowledge base from your terminal:
 
-## Parameters
+### Parameters
 
-### Required Parameters
+#### Required Parameters
 
 * `--model, -m`: AI model to process knowledge base queries
   * Required: Yes
   * Example: `--model gpt-4`
 
-### Optional Parameters
+#### Optional Parameters
 
-#### Model Configuration
+##### Model Configuration
 
 * `--temperature, -r`
   * Range: 0.0 to 1.0
@@ -38,7 +38,7 @@ With the `voiceflow-cli` you can query your agents' knowledge base. This is usef
   * Default: empty
   * Purpose: Custom system instructions
 
-#### Tag Filtering
+##### Tag Filtering
 
 * `--include-tags, -t`
   * Default: \[]
@@ -64,15 +64,15 @@ With the `voiceflow-cli` you can query your agents' knowledge base. This is usef
   * Default: false
   * Purpose: Include all documents without tags
 
-#### Output
+##### Output
 
 * `--output-file, -d`
   * Default: "query.json"
   * Purpose: Results output location
 
-## Examples
+### Examples
 
-### Basic Query
+#### Basic Query
 
 ```bash
 voiceflow kb query --quesiton "How does feature X work?" --model gpt-4
