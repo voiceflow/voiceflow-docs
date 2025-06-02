@@ -1,11 +1,11 @@
 ---
-title: Transcripts To Test
+title: Transcripts to test
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-# Transform Transcripts into Tests
+# Transform transcripts into tests
 
 ## Overview
 
@@ -19,12 +19,12 @@ voiceflow transcript to-test [flags]
 
 ## Parameters
 
-### Required Flags
+### Required flags
 
 * `--agent-id`: Voiceflow Agent ID
 * `--transcript-id`: ID of the transcript to convert
 
-### Optional Flags
+### Optional flags
 
 * `--output-file`: Path to save the generated test (default: test.yaml)
 * `--test-name`: Name for the generated test
@@ -32,7 +32,7 @@ voiceflow transcript to-test [flags]
 
 ## Examples
 
-### Basic Usage
+### Basic usage
 
 ```bash
 voiceflow transcript to-test \
@@ -40,7 +40,7 @@ voiceflow transcript to-test \
   --transcript-id transcript-123
 ```
 
-### Full Example with Options
+### Full example with options
 
 ```bash
 voiceflow transcript to-test \
