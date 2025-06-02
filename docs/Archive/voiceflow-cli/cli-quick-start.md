@@ -7,7 +7,7 @@ metadata:
 ---
 `voiceflow-cli` is a command-line tool that allows Voiceflow users to [upload files to their knowledge base](doc:upload-files), [download transcripts](doc:fetching), [run automated tests](doc:automated-testing), and more.
 
-In a few minutes, this guide will walk you through installing the CLI, authenticating your agent, and uploading a document to your [Knowledge Base](doc:knowledge-base).
+In a few minutes, this guide will walk you through installing the CLI, authenticating your agent, and uploading a document to your [knowledge base](doc:knowledge-base).
 
 <br />
 
@@ -61,9 +61,9 @@ Alternatively, you can authenticate using a flag, or a `.env` file. [Click here 
 
 <br />
 
-## 4. Upload data to your agent's Knowledge Base
+## 4. Upload data to your agent's knowledge base
 
-You're almost there! Finally, paste the following command into your terminal to upload data to your agent's Knowledge Base. In this example, we'll upload the contents of this page!
+You're almost there! Finally, paste the following command into your terminal to upload data to your agent's knowledge base. In this example, we'll upload the contents of this page!
 
 ```bash
 voiceflow document upload-url --url https://docs.voiceflow.com/docs/cli-quick-start.md --name "Quick Start"
@@ -71,7 +71,7 @@ voiceflow document upload-url --url https://docs.voiceflow.com/docs/cli-quick-st
 
 While the upload processes, you'll see a pending status in your terminal.
 
-To check if your data was successfully updated to the agent's Knowledge Base, go back to your Voiceflow project, and click **Knowledge Base** button in your sidebar. You should see your newly updated file as shown below.
+To check if your data was successfully updated to the agent's knowledge base, go back to your Voiceflow project, and click **knowledge base** button in your sidebar. You should see your newly updated file as shown below.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSP20Noz7lF9by0OHwa4UL5XrKMoYGdeckgTqN" />
 
@@ -79,4 +79,4 @@ To check if your data was successfully updated to the agent's Knowledge Base, go
 
 ## Congratulations!
 
-You just successfully installed the CLI, authenticated your agent, and uploaded your first document to the Knowledge Base. From here, you can explore the full range of CLI commands to test your agent, fetch transcripts, and automate your workflows. Happy building!
+You just successfully installed the CLI, authenticated your agent, and uploaded your first document to the knowledge base. From here, you can explore the full range of CLI commands to test your agent, fetch transcripts, and automate your workflows. Happy building!
