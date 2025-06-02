@@ -23,7 +23,7 @@ Alternatively, you can install the Voiceflow CLI via Chocolatey (Windows) or APT
 
 <br />
 
-Check to see if your Voiceflow CLI was successfully installed by running this command into your terminal:
+To check if the Voiceflow CLI was successfully installed, run:
 
 ```bash
 voiceflow --help
@@ -38,10 +38,8 @@ You should see a list of commands, as shown below. If you do, the installation w
 ## 2. **Grab your agent's API key**
 
 * Open the [Voiceflow Creator](https://creator.voiceflow.com/), and click the agent you want to use
-* Click Interfaces in the sidebar and open the API Keys tab
+* In the sidebar, click **Interfaces** → **API keys**
 * Click the **copy** button to grab your API key
-
-<br />
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSgC3lEmcdtVY8pvMo6K2ksaDj0z4g5XZ7nI3h" />
 
@@ -63,12 +61,14 @@ export VF_API_KEY=YOUR_KEY
 
 ## 4. **Upload data to your agent's Knowledge Base**:
 
+Finally, paste the following command into your terminal to upload data to your agent's Knowledge Base:
+
 ```bash
 voiceflow document upload-url --url https://docs.voiceflow.com/docs/cli-quick-start.md --name "Quick Start"
 ```
 
 You’ll see a pending message while it processes.
 
-To check if your data was successfully updated to the agent's Knowledge Base, go back to your Voiceflow browser, and head over to the 'Knowledge base' button in your sidebar. You should see your newly updated file as shown below.
+To check if your data was successfully updated to the agent's Knowledge Base, go back to your Voiceflow browser, and head over to the 'Knowledge Base' button in your sidebar. You should see your newly updated file as shown below.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSP20Noz7lF9by0OHwa4UL5XrKMoYGdeckgTqN" />
