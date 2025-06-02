@@ -1,5 +1,5 @@
 ---
-title: Automated Testing
+title: Automated testing
 deprecated: false
 hidden: false
 metadata:
