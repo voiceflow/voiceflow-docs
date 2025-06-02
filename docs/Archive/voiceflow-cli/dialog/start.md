@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# Start Command
-
 The `start` command initiates an interactive conversation with your Voiceflow project. This allows you to test your project's dialog flow by sending text inputs and receiving responses.
 
 ## Usage
