@@ -1,6 +1,6 @@
 ---
 title: Image step
-excerpt: Send pictures and gifs to users.
+excerpt: Send images and animated gifs to users.
 deprecated: false
 hidden: false
 metadata:
@@ -12,26 +12,22 @@ next:
 ---
 <Image align="center" src="https://files.readme.io/c011ff7445c7136ac47eafac182423c27fe8d8dc07cd4c3d2527251e734ef346-Image_4.png" />
 
+The Image step allows your agent to send an image or animated gif to the user. This can be useful when building eCommerce agents as you can send product images, or when building SaaS support agents as you can send screenshots of the steps the user should allow.
+
 <br />
 
-The **Image Step** allows you to include Images and/or GIFs in your voice and chat assistants.
+## Basic usage
 
-* For **chat-based** assistants, your visuals will show up as in-line visuals within the chat dialog.
-* For **voice-based** assistants, your visuals will appear on your device's screen, in parallel with the voice-based interactions.
+To use the Image step, drag it onto the canvas and click on the step. You’ll see two options:
 
-![](https://files.readme.io/cb7cf7a-image.png)
+* Upload an image or GIF from your device
+* Paste a link to an image from the web
 
-## Adding an Image
+Once uploaded or linked, the image will appear on the step. You can hover over the image on the canvas to see it at full size.
 
-To get started with the Image Step, ensure you navigate inside an Image Step and have an intended Image or GIF to upload into your design.
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSPTit2SlF9by0OHwa4UL5XrKMoYGdeckgTqN3" />
 
-You can add your desired Image or GIF by dragging-and-dropping it into the editor, or click Browse and select one from your computer.
-
-Once uploaded, Voiceflow auto-generates and hosts a copy of the image.
-
-Once your image is uploaded, you will notice that the preview modal on the Canvas-view updates and resizes to the image properties. You can also hover over the image to preview the image in full-sized view.
-
-You can also **use a link** to an image directly, and paste it directly on the 'Link' tab.
+<br />
 
 ## Dynamic Images
 
