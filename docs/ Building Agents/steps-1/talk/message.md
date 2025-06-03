@@ -26,7 +26,7 @@ To use the Message step, simply drag it onto the canvas, click on the step, then
 
 <br />
 
-<br />
+## Variants
 
 <br />
 
