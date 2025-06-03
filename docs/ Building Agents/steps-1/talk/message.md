@@ -34,8 +34,6 @@ You can add variants manually or use AI to generate them. Each variant can inclu
 
 Below is an example of variants in action. If the user is chatting with our agent via Voiceflow's [web chat widget](doc:chat-widget), they'll be sent "Greetings, I'm a chatbot!". If they're talking to our agent using any other platform - such as [over the phone](doc:telephony) - they'll see one of the other messages at random.
 
-<br />
-
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSPEMFy3lF9by0OHwa4UL5XrKMoYGdeckgTqN3" />
 
 <br />
