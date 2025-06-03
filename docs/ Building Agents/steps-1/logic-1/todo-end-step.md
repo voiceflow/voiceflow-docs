@@ -2,7 +2,7 @@
 title: End step
 excerpt: Finish your agent's conversation with a user.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
