@@ -28,6 +28,16 @@ To use the Message step, simply drag it onto the canvas, click on the step, then
 
 ## Variants
 
+Variants are alternate versions of a message within a single Message step. Each variant can contain different content and is shown based on logic conditions you define. This allows you to adapt a message to different users, states, or inputs without creating multiple steps.
+
+You can add variants manually or use AI to generate them. Each variant can include its own formatting and conditions. When your agent is run, Voiceflow checks your variants in order and uses the first one that matches its condition. If none match, the default message is used.
+
+Below is an example of variants in action. If the user is chatting with our agent via Voiceflow's [web chat widget](doc:chat-widget), they'll be sent "Greetings, I'm a chatbot!". If they're talking to our agent using any other platform - such as [over the phone](doc:telephony) - they'll see one of the other messages at random.
+
+<br />
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSPEMFy3lF9by0OHwa4UL5XrKMoYGdeckgTqN3" />
+
 <br />
 
 <br />
