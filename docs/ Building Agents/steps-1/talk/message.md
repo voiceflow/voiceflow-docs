@@ -48,7 +48,7 @@ The Message step supports rich text formatting, such as bold, underlined, and it
 
 ## Message delay
 
-<Image align="center" src="https://files.readme.io/1eec5a2284a00ea33b8fe1875b26ff7ae7091f880360ac9e2a1c2fdf1b5115e1-Frame_48095757.png" />
+<Image align="center" width="600px" src="https://files.readme.io/4e6a4e0f352bca1d70f8c1f2a3ef7a86bb9477df401818f2129942f2b01b2c7e-Frame_48095759.png" />
 
 The message delay option allows you to add a delay between the step in the agent's flow being reached and the message being sent. The message delay is set in milliseconds - for example, if the message delay is set to 500 would add a 0.5 second delay before the message is sent.
 
