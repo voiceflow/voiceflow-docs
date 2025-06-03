@@ -1,6 +1,6 @@
 ---
 title: Message step
-excerpt: Make your agent send pre-set messages.
+excerpt: Send pre-written responses with rich formatting, variants, and conditions.
 deprecated: false
 hidden: false
 metadata:
@@ -12,11 +12,25 @@ next:
 ---
 <Image align="center" src="https://files.readme.io/322d0fc7059fbd27fcc8a1f3f232d936e072703f37a7afe23b55e9d0f28316a4-Message.png" />
 
-Messages are an important data type in your agent. Available are a suite of tools to scale message creation and usage, transforming how you manage, scale, and customize your AI agent’s responses. This guide provides detailed, step-by-step instructions for using messages across your agent and explains how you can leverage the supporting tools to maximize effectiveness.
+The Message step outputs a pre-written message to the user. This is commonly used to provide information, confirm an action, display errors, or give feedback. Messages can be static (single response), dynamic (conditional variants), or reused across your agent for consistency.
 
-> 📘
->
-> The Messages feature is currently available exclusively for chat projects. We recognize the value this feature brings and are actively working on unifying our chat and voice project types. Our goal is to ensure that both modalities will soon benefit from the enhanced flexibility and efficiency that Messages provide.
+Each Message step is connected to a message stored in your agent’s CMS. These messages support basic formatting, multiple variants, and condition logic to determine which version is shown.
+
+<br />
+
+## Basic usage
+
+To use the Message step, simply drag it onto the canvas, click on the step, then set the message you'd like the agent to send using the input on the sidebar. Don't forget to then connect your step to the rest of your workflow!
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSwKf3RWqEGMDpIXu5W2NnhOr30QY4UBJcmZFA" />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 ### Key Features
 
