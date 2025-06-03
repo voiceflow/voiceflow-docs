@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/48faea677434dadc0685a32026ad9a8e94e61edd4e72175681a96cea7aa90fec-Voiceflow_Slack_5.png" />
+<Image align="center" src="https://files.readme.io/322d0fc7059fbd27fcc8a1f3f232d936e072703f37a7afe23b55e9d0f28316a4-Message.png" />
 
 Messages are an important data type in your agent. Available are a suite of tools to scale message creation and usage, transforming how you manage, scale, and customize your AI agent’s responses. This guide provides detailed, step-by-step instructions for using messages across your agent and explains how you can leverage the supporting tools to maximize effectiveness.
 
