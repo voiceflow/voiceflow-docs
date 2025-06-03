@@ -8,7 +8,9 @@ metadata:
 ---
 <Image align="center" src="https://files.readme.io/1bb4dd44c6fd25d45e3f6932a75bf4247299612528d7638a2e8ac20540969157-Image_5.png" />
 
-The End step allows your agent to finish a conversation. In the real world, this means hanging up if using Voiceflow's [Voice (phone number)](doc:telephony) integration, or ending a chat session if using our [web chat widget](doc:chat-widget).
+The End step allows your agent to cleanly finish a conversation. In the real world, this might mean hanging up the phone when using Voiceflow's [voice (phone number)](doc:telephony) integration, or closing a chat session when using our [web chat widget](doc:chat-widget)/
+
+Use the End step when the conversation has reached a natural conclusion, like after confirming an appointment, submitting a form, or answering a user's final question. It helps signal to both the user and the system that no further interaction is expected.
 
 <br />
 
