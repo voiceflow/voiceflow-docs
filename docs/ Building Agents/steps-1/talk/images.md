@@ -35,6 +35,6 @@ You can also use variables to load different images dynamically. To do this, ins
 
 This is useful for changing visuals based on the conversation - for example, showing the user a country’s flag, a product preview, or a user-generated image.
 
-Here’s an example using a dynamic image link based on the `{user_id}` variable:
+Here’s an example using a dynamic image link based on the `\{user_id}` variable:
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSY3aUXBRLqS74rbVsgFnoXQRxeBvDfjhUtWTm" />
