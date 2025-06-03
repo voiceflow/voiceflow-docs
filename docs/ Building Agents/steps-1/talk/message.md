@@ -1,6 +1,6 @@
 ---
 title: Message step
-excerpt: ''
+excerpt: Make your agent send pre-set messages.
 deprecated: false
 hidden: false
 metadata:
