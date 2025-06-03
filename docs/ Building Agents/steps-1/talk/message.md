@@ -60,6 +60,6 @@ One example use-case of message delay is if you're sending multiple pieces of in
 
 <Image align="center" src="https://files.readme.io/9f5516d556408f026ab9dec7efcfb545dccf4ef2bcad309238934a07f6378615-Frame_48095758.png" />
 
-Sometimes you’ll want to use the same message in multiple places-  like a legal disclaimer or a standard confirmation message. To reuse a message, type `/` in the message input and start typing part of the message. Then, select the message you'd like to use from the list that appears.
+Sometimes you’ll want to use the same message in multiple places - like a legal disclaimer or a standard confirmation message. To reuse a message, type `/` in the message input and start typing part of the message. Then, select the message you'd like to use from the list that appears.
 
 If you edit a reused message, that change will apply across all steps that it’s used in. This helps keep things consistent across your agent. Messages can also be managed from the [CMS](doc:cms)
