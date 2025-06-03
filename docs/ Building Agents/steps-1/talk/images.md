@@ -10,6 +10,10 @@ metadata:
 next:
   description: ''
 ---
+<Image align="center" src="https://files.readme.io/4e80eb9bbf8acdd483b3f9192de853c2a7cd85c91798e497da09eea466070c97-Voiceflow_Slack_2.png" />
+
+<br />
+
 The **Image Step** allows you to include Images and/or GIFs in your voice and chat assistants.
 
 * For **chat-based** assistants, your visuals will show up as in-line visuals within the chat dialog.
@@ -21,13 +25,13 @@ The **Image Step** allows you to include Images and/or GIFs in your voice and ch
 
 To get started with the Image Step, ensure you navigate inside an Image Step and have an intended Image or GIF to upload into your design.
 
-You can add your desired Image or GIF by dragging-and-dropping it into the editor, or click Browse and select one from your computer. 
+You can add your desired Image or GIF by dragging-and-dropping it into the editor, or click Browse and select one from your computer.
 
 Once uploaded, Voiceflow auto-generates and hosts a copy of the image.
 
 Once your image is uploaded, you will notice that the preview modal on the Canvas-view updates and resizes to the image properties. You can also hover over the image to preview the image in full-sized view.
 
-You can also **use a link** to an image directly, and paste it directly on the 'Link' tab. 
+You can also **use a link** to an image directly, and paste it directly on the 'Link' tab.
 
 ## Dynamic Images
 
