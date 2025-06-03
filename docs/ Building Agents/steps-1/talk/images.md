@@ -1,6 +1,6 @@
 ---
 title: Image step
-excerpt: How do I add images to my conversation design or assistant?
+excerpt: Send pictures and gifs to users.
 deprecated: false
 hidden: false
 metadata:
