@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/4e80eb9bbf8acdd483b3f9192de853c2a7cd85c91798e497da09eea466070c97-Voiceflow_Slack_2.png" />
+<Image align="center" src="https://files.readme.io/82df79d65542d1f570f2f507ce293efa9a441a9feaf8792e5d84aa5fc9182674-Voiceflow_Slack_4.png" />
 
 <br />
 
