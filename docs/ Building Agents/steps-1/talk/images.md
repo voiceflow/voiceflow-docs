@@ -31,10 +31,8 @@ Once uploaded or linked, the image will appear on the step. You can hover over t
 
 ## Dynamic images
 
-You can also use variables to load different images dynamically. To do this, insert a variable (e.g. `{my_url}`) into the image link field.
+You can also use variables to load different images dynamically. This is useful for changing visuals based on the conversation - for example, showing a product preview or a user-generated image.
 
-This is useful for changing visuals based on the conversation - for example, showing the user a country’s flag, a product preview, or a user-generated image.
-
-Here’s an example using a dynamic image link based on the `\{user_id}` variable:
+To use dynamic images, insert a variable (e.g. `{my_url}`) into the image link field. Here’s an example using a dynamic image link based on the `\{user_id}` variable:
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSY3aUXBRLqS74rbVsgFnoXQRxeBvDfjhUtWTm" />
