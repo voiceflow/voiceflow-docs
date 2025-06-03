@@ -29,7 +29,7 @@ Once uploaded or linked, the image will appear on the step. You can hover over t
 
 <br />
 
-## Dynamic Images
+## Dynamic images
 
 You can also use variables to load different images dynamically. To do this, insert a variable (e.g. `{my_url}`) into the image link field.
 
