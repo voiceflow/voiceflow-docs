@@ -13,13 +13,3 @@ It is useful for your day-to-day tasks or if you want to integrate it with your 
 * [How to install the tool](/docs/install)
 * [Authentication](/docs/authentication)
 * [Read the FAQ](/docs/faq)
-
-## Got questions, comments or suggestions?
-
-`voiceflow-cli` is developed by [xavidop](https://github.com/xavidop).
-
-You can contact us via email at: [xavierportillaedo@gmail.com](mailto:xavierportillaedo@gmail.com).
-
-Follow [@xavidop on Twitter](https://x.com/xavidop) for updates and announcements.
-
-Visit our [links](/docs/links) section for more information about staying connected with us.
