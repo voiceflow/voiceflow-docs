@@ -20,26 +20,30 @@ Your Voiceflow account is organized into workspaces and projects. Think of a wor
 
 Your workspace is home to your projects and is the first thing you'll see when [logging into Voiceflow](https://creator.voiceflow.com). You can organize your projects inside a workspace using folders, and can customize a project's icon, name, and description by hovering over the project and clicking the three dots that appear. From there, you can also export your agent as a `.vf` file, or share a clone link which allows others to copy your agent.
 
-If you are on a Teams or Enterprise plan, you can create multiple workspaces - just click the name of your workspace in the top left corner of the dashboard, then click **new workspace**.
+If you are on a Teams or Enterprise plan, you can create multiple workspaces - just click the name of your workspace in the top left corner of your workspace, then click **new workspace**.
+
+> ℹ️
+>
+> Each workspace you create is billed separately. [Learn more](doc:billing-plans).
+
+<br />
+
+## Projects
+
+![](https://files.readme.io/cf1ebe3e200709c181a4dfc78b7aa07bc2d3e03a6778514d86705864d97fba69-CleanShot_2025-06-04_at_16.13.442x.png)
+
+Each workspace contains one or more projects. A project contains an AI agent that does a specific task, such as customer support or lead qualification. Each project is made up of [workflows](doc:workflows), [steps](doc:steps-1), and a [knowledge base](doc:knowledge-base-1). All the logic, content, and settings for a given agent live inside a single project.
+
+When you make changes to a project, they'll be visible to everyone who has access to that project.
+
+<br />
 
 ## Permissions and collaborators
 
-Collaboration is done on a ***workspace level*** in Voiceflow. So when you invite a viewer, they will have access to everything in the workspace. You can choose to have someone be an editor on a specific agent, but they will **still be able to see all other agents** in the workspace. To share a prototype with someone without giving them access to the internals of your agent, use the [**prototypes** feature](https://developer.voiceflow.com/v2.0/docs/sharing-prototypes), which lets you quickly send them a link to try out your agent.
+In Voiceflow, collaboration happens at the **workspace level**. When you invite someone to a workspace, they’ll be able to see all projects inside it.
 
-To change an individual's permission level for an agent, click on the options button and select *manage access*.
+You can set someone as an editor or viewer for a specific agent, but keep in mind - they’ll still have visibility into the other agents in that workspace. If you want to share a working version of your agent without exposing its internals, use [prototypes](doc:sharing-prototypes) instead. Prototypes let you send a link so someone can try out the assistant without editing access.
 
-![](https://files.readme.io/1b219de-CleanShot_2024-06-07_at_17.11.54.png)
+To update someone’s permissions, click the three-dot menu on the project card and choose **manage access**. Please note that you'll only be able to add someone to a project if they're already a member of your workspace. You can manage workspace members using the **Members** option on your workspace's sidebar.
 
-## Agents
-
-Each project in Voiceflow is a single agent. Each agent has its own dedicated
-
-* Knowledge Base
-* Workflows
-* Data
-
-When you make an update to an agent (ie. adding new data sources to the knowledge base), that update is available to everyone interacting with the agent.
-
-One agent can be connected to multiple channels (discord, slack, whatsapp, etc.) via the Dialog API.
-
-![](https://files.readme.io/efc228b-CleanShot_2024-07-11_at_10.47.512x.png)
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSenOkH0udZMmjqWXT2Jz1BkCrxLYFRlwhuOHG" />
