@@ -1,6 +1,8 @@
 ---
 title: Set step
-excerpt: ''
+excerpt: >-
+  Set variables to specific values, using expressions, or the output of a
+  prompt.
 deprecated: false
 hidden: false
 metadata:
@@ -10,6 +12,8 @@ metadata:
 next:
   description: ''
 ---
+<Image align="center" src="https://files.readme.io/b291c53b039c518e60f8290b9c486f1e8ac08fc26d57bc00c82e043c6b9e333b-Image_7.png" />
+
 ### How do I assign or set values of variables in my agent?
 
 Throughout your agent, you may need to change variable values when a user reaches a specific point or takes a certain action. Sometimes, you’ll want to reset or modify these values based on particular circumstances.
