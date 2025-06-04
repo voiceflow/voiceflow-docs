@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/42a171e4b64af2f53f88ada7a2c05a627ddf70df010b960e8c2bc133c4b57278-Image_6.png" />
+<Image align="center" src="https://files.readme.io/066734229cab35b1378481902918e55d24605558c46b433d08a7f2cb018a587c-Image_7.png" />
 
 The JavaScript step allows you to write and execute JavaScript (ES6 on V8) code within your assistant directly.
 
