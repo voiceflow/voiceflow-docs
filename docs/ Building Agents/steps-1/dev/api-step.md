@@ -1,6 +1,6 @@
 ---
 title: API step
-excerpt: ''
+excerpt: Send requests to API endpoints and get responses back.
 deprecated: false
 hidden: false
 metadata:
@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+<Image align="center" src="https://files.readme.io/abf9aa8877633d39e03198a600fd1f5522b4854ce1f8c4c86b2b19e1c5cbdf8e-Image_6.png" />
+
 The API Step allows you to make custom API calls to connect your assistant with external APIs and data.
 
 The API block consists of several parts:
@@ -68,7 +70,7 @@ For example, here's the Raw Body for adding an entry to Airtable. We include `"{
 
 Once you have successfully made an API call, you will receive back a JSON object. Once you have this, you will likely want to save some of the information you got back onto Voiceflow to speak back to the user, send to another API or compare to something that a user has said.
 
-You can do this using the “Capture Response” section. If you preview the request, you will be able to select the path of the value you want to store in a variables. Simply select the path key and assign it to an agent variable. Once selected, this will be populated in the API editor. 
+You can do this using the “Capture Response” section. If you preview the request, you will be able to select the path of the value you want to store in a variables. Simply select the path key and assign it to an agent variable. Once selected, this will be populated in the API editor.
 
 ![](https://files.readme.io/593dbf7bae6ca05b3ebe87ec7759dd009c48d67c2c15f9c3ffb82e51ba195345-CleanShot_2025-01-06_at_09.53.262x.png)
 
@@ -89,7 +91,7 @@ You can map the **name** to a variable using `response.name`.
 
 ## Failure Paths
 
-Should you wish to expose a path if the request returns an error, you can optionally toggle on the *Failure path* and it will render a new port for you to connect into your fallback flow. 
+Should you wish to expose a path if the request returns an error, you can optionally toggle on the *Failure path* and it will render a new port for you to connect into your fallback flow.
 
 ![](https://files.readme.io/6432b2068bdbea0319bbe278808b5fd7984dabc0ed45ec99eaa47e18f824570f-CleanShot_2024-12-17_at_10.53.30.png)
 
