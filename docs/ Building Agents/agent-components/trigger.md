@@ -1,5 +1,5 @@
 ---
-title: Trigger
+title: Triggers
 excerpt: ''
 deprecated: false
 hidden: false
