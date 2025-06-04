@@ -1,5 +1,5 @@
 ---
-title: Secrets Manager
+title: Secrets
 excerpt: ''
 deprecated: false
 hidden: false
