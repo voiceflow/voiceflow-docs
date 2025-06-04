@@ -28,6 +28,8 @@ Here's an example of a JavaScript step that increments the `score` variable by 1
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSEnaxIH9641VSkrpQRJIKob2De5U3aXGdyMh8" />
 
+<br />
+
 ## Paths
 
 The JavaScript step supports paths, which allow you to route your agent based on the value that is returned by the JavaScript step. There are two ways to use paths: with the standard paths, or using custom paths.
