@@ -57,7 +57,7 @@ if (score > 100) {
 
 ![](https://files.readme.io/5c82248-image.png)
 
-## Are there any Code Step constraints to consider?
+## Limitations
 
 Some constraints to consider when using the Code Step include:
 
