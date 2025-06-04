@@ -16,11 +16,11 @@ Your Voiceflow account is organized into workspaces and projects. Think of a wor
 
 ## Workspaces
 
+<Image align="center" src="https://files.readme.io/f5e2a9a2275cafec17969b8ce5c13c59dc807b049ebc25d8688c0b32a63b385c-CleanShot_2025-06-04_at_15.56.522x.png" />
+
 Your workspace is home to your projects and is the first thing you'll see when [logging into Voiceflow](https://creator.voiceflow.com). You can organize your projects inside a workspace using folders, and can customize a project's icon, name, and description by hovering over the project and clicking the three dots that appear. From there, you can also export your agent as a `.vf` file, or share a clone link which allows others to copy your agent.
 
 If you are on a Teams or Enterprise plan, you can create multiple workspaces - just click the name of your workspace in the top left corner of the dashboard, then click **new workspace**.
-
-<Image align="center" src="https://files.readme.io/f5e2a9a2275cafec17969b8ce5c13c59dc807b049ebc25d8688c0b32a63b385c-CleanShot_2025-06-04_at_15.56.522x.png" />
 
 ## Permissions and collaborators
 
