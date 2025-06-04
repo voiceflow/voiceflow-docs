@@ -44,9 +44,7 @@ The code step has two standard paths: `Default` and `Fail`. The Default path wil
 
 ### Custom paths
 
-You can add up to 10 custom paths to route users based on your logic. Each path must be named.
-
-Use a `return [path_name]` statement in your code to choose the path. If no path is returned, the flow continues through the `Default` path.
+You can add up to 10 custom paths to route users based on your logic. Each path must be named. Use a `return [path_name]` statement in your code to route the agent to that path. If no path is returned, the flow continues through the `Default` path.
 
 Here's example with two custom paths: `victory`, `defeat`. If the `score` variable is above `100`, `victory` is returned. If `score` is less than `0`, then `defeat` is returned. Otherwise, the `Default` path is followed.
 
@@ -71,6 +69,26 @@ Some constraints to consider when using the JavaScript step include:
 * JavaScript steps do not currently support importing modules.
 * JavaScript steps cannot be used to create new variables. Any variables that you want to use after the JavaScript step is executed must already exist before being referenced in the JavaScript step.
 
-## Why do I get a TypeError debug message when I test a Code Step using the prototype tool?
+<br />
 
-Currently, if an existing Voiceflow variable is not set by the time the Code Step begins executing, the value of that variable is `0`. For example, if the Code Step attempts to execute a String method on a variable that is not yet set, a TypeError will occur.
+## Debugging
+
+### Common error: TypeError when testing the JavaScript step
+
+In the Creator tool, if a variable hasn’t been set before the step runs, it defaults to `0`. This can lead to a `TypeError` if your code expects a string or other type.
+
+For example, this will fail if username hasn’t been set:
+
+```javascript
+username.toLowerCase();
+
+```
+
+To avoid this, always check for the variable first:
+
+```javascript
+if (username) {
+  username = username.toLowerCase();
+}
+
+```
