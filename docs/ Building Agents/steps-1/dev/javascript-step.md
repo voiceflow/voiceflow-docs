@@ -44,7 +44,7 @@ The code step has two standard paths: `Default` and `Fail`. The Default path wil
 
 You can add up to 10 custom paths to route users based on your logic. Each path must be named.
 
-Use a `return \[path\_name]` statement in your code to choose the path. If no path is returned, the flow continues through the Default path.
+Use a `return [path_name]` statement in your code to choose the path. If no path is returned, the flow continues through the Default path.
 
 Example: there are two custom paths: `"victory"`, `"defeat"`, the code would look like:
 
