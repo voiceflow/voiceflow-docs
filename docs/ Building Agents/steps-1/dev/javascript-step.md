@@ -16,7 +16,7 @@ The JavaScript step lets you write and execute short JavaScript snippets (ES6 on
 
 This step runs once when reached and evaluates immediately. If your use case involves longer or reusable code, we recommend using a [Function](doc:functions) instead.
 
-## Using variables in your code
+## Basic usage
 
 To use the JavaScript step, drag it onto the canvas and click into the step to open the code editor.
 
