@@ -1,5 +1,5 @@
 ---
-title: Knowledge Base
+title: Knowledge base
 excerpt: ''
 deprecated: false
 hidden: false
