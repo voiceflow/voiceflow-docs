@@ -1,5 +1,5 @@
 ---
-title: Capturing Data
+title: Capturing data
 excerpt: ''
 deprecated: false
 hidden: false
