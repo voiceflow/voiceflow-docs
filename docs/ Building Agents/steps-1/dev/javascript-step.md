@@ -1,6 +1,6 @@
 ---
 title: JavaScript step
-excerpt: ''
+excerpt: Run custom JavaScript to manipulate variables or control logic.
 deprecated: false
 hidden: false
 metadata:
@@ -12,19 +12,17 @@ next:
 ---
 <Image align="center" src="https://files.readme.io/066734229cab35b1378481902918e55d24605558c46b433d08a7f2cb018a587c-Image_7.png" />
 
-The JavaScript step allows you to write and execute JavaScript (ES6 on V8) code within your assistant directly.
+The JavaScript step lets you write and execute short JavaScript snippets (ES6 on V8) directly in your agent. It’s useful for logic that doesn’t require an external API call or reusable function like parsing JSON, modifying variables, or adding conditional paths.
 
-Some use cases of a JavaScript step include JSON data manipulation, variable and entity data processing, and last\_utterance variable handling.
-
-> 📘 Consider if a [function](https://developer.voiceflow.com/v2.0/docs/custom-functions) is more appropriate for your use case
->
-> The JavaScript step should only be used for one-off and short code snippets, with simple variable parsing, updates or JSON formatting. For anything longer than a couple of lines of code, and that should be re-usable in your project, making a [function](https://developer.voiceflow.com/v2.0/docs/custom-functions) will be easier and better.
+This step runs once when reached and evaluates immediately. If your use case involves longer or reusable code, we recommend using a [Function](doc:functions) instead.
 
 ## Using variables in your code
 
-The code step automatically exposes all of your variables to be used within the code step directly. To use variables within the code step, simply type the name of the variable, there is no need to add curly braces (\{ }). If variables are updated to be equal to undefined, they’ll be saved as `null` because variables do not support being *undefined*.
+To use the JavaScript step, drag it onto the canvas and click into the step to open the code editor.
 
-For example, if there is an assistant variable called score, to update the score by 1 you would just write: `score = score + 1;`.
+All of the agent's variables are automatically available for use—no need to reference them with curly braces. You can update variable values by reassigning them directly.
+
+Example:
 
 ![](https://files.readme.io/2178e8d-image.png)
 
