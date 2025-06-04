@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+<Image align="center" src="https://files.readme.io/c31a07abac06dc4bb4e6908c1df2d8f69a3cafb7b17275aa0583d77fdb160e6e-Image_8.png" />
+
 The Function step is a powerful feature that allows developers to create custom logic and operations within their AI Agents. This document will guide you through the process of creating, configuring, and using a Function step on the canvas.
 
 > 📘 For a large library of pre-made functions, check out the [function marketplace](https://www.voiceflow.com/resources-functions?products=Function).
