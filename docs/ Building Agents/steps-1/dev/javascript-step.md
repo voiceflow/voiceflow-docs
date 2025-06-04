@@ -59,8 +59,6 @@ if (score > 100) {
 // otherwise it will go down the Default path here
 ```
 
-<br />
-
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSuoZWkRfjpsnQSycmdlxWUPV8E9XNA5F0vJYD" />
 
 ## Limitations
