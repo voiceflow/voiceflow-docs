@@ -63,11 +63,11 @@ if (score > 100) {
 
 ## Limitations
 
-Some constraints to consider when using the Code Step include:
+Some constraints to consider when using the JavaScript step include:
 
-* Code Steps **cannot be used to make requests to external servers**, so cannot be used to call external APIs. Alternatively, you can use the API Step to pull or push data between your Voiceflow agent and a third-party system, or [functions](https://developer.voiceflow.com/v2.0/docs/custom-functions).
-* Code Steps do not currently support importing modules.
-* Code Steps cannot be used to create new variables. Any variables that you want to use after the Code Step is executed must already exist before being referenced in the Code Step.
+* JavaScript steps **cannot be used to make requests to external servers**, so cannot be used to call external APIs. Alternatively, you can use the API Step to pull or push data between your Voiceflow agent and a third-party system, or [functions](https://developer.voiceflow.com/v2.0/docs/custom-functions).
+* JavaScript steps do not currently support importing modules.
+* JavaScript steps cannot be used to create new variables. Any variables that you want to use after the JavaScript step is executed must already exist before being referenced in the JavaScript step.
 
 ## Why do I get a TypeError debug message when I test a Code Step using the prototype tool?
 
