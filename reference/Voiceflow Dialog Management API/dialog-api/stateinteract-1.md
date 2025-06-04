@@ -53,14 +53,6 @@ excerpt: >-
   200 OK response below to see a list of possible response traces.
 
 
-  ### Runtime Logs
-
-
-  The `logs` query parameter can be used to enable [debug
-  logging](https://developer.voiceflow.com/reference/logs-reference), which
-  includes `log` traces in the response.
-
-
   ### Legacy responses
 
   For legacy compatibility, you set the `verbose` query parameter to `true` to
