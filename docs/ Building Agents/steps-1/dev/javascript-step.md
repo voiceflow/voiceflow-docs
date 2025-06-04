@@ -22,15 +22,23 @@ To use the JavaScript step, drag it onto the canvas and click into the step to o
 
 All of the agent's variables are automatically available for use—no need to reference them with curly braces. You can update variable values by reassigning them directly.
 
-Example:
+Here's an example of a JavaScript step that increments the `score` variable by 1:
 
 ![](https://files.readme.io/2178e8d-image.png)
 
-## Standard paths
+<br />
+
+## Paths
+
+The JavaScript step supports paths, which allow you to route your agent based on the value that is returned by the JavaScript step. There are two ways to use paths: with the standard paths, or using custom paths.
+
+<br />
+
+### Standard paths
 
 The code step has two standard paths: `Default` and `Fail`. The Default path will be followed if your code is successfully run, and the Fail path will be followed if your code fails to run or has an error during its execution.
 
-## Custom paths
+### Custom paths
 
 It is possible to conditionally branch the flow based on code. You can add **up to 10 custom paths** in a code step, and give a custom name for each path.
 
