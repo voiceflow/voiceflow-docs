@@ -1,5 +1,5 @@
 ---
-title: Workspaces and Projects
+title: Workspaces and projects
 excerpt: Create awesome agents and keep them organized.
 deprecated: false
 hidden: false
