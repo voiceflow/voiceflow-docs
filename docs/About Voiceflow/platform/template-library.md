@@ -1,5 +1,5 @@
 ---
-title: Template Library
+title: Libraries
 excerpt: ''
 deprecated: false
 hidden: false
