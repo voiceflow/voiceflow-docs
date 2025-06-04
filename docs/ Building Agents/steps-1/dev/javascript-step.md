@@ -48,7 +48,7 @@ You can add up to 10 custom paths to route users based on your logic. Each path 
 
 Use a `return [path_name]` statement in your code to choose the path. If no path is returned, the flow continues through the `Default` path.
 
-Example: there are two custom paths: `"victory"`, `"defeat"`, the code would look like:
+Example: there are two custom paths: `victory`, `defeat`, the code would look like:
 
 ```javascript
 if (score > 100) { 
