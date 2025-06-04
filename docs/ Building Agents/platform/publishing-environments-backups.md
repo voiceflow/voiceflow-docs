@@ -1,5 +1,5 @@
 ---
-title: Publishing, Environments and Backups
+title: Environments and Backups
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,24 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Publishing
-
-*How to publish my Assistant? How to bring my Assistant to production? How do I make my Assistant live?*
-
-Depending on your Assistant type, you can publish to production by navigating and clicking Publish (↻) on the top navigation bar header.
-
-![](https://files.readme.io/92295d7-image.png)
-
-Every time that you publish, a production version will be created to save the state of your Assistant. This gives you a history of your changes in production and lets you roll back to previous versions. 
-
-When prompted to publish a production version, you will have the option to give your new version a name.
-
-***Note:** Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Version successfully published' to appear.*
-
-The action of publishing a new version will overwrite the existing/production (live) version of your assistant, which you can manage and monitor the progress, under Versions. Keep in mind this will leave your draft(s) untouched but will affect the production version. Learn more about versions here.
-
-*Read about production versioning and its significance in our development documentation here.*
-
 # Environments
 
 Environments provide a well-organized space to separate the development and production versions of your project. This guide will walk you through how to effectively use the Environments feature to streamline your development process.
@@ -91,7 +73,7 @@ To create a version, use the keyboard shortcut Shift + ⌘ + S (Shift + Ctrl + S
 
 When prompted to create a New Version, you will have the option to give your new version a name.
 
-***Note**: Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Saved new version'  + [Your Version Name] to appear.*
+***Note**: Once a new version is named, configured & created, please give a few seconds for the confirmation notification 'Saved new version'  + \[Your Version Name] to appear.*
 
 ## How to View, Manage, Rollback and Restore a Backup
 
@@ -127,7 +109,7 @@ Select Download to receive a project export (.vf) of your assistant content that
 
 ### Restore a backup
 
-If you want to roll back to a backup, click the Restore option in the above menu. 
+If you want to roll back to a backup, click the Restore option in the above menu.
 
 ***Note**: This action can NOT be undone. Make sure you’ve previewed the version and confirmed this sequence, and are expecting overwriting of your recent version(s)/change(s) before reverting.*
 
