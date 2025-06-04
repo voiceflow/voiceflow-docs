@@ -12,12 +12,6 @@ next:
 ---
 The **Prompt step** allows you to incorporate advanced AI-driven responses into your conversational agents. By leveraging pre-defined prompts, you can create dynamic and context-aware interactions that enhance the user experience. The Prompt step simplifies the integration of complex prompts, making it easier to design intelligent and responsive agents.
 
-## Migrating to the Prompt step
-
-If you're currently using the legacy AI steps, you must migrate to the Prompt step before June 3rd 2025. Follow the instructions in the video below to do so
-
-<Embed url="https://www.youtube.com/watch?v=8zv8le6VApc" title="AI in Voiceflow is Changing: Upgrade to the New Prompt Step" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/8zv8le6VApc/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=8zv8le6VApc" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252F8zv8le6VApc%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D8zv8le6VApc%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252F8zv8le6VApc%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
-
 <br />
 
 ## What is the Prompt Step?
