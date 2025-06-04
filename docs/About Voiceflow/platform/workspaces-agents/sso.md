@@ -3,6 +3,7 @@ title: Single Sign-On (SSO) and SAML
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-building-lock
 metadata:
   title: ''
   description: ''
