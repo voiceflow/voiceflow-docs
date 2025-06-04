@@ -1,4 +1,3 @@
-- secrets-manager
 - workflows
 - steps-blocks
 - steps-1
@@ -11,3 +10,4 @@
 - trigger
 - functions
 - actions
+- secrets-manager
