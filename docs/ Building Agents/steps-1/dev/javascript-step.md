@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+<Image align="center" src="https://files.readme.io/42a171e4b64af2f53f88ada7a2c05a627ddf70df010b960e8c2bc133c4b57278-Image_6.png" />
+
 The JavaScript step allows you to write and execute JavaScript (ES6 on V8) code within your assistant directly.
 
 Some use cases of a JavaScript step include JSON data manipulation, variable and entity data processing, and last\_utterance variable handling.
