@@ -1,5 +1,5 @@
 ---
-title: Best Practices
+title: Best practices
 excerpt: Best practices for building scalable Agents in Voiceflow.
 deprecated: false
 hidden: false
