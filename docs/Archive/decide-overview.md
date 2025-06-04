@@ -4,7 +4,7 @@ excerpt: >-
   Deciding is using logic, variables, and other information to flesh out
   diffferent capabilities of your AI agent, and collect external infromation.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
