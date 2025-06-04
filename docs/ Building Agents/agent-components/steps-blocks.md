@@ -1,8 +1,9 @@
 ---
-title: Steps and Blocks
+title: Blocks
 excerpt: ''
 deprecated: false
 hidden: false
+icon: 😆
 metadata:
   title: ''
   description: ''
