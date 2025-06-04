@@ -1,5 +1,5 @@
 ---
-title: Error Handling
+title: Error handling
 excerpt: ''
 deprecated: false
 hidden: false
