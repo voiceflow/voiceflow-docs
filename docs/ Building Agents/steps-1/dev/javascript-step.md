@@ -38,11 +38,13 @@ The JavaScript step supports paths, which allow you to route your agent based on
 
 The code step has two standard paths: `Default` and `Fail`. The Default path will be followed if your code is successfully run, and the Fail path will be followed if your code fails to run or has an error during its execution.
 
+<br />
+
 ### Custom paths
 
-It is possible to conditionally branch the flow based on code. You can add **up to 10 custom paths** in a code step, and give a custom name for each path.
+You can add up to 10 custom paths to route users based on your logic. Each path must be named.
 
-To go down a path, simply call return `"path_name"` within the code. If nothing is returned, it will use the Default path.
+Use a `return \[path\_name]` statement in your code to choose the path. If no path is returned, the flow continues through the Default path.
 
 Example: there are two custom paths: `"victory"`, `"defeat"`, the code would look like:
 
