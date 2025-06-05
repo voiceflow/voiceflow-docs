@@ -1,6 +1,6 @@
 ---
-title: Workspaces and projects
-excerpt: Create awesome agents and keep them organized.
+title: Workspaces
+excerpt: Organize your team’s projects in shared workspaces
 deprecated: false
 hidden: false
 metadata:
@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Your Voiceflow account is organized into workspaces and projects. Think of a workspace as a “team” or a “company”,  with each workspace containing one or more projects. Each project is its own AI agent with its own logic, [knowledge base](doc:knowledge-base-1), and [workflows](doc:workflows).
+Your Voiceflow account is organized into workspaces, which act like teams or companies. Each workspace contains one or more projects.
 
-## Workspaces
+<br />
 
 <Image align="center" src="https://files.readme.io/f5e2a9a2275cafec17969b8ce5c13c59dc807b049ebc25d8688c0b32a63b385c-CleanShot_2025-06-04_at_15.56.522x.png" />
 
@@ -23,16 +23,6 @@ If you are on a Teams or Enterprise plan, you can create multiple workspaces - j
 > ℹ️
 >
 > Each workspace you create is billed separately. [Learn more](doc:billing-plans).
-
-<br />
-
-## Projects
-
-![](https://files.readme.io/cf1ebe3e200709c181a4dfc78b7aa07bc2d3e03a6778514d86705864d97fba69-CleanShot_2025-06-04_at_16.13.442x.png)
-
-Each workspace contains one or more projects. A project contains an AI agent that does a specific task, such as customer support or lead qualification. Each project is made up of [workflows](doc:workflows), [steps](doc:steps-1), and a [knowledge base](doc:knowledge-base-1). All the logic, content, and settings for a given agent live inside a single project.
-
-When you make changes to a project, they'll be visible to everyone who has access to that project.
 
 <br />
 
