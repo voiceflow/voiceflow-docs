@@ -14,7 +14,7 @@ Voiceflow supports different permission levels based on what your team members n
 
 ## Owner
 
-Owners have full control across the entire workspace. Owners on Enterprise plan have full control over all workspaces owned by an organization. Owners can:
+Owners have full control over their workspace. Owners on Enterprise plan have full control over all workspaces owned by an organization. Owners can:
 
 <Tabs>
   <Tab title="Pro and Team Plans">
