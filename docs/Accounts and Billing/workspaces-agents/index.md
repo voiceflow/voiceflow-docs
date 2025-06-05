@@ -20,7 +20,7 @@ If you are on a Teams or Enterprise plan, you can create multiple workspaces - j
 
 > ℹ️
 >
-> Each workspace you create is billed separately. [Learn more](doc:billing-plans).
+> On non-Enterprise plans, each workspace you create is billed separately. [Learn more](doc:billing-plans).
 
 <br />
 
