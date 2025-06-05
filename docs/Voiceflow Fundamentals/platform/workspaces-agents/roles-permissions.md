@@ -79,7 +79,7 @@ Viewers can see the contents of project but cannot make edits. Viewers can:
 
 <br />
 
-## Billing
+### Billing
 
 The Billing role is workspace-specific and focused on account management. Billing users can:
 
@@ -92,10 +92,10 @@ The Billing role is workspace-specific and focused on account management. Billin
 
 ## Assistant Level Permissions
 
-Assistant-level permissions let you grant granular access to view-only roles. This means you can let a Viewer have edit rights for a specific Assistant while maintaining their view-only access to other Workspace Assistants.
+You can give **view-only roles** (Viewer or Billing) edit access to specific projects. This is useful when you want limited collaboration without upgrading their entire workspace role.
 
-*Note*:
+Some important things to note:
 
-1. *Assistant-level permissions only work if the user is a Viewer or Billing role on the Workspace. Owners, Admins, and Editors can’t be downgraded to the Assistant level as they have global edit privileges.*
-
-2. *When you grant a Viewer Assistant-level access, they are counted as an Editor seat*
+* Project-level permissions only apply to Viewers or Billing roles.
+* Owners, Admins, and Editors already have full edit access across all projects. They cannot be restricted to Viewers on single projects.
+* If a Viewer is given project-level edit access, they count as an Editor for billing purposes.
