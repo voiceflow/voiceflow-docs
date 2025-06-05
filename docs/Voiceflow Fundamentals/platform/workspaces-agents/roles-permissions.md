@@ -20,7 +20,10 @@ Owners have full control across the entire workspace. Owners on Enterprise plan 
 
 <Tabs>
   <Tab title="Pro and Team Plans">
-    test
+    * Invite or remove members from the workspace
+    * Manage permissions for users in the workspace
+    * Change billing and subscription settings
+    * Edit and publish any project
   </Tab>
 
   <Tab title="Enterprise Plan">
