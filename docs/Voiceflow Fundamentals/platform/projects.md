@@ -4,7 +4,7 @@ excerpt: >-
   Each project is its own AI agent - complete with workflows, logic, and
   knowledge.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
