@@ -1,6 +1,6 @@
 ---
 title: Blocks
-excerpt: Group related steps into reusable, organized sections.
+excerpt: Group related steps into organized sections.
 deprecated: false
 hidden: false
 metadata:
@@ -32,3 +32,27 @@ You can create a block in two ways:
 You can rename a block by clicking its label and entering a new name. Use colours to visually group sections of your project.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSxE2EkKimEag8BWSoQbTdFYpDN5wRPeli0j21" />
+
+<br />
+
+## Deleting blocks
+
+To delete a block:
+
+* Right-click on the block's background and select **delete**
+* Select the block and press `Delete` or `Backspace` on your keyboard.
+
+Deleting a block will also remove all steps inside it, unless you move them out first.
+
+<br />
+
+## Connecting blocks
+
+You can connect a path to an entire block or to a specific step inside a block.
+
+* If you connect to a block, the conversation will run through all its steps in order.
+* If you connect to a step inside a block, the conversation will jump to that specific step and continue from there
+
+To create a connection, click the port (circle) on the right side of a step, then drag the path to your target block or step.
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSlEuXOr094EsumPty2pBL3kDrzTnQ6SWYIVNH" />
