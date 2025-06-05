@@ -2,10 +2,10 @@
 - tools
 - prompts-1
 - messages
+- components
 - events
 - secrets-manager
 - functions
-- components
 - entities-1
 - intents-1
 - knowledge-base
