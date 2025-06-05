@@ -2,7 +2,7 @@
 title: Improving understanding
 excerpt: What to do if your assistant isn't understanding properly
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
