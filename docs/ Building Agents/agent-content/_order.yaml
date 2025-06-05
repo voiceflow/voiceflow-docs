@@ -1,6 +1,5 @@
 - agents-1
 - tools
-- functions
 - prompts-1
 - messages
 - components
@@ -8,5 +7,6 @@
 - variables
 - intents-1
 - entities-1
+- functions
 - secrets-manager
 - knowledge-base
