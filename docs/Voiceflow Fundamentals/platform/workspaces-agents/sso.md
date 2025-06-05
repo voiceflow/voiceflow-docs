@@ -3,6 +3,7 @@ title: Single Sign-On (SSO) and SAML
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fad fa-building
 metadata:
   title: ''
   description: ''
@@ -10,7 +11,7 @@ metadata:
 next:
   description: ''
 ---
-> ℹ️ This feature is restricted to Enterprise customers
+> 🏢 This feature is restricted to Enterprise customers
 
 This document serves as a comprehensive overview on how to configure your Single Sign-On (SSO) and SAML authentication on Voiceflow, and manage your member access.
 
