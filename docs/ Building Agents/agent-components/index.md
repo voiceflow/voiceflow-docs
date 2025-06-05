@@ -1,5 +1,5 @@
 ---
-title: Agent components
+title: Building blocks
 deprecated: false
 hidden: false
 metadata:
