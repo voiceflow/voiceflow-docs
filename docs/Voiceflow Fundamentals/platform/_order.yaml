@@ -1,4 +1,5 @@
 - workspaces-agents
+- projects
 - cms
 - canvas
 - test-tool
@@ -6,4 +7,3 @@
 - sharing-prototypes
 - publishing-environments-backups
 - languages
-- projects
