@@ -14,7 +14,7 @@ Once you've built your agent, it's time to deploy it! We support three different
     Embed chat onto a webpage and customize it to fit your brand
   </Card>
 
-  <Card title="Voice Calling" icon="fa-phone" href="https://docs.voiceflow.com/docs/chat-widget#/">
+  <Card title="Voice Calling" icon="fa-phone" href="https://docs.voiceflow.com/docs/telephony#/">
     Send or receive phone calls with your agent.
   </Card>
 
