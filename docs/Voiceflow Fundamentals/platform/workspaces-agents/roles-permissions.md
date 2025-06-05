@@ -44,8 +44,6 @@ Owners have full control over their workspace. Owners on Enterprise plan have fu
 
 <br />
 
-<br />
-
 ### Admin
 
 Admins have full control within a specific workspace. Admins can:
