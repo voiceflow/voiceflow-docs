@@ -12,8 +12,6 @@ next:
 ---
 Your Voiceflow account is organized into workspaces and projects. Think of a workspace as a “team” or a “company”,  with each workspace containing one or more projects. Each project is its own AI agent with its own logic, [knowledge base](doc:knowledge-base-1), and [workflows](doc:workflows).
 
-<br />
-
 ## Workspaces
 
 <Image align="center" src="https://files.readme.io/f5e2a9a2275cafec17969b8ce5c13c59dc807b049ebc25d8688c0b32a63b385c-CleanShot_2025-06-04_at_15.56.522x.png" />
