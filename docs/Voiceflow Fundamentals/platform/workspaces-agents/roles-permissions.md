@@ -10,9 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Depending on the responsibilities of your team members, they may require different access permissions on an organizational, workspace or assistant level.
-
-<br />
+Voiceflow supports different permission levels based on what your team members need to do. Roles are defined at the organization, workspace, and project levels.
 
 ## Owner
 
