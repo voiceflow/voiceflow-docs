@@ -12,26 +12,29 @@ next:
 ---
 Voiceflow supports different permission levels based on what your team members need to do. Roles are defined at the organization, workspace, and project levels.
 
-## Owner
+## Roles
+
+### Owner
 
 Owners have full control over their workspace. Owners on Enterprise plan have full control over all workspaces owned by an organization. Owners can:
 
 <Tabs>
   <Tab title="Pro and Team Plans">
+    * Modify workspace settings
     * Invite or remove members from the workspace
     * Manage permissions for users in the workspace
     * Change billing and subscription settings
-    * Edit and publish any project
+    * Edit and publish all projects in the workspace
   </Tab>
 
   <Tab title="Enterprise Plan">
     * Access and manage all workspaces in an organization
-    * Modify organization settings
+    * Modify organization and workspace settings
     * Create new workspaces inside an organization
     * Invite or remove members from any workspace
     * Manage permissions across all workspaces
     * Change billing and subscription settings
-    * Edit and publish any project
+    * Edit and publish all projects in the organization
   </Tab>
 </Tabs>
 
@@ -41,43 +44,53 @@ Owners have full control over their workspace. Owners on Enterprise plan have fu
 
 <br />
 
-## Admin
+<br />
 
-Workspace-level administrators that can access + edit everything in their workspace. Admins can:
+### Admin
 
-* Access Workspace settings
-* Manage member permissions on the Workspace
-* Invite or remove workspace members
-* Modify the Workspace’s billing and subscription details
-* Edit and publish all Workspace Assistants
+Admins have full control within a specific workspace. Admins can:
 
-## Editors
+* Modify workspace settings
+* Invite or remove members from the workspace
+* Manage permissions within the workspace
+* Edit and publish all projects in the workspace
+* Update billing and subscription details for that workspace
 
-Editors are Workspace members who build the Assistant experience. As an Editor, you can:
+<br />
 
-* Edit all Workspaces Assistants
-* Access an Assistant’s Settings
-* Edit all aspects of the design canvas
-* Import and Export Assistant or NLU data
-* Publish the Assistant
+### Editor
 
-*Note: Editors can no longer invite new members to the Workspace*
+Editors build and manage assistants inside the workspace. Editors can:
 
-## Viewers
+* Edit and publish all projects in the workspace
+* Manage project settings
+* Import and export projects
 
-Viewer roles are meant for collaborators that consume a Workspace’s Assistant designs. Viewers can:
+> ℹ️
+>
+> Editors cannot invite new members.
 
-* View all Assistant canvases
-* Leave comments
+<br />
+
+### Viewer
+
+Viewers can see the contents of project but cannot make edits. Viewers can:
+
+* View all projects in a workspace
+* Leave comments on projects in a workspace
+
+<br />
 
 ## Billing
 
-A workspace-level billing administrator that can:
+The Billing role is workspace-specific and focused on account management. Billing users can:
 
-* View Assistants
-* Leave comments on Assistants
-* Invite or remove workspace members
-* Modify the workspace’s billing and subscription details
+* View all projects in a workspace
+* Leave comments on projects in a workspace
+* Manage billing and subscription settings
+* Invite or remove members
+
+<br />
 
 ## Assistant Level Permissions
 
