@@ -1,5 +1,6 @@
 - agents-1
 - tools
+- prompts-1
 - events
 - secrets-manager
 - functions
@@ -8,4 +9,3 @@
 - intents-1
 - knowledge-base
 - variables
-- prompts-1
