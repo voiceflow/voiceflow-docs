@@ -2,7 +2,7 @@
 title: 'Understanding: How AI Agents Understand User Inputs'
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
