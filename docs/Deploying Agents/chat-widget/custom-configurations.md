@@ -53,7 +53,7 @@ To see your latest changes when testing a development version, click the **Run**
 
 ## Set a runtime URL (optional)
 
-> ℹ️ This feature is only available to Enterprise customers.
+> 🏢 This feature is only available to Enterprise customers.
 
 <br />
 
