@@ -35,17 +35,6 @@ You can rename a block by clicking its label and entering a new name. Use colour
 
 <br />
 
-## Deleting blocks
-
-To delete a block:
-
-* Right-click on the block's background and select **delete**
-* Select the block and press `Delete` or `Backspace` on your keyboard.
-
-Deleting a block will also remove all steps inside it, unless you move them out first.
-
-<br />
-
 ## Connecting blocks
 
 You can connect a path to an entire block or to a specific step inside a block.
@@ -56,3 +45,14 @@ You can connect a path to an entire block or to a specific step inside a block.
 To create a connection, click the port (circle) on the right side of a step, then drag the path to your target block or step.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSlEuXOr094EsumPty2pBL3kDrzTnQ6SWYIVNH" />
+
+<br />
+
+## Deleting blocks
+
+To delete a block:
+
+* Right-click on the block's background and select **delete**
+* Select the block and press `Delete` or `Backspace` on your keyboard.
+
+Deleting a block will also remove all steps inside it, unless you move them out first.
