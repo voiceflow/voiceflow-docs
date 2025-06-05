@@ -37,21 +37,11 @@ Owners have full control across the entire workspace. Owners on Enterprise plan 
   </Tab>
 </Tabs>
 
-> 💡 The person who creates a workspace is automatically made its Owner. Owners also count as Workspace Editors.
+> ℹ️
+>
+> The person who creates a workspace is automatically made its Owner. Owners also count as Workspace Editors.
 
-## Owner
-
-The highest level of administration in Voiceflow, Owners can access and edit all Workspaces in an organization. Owners can:
-
-* Access all Workspaces (Enterprise)
-* Access Organization Settings (Enterprise)
-* Create new Workspaces (Enterprise)
-* Manage member permissions on any Workspace
-* Invite or remove members
-* Modify billing and subscriptions on any Workspace
-* Edit and publish all Assistants
-
-*Note: Owners are counted as a Workspace editor. Typically, the person who created the workspace is automatically assigned as an Owner.*
+<br />
 
 ## Admin
 
