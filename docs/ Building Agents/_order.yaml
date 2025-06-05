@@ -2,6 +2,7 @@
 - agent-components
 - agent-content
 - knowledge-base
+- secrets-manager
 - understand
 - respond
 - voiceflow-best-practices
