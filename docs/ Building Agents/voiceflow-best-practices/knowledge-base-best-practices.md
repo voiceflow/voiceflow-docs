@@ -1,5 +1,5 @@
 ---
-title: Knowledge Base
+title: Best practices
 excerpt: Best practices for Voiceflow's Knowledge Base.
 deprecated: false
 hidden: false
