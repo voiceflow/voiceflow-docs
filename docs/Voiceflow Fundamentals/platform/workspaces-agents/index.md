@@ -10,7 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Your Voiceflow account is organized into workspaces, which act like teams or companies. Each workspace contains one or more projects.
+Your Voiceflow account is organized into workspaces, which act like teams or companies. Each workspace contains one or more [projects](doc:projects).
+
+<br />
 
 <Image align="center" src="https://files.readme.io/f5e2a9a2275cafec17969b8ce5c13c59dc807b049ebc25d8688c0b32a63b385c-CleanShot_2025-06-04_at_15.56.522x.png" />
 
