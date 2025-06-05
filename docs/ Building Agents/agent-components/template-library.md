@@ -24,7 +24,7 @@ You can save any block (or group of blocks) as a template. Here's how:
 * Right-click and choose **save to library**
 * Give your template a name and choose a colour (optional)
 
-<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSjI1fbYMUwOkC7qsx0ePc3Z8AvNHWRnJ29tpF" />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS7YVGp3KUJ2mGoWcAYZ4TIKVbRjQtdHvh1CLu" />
 
 <br />
 
