@@ -1,6 +1,6 @@
 ---
 title: Roles and permissions
-excerpt: ''
+excerpt: Manage the level of access users have to your workspace.
 deprecated: false
 hidden: false
 metadata:
@@ -10,9 +10,37 @@ metadata:
 next:
   description: ''
 ---
-***How to set Workspace and Assistant-level permissions for your workspace members?***
+Depending on the responsibilities of your team members, they may require different access permissions on an organizational, workspace or assistant level.
 
-Depending on the responsibilities of your team members, they may require different access permissions on an organizational, workspace or assistant level. 
+<br />
+
+## Owner
+
+Owners have full control across the entire workspace. Owners on Enterprise plan have full control over all workspaces owned by an organization. Owners can:
+
+<Tabs>
+  <Tab title="Pro and Team Plans">
+    * Access and manage all workspaces in an organization
+    * Modify organization settings
+    * Create new workspaces inside an organization
+    * Invite or remove members from any workspace
+    * Manage permissions across all workspaces
+    * Change billing and subscription settings
+    * Edit and publish any project
+  </Tab>
+
+  <Tab title="Enterprise Plan">
+    * Access and manage all workspaces in an organization
+    * Modify organization settings
+    * Create new workspaces inside an organization
+    * Invite or remove members from any workspace
+    * Manage permissions across all workspaces
+    * Change billing and subscription settings
+    * Edit and publish any project
+  </Tab>
+</Tabs>
+
+> 💡 The person who creates a workspace is automatically made its Owner. Owners also count as Workspace Editors.
 
 ## Owner
 
@@ -68,9 +96,9 @@ A workspace-level billing administrator that can:
 
 ## Assistant Level Permissions
 
-Assistant-level permissions let you grant granular access to view-only roles. This means you can let a Viewer have edit rights for a specific Assistant while maintaining their view-only access to other Workspace Assistants. 
+Assistant-level permissions let you grant granular access to view-only roles. This means you can let a Viewer have edit rights for a specific Assistant while maintaining their view-only access to other Workspace Assistants.
 
-*Note*: 
+*Note*:
 
 1. *Assistant-level permissions only work if the user is a Viewer or Billing role on the Workspace. Owners, Admins, and Editors can’t be downgraded to the Assistant level as they have global edit privileges.*
 
