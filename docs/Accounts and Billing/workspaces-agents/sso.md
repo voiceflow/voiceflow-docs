@@ -11,7 +11,7 @@ metadata:
 next:
   description: ''
 ---
-> 🏢 This feature is restricted to Enterprise customers.
+> 🏢 This feature is only available to Enterprise customers.
 
 This document serves as a comprehensive overview on how to configure your Single Sign-On (SSO) and SAML authentication on Voiceflow, and manage your member access.
 
