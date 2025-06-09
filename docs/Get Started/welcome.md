@@ -1,5 +1,5 @@
 ---
-title: Welcome to the docs
+title: 'Welcome to the docs '
 excerpt: ''
 deprecated: false
 hidden: false
