@@ -613,7 +613,7 @@ export const CreditCalculator = () => {
               {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
               <div className="mb-8">
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  {billingPeriod === 'Year' ? 'Messages per year' : 'Messages per month'}
+                  {billingPeriod === 'Year' ? 'Interactions per year' : 'Interactions per month'}
                 </label>
                 <input 
                   type="text" 
@@ -627,7 +627,7 @@ export const CreditCalculator = () => {
                   placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
                 />
                 <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                  Credits per message: 1.00
+                  Credits per interaction: 1.00
                 </div>
               </div>
               {/* Service Configuration */}
