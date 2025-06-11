@@ -65,7 +65,7 @@ You can access this information through the `last_event` variable in a Javascrip
 ### Set Up a DTMF Menu
 
 1. Add a Message step to your flow and have your agent prompt the caller to select from a numbered list of options ("Press 1 for Sales, 2 for Support...).
-2. Drag a Custom action step onto the canvas and name it "DTMF".
+2. Drag a Custom action step onto the canvas and name it "DTMF" (use that exact name).
 3. Enable the "Stop on action" option.
 4. Under Paths you can add `DTMF 1`, `DTMF 2`, etc. The `default` path will be followed if the user presses or says something that is not setup as its own discrete path in the step configuration.
 5. Add connections from the custom action step to other steps representing each menu option.
@@ -78,7 +78,7 @@ You can access this information through the `last_event` variable in a Javascrip
 
 Following the same steps above to capture the keys a user presses, we will now set up a design to use this method for capturing user input.
 
-1. Drag a Custom action step onto canvas and name it "DTMF".
+1. Drag a Custom action step onto canvas and name it "DTMF" (use that exact name).
 2. Enable the "Stop on action " option.
 3. Setup `default` path only as this will allow for any keys during capture to be registered as part of the loop.
 4. Use a Javascript step to validate the captured digit and to continue once input length has been met.
@@ -107,7 +107,7 @@ Following the same steps above to capture the keys a user presses, we will now s
 ### Update ASR Settings Mid-Call
 
 1. Identify points in your flow where you expect the caller's speech patterns to change (e.g., switching languages, long vs. short inputs).
-2. Drag a Custom action step onto canvas and name it "asr".
+2. Drag a Custom action step onto canvas and name it "asr" (use that exact name).
 3. Enable the "Stop on action " option.
 4. In the Body field, specify the ASR parameters you want to modify. Here are the available settings:
    ```json
@@ -140,11 +140,11 @@ Upon the next utterance, the previous flow will be cancelled (the steps that hav
 
 For more info on this, reference: [https://docs.voiceflow.com/docs/interruption-behavior](https://docs.voiceflow.com/docs/interruption-behavior)
 
-However there is a special use case - for critical long runnning actions, we don't want any interruptions until the action is completed. Even with a human, sometimes you might be put on hold while something is happening.
+However there is a special use case - for critical long running actions, we don't want any interruptions until the action is completed. Even with a human, sometimes you might be put on hold while something is happening.
 
 For example, if it takes up to 15 seconds to book an airline ticket, we should not let the user interrupt until the booking is complete and we confirm it back with them.
 
-To achieve this, create a custom action step labelled "**interruption**", in the body you can set `"allowInterrupts"` to `true` or `false`.
+To achieve this, create a custom action step labelled "**interruption**" (use that exact name), in the body you can set `"allowInterrupts"` to `true` or `false`.
 
 * `true`: the user can now interrupt the bot for the rest of the call
 * `false`: the user can no longer interrupt the bot for the rest of the call, anything they say while the bot is not listening *is ignored*.
