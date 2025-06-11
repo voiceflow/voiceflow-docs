@@ -14,7 +14,7 @@ next:
 
 Custom actions allow you to extend the functionality of your voice agents and implement advanced telephony workflows. By leveraging custom actions, you can:
 
-* Create interactive voice response (IVR) menus with DTMF (touch-tone) input 
+* Create interactive voice response (IVR) menus with DTMF (touch-tone) input
 * Capture and validate caller input, such as account numbers or PINs
 * Transfer calls to external phone numbers based on caller responses
 * Dynamically update the agent's ASR settings during the conversation
@@ -41,7 +41,7 @@ To add a custom action to your canvas:
 
 ### Retrieve Call Metadata
 
-As part of the initial launch request (at the start step), we will include: 
+As part of the initial launch request (at the start step), we will include:
 
 * `userNumber` - phone number of the user
 * `agentNumber` - phone number of the agent (you may have multiple numbers attached to the same agent)
@@ -67,7 +67,7 @@ You can access this information through the `last_event` variable in a Javascrip
 1. Add a Message step to your flow and have your agent prompt the caller to select from a numbered list of options ("Press 1 for Sales, 2 for Support...).
 2. Drag a Custom action step onto the canvas and name it "DTMF".
 3. Enable the "Stop on action" option.
-4. Under Paths you can add `DTMF 1`, `DTMF 2`, etc. The `default` path will be followed if the user presses or says something that is not setup as its own discrete path in the step configuration. 
+4. Under Paths you can add `DTMF 1`, `DTMF 2`, etc. The `default` path will be followed if the user presses or says something that is not setup as its own discrete path in the step configuration.
 5. Add connections from the custom action step to other steps representing each menu option.
 6. In each connected block, check for the DTMF input using the `last_event.data` variable (e.g., `last_event.data == "1"` for the first option).
 7. Route the caller to the appropriate flow based on their DTMF selection.
@@ -81,7 +81,7 @@ Following the same steps above to capture the keys a user presses, we will now s
 1. Drag a Custom action step onto canvas and name it "DTMF".
 2. Enable the "Stop on action " option.
 3. Setup `default` path only as this will allow for any keys during capture to be registered as part of the loop.
-4. Use a Javascript step to validate the captured digit and to continue once input length has been met. 
+4. Use a Javascript step to validate the captured digit and to continue once input length has been met.
    1. We can make use of the `last_event` built-in variable inside the Javascript step
    2. The name of a DTMF event is always called `DTMF {DIGIT}`, so we can just look for events that start with DTMF and pluck out the digit at the end. When you turn this into a loop, you are now collecting numbers from the user (see image below for example).
 5. Design appropriate flows for valid and invalid PIN scenarios.
@@ -91,7 +91,7 @@ Following the same steps above to capture the keys a user presses, we will now s
 ### Transfer Call to Agent
 
 1. At the point in your flow where you want to transfer the call, add a Custom action step.
-2. Name the block "forward-call".
+2. Name the block "forward-call" (use that exact name).
 3. In the Body field, enter:
    ```json
    {
@@ -136,13 +136,13 @@ Following the same steps above to capture the keys a user presses, we will now s
 ### Prevent Interruptions
 
 By default, the call is always interruptable - the agent will stop talking when a user speaks over it.\
-Upon the next utterance, the previous flow will be cancelled (the steps that haven't run won't be run). 
+Upon the next utterance, the previous flow will be cancelled (the steps that haven't run won't be run).
 
 For more info on this, reference: [https://docs.voiceflow.com/docs/interruption-behavior](https://docs.voiceflow.com/docs/interruption-behavior)
 
 However there is a special use case - for critical long runnning actions, we don't want any interruptions until the action is completed. Even with a human, sometimes you might be put on hold while something is happening.
 
-For example, if it takes up to 15 seconds to book an airline ticket, we should not let the user interrupt until the booking is complete and we confirm it back with them. 
+For example, if it takes up to 15 seconds to book an airline ticket, we should not let the user interrupt until the booking is complete and we confirm it back with them.
 
 To achieve this, create a custom action step labelled "**interruption**", in the body you can set `"allowInterrupts"` to `true` or `false`.
 
