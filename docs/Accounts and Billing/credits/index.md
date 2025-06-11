@@ -20,7 +20,7 @@ Each plan includes a certain amount of credits. [You can learn more on our prici
 
 Most actions performed by an AI agent on the Voiceflow platform will consume credits. The specific amounts vary depending on the type of action:  
 
-* **Messages:** each message sent by an AI agent will consume 1 credit.
+* **Messages and interactions:** each message sent by an AI agent, or interaction returned by the [Interact API](https://docs.voiceflow.com/reference/stateinteract-1#/) will consume 1 credit.
 * **Call minutes**: every minute your AI agent spends on a call (inbound or outbound) will consume 10 credits.
 * **LLM (Large Language Model) Usage**: LLMs are used for various features, including the [Prompt step](doc:prompt-step), [Agent step](doc:agents), [prompt-based logic](https://docs.voiceflow.com/docs/logic#/), and [intent detection](https://docs.voiceflow.com/docs/intents#/). Credits are billed **at-cost** for LLM usage - more powerful models like GPT-4 Turbo will consume more credits per use than more lightweight models such as GPT-4o mini.
 * **TTS (Text-to-Speech) Usage** TTS generation for voice agents is charged per character and is an additional cost to call minutes.
