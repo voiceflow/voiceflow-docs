@@ -20,7 +20,7 @@ Each plan includes a certain amount of credits. [You can learn more on our prici
 
 Most actions performed by an AI agent on the Voiceflow platform will consume credits. The specific amounts vary depending on the type of action:  
 
-* Interactions: you’ll be charged 1 credit whenever the user begins a conversation, sends a message, or calls the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/).
+* **Interactions**: you’ll be charged 1 credit whenever the user begins a conversation, sends a message, or calls the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/).
 * **Call minutes**: every minute your AI agent spends on a call (inbound or outbound) will consume 10 credits.
 * **No reply usage**: you will be charged 1 credit per [no-reply message](https://docs.voiceflow.com/docs/no-reply-response) that your agent sends, in addition to LLM usage.
 * **LLM (Large Language Model) Usage**: LLMs are used for various features, including the [Prompt step](doc:prompt-step), [Agent step](doc:agents), [prompt-based logic](https://docs.voiceflow.com/docs/logic#/), and [intent detection](https://docs.voiceflow.com/docs/intents#/). Credits are billed **at-cost** for LLM usage - more powerful models like GPT-4 Turbo will consume more credits per use than more lightweight models such as GPT-4o mini.
