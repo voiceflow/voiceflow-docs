@@ -69,6 +69,15 @@ export function CreditsPricingTable() {
         },
         { 
           vendor: "Anthropic", 
+          item: "claude-sonnet-4-20250514", 
+          unitType: "tokens",
+          unitMultiplier: 1000,
+          unit: "1K Tokens",
+          creditsPerUnit: 0.875,
+          creditsPerBaseUnit: 0.000875
+        },
+        { 
+          vendor: "Anthropic", 
           item: "claude-3-opus-20240229", 
           unitType: "tokens",
           unitMultiplier: 1000,
@@ -76,6 +85,15 @@ export function CreditsPricingTable() {
           creditsPerUnit: 4.250,
           creditsPerBaseUnit: 0.00425
         },
+        { 
+          vendor: "Anthropic", 
+          item: "claude-opus-4-20250514", 
+          unitType: "tokens",
+          unitMultiplier: 1000,
+          unit: "1K Tokens",
+          creditsPerUnit: 4.250,
+          creditsPerBaseUnit: 0.00425
+      	},
         { 
           vendor: "Anthropic", 
           item: "Claude V2.0", 
@@ -100,17 +118,26 @@ export function CreditsPricingTable() {
           unitType: "tokens",
           unitMultiplier: 1000,
           unit: "1K Tokens",
-          creditsPerUnit: 0.040,
-          creditsPerBaseUnit: 0.00004
+          creditsPerUnit: 0.030,
+          creditsPerBaseUnit: 0.00003
         },
         { 
           vendor: "Google", 
-          item: "Gemini 1.5 Pro", 
+          item: "Gemini 2.5 Flash", 
           unitType: "tokens",
           unitMultiplier: 1000,
           unit: "1K Tokens",
-          creditsPerUnit: 0.350,
-          creditsPerBaseUnit: 0.00035
+          creditsPerUnit: 0.040,
+          creditsPerBaseUnit: 0.00004
+        },
+         { 
+          vendor: "Google", 
+          item: "Gemini 2.5 Pro", 
+          unitType: "tokens",
+          unitMultiplier: 1000,
+          unit: "1K Tokens",
+          creditsPerUnit: 0.4,
+          creditsPerBaseUnit: 0.0004
         },
         { 
           vendor: "Groq", 
@@ -253,8 +280,8 @@ export function CreditsPricingTable() {
           unitType: "tokens",
           unitMultiplier: 1000,
           unit: "1K Tokens",
-          creditsPerUnit: 2.875,
-          creditsPerBaseUnit: 0.002875
+          creditsPerUnit: 0.060,
+          creditsPerBaseUnit: 0.00006
         },
         { 
           vendor: "Open AI", 
@@ -313,7 +340,25 @@ export function CreditsPricingTable() {
           unit: "1K Characters",
           creditsPerUnit: 6.000,
           creditsPerBaseUnit: 0.006
-        }
+        },
+        { 
+        vendor: "Cartesia", 
+        item: "Sonic 2 - TTS", 
+        unitType: "characters",
+        unitMultiplier: 1000,
+        unit: "1K Characters",
+        creditsPerUnit: 9.500,
+        creditsPerBaseUnit: 0.0095
+      },
+      { 
+        vendor: "Cartesia", 
+        item: "Sonic Turbo - TTS", 
+        unitType: "characters",
+        unitMultiplier: 1000,
+        unit: "1K Characters",
+        creditsPerUnit: 9.500,
+        creditsPerBaseUnit: 0.0095
+      }
       ]
     };
   
