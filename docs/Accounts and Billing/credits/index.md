@@ -24,8 +24,8 @@ Most actions performed by an AI agent on the Voiceflow platform will consume cre
 * **Call minutes**: every minute your AI agent spends on a call (inbound or outbound) will consume 10 credits.
 * **No reply usage**: you will be charged 1 credit per [no-reply message](https://docs.voiceflow.com/docs/no-reply-response) that your agent sends, in addition to LLM usage.
 * **LLM (large language model) usage**: LLMs are used for various features, including the [Prompt step](doc:prompt-step), [Agent step](doc:agents), [prompt-based logic](https://docs.voiceflow.com/docs/logic#/), and [intent detection](https://docs.voiceflow.com/docs/intents#/). Credits are billed **at-cost** for LLM usage - more powerful models like GPT-4 Turbo will consume more credits per use than more lightweight models such as GPT-4o mini.
-* **TTS (text-to-speech) usage** TTS generation for voice agents is charged per character and is an additional cost to call minutes.
-* **STT (speech-to-text) usage:** voice interfaces, such as [web chat widget](doc:chat-widget) and our [phone integration](doc:telephony) will consume credits as the user speaks.
+* **TTS (text-to-speech) usage**: TTS generation for voice agents is charged per character and is an additional cost to call minutes.
+* **STT (speech-to-text) usage**: voice interfaces, such as [web chat widget](doc:chat-widget) and our [phone integration](doc:telephony) will consume credits as the user speaks.
 
 Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
 
