@@ -1,6 +1,5 @@
 ---
 title: Quick start
-excerpt: '    '
 deprecated: false
 hidden: false
 metadata:
