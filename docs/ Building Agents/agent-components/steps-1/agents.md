@@ -14,8 +14,6 @@ next:
 ---
 <Image align="center" src="https://files.readme.io/96eec3b6b1ff9caa0bd5f670d8bfe0fa144af6b3fab6328228fd0851346ed182-Image_11.png" />
 
-<br />
-
 The Agent step is a flexible all-in-one tool that lets your assistant interpret user input using AI, access your knowledge base, route the conversation based on intent, and run external functions — all within a single step.
 
 Use it when you want the agent to handle an open-ended request without needing to manually define each path ahead of time.
