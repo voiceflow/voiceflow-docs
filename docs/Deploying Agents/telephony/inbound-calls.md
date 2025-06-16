@@ -1,5 +1,8 @@
 ---
 title: Inbound calls
+excerpt: >-
+  This guide walks you through how to connect a Twilio phone number to a
+  Voiceflow agent for inbound calling.
 deprecated: false
 hidden: true
 metadata:
