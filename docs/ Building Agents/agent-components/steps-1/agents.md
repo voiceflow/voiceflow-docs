@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/747a436bc424e4888e7af4886a02d5cc635608137b2b4152ed47f5e8d7095913-Image_10.png" />
+<Image align="center" src="https://files.readme.io/96eec3b6b1ff9caa0bd5f670d8bfe0fa144af6b3fab6328228fd0851346ed182-Image_11.png" />
 
 The Agent step is Voiceflow's most powerful tool for creating intelligent, conversational AI agents. This guide will walk you through how to use this feature to build agents that can handle complex interactions, access knowledge base, follow customized paths, and execute functions—all within a single step.
 
