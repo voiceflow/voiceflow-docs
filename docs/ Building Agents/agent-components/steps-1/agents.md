@@ -1,7 +1,7 @@
 ---
 title: Agent step
 excerpt: >-
-  The brain of your AI agent - have conservations, trigger tools, and lookup
+  The brain of your AI agent - have conversations, trigger tools, and lookup
   data in the knowledge base.
 deprecated: false
 hidden: false
