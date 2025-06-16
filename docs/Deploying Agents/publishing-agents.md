@@ -1,5 +1,8 @@
 ---
 title: Publishing agents to production
+excerpt: >-
+  Once your agent is built, it's time to release it into the world in just a few
+  clicks.
 deprecated: false
 hidden: false
 metadata:
