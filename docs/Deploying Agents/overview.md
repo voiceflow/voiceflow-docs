@@ -1,6 +1,6 @@
 ---
 title: Overview
-excerpt: Deploy your voice or text-based AI agent in seconds.
+excerpt: Deploy your voice or text-based AI agent in minutes.
 deprecated: false
 hidden: false
 metadata:
