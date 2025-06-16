@@ -7,7 +7,7 @@ metadata:
 ---
 Outbound calls share the same concurrency pool as outbound calls. The number of simultaneous calls you can make is [determined by your plan limits](https://voiceflow.com/pricing).
 
-If your Voiceflow agent is already[ linked to Twilio and published to production](/voice), you're ready to start handling inbound calls.
+If your Voiceflow agent is already[ linked to Twilio and published to production](/telephony), you're ready to start handling inbound calls.
 
 Here’s how to test it, and what to expect.
 
