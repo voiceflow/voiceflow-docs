@@ -1,8 +1,8 @@
 ---
 title: Agent step
 excerpt: >-
-  The brain of your AI agent - have conversations, trigger tools, and lookup
-  data in the knowledge base.
+  Handle user input, search the knowledge base, call tools, and follow paths —
+  all in one step
 deprecated: false
 hidden: false
 metadata:
