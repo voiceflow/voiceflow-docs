@@ -19,9 +19,9 @@ Voiceflow supports outbound calling using Twilio, allowing your agent to initiat
 > * [Twilio Phone Number Regulations](https://www.twilio.com/en-us/guidelines/regulatory)
 > * [Twilio Voice Guidelines](https://www.twilio.com/en-us/guidelines/voice)
 
-> ℹ️ Outbound calling is currently in alpha
+> ℹ️ Outbound calling is currently in alpha and available in select countries
 >
-> Outbound calls are currently in alpha and the API endpoint, `/v1alpha1/` may be subject to change during development.
+> Outbound calls are currently in alpha and the API endpoint, `/v1alpha1/` may be subject to change during development. Outbound calling is currently available to numbers in the European Union, the United States, the United Kingdom, Canada, and Australia.
 
 <br />
 
