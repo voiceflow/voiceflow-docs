@@ -66,7 +66,7 @@ In general, you'll want to avoid having broken up utterances in the first place,
 
 # Providers
 
-## Cartesia (Ink-Whsiper)
+## Cartesia (Ink-Whisper)
 
 * [Ink-Whisper Annoucement](https://cartesia.ai/blog/introducing-ink-speech-to-text)
 
