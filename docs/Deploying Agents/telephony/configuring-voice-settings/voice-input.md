@@ -10,6 +10,8 @@ metadata:
 
 ### Providers
 
+<Image align="center" src="https://files.readme.io/0d11012a79188c5b36cecb92e5f062dc1bce7b8b526cd5284fe4d9e1f11d2c41-Capture_decran_le_2025-06-18_a_12.57.57.png" />
+
 Choosing the right **Speech-to-Text (STT)** model is important for the clarity of your agent and how well it understands the user.\
 Certain models may work better for certain languages, certain quality of audio, or for certain industries.
 
