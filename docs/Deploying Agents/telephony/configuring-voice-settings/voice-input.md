@@ -3,7 +3,6 @@ title: Voice Input
 excerpt: Settings for transcribing user-speech
 deprecated: false
 hidden: false
-icon: 🎙️
 metadata:
   robots: index
 ---
@@ -62,6 +61,8 @@ The agent might think that they were done speaking after John. The agent would t
 > User: Doe from New York.
 
 In general, you'll want to avoid having broken up utterances in the first place, because they break up the user experience. Consider making your Timeout settings less aggressive and more patient.
+
+# Providers
 
 ## Cartesia (Ink-Whsiper)
 
