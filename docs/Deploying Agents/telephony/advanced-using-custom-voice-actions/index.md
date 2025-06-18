@@ -17,7 +17,7 @@ Custom actions allow you to extend the functionality of your voice agents and im
 * Create interactive voice response (IVR) menus with DTMF (touch-tone) input
 * Capture and validate caller input, such as account numbers or PINs
 * Transfer calls to external phone numbers based on caller responses
-* Dynamically update the agent's ASR settings during the conversation
+* Dynamically update the agent's STT settings during the conversation
 
 This guide will show you how to set up and use custom actions to build sophisticated voice experiences.
 
@@ -35,7 +35,7 @@ To add a custom action to your canvas:
 * **DTMF (Dual-Tone Multi-Frequency):** The touch tones generated when a caller presses keys on their phone keypad. Each number key corresponds to a unique frequency pair.
 * **DTMF Input**: Collecting caller input by having them press number keys on their phone in response to your agent's prompts. Useful for navigating menus, entering data, or making selections.
 * **Call Transfer**: Programmatically forwarding an in-progress call to a different phone number, such as to route the caller to a live agent or another department.
-* **ASR Settings:** The configuration options that control the agent's automatic speech recognition (ASR) behavior, such as the language model, recognition timeout, and confidence threshold.
+* **STT Settings:** The configuration options that control the agent's speech to text (STT) behavior, such as the language model, recognition timeout, and confidence threshold.
 
 ## How To
 
@@ -127,7 +127,7 @@ Once this action is hit, the setting applies for the rest of the call. So ideall
 * Use DTMF menus judiciously to avoid overloading callers with too many options. Limit menus to 3-5 clearly differentiated choices.
 * When capturing data like PINs, use a Message step to confirm the caller's input before proceeding.
 * Be mindful of the caller's experience when transferring calls - provide estimated wait times or option to continue talking to AI agent.
-* Test your ASR settings changes with a diverse set of voices and accents to ensure they improve recognition accuracy for your target audience.
+* Test your STT settings changes with a diverse set of voices and accents to ensure they improve recognition accuracy for your target audience.
 
 ## Troubleshooting
 
