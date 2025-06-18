@@ -12,7 +12,7 @@ next:
 ---
 ## Overview
 
-The Voice settings allow you to fine-tune the behaviour of your voice agents during voice calls. By adjusting parameters like silence timeouts, audio cues, and ASR/TTS settings, you can make conversations more organic and enhance the caller experience. This guide will walk you through the available options and how to configure them for your voice agent.
+The Voice settings allow you to fine-tune the behaviour of your voice agents during voice calls. By adjusting parameters like silence timeouts, audio cues, and STT/TTS settings, you can make conversations more organic and enhance the caller experience. This guide will walk you through the available options and how to configure them for your voice agent.
 
 <Image align="center" width="80% " src="https://files.readme.io/47c70a1be0d3c9139622f708681f8ad91a62e665c23271cb133b18115f2493c1-Capture_decran_le_2025-06-18_a_11.59.52.png" />
 
