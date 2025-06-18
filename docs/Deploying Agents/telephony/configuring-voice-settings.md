@@ -14,7 +14,7 @@ next:
 
 The Voice settings allow you to fine-tune the behaviour of your voice agents during voice calls. By adjusting parameters like silence timeouts, audio cues, and ASR/TTS settings, you can make conversations more organic and enhance the caller experience. This guide will walk you through the available options and how to configure them for your voice agent.
 
-<Image align="center" width="80% " src="https://files.readme.io/7a79483b187d4a4491b450cf8a72df4f5e2382603c976342458fe13ec0dd67da-Capture_decran_le_2025-02-21_a_13.08.50.png" />
+<Image align="center" width="80% " src="https://files.readme.io/47c70a1be0d3c9139622f708681f8ad91a62e665c23271cb133b18115f2493c1-Capture_decran_le_2025-06-18_a_11.59.52.png" />
 
 ## Getting Started
 
@@ -28,17 +28,16 @@ You'll see several settings that control different aspects of the voice interact
 
 ## Key Concepts
 
+* **Voice Output**: Also referred to as Text-to-Speech (TTS). Determines the voice and speech patterns of the agent speaking back to the user.
+* **Voice Input**: Also referred to as Speech-to-Text (STT). Determines how we capture user speech for the agent to understand.
 * **Audio Cue**: A short sound effect played to the caller to signal that the agent has received their input and is processing it.
-* **Punctuation Timeout:** How long the agent will wait after transcribing punctuation (period, question mark, etc.) before assuming the user is done speaking, and processing the turn.
-* **No Punctuation Timeout:** How long the agent will wait if it hasn’t transcribed punctuation before assuming the user is actually done speaking, and processing the turn.
-* **Interruption Threshold:** The number of words (or characters for eastern languages) of a user talking it takes to interrupt the agent's current speaking.
-* **Endpointing:** The amount of silence before finishing a chunk of user audio so it can be sent off for transcription (see more below).
+* **Background Audio:**: Simulated background audio that helps give more realism to the call
 
-## Transcription Settings
+## Voice Input
 
-![](https://files.readme.io/6a18a7d7e2b648be4669e9dc60685ce0477e5e7b584d5fe78121b7f1bfab63d2-image_2.png)
+### Deepgram
 
-As a user speaks, the **Automatic Speech Recognition (ASR)** engine continuously transcribes the audio into words, by breaking the streamed audio into "chunks".
+As a user speaks, the **Speech-to-Text (STT)** engine continuously transcribes the audio into words, by breaking the streamed audio into "chunks".
 
 For example, while I say "I want 2 turtles", this is what is happening in the background as I speak:
 
@@ -63,7 +62,7 @@ In the following example, two separate chunks are created.
 >
 > Joe *(finalized chunk)*
 
-### Endpointing
+#### Endpointing
 
 **Endpointing** uses silence to detect when to finalize a *chunk*. A shorter period means faster latency. For example if I say:
 
@@ -73,7 +72,7 @@ We will wait the **Endpointing** period before deciding to finalize the chunk. I
 
 In environments with loud background noises, **Endpointing** doesn't work well because there isn’t actually a period of silence. That means we will often fall back on other methods to finalize a transcript (like timeouts), this can cause additional latency. You can learn more [here](https://developers.deepgram.com/docs/endpointing).
 
-### Punctuation/No Punctuation Timeout
+#### Punctuation/No Punctuation Timeout
 
 **After** a finalized *chunk* is produced, we sometimes want to give the user a chance to continue speaking to form a complete utterance for your agent to process.
 
@@ -85,18 +84,18 @@ Users can often speak in run-on sentences, take long pauses, or try to make corr
 > 4. New York,
 > 5. Manhattan actually.
 
-Lines 2, 5: **Punctuation Timeout**\
-Lines 1, 3, 4: **No Punctuation Timeout**
+Lines 2, 5 trigger **Punctuation Timeout**\
+Lines 1, 3, 4 trigger **No Punctuation Timeout**
 
 If the most recent chunk ends in punctuation (!.?¡¿…), it will wait **Punctuation Timeout** seconds for the user to say something else before assuming the user is finished speaking, and processing the turn. This is usually when a user says a complete sentence.
 
 If the most recent chunk does not end in punctuation, it will wait for **No Punctuation Timeout** seconds. This is often when the user takes a pause during the middle of a sentence (if they're thinking for example, or pulling up some details).
 
-The ASR engine is generally pretty good at determining punctuation based on intonation and other cues, so should be taken as the primary cue for if the user is done speaking.
+The STT engine is generally pretty good at determining punctuation based on intonation and other cues, so should be taken as the primary cue for if the user is done speaking.
 
 **No Punctuation Timeout** should always be significantly higher than **Punctuation Timeout** seconds.
 
-### Recommendations
+#### Recommendations
 
 Voiceflow provides default settings under the "Simplified" tab, with three options for "Speed" (optimized for quickly replying to users), "Balanced", and "Accuracy" (optimized for high conversational accuracy, at the cost of agent speed).
 
