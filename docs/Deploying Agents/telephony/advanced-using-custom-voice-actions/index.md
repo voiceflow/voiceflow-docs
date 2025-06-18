@@ -100,38 +100,7 @@ Following the same steps above to capture the keys a user presses, we will now s
    ```
 4. Add a Message step before the Transfer explaining to the caller that they will be transferred.
 
-<Image align="center" width="50% " src="https://files.readme.io/206192c16308632a518016a711e1dd0967b43fd49f002bc4eb4a3aa4424e364c-image.png" />
-
 <br />
-
-### Update ASR Settings Mid-Call
-
-1. Identify points in your flow where you expect the caller's speech patterns to change (e.g., switching languages, long vs. short inputs).
-2. Drag a Custom action step onto canvas and name it "asr" (use that exact name).
-3. Enable the "Stop on action " option.
-4. In the Body field, specify the ASR parameters you want to modify. Here are the available settings:
-   ```json
-   {
-     "settings": {
-       "locale": string,
-       "punctuationWaitMS": number,
-       "partialWaitMS": number, // no punctuation wait
-       "silenceWaitMS": number,
-     }
-   }
-   ```
-   1. Example usage
-      ```json
-      {
-        "settings": {
-          "locale": "fr",
-          "punctuationWaitMS": 5000
-        }
-      }
-      ```
-5. Thoroughly test your flow and ASR performance after each settings change.
-
-<Image align="center" width="75% " src="https://files.readme.io/db8d9f2dd55b346ad5715a43654c9801d9aa070e4b6f48dd33029f0544e7c352-image.png" />
 
 ### Prevent Interruptions
 
