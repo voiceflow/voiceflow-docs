@@ -1,5 +1,5 @@
 ---
-title: API Serve
+title: API Server
 deprecated: false
 hidden: false
 metadata:
