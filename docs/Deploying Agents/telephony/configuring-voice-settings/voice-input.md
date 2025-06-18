@@ -10,14 +10,14 @@ metadata:
 
 ### Providers
 
-Choosing the right STT model is important for the clarity of your agent and how well it understands the user.\
+Choosing the right **Speech-to-Text (STT)** model is important for the clarity of your agent and how well it understands the user.\
 Certain models may work better for certain languages, certain quality of audio, or for certain industries.
 
 You may want to experiment different providers and their models for your particular use case and see what works best for you. It is also recommended to read the marketing and documentation for each provider for their advantages.
 
 ### Chunking
 
-As a user speaks, the **Speech-to-Text (STT)** engine continuously transcribes the audio into words, by breaking the streamed audio into "chunks".
+As a user speaks, the STT engine continuously transcribes the audio into words, by breaking the streamed audio into "chunks".
 
 For example, while I say "I want 2 turtles", this is what is happening in the background as I speak:
 
@@ -42,7 +42,7 @@ In the following example, two separate chunks are created.
 >
 > Joe *(finalized chunk)*
 
-At some point, the chunks will be sent to your agent as a **transcription**, and trigger execution.
+At some point, the chunks will be sent to your agent as a **turn/transcription**, and trigger execution.
 
 ### Broken Up Utterances
 
