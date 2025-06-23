@@ -75,7 +75,7 @@ To go beyond basic styling, you can use your own CSS rules to override the defau
 Voiceflow's web chat elements use class names prefixed with `.vfrc`. To customize these, create CSS rules targeting those classes.
 
 \<Accordion title="View the full list of supported classes" icon="fa-code">
-/\\\*
+/\*
 &#x20; PAGE CONTENTS
 
 Customize the page that the chat bubble lives on\
@@ -189,7 +189,8 @@ Customize the layout and appearance of the message input field and the VF Brandi
 
 /\* .vfrc-chat-input--button \{} \*/
 
-/\* .vfrc-footer--watermark \{} \*/\
+/\* .vfrc-footer--watermark \{} \*/
+
 \</Accordion>
 
 <br />
