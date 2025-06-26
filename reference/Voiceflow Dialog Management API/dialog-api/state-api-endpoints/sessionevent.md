@@ -12,6 +12,8 @@ hidden: false
 
 This endpoint is intended to allow external events to update the state of the conversation, by broadcasting an action for a Trigger.
 
+<Image align="center" src="https://files.readme.io/189b7be4b17640d3f1aed400fdbcf6b3fdf6533bae43f0aacc0e23054b2db3d2-Capture_decran_le_2025-06-26_a_15.27.32.png" />
+
 An example is filling out a form, this may take a long time. When it is submitted, this endpoint can be invoked to have the agent acknowledge the submission.
 
 All voice conversations will have an assigned `{session_id}` variable, unique to every call.
