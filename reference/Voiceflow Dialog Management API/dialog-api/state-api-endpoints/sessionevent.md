@@ -10,7 +10,7 @@ hidden: false
 >
 > Session events can only be broadcasted to voice conversations, we're looking to extend this functionality to chat in the future.
 
-This endpoint is intended to allow external events to update the state of the conversation.
+This endpoint is intended to allow external events to update the state of the conversation, by broadcasting an action for a Trigger.
 
 An example is filling out a form, this may take a long time. When it is submitted, this endpoint can be invoked to have the agent acknowledge the submission.
 
