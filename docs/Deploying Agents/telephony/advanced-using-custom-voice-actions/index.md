@@ -10,6 +10,10 @@ metadata:
 next:
   description: ''
 ---
+> 🚧 Experimental Beta
+>
+> Advanced custom actions are in experimental beta and subject to change - especially around data types.
+
 ## Overview
 
 Custom actions allow you to extend the functionality of your voice agents and implement advanced telephony workflows. By leveraging custom actions, you can:
