@@ -126,6 +126,47 @@ To achieve this, create a custom action step labelled "**interruption**" (use th
 
 Once this action is hit, the setting applies for the rest of the call. So ideally after your uninterruptable action is performed, you can turn it off again with `allowInterrupts: true`.
 
+### Change Speech-to-Text Settings
+
+It is possible to dynamically change STT settings and switch vendors during a conversation.\
+Add a custom action that has **Stop on Action** enabled, is titled `asr`, and has a JSON body with a `settings` property defined below.
+
+![]()
+
+Follow the following formats for `setting`:
+
+```typescript
+{ // deepgram
+  "provider": "deepgram"
+  "model": "nova-3" | "nova-3-medical" | "nova-2",
+  "locale": string, // e.g. en-US
+  "keywords": string[],
+  "punctuationWaitMS": number, // punc wait
+  "partialWaitMS": number, // no punc wait
+  "silenceWaitMS": number, // endpointing
+  "interruptionWaitWords": number,
+};
+
+{ // cartesia
+  "provider": "cartesia",
+  "model": "ink-whisper",
+	"language": string, // e.g. en
+}
+
+{	// assemblyAI
+  "provider": "assemblyai",
+  "confidenceThreshold": number, // e.g. 0.7
+	"maxTurnSilence": number
+	"minTurnSilence": number
+}
+```
+
+From your default `provider` (defined in project settings), you can just provide a partial update of a single property. For example, if Deepgram is already the default provider, I can just write:
+
+```
+{ "settings": { "locale": "es" } }
+```
+
 ## Best Practices & Tips
 
 * Use DTMF menus judiciously to avoid overloading callers with too many options. Limit menus to 3-5 clearly differentiated choices.
