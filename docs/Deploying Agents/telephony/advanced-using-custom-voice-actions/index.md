@@ -12,7 +12,7 @@ next:
 ---
 > 🚧 Experimental Beta
 >
-> Advanced custom actions are in experimental beta and subject to change - especially around data types.
+> Advanced custom actions are in experimental beta and subject to change or removal.
 
 ## Overview
 
@@ -128,12 +128,13 @@ Once this action is hit, the setting applies for the rest of the call. So ideall
 
 ### Change Speech-to-Text Settings
 
-It is possible to dynamically change STT settings and switch vendors during a conversation.\
+It is possible to dynamically change STT settings and switch vendors during a conversation. This may be useful for switching the language or end-of-speech tolerance.
+
 Add a custom action that has **Stop on Action** enabled, is titled `asr`, and has a JSON body with a `settings` property defined below.
 
-![]()
+<Image align="center" src="https://files.readme.io/69fb750849960d658c63180f6657a0c89d06bbca553e6e07a97d9aa861f1ba93-Capture_decran_le_2025-06-28_a_17.40.19.png" />
 
-Follow the following formats for `setting`:
+Follow the following formats for `setting` (these properties may be subject to change):
 
 ```typescript
 { // deepgram
