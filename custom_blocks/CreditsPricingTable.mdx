@@ -47,7 +47,8 @@ export function CreditsPricingTable() {
           return 'Cartesia - TTS';
         }
         if (vendor && vendor.toLowerCase().includes('elevenlabs')) {
-          if (item && item.toLowerCase().includes('flash')) return 'Eleven Labs - TTS - Flash/Turbo';
+          if (item && item.toLowerCase().includes('flash')) return 'Eleven Labs - TTS - Flash';
+          if (item && item.toLowerCase().includes('turbo')) return 'Eleven Labs - TTS - Turbo';
           if (item && item.toLowerCase().includes('multilingual')) return 'Eleven Labs - TTS - Multilingual';
           return 'Eleven Labs - TTS';
         }
