@@ -1,31 +1,97 @@
 ---
 title: Credits
 excerpt: >-
-  Credits are Voiceflow's currency used to bill for agent usage. Each plan
-  includes credits.
+  Credits are Voiceflow's currency used to bill for Agent hosting and AI
+  services.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-## What are credits?
+## What are Voiceflow Credits?
 
-Credits are a currency used across Voiceflow and are how you're billed for your agent's usage. Certain actions performed by your agents will consume credits. Your credit balance is managed at workspace level, meaning that a single credit balance is shared by all agents in a workspace.
+Credits are the currency in Voiceflow to pay for AI usage and Agent hosting. One Voiceflow Credit costs $0.005 for non-Enterprise plans, and can be used to purchase Agent hosting or AI service usage.
 
-Each plan includes a certain amount of credits. [You can learn more on our pricing page.](https://www.voiceflow.com/pricing)
+Voiceflow charges Credits:
+
+* **Agent hosting** (ie User sent Chat AI messages, or Agent Voice AI minutes)
+* \*\***AI service usage** (ie LLM tokens, TTS minutes etc)
+
+Voiceflow only takes margin (makes money) on Agent hosting. Credits spent on AI services are charged at the price  Voiceflow pays for the AI service on behalf of the Voiceflow customer.
+
+## What are the benefits of Voiceflow Credits?
+
+* **One vendor to access every AI model** Voiceflow customers get access to 10+ AI service vendors across LLMs, TTSs, and STTs without needing to signup or contract multiple AI vendors.
+  * For example, Voiceflow customers get access to Anthropic, Google, OpenAI, Meta, Groq models all within one platform without needing to contract multiple vendors.
+  * For some AI vendors, Voiceflow has purchased an Enterprise license allowing unlimited usage of the underlying AI vendor without Voiceflow customers needing to purchase an Enterprise license themselves.
+* **AI model flexibility:** Voiceflow customers can spend Credits on any AI service vendor, and easily switch between vendors as prices change or new models come out without worry of AI vendor lock-in.
+* **Access to bulk discounting:** As Voiceflow's customer base spends more on AI services, Voiceflow negotiates bulk purchase discounts on AI services and passes these savings to customers.
+  * Over time, this will make AI services purchased through Voiceflow cheaper for Voiceflow customers than purchasing directly through the underlying AI vendor.
 
 <br />
 
+Certain actions performed by your agents will consume credits. Your credit balance is managed at workspace level, meaning that a single credit balance is shared by all agents in a workspace.
+
+On non-Enterprise plans, Credits cost $0.005 each. On Enterprise plans with committed volume pricing, per-Credit costs will be lower.
+
+Each plan includes a certain amount of credits. [You can learn more on our pricing page.](https://www.voiceflow.com/pricing)
+
+## How does Voiceflow make money?
+
+Voiceflow makes money through the combination of Paid Plans, and Credits.
+
+1. **Paid Plans:** Paid plans determine the features you have access to when building Agents. Building and Agent capabilities will differ across the Starter (free), Pro, Business, and Enterprise plans.
+2. **Credit Tiers:** Credit tiers determine the number of Credits your Voiceflow Workspace is granted every month, or year. Each Paid plan has a default number of Credits granted each month/year (ie Pro is 10K Credits). Each Paid plan can be upgraded to a higher Credits tier for more usage.
+
+> 🧠 Unlock a 10% discount and a year's worth of Credits
+>
+> When you upgrade to an Annual Credits tier, you get the entire year's worth of Credits upfront.
+>
+> For example, the Pro plan grants 10K Credits per month, but if you upgrade to an Annual plan you get a 10% discount and all 120K yearly Credits upfront.
+
 ## What actions consume credits?
 
-Most actions performed by an AI agent on the Voiceflow platform will consume credits. The specific amounts vary depending on the type of action:  
+Voice and Chat Agents charge in different ways. Chat Agents charge for User-to-Agent messages, and Voice Agents charge for Voice AI minutes. This is because Chat is async, and Voice is real-time, requiring different billing.
 
-* **Interactions**: you’ll be charged 1 credit whenever the user begins a conversation, sends a message, or calls the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/).
-* **Call minutes**: every minute your AI agent spends on a call (inbound or outbound) will consume 10 credits.
-* **No reply usage**: you will be charged 1 credit per [no-reply message](https://docs.voiceflow.com/docs/no-reply-response) that your agent sends, in addition to LLM usage.
-* **LLM (large language model) usage**: LLMs are used for various features, including the [Prompt step](doc:prompt-step), [Agent step](doc:agents), [prompt-based logic](https://docs.voiceflow.com/docs/logic#/), and [intent detection](https://docs.voiceflow.com/docs/intents#/). Credits are billed **at-cost** for LLM usage - more powerful models like GPT-4 Turbo will consume more credits per use than more lightweight models such as GPT-4o mini.
+**Chat Agents Credit Cost**
+
+* **User-to-Agent Chat Message**: Costs 1 Credit ($0.005) when a User sends a chat message to the Agent (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/)).
+* **Agent-to-User Chat Message**: Costs 0 Credits (free) for an Agent to send a chat message to the User.
+* **LLM Usage**: LLM tokens in Voiceflow are charged at the same underlying cost of the LLM provider. If an Agent-to-User Chat message requires LLM usage (like an Agent step or Prompt step), it will cost the number of tokens required to generate that message.
+* **Agent API calls, and logic execution**: API calls, orchestration, and any other 'behind the scenes' logic that does not require LLM tokens is free and unlimited.
+
+<br />
+
+> 🧪 Example Chat AI Credit cost (using GPT4o-mini)
+>
+> *\*\*Agent:* \*\*Hi! How can I help? \[0.0001 Credits for LLM usage]
+>
+> \*\**User:* \*\*I need to book a demo \[1 Credit]
+>
+> \_\*\*Agent: \*\*\_Got it, I can help you with that. One moment please... \[0.0001 Credits for LLM usage]
+>
+> *\*\*Agent: \*\**\< Executes an API call to pull up user info > \[0 Credits]
+>
+> ***Agent:*** \< Runs an LLM prompt to format API response > \[0.01 Credits]
+>
+> ***Agent:*** I have pulled up your account information \[0.0002 Credits for LLM usage]
+>
+> \_\*\*User: \*\*\_Thanks! \[1 Credit]
+>
+> ***
+>
+> Total Credits Usage: 2.1 Credits ($0.0105)
+
+<br />
+
+**Voice Agents Credit Cost**
+
+Voice AI Agents have 3 required component costs to every minute of usage: Agent Hosting, Text-to-Speech, Speech-to-Text. There are 2 optional components for usage, including LLM models, and telephony.
+
+* **Voice AI minutes**: Every minute that your Voice Agent is talking to a User costs 10 Credits ($0.05).
 * **TTS (text-to-speech) usage**: TTS generation for voice agents is charged per character and is an additional cost to call minutes.
 * **STT (speech-to-text) usage**: voice interfaces, such as [web chat widget](doc:chat-widget) and our [phone integration](doc:telephony) will consume credits as the user speaks.
+* **LLM (large language model) usage**: Any service in Voiceflow which requires LLM tokens consumes Credits at-cost, meaning Voiceflow does not make any money on these LLM tokens and simply charges the exact amount that Voiceflow will pay to the underlying model provider. The cost in Credits per model per token amount can be found in our Credits Pricing table.
 
 Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
 
