@@ -21,7 +21,7 @@ Voiceflow only takes margin (makes money) on Agent hosting. Credits spent on AI 
 
 ## Benefits of Voiceflow Credits
 
-* `**One vendor to access every AI model**` Voiceflow customers get access to 10+ AI service vendors across LLMs, TTSs, and STTs without needing to signup or contract multiple AI vendors.
+* `One vendor to access every AI model` Voiceflow customers get access to 10+ AI service vendors across LLMs, TTSs, and STTs without needing to signup or contract multiple AI vendors.
   * For example, Voiceflow customers get access to Anthropic, Google, OpenAI, Meta, Groq models all within one platform without needing to contract multiple vendors.
   * For some AI vendors, Voiceflow has purchased an Enterprise license allowing unlimited usage of the underlying AI vendor without Voiceflow customers needing to purchase an Enterprise license themselves.
 * **AI model flexibility:** Voiceflow customers can spend Credits on any AI service vendor, and easily switch between vendors as prices change or new models come out without worry of AI vendor lock-in.
