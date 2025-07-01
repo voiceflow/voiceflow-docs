@@ -45,7 +45,7 @@ Voiceflow makes money through the combination of Paid Plans, and Credits.
 
 Voice and Chat Agents charge in different ways because Voice Agents are real-time, so they charge in minutes, and Chat Agents are async, so they charge per User message.
 
-**Chat Agents Credit Cost**
+### Chat Agents
 
 Chat Agents are cheaper than Voice Agents as they require less AI services to run, and are async.
 
@@ -97,7 +97,7 @@ Chat Agents are cheaper than Voice Agents as they require less AI services to ru
 
 <br />
 
-**Voice Agents Credit Cost**
+### Voice Agents
 
 Voice AI costs more than Chat AI because it requires more AI services to operate and requires real-time compute which is more expensive for Voiceflow vs Chat AI which is async.
 
