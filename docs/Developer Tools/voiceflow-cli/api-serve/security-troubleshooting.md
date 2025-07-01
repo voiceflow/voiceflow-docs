@@ -7,13 +7,13 @@ metadata:
 ---
 ## Security Considerations
 
-- **Network Binding**: The server runs on all interfaces (`0.0.0.0`) by default. In production environments, consider binding to specific interfaces using the `--host` flag.
+* **Network Binding**: The server runs on all interfaces (`0.0.0.0`) by default. In production environments, consider binding to specific interfaces using the `--host` flag.
 
-- **Authentication**: There is no built-in authentication mechanism. For production deployments, consider adding a reverse proxy with authentication if needed.
+* **Authentication**: There is no built-in authentication mechanism. For production deployments, consider adding a reverse proxy with authentication if needed.
 
-- **Data Storage**: Test executions are stored in memory only. Consider implementing persistent storage solutions for production use cases.
+* **Data Storage**: Test executions are stored in memory only. Consider implementing persistent storage solutions for production use cases.
 
-- **CORS**: Cross-Origin Resource Sharing (CORS) is enabled by default. You can disable it using `--cors=false` if not needed.
+* **CORS**: Cross-Origin Resource Sharing (CORS) is enabled by default. You can disable it using `--cors=false` if not needed.
 
 ## Troubleshooting
 
@@ -33,7 +33,7 @@ metadata:
    voiceflow server --port 9090
    ```
 
-3. Check if you have permission to bind to the port (especially for ports < 1024):
+3. Check if you have permission to bind to the port (especially for ports \< 1024):
    ```bash
    sudo voiceflow server --port 80
    ```
@@ -59,7 +59,7 @@ metadata:
    voiceflow server --debug
    ```
 
-2. Verify that environment variables (VF_API_KEY, etc.) are properly set or the api key is provided in the request is correct
+2. Verify that environment variables (VF\_API\_KEY, etc.) are properly set or the api key is provided in the request is correct
 
 ### Connection Refused Errors
 
@@ -73,6 +73,7 @@ metadata:
    ```
 
 2. Check firewall settings and ensure the port is open
+
 3. For local testing, try connecting to `127.0.0.1` instead of `localhost`
 
 ### High Memory Usage
@@ -97,5 +98,7 @@ metadata:
    ```
 
 2. Try accessing the full URL: `http://localhost:8080/swagger/index.html`
+
 3. Check browser console for JavaScript errors
+
 4. Verify CORS settings if accessing from a different domain
