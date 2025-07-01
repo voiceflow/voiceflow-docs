@@ -50,15 +50,32 @@ Voice and Chat Agents charge in different ways because Voice Agents are real-tim
 Chat Agents are cheaper than Voice Agents as they require less AI services to run, and are async.
 
 * **User-to-Agent Chat Message**: Costs 1 Credit ($0.005) when a User sends a chat message to the Agent (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/)).
-* **Agent-to-User Chat Message**: Costs 0 Credits (free) for an Agent to send a chat message to the User.
+* **Agent-to-User Chat Message**: Costs 0 Credits (free) for an Agent to send chat messages to the User.
 * **Agent API calls, and logic execution**: Costs 0 Credits (free) to make API calls, orchestrate logic, or perform any other logic 'behind the scenes' that does not require AI services to be called.
-* **LLM Usage**: LLM tokens are charged using Credits at the same underlying token price that AI services charge Voiceflow. The cost in Credits for each LLM model can be found on our pricing table.
-* <br />
-* Voiceflow are charged at the same underlying cost of the LLM provider. If an Agent-to-User Chat message requires LLM usage (like an Agent step or Prompt step), it will cost the number of tokens required to generate that message.
+* **LLM Usage**: LLM tokens are charged using Credits at the same underlying token price that AI services charge Voiceflow. The Credit cost for each LLM model can be found on our [Credits Pricing Table](https://docs.voiceflow.com/docs/credits-pricing-table#/).
 
 <br />
 
-> 🧪 Example Chat AI Credit cost (using GPT4o-mini)
+> 💬 Estimate Chat Agent Credit cost
+>
+> > ✅ AI Services used
+> >
+> > * **Chat Agent Hosting:** Voiceflow
+> > * **LLM:** GTP4o Mini (OpenAI)
+>
+> > 📘 Cost for 5-turn Chat conversation
+> >
+> > * **Chat Agent Hosting:** Agent sends 15 messages with 3 API calls \[0 Credits]
+> > * Chat Agent Hosting: User sends 5 replies \[5 Credits]
+> > * **LLM:** Advanced Agent prompt with tool calls \[1 Credit]
+>
+> ***
+>
+> **Total cost:** 6 Credits ($0.03)
+
+> 💬 Estimate Chat Agent Credit cost
+>
+> ***LLM Used: OpenAI GPT4o Mini***
 >
 > *\*\*Agent:* \*\*Hi! How can I help? \[0.0001 Credits for LLM usage]
 >
@@ -76,42 +93,58 @@ Chat Agents are cheaper than Voice Agents as they require less AI services to ru
 >
 > ***
 >
-> Total Credits Usage: 2.1 Credits ($0.0105)
+> **Total Conversation Credit Usage:** 2.1 Credits ($0.0105)
 
 <br />
 
 **Voice Agents Credit Cost**
 
-Voice AI Agents have 3 required component costs to every minute of usage: Agent Hosting, Text-to-Speech, Speech-to-Text. There are 2 optional components for usage, including LLM models, and telephony.
+Voice AI costs more than Chat AI because it requires more AI services to operate and requires real-time compute which is more expensive for Voiceflow vs Chat AI which is async.
 
 * **Voice AI minutes**: Every minute that your Voice Agent is talking to a User costs 10 Credits ($0.05).
-* **TTS (text-to-speech) usage**: TTS generation for voice agents is charged per character and is an additional cost to call minutes.
-* **STT (speech-to-text) usage**: voice interfaces, such as [web chat widget](doc:chat-widget) and our [phone integration](doc:telephony) will consume credits as the user speaks.
-* **LLM (large language model) usage**: Any service in Voiceflow which requires LLM tokens consumes Credits at-cost, meaning Voiceflow does not make any money on these LLM tokens and simply charges the exact amount that Voiceflow will pay to the underlying model provider. The cost in Credits per model per token amount can be found in our Credits Pricing table.
+* **TTS (text-to-speech)**: AI speech generation is charged per character, the same as the TTS vendors. The Credit per characters price for each TTS model is listed on our [Credits Pricing Table](https://docs.voiceflow.com/docs/credits-pricing-table#/).
+* **STT (speech-to-text) usage**: User speech recognition is used to turn human speech into text for Agents to process. Each STT vendor charges a different Credits cost per minute, found in [Credits Pricing Table](https://docs.voiceflow.com/docs/credits-pricing-table#/).
+* **LLM Usage**: LLM tokens are charged using Credits at the same underlying token price that AI services charge Voiceflow. The Credit cost for each LLM model can be found on our [Credits Pricing Table](https://docs.voiceflow.com/docs/credits-pricing-table#/).
+* **Telephony Usage:** If you are connecting your Voice Agent to a telephony provider like Twilio or Vonage, they will charge their own price separate from Voiceflow per call connected.
+
+<br />
+
+> 🔈 Estimate Voice Agent Credit cost
+>
+> > ✅ AI Services used
+> >
+> > * **Voice Agent Hosting:** Voiceflow
+> > * **LLM:** GTP4o Mini (OpenAI)
+> > * **TTS:** EllevenLabs Flash (EllevenLabs)
+> > * **STT:** Deepgram Nova 3 (Deepgram)
+> > * **Telephony:** None
+>
+> > 📘 Cost for 5-minute call (50/50 talk time User:Agent)
+> >
+> > * **Voice Agent Hosting:** 50 Credits (5 minutes x 10 Credits per minute)
+> > * **LLM:** 1 Credit (roughly 500 input and 500 output tokens for 2140 characters, basic prompt)
+> > * **TTS:** 20 Credits (2.5 mins of AI talk time, \~2,140 characters, 9 Credits per 1K characters)
+> > * \*\*STT: \*\*5 Credits (5 minutes x 1 Credit per minute)
+>
+> ***
+>
+> **Total cost:** 76 Credits ($0.38, or $0.076 per minute)
 
 Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
 
 <LinkCard type="Tool" title="Credit usage estimator" description="Estimate how many credits your agents will consume per month and have the best value plan recommended to you." href="./estimate-your-credit-usage#credits-estimation-calculator" />
 
-<br />
+# Frequently Asked Questions about Credits
 
-## What actions don't consume credits?
+## What happens if I run out of Credits?
 
-While usage of your agent will incur credit charges, many actions do not cost credits. These include:
+* You will be sent usage warning emails automatically at 50%, 75%, 90%, and 100% of Credits Usage
+* Once Credits have run out, services that consume Credits in Voiceflow will stop working
+* To avoid Agent outages, monitor your Credits usage and upgrade to a Credits tier that matches your desired usage level. You can downgrade to a lower Credits tier at any time.
 
-* Messages sent from inside Voiceflow Creator while building an agent do not consume credits. However, any LLM or TTS usage incurred while generating these messages **will** incur credit charges.
-* Querying or adding data to the Knowledge Base will never consume credits.
-* Connecting to integrations through tools or functions or using the API step does not consume credits. However, any messages sent as a result of these actions will incur credit charges.
-* Proactive messages sent using the [proactive messages feature](doc:proactive-messages) aren't considered messages and don't incur credit charges.
-* Deploying and backing up your agent, adding editors to your workspace, and any other action that isn't direct usage of your agent will not consume credits.
+## Can I turn on auto-upgrade for Credit tiers?
 
-<br />
-
-## What happens if I run out of credits?
-
-If your workspace's credit balance is depleted, AI agents associated with that workspace will stop sending and replying to messages in production. To reactivate your agents, [upgrade your Voiceflow plan to one that includes more credits.](doc:managing-your-voiceflow-plan)
-
-<br />
+* Not today, we are working on this!
 
 ## How can I optimize my agent to use less credits?
 
