@@ -5,31 +5,26 @@ hidden: false
 metadata:
   robots: index
 ---
-## Audio input
-
-### Suite file
+## Suite file
 
 ```yaml
 # suite.yaml
 
 name: Example Suite
 description: Suite used as an example
-projectId: test-cx-346408
-locationId: us-central1
-agentName: test-agent
+environmentName: production
 tests:
   - id: test_id
     file: ./test.yaml
 ```
 
-### Test file
+## Test file
 
 ```yaml
 # test.yaml
 
 name: Example test
 description: These are some tests
-localeId: en
 interactions:
   - id: test_1
     user: 
