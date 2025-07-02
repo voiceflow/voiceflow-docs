@@ -89,14 +89,20 @@ Need help estimating how many credits your LLM or TTS usage will use? Check out 
 
 <br />
 
-## Benefits of Voiceflow Credits
+## Why Voiceflow uses credits
 
-* `One vendor to access every AI model` Voiceflow customers get access to 10+ AI service vendors across LLMs, TTSs, and STTs without needing to signup or contract multiple AI vendors.
-  * For example, Voiceflow customers get access to Anthropic, Google, OpenAI, Meta, Groq models all within one platform without needing to contract multiple vendors.
-  * For some AI vendors, Voiceflow has purchased an Enterprise license allowing unlimited usage of the underlying AI vendor without Voiceflow customers needing to purchase an Enterprise license themselves.
-* **AI model flexibility:** Voiceflow customers can spend Credits on any AI service vendor, and easily switch between vendors as prices change or new models come out without worry of AI vendor lock-in.
-* **Access to bulk discounting:** As Voiceflow's customer base spends more on AI services, Voiceflow negotiates bulk purchase discounts on AI services and passes these savings to customers.
-  * Over time, this will make AI services purchased through Voiceflow cheaper for Voiceflow customers than purchasing directly through the underlying AI vendor.
+We use a credit system to simplify how you pay for Agent hosting and AI services (like LLMs, TTS, and STT), without locking you into specific vendors or surprise bills.
+
+For you, this means that:
+
+* **No separate AI vendor accounts are required**: use models from OpenAI, Anthropic, Google, Meta, and more — all through one Voiceflow account.
+* **You can switch AI vendors anytime**: as prices or quality shift, you can change providers without rewriting your agent or renegotiating contracts.
+* **Pay-as-you-go with transparent costs**: every action has a clear credit cost, and most non-AI logic (like API calls or logic steps) is free.
+* **You have access to volume discounts**: Voiceflow negotiates bulk rates with AI providers and passes those savings directly to you.
+
+> ℹ️
+>
+> **Example:** If ElevenLabs lowers TTS rates or Anthropic releases a cheaper model, you’ll get those savings automatically — no manual work or vendor management required.
 
 ## How Voiceflow makes money
 
