@@ -23,12 +23,10 @@ Credits are charged differently for chat and voice agents because they run in di
 
 | Action                                                                                                                       | Credit Cost                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **User sends a chat message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/) | 1 Credit ($0.005)                                                                                                   |
-| **Agent sends a chat message**                                                                                               | 0 Credits (free)                                                                                                    |
-| **API calls, function calls, logic steps, and other similar actions**                                                        | 0 Credits (free)                                                                                                    |
+| **User sends a chat message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/) | 1 credit ($0.005)                                                                                                   |
+| **Agent sends a chat message**                                                                                               | 0 credits (free)                                                                                                    |
+| **API calls, function calls, logic steps, and other similar actions**                                                        | 0 credits (free)                                                                                                    |
 | **LLM usage**                                                                                                                | Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
-
-<br />
 
 <br />
 
@@ -50,11 +48,11 @@ Credits are charged differently for chat and voice agents because they run in di
   **User:** Thanks! *\[1 Credit]*
 </Accordion>
 
-* User sends 5 messages → 5 Credits
-* Agent sends 15 messages + 3 API calls → 0 Credits
-* LLM usage - GPT-4o Mini → \~1 Credit
+* User sends 5 messages → 5 credits
+* Agent sends 15 messages + 3 API calls → 0 credits
+* LLM usage - GPT-4o Mini → \~1 credit
 
-Total: 6 Credits ($0.03)
+Total: 6 credits ($0.03)
 
 > 💬 Estimate Chat Agent Credit cost
 >
@@ -113,12 +111,12 @@ Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM
 
 **Here's an example of how this works in practice for a five minute conversation:**
 
-* Agent talk time (5 min x 10 credits per minute) → 50 Credits
-* LLM usage - GPT-4o Mini → \~1 Credit
-* Text-to-Speech - ElevenLabs Flash (2.5 min, \~2,140 chars, 9 credits per 1,000 characters) → 20 Credits
-* Speech-to-Text - Deepgram Nova 3 - (5 min x 1 credit per minute) → 5 Credits
+* Agent talk time (5 min x 10 credits per minute) → 50 credits
+* LLM usage - GPT-4o Mini → \~1 credit
+* Text-to-Speech - ElevenLabs Flash (2.5 min, \~2,140 chars, 9 credits per 1,000 characters) → 20 credits
+* Speech-to-Text - Deepgram Nova 3 - (5 min x 1 credit per minute) → 5 credits
 
-Total: 76 Credits ($0.38, or $0.076 per minute)
+Total: 76 credits ($0.38, or $0.076 per minute)
 
 <br />
 
