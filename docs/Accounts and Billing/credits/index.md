@@ -32,6 +32,12 @@ Credits are charged differently for chat and voice agents because they run in di
 
 **Here's how this works in practice for a five turn conversation:**
 
+* User sends 5 messages → 5 credits
+* Agent sends 15 messages + 3 API calls → 0 credits
+* LLM usage - GPT-4o Mini → \~1 credit
+
+Total: 6 credits ($0.03)
+
 <Accordion title="Example Conversation" icon="fa-comments">
   **Agent:** Hi! How can I help? *\[0.0001 Credits for LLM usage]*
 
@@ -47,12 +53,6 @@ Credits are charged differently for chat and voice agents because they run in di
 
   **User:** Thanks! *\[1 Credit]*
 </Accordion>
-
-* User sends 5 messages → 5 credits
-* Agent sends 15 messages + 3 API calls → 0 credits
-* LLM usage - GPT-4o Mini → \~1 credit
-
-Total: 6 credits ($0.03)
 
 <br />
 
