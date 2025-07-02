@@ -43,7 +43,7 @@ Credits are charged differently for chat and voice agents because they run in di
 
   **Agent:** \<Executes an API call to pull up user info> *\[0 Credits]*
 
-  **Agent:** \< Runs an LLM prompt to format API response> *\[0.01 Credits]*
+  **Agent:** \<Runs an LLM prompt to format API response> *\[0.01 Credits]*
 
   **Agent:** I have pulled up your account information *\[0.0002 Credits for LLM usage]*
 
