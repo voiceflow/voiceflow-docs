@@ -81,7 +81,7 @@ Total: 76 credits ($0.38, or $0.076 per minute)
 
 <br />
 
-<br />
+## Estimating your credit usage
 
 Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
 
@@ -104,18 +104,7 @@ For you, this means that:
 >
 > **Example:** If ElevenLabs lowers TTS rates or Anthropic releases a cheaper model, you’ll get those savings automatically — no manual work or vendor management required.
 
-## How Voiceflow makes money
-
-Voiceflow makes money through the combination of Paid Plans, and Credits.
-
-1. **Paid Plans:** Paid plans determine the features you have access to when building Agents. Building and Agent capabilities will differ across the Starter (free), Pro, Business, and Enterprise plans.
-2. **Credit Tiers:** Credit tiers determine the number of Credits your Voiceflow Workspace is granted every month, or year. Each Paid plan has a default number of Credits granted each month/year (ie Pro is 10K Credits). Each Paid plan can be upgraded to a higher Credits tier for more usage. [You can learn more on our pricing page.](https://www.voiceflow.com/pricing)
-
-> 🧠 Unlock a 10% discount and a year's worth of Credits
->
-> When you upgrade to an Annual Credits tier, you get the entire year's worth of Credits upfront.
->
-> For example, the Pro plan grants 10K Credits per month, but if you upgrade to an Annual plan you get a 10% discount and all 120K yearly Credits upfront.
+<br />
 
 ## Frequently Asked Questions about Credits
 
