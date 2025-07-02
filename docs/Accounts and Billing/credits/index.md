@@ -73,13 +73,15 @@ Credits are charged differently for chat and voice agents because they run in di
 
 ### Voice Agents
 
+Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM usage. Telephony rates (such as renting a phone number and connection fees) are charged directly by our supported providers: [Twilio](https://twilio.com) and [Vonage](https://vonage.com).
+
 | Action                         | Credit Cost                                                                                     |
 | ------------------------------ | ----------------------------------------------------------------------------------------------- |
 | **Agent call time**            | 10 credits per minute ($0.05/min)                                                               |
 | **Text-to-Speech (TTS)**       | Billed per character ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))  |
 | **Speech-to-Text (STT)**       | Billed per minute ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))     |
 | **LLM usage**                  | Based on tokens used, [billed at cost](https://docs.voiceflow.com/docs/credits-pricing-table#/) |
-| **Telephony provider charges** | Billed separately by provider (Vonage or Twilio                                                 |
+| **Telephony provider charges** | Billed separately by provider (Twilio or Vonage)                                                |
 
 Here's an example of how this works in practice:
 
