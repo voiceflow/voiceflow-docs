@@ -102,7 +102,7 @@ For you, this means that:
 
 > ℹ️
 >
-> **Example:** If ElevenLabs lowers TTS rates or Anthropic releases a cheaper model, you’ll get those savings automatically — no manual work or vendor management required.
+> **Example:** if ElevenLabs lowers TTS rates or Anthropic releases a cheaper model, you’ll get those savings automatically — no manual work or vendor management required.
 
 <br />
 
