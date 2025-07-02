@@ -54,45 +54,6 @@ Credits are charged differently for chat and voice agents because they run in di
 
 Total: 6 credits ($0.03)
 
-> 💬 Estimate Chat Agent Credit cost
->
-> > ✅ AI Services used
-> >
-> > * **Chat Agent Hosting:** Voiceflow
-> > * **LLM:** GTP4o Mini (OpenAI)
->
-> > 📘 Cost for 5-turn Chat conversation
-> >
-> > * **Chat Agent Hosting:** Agent sends 15 messages with 3 API calls \[0 Credits]
-> > * Chat Agent Hosting: User sends 5 replies \[5 Credits]
-> > * **LLM:** Advanced Agent prompt with tool calls \[1 Credit]
->
-> ***
->
-> **Total cost:** 6 Credits ($0.03)
-
-> 💬 Estimate Chat Agent Credit cost
->
-> ***LLM Used: OpenAI GPT4o Mini***
->
-> *\*\*Agent:* \*\*Hi! How can I help? \[0.0001 Credits for LLM usage]
->
-> \*\**User:* \*\*I need to book a demo \[1 Credit]
->
-> \_\*\*Agent: \*\*\_Got it, I can help you with that. One moment please... \[0.0001 Credits for LLM usage]
->
-> *\*\*Agent: \*\**\< Executes an API call to pull up user info > \[0 Credits]
->
-> ***Agent:*** \< Runs an LLM prompt to format API response > \[0.01 Credits]
->
-> ***Agent:*** I have pulled up your account information \[0.0002 Credits for LLM usage]
->
-> \_\*\*User: \*\*\_Thanks! \[1 Credit]
->
-> ***
->
-> **Total Conversation Credit Usage:** 2.1 Credits ($0.0105)
-
 <br />
 
 ### Voice Agents
