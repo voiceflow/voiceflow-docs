@@ -110,9 +110,7 @@ For you, this means that:
 
 ### What happens if I run out of credits?
 
-* You will be sent usage warning emails automatically at 50%, 75%, 90%, and 100% of Credits Usage
-* Once Credits have run out, services that consume Credits in Voiceflow will stop working
-* To avoid Agent outages, monitor your Credits usage and upgrade to a Credits tier that matches your desired usage level. You can downgrade to a lower Credits tier at any time.
+You’ll get automatic usage alerts at 50%, 75%, 90%, and 100% of your credit limit. Once your credits have run out, your Voiceflow agent will step working. To avoid agent outages, we recommend monitoring your credits usage and upgrading to a credits tier that matches your desired usage level. You can downgrade to a lower credits tier at any time.
 
 ### Can I turn on auto-upgrade for credit tiers?
 
