@@ -79,6 +79,8 @@ Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM
 
 Total: 76 credits ($0.38, or $0.076 per minute)
 
+<br />
+
 ## Estimating your credit usage
 
 Need help estimating how many credits your LLM or TTS usage will use? Check out our credit usage estimation calculator.
