@@ -19,7 +19,7 @@ Each Voiceflow credit costs $0.005 USD on non-Enterprise plans and can be used f
 
 Credits are charged differently for chat and voice agents because they run in different ways: chat agents are asynchronous and cheaper, while voice agents operate in real time and cost more.
 
-### Chat Agents
+### Chat agents
 
 | Action                                                                                                                        | Credit Cost                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ Total: 6 credits ($0.03)
 
 <br />
 
-### Voice Agents
+### Voice agents
 
 Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM usage. Telephony rates (such as renting a phone number and connection fees) are charged directly by our supported providers: [Twilio](https://twilio.com) and [Vonage](https://vonage.com).
 
