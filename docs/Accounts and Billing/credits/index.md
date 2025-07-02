@@ -11,7 +11,7 @@ metadata:
 Credits are the currency in Voiceflow to pay for AI usage and project hosting. Voiceflow charges credits for:
 
 * **Agent hosting** - charged by messages sent by the user and minutes the agent spends on phone calls.
-* **AI service usage** - this includes LLM tokens, text-to-speech generation, and speech-to-text usage.
+* **AI service usage** - this includes LLM tokens, text-to-speech generation, and speech-to-ew usage.
 
 Each Voiceflow credit costs $0.005 USD on non-Enterprise plans and can be used for either Agent hosting or AI services. Voiceflow only makes money on Agent hosting - AI service costs are passed through at cost, with no markup.
 
