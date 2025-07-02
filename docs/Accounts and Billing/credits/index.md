@@ -60,13 +60,13 @@ Total: 6 credits ($0.03)
 
 Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM usage. Telephony rates (such as renting a phone number and connection fees) are charged directly by our supported providers: [Twilio](https://twilio.com) and [Vonage](https://vonage.com).
 
-| Action                         | Credit Cost                                                                                     |
-| ------------------------------ | ----------------------------------------------------------------------------------------------- |
-| **Agent call time**            | 10 credits per minute ($0.05/min)                                                               |
-| **Text-to-Speech (TTS)**       | Billed per character ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))  |
-| **Speech-to-Text (STT)**       | Billed per minute ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))     |
-| **LLM usage**                  | Based on tokens used, [billed at cost](https://docs.voiceflow.com/docs/credits-pricing-table#/) |
-| **Telephony provider charges** | Billed separately by provider (Twilio or Vonage)                                                |
+| Action                         | Credit Cost                                                                                      |
+| ------------------------------ | ------------------------------------------------------------------------------------------------ |
+| **Agent call time**            | 10 credits per minute ($0.05/min)                                                                |
+| **Text-to-Speech (TTS)**       | Billed per character ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))   |
+| **Speech-to-Text (STT)**       | Billed per minute ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))      |
+| **LLM usage**                  | Based on tokens used ([billed at cost](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
+| **Telephony provider charges** | Billed separately by provider (Twilio or Vonage)                                                 |
 
 <br />
 
