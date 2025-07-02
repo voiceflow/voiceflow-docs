@@ -35,19 +35,13 @@ Credits are charged differently for chat and voice agents because they run in di
 **Here's how this works in practice for a five turn conversation:**
 
 <Accordion title="Example Conversation" icon="fa-comments">
-  *Agent:* Hi! How can I help? *\[0.0001 Credits for LLM usage]*
-
-  > \*\**User:* \*\*I need to book a demo \[1 Credit]
-  >
-  > \_\*\*Agent: \*\*\_Got it, I can help you with that. One moment please... \[0.0001 Credits for LLM usage]
-  >
-  > *\*\*Agent: \*\**\< Executes an API call to pull up user info > \[0 Credits]
-  >
-  > ***Agent:*** \< Runs an LLM prompt to format API response > \[0.01 Credits]
-  >
-  > ***Agent:*** I have pulled up your account information \[0.0002 Credits for LLM usage]
-  >
-  > \_\*\*User: \*\*\_Thanks! \[1 Credit]
+  **Agent:** Hi! How can I help? *\[0.0001 Credits for LLM usage]*
+  **User:** I need to book a demo *\[1 Credit]*
+  **Agent:** Got it, I can help you with that. One moment please... *\[0.0001 Credits for LLM usage]*
+  **Agent:** \<Executes an API call to pull up user info> *\[0 Credits]*
+  **Agent:** \< Runs an LLM prompt to format API response> *\[0.01 Credits]*
+  **Agent:** I have pulled up your account information *\[0.0002 Credits for LLM usage]*
+  **User:** Thanks! *\[1 Credit]*
 </Accordion>
 
 * User sends 5 messages → 5 Credits
