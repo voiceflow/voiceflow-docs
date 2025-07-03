@@ -56,12 +56,15 @@ The API is shown in a `curl` format. It must include an `Authorization` header w
   "variables": {
     "user_name": "Jane",
     "account_type": "Premium"
-  }
+  },
+	"amd": true
 }
 ```
 
 * `to`: The phone number to call (E.164 format).
 * `variables`: Optional. A JSON object with any Voiceflow variables to inject at launch.
+* `amd` whether to use built-in answering machine detection or not.
+  * [Twilio](https://www.twilio.com/docs/voice/answering-machine-detection) - `asyncAmd: true` `machineDetection: 'DetectMessageEnd'`.
 
 <br />
 
