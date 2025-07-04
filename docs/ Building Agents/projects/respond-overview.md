@@ -27,8 +27,7 @@ The key to crafting effective AI responses lies in the information you are provi
 
 1. **Provide the AI with relevant context about the users asking the question.** You can include variables in the prompts that you are sending to the AI. A good example is passing it the user is a developer or not, so the AI can provide more technical answers.
 2. **Choose the right model.** Voiceflow offers a wide range of different models you can select, from various providers like OpenAI or Anthropic. Models like GPT 4o are more accurate, but are more expensive and slower. Models like GPT-3.5 are cheaper and faster, but less accurate. Ensure that you use the right model for the right task by considering these tradeoffs and running experiments.
-3. \[here]
-4. **Ensure your Knowledge Base Information is optimized.** Bad information in leads to bad answers out. Watch the video in the knowledge base doc to understand how to optimize the information in your knowledge base.
+3. **Ensure your Knowledge Base Information is optimized.** Bad information in leads to bad answers out. Watch the video in the knowledge base doc to understand how to optimize the information in your knowledge base.
 
 You're never going to get it right on the first time. Our advice is to start small, launch, and then improve your agent overtime by seeing how users are interacting with it.
 
@@ -51,14 +50,20 @@ Responding is straightforward in Voiceflow. You can use any of the following met
    Sometimes, you want your AI to return structured data instead of plain text- for example, a list of cities, product SKUs, or diagnostic results. This is useful when the output needs to be parsed and used programmatically in your Voiceflow assistant.
 
    Voiceflow supports **structured JSON output schemas**, in the **Prompt step** which helps you:
+
    * Ensure the AI returns data in a predictable format
    * Use that data dynamically in your assistant (e.g. filling buttons, looping, branching)
+
    #### 📦 Example Use Case: Top Cities by Population
+
    Let’s say your prompt is:
+
    ```
    get me the top 5 cities in {country} according to their population
    ```
+
    You can define a JSON output schema like this, in the side panel of the Prompt step (under JSON output):
+
    ```json
    {
      "type": "object",
@@ -80,7 +85,9 @@ Responding is straightforward in Voiceflow. You can use any of the following met
      "additionalProperties": false
    }
    ```
+
    This ensures the AI returns an object like:
+
    ```json
    {
      "cities": [
@@ -92,10 +99,12 @@ Responding is straightforward in Voiceflow. You can use any of the following met
      ]
    }
    ```
+
    #### ✅ How to Enable It
+
    1. Toggle on **JSON output** in the Prompt step.
-   2. Paste the schema in the **Output format** section.
-   [Watch the video guide on structuring JSON output →](https://your-video-link-here.com)
+   2. Paste the schema in the **Output format** section.\
+      [Watch the video guide on structuring JSON output →](https://your-video-link-here.com)
 4. **Other Media**: For media outside of this, there are a few ways to display it.
    1. **Using our Webchat**: The Voiceflow [Web chat](https://developer.voiceflow.com/v2.0/docs/web-chat-overview) supports iframes. You can also create your own custom widgets to display in the webchat (ie. calendar pickers, forms) using a custom widget (docs in the Web Chat section under deploying agents)
    2. **Using our API**: You can use a custom action step or a function to pass a custom 'trace' to the runtime. This way you can include the URL for the media you wish to receive and display it on your front end.
