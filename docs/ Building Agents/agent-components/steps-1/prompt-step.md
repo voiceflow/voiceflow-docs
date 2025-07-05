@@ -22,6 +22,7 @@ The Prompt step is a component you can add to your workflow that utilizes prompt
 * Create a new prompt directly from the workflow.
 * Edit prompts on the fly without leaving the canvas.
 * Seamlessly integrate AI-generated content into your conversation flow.
+* Output customized structured JSON for data formatting.
 
 ## How to Use the Prompt Step
 
@@ -71,6 +72,8 @@ When you add the Prompt step, you’ll have two options:
 * **Testing**: Use the built-in prototype tool to test how the Prompt step functions within your agent.
 * **Adjust as Needed**: Based on testing, you can return to the Prompt step to select different prompts or edit existing ones.
 
+<br />
+
 ## Best Practices
 
 **Use Clear Prompt Names**
@@ -83,7 +86,99 @@ When you add the Prompt step, you’ll have two options:
 * **Validate Responses**: Use the prototype tool to ensure the prompt generates the desired output.
 * **Variable Checks**: Confirm that any variables used in the prompt are correctly populated at runtime.
 
-## Example Scenario
+## Structured JSON Output
+
+Structured outputs allow your AI to return predictable, machine-readable JSON objects instead of plain text. This is useful when responses need to be **parsed or reused programmatically** inside your Voiceflow assistant.
+
+***
+
+#### What are Structured Outputs?
+
+Structured outputs use a JSON schema to constrain and validate the format of AI responses. This ensures the returned data follows a specific shape, making it easier to use within:
+
+* Loops and repeat blocks
+* Conditional branches
+* Dynamic UI components (e.g. buttons, tables)
+* Variable mapping
+
+Structured output is configured in the **Prompt Step** by enabling the `JSON output` toggle.
+
+***
+
+#### When to Use Structured Output
+
+Use structured output when:
+
+* You need to extract and reuse parts of an AI response
+* You expect a list of formatted results (e.g. cities, products, FAQs)
+* You want predictable, deterministic formatting for validation or logic
+
+***
+
+#### Example Schema
+
+**Prompt**
+
+```
+get me the top 5 cities in {country} according to their population
+```
+
+**Output Schema**
+
+```json
+{
+  "type": "object",
+  "required": ["cities"],
+  "properties": {
+    "cities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "population": { "type": "number" }
+        },
+        "required": ["name", "population"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+```
+
+**Expected Output**
+
+```json
+{
+  "cities": [
+    { "name": "Tokyo", "population": 37393128 },
+    { "name": "Delhi", "population": 30290936 },
+    { "name": "Shanghai", "population": 27058480 },
+    { "name": "São Paulo", "population": 22043028 },
+    { "name": "Mexico City", "population": 21918936 }
+  ]
+}
+```
+
+***
+
+#### Configuration Summary
+
+| Setting           | Description                                                                |
+| ----------------- | -------------------------------------------------------------------------- |
+| **Prompt Step**   | Used to send the instruction to the AI                                     |
+| **JSON Output**   | Toggle this ON to enable structured response mode                          |
+| **Output Format** | Paste the JSON Schema here                                                 |
+| **Model Choice**  | Lower-temp models (e.g. GPT-4o mini, Temp 0.3) recommended for consistency |
+
+***
+
+### 🎥 Reference Video
+
+[Watch the video guide on structuring JSON output →](https://your-video-link-here.com)
+
+## Prompt Step; Example Scenario
 
 Imagine you’re building an agent that provides personalized product recommendations.
 
