@@ -1,6 +1,6 @@
 ---
 title: Prompt step
-excerpt: ''
+excerpt: Generate responses to a user's question.
 deprecated: false
 hidden: false
 metadata:
@@ -10,7 +10,11 @@ metadata:
 next:
   description: ''
 ---
-The **Prompt step** allows you to incorporate advanced AI-driven responses into your conversational agents. By leveraging pre-defined prompts, you can create dynamic and context-aware interactions that enhance the user experience. The Prompt step simplifies the integration of complex prompts, making it easier to design intelligent and responsive agents.
+<Image align="center" src="https://files.readme.io/3dec4418994820012e8a1be5ba75458022e0ac7a8f4651020b332a83fac576b9-Prompt_1.png" />
+
+<br />
+
+The Prompt step allows your agent to generate responses to a user's message using an LLM. Each prompt step will generate a single response - if you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents).
 
 <br />
 
