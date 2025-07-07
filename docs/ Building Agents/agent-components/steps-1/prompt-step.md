@@ -22,6 +22,16 @@ To use the prompt step, add it to the canvas, connect it to a previous step, the
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSzVYvHMyQXUw9e3lryuWbOH7E5ApCIBaitDYK" />
 
+<br />
+
+## Advanced usage
+
+After you've created a prompt, you can optionally change the model (LLM), temperature, and max tokens settings that should be followed by this step. You can also test the prompt from within the prompt window.
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS2JYZY9gQD9nLFZ4JORio7WdbTegAGUcvxfw6" />
+
+<br />
+
 ## Best Practices
 
 **Use Clear Prompt Names**
