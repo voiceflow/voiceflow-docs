@@ -14,22 +14,13 @@ next:
 
 <br />
 
-The Prompt step allows your agent to generate responses to a user's message using an LLM. Each prompt step will generate a single response - if you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents).
+The Prompt step allows your agent to generate responses to a user's message using an LLM. It’s useful for injecting AI into a specific point in your flow, such as generating product suggestions, summarizing information, or rephrasing user input. Each prompt step will generate a single response - if you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents).
 
 <br />
 
-## What is the Prompt Step?
+## Basic usage
 
-The Prompt step is a component you can add to your workflow that utilizes prompts defined in your **Prompts CMS**. It allows your agent to generate responses based on these prompts, which can include system prompts, user-agent message pairs, variables, and more. This step enables you to:
-
-* Select an existing prompt from your Prompts CMS.
-* Create a new prompt directly from the workflow.
-* Edit prompts on the fly without leaving the canvas.
-* Seamlessly integrate AI-generated content into your conversation flow.
-
-## How to Use the Prompt Step
-
-![](https://files.readme.io/f58e61e654fac3090a31b87705f8ded3c7d976a81ce9ff8de332bb5ac385b161-CleanShot_2024-11-04_at_21.41.082x.png)
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSzVYvHMyQXUw9e3lryuWbOH7E5ApCIBaitDYK" />
 
 **1. Adding the Prompt Step to Your Workflow**
 
