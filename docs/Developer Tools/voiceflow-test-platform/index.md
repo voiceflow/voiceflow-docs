@@ -1,7 +1,8 @@
 ---
-title: Voiceflow Test Platform (Experimental)
+title: Voiceflow Test Platform
 deprecated: false
 hidden: false
+icon: fad fa-flask-vial
 metadata:
   robots: index
 ---
