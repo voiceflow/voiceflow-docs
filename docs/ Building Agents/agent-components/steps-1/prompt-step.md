@@ -1,6 +1,6 @@
 ---
 title: Prompt step
-excerpt: Generate responses to a user's question.
+excerpt: Use AI to generate a single message inside a workflow.
 deprecated: false
 hidden: false
 metadata:
