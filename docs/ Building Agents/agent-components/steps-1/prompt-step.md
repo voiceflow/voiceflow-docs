@@ -14,7 +14,7 @@ next:
 
 <br />
 
-The Prompt step allows your agent to generate responses to a user's message using an LLM. It’s useful for injecting AI into a specific point in your flow, such as generating product suggestions, summarizing information, or rephrasing user input. Each prompt step will generate a single response - if you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents).
+The Prompt step allows your agent to generate responses to a user's message using an LLM. It’s useful for injecting AI into a specific point in your flow, such as generating product suggestions, summarizing information, or rephrasing user input. Each prompt step will generate a single response - if you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents). If you'd like to set a variable to the result of a prompt, use the [Set step](doc:variables-set).
 
 ## Basic usage
 
@@ -31,40 +31,3 @@ After you've created a prompt, you can optionally change the model (LLM), temper
 We recommend experimenting with different settings prior to launching your agent into production. Please note that different models cost a varying number of credits - learn more on our [pricing page](doc:credits-pricing-table).
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS2JYZY9gQD9nLFZ4JORio7WdbTegAGUcvxfw6" />
-
-<br />
-
-## Best Practices
-
-**Use Clear Prompt Names**
-
-* **Consistency**: Ensure prompt names are descriptive to make selection easier.
-* **Organization**: Helps maintain clarity, especially when managing multiple prompts.
-
-**Test Your Prompts**
-
-* **Validate Responses**: Use the prototype tool to ensure the prompt generates the desired output.
-* **Variable Checks**: Confirm that any variables used in the prompt are correctly populated at runtime.
-
-## Example Scenario
-
-Imagine you’re building an agent that provides personalized product recommendations.
-
-**Steps:**
-
-1. **Create a Prompt**: Define a prompt in the Prompts CMS that generates recommendations based on user preferences.
-
-2. **Add Prompt Step**: Drag the Prompt step into your workflow where the recommendation should occur.
-
-3. **Select the Prompt**: Choose your recommendation prompt from the dropdown.
-
-4. **Connect Steps**: Link the Prompt step after collecting user preferences and before presenting the recommendations.
-
-5. **Test the Flow**: Use the prototype tool to ensure the agent provides appropriate recommendations.
-
-<br />
-
-## Learn more
-
-* [Prompt CMS and Editor](https://docs.voiceflow.com/docs/prompts-cms-and-editor): Explore the central hub for creating, testing, and managing prompts within your agent.
-* [Set step](https://docs.voiceflow.com/docs/variables-set): Discover how to dynamically assign prompt outputs to variables for greater control over agent behaviour.
