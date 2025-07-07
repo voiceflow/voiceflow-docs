@@ -18,7 +18,7 @@ The Prompt step allows your agent to generate responses to a user's message usin
 
 ## Basic usage
 
-To use the prompt step, add it to the canvas, connect it to a previous step, then select the prompt you'd like to use with it. If you don't already have a prompt created in your project, you'll be prompted (😉) to create one.
+To use the prompt step, add it to the canvas, connect it to a previous step, then select the prompt you'd like to use with it. If you don't already have a prompt created in your project, you'll be prompted (😉) to create one. We recommend using the templates provided at the bottom of the prompt window as a starting point.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSzVYvHMyQXUw9e3lryuWbOH7E5ApCIBaitDYK" />
 
