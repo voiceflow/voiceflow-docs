@@ -28,6 +28,8 @@ To use the prompt step, add it to the canvas, connect it to a previous step, the
 
 After you've created a prompt, you can optionally change the model (LLM), temperature, and max tokens settings that should be followed by this step. You can also test the prompt from within the prompt window.
 
+We recommend experimenting with different settings prior to launching your agent into production. Please note that different models cost a varying number of credits - learn more on our [pricing page](doc:credits-pricing-table).
+
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS2JYZY9gQD9nLFZ4JORio7WdbTegAGUcvxfw6" />
 
 <br />
