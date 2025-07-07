@@ -14,7 +14,20 @@ next:
 
 <br />
 
-The Prompt step allows your agent to generate responses to a user's message using an LLM. It’s useful for injecting AI into a specific point in your flow, such as generating product suggestions, summarizing information, or rephrasing user input. Each prompt step will generate a single response - if you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents). If you'd like to set a variable to the result of a prompt, use the [Set step](doc:variables-set).
+The Prompt step allows your agent to generate responses to a user's message using an LLM. It’s useful for injecting AI into a specific point in your flow, such as generating product suggestions, summarizing information, or rephrasing user input. Each time the prompt step is used, it will generate a single response.
+
+<br />
+
+## When to use the Prompt step
+
+The prompt step is only recommended for specific situations. If you're looking to build a fully agentic conversational agent, we recommend using the [Agent step](doc:agents) instead. If you'd like to set a variable to the result of a prompt, use the [Set step](doc:variables-set).
+
+Here are some situations where the Prompt step might be a good fit:
+
+* Searching the Knowledge Base using the [KB Search step](doc:kb-search), then summarizing the output using a prompt step. This should only be done if the [Agent step](doc:agents)'s built in Knowledge Base search doesn't meet your needs.
+* Adding LLM-generated responses to a deterministic flow. For example, if you have a calculator that must follow specific steps in order for compliance reasons, you could build these with the [Set step](doc:variables-set) and [Condition step](doc:logic), then use the Prompt step to summarize the result.
+
+<br />
 
 ## Basic usage
 
