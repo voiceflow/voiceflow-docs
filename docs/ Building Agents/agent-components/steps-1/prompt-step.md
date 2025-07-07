@@ -24,9 +24,13 @@ The Prompt step is a component you can add to your workflow that utilizes prompt
 * Seamlessly integrate AI-generated content into your conversation flow.
 * Output customized structured JSON for data formatting.
 
+<br />
+
 ## How to Use the Prompt Step
 
 ![](https://files.readme.io/f58e61e654fac3090a31b87705f8ded3c7d976a81ce9ff8de332bb5ac385b161-CleanShot_2024-11-04_at_21.41.082x.png)
+
+<br />
 
 **1. Adding the Prompt Step to Your Workflow**
 
