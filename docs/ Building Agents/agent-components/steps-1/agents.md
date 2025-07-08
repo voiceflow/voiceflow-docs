@@ -1,8 +1,8 @@
 ---
 title: Agent step
 excerpt: >-
-  Handle user input, search the knowledge base, call tools, and follow paths —
-  all in one step
+  Handle user input, search the knowledge base, call tools, and follow exit
+  conditions — all in one step
 deprecated: false
 hidden: false
 metadata:
@@ -28,7 +28,7 @@ The Agent step provides a comprehensive solution for creating AI agents that can
 
 * Intelligently respond to user queries
 * Search knowledge base for relevant information
-* Follow specific conversation paths based on user intent
+* Follow specific conversation exit conditions based on user intent
 * Execute functions to interact with external services
 
 **To add an Agent step to your canvas:**
@@ -119,39 +119,39 @@ For example, for an Order ID variable:
 > **Input Variable Name**: productSKU\
 > **LLM Variable Description**: "The SKU or product ID of the item the customer is inquiring about. Valid SKUs are alphanumeric codes that typically start with 'P-' followed by numbers. If the customer mentions a product name but not the SKU, ask them for more specific information about which product they're interested in."
 
-## Paths
+## Exit conditions
 
-Paths allow your agent to handle specific conversation flows and take appropriate actions:
+Exit conditions allow your agent to handle specific conversation flows and take appropriate actions:
 
-* **Automatic Routing**: The agent detects user intent and automatically routes to the appropriate path
-* **Variable Collection**: You can require specific data to be collected before entering a path
-* **Seamless Integration**: Paths work within natural conversation, without requiring specific commands
+* **Automatic Routing**: The agent detects user intent and automatically routes to the appropriate exit condition
+* **Variable Collection**: You can require specific data to be collected before entering a exit condition
+* **Seamless Integration**: Exit conditions work within natural conversation, without requiring specific commands
 
-**To create a path:**
+**To create an exit condition:**
 
 1. Open your Agent step editor
-2. Add a new path with a descriptive name
-3. Define a description that explains when this path should be triggered
+2. Add a new exit condition with a descriptive name
+3. Define a description that explains when this exit condition should be triggered
 4. Optionally add required variables that must be collected
-5. Connect the path to subsequent steps in your flow
+5. Connect the exit condition to subsequent steps in your flow
 
 ![](https://files.readme.io/428bab7644952d89f2e2db6835e628de0df20a1f67e54c51807293368b5b3ffb-CleanShot_2025-03-19_at_14.10.082x.png)
 
-### Path Examples:
+### Exit condition Examples:
 
-#### Order Return Path
+#### Order Return Exit Condition
 
-> **Path Name**: Process Order Return\
+> **Exit Condition Name**: Process Order Return\
 > **LLM Description**: "Trigger this path when the user wants to return an item they purchased, expresses dissatisfaction with their order, mentions that an item is defective, or asks about the return policy. The user might use phrases like 'I want to return', 'how do I send this back', 'my product is broken', or 'does this have a warranty'."
 >
 > **Required Variable**: orderID\
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
 
-This description helps the LLM understand exactly when to trigger the return process. It includes both direct mentions of returns and indirect signals of return intent, providing a comprehensive set of triggers for the path. The variable description ensures the agent knows how to collect and validate the required information before proceeding.
+This description helps the LLM understand exactly when to trigger the return process. It includes both direct mentions of returns and indirect signals of return intent, providing a comprehensive set of triggers for the exit condition. The variable description ensures the agent knows how to collect and validate the required information before proceeding.
 
-#### Promo Code Path
+#### Promo Code Exit Condition
 
-> **Path Name**: Get a Promo Code\
+> **Exit Condition Name**: Get a Promo Code\
 > **Description**: "Trigger this path when the user asks for a promo code or a discount, or says things are too expensive. Look for phrases like 'do you have any discounts', 'that's too much money', 'any coupon codes', or 'how can I save on my order'."
 >
 > **Required Variable**: email\
