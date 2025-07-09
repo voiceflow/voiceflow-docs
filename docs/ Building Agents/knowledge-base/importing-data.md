@@ -5,6 +5,12 @@ hidden: false
 metadata:
   robots: index
 ---
+Importing data lets you bring external content- like websites, documents, and support articles- into your Voiceflow assistant workspace for AI to reference during conversations with users.
+
+![](https://files.readme.io/74e3fbe366072c370e2ecb1cb901867afdcf060e0c9913798b353095b36cfb7d-CleanShot_2025-07-09_at_15.58.03.gif)
+
+<br />
+
 ## Supported data sources
 
 Voiceflow supports five different data sources:
@@ -36,11 +42,11 @@ When importing data from URLs or sitemaps, you can schedule a refresh rate to au
 
 > ⚠️ Be careful with refresh rates!
 >
-> When an LLM chunking strategy is enabled, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are disabled, re-syncs don't consume any credits.
+> When an LLM chunking strategy is **enabled**, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are **disabled**, re-syncs *don't* consume any credits.
 
 ## LLM chunking strategies
 
-<br />
+LLM chunking strategies help optimize an LLM's access to information in your knowledge base by processing them in various ways to optimize your for your case. Your content quality directly impacts LLM performance.
 
 <Table align={["left","left"]}>
   <thead>
@@ -137,4 +143,37 @@ When importing data from URLs or sitemaps, you can schedule a refresh rate to au
   </tbody>
 </Table>
 
-> 👍 Pro tip:
+> 👍 Pro tip: Mix strategies for better results.
+>
+> Combining strategies may optimize both chunk structure and clarity for improved LLM performance:
+>
+> * `Smart Chunking` + `Add Topic Headers` → Context-rich structured responses (ideal for Internal Tools & HR Agents)
+> * `FAQ Optimization` + `Summarize `→ Compact, efficient answers (ideal for Customer Support Agents)
+> * `Smart Chunking` + `Remove HTML/Noise` → Clean, readable chunks from web docs (ideal for Web-based Documentation Agents)
+
+## Troubleshooting data imports
+
+If something goes wrong with your data imports, here’s some common approaches to debug:
+
+* Hover over the ❗ icon beside a failed import to view why it failed.
+
+> <Image align="center" border={false} caption="Example error message from failed import." src="https://files.readme.io/94f4e98329a3de393df0b90a46011518a080072a962c7e2618d56362201994af-image.png" />
+>
+> <br />
+
+* Ensure your URL or sitemap is public and not gated by auth/logins.
+* Smart Chunking may fail for large files. Try reducing file size or selecting another chunking method.
+
+> ℹ️ Failed data imports
+>
+> Import errors are handled gracefully. Failed files won’t break your project - the remaining files will be processed. Delete the failed file, resolve the issue and re-upload again to your knowledge base.
+
+## Using the Knowledge Base REST API
+
+Voiceflow's <Anchor label="Knowledge Base REST API" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/">Knowledge Base REST API</Anchor> allows you to manage your KB programmatically.
+
+> Common API use cases:
+>
+> * Importing content from Notion, Google Docs, or Airtable via an SDK or API request
+> * Managing KB entries dynamically across multiple workspaces, outside of the Voiceflow Creator
+> * Debugging & testing chunk processing behind the scenes
