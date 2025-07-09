@@ -23,5 +23,5 @@ next:
 
   <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
 
-  <CardTile href="./custom-interfaces" icon="fa-code" title="Custom interfaces" description="Build your own interface using our API" />
+  <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
 </div>
