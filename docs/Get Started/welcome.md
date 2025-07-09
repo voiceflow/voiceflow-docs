@@ -1,5 +1,5 @@
 ---
-title: 'Welcome to the docs '
+title: Welcome to Voiceflow's docs
 excerpt: ''
 deprecated: false
 hidden: false
@@ -14,6 +14,8 @@ next:
       slug: get-started
       title: Quick Start Guide
 ---
+## Deploy my agent
+
 <Cards columns={4}>
   <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
     Neque porro quisquam est qui dolorem ipsum quia
