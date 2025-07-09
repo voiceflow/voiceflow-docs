@@ -143,7 +143,7 @@ LLM chunking strategies help optimize an LLM's access to information in your kno
   </tbody>
 </Table>
 
-> 👍 Pro tip: Mix strategies for better results.
+> 👍 Pro tip: Experiment with strategies for better results.
 >
 > Combining strategies may optimize both chunk structure and clarity for improved LLM performance:
 >
