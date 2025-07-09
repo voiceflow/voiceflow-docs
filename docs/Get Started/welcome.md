@@ -14,16 +14,9 @@ next:
       slug: get-started
       title: Quick Start Guide
 ---
-<HTMLBlock>{`
-<style>
-  .content-toc { display: none !important; }
-  .content-body { width: 100% !important; }
-</style>
-`}</HTMLBlock>
-
 ## Deploy my agent
 
-<div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "0.3em" }}>
+<div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "0.2em" }}>
   <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
 
   <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
@@ -32,3 +25,12 @@ next:
 
   <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
 </div>
+
+<br />
+
+<HTMLBlock>{`
+<style>
+  .content-toc { display: none !important; }
+  .content-body { width: 100% !important; }
+</style>
+`}</HTMLBlock>
