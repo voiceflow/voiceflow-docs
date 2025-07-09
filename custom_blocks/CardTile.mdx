@@ -1,0 +1,116 @@
+---
+name: CardTile
+---
+export const CardTile = ({ 
+  href, 
+  icon, 
+  title, 
+  description, 
+  className = "",
+  target,
+  rel,
+  onClick
+}) => {
+  return (
+    <div>
+      <style>{`
+        .CardTile {
+          align-items: flex-start;
+          border: 0px;
+          border-radius: var(--border-radius-lg);
+          color: var(--color-text-default);
+          display: flex;
+          flex-direction: row;
+          font-size: 14px;
+          gap: 1em;
+          line-height: 1.4;
+          max-width: 260px;
+          padding: 0px;
+          text-align: left;
+          text-decoration: none;
+          transition: all var(--transition-slow) var(--transition-timing);
+        }
+
+        .CardTile:hover,
+        .CardTile:active,
+        .CardTile:focus {
+          background: none !important;
+        }
+
+        .CardTile:hover i,
+        .CardTile:active i,
+        .CardTile:focus i {
+          opacity: 0.75 !important;
+          transform: none !important;
+        }
+
+        .CardTile:hover .fa-arrow-right,
+        .CardTile:active .fa-arrow-right,
+        .CardTile:focus .fa-arrow-right {
+          opacity: 1 !important;
+          transform: translateX(0) !important;
+        }
+
+        .CardTile .icon {
+          font-size: 1.5em;
+          margin-top: 0.15em;
+          min-width: 1.5em;
+          opacity: 0.5;
+          text-align: center;
+          width: 1.5em;
+          transition: all var(--transition-slow) var(--transition-timing);
+        }
+
+        .CardTile .content {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .CardTile .title {
+          align-items: center;
+          display: flex;
+          font-size: 1.1em;
+          font-weight: var(--font-weight-bold);
+        }
+
+        .CardTile .arrow {
+          font-size: 0.75em;
+          margin-left: 0.5em;
+          opacity: 0;
+          transform: translateX(-2.5px);
+          transition: all var(--transition-slow) var(--transition-timing);
+        }
+
+        .CardTile .description {
+          color: var(--color-text-minimum);
+          font-size: 1.1em;
+        }
+      `}</style>
+      
+      <a 
+        className={`CardTile ${className}`}
+        href={href}
+        target={target}
+        rel={rel}
+        onClick={onClick}
+      >
+        <i 
+          aria-hidden="true" 
+          className={`fa-duotone fa-solid ${icon} icon`}
+        />
+        <div className="content">
+          <span className="title">
+            {title}
+            <i 
+              aria-hidden="true" 
+              className="fa-regular fa-arrow-right arrow"
+            />
+          </span>
+          <span className="description">
+            {description}
+          </span>
+        </div>
+      </a>
+    </div>
+  );
+};
