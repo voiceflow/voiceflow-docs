@@ -16,7 +16,7 @@ This tutorial uses Anthropic's Claude as an example of to use any Large Language
 
 ![](https://files.readme.io/b0a5f50-image.png)
 
-You can find the video [here](https://www.loom.com/share/286bb4e13f5f4c3c9394c97b9a43c264?sid=a4530603-dd23-43be-ad39-89ad38ddaa5e). 
+You can find the video [here](https://www.loom.com/share/286bb4e13f5f4c3c9394c97b9a43c264?sid=a4530603-dd23-43be-ad39-89ad38ddaa5e).
 
 *Note: Claude models are now available directly in Voiceflow! You can find them everywhere you use LLMs.*
 
