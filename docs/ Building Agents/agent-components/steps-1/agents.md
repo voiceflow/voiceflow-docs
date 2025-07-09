@@ -40,40 +40,6 @@ You can also set an LLM description by clicking on the **Knowledge base** option
 
 <br />
 
-## Introduction to the Agent step
-
-The Agent step provides a comprehensive solution for creating AI agents that can:
-
-* Intelligently respond to user queries
-* Search knowledge base for relevant information
-* Follow specific conversation exit conditions based on user intent
-* Execute functions to interact with external services
-
-**To add an Agent step to your canvas:**
-
-1. Look for the "Agent" option in the top left corner of the Voiceflow canvas
-2. Drag this step onto your canvas
-3. Choose an existing agent, create a new agent or search for community-created agents
-
-![](https://files.readme.io/adfaf1c2820e8e63a106e7e83877947ab5fe9f56bb23f28e14385453b67fdd62-CleanShot_2025-03-19_at_13.42.312x.png)
-
-## Prompting Your Agent
-
-Effective prompting is the foundation of a successful agent. The instructions you provide serve as the agent's "brain" and determine how it will interact with users:
-
-* **Clear Directives**: Be specific about your agent's role and how it should respond in different scenarios
-* **Personality Design**: Define your agent's tone, level of formality, and communication style
-* **Knowledge Parameters**: Indicate what domain knowledge your agent should rely on and when it should search external resources
-* **Context Awareness**: Include instructions for handling sensitive topics or escalating to human support when necessary
-
-> 📘
->
-> Learn more about crafting great prompts [here](https://docs.voiceflow.com/docs/crafting-great-prompts)
-
-Good prompting helps your agent understand what information to prioritize, when to use the knowledge base, and how to respond to user queries in a consistent manner. Taking time to craft detailed, thoughtful instructions will dramatically improve your agent's performance and reduce the need for additional steps in your flow.
-
-For example, instead of simply saying "This is a support agent," you might specify: "You are a friendly e-commerce support agent that helps customers with order tracking, returns, and account issues. Maintain a positive tone, offer proactive suggestions, and provide specific details when available."
-
 ## Functions
 
 Functions allow your agent to connect with external services and retrieve or update data. Based on the UI screenshot, configuring a function in an Agent Step involves several important components:
