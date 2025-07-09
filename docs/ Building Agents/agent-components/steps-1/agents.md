@@ -18,7 +18,15 @@ The Agent step is a flexible all-in-one tool that lets your agent have conversat
 
 ## Basic usage
 
-<Embed url="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD" href="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Furl%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DwkN04Nr7KSs%26type%3Dtext%252Fhtml%26schema%3Dgoogle%26display_name%3DYouTube%26src%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FwkN04Nr7KSs%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+To get started with the Agent step, simply add it to your canvas and connect it to the start step or a previous step. Then, select the Agent step and create a new agent.
+
+Each Agent step requires a prompt - these are a set of instructions that tell the agent how to behave, and what actions its able to take. You can either manually write the prompt in the **Instructions** box, or click the lightning bolt icon to automatically generate a prompt.
+
+Once your agent has a prompt, it can begin to have conversations with users! However, you'll need to connect **Tools** for it to be able to take any actions.
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS9YYIJBeF5NSgc7ztGr8nO1qDJyewRlHWPUv2" />
+
+<br />
 
 ## Introduction to the Agent step
 
