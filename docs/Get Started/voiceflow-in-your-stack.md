@@ -2,7 +2,7 @@
 title: How Voiceflow fits in your tech stack
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
