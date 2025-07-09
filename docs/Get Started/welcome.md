@@ -17,9 +17,7 @@ next:
 ## Deploy my agent
 
 <Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
-    Neque porro quisquam est qui dolorem ipsum quia
-  </Card>
+  <Card title="Deploy to production" href="./publishing-agents" icon="fa-rocket" />
 
   <Card title="Second Card" icon="fa-user">
     *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
