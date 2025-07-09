@@ -28,6 +28,16 @@ Once your agent has a prompt, it can begin to have conversations with users! How
 
 <br />
 
+## Accessing the knowledge base
+
+When building customer support agents, it's important to give your agent access to your [Knowledge base](doc:knowledge-base-1). This will allow the agent to look up answers to questions based on the data that you've imported.
+
+To enable knowledge base access, toggle the **Knowledge Base** toggle on the right sidebar. When enabled, the agent will automatically optimize a user's queries, lookup data, then convert that data into answers human-readable answers.
+
+<Image align="center" src="https://files.readme.io/adeea3a4cfbb30caafd8124200abb295ccdf32a9ed97e99563dcd5fb365044fd-Frame_48095765.png" />
+
+<br />
+
 ## Introduction to the Agent step
 
 The Agent step provides a comprehensive solution for creating AI agents that can:
