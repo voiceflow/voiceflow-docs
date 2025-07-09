@@ -33,7 +33,7 @@ Voiceflow supports five different data sources:
 
 ## Refresh rate settings
 
-When importing data from URLs or sitemaps, you can schedule a refresh rate to automatically re-sync your content
+When importing data from URLs or sitemaps, you can schedule a refresh rate to automatically re-sync your content, keeping your knowledge base up to date.
 
 | **Option**  | **Best for...**                                      |
 | ----------- | ---------------------------------------------------- |
