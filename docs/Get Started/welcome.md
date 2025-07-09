@@ -15,5 +15,3 @@ next:
       title: Quick Start Guide
 ---
 ## Deploy my agent
-
-<Test />
