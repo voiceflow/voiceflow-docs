@@ -14,6 +14,15 @@ next:
       slug: get-started
       title: Quick Start Guide
 ---
+<HTMLBlock>{`
+<style>
+  .content-toc { display: none !important; }
+	
+</style>
+`}</HTMLBlock>
+
+<br />
+
 ## Deploy my agent
 
 <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "0.2em" }}>
