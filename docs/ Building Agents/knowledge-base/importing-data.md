@@ -23,14 +23,17 @@ Voiceflow supports five different data sources:
 >
 > Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
 
-
 # 🔁 Sync Settings
 
 Voiceflow lets you **auto-refresh imported URLs and sitemaps** based on how frequently the content changes.
 
-| **Option** | **Best for...**                                               |
-|------------|---------------------------------------------------------------|
-| **Never**  | Static content that doesn't need refreshing                    |
-| **Daily**  | Frequently updated content (e.g., blogs, news sites)          |
-| **Weekly** | Occasionally updated info (e.g., support centers)             |
-| **Monthly**| Stable content (e.g., product policies, pricing)             |
+| **Option**  | **Best for...**                                      |
+| ----------- | ---------------------------------------------------- |
+| **Never**   | Static content that doesn't need refreshing          |
+| **Daily**   | Frequently updated content (e.g., blogs, news sites) |
+| **Weekly**  | Occasionally updated info (e.g., support centers)    |
+| **Monthly** | Stable content (e.g., product policies, pricing)     |
+
+> 🚧 Be careful with refresh rates!
+>
+> When an LLM chunking strategy is enabled, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are disabled, re-syncs don't consume any credits.
