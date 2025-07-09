@@ -16,8 +16,6 @@ next:
 
 The Agent step is a flexible all-in-one tool that lets your agent have conversations using AI, access your knowledge base, route the conversation based on intent, and run external functions — all within a single step. Use it when you want the agent to handle an open-ended request without needing to manually define each path ahead of time.
 
-<br />
-
 ## Basic usage
 
 To get started with the Agent step, simply add it to your canvas and connect it to the start step or a previous step. Then, select the Agent step and create a new agent.
