@@ -15,3 +15,5 @@ next:
       title: Quick Start Guide
 ---
 ## Deploy my agent
+
+<RecentReleases />
