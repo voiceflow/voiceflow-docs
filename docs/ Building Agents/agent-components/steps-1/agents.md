@@ -32,9 +32,11 @@ Once your agent has a prompt, it can begin to have conversations with users! How
 
 When building customer support agents, it's important to give your agent access to your [Knowledge base](doc:knowledge-base-1). This will allow the agent to look up answers to questions based on the data that you've imported.
 
-To enable knowledge base access, toggle the **Knowledge Base** toggle on the right sidebar. When enabled, the agent will automatically optimize a user's queries, lookup data, then convert that data into answers human-readable answers.
+To enable knowledge base access, toggle the **Knowledge base** toggle on the right sidebar. When enabled, the agent will automatically optimize a user's queries, lookup data, then convert that data into answers human-readable answers.
 
-<Image align="center" src="https://files.readme.io/adeea3a4cfbb30caafd8124200abb295ccdf32a9ed97e99563dcd5fb365044fd-Frame_48095765.png" />
+You can also set an LLM description by clicking on the **Knowledge base** option. This description provides context to your agent on when the Knowledge base should be queried.
+
+<Image align="center" src="https://files.readme.io/29df03c784e0ba88df3d7bd9fa283fe00ff9afc9ce5e6e705f9bbc8af3cf876a-Frame_48095765_1.png" />
 
 <br />
 
@@ -175,19 +177,7 @@ This description helps the LLM understand exactly when to trigger the return pro
 
 This description helps the LLM recognize when a user is seeking a discount, either directly or indirectly. The required variable description provides clear guidance on what constitutes a valid email address and how to handle user hesitation, ensuring you collect quality customer data before providing them with the promotional code.
 
-## Knowledge Base
-
-When you enable knowledge base integration, your agent can automatically search for information it doesn't know:
-
-* **Automatic Queries**: Your agent will search the knowledge base without requiring a separate search step
-* **Contextual Responses**: The agent intelligently combines its built-in knowledge with information from your knowledge base
-* **Knowledge Weighting**: You can adjust how much the agent relies on its built-in knowledge versus your knowledge base through the instructions
-
-For example, if a user asks about a password reset but that information isn't in your knowledge base, the agent can provide general guidance. But when asked about email confirmation—which is in your knowledge base—it can provide specific, accurate information from your documentation.
-
-The UI shows a toggle for "Access to knowledge base" which you can enable to give your agent the ability to search your knowledge base when needed, with option to update LLM description for more custom prompting.
-
-![](https://files.readme.io/d276421e36f6c24fa1c355d2a375c3cda69059a4d0df59e6512385310f671ee5-CleanShot_2025-03-19_at_14.06.322x.png)
+<br />
 
 ## Advanced Usage
 
