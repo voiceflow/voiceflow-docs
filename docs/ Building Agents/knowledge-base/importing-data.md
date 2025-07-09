@@ -7,7 +7,9 @@ metadata:
 ---
 Importing data lets you bring external content- like websites, documents, and support articles- into your Voiceflow assistant workspace for AI to reference during conversations with users.
 
-![](https://files.readme.io/74e3fbe366072c370e2ecb1cb901867afdcf060e0c9913798b353095b36cfb7d-CleanShot_2025-07-09_at_15.58.03.gif)
+<Image align="center" className="border" border={true} src="https://files.readme.io/74e3fbe366072c370e2ecb1cb901867afdcf060e0c9913798b353095b36cfb7d-CleanShot_2025-07-09_at_15.58.03.gif" />
+
+<br />
 
 <br />
 
