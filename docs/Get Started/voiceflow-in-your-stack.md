@@ -35,13 +35,9 @@ Voiceflow is able to send and receive data from other services in two ways.
 1. **The API Step:** This is a step in Voiceflow that allows you to make an API call to any service and store the response in *variables*.
 2. **Functions:** Custom functions allow you to write a JavaScript function that can use a fetch request. You can therefore use this to send/receive data, transform data, and even return traces imitating any step from text or image, or even custom traces like a [Custom Action](https://developer.voiceflow.com/v2.0/docs/custom-actions).
 
-<Image alt="This function makes a call to the Zendesk API to create a ticket containing information about the customer." align="center" src="https://files.readme.io/1b17a03-CleanShot_2024-06-20_at_15.39.582x.png">
-  This function makes a call to the Zendesk API to create a ticket containing information about the customer.
-</Image>
+<Image align="center" alt="This function makes a call to the Zendesk API to create a ticket containing information about the customer." border={false} caption="This function makes a call to the Zendesk API to create a ticket containing information about the customer." src="https://files.readme.io/1b17a03-CleanShot_2024-06-20_at_15.39.582x.png" />
 
-<Image alt="This is what the function looks like when it is added to a workflow." align="center" src="https://files.readme.io/7f74d6f-CleanShot_2024-06-20_at_15.40.422x.png">
-  This is what the function looks like when it is added to a workflow.
-</Image>
+<Image align="center" alt="This is what the function looks like when it is added to a workflow." border={false} caption="This is what the function looks like when it is added to a workflow." src="https://files.readme.io/7f74d6f-CleanShot_2024-06-20_at_15.40.422x.png" />
 
 ## Using AI Models in Voiceflow
 
@@ -103,15 +99,15 @@ You would use our *custom action* functionality to do this. You can see an [exam
 
 ## Custom back-end apps
 
-Using the [Dialog Manager API](https://developer.voiceflow.com/v2.0/reference/overview), you can build your own custom interface that interacts directly with your Voiceflow agent. 
+Using the [Dialog Manager API](https://developer.voiceflow.com/v2.0/reference/overview), you can build your own custom interface that interacts directly with your Voiceflow agent.
 
 This can be used for everything from creating pretty custom chat agent UIs like [toplyne.io](https://toplyne.io/) does on their website.
 
 ![](https://files.readme.io/d110d94-CleanShot_2024-06-26_at_23.15.172x.png)
 
-Or fully custom interfaces like an AI enhanced article reader, Voiceflow in Minecraft or even in Unity! 
+Or fully custom interfaces like an AI enhanced article reader, Voiceflow in Minecraft or even in Unity!
 
-<Embed url="https://www.youtube.com/watch?v=DxIsHNxr_0g" title="An Embedded AI Article Reader Developed in Voiceflow" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/DxIsHNxr_0g/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=DxIsHNxr_0g" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FDxIsHNxr_0g%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DDxIsHNxr_0g%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FDxIsHNxr_0g%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+<Embed url="https://www.youtube.com/watch?v=DxIsHNxr_0g" href="https://www.youtube.com/watch?v=DxIsHNxr_0g" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FDxIsHNxr_0g%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DDxIsHNxr_0g%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FDxIsHNxr_0g%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 You can learn more about building custom interfaces [here](https://developer.voiceflow.com/v2.0/docs/custom-interfaces-overview).
 
@@ -123,6 +119,6 @@ To use a Knowledge Base on its own:
 
 1. Upload documents to a new project's Knowledge Base (text files, PDFs, URLs)
 2. Query with the KB using the [KB Query APIs](https://developer.voiceflow.com/v2.0/reference/post_knowledge-base-query)
-3. Continuously update and add more documents to your knowledge base through CI/CD pipelines, for example with the [KB Management APIs](https://developer.voiceflow.com/v2.0/reference/post_v3alpha-knowledge-base-docs-upload) 
+3. Continuously update and add more documents to your knowledge base through CI/CD pipelines, for example with the [KB Management APIs](https://developer.voiceflow.com/v2.0/reference/post_v3alpha-knowledge-base-docs-upload)
 
 This can be useful to use either the knowledge base on its own, or as secondary knowledge bases for a main project, letting you segregate different types of documents.
