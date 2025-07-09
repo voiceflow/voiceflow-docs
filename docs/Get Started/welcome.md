@@ -21,21 +21,7 @@ next:
 
   <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
 
-  <CardTile href="https://docs.readme.com/main/docs/recipes" icon="fa-flask" title="Recipes" description="Step-by-step code walkthroughs" />
+  <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
 
-  <CardTile href="https://docs.readme.com/main/docs/changelog" icon="fa-megaphone" title="Changelog" description="Keep users up-to-date on the latest changes" />
-
-  <CardTile href="https://docs.readme.com/main/reference/api-migration-guide" icon="fa-brackets-curly" title="API V2" description="Control your docs using our API" />
-
-  <CardTile href="https://docs.readme.com/main/docs/upgrading-to-rdme10" icon="fa-terminal" title="CLI" description="Use rdme to update your docs" />
-
-  <CardTile href="https://docs.readme.com/main/docs/my-developers" icon="fa-user-group-simple" title="My Developers" description="Get developer usage data in ReadMe" />
-
-  <CardTile href="https://docs.readme.com/main/docs/openapi" icon="fa-file-circle-info" title="OpenAPI" description="Learn about our support for OAS" />
-
-  <CardTile href="https://docs.readme.com/rdmd/docs/getting-started" icon="fa-font-case" title="RDMD" description="Learn about ReadMe-flavored Markdown" />
-
-  <CardTile href="https://docs.readme.com/main/docs/mdx" icon="fa-code" title="MDX" description="Write interactive docs and components" />
-
-  <CardTile href="https://docs.readme.com/main/docs/bi-directional-sync" icon="fa-code-compare" title="Sync with GitHub" description="Connect ReadMe to a GitHub project" />
+  <CardTile href="./custom-interfaces" icon="fa-code" title="Custom interfaces" description="Build your own interface using our API" />
 </div>
