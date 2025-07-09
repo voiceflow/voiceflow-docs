@@ -1,7 +1,9 @@
 ---
 name: Test
 ---
-export const RecentReleases = () => {
+import React from 'react';
+
+export function RecentReleases() {
   const releases = [
     {
       icon: 'fa-robot',
@@ -64,4 +66,6 @@ export const RecentReleases = () => {
       </div>
     </div>
   );
-};
+}
+
+<RecentReleases />
