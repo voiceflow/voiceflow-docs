@@ -16,9 +16,11 @@ next:
 ---
 ## Deploy my agent
 
-<div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "0.2em 0.4em" }}>
-  <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
+<br />
 
+<CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
+
+<div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "0.2em 0.4em" }}>
   <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
 
   <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
