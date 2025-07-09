@@ -16,7 +16,7 @@ next:
 ---
 ## Deploy my agent
 
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-x-[30px] gap-y-[30px] p-6 px-8 py-[1.5em]" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-x-[30px] gap-y-[30px] p-6 px-8 py-[1.5em]" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid' }}>
   <CardTile href="https://docs.readme.com/main/docs/migration-moving-your-docs-to-their-new-home" icon="fa-box-open" title="Refactored" description="Migrate your docs to the new ReadMe" />
 
   <CardTile href="https://docs.readme.com/main/docs/integrations" icon="fa-arrow-down-left-and-arrow-up-right-to-center" title="Integrations" description="Integrate with third-party services" />
