@@ -16,7 +16,7 @@ next:
 ---
 ## Deploy my agent
 
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-x-[30px] gap-y-[30px] p-6 px-8 py-[1.5em]" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid' }}>
+<div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "1em" }}>
   <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
 
   <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
