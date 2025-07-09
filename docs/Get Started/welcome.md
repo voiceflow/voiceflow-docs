@@ -16,8 +16,8 @@ next:
 ---
 ## Deploy my agent
 
-<HTMLBlock>{`
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-x-[30px] gap-y-[30px] p-6 px-8 py-[1.5em]" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));display:grid">
+<br />
+
 <CardTile href="https://docs.readme.com/main/docs/migration-moving-your-docs-to-their-new-home" icon="fa-box-open" title="Refactored" description="Migrate your docs to the new ReadMe" />
 
 <CardTile href="https://docs.readme.com/main/docs/integrations" icon="fa-arrow-down-left-and-arrow-up-right-to-center" title="Integrations" description="Integrate with third-party services" />
@@ -39,5 +39,3 @@ next:
 <CardTile href="https://docs.readme.com/main/docs/mdx" icon="fa-code" title="MDX" description="Write interactive docs and components" />
 
 <CardTile href="https://docs.readme.com/main/docs/bi-directional-sync" icon="fa-code-compare" title="Sync with GitHub" description="Connect ReadMe to a GitHub project" />
-</div>
-`}</HTMLBlock>
