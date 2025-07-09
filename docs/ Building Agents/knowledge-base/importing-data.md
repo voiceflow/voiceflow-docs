@@ -5,31 +5,32 @@ hidden: false
 metadata:
   robots: index
 ---
-# 🚪 Ways to Import
+## Supported data sources
 
-Voiceflow supports **5 main import types**:
+Voiceflow supports five different data sources:
 
-| **Source**     | **Description**                                                                 | **Notes**                                 |
-|----------------|---------------------------------------------------------------------------------|-------------------------------------------|
-| **URL(s)**     | Paste one or more URLs. Use `sitemap.xml` to bulk import entire websites.       |                                           |
-| **Sitemap**    | A structured list of all pages on a site. Ideal for full-site crawls.            |                                           |
-| **Upload file**| Upload `.pdf`, `.txt`, or `.docx` files (Max 10MB). Good for internal docs.      |                                           |
-| **Plain text** | Paste raw content directly. Great for fast prototyping.                         |                                           |
-| **Zendesk**    | Import articles from your Zendesk instance. Admin access required.               | Requires Zendesk admin permissions         |
+| **Source**      | **Description**                                                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **URL(s)**      | Paste one or more URLs to import the content from those pages. Use `sitemap.xml` to bulk import entire websites.                                                    |
+| **Sitemap**     | Import all pages from a website into your knowledge base, ideal for full-site crawls. For most websites, the sitemap is found at `https://website.com/sitemap.xml`. |
+| **Upload file** | Upload `.pdf`, `.txt`, or `.docx` files (Max 10 mb). Only text can be imported into the knowledge base.                                                             |
+| **Plain text**  | Paste raw content directly. Great for fast prototyping or testing.                                                                                                  |
+| **Zendesk**     | Import data from your Zendesk knowledge base. Requires Zendesk admin access.                                                                                        |
 
----
+<br />
 
-### ⚠️ Warning: Be cautious with sensitive content
+> ℹ️ Heads up!
+>
+> Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
 
-- Anything you upload **may be included in LLM responses**.  
-- Avoid uploading confidential or proprietary information unless your use case allows it.
 
----
+# 🔁 Sync Settings
 
-### ⚠️ Zendesk Admin Required
+Voiceflow lets you **auto-refresh imported URLs and sitemaps** based on how frequently the content changes.
 
-To import from Zendesk:
-
-- Paste your Zendesk instance URL (e.g., `https://yourorg.zendesk.com`)  
-- Ensure you have **admin permissions** on the Zendesk instance.  
-- Without admin rights, the import will fail.
+| **Option** | **Best for...**                                               |
+|------------|---------------------------------------------------------------|
+| **Never**  | Static content that doesn't need refreshing                    |
+| **Daily**  | Frequently updated content (e.g., blogs, news sites)          |
+| **Weekly** | Occasionally updated info (e.g., support centers)             |
+| **Monthly**| Stable content (e.g., product policies, pricing)             |
