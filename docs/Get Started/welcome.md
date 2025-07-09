@@ -19,7 +19,7 @@ next:
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-x-[30px] gap-y-[30px] p-6 px-8 py-[1.5em]" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid' }}>
   <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
 
-  <CardTile href="https://docs.readme.com/main/docs/integrations" icon="fa-arrow-down-left-and-arrow-up-right-to-center" title="Integrations" description="Integrate with third-party services" />
+  <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
 
   <CardTile href="https://docs.readme.com/main/docs/recipes" icon="fa-flask" title="Recipes" description="Step-by-step code walkthroughs" />
 
