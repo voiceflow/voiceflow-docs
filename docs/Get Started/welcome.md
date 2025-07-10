@@ -60,6 +60,8 @@ metadata:
   </Column>
 </Columns>
 
+<br />
+
 ## Deploy an agent
 
 <Columns layout="auto">
