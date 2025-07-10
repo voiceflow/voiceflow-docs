@@ -66,5 +66,6 @@ next:
 <style>
   .content-toc { display: none !important; }
   .content-body { width: 100% !important; }
+  .rm-Markdown h2, .rm-Markdown h3 { border-bottom: 0; padding-bottom: 0; margin-top: 0; }
 </style>
 `}</HTMLBlock>
