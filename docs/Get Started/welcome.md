@@ -40,9 +40,9 @@ metadata:
 
     Upgrade your agent's abilities
 
-    <CardTile href="./agents" icon="fa-brain" title="Knowledge base" description="Add knowledge to your agent" />
+    <CardTile href="./agents" icon="fa-books" title="Knowledge base" description="Add knowledge to your agent" />
 
-    <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+    <CardTile href="./agents" icon="fa-brain" title="Memory" description="Allow your agent to reference previous messages" />
 
     <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
   </Column>
