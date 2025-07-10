@@ -32,9 +32,9 @@ metadata:
 
     <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
 
-    <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+    <CardTile href="./function-step" icon="fa-code-compare" title="Functions" description="Run code inside your agent" />
 
-    <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
+    <CardTile href="./api-step" icon="fa-webhook" title="APIs" description="Connect to any service" />
   </Column>
 
   <Column>
@@ -56,9 +56,9 @@ metadata:
 
     <CardTile href="./tools" icon="fa-screwdriver-wrench" title="Tools" description="One click integrations" />
 
-    <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+    <CardTile href="./function-step" icon="fa-code-compare" title="Functions" description="Run code inside your agent" />
 
-    <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
+    <CardTile href="./api-step" icon="fa-webhook" title="APIs" description="Connect to any service" />
   </Column>
 </Columns>
 
