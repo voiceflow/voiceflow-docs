@@ -86,8 +86,8 @@ metadata:
 
 <HTMLBlock>{`
 <style>
-  .content-toc { display: none !important; }
-  .content-body { width: 100% !important; }
+  /*.content-toc { display: none !important; }
+  .content-body { width: 100% !important; }*/
   .rm-Markdown h2 { margin-top: 0; }
   .rm-Markdown h3 { border-bottom: 0; padding-bottom: 0; margin-top: 0; margin-bottom: 0.5em; }
   .rm-Guides .content-body { max-width: 100%; }
