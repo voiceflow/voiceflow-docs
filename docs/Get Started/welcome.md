@@ -50,9 +50,11 @@ metadata:
   </Column>
 
   <Column>
-    ### Steps
+    ### Integrations
 
-    <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+    Deeply integrate with your business
+
+    <CardTile href="./tools" icon="fa-screwdriver-wrench" title="Tools" description="One click integrations" />
 
     <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
 
