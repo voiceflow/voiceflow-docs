@@ -34,6 +34,8 @@ next:
   <Column>
     ### Capabilities
 
+    Upgrade your agent's abilities
+
     <CardTile href="./agents" icon="fa-brain" title="Knowledge base" description="Add knowledge to your agent" />
 
     <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
