@@ -56,17 +56,23 @@ next:
 
 ## Deploy my agent
 
-<CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
+<Columns layout="auto">
+  <Column>
+    <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
+  </Column>
 
-<div className="grid grid-cols-1 sm:grid-cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', display: 'grid', gap: "0.2em 0.4em" }}>
-  <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
+  <Column>
+    <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
+  </Column>
 
-  <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
+  <Column>
+    <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
+  </Column>
 
-  <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
-</div>
-
-<br />
+  <Column>
+    <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
+  </Column>
+</Columns>
 
 <HTMLBlock>{`
 <style>
