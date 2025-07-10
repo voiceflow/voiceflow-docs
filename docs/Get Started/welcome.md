@@ -64,5 +64,7 @@ next:
 
 <HTMLBlock>{`
 <style>
+  .content-toc { display: none !important; }
+  .content-body { width: 100% !important; }
 </style>
 `}</HTMLBlock>
