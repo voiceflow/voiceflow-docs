@@ -11,14 +11,16 @@ metadata:
   robots: index
 ---
 <Cards columns={2}>
-  <Card title="Quick Start" href="https://readme.com" icon="fa-home" target="_blank">
-    Neque porro quisquam est qui dolorem ipsum quia
+  <Card title="Quick Start" href="https://readme.com" icon="fa-rocket" target="_blank">
+    Get started with Voiceflow in minutes
   </Card>
 
-  <Card title="Second Card" icon="fa-user">
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  <Card title="Voiceflow Basics" href="https://www.voiceflow.com/lessons/voiceflow-basics" icon="fa-chalkboard-user">
+    Build your first AI agent - we'll help!
   </Card>
 </Cards>
+
+<br />
 
 ## Build an AI agent
 
