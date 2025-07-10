@@ -32,9 +32,9 @@ next:
   </Column>
 
   <Column>
-    ### Steps
+    ### Capabilities
 
-    <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+    <CardTile href="./agents" icon="fa-brain" title="Knowledge base" description="Add knowledge to your agent" />
 
     <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
 
