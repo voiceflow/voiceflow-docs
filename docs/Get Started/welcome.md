@@ -10,6 +10,16 @@ metadata:
   description: ''
   robots: index
 ---
+<Cards columns={2}>
+  <Card title="Quick Start" href="https://readme.com" icon="fa-home" target="_blank">
+    Neque porro quisquam est qui dolorem ipsum quia
+  </Card>
+
+  <Card title="Second Card" icon="fa-user">
+    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  </Card>
+</Cards>
+
 ## Build an AI agent
 
 <Columns layout="auto">
