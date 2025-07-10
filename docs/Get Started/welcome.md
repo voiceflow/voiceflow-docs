@@ -16,13 +16,25 @@ next:
 ---
 ## Build an AI agent
 
-### Steps
+<Columns layout="auto">
+  <Column>
+    ### Steps
 
-<CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+    <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
 
-<CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+    <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
 
-<CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
+    <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
+  </Column>
+
+  <Column>
+    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  </Column>
+
+  <Column>
+    > Ut enim ad minim veniam, quis nostrud ullamco
+  </Column>
+</Columns>
 
 ## Deploy my agent
 
