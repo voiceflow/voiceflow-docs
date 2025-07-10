@@ -48,13 +48,15 @@ metadata:
   </Column>
 </Columns>
 
-## Deploying
+## Deploying your agent
 
 <Columns layout="auto">
   <Column>
     ### Publish your agent
 
-    <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
+    Release your agent into the word
+
+    <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent in seconds" />
   </Column>
 
   <Column>
