@@ -42,7 +42,7 @@ metadata:
 
     <CardTile href="./agents" icon="fa-books" title="Knowledge base" description="Add knowledge to your agent" />
 
-    <CardTile href="./agents" icon="fa-brain" title="Memory" description="Allow your agent to reference previous messages" />
+    <CardTile href="./agents" icon="fa-brain" title="Memory" description="Reference previous messages" />
 
     <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
   </Column>
