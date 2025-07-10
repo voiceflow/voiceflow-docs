@@ -32,9 +32,9 @@ metadata:
 
     <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
 
-    <CardTile href="./function-step" icon="fa-code-compare" title="Functions" description="Run code inside your agent" />
+    <CardTile href="./prompt-step" icon="fa-sparkles" title="Prompt step" description="Generate a single response using AI" />
 
-    <CardTile href="./api-step" icon="fa-webhook" title="APIs" description="Connect to any service" />
+    <CardTile href="./custom-actions" icon="fa-arrow-pointer" title="Custom action step" description="Hook into advanced capabilties" />
   </Column>
 
   <Column>
