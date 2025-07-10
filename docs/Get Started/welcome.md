@@ -62,6 +62,8 @@ metadata:
   <Column>
     ### Interfaces
 
+    Choose how to interact with your agent
+
     <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
 
     <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
