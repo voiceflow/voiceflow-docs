@@ -48,14 +48,18 @@ metadata:
   </Column>
 </Columns>
 
-## Deploy my agent
+## Deploying
 
 <Columns layout="auto">
   <Column>
+    ### Publish your agent
+
     <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
   </Column>
 
   <Column>
+    ### Interfaces
+
     <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
   </Column>
 
