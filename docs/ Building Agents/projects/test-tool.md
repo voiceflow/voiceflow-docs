@@ -72,55 +72,10 @@ You can use Guided Navigation to manually test your IF conditions and custom act
 
 When enabled, custom actions or IF conditions will be displayed as buttons in the dialog. Clicking a button will run the selected condition or path.
 
-## How to use personas and variables in tests?
+## How to use variables in tests?
 
 ### Setting variables for testing
 
 To configure variable values for your test, choose ‘All Assistant Variables’ from the dropdown in the left sidebar. Update the variable values and run your test.
 
 Note: All Variables have a default value of 0 before testing
-
-### Testing with Personas and Use Cases
-
-Test Personas (AKA Variable States) let you define variable pre-sets for the scenarios, use cases or user personas for which you’re designing (e.g., New/Return, Authenticated/Unauthenticated users). States are managed on the assistant-level and can be used by all team members. 
-
-**Creating a Test Persona**
-
-* To create a persona, enter Test mode. 
-* From the ‘Select a Persona’ dropdown, hit "Add New".
-
-![](https://files.readme.io/9073b6c-CleanShot_2024-07-11_at_11.04.302x.png)
-
-* Enter a name for your persona (e.g., Authenticated User)
-* Choose a starting block — this defines where the test conversation will begin.
-* Lastly, choose the variables and values you want to associate with the persona.
-* Once saved, the persona will automatically be applied to your Test.
-
-![](https://files.readme.io/5f4a442-CleanShot_2024-07-11_at_11.04.022x.png)
-
-**‍Applying a Persona to a Test**
-
-* To apply a Persona to your test, either choose a persona from the left sidebar or from the selector in the Test Dialog.
-* Once you’ve selected one, hit ‘Run Test’
-* You can reset the test’s selected persona by clearing it in the Test Dialog or the left sidebar. 
-
-![](https://files.readme.io/098367d-CleanShot_2024-07-11_at_11.05.072x.png)
-
-Note: Personas can also be applied to Shared Prototypes
-
-**‍Manually changing Test Persona values**
-
-* To run a Test using different state values, click into the desired variable input in the left sidebar
-* Update the value and run your test
-
-Note: You can choose to save your updated state values by hitting the update icon in the left sidebar
-
-**‍Modifying Test Personas**
-
-* To edit the name, starting block or variables for an existing persona, select the ‘Edit Persona’ icon from the left sidebar dropdown.
-* Make your desired updates and hit ‘Save’
-
-**Deleting Test Personas**
-
-* To delete a persona, select the ‘Edit Persona’ icon from the left sidebar dropdown
-* From the management screen, select 'Delete Persona' from the context (...) menu
