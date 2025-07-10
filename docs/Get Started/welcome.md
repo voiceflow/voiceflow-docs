@@ -18,9 +18,11 @@ next:
 
 ### Steps
 
-<CardTile href="./agent-step" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+<CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
 
-<br />
+<CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+
+<CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
 
 ## Deploy my agent
 
