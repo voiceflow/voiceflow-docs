@@ -50,29 +50,24 @@ metadata:
 
 ## Deploying your agent
 
-<Columns layout="auto">
-  <Column>
-    ### Publish your agent
+\<Columns layout="auto">
+&#x20; \<Column>
+&#x20;   \### Publish your agent
 
-    Release your agent into the word
+&#x20;   Release your agent into the word
 
-    <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent in seconds" />
-  </Column>
+&#x20;   \<CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent in seconds" />
+&#x20; \</Column>
 
-  <Column>
-    ### Interfaces
+&#x20; \<Column>
+&#x20;   \### Interfaces
 
-    <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
-  </Column>
+&#x20;   \<CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
+&#x20;   \<CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
+&#x20;   \<CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
 
-  <Column>
-    <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
-  </Column>
-
-  <Column>
-    <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
-  </Column>
-</Columns>
+&#x20; \</Column>
+a\</Columns>
 
 <HTMLBlock>{`
 <style>
