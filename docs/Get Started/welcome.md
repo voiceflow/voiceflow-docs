@@ -58,7 +58,7 @@ metadata:
   </Column>
 </Columns>
 
-## Deploying your agent
+## Deploy an agent
 
 <Columns layout="auto">
   <Column>
