@@ -18,7 +18,7 @@ Make sure to train your test assistant if you’ve made changes to your intents,
 
 ![](https://files.readme.io/2bfb038-image.png)
 
-You can also toggle specific testing conditions with variables or personas by clicking the arrow located next to **Run Test** and by choosing **'Select variable state'.**
+You can also toggle specific testing conditions with variables by clicking the arrow located next to **Run Test** and by choosing **'Select variable state'.**
 
 *Tip: You can quickly launch the Test modal by hitting ‘R’*
 
