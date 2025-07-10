@@ -44,7 +44,7 @@ metadata:
 
     <CardTile href="./agents" icon="fa-brain" title="Memory" description="Reference previous messages" />
 
-    <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
+    <CardTile href="./variables" icon="fa-code-simple" title="Variables" description="Store values during conversations" />
   </Column>
 
   <Column>
