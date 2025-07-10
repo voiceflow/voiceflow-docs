@@ -14,6 +14,14 @@ next:
       slug: get-started
       title: Quick Start Guide
 ---
+## Build an AI agent
+
+### Steps
+
+<CardTile href="./agent-step" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+
+<br />
+
 ## Deploy my agent
 
 <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent into the world" />
