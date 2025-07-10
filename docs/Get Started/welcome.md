@@ -28,11 +28,23 @@ next:
   </Column>
 
   <Column>
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+    ### Steps
+
+    <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+
+    <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+
+    <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
   </Column>
 
   <Column>
-    > Ut enim ad minim veniam, quis nostrud ullamco
+    ### Steps
+
+    <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+
+    <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
+
+    <CardTile href="./api-step" icon="fa-webhook" title="API step" description="Connect to any service" />
   </Column>
 </Columns>
 
