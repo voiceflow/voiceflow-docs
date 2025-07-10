@@ -22,6 +22,8 @@ next:
   <Column>
     ### Steps
 
+    The building blocks of your agent
+
     <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
 
     <CardTile href="./function-step" icon="fa-code-compare" title="Function step" description="Run code inside your agent" />
