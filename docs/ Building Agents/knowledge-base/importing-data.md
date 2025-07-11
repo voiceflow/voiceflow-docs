@@ -6,9 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Importing data lets you bring external content- like websites, documents, and support articles- into your Voiceflow assistant workspace for AI to reference during conversations with users.
-
-<Image align="center" className="border" border={true} src="https://files.readme.io/74e3fbe366072c370e2ecb1cb901867afdcf060e0c9913798b353095b36cfb7d-CleanShot_2025-07-09_at_15.58.03.gif" />
+Supercharge your Voiceflow agent by importing content from websites, documents, and support articles- giving it the context it needs to respond with real, reliable information.
 
 <br />
 
