@@ -8,8 +8,6 @@ metadata:
 ---
 Supercharge your Voiceflow agent by importing content from websites, documents, and support articles- giving it the context it needs to respond with real, reliable information.
 
-<br />
-
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
 
 ## Supported data sources
