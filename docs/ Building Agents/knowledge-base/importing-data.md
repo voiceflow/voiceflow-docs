@@ -1,5 +1,6 @@
 ---
 title: Importing data
+excerpt: Add data into your agent's knowlege in minutes.
 deprecated: false
 hidden: false
 metadata:
