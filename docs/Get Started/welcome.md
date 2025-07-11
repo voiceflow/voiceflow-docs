@@ -28,7 +28,7 @@ metadata:
 
     The building blocks of your agent
 
-    <CardTile href="./agents" icon="fa-robot" title="Agent step" description="Have conversations with users" />
+    <CardTile href="./agents" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk1sCj8X9CNhUQr4TjmJ2EvGFIqck7LstYa6fg" title="Agent step" description="Have conversations with users" />
 
     <CardTile href="./prompt-step" icon="fa-sparkles" title="Prompt step" description="Generate a single response using AI" />
 
