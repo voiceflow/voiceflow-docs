@@ -25,8 +25,6 @@ Voiceflow supports five different data sources:
 | **Plain text**  | Paste raw content directly. Great for fast prototyping or testing.                                                                                                  |
 | **Zendesk**     | Import data from your Zendesk knowledge base. Requires Zendesk admin access.                                                                                        |
 
-<br />
-
 > ℹ️ Heads up!
 >
 > Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
@@ -159,17 +157,11 @@ If something goes wrong when importing your data, hover over the❗ icon to lear
 
 ![](https://files.readme.io/3b34073cf8fd2fd68e0752ea707c17eb8859ed5966d2e8c03e66715d5bbafdcd-image.png)
 
-<br />
+Import errors are handled gracefully. Failed files won’t break your project - the remaining files will be processed.
 
 <br />
 
-> ℹ️ Failed data imports
->
-> Import errors are handled gracefully. Failed files won’t break your project - the remaining files will be processed. Delete the failed file, resolve the issue and re-upload again to your knowledge base.
-
-<br />
-
-## Using the Knowledge Base REST API
+## Advanced: importing data using Voiceflow's API
 
 Voiceflow's <Anchor label="Knowledge Base REST API" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/">Knowledge Base REST API</Anchor> allows you to manage your KB programmatically.
 
