@@ -22,8 +22,8 @@ metadata:
 
 ## Build an AI agent
 
-<Columns layout="auto">
-  <Column>
+<div class="home-grid">
+  <div>
     ### Steps
 
     The building blocks of your agent
@@ -33,9 +33,9 @@ metadata:
     <CardTile href="./prompt-step" icon="fa-sparkles" title="Prompt step" description="Generate a single response using AI" />
 
     <CardTile href="./custom-actions" icon="fa-arrow-pointer" title="Custom action step" description="Hook into advanced capabilties" />
-  </Column>
+  </div>
 
-  <Column>
+  <div>
     ### Capabilities
 
     Upgrade your agent's abilities
@@ -45,9 +45,9 @@ metadata:
     <CardTile href="./agents" icon="fa-brain" title="Memory" description="Reference previous messages" />
 
     <CardTile href="./variables" icon="fa-code-simple" title="Variables" description="Store values during conversations" />
-  </Column>
+  </div>
 
-  <Column>
+  <div>
     ### Integrations
 
     Deeply integrate with your business
@@ -57,13 +57,7 @@ metadata:
     <CardTile href="./function-step" icon="fa-code-compare" title="Functions" description="Run code inside your agent" />
 
     <CardTile href="./api-step" icon="fa-webhook" title="APIs" description="Connect to any service" />
-  </Column>
-</Columns>
-
-<div class="columns-3">
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
+  </div>
 </div>
 
 ## Deploy your agent
@@ -88,19 +82,13 @@ Choose how users interact with your agent
 
 Decsription
 
-<Columns>
-  <Column>
-    <CardTile href="./chat-widget" icon="fa-comments" title="Transcripts" description="Embed your agent onto your website" />
-  </Column>
+<div class="home-grid">
+  <CardTile href="./chat-widget" icon="fa-comments" title="Transcripts" description="Embed your agent onto your website" />
 
-  <Column>
-    <CardTile href="./telephony" icon="fa-phone" title="Analytics" description="Accept inbound and outbound calls" />
-  </Column>
+  <CardTile href="./telephony" icon="fa-phone" title="Analytics" description="Accept inbound and outbound calls" />
 
-  <Column>
-    <CardTile href="./custom-interfaces" icon="fa-code" title="Evaluations" description="Build your own interface" />
-  </Column>
-</Columns>
+  <CardTile href="./custom-interfaces" icon="fa-code" title="Evaluations" description="Build your own interface" />
+</div>
 
 <br />
 
