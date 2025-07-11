@@ -122,7 +122,7 @@ Decsription
     gap: 1rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .home-grid {
       grid-template-columns: repeat(3, 1fr);
     }
