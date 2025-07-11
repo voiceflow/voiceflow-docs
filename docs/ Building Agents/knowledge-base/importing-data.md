@@ -19,7 +19,7 @@ Voiceflow supports five different data sources:
 
 | **Source**      | **Description**                                                                                                                                                     |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **URL(s)**      | Paste one or more URLs to import the content from those pages. Use `sitemap.xml` to bulk import entire websites.                                                    |
+| **URL(s)**      | Paste one or more URLs to import the content from those pages. Use `sitemap.xml` to bulk import entire websites. You can only import publicly accessible URLs.      |
 | **Sitemap**     | Import all pages from a website into your knowledge base, ideal for full-site crawls. For most websites, the sitemap is found at `https://website.com/sitemap.xml`. |
 | **Upload file** | Upload `.pdf`, `.txt`, or `.docx` files (Max 10 mb). Only text can be imported into the knowledge base.                                                             |
 | **Plain text**  | Paste raw content directly. Great for fast prototyping or testing.                                                                                                  |
@@ -52,7 +52,9 @@ When importing data from URLs or sitemaps, you can schedule a refresh rate to au
 
 ## LLM chunking strategies
 
-LLM chunking strategies help optimize an LLM's access to information in your knowledge base by processing them in various ways to optimize your for your case. Your content quality directly impacts LLM performance.
+You can use LLM chunking strategies to optimize the data in your agent's knowledge base. The chunking strategies use AI to process your data in various ways, optimizing it for agent. The quality of your content directly impacts your agent's ability to answer user questions.
+
+Voiceflow supports five different chunking strategies:
 
 <Table align={["left","left"]}>
   <thead>
@@ -74,7 +76,7 @@ LLM chunking strategies help optimize an LLM's access to information in your kno
       </td>
 
       <td>
-        Breaks and clusters content into topic-based sections
+        Breaks and clusters content into topic-based sections.
 
         > Example use cases:
         >
@@ -149,28 +151,17 @@ LLM chunking strategies help optimize an LLM's access to information in your kno
   </tbody>
 </Table>
 
-> 👍 Pro tip: Experiment with strategies for better results.
->
-> Combining strategies may optimize both chunk structure and clarity for improved LLM performance:
->
-> * `Smart Chunking` + `Add Topic Headers` → Context-rich structured responses (ideal for Internal Tools & HR Agents)
-> * `FAQ Optimization` + `Summarize `→ Compact, efficient answers (ideal for Customer Support Agents)
-> * `Smart Chunking` + `Remove HTML/Noise` → Clean, readable chunks from web docs (ideal for Web-based Documentation Agents)
-
-<br />
+We recommend experimenting with various combinations of chunking strategies to see which best fits your use-case.
 
 ## Troubleshooting data imports
 
-If something goes wrong with your data imports, here’s some common approaches to debug:
+If something goes wrong when importing your data, hover over the❗ icon to learn why.
 
-* Hover over the ❗ icon beside a failed import to view why it failed.
+![](https://files.readme.io/3b34073cf8fd2fd68e0752ea707c17eb8859ed5966d2e8c03e66715d5bbafdcd-image.png)
 
-> <Image align="center" border={false} caption="Example error message from failed import." src="https://files.readme.io/94f4e98329a3de393df0b90a46011518a080072a962c7e2618d56362201994af-image.png" />
->
-> <br />
+<br />
 
-* Ensure your URL or sitemap is public and not gated by auth/logins.
-* Smart Chunking may fail for large files. Try reducing file size or selecting another chunking method.
+<br />
 
 > ℹ️ Failed data imports
 >
