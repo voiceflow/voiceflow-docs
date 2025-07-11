@@ -10,17 +10,15 @@ metadata:
   description: ''
   robots: index
 ---
-<Cards columns={2}>
-  <Card title="Quick start" href="https://readme.com" icon="fa-rocket" target="_blank">
-    Get started with Voiceflow in minutes
-  </Card>
+<Columns layout="auto">
+  <Column>
+    <FeaturedCard header="Getting Started with Custom Components" />
+  </Column>
 
-  <Card title="Voiceflow basics" href="https://www.voiceflow.com/lessons/voiceflow-basics" icon="fa-chalkboard-user">
-    Build your first AI agent with our course
-  </Card>
-</Cards>
-
-<br />
+  <Column>
+    <FeaturedCard header="Getting Started with Custom Components" />
+  </Column>
+</Columns>
 
 ## Build an AI agent
 
