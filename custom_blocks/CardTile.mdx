@@ -109,7 +109,9 @@ export const CardTile = ({
       >
         <span className="icon" aria-hidden="true">
           {isUrl ? (
-            <img src={icon} alt="" />
+						<svg width="90" height="90">       
+              <image xlink:href={icon} />    
+            </svg>
           ) : (
             <i className={`fa-duotone fa-solid ${icon}`} />
           )}
