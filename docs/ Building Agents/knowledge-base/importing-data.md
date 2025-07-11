@@ -163,18 +163,12 @@ Import errors are handled gracefully. Failed files won’t break your project - 
 
 ## Advanced: importing data using Voiceflow's API
 
-Voiceflow's <Anchor label="Knowledge Base REST API" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/">Knowledge Base REST API</Anchor> allows you to manage your KB programmatically.
+Voiceflow's <Anchor label="Knowledge Base API" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/">Knowledge Base API</Anchor> allows you to manage your Knowledge base programmatically. Common API use cases include:
+
+* Importing content from Notion, Google Docs, or Airtable via an SDK or API request
+* Managing KB entries dynamically across multiple workspaces, outside of the Voiceflow Creator
+* Debugging & testing chunk processing behind the scenes
 
 <br />
 
-<LinkCard type="Doc" title="Credit usage estimator" description="Estimate how many credits your agents will consume per month and have the best value plan recommended to you." href="./estimate-your-credit-usage#credits-estimation-calculator" />
-
-<br />
-
-<br />
-
-> Common API use cases:
->
-> * Importing content from Notion, Google Docs, or Airtable via an SDK or API request
-> * Managing KB entries dynamically across multiple workspaces, outside of the Voiceflow Creator
-> * Debugging & testing chunk processing behind the scenes
+<LinkCard type="Doc" title="Document API reference" description="Upload files and content from websites using the Document API." href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/" />
