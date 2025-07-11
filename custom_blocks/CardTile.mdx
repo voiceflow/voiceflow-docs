@@ -11,6 +11,8 @@ export const CardTile = ({
   rel,
   onClick
 }) => {
+  const isUrl = typeof icon === "string" && icon.startsWith("http");
+
   return (
     <div>
       <style>{`
@@ -28,9 +30,8 @@ export const CardTile = ({
           text-align: left;
           text-decoration: none !important;
           transition: all var(--transition-slow) var(--transition-timing);
-					margin-bottom: 1em;
-          }
-
+          margin-bottom: 1em;
+        }
 
         .CardTile:hover,
         .CardTile:active,
@@ -56,10 +57,21 @@ export const CardTile = ({
           font-size: 1.5em;
           margin-top: 0.15em;
           min-width: 1.5em;
-          opacity: 0.5;
-          text-align: center;
           width: 1.5em;
+          height: 1.5em;
+          opacity: 0.5;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
           transition: all var(--transition-slow) var(--transition-timing);
+        }
+
+        .CardTile .icon img {
+          width: 1.5em;
+          height: 1.5em;
+          object-fit: contain;
+          display: block;
         }
 
         .CardTile .content {
@@ -95,10 +107,13 @@ export const CardTile = ({
         rel={rel}
         onClick={onClick}
       >
-        <i 
-          aria-hidden="true" 
-          className={`fa-duotone fa-solid ${icon} icon`}
-        />
+        <span className="icon" aria-hidden="true">
+          {isUrl ? (
+            <img src={icon} alt="" />
+          ) : (
+            <i className={`fa-duotone fa-solid ${icon}`} />
+          )}
+        </span>
         <div className="content">
           <span className="title">
             {title}
