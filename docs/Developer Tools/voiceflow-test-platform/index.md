@@ -20,7 +20,7 @@ Welcome to the page for the Voiceflow Test Platform. This page will guide you th
 
 ### Getting Started
 
-1. **Sign Up**: Create your account using the sign-up page
+1. **Sign Up**: Create your account using the sign-up page here [https://voiceflow-cli-ui.xavidop.me/dashboard](https://voiceflow-cli-ui.xavidop.me/dashboard)
 2. **Access Dashboard**: Log in to view your personalized dashboard
 3. **Create First Test Suite**: Use the "Create New Suite" button to get started
 4. **Run Your First Test**: Execute your test suite to see results
