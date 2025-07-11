@@ -82,13 +82,13 @@ Choose how users interact with your agent
   </Column>
 </Columns>
 
+<br />
+
 ## Improve your agent
 
 ### Heading
 
 Decsription
-
-<br />
 
 <Columns>
   <Column>
