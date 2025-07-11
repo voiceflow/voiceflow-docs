@@ -62,7 +62,7 @@ metadata:
 
 <br />
 
-## Deploy an agent
+## Deploy your agent
 
 ### Interfaces
 
@@ -79,6 +79,26 @@ Choose how users interact with your agent
 
   <Column>
     <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface" />
+  </Column>
+</Columns>
+
+## Improve your agent
+
+### Heading
+
+Decsription
+
+<Columns>
+  <Column>
+    <CardTile href="./chat-widget" icon="fa-comments" title="Transcripts" description="Embed your agent onto your website" />
+  </Column>
+
+  <Column>
+    <CardTile href="./telephony" icon="fa-phone" title="Analytics" description="Accept inbound and outbound calls" />
+  </Column>
+
+  <Column>
+    <CardTile href="./custom-interfaces" icon="fa-code" title="Evaluations" description="Build your own interface" />
   </Column>
 </Columns>
 
