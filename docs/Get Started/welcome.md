@@ -88,6 +88,8 @@ Choose how users interact with your agent
 
 Decsription
 
+<br />
+
 <Columns>
   <Column>
     <CardTile href="./chat-widget" icon="fa-comments" title="Transcripts" description="Embed your agent onto your website" />
