@@ -1,5 +1,5 @@
 ---
-title: Importing Data
+title: Importing data
 deprecated: false
 hidden: false
 metadata:
@@ -164,6 +164,14 @@ Import errors are handled gracefully. Failed files won’t break your project - 
 ## Advanced: importing data using Voiceflow's API
 
 Voiceflow's <Anchor label="Knowledge Base REST API" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/">Knowledge Base REST API</Anchor> allows you to manage your KB programmatically.
+
+<br />
+
+<LinkCard type="Doc" title="Credit usage estimator" description="Estimate how many credits your agents will consume per month and have the best value plan recommended to you." href="./estimate-your-credit-usage#credits-estimation-calculator" />
+
+<br />
+
+<br />
 
 > Common API use cases:
 >
