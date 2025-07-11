@@ -72,19 +72,13 @@ metadata:
 
 Choose how users interact with your agent
 
-<Columns>
-  <Column>
-    <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
-  </Column>
+<div class="home-grid">
+  <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
 
-  <Column>
-    <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Accept inbound and outbound calls" />
-  </Column>
+  <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Accept inbound and outbound calls" />
 
-  <Column>
-    <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface" />
-  </Column>
-</Columns>
+  <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface" />
+</div>
 
 <br />
 
@@ -121,5 +115,19 @@ Decsription
   .rm-Markdown h2 { margin-top: 0; }
   .rm-Markdown h3 { border-bottom: 0; padding-bottom: 0; margin-top: 0; margin-bottom: 0.3em !important; }
   .rm-Guides .content-body { max-width: 100%; }
+
+   .home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .home-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
 </style>
 `}</HTMLBlock>
