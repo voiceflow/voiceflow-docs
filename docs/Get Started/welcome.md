@@ -60,7 +60,11 @@ metadata:
   </Column>
 </Columns>
 
-<br />
+<div class="columns-3">
+  <div>test</div>
+  <div>test</div>
+  <div>test</div>
+</div>
 
 ## Deploy your agent
 
@@ -107,6 +111,8 @@ Decsription
 <br />
 
 ## Developer tools
+
+<br />
 
 <HTMLBlock>{`
 <style>
