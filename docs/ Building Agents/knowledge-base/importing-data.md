@@ -31,6 +31,8 @@ Voiceflow supports five different data sources:
 >
 > Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
 
+<br />
+
 ## Refresh rate settings
 
 When importing data from URLs or sitemaps, you can schedule a refresh rate to automatically re-sync your content, keeping your knowledge base up to date.
@@ -45,6 +47,8 @@ When importing data from URLs or sitemaps, you can schedule a refresh rate to au
 > ⚠️ Be careful with refresh rates!
 >
 > When an LLM chunking strategy is **enabled**, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are **disabled**, re-syncs *don't* consume any credits.
+
+<br />
 
 ## LLM chunking strategies
 
@@ -153,6 +157,8 @@ LLM chunking strategies help optimize an LLM's access to information in your kno
 > * `FAQ Optimization` + `Summarize `→ Compact, efficient answers (ideal for Customer Support Agents)
 > * `Smart Chunking` + `Remove HTML/Noise` → Clean, readable chunks from web docs (ideal for Web-based Documentation Agents)
 
+<br />
+
 ## Troubleshooting data imports
 
 If something goes wrong with your data imports, here’s some common approaches to debug:
@@ -169,6 +175,8 @@ If something goes wrong with your data imports, here’s some common approaches 
 > ℹ️ Failed data imports
 >
 > Import errors are handled gracefully. Failed files won’t break your project - the remaining files will be processed. Delete the failed file, resolve the issue and re-upload again to your knowledge base.
+
+<br />
 
 ## Using the Knowledge Base REST API
 
