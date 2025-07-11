@@ -66,7 +66,7 @@ metadata:
 
 ### Interfaces
 
-Choose how to interact with your agent
+Choose how users interact with your agent
 
 <Columns>
   <Column>
@@ -78,7 +78,7 @@ Choose how to interact with your agent
   </Column>
 
   <Column>
-    <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
+    <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface" />
   </Column>
 </Columns>
 
