@@ -78,9 +78,9 @@ Choose how users interact with your agent
 
 ## Improve your agent
 
-### Heading
+### Insights
 
-Decsription
+Understand how your agent is being used
 
 <div class="home-grid">
   <CardTile href="./chat-widget" icon="fa-comments" title="Transcripts" description="Embed your agent onto your website" />
