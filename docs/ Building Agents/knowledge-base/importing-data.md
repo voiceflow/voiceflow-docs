@@ -169,6 +169,4 @@ Voiceflow's <Anchor label="Knowledge Base API" target="_blank" href="https://doc
 * Managing KB entries dynamically across multiple workspaces, outside of the Voiceflow Creator
 * Debugging & testing chunk processing behind the scenes
 
-<br />
-
 <LinkCard type="Doc" title="Document API reference" description="Upload files and content from websites using the Document API." href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/" />
