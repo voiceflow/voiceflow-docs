@@ -64,24 +64,20 @@ metadata:
 
 ## Deploy an agent
 
-<Columns layout="auto">
+### Interfaces
+
+Choose how to interact with your agent
+
+<Columns>
   <Column>
-    ### Publish your agent
-
-    Release your agent into the word
-
-    <CardTile href="./publishing-agents" icon="fa-rocket" title="Publishing agents" description="Release your agent in seconds" />
+    <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
   </Column>
 
   <Column>
-    ### Interfaces
-
-    Choose how to interact with your agent
-
-    <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
-
     <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
+  </Column>
 
+  <Column>
     <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface using our API" />
   </Column>
 </Columns>
