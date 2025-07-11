@@ -82,6 +82,10 @@ Choose how users interact with your agent
   </Column>
 </Columns>
 
+<br />
+
+## Developer tools
+
 <HTMLBlock>{`
 <style>
   /*.content-toc { display: none !important; }
