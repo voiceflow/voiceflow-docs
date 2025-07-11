@@ -74,7 +74,7 @@ Choose how users interact with your agent
   </Column>
 
   <Column>
-    <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Connect your agent to a phone number" />
+    <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Accept inbound and outbound calls" />
   </Column>
 
   <Column>
