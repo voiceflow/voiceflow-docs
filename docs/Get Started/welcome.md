@@ -67,7 +67,7 @@ metadata:
 Choose how users interact with your agent
 
 <div class="home-grid">
-  <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
+  <CardTile href="./chat-widget" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkhCBV3z6o2d3mou6ACgpXz8MelqjJTVRf9vDh" title="Web chat" description="Embed your agent onto your website" />
 
   <CardTile href="./telephony" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk5E1ZDSzMKCWVSIegrm60uA8OXNGnvF3Zysxp" title="Phone" description="Accept inbound and outbound calls" />
 
