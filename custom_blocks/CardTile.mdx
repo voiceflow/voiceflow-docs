@@ -97,7 +97,18 @@ export const CardTile = ({
         .CardTile .description {
           color: var(--color-text-minimum);
           font-size: 0.8em;
+          }
+
+        .CardTile .icon {
+          width: "1em",
+          backgroundSize: "cover",
+          }
+
+        .CardTile .icon:hover {
+          filter: invert(92%) sepia(92%) saturate(30%) hue-rotate(70deg) brightness(107%) contrast(106%);
         }
+
+
       `}</style>
       
       <a 
@@ -114,8 +125,6 @@ export const CardTile = ({
         isUrl
           ? {
               backgroundImage: `url("${icon}")`,
-              width: "1em",
-              backgroundSize: "cover",
             }
           : undefined
       }
