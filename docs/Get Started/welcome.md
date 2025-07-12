@@ -123,7 +123,7 @@ Understand how your agent is being used
     border: 1px solid #1C3BC8;
     padding: 2em 1em;
     border-radius: 4px;
-    width: 49%;
+    width: 100%;
     background: url("https://i.imgur.com/Lzj96mw.png"), #2b55ea;
     background-position: right;
     background-size: 15em;
