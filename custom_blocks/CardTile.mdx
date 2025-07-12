@@ -112,15 +112,8 @@ export const CardTile = ({
       <span
       className="icon"
       aria-hidden="true"
-      style={
-        isUrl
-          ? {
-              backgroundImage: `url("${icon}")`,
-            }
-          : undefined
-      }
     >
-    {isUrl ? null : <i className={`fa-duotone fa-solid ${icon}`} />}
+    {isUrl ?  <img src={`url("${icon}")`} /> : <i className={`fa-duotone fa-solid ${icon}`} />}
   </span>
         <div className="content">
           <span className="title">
