@@ -132,7 +132,7 @@ Understand how your agent is being used
     background-repeat: no-repeat;
   }
 
-  .featured-card > span {
+  .featured-card > span:first-child {
     display: block;
     font-weight: 600;
     font-size: 1.05em;
