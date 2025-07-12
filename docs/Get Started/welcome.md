@@ -69,7 +69,7 @@ Choose how users interact with your agent
 <div class="home-grid">
   <CardTile href="./chat-widget" icon="fa-comments" title="Web chat" description="Embed your agent onto your website" />
 
-  <CardTile href="./telephony" icon="fa-phone" title="Phone" description="Accept inbound and outbound calls" />
+  <CardTile href="./telephony" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk5E1ZDSzMKCWVSIegrm60uA8OXNGnvF3Zysxp" title="Phone" description="Accept inbound and outbound calls" />
 
   <CardTile href="./custom-interfaces" icon="fa-code" title="API" description="Build your own interface" />
 </div>
