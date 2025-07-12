@@ -57,7 +57,10 @@ export const CardTile = ({
           font-size: 1.5em;
           margin-top: 0.15em;
           min-width: 1.5em;
-          width: 1.5em;
+          width: 1em;
+          background-size: cover;
+          background-repeat: no-repeat;	
+					background-position: center;
           height: 1.5em;
           opacity: 0.5;
           display: inline-flex;
@@ -65,13 +68,6 @@ export const CardTile = ({
           justify-content: center;
           text-align: center;
           transition: all var(--transition-slow) var(--transition-timing);
-        }
-
-        .CardTile .icon img {
-          width: 1.5em;
-          height: 1.5em;
-          object-fit: contain;
-          display: block;
         }
 
         .CardTile .content {
@@ -97,11 +93,6 @@ export const CardTile = ({
         .CardTile .description {
           color: var(--color-text-minimum);
           font-size: 0.8em;
-          }
-
-        .CardTile .icon {
-          width: 1em;
-          background-size: cover;
           }
 
         .CardTile:hover .icon {
