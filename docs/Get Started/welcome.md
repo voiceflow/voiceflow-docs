@@ -44,7 +44,7 @@ metadata:
 
     <CardTile href="./agents" icon="fa-brain" title="Memory" description="Reference previous messages" />
 
-    <CardTile href="./variables" icon="fa-code-simple" title="Variables" description="Store values during conversations" />
+    <CardTile href="./variables" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkobm1MHV2fXpt4RuYNQ8VldT29GHDUiFMj7hA" title="Variables" description="Store values during conversations" />
   </div>
 
   <div>
