@@ -52,11 +52,11 @@ metadata:
 
     Deeply integrate with your business
 
-    <CardTile href="./tools" icon="fa-screwdriver-wrench" title="Tools" description="One click integrations" />
+    <CardTile href="./tools" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkxyenLYlHB63EAecr4ldMRpWtKsU5fLaQgvGk" title="Tools" description="One click integrations" />
 
-    <CardTile href="./function-step" icon="fa-code-compare" title="Functions" description="Run code inside your agent" />
+    <CardTile href="./function-step" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk4Nq10b5rotc4F1GyVLOWXpsqzuk68RiKw2eB" title="Functions" description="Run code inside your agent" />
 
-    <CardTile href="./api-step" icon="fa-webhook" title="APIs" description="Connect to any service" />
+    <CardTile href="./api-step" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkIUuDUXNn8fDhcCkQMZtqgsamUN1PR6HTVjX0" title="APIs" description="Connect to any service" />
   </div>
 </div>
 
