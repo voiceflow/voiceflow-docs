@@ -1,5 +1,5 @@
 ---
-title: Traditional Interaction-Based Tests
+title: Interaction-Based Tests
 deprecated: false
 hidden: false
 metadata:
