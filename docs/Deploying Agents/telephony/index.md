@@ -1,5 +1,5 @@
 ---
-title: Voice (phone number)
+title: Telephony (phone number)
 excerpt: Make your agent call phone numbers, and receive inbound phone calls.
 deprecated: false
 hidden: false
