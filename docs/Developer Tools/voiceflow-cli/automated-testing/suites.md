@@ -1,5 +1,5 @@
 ---
-title: Suites
+title: Suite Reference
 deprecated: false
 hidden: false
 metadata:
