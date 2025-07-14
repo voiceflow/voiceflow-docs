@@ -1,5 +1,5 @@
 ---
-title: Agent-to-Agent Tests
+title: Agent-to-Agent Tests Reference
 deprecated: false
 hidden: false
 metadata:
