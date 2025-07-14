@@ -10,6 +10,10 @@ metadata:
 next:
   description: ''
 ---
+> ℹ️ The Agent step doesn't use Intents.
+>
+> Modern AI agents can be built without using Intents, and instead through the [Agent step](doc:agents). Features such as prompting and exit conditions allow you to replicate similar behaviour to Intents without needing to manually create an Intent.
+
 ## What are Intents?
 
 Intents help route a conversation based on what the user means, not just what they say. The user's input doesn’t need to exactly match the Intent - instead, the agent will match user input to an Intent based on the underlying meaning of the message.
@@ -21,10 +25,6 @@ Intents are supported in the following places:
 * Globally using [Triggers](doc:trigger)
 
 <br />
-
-> ℹ️ The Agent step doesn't use Intents.
->
-> Modern AI agents can be built without using Intents, and instead through the [Agent step](doc:agents). Features such as prompting and exit conditions allow you to replicate similar behaviour to Intents without needing to manually create an Intent.
 
 <br />
 
