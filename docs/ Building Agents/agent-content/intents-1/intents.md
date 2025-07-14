@@ -42,16 +42,28 @@ Intents are utilized in various steps within Voiceflow, such as:
 * **Trigger Step**: To jump to different parts of the conversation when certain intents are recognized.
 
 <Tabs>
-  <Tab title="First Tab">
+  <Tab title="Choice Step">
     Welcome to the content that you can only see inside the first Tab.
+
+    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
 
-  <Tab title="Second Tab">
+  <Tab title="Capture Step">
     Here's content that's only inside the second Tab.
+
+    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
 
-  <Tab title="Third Tab">
+  <Tab title="Trigger Step">
     Here's content that's only inside the third Tab.
+
+    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
+  </Tab>
+
+  <Tab title="Button Step">
+    Here's content that's only inside the third Tab.
+
+    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
 </Tabs>
 
