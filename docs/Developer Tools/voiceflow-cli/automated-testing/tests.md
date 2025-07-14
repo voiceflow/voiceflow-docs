@@ -1,13 +1,17 @@
 ---
-title: Tests
+title: Traditional Interaction-Based Tests
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
+## Overview
+
+Test the conversation flow with **predefined interactions** where you send specific user utterances to your agent and validate exact responses.
+
 ## Reference
 
-A test is a yaml file with the following structure:
+A traditional test is a YAML file with the following structure:
 
 ```yaml
 # test.yaml
@@ -217,6 +221,12 @@ https://voiceflow.xavidop.me/static/conversationtest.json
 
 You can also specify it in your `yml` config files by adding a\
 comment like the following:
+
+```yaml
+# yaml-language-server: $schema=https://voiceflow.xavidop.me/static/conversationtest.json
+```
+
+<br />
 
 ```yaml
 # yaml-language-server: $schema=https://voiceflow.xavidop.me/static/conversationtest.json
