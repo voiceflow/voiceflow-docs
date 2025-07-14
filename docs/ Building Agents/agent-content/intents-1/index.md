@@ -1,6 +1,6 @@
 ---
 title: Intents
-excerpt: ''
+excerpt: Route conversation and decisions based on user input.
 deprecated: false
 hidden: false
 metadata:
@@ -12,7 +12,21 @@ next:
 ---
 ## What are Intents?
 
-In the realm of conversational AI, **intents** represent the underlying goals or purposes behind a user's input. They are the actions the user wants to perform or the information they seek through their queries. By identifying intents, your Voiceflow agent can understand what the user is trying to achieve and respond appropriately.
+Intents help route a conversation based on what the user means, not just what they say. The user's input doesn’t need to exactly match the Intent - instead, the agent will match user input to an Intent based on the underlying meaning of the message.
+
+Intents are supported in the following places:
+
+* The [Choice step](doc:choice-v2)
+* The [Button step](doc:buttons-v2)
+* Globally using [Triggers](doc:trigger)
+
+<br />
+
+> ℹ️ The Agent step doesn't use Intents.
+>
+> Modern AI agents can be built without using Intents, and instead through the [Agent step](doc:agents). Features such as prompting and exit conditions allow you to replicate similar behaviour to Intents without needing to manually create an Intent.
+
+<br />
 
 <Embed url="https://www.youtube.com/watch?v=SkEakBxkE8w" href="https://www.youtube.com/watch?v=SkEakBxkE8w" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FSkEakBxkE8w%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DSkEakBxkE8w%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FSkEakBxkE8w%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" providerUrl="https://www.youtube.com/" providerName="YouTube" />
 
