@@ -7,7 +7,7 @@ metadata:
 ---
 ## What is this?
 
-@@ -8,13 +8,46 @@
+<br />
 
 Use the Conversation Profiler to test user utterances and improve your agent's interaction model.
 
