@@ -35,6 +35,10 @@ In Voiceflow, intents are defined within the **Intent CMS**. Each intent include
 * **Utterances**: Example phrases users might say to invoke the intent.
 * **Required Entities** (optional): Specific pieces of information required in prior to fulfill the intent.
 
+<Image align="center" width="35% " src="https://files.readme.io/29f4acbb8d4b909e72a471e8c4a1e3a2bbb09ee9726a661c2601683362c9bb72-CleanShot_2025-07-14_at_11.30.562x.png" />
+
+<br />
+
 Intents are utilized in various steps within Voiceflow, such as:
 
 * **Choice Step**: To branch the conversation based on different user intents.
@@ -43,25 +47,26 @@ Intents are utilized in various steps within Voiceflow, such as:
 
 <Tabs>
   <Tab title="Choice Step">
-    Welcome to the content that you can only see inside the first Tab.
+    <h1>Choice Step</h1>
+    To branch the conversation based on different user intents.
 
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
 
   <Tab title="Capture Step">
-    Here's content that's only inside the second Tab.
+    To dynamically listen for user's intent in their responses with the agent.
 
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
 
   <Tab title="Trigger Step">
-    Here's content that's only inside the third Tab.
+    To jump to different parts of the conversation when certain intents are recognized.
 
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
 
   <Tab title="Button Step">
-    Here's content that's only inside the third Tab.
+    To provide clickable options that trigger intents. Note; to link to an intent, you must create a trigger and preset it to an intent beforehand.
 
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
   </Tab>
