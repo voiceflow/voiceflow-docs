@@ -49,23 +49,18 @@ Intents are utilized in various steps within Voiceflow, such as:
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSzTDGRDyQXUw9e3lryuWbOH7E5ApCIBaitDYK" />
   </Tab>
 
-  <Tab title="Capture Step">
-    <h3>Capture Step</h3>
-    To dynamically listen for user's intent in their responses with the agent.
-
-    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
-  </Tab>
-
   <Tab title="Trigger Step">
-    To jump to different parts of the conversation when certain intents are recognized.
+    <h3>Trigger Step</h3>
+    To jump to different parts of the conversations with triggers when certain intents are recognized.
 
-    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
+    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSvFUFY1xoDVQXmAUr9uGNzwaYSd78tfRT6F1x" />
   </Tab>
 
   <Tab title="Button Step">
-    To provide clickable options that trigger intents. Note; to link to an intent, you must create a trigger and preset it to an intent beforehand.
+    <h3>Button Step</h3>
+    To provide clickable options that invoke triggers when certain intents are recognized.
 
-    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
+    <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS2ezL43gQD9nLFZ4JORio7WdbTegAGUcvxfw6" />
   </Tab>
 </Tabs>
 
