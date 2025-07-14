@@ -43,13 +43,14 @@ Intents are utilized in various steps within Voiceflow, such as:
 
 <Tabs>
   <Tab title="Choice Step">
-    <h2>Choice Step</h2>
+    <h3>Choice Step</h3>
     To branch the conversation based on different user intents.
 
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSzTDGRDyQXUw9e3lryuWbOH7E5ApCIBaitDYK" />
   </Tab>
 
   <Tab title="Capture Step">
+    <h3>Capture Step</h3>
     To dynamically listen for user's intent in their responses with the agent.
 
     <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
