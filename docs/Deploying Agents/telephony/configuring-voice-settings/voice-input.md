@@ -110,7 +110,7 @@ If you try to speak a different language than what is in settings, it will eithe
 
 Nova-3 is capable of understanding multiple languages at once (multilingual), however from our testing this comes at a penalty of higher latency.
 
-### Keywords
+## Keywords
 
 You may have some specific terms that are not common knowledge. For example, if I have a company called "*RightSea*", sometimes the transcription will come out as "*write see*" or "*ritecy*" "*right c*" etc.
 
