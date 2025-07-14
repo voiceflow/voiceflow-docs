@@ -28,7 +28,7 @@ Intents are foundational elements in designing conversational agents because the
 
 ## How Intents Work in Voiceflow
 
-In Voiceflow, intents are defined within the **Intent CMS**. Each intent includes:
+In Voiceflow, intents can either be defined within the **Intent CMS** or certain steps under the **Listen section**. Each intent includes:
 
 * **Name**: A clear identifier for the intent (e.g., `BookAppointment`).
 * **Description**: A brief explanation of when the intent should be triggered.
