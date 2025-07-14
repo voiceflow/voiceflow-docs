@@ -60,37 +60,11 @@ The YAML import feature expects the standard Voiceflow CLI file structure:
 
 ###### Suite File (suite.yaml or suite.yml)
 
-The main suite configuration file containing:
-
-```yaml
-name: "Main Conversation Flow Tests"
-description: "Comprehensive tests for primary user interactions"
-environmentName: "production"
-tests:
-  - id: "greeting_test"
-    file: "tests/greeting.yaml"
-  - id: "help_test"  
-    file: "tests/help.yaml"
-```
+Individual test case files referenced in the suite. You can find more details on the [Suite Reference](https://docs.voiceflow.com/docs/automated-testing#/) page.
 
 ###### Test Files (individual .yaml/.yml files)
 
-Individual test case files referenced in the suite:
-
-```yaml
-name: "Greeting Test"
-description: "Test the bot's greeting response"
-interactions:
-  - id: "greeting_interaction"
-    user:
-      type: "text"
-      text: "Hello"
-    agent:
-      validate:
-        - id: "greeting_validation"
-          type: "exact_match"
-          value: "Hello! How can I help you today?"
-```
+Individual test case files referenced in the suite. You can find more details on the [Test Reference](https://docs.voiceflow.com/docs/automated-testing#/) page.
 
 ## Managing Test Suites
 
