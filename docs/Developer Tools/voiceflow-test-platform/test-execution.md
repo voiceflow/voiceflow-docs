@@ -36,14 +36,14 @@ You can run tests immediately in several ways:
 
 The Voiceflow CLI supports two distinct types of tests:
 
-### 1. Traditional Interaction-Based Tests
+### Traditional Interaction-Based Tests
 
 * **Purpose**: Test specific user inputs and validate exact agent responses
 * **Structure**: Defined as a series of interactions with expected validations
 * **Use Case**: Regression testing, validation of specific conversation flows
 * **Execution**: Sequential interaction testing with predefined inputs
 
-### 2. Agent-to-Agent Testing
+### Agent-to-Agent Testing
 
 * **Purpose**: Simulate realistic conversations using AI-powered agents
 * **Structure**: Defined with goals, personas, and user information
