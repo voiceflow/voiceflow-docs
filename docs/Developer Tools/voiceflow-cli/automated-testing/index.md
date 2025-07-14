@@ -23,7 +23,7 @@ Test the conversation flow with **predefined interactions** where you send speci
 
 #### Reference
 
-It is important to know which [suites](/tests/suites) and [tests](/tests/interaction-tests) you can build. Because of that, you can find the entire reference on the [Reference](/tests/suites) page. Suites and test are defined as `yaml` files.
+It is important to know which [suites](https://docs.voiceflow.com/docs/suites#/) and [tests](https://docs.voiceflow.com/docs/tests#/) you can build. Because of that, you can find the entire reference on the [Reference](https://docs.voiceflow.com/docs/tests#/) page. Suites and test are defined as `yaml` files.
 
 ### 🤖 Agent-to-Agent Testing
 
@@ -49,17 +49,17 @@ Both methods are ideal for:
 
 Both testing approaches can be run in your CI/CD pipelines and include additional features beyond the Voiceflow console's Test Agent feature. Every suite is executed in the same Voiceflow user's session.
 
-All of the commands that are available in `voiceflow-cli` to execute the Conversation profiler are located within the [`voiceflow test` subcommand](/cmd/voiceflow_test).
+All of the commands that are available in `voiceflow-cli` to execute the Conversation profiler are located within the [`voiceflow test` subcommand](https://docs.voiceflow.com/docs/voiceflow-test#/).
 
 <br />
 
 #### Reference
 
-It is important to know which [suites](/tests/suites) and [tests](/tests/interaction-tests) you can build. Because of that, you can find the entire reference on the [Reference](/tests/suites) page. Suites and test are defined as `yaml` files.
+It is important to know which [suites](https://docs.voiceflow.com/docs/suites#/) and [tests](https://docs.voiceflow.com/docs/agent-to-agent-tests#/) you can build. Because of that, you can find the entire reference on the [Reference](https://docs.voiceflow.com/docs/agent-to-agent-tests#/) page. Suites and test are defined as `yaml` files.
 
 ## Examples
 
-You can find some useful examples on our [GitHub repo](https://github.com/xavidop/voiceflow-cli/tree/main/examples) and the [Examples](/tests/examples) page.
+You can find some useful examples on our [GitHub repo](https://github.com/xavidop/voiceflow-cli/tree/main/examples)
 
 ## Execution Example
 
