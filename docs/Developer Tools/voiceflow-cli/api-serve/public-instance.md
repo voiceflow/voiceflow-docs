@@ -11,7 +11,7 @@ metadata:
 
 If you want to try out the Voiceflow CLI server without setting it up locally, you can use our public instance:
 
-**Base URL:** [https://voiceflow-cli-api.xavidop.me/](https://voiceflow-cli-api.xavidop.me/)
+**Base URL:** [https://tests-api.voiceflow.com/](https://tests-api.voiceflow.com/)
 
 ## Interactive API Documentation
 
