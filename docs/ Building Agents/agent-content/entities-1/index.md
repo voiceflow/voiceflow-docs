@@ -38,11 +38,7 @@ Entity rules let you define what valid input should look like—such as a 5-digi
 * **Phone Number**: "Should be a 10-digit number, possibly formatted with dashes or spaces."
 * **Order Number**: "Must start with 'ORD' followed by 7 digits."
 
-### Best practices
-
-1. **Be specific but user-friendly**: Clearly define what you need without making it hard for the user to comply.
-2. **Use Natural Language**: Write rules as you would explain them to a person.
-3. **Avoid Overcomplication**: Don't add unnecessary complexity that could confuse the LLM or the user.
+Clearly define what you need without making it hard for the user to comply. Write rules the same way, you would explain to a person.
 
 ***
 
@@ -71,7 +67,7 @@ Sometimes, a user may be unable or unwilling to provide the information you're r
 
 Exit scenarios are predefined conditions under which the system stops attempting to collect a particular entity and moves on in the conversation.
 
-### How to Set Up Exit Scenarios
+### How to set up exit scenarios
 
 * **Define Trigger Phrases**: Specify phrases or responses that indicate the user wants to skip or cannot provide the information (e.g., "I don't know," "I'd rather not say").
 * **Configure the Exit Path**: Decide where the conversation should go next. This could be:
