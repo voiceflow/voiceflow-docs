@@ -1,6 +1,8 @@
 ---
 title: Entities
-excerpt: ''
+excerpt: >-
+  Entities let your agent identify and extract specific information from user
+  input.
 deprecated: false
 hidden: false
 metadata:
