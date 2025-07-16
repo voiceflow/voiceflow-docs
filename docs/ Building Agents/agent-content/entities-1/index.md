@@ -38,7 +38,6 @@ Entity rules let you define what valid input should look like—such as a 5-digi
 * **Zip Code**: "Must be exactly 5 digits long."
 * **Email Address**: "Must be a valid business email, not a personal email like Gmail or Yahoo."
 * **Phone Number**: "Should be a 10-digit number, possibly formatted with dashes or spaces."
-* **Order Number**: "Must start with 'ORD' followed by 7 digits."
 
 Clearly define what you need without making it hard for the user to comply. Write rules the same way, you would explain to a person.
 
@@ -46,13 +45,13 @@ Clearly define what you need without making it hard for the user to comply. Writ
 
 ## Automatic reprompts
 
-**Automatic reprompts** are dynamic follow-up messages that the system generates when a user's input doesn't meet the entity's requirements. This feature ensures that the conversation remains fluid and user-friendly.
+**Automatic reprompts** are dynamic follow-up messages that the system generates when a user's input doesn't meet the entity's requirements. This feature ensures that the conversation remains fluid whilst still extracting information to fulfill an entity.
 
 ### How automatic reprompts work
 
 1. **Detection**: If the user's input is invalid or incomplete based on your entity rules, the system recognizes this.
 2. **Generation**: The LLM crafts a personalized message prompting the user to provide the correct information.
-3. **Response**: The user provides the needed input, and the conversation continues smoothly.
+3. **Response**: The user provides the needed input, and the conversation continues smoothly, as originally planned in your workflow.
 
 **Example**
 
