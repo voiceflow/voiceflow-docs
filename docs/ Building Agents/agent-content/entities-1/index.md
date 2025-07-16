@@ -62,7 +62,7 @@ Clearly define what you need without making it hard for the user to comply. Writ
 
 ## Exit scenarios
 
-Sometimes, a user may be unable or unwilling to provide the information you're requesting. **Exit scenarios** allow your agent to handle such situations gracefully.
+Sometimes, a user may be unable or unwilling to provide the information you're requesting. Exit scenarios allow your agent to handle such situations gracefully.
 
 ### What are exit scenarios?
 
