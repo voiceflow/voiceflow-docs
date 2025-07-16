@@ -73,7 +73,7 @@ Choose how users interact with your agent
 
   <CardTile href="./telephony" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk5E1ZDSzMKCWVSIegrm60uA8OXNGnvF3Zysxp" title="Phone" description="Accept inbound and outbound calls" />
 
-  <CardTile href="./custom-interfaces" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkzuGAy3Kb3WqBgAES4voNTk8pZcL2mdeIDCnO" title="Voiceflow API" description="Build your own interface" />
+  <CardTile href="./custom-interfaces" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYktzB2dbcql98M6riPKymkZ4CSD0cowfj1JRGv" title="Voiceflow API" description="Build your own interface" />
 </div>
 
 <br />
