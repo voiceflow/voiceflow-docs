@@ -42,7 +42,7 @@ metadata:
 
     <CardTile href="./agents" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkjDAU0PnIfFXj0DI1tHlCbnWGqRwsmUyZe4p2" title="Knowledge base" description="Add knowledge to your agent" />
 
-    <CardTile href="./agents" icon="fa-brain" title="Memory" description="Reference previous messages" />
+    <CardTile href="./agents" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk2zWMvDC9lrcOTFZSbYvQkPU43CRs1qpMJhgA" title="Memory" description="Reference previous messages" />
 
     <CardTile href="./variables" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkobm1MHV2fXpt4RuYNQ8VldT29GHDUiFMj7hA" title="Variables" description="Store values during conversations" />
   </div>
