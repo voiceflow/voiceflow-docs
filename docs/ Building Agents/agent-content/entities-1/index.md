@@ -71,8 +71,8 @@ Exit scenarios are predefined conditions under which the system stops attempting
 
 ### How to set up exit scenarios
 
-* **Define Trigger Phrases**: Specify phrases or responses that indicate the user wants to skip or cannot provide the information (e.g., "I don't know," "I'd rather not say").
-* **Configure the Exit Path**: Decide where the conversation should go next. This could be:
+* **Define trigger phrases**: Specify phrases or responses that indicate the user wants to skip or cannot provide the information (e.g., "I don't know," "I'd rather not say").
+* **Configure the exit path**: Decide where the conversation should go next. This could be:
   * **Main Path**: Proceed as if the entity was captured, perhaps with a default value.
   * **Alternate Path**: Redirect to a different part of the conversation that doesn't require the entity.
 
