@@ -2,7 +2,7 @@
 title: Intent Classification using LLMs (Hybrid)
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
@@ -42,14 +42,14 @@ The LLM-based intent classifier introduces a novel hybrid methodology, blending 
 * **Process**: For intents associated with entities, the original utterance is re-evaluated by the NLU, focusing solely on the identified intent to populate the necessary entities.
 * **Outcome**: The NLU returns the refined intent classification complete with entities, ready for use within the conversational flow.
 
-<Image align="center" className="border" width="70% " border={true} src="https://files.readme.io/593acd3-image.png" />
+<Image align="center" className="border" border={true} width="70% " src="https://files.readme.io/593acd3-image.png" />
 
 ## Training Data Requirements
 
 * **Utterance**: Supply at least one example utterance per intent to give the NLU training data necessary to fetch up to 10 relevant intents.
 * **Clear Intent Descriptions**: Accompany utterances with a direct intent description, setting explicit conditions for when the intent should be triggered. *Examples* include:
   * *Customer Support Inquiry*: "Trigger this intent when the user is seeking assistance with their account, such as password reset or account recovery."\
-    *Product Inquiry*: "Trigger this intent when the user inquires about product features, availability, or specifications."\
+    *Product Inquiry*: "Trigger this intent when the user inquires about product features, availability, or specifications."
     *Booking Request*: "Trigger this intent when the user wants to make a reservation for services like dining, accommodation, or transportation."
 * **Efficient Learning**: With just an utterance and a description, LLMs leverage their pre-trained knowledge to effectively classify intents, requiring far less data than traditional methods.
 
@@ -186,7 +186,7 @@ return { prompt };
 
 ## Debugging and Error Handling
 
-* **Intent preview**: The Intent CMS page offers a real-time preview of intent classification, enabling users to promptly identify and correct misclassifications or discrepancies before they affect the user experience. This feature is instrumental in ensuring the agent’s responses are aligned with user intents as designed. For more information about the Intent preview, see documentation [here](https://voiceflow.zendesk.com/hc/en-us/articles/22213856020237). 
+* **Intent preview**: The Intent CMS page offers a real-time preview of intent classification, enabling users to promptly identify and correct misclassifications or discrepancies before they affect the user experience. This feature is instrumental in ensuring the agent’s responses are aligned with user intents as designed. For more information about the Intent preview, see documentation [here](https://voiceflow.zendesk.com/hc/en-us/articles/22213856020237).
   * **NOTE**: Only intents that are used in your agent will be seen in the results.
 
 ![](https://files.readme.io/5c7d851-image.png)
