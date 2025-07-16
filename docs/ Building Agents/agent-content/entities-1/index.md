@@ -12,18 +12,27 @@ metadata:
 next:
   description: ''
 ---
-## What are Entities?
+## What are entities?
 
 Entities extract specific pieces of information from user input- like a date, location, or product name. They are declared and used to capture specific data during a conversation, while variables are used to store and manage it.
 
-**Example**\
-If a user says, "I want to book a flight to Paris next Friday," your assistant might extract:
-
-`location` → `Paris`
-
-`date `→ `next Friday`
+> If a user says, "I want to book a flight to Paris next Friday," your assistant might extract:
+>
+> `location` → `Paris`
+>
+> `date `→ `next Friday`
 
 These extracted values (entities) can then be stored in variables for later use- for example, to confirm the travel booking.
+
+<Image align="center" className="border" border={true} src="https://files.readme.io/8de3022d3ac3fb9912868bcc48607788dc651b8ee16fb547597ea896e6649be1-CleanShot_2025-07-16_at_16.28.392x.png" />
+
+<br />
+
+***
+
+## How to create an entity?
+
+\[ video here ]
 
 ***
 
@@ -33,11 +42,13 @@ Entity rules let you define what valid input should look like—such as a 5-digi
 
 \[ insert pic of entities panel w rules showing ]
 
-### Examples entity rules
+Here's some sample entities with rules:
 
-* **Zip Code**: "Must be exactly 5 digits long."
-* **Email Address**: "Must be a valid business email, not a personal email like Gmail or Yahoo."
-* **Phone Number**: "Should be a 10-digit number, possibly formatted with dashes or spaces."
+> **Zip Code**: "Must be exactly 5 digits long."
+>
+> **Email Address**: "Must be a valid business email, not a personal email like Gmail or Yahoo."
+>
+> **Phone Number**: "Should be a 10-digit number, possibly formatted with dashes or spaces."
 
 Clearly define what you need without making it hard for the user to comply. Write rules the same way, you would explain to a person.
 
@@ -76,8 +87,10 @@ Exit scenarios are predefined conditions under which the system stops attempting
   * **Main path**: Proceed as if the entity was captured, perhaps with a default value.
   * **Alternate path**: Redirect to a different part of the conversation that doesn't require the entity.
 
-**Example**
+Here's a possible scenario where an exit scenario is executed:
 
-* *Entity*: `PhoneNumber`
-* *Trigger Phrase*: "I don't have a phone."
-* *Exit Action*: The agent replies, "No problem, we'll proceed without a phone number," and continues the conversation.
+> **Entity**: `PhoneNumber`
+>
+> **Trigger Phrase**: "I don't have a phone."
+>
+> **Exit Action**: The agent replies, "No problem, we'll proceed without a phone number," and continues the conversation.
