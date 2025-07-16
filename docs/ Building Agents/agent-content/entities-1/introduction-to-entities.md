@@ -10,9 +10,16 @@ metadata:
 next:
   description: ''
 ---
-In the world of conversational agents, **entities** are the key pieces of information that you want to extract from a user's input. Think of entities as the nouns in a sentence—the who, what, where, and when that give meaning to the conversation. Whether you're capturing a user's name, booking a date, or retrieving a product code, entities enable your agent to recognize and process this crucial information accurately.
+Entities extract specific pieces of information from user input- like a date, location, or product name. They are declared and used to capture specific data during a conversation, while variables are used to store and manage it.
 
-In Voiceflow, entities serve as placeholders or variables that store specific data collected during a conversation. They make your agent dynamic and responsive, allowing it to handle a wide range of user inputs and ensuring that the conversation flows naturally.
+> **Example**\
+> If a user says, "I want to book a flight to Paris next Friday," your assistant might extract:
+>
+> `location` → `Paris`
+>
+> `date `→ `next Friday`
+>
+> These extracted values (entities) can then be stored in variables for later use- for example, to confirm the travel booking.
 
 ***
 
