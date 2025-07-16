@@ -89,7 +89,7 @@ Understand how your agent is being used
 
   <CardTile href="./telephony" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Analytics" description="View your agent's metrics" />
 
-  <CardTile href="./custom-interfaces" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkoxdT412fXpt4RuYNQ8VldT29GHDUiFMj7hA0" title="Evaluations" description="Measure agent success" />
+  <CardTile href="./custom-interfaces" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Evaluations" description="Measure agent success" />
 </div>
 
 <br />
