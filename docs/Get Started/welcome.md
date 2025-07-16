@@ -85,7 +85,7 @@ Choose how users interact with your agent
 Understand how your agent is being used
 
 <div class="home-grid">
-  <CardTile href="./chat-widget" icon="fa-comments" title="Transcripts" description="Embed your agent onto your website" />
+  <CardTile href="./chat-widget" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Transcripts" description="Monitor past conversations" />
 
   <CardTile href="./telephony" icon="fa-phone" title="Analytics" description="Accept inbound and outbound calls" />
 
