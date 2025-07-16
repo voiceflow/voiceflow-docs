@@ -148,7 +148,7 @@ Voiceflow supports five different chunking strategies:
 
 > 🚧 Knowledge base limits
 >
-> Each project can support up to 3,000 tokens of knowledge base content. You can upload multiple files, but the combined total across all documents must stay within this limit.
+> Each project can support up to 3,000 different sources (URLs, documents, etc) of knowledge base content. You can upload multiple files, but the combined total across all documents must stay within this limit.
 
 We recommend experimenting with various combinations of chunking strategies to see which best fits your use-case.
 
