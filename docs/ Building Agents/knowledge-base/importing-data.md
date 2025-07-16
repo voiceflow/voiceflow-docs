@@ -22,11 +22,11 @@ Voiceflow supports five different data sources:
 | **Plain text**  | Paste raw content directly. Great for fast prototyping or testing.                                                                                                  |
 | **Zendesk**     | Import data from your Zendesk knowledge base. Requires Zendesk admin access.                                                                                        |
 
+On the **pro plan**, each project can support up to 3,000 different sources (URLs, documents, etc) of knowledge base content.
+
 > ℹ️ Heads up!
 >
 > Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
-
-<br />
 
 ## Refresh rate settings
 
@@ -145,10 +145,6 @@ Voiceflow supports five different chunking strategies:
     </tr>
   </tbody>
 </Table>
-
-> 🚧 Knowledge base limits
->
-> Each project can support up to 3,000 different sources (URLs, documents, etc) of knowledge base content. You can upload multiple files, but the combined total across all documents must stay within this limit.
 
 We recommend experimenting with various combinations of chunking strategies to see which best fits your use-case.
 
