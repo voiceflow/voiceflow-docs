@@ -53,10 +53,11 @@ Clearly define what you need without making it hard for the user to comply. Writ
 2. **Generation**: The LLM crafts a personalized message prompting the user to provide the correct information.
 3. **Response**: The user provides the needed input, and the conversation continues smoothly, as originally planned in your workflow.
 
-**Example**
+Here's an example of an automatic reprompt:
 
-* *Scenario*: You're capturing an `email address`, and the user says, "It's john at email dot com."
-* *Reprompt*: "It seems there's a typo in the email address. Could you please provide a valid email in the format '[example@domain.com](mailto:example@domain.com)'?"
+> **Scenario**: You're capturing an `email address`, and the user says, "It's john dot email at com."
+>
+> **Reprompt**: "It seems there's a typo in the email address. Could you please provide a valid email in the format '[example@domain.com](mailto:example@domain.com)'?"
 
 ***
 
