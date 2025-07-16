@@ -85,11 +85,11 @@ Choose how users interact with your agent
 Understand how your agent is being used
 
 <div class="home-grid">
-  <CardTile href="./chat-widget" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkoxdT412fXpt4RuYNQ8VldT29GHDUiFMj7hA0" title="Transcripts" description="Monitor past conversations" />
+  <CardTile href="./chat-widget" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkoxdT412fXpt4RuYNQ8VldT29GHDUiFMj7hA0" title="Transcripts" description="View past conversations" />
 
-  <CardTile href="./telephony" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Analytics" description="View your agent's metrics" />
+  <CardTile href="./telephony" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Analytics" description="Monitor metrics" />
 
-  <CardTile href="./custom-interfaces" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Evaluations" description="Measure agent success" />
+  <CardTile href="./custom-interfaces" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Evaluations" description="Measure agent success" />
 </div>
 
 <br />
