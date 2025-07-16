@@ -2,7 +2,7 @@
 title: Previewing Intent Classification and Improvements
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
