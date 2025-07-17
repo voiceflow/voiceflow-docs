@@ -12,35 +12,17 @@ next:
 ---
 ## Introduction
 
-The **Capture Step** in Voiceflow is a powerful tool that allows you to collect user input during a conversation. Whether you want to capture the entire user reply or extract specific entities, the Capture Step provides flexibility and control over how you gather and handle user responses.
+The Capture Step lets your assistant collect user input- either as a full response or by extracting specific entities. It gives you control over how input is handled, validated, and responded to.
 
-This guide will walk you through the features of the Capture Step, including how to:
-
-* Capture the entire user reply and save it to a variable.
-* Extract specific entities from the user's input.
-* Configure options like **No Reply** and **Listen for Other Triggers**.
-* Set up **Automatic Reprompts**, **Rules**, and **Exit Scenarios** to enhance the user experience.
-
-  ![](https://files.readme.io/add54950d0e18fbb0a52122f059cbe5b3af23ed5fae5feb5a70343994f00473d-CleanShot_2024-10-02_at_14.49.25.png)
-
-<br />
-
-***
-
-## Accessing the Capture Step
-
-1. **Open the Step Toolbar**: In your Voiceflow project, locate the step toolbar on the left side of the canvas.
-2. **Drag the Capture Step onto the Canvas**: Hover over Listen and drag the **Capture step** icon onto your workspace where you want to collect user input.
+\[ video of capture step from canvas ]
 
 ***
 
 ## Capturing the Entire User Reply
 
-### Overview
-
 When you want to capture exactly what the user says and store it for later use, you can configure the Capture Step to save the entire user reply to a variable.
 
-### Configuring to Capture Entire User Reply
+### Configuring to capture Entire User Reply
 
 1. **Select Capture Mode**: In the Capture Step editor, you'll see a toggle to choose between **Entities** and **Entire User Reply**. Select **Entire User Reply**.
 
@@ -53,78 +35,27 @@ The Capture Step offers additional options to control the user's experience:
 
 #### 1. No Reply
 
-* **Purpose**: Handles situations where the user doesn't respond within a certain timeframe.
-* **How to Enable**:
-  * Toggle **No Reply** to **ON**.
-  * **Set Timeout Duration**: Define the time (in seconds) the system should wait for a response before considering it a no-reply.
-  * **Customize Reprompt Message**: Provide a message that will be sent to the user if they don't reply in time (e.g., "Are you still there?").
+> **Purpose**: Handles situations where the user doesn't respond within a certain timeframe.
+>
+> **Behaviour**:
+>
+> * **Set Timeout Duration**: Define the time (in seconds) the system should wait for a response before considering it a no-reply.
+> * **Customize Reprompt Message**: Provide a message that will be sent to the user if they don't reply in time (e.g., "Are you still there?").
+
+<br />
 
 #### 2. Listen for Other Triggers
 
-* **Purpose**: Allows the agent to recognize and respond to intents that are outside the scope of the current Capture Step.
-* **How to Enable**:
-  * Toggle **Listen for Other Triggers** to **ON**.
-* **Behavior**:
-  * **ON**: The agent listens for other intents while waiting for the user's reply. If the user says something that matches another intent, the agent will trigger that intent.
-  * **OFF**: The agent focuses solely on capturing the user's input in this step. It won't trigger other intents until after the capture is complete.
+> **Purpose**: Allows the agent to recognize and respond to intents that are outside the scope of the current Capture Step.
+>
+> **Behavior**:
+>
+> * **ON**: The agent listens for other intents while waiting for the user's reply. If the user says something that matches another intent, the agent will trigger that intent.
+> * **OFF**: The agent focuses solely on capturing the user's input in this step. It won't trigger other intents until after the capture is complete.
 
 ***
 
-## Capturing Entities
-
-### Overview
-
-When you need to extract specific pieces of information (entities) from the user's input, you can configure the Capture Step to target those entities directly.
-
-### Configuring to Capture Entities
-
-1. **Select Capture Mode**: In the Capture Step editor, toggle to **Entities**.
-
-2. **Add Entities**:
-
-   * **Click the "+" Button**: Beside the **Entities** label, click the "+" button to add entities you want to capture.
-   * **Select Existing Entities**: Choose from the list of entities you've already defined in your Entity CMS.
-   * **Create New Entity**:
-     * If the entity you need isn't listed, select **Create New Entity** at the bottom of the dropdown.
-     * **Define the New Entity**: Provide a name and configure the entity as needed.
-
-3. **Specify Multiple Entities**:
-
-   * You can add one or multiple entities to capture in this step.
-   * The system will attempt to extract all specified entities from the user's input.
-
-### Options and Toggles
-
-Similar to capturing the entire user reply, you have additional options:
-
-#### 1. No Reply
-
-* Functions the same as described earlier, prompting the user if they don't respond within the set timeframe.
-
-#### 2. Listen for Other Triggers
-
-* Functions the same as described earlier, allowing or disallowing the agent to respond to other intents during this capture.
-
-#### 3. Automatically Reprompt
-
-* **Purpose**: Enables the system to automatically generate personalized reprompts if the user's input doesn't fulfill the entity requirements.
-* **How to Enable**:
-  * Toggle **Automatically Reprompt** to **ON**.
-* **Configuration**:
-  * **Model Settings**:
-    * **Temperature**: Controls the randomness of the AI's responses. A lower temperature means more deterministic responses.
-    * **Max Tokens**: Sets the maximum length of the AI's response.
-    * **System Prompt**: Provide context or guidelines to the AI for generating reprompts (e.g., "Please ask the user for missing information politely.").
-
-***
-
-## Rules and Exit Scenarios
-
-To enhance control over how entities are captured and how the conversation proceeds, you can define **Rules** and **Exit Scenarios** for the entity collection in your Capture Step.
-
-### 1. Rules
-
-#### Purpose
+<br />
 
 <Image align="center" src="https://files.readme.io/a978c1d1d21038e83d87716de2fc3cd492500bae021b882725c24abc663b6239-CleanShot_2024-10-02_at_14.48.32.png" />
 
@@ -249,7 +180,7 @@ You want to collect the user's **first name**, **last name**, and **email addres
 5. **Agent**: "Great, and could you provide your email address?"
 6. **User**: "I'd rather not share that."
 7. **Agent**: "No problem, we can proceed without your email."
-8. **[Conversation continues along the exit scenario path.]**
+8. **\[Conversation continues along the exit scenario path.]**
 
 ***
 
