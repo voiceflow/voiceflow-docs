@@ -28,3 +28,7 @@ go to transcripts
 show where evals are with hover
 
 if transcript is clicked on you can see if evals were successful on the sidebar
+
+<br />
+
+## Batch run on transcripts
