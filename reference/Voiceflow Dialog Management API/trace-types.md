@@ -286,7 +286,7 @@ This example trace is for a Carousel with two Cards:
 }
 ```
 
-## type: choice (button step)
+## type: choice (Button step)
 
 This trace type is returned for the following Voiceflow elements: Button Step.
 
@@ -393,9 +393,9 @@ Notes on the above example:
 
 <br />
 
-## type: choice (agent step)
+## type: choice (Agent step)
 
-In some cases—particularly when using the Agent Step—buttons returned in a choice trace may use a simpler structure where the `request.type `is `text` instead of a path ID or intent.  Based on the provided prompt, the agent may dynamically generate buttons. These generated buttons simulate raw user input rather than triggering a specific path or intent directly.
+In some cases—particularly when using the Agent Step—buttons returned in a choice trace may use a simpler structure where the `request.type `is `text` instead of a path ID or intent. If the `Buttons` toggle is enabled on the Agent step, the agent may dynamically generate buttons. These generated buttons simulate raw user input rather than triggering a specific path or intent directly.
 
 Example Trace with `request.type`: `text`:
 
