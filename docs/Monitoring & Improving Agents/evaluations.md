@@ -21,6 +21,10 @@ what settings are there when i create? (eg: can set model, this impacts credit p
 
 <br />
 
+## enabling + disabling an eval
+
+<br />
+
 ## Measuring conversation success using evaluations
 
 go to transcripts
