@@ -174,7 +174,7 @@ Understand how your agent is being used
     border-radius: 4px;
 }
 
-.tico-user-message div {
+.tico-user-message {
 	margin-top: 1em;  
 }
 
