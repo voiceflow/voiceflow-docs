@@ -24,8 +24,6 @@ metadata:
 
 ## Need help? Ask Tico!
 
-<br />
-
 <div class="tico">
   <div class="tico-tico-message">
     <img src="https://placehold.co/400x400" />
