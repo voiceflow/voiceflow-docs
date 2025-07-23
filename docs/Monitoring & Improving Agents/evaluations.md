@@ -53,10 +53,19 @@ This quick visual indicator makes it easy to scan and manage which evaluations a
 
 ## Measuring evaluation performance
 
-go to transcripts
+\[ insert video of opening up an evaluation ]
 
-show where evals are with hover
-
-if transcript is clicked on you can see if evals were successful on the sidebar
+> Reviewing evaluation performance helps you:
+>
+> * Validate metric accuracy – Make sure the evaluation is scoring transcripts the way you intended.
+> * Analyze credit consumption - Keep a close eye on how your credits are consumed for each evaluation performed.
+> * Understand model reasoning – View the model’s reasoning to see how it interpreted the conversation and applied the evaluation metric.
+> * Refine evaluation criteria – Use actual outputs to improve your prompt, retry settings, or evaluation type.
 
 ## Batch run on transcripts
+
+You can batch run evaluations on past transcripts to retroactively score past conversations. This is useful for backfilling metrics, testing new evaluations at scale, or comparing performance over time.
+
+\[ video of running evaluations ]
+
+To batch run, select multiple transcripts in the transcript view, click Run Evaluation, and choose the evaluation(s) you want to apply. Results will appear once processing is complete.
