@@ -22,16 +22,16 @@ To see a list of all request types, check out the documentation for the `data.na
 
 Examples include:
 
-* Unique users
-* Total interactions
 * Top intents
+* Total interactions
+* Unique users
 * Credits usage
 
 <br />
 
 ### 📘 Example Request and Response
 
-```json Top intents
+```json Intents
 // REQUEST body 
 
 {
@@ -71,7 +71,7 @@ Examples include:
   }
 }
 ```
-```json Total interactions
+```json Interactions
 // REQUEST body 
 
 {
@@ -120,7 +120,7 @@ Examples include:
   }
 }
 ```
-```json Unique users
+```json Users
 // REQUEST body 
 
 {
@@ -146,23 +146,82 @@ Examples include:
     "items": [
       {
         "period": "2025-06-13T18:00:00.000Z",
-        "projectID": "684c6d43ea3aff06439c1560",
+        "projectID": "62912f08e83f76001b218690",
         "environmentID": "684c6d43ea3aff06439c1561",
         "count": 6
       },
       {
         "period": "2025-07-16T23:00:00.000Z",
-        "projectID": "684c6d43ea3aff06439c1560",
+        "projectID": "62912f08e83f76001b218690",
         "environmentID": "684c6d43ea3aff06439c1561",
         "count": 1
       },
       {
         "period": "2025-07-16T17:00:00.000Z",
-        "projectID": "684c6d43ea3aff06439c1560",
+        "projectID": "62912f08e83f76001b218690",
         "environmentID": "684c6d43ea3aff06439c1561",
         "count": 1
       }
     ]
   }
 }
+```
+```json Credits
+// REQUEST body 
+
+{
+  "data": [
+    {
+      "name": "credit_usage",
+      "filter": {
+        "projectID": "62912f08e83f76001b218690",
+        "startTime": "2021-08-01T00:00:00.000Z",
+        "limit": 3
+      }
+    }
+  ]
+}
+
+// ------------------------------------------
+
+// RESPONSE body
+
+{
+  "result": {
+    "cursor": 2106,
+    "items": [
+      {
+        "period": "2025-06-27T07:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "685e43867fff32e515fcac92",
+        "diagramID": "64dbb6696a8fab0013dba194",
+        "nodeID": "67db2b51c6c175f16d898090",
+        "model": "claude-3.7-sonnet",
+        "type": "llm-input",
+        "count": 13201
+      },
+      {
+        "period": "2025-06-27T07:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "685e43867fff32e515fcac92",
+        "diagramID": "64dbb6696a8fab0013dba194",
+        "nodeID": "67db2b51c6c175f16d898090",
+        "model": "claude-3.7-sonnet",
+        "type": "llm-output",
+        "count": 308
+      },
+      {
+        "period": "2025-06-28T03:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "685e43867fff32e515fcac92",
+        "diagramID": "",
+        "nodeID": "",
+        "model": "gpt-4o-mini",
+        "type": "llm-input",
+        "count": 438
+      }
+    ]
+  }
+}
+
 ```
