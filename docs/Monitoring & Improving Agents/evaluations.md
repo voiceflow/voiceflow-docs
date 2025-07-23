@@ -5,11 +5,15 @@ hidden: true
 metadata:
   robots: index
 ---
-what are evals / when would you use them
+Evaluations are custom, automated checks that run against [Transcripts](). They allow you to detect whether specific events, phrases, or intents occurred during a conversation—making it easier to measure quality, compliance, and outcomes from your agent's interactions at scale.
 
-evals run against [Transcripts](doc:transcripts)
+> You might use Evaluations to check if:
+>
+> * The user expressed satisfaction or frustration during their conversation.
+> * The agent responded with a specific confirmation (e.g. “I’ve uploaded that for you”).
+> * The agent avoided restricted terms or phrases.
 
-callout - evals consume credits
+Evaluations run automatically on transcripts and surface pass/fail results or other structured outputs directly in the transcript view.
 
 ## Creating evaluations
 
