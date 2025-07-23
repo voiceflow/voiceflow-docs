@@ -1,5 +1,5 @@
 ---
-title: Query usage for a project
+title: Query assistant usage v2
 excerpt: Query usage for a project
 api:
   file: analytics-api-usage-v2.json
