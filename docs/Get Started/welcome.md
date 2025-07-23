@@ -201,19 +201,19 @@ Understand how your agent is being used
 }
 
 </style>
-
-<script>
-  document.getElementById('tico-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from actually submitting (page reload)
-    
-    // You can add additional logic here, like validating or processing form data
-
-    // Open Voiceflow chat
-    if (window.voiceflow && window.voiceflow.chat) {
-      window.voiceflow.chat.open();
-    } else {
-      console.warn('Voiceflow chat is not loaded');
-    }
-  });
-</script>
 `}</HTMLBlock>
+
+\<script>
+&#x20; document.getElementById('tico-form').addEventListener('submit', function(event) \{
+&#x20;   event.preventDefault(); // Prevent form from actually submitting (page reload)
+&#x20;  &#x20;
+&#x20;   // You can add additional logic here, like validating or processing form data
+
+&#x20;   // Open Voiceflow chat
+&#x20;   if (window\.voiceflow && window\.voiceflow\.chat) \{
+&#x20;     window\.voiceflow\.chat.open();
+&#x20;   } else \{
+&#x20;     console.warn('Voiceflow chat is not loaded');
+&#x20;   }
+&#x20; });
+\</script>
