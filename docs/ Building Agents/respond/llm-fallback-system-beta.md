@@ -1,5 +1,5 @@
 ---
-title: LLM Fallback (Beta)
+title: LLM Fallback
 excerpt: >-
   Maximize agent availability by configuring secondary LLMs to take over when
   primary LLMs suffer an outage.
@@ -12,10 +12,6 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 Beta Feature
->
-> This feature is in beta and is subject to change.
-
 > 📘 Teams and Enterprise Feature
 >
 > This feature is exclusive to Voiceflow workspaces with the Teams or Enterprise plan.
@@ -24,7 +20,7 @@ next:
 
 The **LLM Fallback** is a realtime monitoring system that detects potential outages from 3rd-party LLM providers (such as OpenAI) and substitutes calls to unavailable LLMs for calls to alternative LLMs.
 
-The purpose of this system is to maximize the availability of Voiceflow agents. It allows users to configure redundant, secondary models that will take over the handling of LLM-related functionality in case the main models are suffering an outage. 
+The purpose of this system is to maximize the availability of Voiceflow agents. It allows users to configure redundant, secondary models that will take over the handling of LLM-related functionality in case the main models are suffering an outage.
 
 # Usage
 
@@ -34,7 +30,7 @@ To use the LLM fallback, we must first create a **fallback configuration** to sp
 
 1. Open the **Content Management System (CMS) view** of your agent and navigate to **Settings** (red box)
 
-   <Image align="center" className="border" width="800px" border={true} src="https://files.readme.io/b02a12c87e455751f960418778adca81f91b59892909081ff859d0afed4dd6d0-1-cms.png" />
+   <Image align="center" className="border" border={true} width="800px" src="https://files.readme.io/b02a12c87e455751f960418778adca81f91b59892909081ff859d0afed4dd6d0-1-cms.png" />
 2. In Settings, navigate to **AI models**
 
    <Image align="center" className="border" border={true} src="https://files.readme.io/8983e14b111c0f32255dc268bfeecb5013a46820bd6c653575c0e3cced8ee3df-2-settings.png" />
@@ -46,7 +42,7 @@ To use the LLM fallback, we must first create a **fallback configuration** to sp
 
 Configuring a fallback configuration is straightforward. For each 3rd-party LLM provider (OpenAI, Anthropic, and Gemini), you can set a fallback model by opening the dropdown on an input in the right column and selecting a model from the list.
 
-<Image align="center" className="border" width="600px" border={true} src="https://files.readme.io/4d5b82049373d6f0a3fcb44366da0cc8f194227e78facd86a7d183c1dca0f7df-4-configuration.png" />
+<Image align="center" className="border" border={true} width="600px" src="https://files.readme.io/4d5b82049373d6f0a3fcb44366da0cc8f194227e78facd86a7d183c1dca0f7df-4-configuration.png" />
 
 As an example, in the image below, we have configured Claude 3.5 Haiku as the fallback for any OpenAI model, Gemini 1.5 Pro as the fallback for any Anthropic model, and GPT-3.5 Turbo as the fallback for any Google model.
 
@@ -78,7 +74,7 @@ Thus, as we can see, LLM fallback increases the availability of Voiceflow agents
 >
 > LLM fallback only triggers if an LLM fails for an **outage-related reason**, that is, the 3rd-party LLM provider responded with an error which Voiceflow's outage detection system classifies as an outage.
 >
-> In practice, this includes nearly all errors from LLMs, but on the rare occasion that an error is classified as a non-outage, it is treated as user error that you as the Voiceflow user need to correct. 
+> In practice, this includes nearly all errors from LLMs, but on the rare occasion that an error is classified as a non-outage, it is treated as user error that you as the Voiceflow user need to correct.
 >
 > **For non-outages, Voiceflow agents do not perform LLM fallback at all**, as the cause of the issue is not the unavailability of 3rd-party LLM providers, but instead a problem with the Voiceflow agent's design, and thus, user action is required to fix the agent as this is not an error scenario the fallback is meant to handle.
 
@@ -94,19 +90,19 @@ This fallback configuration can be interpreted as meaning the following:
 2. If any Anthropic model (Claude 3.5 - Haiku, Claude 3.5 - Sonnet, etc) suffers an outage, then fall back to Gemini 1.5 - Pro
 3. If any Google model (Gemini 1.5 Pro) suffers an outage, fall back to GPT-3.5 Turbo
 
-Note that fallbacks **cascade**, meaning that if a fallback model is itself suffering an outage, then we fallback *again* onto another model determined by the fallback configuration. This repeats until an available model is found or all fallback models are exhausted. 
+Note that fallbacks **cascade**, meaning that if a fallback model is itself suffering an outage, then we fallback *again* onto another model determined by the fallback configuration. This repeats until an available model is found or all fallback models are exhausted.
 
 For example, imagine if a Prompt step called GPT-4o (an OpenAI model), but OpenAI's *and* Anthropic services are suffering an outage. Therefore, GPT-4o has configured Claude 3.5 - Haiku to be its fallback model, but Claude 3.5 - Haiku is itself unavailable and act in place of GPT-4o. In this situation, the LLM fallback system will behave as follows:
 
 1. Detected that GPT-4o (OpenAI) is suffering an outage, try to fallback to Claude 3.5 - Haiku
 2. Detected that Claude 3.5 - Haiku (Anthropic) is suffering an outage, try to fallback to Gemini 1.5 Pro
-3. Gemini 1.5 Pro is available and will be used to generate the LLM output. 
+3. Gemini 1.5 Pro is available and will be used to generate the LLM output.
 
 In the Voiceflow Prototype Tool, you will see a debug trace reflecting this behaviour:
 
-<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/490fb44d822f7c17f5b53189be8d10fafed18e5d7b98ec8ededfcf14b0692ca2-Screenshot_2025-02-18_at_1.20.51_PM.png" />
+<Image align="center" className="border" border={true} width="300px" src="https://files.readme.io/490fb44d822f7c17f5b53189be8d10fafed18e5d7b98ec8ededfcf14b0692ca2-Screenshot_2025-02-18_at_1.20.51_PM.png" />
 
-In the highly unlikely event that *all* supported 3rd-party LLM providers are suffering simultaneous outages, cascading behaviour has the risk of putting the LLM fallback system in an infinite loop by following the fallback configuration indefinitely. 
+In the highly unlikely event that *all* supported 3rd-party LLM providers are suffering simultaneous outages, cascading behaviour has the risk of putting the LLM fallback system in an infinite loop by following the fallback configuration indefinitely.
 
 Fortunately, the LLM fallback system explicitly checks for this possibility and the fallback process will terminate if it detects that it is revisiting previously visited fallback models, preventing an infinite loop. Concretely, if we again consider a Prompt step contacting GPT-4o and assume that all LLM providers are down, the fallback system behaves as follows:
 
@@ -116,9 +112,9 @@ Fortunately, the LLM fallback system explicitly checks for this possibility and 
 4. Detected that GPT-3.5 Turbo (OpenAI) is suffering an outage, try to fallback to Claude 3.5 - Haiku
 5. Claude 3.5 - Haiku was already visited before. An infinite loop has been detected and so we abort the fallback process.
 
-In this worst-case scenario, fallback cannot help since there is nothing left to fallback to. The fallback system terminates and emits a debug trace indicating that an across-the-board outage has taken down the Voiceflow agent. 
+In this worst-case scenario, fallback cannot help since there is nothing left to fallback to. The fallback system terminates and emits a debug trace indicating that an across-the-board outage has taken down the Voiceflow agent.
 
-<Image align="center" className="border" width="300px" border={true} src="https://files.readme.io/d56fb5932a6cc7a9d9e7f9c86535cbc02105a8ad65c5c32671a3ab4e6a87d682-Screenshot_2025-02-18_at_1.16.23_PM.png" />
+<Image align="center" className="border" border={true} width="300px" src="https://files.readme.io/d56fb5932a6cc7a9d9e7f9c86535cbc02105a8ad65c5c32671a3ab4e6a87d682-Screenshot_2025-02-18_at_1.16.23_PM.png" />
 
 <br />
 
@@ -242,7 +238,7 @@ A full example response body from the DM API, which includes LLM fallback debug 
 
 # Fallback Coverage
 
-Currently, LLM fallback covers the Prompt step and Generative No Match feature. 
+Currently, LLM fallback covers the Prompt step and Generative No Match feature.
 
 Future improvements will extend the coverage of fallback to internal Voiceflow LLM calls, such as entity extraction.
 
