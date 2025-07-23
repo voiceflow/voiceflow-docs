@@ -40,7 +40,6 @@ metadata:
   </div>
 </div>
 
-
 ## Build an AI agent
 
 <div class="home-grid">
@@ -201,6 +200,20 @@ Understand how your agent is being used
   border: 1px solid #13171B;
 }
 
-
 </style>
+
+<script>
+  document.getElementById('tico-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from actually submitting (page reload)
+    
+    // You can add additional logic here, like validating or processing form data
+
+    // Open Voiceflow chat
+    if (window.voiceflow && window.voiceflow.chat) {
+      window.voiceflow.chat.open();
+    } else {
+      console.warn('Voiceflow chat is not loaded');
+    }
+  });
+</script>
 `}</HTMLBlock>
