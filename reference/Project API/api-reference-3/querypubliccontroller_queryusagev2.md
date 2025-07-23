@@ -29,6 +29,18 @@ Examples include:
 
 <br />
 
+### 📑 Pagination Description
+
+The API response supports pagination to efficiently manage and navigate through large sets of data.
+
+* **cursor**:\
+  An opaque integer or string token representing the current position in the overall dataset. This cursor can be used in subsequent API requests to fetch the next page of results. For example, when requesting the next page, the client includes this cursor to continue retrieving items after the current batch.
+* **items**:
+
+  An array containing the current page of data objects. Each item represents a record with its respective details such as period, projectID, environmentID, and other related fields.
+
+<br />
+
 ### 📘 Example Request and Response
 
 ```json Top intents
