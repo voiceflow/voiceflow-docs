@@ -18,7 +18,7 @@ name: TicoFormHome
         backgroundColor: '#53575B',
         padding: '1em',
         borderRadius: '4px',
-				width: '100%'
+        width: '100%',
       }}
     >
       Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?
@@ -30,9 +30,19 @@ name: TicoFormHome
       onSubmit={(e) => {
         e.preventDefault();
 
-        if (window.voiceflow?.chat?.open) {
+        const input = e.target.elements['tico-message'];
+        const message = input.value.trim();
+
+        if (message && window.voiceflow?.chat?.open) {
           window.voiceflow.chat.open();
-					window.voiceflow.chat.interact({"type": "launch", "payload": "test"})
+          window.voiceflow.chat.interact({
+            type: 'launch',
+            payload: message,
+          });
+
+          input.value = ''; // clear input field
+        } else if (!message) {
+          console.warn('Message is empty');
         } else {
           console.warn('Voiceflow chat is not loaded');
         }
@@ -43,6 +53,7 @@ name: TicoFormHome
       <input
         type="text"
         id="tico-message"
+        name="tico-message"
         style={{
           marginRight: '1em',
           backgroundColor: '#ECF0F4',
