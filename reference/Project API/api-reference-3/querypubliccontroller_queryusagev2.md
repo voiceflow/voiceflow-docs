@@ -12,3 +12,17 @@ With the Analytics API, you can retrieve the usage data of your conversational a
 * Assessing the performance and effectiveness of your assistant
 * Identifying areas for improvement
 * Making data-driven decisions about its development and deployment
+
+<br />
+
+## 📡 Request Types
+
+There are different types of requests that can be sent.\
+To see a list of all request types, check out the documentation for the `data.name` field below.
+
+Examples include:
+
+* Unique users
+* Total interactions
+* Top intents
+* Credits usage
