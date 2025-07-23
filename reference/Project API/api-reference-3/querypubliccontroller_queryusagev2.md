@@ -27,18 +27,9 @@ Examples include:
 * Top intents
 * Credits usage
 
-<br />
+&#x20;
 
-<br />
-
-<br />
-
-&#x20;\<details>
-&#x20;     \<summary>There's code inside this dropdown...\</summary>
-&#x20;     \<br>
-&#x20;    &#x20;
-&#x20;     This is how you add \`code\` in a dropdown:
-&#x20;     \`\`\`javascript
-&#x20;     console.log("Hello, world!");
-&#x20;     \`\`\`
-&#x20;   \</details>
+<details>
+  <summary><h1>HTML header tags can do this.</h1></summary>
+  It's true!
+</details>
