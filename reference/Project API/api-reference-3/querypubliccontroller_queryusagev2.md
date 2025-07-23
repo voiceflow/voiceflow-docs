@@ -70,7 +70,6 @@ Examples include:
     ]
   }
 }
-
 ```
 ```json Total interactions
 // REQUEST body 
@@ -120,5 +119,50 @@ Examples include:
     ]
   }
 }
+```
+```json Unique users
+// REQUEST body 
 
+{
+  "data": [
+    {
+      "name": "unique_users",
+      "filter": {
+        "projectID": "62912f08e83f76001b218690",
+        "startTime": "2021-08-01T00:00:00.000Z",
+        "limit": 3
+      }
+    }
+  ]
+}
+
+// ------------------------------------------
+
+// RESPONSE body
+
+{
+  "result": {
+    "cursor": 143,
+    "items": [
+      {
+        "period": "2025-06-13T18:00:00.000Z",
+        "projectID": "684c6d43ea3aff06439c1560",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "count": 6
+      },
+      {
+        "period": "2025-07-16T23:00:00.000Z",
+        "projectID": "684c6d43ea3aff06439c1560",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "count": 1
+      },
+      {
+        "period": "2025-07-16T17:00:00.000Z",
+        "projectID": "684c6d43ea3aff06439c1560",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "count": 1
+      }
+    ]
+  }
+}
 ```
