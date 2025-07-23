@@ -93,31 +93,32 @@ Examples include:
 // RESPONSE body
 
 {
-	"result": {
-		"cursor": 296,
-		"items": [
-			{
-				"period": "2025-06-13T18:00:00.000Z",
-				"projectID": "62912f08e83f76001b218690",
-				"environmentID": "684c6d43ea3aff06439c1561",
-				"type": "canvas-prototype",
-				"count": 18
-			},
-			{
-				"period": "2025-07-16T23:00:00.000Z",
-				"projectID": "62912f08e83f76001b218690",
-				"environmentID": "684c6d43ea3aff06439c1561",
-				"type": "dialog-management",
-				"count": 6
-			},
-			{
-				"period": "2025-07-16T17:00:00.000Z",
-				"projectID": "62912f08e83f76001b218690",
-				"environmentID": "684c6d43ea3aff06439c1561",
-				"type": "dialog-management",
-				"count": 4
-			}
-		]
-	}
+  "result": {
+    "cursor": 296,
+    "items": [
+      {
+        "period": "2025-06-13T18:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "type": "canvas-prototype",
+        "count": 18
+      },
+      {
+        "period": "2025-07-16T23:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "type": "dialog-management",
+        "count": 6
+      },
+      {
+        "period": "2025-07-16T17:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "type": "dialog-management",
+        "count": 4
+      }
+    ]
+  }
 }
+
 ```
