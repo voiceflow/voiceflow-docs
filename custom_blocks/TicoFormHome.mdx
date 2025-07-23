@@ -37,7 +37,7 @@ name: TicoFormHome
           window.voiceflow.chat.open();
           window.voiceflow.chat.interact({
             type: 'launch',
-            payload: message,
+            payload: { message },
           });
 
           input.value = ''; // clear input field
