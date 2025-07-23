@@ -172,6 +172,20 @@ Understand how your agent is being used
     background-color: #53575B;
     padding: 1em;
     border-radius: 4px;
+  }
+
+  .tico-tico-message div:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 0.219em solid transparent;
+    border-right-color: #53575B;
+    border-left: 0;
+    margin-top: -0.219em;
+    margin-left: -0.219em;
 }
 
 .tico-user-message {
