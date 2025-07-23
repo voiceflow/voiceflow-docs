@@ -31,13 +31,13 @@ name: TicoFormHome
         e.preventDefault();
 
         const input = e.target.elements['tico-message'];
-        const message = input.value.trim();
+        const message = input?.value?.trim() || null;
 
-        if (message && window.voiceflow?.chat?.open) {
+        if (message) {
           //window.voiceflow.chat.open();
 
 					// window.cleanStartTico();
-					window.searchTico(text)
+					window.searchTico(message);
 
           /*window.voiceflow.chat.interact({
             type: 'launch',
