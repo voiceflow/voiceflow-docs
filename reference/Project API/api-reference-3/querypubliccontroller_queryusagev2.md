@@ -27,7 +27,9 @@ Examples include:
 * Top intents
 * Credits usage
 
-&#x20;
+<br />
+
+### 📘 Example Request and Response
 
 ```json Top intents
 console.log('Code Tab A');
