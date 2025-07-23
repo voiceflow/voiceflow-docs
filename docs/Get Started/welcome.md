@@ -32,7 +32,7 @@ metadata:
   </div>
 
   <div class="tico-user-message">
-    <form id="tico-form">
+    <form id="tico-form" onsubmit="return handleTicoSubmit(event)">
       <input type="text" id="tico-message" />
 
       <img src="https://placehold.co/400x400" />
