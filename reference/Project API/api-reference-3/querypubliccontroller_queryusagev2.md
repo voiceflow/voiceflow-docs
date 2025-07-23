@@ -31,7 +31,7 @@ Examples include:
 
 ### 📘 Example Request and Response
 
-```json Intents
+```json Top intents
 // REQUEST body 
 
 {
@@ -71,7 +71,7 @@ Examples include:
   }
 }
 ```
-```json Interactions
+```json Total Interactions
 // REQUEST body 
 
 {
@@ -120,7 +120,7 @@ Examples include:
   }
 }
 ```
-```json Users
+```json Unique users
 // REQUEST body 
 
 {
@@ -166,7 +166,7 @@ Examples include:
   }
 }
 ```
-```json Credits
+```json Credits usage
 // REQUEST body 
 
 {
