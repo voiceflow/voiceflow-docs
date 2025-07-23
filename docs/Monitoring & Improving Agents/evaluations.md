@@ -1,5 +1,8 @@
 ---
 title: Evaluations
+excerpt: >-
+  Evaluations are a set of custom criteria you can define to determine whether
+  specific events occurred during a conversation—based on the transcript data.
 deprecated: false
 hidden: true
 metadata:
