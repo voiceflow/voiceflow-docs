@@ -22,7 +22,7 @@ To see a list of all request types, check out the documentation for the `data.na
 
 Examples include:
 
-* Top intents (top\_intents)
+* Top intents (**top\_intents**)
 * Total interactions (interactions)
 * Unique users (unique\_users)
 * Credits usage (credit\_usage)
