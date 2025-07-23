@@ -34,9 +34,11 @@ metadata:
   </div>
 
   <div class="tico-user-message">
-    <input type="text" id="tico-message" />
+    <form id="tico-form">
+      <input type="text" id="tico-message" />
 
-    <img src="https://placehold.co/400x400" />
+      <img src="https://placehold.co/400x400" />
+    </form>
   </div>
 </div>
 
