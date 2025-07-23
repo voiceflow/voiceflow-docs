@@ -26,3 +26,10 @@ Examples include:
 * Total interactions
 * Top intents
 * Credits usage
+
+<br />
+
+<details open>
+  <summary>Hello</summary>
+  World!
+</details>
