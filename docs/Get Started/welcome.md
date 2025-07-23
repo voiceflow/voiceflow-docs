@@ -22,27 +22,38 @@ metadata:
 
 <br />
 
-## Need help? Ask Tico!
+\## Need help? Ask Tico!
 
-<br />
+\<div class="tico">
+&#x20; \<div class="tico-tico-message">
+&#x20;   \<img src="https\://placehold.co/400x400" />
 
-<div class="tico">
-  <div class="tico-tico-message">
-    <img src="https://placehold.co/400x400" />
+&#x20;   \<div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?\</div>
+&#x20; \</div>
 
-    <div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?</div>
-  </div>
+&#x20; \<div class="tico-user-message">
+&#x20;   \<form id="tico-form">
+&#x20;     \<input type="text" id="tico-message" />
 
-  <div class="tico-user-message">
-    <form id="tico-form">
-      <input type="text" id="tico-message" />
+&#x20;     \<img src="https\://placehold.co/400x400" />
+&#x20;   \</form>
+&#x20; \</div>
+\</div>
 
-      <img src="https://placehold.co/400x400" />
-    </form>
-  </div>
-</div>
+\<script>
+&#x20; document.getElementById('tico-form').addEventListener('submit', function(event) \{
+&#x20;   event.preventDefault(); // Prevent form from actually submitting (page reload)
+&#x20;  &#x20;
+&#x20;   // You can add additional logic here, like validating or processing form data
 
-<br />
+&#x20;   // Open Voiceflow chat
+&#x20;   if (window\.voiceflow && window\.voiceflow\.chat) \{
+&#x20;     window\.voiceflow\.chat.open();
+&#x20;   } else \{
+&#x20;     console.warn('Voiceflow chat is not loaded');
+&#x20;   }
+&#x20; });
+\</script>
 
 ## Build an AI agent
 
