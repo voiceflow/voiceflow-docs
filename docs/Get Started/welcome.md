@@ -40,6 +40,8 @@ metadata:
   </div>
 </div>
 
+<br />
+
 ## Build an AI agent
 
 <div class="home-grid">
