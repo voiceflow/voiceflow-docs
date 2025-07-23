@@ -35,7 +35,7 @@ Examples include:
 
 <details>
   <summary>
-    [Here is a nicely formatted hyperlink!](https://www.youtube.com/watch?time_continue=1\&v=eBGIQ7ZuuiU\&feature=emb_title)
+    Hello
   </summary>
 
   And it rolls well!
