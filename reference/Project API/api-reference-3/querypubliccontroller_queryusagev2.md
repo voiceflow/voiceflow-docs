@@ -43,9 +43,14 @@ The API response supports pagination to efficiently manage and navigate through 
   <summary>How Pagination Works</summary>
 
   <ul>
-    <li>Coffee</li>
-    <li>Tea</li>
-    <li>Milk</li>
+    <ol>
+      <li><strong>Initial Request:</strong>
+      The client makes a request without a cursor or with a starting cursor value. The server returns a subset of the dataset (a "page") along with a cursor pointing to the next page.</li>
+      <li><strong>Subsequent Requests:</strong>
+      To retrieve the next page, the client sends a new request including the <code>cursor</code> value from the previous response. The server responds with the next subset of items and an updated cursor.</li>
+      <li><strong>End of Data:</strong>
+      When the client reaches the end of the dataset, the server may return an empty <code>items</code> array or omit the <code>cursor</code> value, indicating no further data is available.</li>
+    </ol>
   </ul>
 </details>
 
