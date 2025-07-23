@@ -72,3 +72,5 @@ Examples include:
 }
 
 ```
+```json Total interactions
+```
