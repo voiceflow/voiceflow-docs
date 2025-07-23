@@ -53,22 +53,22 @@ Examples include:
 // RESPONSE body
 
 {
-	"result": {
-		"intents": [
-			{
-				"name": "info_personal",
-				"count": 152
-			},
-			{
-				"name": "info_company",
-				"count": 101
-			},
-			{
-				"name": "info_name",
-				"count": 80
-			}
-		]
-	}
+  "result": {
+    "intents": [
+      {
+        "name": "info_personal",
+        "count": 152
+      },
+      {
+        "name": "info_company",
+        "count": 101
+      },
+      {
+        "name": "info_name",
+        "count": 80
+      }
+    ]
+  }
 }
 
 ```
