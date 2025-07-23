@@ -24,21 +24,7 @@ metadata:
 
 ## Need help? Ask Tico!
 
-<div class="tico">
-  <div class="tico-tico-message">
-    <img src="https://placehold.co/400x400" />
-
-    <div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?</div>
-  </div>
-
-  <div class="tico-user-message">
-    <form id="tico-form" onsubmit="return handleTicoSubmit(event)">
-      <input type="text" id="tico-message" />
-
-      <img src="https://placehold.co/400x400" />
-    </form>
-  </div>
-</div>
+<TicoFormHome />
 
 <br />
 
