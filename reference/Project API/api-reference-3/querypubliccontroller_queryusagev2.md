@@ -29,7 +29,6 @@ Examples include:
 
 &#x20;
 
-<details>
-  <summary><h1>HTML header tags can do this.</h1></summary>
-  It's true!
-</details>
+```javascript I'm A tab
+console.log('Code Tab A');
+```
