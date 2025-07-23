@@ -15,7 +15,7 @@ With the Analytics API, you can retrieve the usage data of your conversational a
 
 <br />
 
-## 📡 Request Types
+## 📋 Request Types
 
 There are different types of requests that can be sent.\
 To see a list of all request types, check out the documentation for the `data.name` field below.
