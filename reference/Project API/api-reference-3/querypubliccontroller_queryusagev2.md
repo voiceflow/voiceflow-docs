@@ -5,11 +5,11 @@ api:
   operationId: QueryPublicController_queryUsageV2
 hidden: true
 ---
-<details>
-  <summary><strong>Top Intents</strong></summary>
-</details>
-
-<br />
-
+```
+```
+```
+```
+```
+```
 ```
 ```
