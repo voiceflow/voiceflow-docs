@@ -33,10 +33,6 @@ Examples include:
 
 <br />
 
-<details>
-  <summary>
-    Hello
-  </summary>
-
-  And it rolls well!
-</details>
+\<details>\<summary>Hello\</summary>
+&#x20; And it rolls well!
+\</details>
