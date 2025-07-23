@@ -5,7 +5,7 @@ api:
   operationId: QueryPublicController_queryUsageV2
 hidden: true
 ---
-## Analytics API Overview
+## 📊 Analytics API Overview
 
 With the Analytics API, you can retrieve the usage data of your conversational assistant. This data can be used to understand how your assistant is being used, such as the number of conversations started, messages sent, and unique users. This information can be valuable for:
 
