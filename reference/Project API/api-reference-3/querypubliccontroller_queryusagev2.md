@@ -256,6 +256,6 @@ The API response supports pagination to efficiently manage and navigate through 
 
 ```
 
-#### \*Period field description
+### `Period` field
 
 Specifies the timestamp representing the start of the time interval for which the data item is relevant. This field indicates the exact period or time window associated with the recorded data, typically in UTC
