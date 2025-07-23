@@ -29,6 +29,6 @@ Examples include:
 
 &#x20;
 
-```javascript I'm A tab
+```json Top intents
 console.log('Code Tab A');
 ```
