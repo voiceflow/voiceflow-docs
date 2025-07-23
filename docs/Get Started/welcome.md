@@ -20,7 +20,11 @@ metadata:
   </Column>
 </Columns>
 
-<br />
+## Need help? Ask Tico!
+
+<div>
+  <input type="text" id="tico" />
+</div>
 
 ## Build an AI agent
 
