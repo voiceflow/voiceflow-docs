@@ -27,7 +27,7 @@ Examples include:
 * Top intents
 * Credits usage
 
-<details open Hello>
+<details>
   <summary>Hello</summary>
   World!
 </details>
