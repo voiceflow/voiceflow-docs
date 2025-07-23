@@ -29,7 +29,6 @@ name: TicoFormHome
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        alert('Form submitted!');
 
         if (window.voiceflow?.chat?.open) {
           window.voiceflow.chat.open();
