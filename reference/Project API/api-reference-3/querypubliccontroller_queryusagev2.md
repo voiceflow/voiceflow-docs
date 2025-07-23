@@ -5,8 +5,10 @@ api:
   operationId: QueryPublicController_queryUsageV2
 hidden: true
 ---
-\<details>
-\<summary>How do I dropdown?\</summary>
-\<br>
-This is how you dropdown.
-\</details>
+## Analytics API Overview
+
+With the Analytics API, you can retrieve the usage data of your conversational assistant. This data can be used to understand how your assistant is being used, such as the number of conversations started, messages sent, and unique users. This information can be valuable for:
+
+* Assessing the performance and effectiveness of your assistant
+* Identifying areas for improvement
+* Making data-driven decisions about its development and deployment
