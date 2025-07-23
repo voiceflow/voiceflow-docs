@@ -1,77 +1,67 @@
 ---
 name: TicoFormHome
 ---
-export const TicoFormHome = () => {
-  return (
-    <>
-      <div className="tico">
-        <div className="tico-tico-message">
-          <img src="https://placehold.co/400x400" alt="Tico bot" />
-          <div>
-            Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?
-          </div>
-        </div>
+<div style={{ fontFamily: 'sans-serif' }}>
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <img
+      src="https://placehold.co/400x400"
+      style={{
+        width: '3em',
+        borderRadius: '50%',
+        display: 'inline-block',
+      }}
+    />
+    <div
+      style={{
+        display: 'inline-block',
+        marginLeft: '1em',
+        backgroundColor: '#53575B',
+        padding: '1em',
+        borderRadius: '4px',
+      }}
+    >
+      Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?
+    </div>
+  </div>
 
-        <div className="tico-user-message">
-          <form id="tico-form">
-            <input type="text" id="tico-message" placeholder="Ask me something..." />
-            <img src="https://placehold.co/400x400" alt="User avatar" />
-          </form>
-        </div>
-      </div>
+  <div style={{ marginTop: '1em' }}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        alert('Form submitted!');
 
-      <style>{`
-        .tico img {
-          width: 3em;
-          border-radius: 50%;
-          display: inline-block;
+        if (window.voiceflow?.chat?.open) {
+          window.voiceflow.chat.open();
+        } else {
+          console.warn('Voiceflow chat is not loaded');
         }
 
-        .tico-tico-message {
-          position: relative;
-          margin-bottom: 1em;
-        }
-
-        .tico-tico-message div {
-          display: inline-block;
-          margin-left: 1em;
-          background-color: #53575B;
-          padding: 1em;
-          border-radius: 4px;
-          position: relative;
-          color: white;
-        }
-
-        .tico-tico-message div:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 50%;
-          width: 0;
-          height: 0;
-          border: 0.219em solid transparent;
-          border-right-color: #53575B;
-          border-left: 0;
-          margin-top: -0.219em;
-          margin-left: -0.219em;
-        }
-
-        .tico-user-message {
-          margin-top: 1em;
-        }
-
-        .tico-user-message input {
-          margin-right: 1em;
-          background-color: #ECF0F4;
-          border-radius: 4px;
-          width: calc(100% - 5.5em);
-          padding: 0.7em;
-          color: #202428;
-          border: 1px solid #13171B;
-        }
-      `}</style>
-    </>
-  );
-};
-
+        return false;
+      }}
+      style={{ display: 'flex', alignItems: 'center' }}
+    >
+      <input
+        type="text"
+        id="tico-message"
+        style={{
+          marginRight: '1em',
+          backgroundColor: '#ECF0F4',
+          borderRadius: '4px',
+          width: 'calc(100% - 5.5em)',
+          padding: '0.7em',
+          color: '#202428',
+          border: '1px solid #13171B',
+        }}
+      />
+      <img
+        src="https://placehold.co/400x400"
+        style={{
+          width: '3em',
+          borderRadius: '50%',
+          display: 'inline-block',
+        }}
+      />
+    </form>
+  </div>
+</div>
 <TicoFormHome />
