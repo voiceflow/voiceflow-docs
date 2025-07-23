@@ -28,11 +28,11 @@ metadata:
 <div class="tico">
   <div class="tico-tico-message">
     <img src="https://placehold.co/400x400" />
-    <div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help</div>
+    <div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?</div>
 </div>
 	<div class="tico-user-message">
     <input type="text" id="tico-message" />
-  	<img src="https://placehold.co/400x400" />>
+  	<img src="https://placehold.co/400x400" />
    </div>
 </div>
 
