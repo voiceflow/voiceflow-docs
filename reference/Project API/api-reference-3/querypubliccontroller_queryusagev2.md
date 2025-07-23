@@ -50,6 +50,13 @@ The API response supports pagination to efficiently manage and navigate through 
     <li><strong>End of Data:</strong>
     When the client reaches the end of the dataset, the server may return an empty <code>items</code> array or omit the <code>cursor</code> value, indicating no further data is available.</li>
   </ul>
+
+  <h4>Example Fields:</h4>
+
+  <ul>
+    <li><code>cursor: 2106</code> — Current pagination token indicating the position for the next data fetch.</li>
+    <li><code>items</code> — List of data entries corresponding to the current page.</li>
+  </ul>
 </details>
 
 ### 📘 Example Request and Response
