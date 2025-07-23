@@ -39,9 +39,17 @@ The API response supports pagination to efficiently manage and navigate through 
 
   An array containing the current page of data objects. Each item represents a record with its respective details such as period, projectID, environmentID, and other related fields.
 
-<details>
-  <summary>How Pagination Works:</summary>
-</details>
+\<details>
+&#x20; \<summary>How Pagination Works:\</summary>
+\<ol>
+&#x20;   \<li>\<strong>Initial Request:\</strong>\<br>
+&#x20;       The client makes a request without a cursor or with a starting cursor value. The server returns a subset of the dataset (a "page") along with a cursor pointing to the next page.\</li>
+&#x20;   \<li>\<strong>Subsequent Requests:\</strong>\<br>
+&#x20;       To retrieve the next page, the client sends a new request including the \<code>cursor\</code> value from the previous response. The server responds with the next subset of items and an updated cursor.\</li>
+&#x20;   \<li>\<strong>End of Data:\</strong>\<br>
+&#x20;       When the client reaches the end of the dataset, the server may return an empty \<code>items\</code> array or omit the \<code>cursor\</code> value, indicating no further data is available.\</li>
+&#x20; \</ol>
+\</details>
 
 ### 📘 Example Request and Response
 
