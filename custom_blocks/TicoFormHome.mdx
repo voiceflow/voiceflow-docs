@@ -32,6 +32,7 @@ name: TicoFormHome
 
         if (window.voiceflow?.chat?.open) {
           window.voiceflow.chat.open();
+					window.voiceflow.chat.interact({"type": "launch", "payload": "test"})
         } else {
           console.warn('Voiceflow chat is not loaded');
         }
