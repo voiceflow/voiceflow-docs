@@ -227,6 +227,8 @@ Examples include:
 ```
 
 <details>
+  <summary>Want to ruin the surprise?</summary>
+
   ```json Top intents
   // REQUEST body 
 
