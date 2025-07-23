@@ -20,11 +20,22 @@ metadata:
   </Column>
 </Columns>
 
+<br />
+
 ## Need help? Ask Tico!
 
-<div>
-  <input type="text" id="tico" />
-</div>
+\<div class="tico">
+&#x20; \<div class="tico-tico-message">
+&#x20;   \<img src="https\://placehold.co/600x400" />
+&#x20;   \<div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help
+&#x9;\</div>
+&#x9;\<div class="tico-user-message">
+&#x20;   \<input type="text" id="tico-message" />
+&#x9;	\<img src="https\://placehold.co/600x400" />
+&#x9;\</div>
+\</div>
+
+<br />
 
 ## Build an AI agent
 
@@ -141,5 +152,10 @@ Understand how your agent is being used
     font-weight: 600;
     font-size: 1.05em;
   }
+  
+/* Tico on home */
+
+
+
 </style>
 `}</HTMLBlock>
