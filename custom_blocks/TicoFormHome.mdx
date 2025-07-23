@@ -34,17 +34,16 @@ name: TicoFormHome
         const message = input?.value?.trim() || null;
 
         if (message) {
-          //window.voiceflow.chat.open();
-
-					// window.cleanStartTico();
-					window.searchTico(message);
+          window.cleanStartTico();
+					setTimeout(() => {
+            window.searchTico(message);
+          }, 1500);
 
           /*window.voiceflow.chat.interact({
             type: 'launch',
             payload: { message: message },
           });*/
 					
-
           input.value = ''; // clear input field
         } else if (!message) {
           console.warn('Message is empty');
