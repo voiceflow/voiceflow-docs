@@ -35,12 +35,18 @@ name: TicoFormHome
 
         if (message && window.voiceflow?.chat?.open) {
           //window.voiceflow.chat.open();
-					console.log('Message', message)
-          window.voiceflow.chat.interact({
+          console.log('Message', message)
+					window.cleanStartTico();
+					window.voiceflow.chat.interact({
+            type: 'text',
+            payload: message
+          });
+
+          /*window.voiceflow.chat.interact({
             type: 'launch',
             payload: { message: message },
-          });
-					window.showTico();
+          });*/
+					
 
           input.value = ''; // clear input field
         } else if (!message) {
