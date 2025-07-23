@@ -25,17 +25,20 @@ metadata:
 ## Need help? Ask Tico!
 
 <br />
+
 <div class="tico">
   <div class="tico-tico-message">
     <img src="https://placehold.co/400x400" />
-    <div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?</div>
-</div>
-	<div class="tico-user-message">
-    <input type="text" id="tico-message" />
-  	<img src="https://placehold.co/400x400" />
-   </div>
-</div>
 
+    <div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help?</div>
+  </div>
+
+  <div class="tico-user-message">
+    <input type="text" id="tico-message" />
+
+    <img src="https://placehold.co/400x400" />
+  </div>
+</div>
 
 <br />
 
@@ -156,7 +159,34 @@ Understand how your agent is being used
   }
   
 /* Tico on home */
+.tico img {
+  width: 3em;
+  border-radius: 50%;
+  display: inline-block;
 
+}
+  
+.tico-tico-message div {
+    display: inline-block;
+    margin-left: 1em;
+    background-color: #53575B;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+.tico-user-message div {
+	margin-top: 1em;  
+}
+
+.tico-user-message input {
+  margin-right: 1em;
+  background-color: #ECF0F4;
+  border-radius: 4px;
+  width: calc(100% - 5.5em);
+  padding: 0.7em;
+  color: #202428;
+  border: 1px solid #13171B;
+}
 
 
 </style>
