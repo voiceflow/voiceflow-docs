@@ -1,6 +1,6 @@
 ---
 title: Transcripts
-excerpt: ''
+excerpt: Record and analyze conversations between agents and users.
 deprecated: false
 hidden: true
 metadata:
@@ -23,7 +23,9 @@ Transcripts are valuable for:
 
 \[ insert video of navigating to transcripts ]
 
-> ⚠️ Ensure transcripts are toggled on!
+> ⚠️ Ensure audio recordings are toggled on!
+>
+> Audio recordings need to be enabled to retrieve audio recordings
 
 ## Analyzing transcripts
 
