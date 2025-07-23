@@ -32,7 +32,7 @@ Examples include:
 ### 📘 Example Request and Response
 
 ```json Top intents
-// REQUEST body
+// REQUEST body -------------- 
 
 {
   "data": [
