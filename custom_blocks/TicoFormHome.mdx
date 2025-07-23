@@ -37,10 +37,7 @@ name: TicoFormHome
           //window.voiceflow.chat.open();
           console.log('Message', message)
 					window.cleanStartTico();
-					window.voiceflow.chat.interact({
-            type: 'text',
-            payload: message
-          });
+					window.searchTico(text)
 
           /*window.voiceflow.chat.interact({
             type: 'launch',
