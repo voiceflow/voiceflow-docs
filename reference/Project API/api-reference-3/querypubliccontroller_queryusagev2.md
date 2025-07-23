@@ -27,9 +27,8 @@ Examples include:
 * Top intents
 * Credits usage
 
-Hello
+<br />
 
-<details>
-  <summary>Hello</summary>
-  World!
-</details>
+\<details>\<summary>Does not work\</summary>
+\[hi]\(https\://hello.ca)
+\</details>
