@@ -20,9 +20,11 @@ Evaluations run automatically on transcripts and surface pass/fail results or ot
 
 ## Creating evaluations
 
-show + tell me how
+\[ video of navigating from workflow to evaluations ]
 
-what types do we support?
+Evaluations can be created in the **Measure** section of Voiceflow creator. Evaluations can return three types of results: **binary**, **text** or **rating**. Binary results provide a simple yes/no outcome—useful for checking whether a specific event occurred—while text results return a freeform string, often used for summaries, labels, or more descriptive feedback. Rating results provide a numerical value between a given range.
+
+<br />
 
 what settings are there when i create? (eg: can set model, this impacts credit pricing)
 
