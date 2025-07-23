@@ -27,15 +27,14 @@ metadata:
 \<div class="tico">
 &#x20; \<div class="tico-tico-message">
 &#x20;   \<img src="https\://placehold.co/600x400" />
-&#x20;   \<div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help
-&#x9;\</div>
+&#x20;   \<div>Hi, I'm Tico! I can answer questions about Voiceflow and point you towards docs. How can I help\</div>	\</div>
 &#x9;\<div class="tico-user-message">
 &#x20;   \<input type="text" id="tico-message" />
-&#x9;	\<img src="https\://placehold.co/600x400" />
-&#x9;\</div>
+&#x20; 	\<img src="https\://placehold.co/600x400" />>
+&#x20;  \</div>
 \</div>
 
-<br />
+
 
 ## Build an AI agent
 
