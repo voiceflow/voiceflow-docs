@@ -39,7 +39,9 @@ The API response supports pagination to efficiently manage and navigate through 
 
   An array containing the current page of data objects. Each item represents a record with its respective details such as period, projectID, environmentID, and other related fields.
 
-<br />
+<details>
+  <summary>How Pagination Works:</summary>
+</details>
 
 ### 📘 Example Request and Response
 
