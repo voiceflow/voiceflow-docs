@@ -42,21 +42,6 @@ The Document API offers extensive capabilities for managing various document typ
   * Enables flexible management of documents with options for pagination, filtering, and handling documents in bulk.
   * Provides robust support for tabular data, allowing users to upload structured datasets with searchable and metadata fields for enhanced query capabilities.
 
-#### 3. **Tags API**
-
-The Tags API is designed for managing tags that are associated with Knowledge Base documents. Tags help categorize and filter documents, improving the accuracy and relevance of query responses.
-
-* **Endpoints**:
-  * `/v3alpha/knowledge-base/tags` (POST, GET) - Creates a new tag or retrieves a list of all tags.
-  * `/v3alpha/knowledge-base/tags/{tagID}` (GET, DELETE, PATCH) - Manages a specific tag by its ID (retrieve, update, or delete).
-  * `/v3alpha/knowledge-base/docs/{documentID}/tags/attach` (POST) - Attaches tags to a specific document.
-  * `/v3alpha/knowledge-base/docs/{documentID}/tags/detach` (POST) - Detaches tags from a specific document.
-* **Base URL**: `https://api.voiceflow.com`
-* **Features**:
-  * Facilitates dynamic tagging of documents for enhanced categorization and retrieval.
-  * Supports attaching and detaching tags to and from documents for flexible management.
-  * Allows for the retrieval and updating of tag labels, providing greater control over document categorization.
-
 ### Authentication
 
 All requests to the Knowledge Base APIs must be authenticated using a Dialog Manager API Key. The API Key can be obtained from the Integration tab in the Voiceflow project settings.
