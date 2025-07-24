@@ -1,8 +1,8 @@
 ---
 title: Evaluations
 excerpt: >-
-  Evaluations are a set of custom criteria you can define to determine whether
-  specific events occurred during a conversation—based on the transcript data.
+  Evaluations are a set of criteria to determine whether specific events
+  occurred during a conversation.
 deprecated: false
 hidden: true
 metadata:
@@ -44,7 +44,7 @@ If you want to *disable* an evaluation, simply click into the evaluation and tog
 
 You can also identify the status of an evaluation at a glance:
 
-\[ insert picture ]
+\[ insert picture ] \[ ask for feedback here ]
 
 * **Enabled** evaluations are marked with a green bar on the left side of the row.
 * **Disabled** evaluations display a grey bar instead.
