@@ -77,6 +77,12 @@ next:
   </tbody>
 </Table>
 
+> 👨‍💻 Tags API has been deprecated
+>
+> Effective July 2025, Tags API is no longer supported. To replace tag functionality, you can now use metadata when uploading files.
+>
+> <Image align="center" className="border" border={true} src="https://files.readme.io/8c376a1b4c22854fcaca831ade806d8f6645f69b96adce85d499fca0c4801d56-image.png" />
+
 ## Example
 
 ### Sample Request
@@ -116,3 +122,5 @@ next:
 		}
 }
 ```
+
+###
