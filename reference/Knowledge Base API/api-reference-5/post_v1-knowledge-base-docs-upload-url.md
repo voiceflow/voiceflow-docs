@@ -77,6 +77,8 @@ next:
   </tbody>
 </Table>
 
+(include callout for tags, remove img, legacy support, subject to change)
+
 ## Example
 
 ### Sample Request
