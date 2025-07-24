@@ -25,7 +25,9 @@ Transcripts are valuable for:
 
 > ⚠️ Ensure audio recordings are toggled on!
 >
-> Audio recordings need to be enabled to retrieve audio recordings
+> Call recordings need to be enabled in **transcript settings** to retrieve audio files for a conversation's transcript.
+>
+> <Image align="center" className="border" border={true} src="https://files.readme.io/961b89bcfedfc25e753ba2f3fd94184b788cf78057a211fbb883b60799f33708-CleanShot_2025-07-24_at_12.33.322x.png" />
 
 ## Analyzing transcripts
 
