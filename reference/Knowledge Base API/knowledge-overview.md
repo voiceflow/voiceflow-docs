@@ -30,10 +30,10 @@ The Query API allows users to perform searches within the Voiceflow Knowledge Ba
 The Document API offers extensive capabilities for managing various document types within the Knowledge Base. It supports uploading, replacing, deleting, and retrieving documents, including both unstructured and structured data such as tables.
 
 * **Endpoints**:
-  * `/v3alpha/knowledge-base/docs/upload` (POST) - Uploads a new document (excluding type "url").
-  * `/v3alpha/knowledge-base/docs/{documentID}` (GET, DELETE) - Retrieves or deletes a document by its ID.
-  * `/v3alpha/knowledge-base/docs/{documentID}/upload` (PUT) - Replaces an existing document by its ID.
-  * `/v3alpha/knowledge-base/docs/upload` (POST) - Uploads a document of type "url".
+  * `/v1/knowledge-base/docs/upload` (POST) - Uploads a new document (excluding type "url").
+  * `/v1/knowledge-base/docs/{documentID}` (GET, DELETE) - Retrieves or deletes a document by its ID.
+  * `/v1/knowledge-base/docs/{documentID}/upload` (PUT) - Replaces an existing document by its ID.
+  * `/v1/knowledge-base/docs/upload` (POST) - Uploads a document of type "url".
   * **Tabular Data Support**: `/v1/knowledge-base/docs/upload/table` (POST) - Uploads new table data to the Knowledge Base. This endpoint supports fully customizable fields, including various data types such as string, number, array, or object.
 * **Base URL**: `https://api.voiceflow.com`
 * **Features**:
