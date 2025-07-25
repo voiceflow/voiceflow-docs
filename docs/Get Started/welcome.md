@@ -12,7 +12,7 @@ metadata:
 ---
 <TicoFormHome />
 
-## Featured
+<br />
 
 <Columns layout="auto">
   <Column>
