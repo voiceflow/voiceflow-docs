@@ -104,9 +104,9 @@ Understand how your agent is being used
 
 ## Developer resources
 
-<br />
-
 Integrate agent building and testing into your existing workflows
+
+<br />
 
 <div class="home-grid">
   <div>
