@@ -102,9 +102,9 @@ Understand how your agent is being used
 
 <br />
 
-## Developer tools
+## Developer resources
 
-﻿
+### Developer Tools
 
 <div class="home-grid">
   <CardTile href="./transcripts" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkoxdT412fXpt4RuYNQ8VldT29GHDUiFMj7hA0" title="Transcripts" description="View past conversations" />
@@ -113,6 +113,10 @@ Understand how your agent is being used
 
   <CardTile href="./evaluations" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Evaluations" description="Measure agent success" />
 </div>
+
+### APIs
+
+<br />
 
 <br />
 
