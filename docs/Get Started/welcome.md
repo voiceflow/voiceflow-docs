@@ -14,10 +14,6 @@ metadata:
   <Column>
     <FeaturedCard header="Getting Started with Custom Components" />
   </Column>
-
-  <Column>
-    <FeaturedCard header="Getting Started with Custom Components" />
-  </Column>
 </Columns>
 
 <br />
