@@ -1,9 +1,10 @@
 ---
 name: TicoFormHome
 ---
-<div>
-  <div style={{ display: 'flex', alignItems: 'center' }}>
+<div className="tico-wrapper">
+  <div className="tico-header" style={{ display: 'flex', alignItems: 'center' }}>
     <img
+      className="tico-avatar"
       src="https://files.readme.io/8d26c8fc508d0f9b430f56abbf3166b0e2ba373ff6c68ee3e8a6721fe5963dc8-Frame_48095775.png"
       style={{
         width: '3em',
@@ -12,6 +13,7 @@ name: TicoFormHome
       }}
     />
     <div
+      className="tico-bubble"
       style={{
         display: 'inline-block',
         marginLeft: '1em',
@@ -21,12 +23,13 @@ name: TicoFormHome
         width: '100%',
       }}
     >
-      <p style={{marginBottom: '0'}}>Hi, I'm Tico! 👋 Ask me questions about Voiceflow and I'll find the answers for you!</p>
+      <p style={{ marginBottom: '0' }}>Hi, I'm Tico! 👋 Ask me questions about Voiceflow and I'll find the answers for you!</p>
     </div>
   </div>
 
-  <div style={{ marginTop: '1em' }}>
+  <div className="tico-form-wrapper" style={{ marginTop: '1em' }}>
     <form
+      className="tico-form"
       onSubmit={(e) => {
         e.preventDefault();
 
@@ -49,8 +52,9 @@ name: TicoFormHome
       }}
       style={{ display: 'flex', alignItems: 'center', gap: '1em' }}
     >
-      <div style={{ position: 'relative', width: '100%' }}>
+      <div className="tico-input-wrapper" style={{ position: 'relative', width: '100%' }}>
         <input
+          className="tico-input"
           type="text"
           id="tico-message"
           name="tico-message"
@@ -59,7 +63,7 @@ name: TicoFormHome
             backgroundColor: '#ECF0F4',
             borderRadius: '6px',
             width: '100%',
-            padding: '0.7em 4em 0.7em 1em', // extra right padding for the button
+            padding: '0.7em 4em 0.7em 1em',
             color: '#202428',
             border: '1px solid #13171B',
             fontSize: '1em',
@@ -68,6 +72,7 @@ name: TicoFormHome
           }}
         />
         <button
+          className="tico-submit"
           type="submit"
           style={{
             position: 'absolute',
@@ -87,10 +92,11 @@ name: TicoFormHome
             justifyContent: 'center',
           }}
         >
-          <p style={{marginBottom: '0'}}>Send</p>
+          <p style={{ marginBottom: '0' }}>Send</p>
         </button>
       </div>
       <img
+        className="tico-avatar-secondary"
         src="https://files.readme.io/fd68b8868d6a64767d905db825614801e75313602a00b7d664618dec2b22c153-Frame_48095776.png"
         style={{
           width: '3em',
@@ -101,4 +107,5 @@ name: TicoFormHome
     </form>
   </div>
 </div>
+
 <TicoFormHome />
