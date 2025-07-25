@@ -124,11 +124,11 @@ Integrate agent building and testing into your existing workflows
 
     Build native integrations
 
-    <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Dialogue manager API" description="Have conversations with an agent" />
+    <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkte1kJacql98M6riPKymkZ4CSD0cowfj1JRGv" title="Dialogue manager API" description="Have conversations with an agent" />
 
-    <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Knowledge base API" description="Update and query the KB" />
+    <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkClnikbHuvtGsr4cYROXUqI3kPEyehaWzFBD5" title="Knowledge base API" description="Update and query the KB" />
 
-    <CardTile href="../reference/fetchtranscripts#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Transcripts API" description="Pull metrics about your agent" />
+    <CardTile href="../reference/fetchtranscripts#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkcle7KEWO3kxzNPJY8h1HQ4a5OWBdVwECqnbI" title="Transcripts API" description="Pull metrics about your agent" />
   </div>
 
   <div>
@@ -136,7 +136,7 @@ Integrate agent building and testing into your existing workflows
 
     Build native integrations
 
-    <CardTile href="../reference/call-events#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Call Events" description="Run actions when an event happens" />
+    <CardTile href="../reference/call-events#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYktdMqgwycql98M6riPKymkZ4CSD0cowfj1JRG" title="Call events" description="Run actions when an event happens" />
   </div>
 </div>
 
