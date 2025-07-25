@@ -10,11 +10,7 @@ metadata:
   description: ''
   robots: index
 ---
-## Need help? Ask Tico!
-
 <TicoFormHome />
-
-<br />
 
 ## Build an AI agent
 
