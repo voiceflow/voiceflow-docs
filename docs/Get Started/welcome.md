@@ -98,7 +98,7 @@ Understand how your agent is being used
 
 <div class="home-grid">
   <div>
-    ### Developer Tools
+    ### Developer tools
 
     Integrate with existing workflows
 
