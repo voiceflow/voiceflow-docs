@@ -134,7 +134,7 @@ Integrate agent building and testing into your existing workflows
   <div>
     ### Webhooks
 
-    Build native integrations
+    Automatically run actions
 
     <CardTile href="../reference/call-events#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYktdMqgwycql98M6riPKymkZ4CSD0cowfj1JRG" title="Call events" description="Run actions when an event happens" />
   </div>
