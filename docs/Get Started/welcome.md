@@ -16,7 +16,7 @@ metadata:
   </Column>
 
   <Column>
-    <NewFeaturePromo header="testing" />
+    <NewFeaturePromo />
   </Column>
 </Columns>
 
