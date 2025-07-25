@@ -111,7 +111,7 @@ Integrate agent building and testing into your existing workflows.
 <div class="home-grid">
   <CardTile href="./voiceflow-cli" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkHYpySvBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Voiceflow CLI" description="Manage agents from your terminal" />
 
-  <CardTile href="./voiceflow-test-platform" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkde8At3Glpu1oeO8lNrvZq7mJiBcVy0XgAjEb" title="Test Platform" description="Test your agents at scale" />
+  <CardTile href="./voiceflow-test-platform" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkXFpGyosk4Bgnhz702L3ZyYAeR65DTWfEioxU" title="Test Platform" description="Test your agents at scale" />
 </div>
 
 ### APIs
