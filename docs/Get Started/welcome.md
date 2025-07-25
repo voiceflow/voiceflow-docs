@@ -104,27 +104,35 @@ Understand how your agent is being used
 
 ## Developer resources
 
-### Developer Tools
+<br />
 
 Integrate agent building and testing into your existing workflows
 
 <div class="home-grid">
-  <CardTile href="./voiceflow-cli" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkHYpySvBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Voiceflow CLI" description="Manage agents from your terminal" />
+  <div>
+    ### Developer Tools
 
-  <CardTile href="./voiceflow-test-platform" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkXFpGyosk4Bgnhz702L3ZyYAeR65DTWfEioxU" title="Test Platform" description="Test your agents at scale" />
+    Integrate with your existing workflows
+
+    <CardTile href="./voiceflow-cli" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkHYpySvBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Voiceflow CLI" description="Manage agents from your terminal" />
+
+    <CardTile href="./voiceflow-test-platform" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkXFpGyosk4Bgnhz702L3ZyYAeR65DTWfEioxU" title="Test Platform" description="Test your agents at scale" />
+  </div>
+
+  <div>
+    ### APIs
+
+    Build native integrations with Voiceflow
+
+    <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Dialogue Manager API" description="Have conversations with an agent" />
+
+    <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Knowledge Base API" description="Update and query the KB" />
+
+    <CardTile href="../reference/fetchtranscripts#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Transcripts API" description="Pull metrics about your agent" />
+  </div>
 </div>
 
-### APIs
-
-Build native integrations with Voiceflow
-
-<div class="home-grid">
-  <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Dialogue Manager API" description="Have conversations with an agent" />
-
-  <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Knowledge Base API" description="Update and query the KB" />
-
-  <CardTile href="../reference/fetchtranscripts#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Transcripts API" description="Pull metrics about your agent" />
-</div>
+<br />
 
 <br />
 
