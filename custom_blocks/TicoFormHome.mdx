@@ -2,32 +2,17 @@
 name: TicoFormHome
 ---
 <div className="tico-wrapper">
-  <div className="tico-header" style={{ display: 'flex', alignItems: 'center' }}>
+  <div className="tico-header">
     <img
       className="tico-avatar"
       src="https://files.readme.io/8d26c8fc508d0f9b430f56abbf3166b0e2ba373ff6c68ee3e8a6721fe5963dc8-Frame_48095775.png"
-      style={{
-        width: '3em',
-        borderRadius: '50%',
-        display: 'inline-block',
-      }}
     />
-    <div
-      className="tico-bubble"
-      style={{
-        display: 'inline-block',
-        marginLeft: '1em',
-        backgroundColor: '#53575B',
-        padding: '1em',
-        borderRadius: '4px',
-        width: '100%',
-      }}
-    >
-      <p style={{ marginBottom: '0' }}>Hi, I'm Tico! 👋 Ask me questions about Voiceflow and I'll find the answers for you!</p>
+    <div className="tico-bubble">
+      <p>Hi, I'm Tico! 👋 Ask me questions about Voiceflow and I'll find the answers for you!</p>
     </div>
   </div>
 
-  <div className="tico-form-wrapper" style={{ marginTop: '1em' }}>
+  <div className="tico-form-wrapper">
     <form
       className="tico-form"
       onSubmit={(e) => {
@@ -50,62 +35,110 @@ name: TicoFormHome
 
         return false;
       }}
-      style={{ display: 'flex', alignItems: 'center', gap: '1em' }}
     >
-      <div className="tico-input-wrapper" style={{ position: 'relative', width: '100%' }}>
+      <div className="tico-input-wrapper">
         <input
           className="tico-input"
           type="text"
           id="tico-message"
           name="tico-message"
           placeholder="Hey Tico! I need help with..."
-          style={{
-            backgroundColor: '#ECF0F4',
-            borderRadius: '6px',
-            width: '100%',
-            padding: '0.7em 4em 0.7em 1em',
-            color: '#202428',
-            border: '1px solid #13171B',
-            fontSize: '1em',
-            height: '3em',
-            boxSizing: 'border-box',
-          }}
         />
-        <button
-          className="tico-submit"
-          type="submit"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            right: '0.5em',
-            transform: 'translateY(-50%)',
-            height: '2.2em',
-            padding: '0 0.75em',
-            backgroundColor: '#3554e1',
-            color: 'white',
-            border: 'none',
-            borderRadius: '6px',
-            fontSize: '0.9em',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <p style={{ marginBottom: '0' }}>Send</p>
+        <button className="tico-submit" type="submit">
+          <p>Send</p>
         </button>
       </div>
       <img
         className="tico-avatar-secondary"
         src="https://files.readme.io/fd68b8868d6a64767d905db825614801e75313602a00b7d664618dec2b22c153-Frame_48095776.png"
-        style={{
-          width: '3em',
-          borderRadius: '50%',
-          display: 'inline-block',
-        }}
       />
     </form>
   </div>
 </div>
 
 <TicoFormHome />
+
+<style>
+{`
+.tico-wrapper {}
+
+.tico-header {
+  display: flex;
+  align-items: center;
+}
+
+.tico-avatar {
+  width: 3em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tico-bubble {
+  display: inline-block;
+  margin-left: 1em;
+  background-color: #53575B;
+  padding: 1em;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.tico-bubble p {
+  margin-bottom: 0;
+}
+
+.tico-form-wrapper {
+  margin-top: 1em;
+}
+
+.tico-form {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.tico-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tico-input {
+  background-color: #ECF0F4;
+  border-radius: 6px;
+  width: 100%;
+  padding: 0.7em 4em 0.7em 1em;
+  color: #202428;
+  border: 1px solid #13171B;
+  font-size: 1em;
+  height: 3em;
+  box-sizing: border-box;
+}
+
+.tico-submit {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  transform: translateY(-50%);
+  height: 2.2em;
+  padding: 0 0.75em;
+  background-color: #3554e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tico-submit p {
+  margin-bottom: 0;
+}
+
+.tico-avatar-secondary {
+  width: 3em;
+  border-radius: 50%;
+  display: inline-block;
+}
+`}
+</style>
