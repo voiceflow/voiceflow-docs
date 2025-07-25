@@ -138,10 +138,6 @@ Run agents from the CLI, build with APIs, and run events with webhooks
   </div>
 </div>
 
-<br />
-
-<br />
-
 <HTMLBlock>{`
 <style>
   /*.content-toc { display: none !important; }
