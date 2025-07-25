@@ -64,7 +64,7 @@ name: TicoFormHome
 
 .tico-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .tico-avatar {
@@ -78,8 +78,22 @@ name: TicoFormHome
   margin-left: 1em;
   background-color: #53575B;
   padding: 1em;
-  border-radius: 4px;
+  border-radius: 8px;
   width: 100%;
+  position: relative;
+  color: white;
+}
+
+.tico-bubble::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #53575B;
 }
 
 .tico-bubble p {
@@ -139,6 +153,29 @@ name: TicoFormHome
   width: 3em;
   border-radius: 50%;
   display: inline-block;
+}
+
+/* User bubble styling */
+.tico-user-bubble {
+  display: inline-block;
+  margin-right: 1em;
+  background-color: #ECF0F4;
+  padding: 1em;
+  border-radius: 8px;
+  position: relative;
+  color: #202428;
+}
+
+.tico-user-bubble::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #ECF0F4;
 }
 `}
 </style>
