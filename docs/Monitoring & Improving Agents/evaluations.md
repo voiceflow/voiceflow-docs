@@ -16,7 +16,7 @@ Evaluations are custom, automated checks that run against [Transcripts](). They 
 > * The agent responded with a specific confirmation (e.g. “I’ve uploaded that for you”).
 > * The agent avoided restricted terms or phrases.
 
-Evaluations run automatically on transcripts and surface pass/fail results or other structured outputs directly in the transcript view.
+Evaluations run automatically on transcripts and surface pass/fail results directly in the transcript view.
 
 > 📌 Evaluations consume credits!
 >
@@ -26,7 +26,7 @@ Evaluations run automatically on transcripts and surface pass/fail results or ot
 
 \[ video of navigating from workflow to evaluations ]
 
-Evaluations can be created in the **Measure** section of Voiceflow creator. Evaluations can return three types of results: **binary**, **text** or **rating**. Binary results provide a simple yes/no outcome—useful for checking whether a specific event occurred—while text results return a freeform string, often used for summaries, labels, or more descriptive feedback. Rating results provide a numerical value between a given range.
+Evaluations can return three types of results: **binary**, **text** or **rating**. Binary results provide a simple yes/no outcome—useful for checking whether a specific event occurred—while text results return a freeform string, often used for summaries, labels, or more descriptive feedback. Rating results provide a numerical value between a given range.
 
 <Image align="center" src="https://files.readme.io/c60990cf4ac882cf5f650d59a7cb92a8b7fb6647fc7ca1b03b53de62ea10da05-CleanShot_2025-07-23_at_12.12.172x.png" />
 
