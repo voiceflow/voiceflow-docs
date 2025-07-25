@@ -106,7 +106,7 @@ Understand how your agent is being used
 
 ### Developer Tools
 
-Integrate agent building and testing into your existing workflows.
+Integrate agent building and testing into your existing workflows
 
 <div class="home-grid">
   <CardTile href="./voiceflow-cli" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkHYpySvBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Voiceflow CLI" description="Manage agents from your terminal" />
@@ -115,6 +115,16 @@ Integrate agent building and testing into your existing workflows.
 </div>
 
 ### APIs
+
+Build native integrations with Voiceflow
+
+<div class="home-grid">
+  <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Dialogue Management API" description="Have conversations with an agent" />
+
+  <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Knowledge Base API" description="Update and query the KB" />
+
+  <CardTile href="../reference/fetchtranscripts#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Transcripts API" description="Pull metrics about your agent" />
+</div>
 
 <br />
 
