@@ -12,17 +12,7 @@ metadata:
 ---
 <TicoFormHome />
 
-<br />
-
-<Columns layout="auto">
-  <Column>
-    <FeaturedCard header="Getting Started with Custom Components" />
-  </Column>
-
-  <Column>
-    <NewFeaturePromo />
-  </Column>
-</Columns>
+<NewFeaturePromo />
 
 ## Build an AI agent
 
