@@ -21,11 +21,9 @@ name: TicoFormHome
         width: '100%',
       }}
     >
-      <p
-        style={{
-					marginBottom: '0'
-        }}
-			>Hi, I'm Tico! 👋 Ask me questions about Voiceflow and I'll find the answers for you!</p>
+      <p style={{ marginBottom: '0' }}>
+        Hi, I'm Tico! 👋 Ask me questions about Voiceflow and I'll find the answers for you!
+      </p>
     </div>
   </div>
 
@@ -39,16 +37,10 @@ name: TicoFormHome
 
         if (message) {
           window.cleanStartTico();
-					setTimeout(() => {
+          setTimeout(() => {
             window.searchTico(message);
           }, 1500);
-
-          /*window.voiceflow.chat.interact({
-            type: 'launch',
-            payload: { message: message },
-          });*/
-					
-          input.value = ''; // clear input field
+          input.value = '';
         } else if (!message) {
           console.warn('Message is empty');
         } else {
@@ -57,24 +49,45 @@ name: TicoFormHome
 
         return false;
       }}
+      style={{ display: 'flex', alignItems: 'center', gap: '1em' }}
     >
-      <input
-        type="text"
-        id="tico-message"
-        name="tico-message"
-				placeholder="Hey Tico! I need help with..."
-        style={{
-          marginRight: '1em',
-          backgroundColor: '#ECF0F4',
-          borderRadius: '4px',
-          width: 'calc(100% - 4em)',
-          padding: '0.7em',
-          color: '#202428',
-          border: '1px solid #13171B',
-        }}
-      />
+      <div style={{ position: 'relative', width: '100%' }}>
+        <input
+          type="text"
+          id="tico-message"
+          name="tico-message"
+          placeholder="Hey Tico! I need help with..."
+          style={{
+            backgroundColor: '#ECF0F4',
+            borderRadius: '4px',
+            width: '100%',
+            padding: '0.7em 3em 0.7em 0.7em',
+            color: '#202428',
+            border: '1px solid #13171B',
+            boxSizing: 'border-box',
+          }}
+        />
+        <button
+          type="submit"
+          style={{
+            position: 'absolute',
+            right: '0.5em',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            border: 'none',
+            backgroundColor: '#53575B',
+            color: '#fff',
+            padding: '0.5em 0.8em',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: '0.9em',
+          }}
+        >
+          Send
+        </button>
+      </div>
       <img
-        src="https://files.readme.io/fd68b8868d6a64767d905db825614801e75313602a00b7d664618dec2b22c153-Frame_48095776.png	"
+        src="https://files.readme.io/fd68b8868d6a64767d905db825614801e75313602a00b7d664618dec2b22c153-Frame_48095776.png"
         style={{
           width: '3em',
           borderRadius: '50%',
