@@ -176,6 +176,27 @@ name: TicoFormHome
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 10px solid #ECF0F4;
+  }
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+.tico-bubble p {
+  overflow: hidden;              /* Hide overflowing text */
+  white-space: nowrap;           /* Prevent text wrap */
+  border-right: 2px solid white; /* Simulated caret */
+  width: 0;                      /* Start hidden */
+  animation:
+    typing 2s steps(40, end) 0.5s forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
 `}
 </style>
