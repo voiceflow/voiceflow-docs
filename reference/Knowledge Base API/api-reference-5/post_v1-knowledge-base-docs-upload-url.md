@@ -77,7 +77,11 @@ next:
   </tbody>
 </Table>
 
-(include callout for tags, remove img, legacy support, subject to change)
+> 👨‍💻 Tags API has been deprecated
+>
+> Tags API stills offers legacy support, subject to change. For the latest tag functionality, you can now use file metadata when uploading files.
+>
+> <Image align="center" className="border" border={true} src="https://files.readme.io/8c376a1b4c22854fcaca831ade806d8f6645f69b96adce85d499fca0c4801d56-image.png" />
 
 ## Example
 
@@ -118,5 +122,3 @@ next:
 		}
 }
 ```
-
-###
