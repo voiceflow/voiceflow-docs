@@ -20,6 +20,8 @@ metadata:
   </Column>
 </Columns>
 
+## Need help? Ask Tico!
+
 <TicoFormHome />
 
 ## Build an AI agent
