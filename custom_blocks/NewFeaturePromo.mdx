@@ -3,16 +3,68 @@ name: NewFeaturePromo
 ---
 export const NewFeaturePromo = ({ header }) => {
   return (
-<>
-    <div className="featured-card">
-        <span>Quick start</span>
-        <span>Get started with Voiceflow in minutes</span>
-  </div>
-	<style>
-	
-</style>
-</>
+    <>
+      <div className="promo-card">
+        <div className="promo-card-content">
+          <span className="promo-title">Quick start</span>
+          <span className="promo-subtitle">{header}</span>
+        </div>
+        <img
+          src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYknHl6PSAjE0VKlGDxti15Fb6oCWvHU2kq3zTY"
+          alt="New feature"
+          className="promo-corner-image"
+        />
+      </div>
+
+      <style>
+        {`
+        .promo-card {
+          position: relative;
+          border: 1px solid #1C3BC8;
+          padding: 2em 1em;
+          border-radius: 4px;
+          width: 100%;
+          background: url("https://i.imgur.com/Lzj96mw.png"), #2b55ea;
+          background-position: right;
+          background-size: 15em;
+          background-repeat: no-repeat;
+          overflow: hidden;
+          color: white;
+        }
+
+        .promo-card-content {
+          max-width: 70%;
+        }
+
+        .promo-title {
+          display: block;
+          font-weight: 600;
+          font-size: 1.05em;
+          margin-bottom: 0.5em;
+        }
+
+        .promo-subtitle {
+          display: block;
+          font-size: 0.95em;
+        }
+
+        .promo-corner-image {
+          position: absolute;
+          bottom: 0;
+          right: 1em;
+          width: 6em;
+          object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+          .promo-card-content {
+            max-width: 100%;
+          }
+        }
+        `}
+      </style>
+    </>
   );
 };
 
-<NewFeaturePromo header="Getting Started with Custom Components" />
+<NewFeaturePromo header="testing" />
