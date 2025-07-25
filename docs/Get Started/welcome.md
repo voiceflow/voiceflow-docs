@@ -20,6 +20,8 @@ metadata:
   </Column>
 </Columns>
 
+<br />
+
 ## Need help? Ask Tico!
 
 <TicoFormHome />
