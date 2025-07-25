@@ -10,6 +10,10 @@ metadata:
   description: ''
   robots: index
 ---
+<TicoFormHome />
+
+## Featured
+
 <Columns layout="auto">
   <Column>
     <FeaturedCard header="Getting Started with Custom Components" />
@@ -19,16 +23,6 @@ metadata:
     <NewFeaturePromo />
   </Column>
 </Columns>
-
-<br />
-
-## Need help? Ask Tico!
-
-<TicoFormHome />
-
-<br />
-
-<br />
 
 ## Build an AI agent
 
