@@ -1,23 +1,31 @@
 ---
 name: NewFeaturePromo
 ---
-export const NewFeaturePromo = ({ header }) => {
+export const NewFeaturePromo = ({ header, link = "#" }) => {
   return (
     <>
-      <div className="promo-card">
-        <div className="promo-card-content">
-          <span className="promo-title">New on Voiceflow: Evaluations</span>
-          <span className="promo-subtitle">Automatically measure your agent's success</span>
+      <a href={link} className="promo-card-link">
+        <div className="promo-card">
+          <div className="promo-card-content">
+            <span className="promo-title">Now available:<br />Evaluations</span>
+            <span className="promo-subtitle">Measure your agent's success</span>
+          </div>
+          <img
+            src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYknHl6PSAjE0VKlGDxti15Fb6oCWvHU2kq3zTY"
+            alt="New feature"
+            className="promo-corner-image"
+          />
         </div>
-        <img
-          src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYknHl6PSAjE0VKlGDxti15Fb6oCWvHU2kq3zTY"
-          alt="New feature"
-          className="promo-corner-image"
-        />
-      </div>
+      </a>
 
       <style>
         {`
+        .promo-card-link {
+          display: block;
+          text-decoration: none !important;
+          color: inherit;
+        }
+
         .promo-card {
           position: relative;
           border: 1px solid #272F38;
@@ -30,6 +38,12 @@ export const NewFeaturePromo = ({ header }) => {
           background-repeat: no-repeat;
           overflow: hidden;
           color: white;
+          transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .promo-card:hover {
+          background-color: #4a5360;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
         .promo-card-content {
