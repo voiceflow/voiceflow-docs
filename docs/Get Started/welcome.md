@@ -10,14 +10,6 @@ metadata:
   description: ''
   robots: index
 ---
-<Columns layout="auto">
-  <Column>
-    <FeaturedCard header="Getting Started with Custom Components" />
-  </Column>
-</Columns>
-
-<br />
-
 ## Need help? Ask Tico!
 
 <TicoFormHome />
