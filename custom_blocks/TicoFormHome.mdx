@@ -197,5 +197,22 @@ name: TicoFormHome
     blink-caret 0.75s step-end infinite;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tico-form-wrapper {
+  opacity: 0; /* Ensure it starts hidden */
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+
 `}
 </style>
