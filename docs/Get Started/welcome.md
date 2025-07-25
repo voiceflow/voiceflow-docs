@@ -119,7 +119,7 @@ Integrate agent building and testing into your existing workflows
 Build native integrations with Voiceflow
 
 <div class="home-grid">
-  <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Dialogue Management API" description="Have conversations with an agent" />
+  <CardTile href="../reference/overview#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Dialogue Manager API" description="Have conversations with an agent" />
 
   <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkH2fnAMBeCj2fNFhVHQauMGS9vlA6qbZmTgP8" title="Knowledge Base API" description="Update and query the KB" />
 
