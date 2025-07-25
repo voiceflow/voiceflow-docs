@@ -59,11 +59,13 @@ name: TicoFormHome
           placeholder="Hey Tico! I need help with..."
           style={{
             backgroundColor: '#ECF0F4',
-            borderRadius: '4px',
+            borderRadius: '6px',
             width: '100%',
-            padding: '0.7em 3em 0.7em 0.7em',
+            padding: '0.7em 4em 0.7em 1em', // extra right padding for the button
             color: '#202428',
             border: '1px solid #13171B',
+            fontSize: '1em',
+            height: '3em',
             boxSizing: 'border-box',
           }}
         />
@@ -71,16 +73,20 @@ name: TicoFormHome
           type="submit"
           style={{
             position: 'absolute',
-            right: '0.5em',
             top: '50%',
+            right: '0.5em',
             transform: 'translateY(-50%)',
-            border: 'none',
+            height: '2.2em',
+            padding: '0 0.75em',
             backgroundColor: '#53575B',
-            color: '#fff',
-            padding: '0.5em 0.8em',
-            borderRadius: '4px',
-            cursor: 'pointer',
+            color: 'white',
+            border: 'none',
+            borderRadius: '6px',
             fontSize: '0.9em',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           Send
