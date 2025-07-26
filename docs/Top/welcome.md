@@ -39,7 +39,7 @@ metadata:
 
     Upgrade your agent's abilities
 
-    <CardTile href="./agents" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkjDAU0PnIfFXj0DI1tHlCbnWGqRwsmUyZe4p2" title="Knowledge base" description="Add knowledge to your agent" />
+    <CardTile href="./knowledge-base" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkjDAU0PnIfFXj0DI1tHlCbnWGqRwsmUyZe4p2" title="Knowledge base" description="Add knowledge to your agent" />
 
     <CardTile href="./agents" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk32PRud4xvHiSLdUJE7T2askXuFCm1RcjpZWM" title="Memory" description="Reference previous messages" />
 
