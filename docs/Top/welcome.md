@@ -207,7 +207,11 @@ Understand how your agent is being used
   padding: 0.7em;
   color: #202428;
   border: 1px solid #13171B;
-}
+  }
 
+  /* Sidebar */
+  .toc-children ul li ul {
+		display: none;
+	}
 </style>
 `}</HTMLBlock>
