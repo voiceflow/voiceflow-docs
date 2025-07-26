@@ -5,6 +5,7 @@ excerpt: >-
   human.
 deprecated: false
 hidden: false
+icon: far fa-square-info
 metadata:
   robots: index
 ---
