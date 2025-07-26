@@ -5,6 +5,7 @@ excerpt: >-
   beyond.
 deprecated: false
 hidden: false
+icon: far fa-house-chimney-blank
 metadata:
   title: ''
   description: ''
