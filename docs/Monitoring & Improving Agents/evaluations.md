@@ -1,26 +1,26 @@
 ---
 title: Evaluations
-excerpt: >-
-  Evaluations are a set of criteria to determine whether specific events
-  occurred during a conversation.
+excerpt: Evaluate the success of conversations based on sentiment, ratings, and more.
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-Evaluations are custom, automated checks that run against [Transcripts](). They allow you to detect whether specific events, phrases, or intents occurred during a conversation—making it easier to measure quality, compliance, and outcomes from your agent's interactions at scale.
+Evaluations are custom, automated checks that run against [transcripts](doc:transcripts) They allow you to detect whether specific events, phrases, or intents occurred during a conversation, making it easier to measure quality, compliance, and outcomes from your agent's interactions at scale.
 
-> You might use Evaluations to check if:
->
-> * The user expressed satisfaction or frustration during their conversation.
-> * The agent responded with a specific confirmation (e.g. “I’ve uploaded that for you”).
-> * The agent avoided restricted terms or phrases.
+You might use evaluations to check if:
 
-Evaluations run automatically on transcripts and surface pass/fail results directly in the transcript view.
+* The user expressed satisfaction or frustration during their conversation.
+* The agent responded with a specific confirmation (e.g. “I’ve uploaded that for you”).
+* The agent avoided restricted terms or phrases.
 
-> 📌 Evaluations consume credits!
+Evaluations run automatically on transcripts and surface their results directly in the transcript view.
+
+> ℹ️ Evaluations consume credits.
 >
 > Each evaluation consumes credits based on the number of transcripts processed, the length of each transcript and the model selected.
+
+<br />
 
 ## Creating evaluations
 
