@@ -25,7 +25,7 @@ Transcripts are valuable for:
 
 > ⚠️ Ensure audio recordings are toggled on!
 >
-> Call recordings need to be enabled in **transcript settings** to retrieve audio files for a conversation's transcript.
+> Call recordings need to be enabled in **transcript settings** to retrieve audio files for a conversation's transcript. Click on the ⚙️ icon to view settings.
 >
 > <Image align="center" className="border" border={true} src="https://files.readme.io/961b89bcfedfc25e753ba2f3fd94184b788cf78057a211fbb883b60799f33708-CleanShot_2025-07-24_at_12.33.322x.png" />
 
@@ -43,13 +43,17 @@ Transcripts are tied to **individual** agents, not the overall workspace. Each t
 | Evaluations    | Displays evaluation results such as test pass/fail status or validation values. By default, no evaluations are applied to transcripts, unless created and enabled through the [Evaluations](doc:evaluations) editor. |
 | Duration       | Total length of the conversation (in minutes and seconds).                                                                                                                                                           |
 
-\[ insert picture of transcript ]
+<Image align="center" className="border" border={true} src="https://files.readme.io/da14e70da51d4055f0ce2f9322d5d374be7b4a215f81b128558284187cd51d6d-image.png" />
+
+<br />
 
 ## Debugging using transcripts
 
 Agent and user conversations can be analyzed in depth for debugging through the Logs tab on each transcript. Logs display the behind-the-scenes of the Agent's interactions and what exact steps were executed within its designated workflow. They also provide additional information such as the agent's Input, Output and how many credits were consumed per action.
 
-\[ insert logs tab picture ]
+![](https://files.readme.io/86f63fa46cfd6f1512ce1705d034f32ee1029d9f400049e42d11cddb4d2ca985-image.png)
+
+<br />
 
 ## [Evaluations]()
 
