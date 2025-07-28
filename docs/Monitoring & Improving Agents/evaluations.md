@@ -30,7 +30,9 @@ Evaluations can return three types of results: **binary**, **text** or **rating*
 
 Evaluations can be created either from scratch or by using a predefined template. Templates provide a quick starting point for common use cases and can be customized.
 
-\[ evaluation form ]
+<Image align="center" className="border" border={true} src="https://files.readme.io/976b183bea384d96325ab0e929b7db96afb9bf792e7660a68fb98a367920f27a-image.png" />
+
+<br />
 
 To save time, you can use the **⚡ icon** to automatically generate an evaluation based on a short description or instruction. This allows you to quickly create evaluation criteria without writing a detailed prompt from scratch.
 
@@ -70,6 +72,6 @@ This quick visual indicator makes it easy to scan and manage which evaluations a
 
 You can batch run evaluations on past transcripts to retroactively score past conversations. This is useful for backfilling metrics, testing new evaluations at scale, or comparing performance over time.
 
-\[ img of running evaluations ]
+![](https://files.readme.io/d4758c6c1fafd880d91b76aab590c25a8208510c8915372a874b22a36276c298-image.png)
 
 To batch run, select multiple transcripts in the transcript view, click Run Evaluation, and choose the evaluation(s) you want to apply. Results will appear once processing is complete.
