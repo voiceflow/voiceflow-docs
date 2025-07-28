@@ -51,7 +51,7 @@ metadata:
 
     Deeply integrate with your business
 
-    <CardTile href="./tools" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkxyenLYlHB63EAecr4ldMRpWtKsU5fLaQgvGk" title="Integrations" description="One click integrations" />
+    <CardTile href="./agents#/functions" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkxyenLYlHB63EAecr4ldMRpWtKsU5fLaQgvGk" title="Integrations" description="One click integrations" />
 
     <CardTile href="./function-step" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk4Nq10b5rotc4F1GyVLOWXpsqzuk68RiKw2eB" title="Functions" description="Run code inside your agent" />
 
