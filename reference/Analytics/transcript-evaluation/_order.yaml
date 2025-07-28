@@ -1,0 +1,8 @@
+- transcriptevaluationpubliccontroller_create
+- transcriptevaluationpubliccontroller_update
+- transcriptevaluationpubliccontroller_findone
+- transcriptevaluationpubliccontroller_deleteone
+- transcriptevaluationpubliccontroller_searchbyprojectid
+- transcriptevaluationpubliccontroller_queue
+- transcriptevaluationpubliccontroller_runevaluation
+- transcriptevaluationpubliccontroller_estimate
