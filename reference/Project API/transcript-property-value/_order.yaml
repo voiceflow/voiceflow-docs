@@ -1,4 +1,5 @@
 - transcriptpropertypubliccontroller_searchbyprojectid
+- transcriptpropertypubliccontroller_findone
 - transcriptpropertyvaluepubliccontroller_create
 - transcriptpropertyvaluepubliccontroller_deleteone
 - transcriptpropertyvaluepubliccontroller_gettranscriptpropertyvalues
