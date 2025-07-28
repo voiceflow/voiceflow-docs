@@ -18,4 +18,4 @@ Seamlessly connect your Voice AI agent to the real world with Call Forwarding. T
 
 > 📞 The agent still requires a phone number
 >
-> While call forwarding allows the agent to transfer a call to any phone number, it will still require a number to communicate with through the Telephony interface.
+> While call forwarding allows the agent to transfer a call to any phone number, it will still require a number to communicate with through the <Anchor label="Voice interface" target="_blank" href="https://docs.voiceflow.com/docs/telephony#/">Voice interface</Anchor>.
