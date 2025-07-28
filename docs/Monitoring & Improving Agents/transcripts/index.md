@@ -21,7 +21,7 @@ Transcripts are valuable for:
 * Improving assistant performance using real interaction data.
 * Maintaining a history of conversations for review or auditing
 
-\[ insert video of navigating to transcripts ]
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk3UGza4xvHiSLdUJE7T2askXuFCm1RcjpZWMz" />
 
 > ⚠️ Ensure audio recordings are toggled on!
 >
