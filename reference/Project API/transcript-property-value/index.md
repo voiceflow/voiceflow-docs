@@ -1,4 +1,4 @@
 ---
-title: Transcript-Property-Value
+title: Transcript properties API
 hidden: false
 ---
