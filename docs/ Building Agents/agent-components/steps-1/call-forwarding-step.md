@@ -24,15 +24,13 @@ To use the Call forwarding step, simply drag it onto the canvas, click on the st
 
 ## Forwarding a call via DTMF Menu
 
-In many real-world scenarios, forwarding a call isn’t as simple as dialing a number—especially when you're connecting to systems that use automated phone menus (IVRs). That's where DTMF (Dual-Tone Multi-Frequency) menu input comes in.
-
-The Call Forwarding step allows your voice agent to bypass phone menus by sending DTMF tones after the call is picked up. This is useful when you need to:
+The Call Forwarding step also allows your voice agent to bypass phone menus by sending DTMF tones after the call is picked up. This is useful when you need to:
 
 * Automatically enter a menu option (e.g., "Press 1 for Sales")
 * Dial an extension
 * Navigate call trees without human input
 
-In the **Extensions** field of the Call Forwarding step, you can input a string of DTMF tones to be sent after the call connects. The syntax and behavior depend on the provider you're using.
+In the **Extensions** input field of the Call Forwarding step, you can input a string of DTMF tones to be sent after the call connects. The syntax and behavior depend on the provider you're using.
 
 ### Twilio (use `sendDigits`)
 
