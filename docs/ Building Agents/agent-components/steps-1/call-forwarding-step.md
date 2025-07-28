@@ -10,6 +10,10 @@ metadata:
 
 Seamlessly connect your Voice AI agent to the real world with Call Forwarding. This step enables your agent to instantly transfer a conversation to a live person or another AI system—ensuring a smooth and intelligent handoff when automation has reached its limit.
 
+<Image align="center" className="border" border={true} src="https://files.readme.io/b069cec743ad043a6bb528d30fbaa06f9e3a50895d9734ea13b76e800e7cdccd-image.png" />
+
+<br />
+
 > The Call Forwarding step hands off the call mid-conversation to:
 >
 > * Any phone number (including international numbers)
