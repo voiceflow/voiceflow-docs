@@ -1,4 +1,4 @@
 ---
 title: Transcript-Property
-hidden: false
+hidden: true
 ---
