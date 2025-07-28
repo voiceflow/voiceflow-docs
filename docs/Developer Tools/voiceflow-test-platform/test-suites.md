@@ -23,22 +23,23 @@ A Test Suite is a JSON-formatted definition that contains:
 
 ## Creating Test Suites
 
-### Method 1: Manual Entry
+<br />
 
-![](https://files.readme.io/c5d478abfb76f6674ce76fea01927f91b7e885252f3e260adaf798a2d28716ce-test-suite-detail.png)
+### Method 1: From a template
+
+![](https://files.readme.io/42575e6d8ac4dade3b548d09e12e2d5df985c2f01ba0e1a118e28168fda07960-image.png)
 
 <br />
 
-1. Navigate to **Test Suites** in the sidebar
-2. Click **"Create New Suite"**
-3. Choose the **"Manual Entry"** tab
-4. Fill in the required information:
-   * **Suite Name**: A descriptive name for your test suite
-   * **Voiceflow API Key**: Your Voiceflow project API key (format: VF.*****.*****)
-   * **Voiceflow Subdomain** (Optional): For private cloud customers
-   * **JSON Definition**: The complete test definition in JSON format
+### Method 2: Visual Builder
 
-### Method 2: Import YAML Files
+![](https://files.readme.io/1c7bee790cb903dc667f7db8bd1e054a07e0d279c9c68ac10fe18b73069e9e8d-image.png)
+
+<br />
+
+<br />
+
+### Method 3: Import YAML Files
 
 ![](https://files.readme.io/3de26c424fa50521bf997fff37205b8819a90fdc705ce8e25d12dcb2f682b40a-yaml-import.png)
 
@@ -60,37 +61,26 @@ The YAML import feature expects the standard Voiceflow CLI file structure:
 
 ###### Suite File (suite.yaml or suite.yml)
 
-The main suite configuration file containing:
-
-```yaml
-name: "Main Conversation Flow Tests"
-description: "Comprehensive tests for primary user interactions"
-environmentName: "production"
-tests:
-  - id: "greeting_test"
-    file: "tests/greeting.yaml"
-  - id: "help_test"  
-    file: "tests/help.yaml"
-```
+Individual test case files referenced in the suite. You can find more details on the [Suite Reference](https://docs.voiceflow.com/docs/automated-testing#/) page.
 
 ###### Test Files (individual .yaml/.yml files)
 
-Individual test case files referenced in the suite:
+Individual test case files referenced in the suite. You can find more details on the [Test Reference](https://docs.voiceflow.com/docs/automated-testing#/) page.
 
-```yaml
-name: "Greeting Test"
-description: "Test the bot's greeting response"
-interactions:
-  - id: "greeting_interaction"
-    user:
-      type: "text"
-      text: "Hello"
-    agent:
-      validate:
-        - id: "greeting_validation"
-          type: "exact_match"
-          value: "Hello! How can I help you today?"
-```
+<br />
+
+### Method 4: Manual Entry
+
+![](https://files.readme.io/c5d478abfb76f6674ce76fea01927f91b7e885252f3e260adaf798a2d28716ce-test-suite-detail.png)
+
+1. Navigate to **Test Suites** in the sidebar
+2. Click **"Create New Suite"**
+3. Choose the **"Manual Entry"** tab
+4. Fill in the required information:
+   * **Suite Name**: A descriptive name for your test suite
+   * **Voiceflow API Key**: Your Voiceflow project API key (format: VF.*****.*****)
+   * **Voiceflow Subdomain** (Optional): For private cloud customers
+   * **JSON Definition**: The complete test definition in JSON format
 
 ## Managing Test Suites
 

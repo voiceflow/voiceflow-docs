@@ -30,10 +30,10 @@ The Query API allows users to perform searches within the Voiceflow Knowledge Ba
 The Document API offers extensive capabilities for managing various document types within the Knowledge Base. It supports uploading, replacing, deleting, and retrieving documents, including both unstructured and structured data such as tables.
 
 * **Endpoints**:
-  * `/v3alpha/knowledge-base/docs/upload` (POST) - Uploads a new document (excluding type "url").
-  * `/v3alpha/knowledge-base/docs/{documentID}` (GET, DELETE) - Retrieves or deletes a document by its ID.
-  * `/v3alpha/knowledge-base/docs/{documentID}/upload` (PUT) - Replaces an existing document by its ID.
-  * `/v3alpha/knowledge-base/docs/upload` (POST) - Uploads a document of type "url".
+  * `/v1/knowledge-base/docs/upload` (POST) - Uploads a new document (excluding type "url").
+  * `/v1/knowledge-base/docs/{documentID}` (GET, DELETE) - Retrieves or deletes a document by its ID.
+  * `/v1/knowledge-base/docs/{documentID}/upload` (PUT) - Replaces an existing document by its ID.
+  * `/v1/knowledge-base/docs/upload` (POST) - Uploads a document of type "url".
   * **Tabular Data Support**: `/v1/knowledge-base/docs/upload/table` (POST) - Uploads new table data to the Knowledge Base. This endpoint supports fully customizable fields, including various data types such as string, number, array, or object.
 * **Base URL**: `https://api.voiceflow.com`
 * **Features**:
@@ -41,21 +41,12 @@ The Document API offers extensive capabilities for managing various document typ
   * Allows for attaching tags to documents for better organization and retrieval.
   * Enables flexible management of documents with options for pagination, filtering, and handling documents in bulk.
   * Provides robust support for tabular data, allowing users to upload structured datasets with searchable and metadata fields for enhanced query capabilities.
-
-#### 3. **Tags API**
-
-The Tags API is designed for managing tags that are associated with Knowledge Base documents. Tags help categorize and filter documents, improving the accuracy and relevance of query responses.
-
-* **Endpoints**:
-  * `/v3alpha/knowledge-base/tags` (POST, GET) - Creates a new tag or retrieves a list of all tags.
-  * `/v3alpha/knowledge-base/tags/{tagID}` (GET, DELETE, PATCH) - Manages a specific tag by its ID (retrieve, update, or delete).
-  * `/v3alpha/knowledge-base/docs/{documentID}/tags/attach` (POST) - Attaches tags to a specific document.
-  * `/v3alpha/knowledge-base/docs/{documentID}/tags/detach` (POST) - Detaches tags from a specific document.
-* **Base URL**: `https://api.voiceflow.com`
-* **Features**:
-  * Facilitates dynamic tagging of documents for enhanced categorization and retrieval.
-  * Supports attaching and detaching tags to and from documents for flexible management.
-  * Allows for the retrieval and updating of tag labels, providing greater control over document categorization.
+  <br />
+  > 👨‍💻 Tags API has been deprecated
+  >
+  > Effective July 2025, Tags API is no longer supported. To replace tag functionality, you can now use metadata when uploading files.
+  >
+  > <Image align="center" className="border" border={true} src="https://files.readme.io/8c376a1b4c22854fcaca831ade806d8f6645f69b96adce85d499fca0c4801d56-image.png" />
 
 ### Authentication
 

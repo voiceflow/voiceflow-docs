@@ -1,5 +1,6 @@
 ---
 title: Voiceflow Test Platform
+excerpt: https://tests.voiceflow.com/dashboard
 deprecated: false
 hidden: false
 icon: fad fa-flask-vial
@@ -20,8 +21,8 @@ Welcome to the page for the Voiceflow Test Platform. This page will guide you th
 
 ### Getting Started
 
-1. **Sign Up**: Create your account using the sign-up page
-2. **Access Dashboard**: Log in to view your personalized dashboard
+1. **Sign Up**: Create your account using the <Anchor label="sign-up page here" target="_blank" href="https://tests.voiceflow.com/dashboard">sign-up page here</Anchor>
+2. **Access Dashboard**: <Anchor label="Log in" target="_blank" href="https://tests.voiceflow.com/dashboard">Log in</Anchor> to view your personalized dashboard
 3. **Create First Test Suite**: Use the "Create New Suite" button to get started
 4. **Run Your First Test**: Execute your test suite to see results
 5. **Set Up Notifications**: Configure email alerts in Settings

@@ -1,3 +1,5 @@
 - suites
 - tests
 - contains
+- agent-to-agent-tests
+- agent-to-agent-examples

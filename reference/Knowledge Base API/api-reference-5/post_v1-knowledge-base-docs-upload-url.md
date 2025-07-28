@@ -44,38 +44,42 @@ next:
 
     <tr>
       <td style={{ textAlign: "left" }}>
-        **overwrite**\
+        **overwrite**
         (query parameter)
       </td>
 
       <td style={{ textAlign: "left" }}>
-        Optional - Specify whether to overwrite existing data (optional).\
+        Optional - Specify whether to overwrite existing data (optional).
         "True" means you want to overwrite.
       </td>
     </tr>
 
     <tr>
       <td style={{ textAlign: "left" }}>
-        **maxChunkSize**\
+        **maxChunkSize**
         (query parameter)
       </td>
 
       <td style={{ textAlign: "left" }}>
-        Optional - Determine how granularly each document is broken up.\
-        Max chunk size affects the total amount of chunks parsed from a document.\
-        (i.e. larger chunks means less chunks retrieved)  
+        Optional - Determine how granularly each document is broken up.
+        Max chunk size affects the total amount of chunks parsed from a document.
+        (i.e. larger chunks means less chunks retrieved)
 
-        *Smaller chunk size means:*  
+        *Smaller chunk size means:*
 
         * narrower context
         * faster response
         * less tokens consumed
-        * greater risk of less accurate answerstype: integer ; **default: 1000**; **Range available is 500-1500 tokens**.\
+        * greater risk of less accurate answerstype: integer ; **default: 1000**; **Range available is 500-1500 tokens**.
           Once uploaded, you can view the chunks using the GET **Document Chunk Retrieval** Knowledge Base API.
       </td>
     </tr>
   </tbody>
 </Table>
+
+> 👨‍💻 Tags API has been deprecated
+>
+> Tags API stills offers legacy support, subject to change. For the latest tag functionality, you can now use file metadata when uploading files.
 
 ## Example
 
@@ -85,7 +89,12 @@ next:
 {
 	"data": {
 		"type": "url",
-		"url": "https://www.familyhandyman.com/article/simple-step-stool/"
+    "url": "https://www.familyhandyman.com/article/simple-step-stool/",
+    "metadata":
+    {
+      "website_name": "family handman",
+      "info_type": "article"
+		}
 	}
 }
 ```
@@ -100,14 +109,11 @@ next:
 				"type": "url",
 				"name": "familyhandyman.com/article/simple-step-stool/"
 			},
-			"updatedAt": "2023-09-28T20:06:34.049Z",
+			"updatedAt": "2025-06-28T20:06:34.049Z",
 			"status": {
 				"type": "PENDING"
 			},
-			"tags": [
-				"beginner",
-				"small_scale"
-			]
+			"tags": []
 		}
 }
 ```

@@ -30,6 +30,26 @@ You can run tests immediately in several ways:
 * **Failed** ❌: Test failed due to validation errors or system issues
 * **Scheduled** 📅: Test is queued for future execution
 
+<br />
+
+## Test Types
+
+The Voiceflow CLI supports two distinct types of tests:
+
+### Traditional Interaction-Based Tests
+
+* **Purpose**: Test specific user inputs and validate exact agent responses
+* **Structure**: Defined as a series of interactions with expected validations
+* **Use Case**: Regression testing, validation of specific conversation flows
+* **Execution**: Sequential interaction testing with predefined inputs
+
+### Agent-to-Agent Testing
+
+* **Purpose**: Simulate realistic conversations using AI-powered agents
+* **Structure**: Defined with goals, personas, and user information
+* **Use Case**: End-to-end conversation testing, realistic user behavior simulation
+* **Execution**: AI agent interacts naturally with your Voiceflow agent to achieve specific goals
+
 ## Test Execution History
 
 ### Viewing Executions
