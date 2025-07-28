@@ -1,4 +1,4 @@
 ---
-title: Transcript
+title: Transcripts API
 hidden: false
 ---
