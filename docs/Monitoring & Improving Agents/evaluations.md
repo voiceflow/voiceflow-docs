@@ -73,12 +73,12 @@ This quick visual indicator makes it easy to scan and manage which evaluations a
 
 <br />
 
-> Reviewing evaluation performance helps you:
->
-> * Validate metric accuracy – Make sure the evaluation is scoring transcripts the way you intended.
-> * Analyze credit consumption - Keep a close eye on how your credits are consumed for each evaluation performed.
-> * Understand model reasoning – View the model’s reasoning to see how it interpreted the conversation and applied the evaluation metric.
-> * Refine evaluation criteria – Use actual outputs to improve your prompt, retry settings, or evaluation type.
+Reviewing evaluation performance helps you:
+
+* **Validate metric accuracy** - Make sure the evaluation is scoring transcripts the way you intended.
+* **Analyze credit consumption** - Keep a close eye on how your credits are consumed for each evaluation performed.
+* **Understand model reasoning** - View the model’s reasoning to see how it interpreted the conversation and applied the evaluation metric.
+* **Refine evaluation criteria** - Use actual outputs to improve your prompt, retry settings, or evaluation type.
 
 <br />
 
