@@ -2,7 +2,7 @@
 title: Evaluations
 excerpt: Evaluate the success of conversations based on sentiment, ratings, and more.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
