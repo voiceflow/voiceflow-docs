@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 ---
-Evaluations are custom, automated checks that run against [transcripts](doc:transcripts) They allow you to detect whether specific events, phrases, or intents occurred during a conversation, making it easier to measure quality, compliance, and outcomes from your agent's interactions at scale.
+Evaluations are custom, automated checks that run against [transcripts](doc:transcripts). They allow you to detect whether specific events, phrases, or intents occurred during a conversation, making it easier to measure quality, compliance, and outcomes from your agent's interactions at scale.
 
 You might use evaluations to check if:
 
@@ -44,9 +44,11 @@ To save time, you can use the **⚡ icon** to automatically generate an evaluati
 
 To preview or test out an evaluation with your agent, you can click on **Test on transcript**.
 
+<br />
+
 ## Enabling and disabling evaluations
 
-Once an evaluation is created, it is **automatically** enabled by default. This means it will be run on all future transcripts that meet the evaluation's conditions.
+Once an evaluation is created, it is **automatically** enabled by default. This means it will be run on all future transcripts that meet the evaluation's conditions. Note that evaluations **are not** retroactively run against previous transcripts.
 
 If you want to *disable* an evaluation, simply click into the evaluation and toggle the **On/Off** switch. This stops the evaluation from running on new transcripts, while keeping existing results intact.
 
@@ -61,6 +63,8 @@ You can also identify the status of an evaluation at a glance:
 
 This quick visual indicator makes it easy to scan and manage which evaluations are currently active in your project.
 
+<br />
+
 ## Measuring evaluation performance
 
 <Image align="center" className="border" border={true} src="https://files.readme.io/758d72ebdacae402e7bff87b68cad5e2297b1081f6b5fca54c0dbb2f8be066ce-image.png" />
@@ -73,6 +77,8 @@ This quick visual indicator makes it easy to scan and manage which evaluations a
 > * Analyze credit consumption - Keep a close eye on how your credits are consumed for each evaluation performed.
 > * Understand model reasoning – View the model’s reasoning to see how it interpreted the conversation and applied the evaluation metric.
 > * Refine evaluation criteria – Use actual outputs to improve your prompt, retry settings, or evaluation type.
+
+<br />
 
 ## Batch run on transcripts
 
