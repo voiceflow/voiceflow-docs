@@ -2,7 +2,7 @@
 title: Transcripts
 excerpt: Record and analyze conversations between agents and users.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
