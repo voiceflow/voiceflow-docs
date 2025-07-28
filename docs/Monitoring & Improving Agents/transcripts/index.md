@@ -43,7 +43,7 @@ Transcripts are tied to **individual** agents, not the overall workspace. Each t
 | Evaluations    | Displays evaluation results such as test pass/fail status or validation values. By default, no evaluations are applied to transcripts, unless created and enabled through the [Evaluations](doc:evaluations) editor. |
 | Duration       | Total length of the conversation (in minutes and seconds).                                                                                                                                                           |
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/da14e70da51d4055f0ce2f9322d5d374be7b4a215f81b128558284187cd51d6d-image.png" />
+<Image align="center" className="border" border={true} src="https://files.readme.io/295f22ce08418ad79a352ae61889087b722c50c822084c948f438a8748ef9c71-image.png" />
 
 <br />
 
@@ -51,9 +51,7 @@ Transcripts are tied to **individual** agents, not the overall workspace. Each t
 
 Agent and user conversations can be analyzed in depth for debugging through the Logs tab on each transcript. Logs display the behind-the-scenes of the Agent's interactions and what exact steps were executed within its designated workflow. They also provide additional information such as the agent's Input, Output and how many credits were consumed per action.
 
-![](https://files.readme.io/86f63fa46cfd6f1512ce1705d034f32ee1029d9f400049e42d11cddb4d2ca985-image.png)
-
-<br />
+<Image align="center" className="border" border={true} src="https://files.readme.io/51697c4dbba0aed9a616883b7b61f4b28ca4a9b76827a0e7e23ba45f410de301-image.png" />
 
 ## [Evaluations]()
 
