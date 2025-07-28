@@ -1,7 +1,7 @@
 ---
 title: Legacy transcripts API
 excerpt: ''
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   title: ''
