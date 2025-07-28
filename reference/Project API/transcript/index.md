@@ -1,4 +1,4 @@
 ---
 title: Transcript
-hidden: true
+hidden: false
 ---
