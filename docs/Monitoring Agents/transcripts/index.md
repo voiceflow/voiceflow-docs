@@ -1,5 +1,5 @@
 ---
-title: Transcripts
+title: Legacy transcripts
 excerpt: ''
 deprecated: false
 hidden: false
