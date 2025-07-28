@@ -24,8 +24,6 @@ Evaluations run automatically on transcripts and surface pass/fail results direc
 
 ## Creating evaluations
 
-<br />
-
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk5EtgwtkzMKCWVSIegrm60uA8OXNGnvF3Zysx" />
 
 Evaluations can return three types of results: **binary**, **text** or **rating**. Binary results provide a simple yes/no outcome—useful for checking whether a specific event occurred—while text results return a freeform string, often used for summaries, labels, or more descriptive feedback. Rating results provide a numerical value between a given range.
