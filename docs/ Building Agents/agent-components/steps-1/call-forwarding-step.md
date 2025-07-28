@@ -14,7 +14,7 @@ Seamlessly connect your Voice AI agent to the real world with Call Forwarding. T
 
 To use the Call forwarding step, simply drag it onto the canvas, click on the step, then set the message you'd like the agent to send using the input on the sidebar. Don't forget to then connect your step to the rest of your workflow!
 
-<Video src="" />
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYks8l3KfGlT9yobAZqe36tMHzS78D0muRx2fLJ" />
 
 > The Call Forwarding step hands off the call mid-conversation to:
 >
