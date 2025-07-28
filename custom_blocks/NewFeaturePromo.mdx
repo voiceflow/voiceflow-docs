@@ -47,7 +47,7 @@ export const NewFeaturePromo = () => {
         }
 
         .promo-card-content {
-          max-width: 70%;
+          max-width: calc(100% - 12em);
         }
 
         .promo-title {
@@ -68,12 +68,6 @@ export const NewFeaturePromo = () => {
           right: 1em;
 					height: 7em;
           object-fit: contain;
-        }
-
-        @media (max-width: 600px) {
-          .promo-card-content {
-            max-width: 100%;
-          }
         }
         `}
       </style>
