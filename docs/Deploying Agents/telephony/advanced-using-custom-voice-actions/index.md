@@ -92,19 +92,15 @@ Following the same steps above to capture the keys a user presses, we will now s
 
 <Image align="center" src="https://files.readme.io/0b77151c821687409c437c6db962d97caa7b2ae1770c38b46f2d7a7c318987e2-image.png" />
 
-### Transfer Call to Agent
+### Transfer Calls
 
-1. At the point in your flow where you want to transfer the call, add a Custom action step.
-2. Name the block "forward-call" (use that exact name).
-3. In the Body field, enter:
-   ```json
-   {
-     "number": "+1415XXXXXXX"
-   }
-   ```
-4. Add a Message step before the Transfer explaining to the caller that they will be transferred.
+To transfer a call from the agent, use the **Call forwarding step**.
 
-<br />
+The Call Forwarding step hands off the call mid-conversation to:
+
+* Any phone number (including international numbers)
+* A number with an extension
+* A SIP address (used in VoIP systems)
 
 ### Prevent Interruptions
 
