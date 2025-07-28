@@ -1,11 +1,8 @@
 ---
-title: Join our Discord Community
+title: FAQ
 excerpt: ''
 deprecated: false
-hidden: false
-link:
-  new_tab: true
-  url: https://link.voiceflow.com/community
+hidden: true
 metadata:
   title: ''
   description: ''

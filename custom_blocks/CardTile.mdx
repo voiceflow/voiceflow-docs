@@ -1,0 +1,135 @@
+---
+name: CardTile
+---
+export const CardTile = ({ 
+  href, 
+  icon, 
+  title, 
+  description, 
+  className = "",
+  target,
+  rel,
+  onClick
+}) => {
+  const isUrl = typeof icon === "string" && icon.startsWith("http");
+
+  return (
+    <div>
+      <style>{`
+        .CardTile {
+          align-items: flex-start;
+          border: 0px;
+          border-radius: var(--border-radius-lg);
+          color: var(--color-text-default);
+          display: flex;
+          flex-direction: row;
+          gap: 1em;
+          line-height: 1.4;
+          max-width: 260px;
+          padding: 0px;
+          text-align: left;
+          text-decoration: none !important;
+          transition: all var(--transition-slow) var(--transition-timing);
+          margin-bottom: 1em;
+        }
+
+        .CardTile:hover,
+        .CardTile:active,
+        .CardTile:focus {
+          background: none !important;
+        }
+
+        .CardTile:hover i,
+        .CardTile:active i,
+        .CardTile:focus i {
+          opacity: 0.75 !important;
+          transform: none !important;
+        }
+
+        .CardTile:hover .fa-arrow-right,
+        .CardTile:active .fa-arrow-right,
+        .CardTile:focus .fa-arrow-right {
+          opacity: 1 !important;
+          transform: translateX(0) !important;
+        }
+
+        .CardTile .icon {
+          font-size: 1.5em;
+          margin-top: 0.15em;
+          min-width: 1.5em;
+          width: 1em;
+          background-size: cover;
+          background-repeat: no-repeat;	
+					background-position: center;
+          height: 1.5em;
+          opacity: 0.5;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          transition: all var(--transition-slow) var(--transition-timing);
+          }
+				
+				.CardTile .icon img { width: 1.1em; }
+
+        .CardTile .content {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .CardTile .title {
+          align-items: center;
+          display: flex;
+          font-size: 1.05em;
+          font-weight: var(--font-weight-bold);
+        }
+
+        .CardTile .arrow {
+          font-size: 0.75em;
+          margin-left: 0.5em;
+          opacity: 0;
+          transform: translateX(-2.5px);
+          transition: all var(--transition-slow) var(--transition-timing);
+        }
+
+        .CardTile .description {
+          color: var(--color-text-minimum);
+          font-size: 0.8em;
+          }
+
+        .CardTile:hover .icon {
+          filter: invert(92%) sepia(92%) saturate(30%) hue-rotate(70deg) brightness(107%) contrast(106%);
+        }
+
+
+      `}</style>
+      
+      <a 
+        className={`CardTile ${className}`}
+        href={href}
+        target={target}
+        rel={rel}
+        onClick={onClick}
+      >
+      <span
+      className="icon"
+      aria-hidden="true"
+    >
+    {isUrl ?  <img src={`${icon}`} /> : <i className={`fa-duotone fa-solid ${icon}`} />}
+  </span>
+        <div className="content">
+          <span className="title">
+            {title}
+            <i 
+              aria-hidden="true" 
+              className="fa-regular fa-arrow-right arrow"
+            />
+          </span>
+          <span className="description">
+            {description}
+          </span>
+        </div>
+      </a>
+    </div>
+  );
+};
