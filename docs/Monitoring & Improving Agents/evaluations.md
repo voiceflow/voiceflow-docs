@@ -36,6 +36,8 @@ Evaluations can return three types of metrics:
 
 Evaluations can be created either from scratch or by using a predefined template. Templates provide a quick starting point for common use cases and can be customized.
 
+<br />
+
 <Image align="center" className="border" border={true} src="https://files.readme.io/976b183bea384d96325ab0e929b7db96afb9bf792e7660a68fb98a367920f27a-image.png" />
 
 <br />
