@@ -48,13 +48,19 @@ Effective prompting is the foundation of a successful agent. The instructions yo
 * **Knowledge Parameters**: Indicate what domain knowledge your agent should rely on and when it should search external resources
 * **Context Awareness**: Include instructions for handling sensitive topics or escalating to human support when necessary
 
-> 📘
+> 👍 Create an effective prompt.
 >
 > Learn more about crafting great prompts [here](https://docs.voiceflow.com/docs/crafting-great-prompts)
 
 Good prompting helps your agent understand what information to prioritize, when to use the knowledge base, and how to respond to user queries in a consistent manner. Taking time to craft detailed, thoughtful instructions will dramatically improve your agent's performance and reduce the need for additional steps in your flow.
 
 For example, instead of simply saying "This is a support agent," you might specify: "You are a friendly e-commerce support agent that helps customers with order tracking, returns, and account issues. Maintain a positive tone, offer proactive suggestions, and provide specific details when available."
+
+## Integrations
+
+Voiceflow supports native integrations with a wide range of tools—enabling your agent to take real-time action using external services like CRMs, support systems, databases, and automation platforms.
+
+<br />
 
 ## Functions
 
