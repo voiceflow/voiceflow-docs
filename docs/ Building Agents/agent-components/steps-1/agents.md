@@ -37,8 +37,6 @@ The Agent step provides a comprehensive solution for creating AI agents that can
 2. Drag this step onto your canvas
 3. Choose an existing agent, create a new agent or search for community-created agents
 
-![](https://files.readme.io/adfaf1c2820e8e63a106e7e83877947ab5fe9f56bb23f28e14385453b67fdd62-CleanShot_2025-03-19_at_13.42.312x.png)
-
 ## Prompting Your Agent
 
 Effective prompting is the foundation of a successful agent. The instructions you provide serve as the agent's "brain" and determine how it will interact with users:
@@ -88,9 +86,9 @@ Functions allow your agent to connect with external services and retrieve or upd
 1. **Select Function**: Choose from available functions in the dropdown menu
 2. **LLM Description**: This is critical - you need to tell the LLM when and how to use this function
 
-![](https://files.readme.io/2709b2956ffdad0d4b4d20cb460c494e892616aa91c9dc7687d61fb40129e3b1-CleanShot_2025-03-19_at_14.26.162x.png)
+![](https://files.readme.io/24eac212512d887b57d7475185ec621172dad9ffc4ab27ddac69d91c71397a73-CleanShot_2025-07-29_at_15.12.312x.png)
 
-### Function Description:
+### LLM Description:
 
 The `LLM Description` field is where you provide detailed instructions that help the LLM understand:
 
@@ -142,9 +140,9 @@ For example, for an Order ID variable:
 > **Input Variable Name**: productSKU\
 > **LLM Variable Description**: "The SKU or product ID of the item the customer is inquiring about. Valid SKUs are alphanumeric codes that typically start with 'P-' followed by numbers. If the customer mentions a product name but not the SKU, ask them for more specific information about which product they're interested in."
 
-## Paths
+## Exit conditions
 
-Paths allow your agent to handle specific conversation flows and take appropriate actions:
+Exit conditions allow your agent to handle specific conversation flows and take appropriate actions:
 
 * **Automatic Routing**: The agent detects user intent and automatically routes to the appropriate path
 * **Variable Collection**: You can require specific data to be collected before entering a path
@@ -153,12 +151,10 @@ Paths allow your agent to handle specific conversation flows and take appropriat
 **To create a path:**
 
 1. Open your Agent step editor
-2. Add a new path with a descriptive name
-3. Define a description that explains when this path should be triggered
+2. Add a new exit condition with a descriptive name
+3. Define a description that explains when this exit condition should be triggered
 4. Optionally add required variables that must be collected
-5. Connect the path to subsequent steps in your flow
-
-![](https://files.readme.io/428bab7644952d89f2e2db6835e628de0df20a1f67e54c51807293368b5b3ffb-CleanShot_2025-03-19_at_14.10.082x.png)
+5. Connect the exit condition to subsequent steps in your flow
 
 ### Path Examples:
 
