@@ -58,7 +58,24 @@ For example, instead of simply saying "This is a support agent," you might speci
 
 ## Integrations
 
-Voiceflow supports native integrations with a wide range of tools—enabling your agent to take real-time action using external services like CRMs, support systems, databases, and automation platforms.
+Integrations are native connections to popular third-party platforms. These require minimal setup and expose helpful, opinionated actions specific to each tool.
+
+### Supported Integrations & Common Use Cases:
+
+| Integration   | Use case                                                    |
+| :------------ | :---------------------------------------------------------- |
+| Zendesk       | Look up or create support tickets, fetch user info.         |
+| Shopify       | Get contact, lead, or opportunity data, update CRM records. |
+| Google Sheets | Check orders, fetch product details, initiate returns.      |
+| Gmail         | Send transactional or templated emails.                     |
+| Airtable      | Query tables, update or add records, track interactions.    |
+| Make.com      | Trigger custom workflows, connect to 1000+ apps.            |
+| Twilio        | Send SMS or make calls with custom logic.                   |
+| Hubspot       | Create or update CRM contacts, log conversation outcomes.   |
+
+<br />
+
+![](https://files.readme.io/1ba143caec56c024d2dc331bedc2e4aee95dca847705d6213b80d9943fddefb2-CleanShot_2025-07-29_at_14.44.212x.png)
 
 <br />
 
