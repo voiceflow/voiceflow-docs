@@ -115,7 +115,7 @@ Understand how your agent is being used
 
     <CardTile href="../reference/knowledge-overview" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkClnikbHuvtGsr4cYROXUqI3kPEyehaWzFBD5" title="Knowledge base API" description="Update and query the KB" />
 
-    <CardTile href="../reference/fetchtranscripts#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkcle7KEWO3kxzNPJY8h1HQ4a5OWBdVwECqnbI" title="Transcripts API" description="Pull your agent's conversations" />
+    <CardTile href="../reference/transcriptpubliccontroller_searchbyprojectid#/" icon="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkcle7KEWO3kxzNPJY8h1HQ4a5OWBdVwECqnbI" title="Transcripts API" description="Pull your agent's conversations" />
   </div>
 
   <div>
