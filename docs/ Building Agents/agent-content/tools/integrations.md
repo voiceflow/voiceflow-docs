@@ -18,36 +18,40 @@ This makes your assistant not only conversational but operational—capable of r
 
 ## Available Tools & Use Cases
 
-Below are the currently supported tools and their common applications:
+Below are the currently supported tools:
 
 ### Zendesk
 
-* Create, update, or fetch support tickets
-* Lookup user info or ticket history
-* Automate responses based on ticket status
+* Add ticket comment
+* Create ticket
+* Find group
+* Find latest comment
+* Find ticket(s)
+* Find user
+* Update organization
+* Update ticket
 
 ### Salesforce
 
-* Fetch lead or contact info
-* Update CRM records based on conversations
-* Trigger automations from user queries
+* Add comment to a case
+* Create case
+* Create contact
+* Create lead
+* Update case
+* Update contact
+* Update Salesforce lead
 
 ### Google Sheets
 
-* Store or retrieve structured data (like FAQs, orders, survey inputs)
-* Append rows with conversation summaries or form submissions
-
-### Shopify
-
-* Check order status or inventory
-* Look up product details
-* Handle returns, refunds, or cart actions
+* Add to sheet
+* Create new spreadsheet
+* Get rows
+* Get sheet
+* Update sheet
 
 ### Gmail
 
-* Automatically send transactional or follow-up emails
-* Retrieve recent email threads for context
-* Use templates based on user intent
+* Send email
 
 ### Airtable
 
