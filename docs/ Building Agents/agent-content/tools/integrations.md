@@ -18,7 +18,7 @@ This makes your assistant not only conversational but operational—capable of r
 
 <br />
 
-## Available Tools & Use Cases
+## Available tools & use cases
 
 Below are the currently supported tools and their common applications:
 
