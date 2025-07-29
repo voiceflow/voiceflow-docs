@@ -148,16 +148,6 @@ Exit conditions allow your agent to handle specific conversation flows and take 
 > **Required Variable**: orderID\
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
 
-This description helps the LLM understand exactly when to trigger the return process. It includes both direct mentions of returns and indirect signals of return intent, providing a comprehensive set of triggers for the path. The variable description ensures the agent knows how to collect and validate the required information before proceeding.
-
-> **Exit condition name**: Get a Promo Code\
-> **Description**: "Trigger this path when the user asks for a promo code or a discount, or says things are too expensive. Look for phrases like 'do you have any discounts', 'that's too much money', 'any coupon codes', or 'how can I save on my order'."
->
-> **Required Variable**: email\
-> **Variable Description**: "The user's email address where we'll send promotional materials. Only accept inputs that follow a valid email format (contains @ symbol and appropriate domain extension). If the user is hesitant, explain that we need their email to deliver the promo code and track usage. Do not proceed with providing the discount code until a valid email is collected."
-
-This description helps the LLM recognize when a user is seeking a discount, either directly or indirectly. The required variable description provides clear guidance on what constitutes a valid email address and how to handle user hesitation, ensuring you collect quality customer data before providing them with the promotional code.
-
 ## Knowledge Base
 
 When you enable knowledge base integration, your agent can automatically search for information it doesn't know:
@@ -169,8 +159,6 @@ When you enable knowledge base integration, your agent can automatically search 
 For example, if a user asks about a password reset but that information isn't in your knowledge base, the agent can provide general guidance. But when asked about email confirmation—which is in your knowledge base—it can provide specific, accurate information from your documentation.
 
 The UI shows a toggle for "Access to knowledge base" which you can enable to give your agent the ability to search your knowledge base when needed, with option to update LLM description for more custom prompting.
-
-![](https://files.readme.io/d276421e36f6c24fa1c355d2a375c3cda69059a4d0df59e6512385310f671ee5-CleanShot_2025-03-19_at_14.06.322x.png)
 
 ## Advanced Usage
 
