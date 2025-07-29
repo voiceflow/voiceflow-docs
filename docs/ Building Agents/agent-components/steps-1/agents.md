@@ -158,7 +158,13 @@ When you enable knowledge base integration, your agent can automatically search 
 
 For example, if a user asks about a password reset but that information isn't in your knowledge base, the agent can provide general guidance. But when asked about email confirmation—which is in your knowledge base—it can provide specific, accurate information from your documentation.
 
-The UI shows a toggle for "Access to knowledge base" which you can enable to give your agent the ability to search your knowledge base when needed, with option to update LLM description for more custom prompting.
+![](https://files.readme.io/690a1fde9e1a9df1786ef65aa0fd4862b4d6ecbe6793df7d2d3646d323bb0749-CleanShot_2025-07-29_at_15.26.252x.png)
+
+<br />
+
+> 📘 Ensure knowledge base is toggled on!
+>
+> Your agent can only have access to your knowledge base if the tool is toggled on the agent step.
 
 ## Advanced Usage
 
