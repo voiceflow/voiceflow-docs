@@ -122,23 +122,13 @@ For example, for an Order ID variable:
 
 **Default Value**: You can optionally set a default value, but for user-specific information like order IDs, this field is typically left empty.
 
-### Function Examples:
-
-#### Order Lookup Function
-
+> #### Order Lookup Function (Example)
+>
 > **Function Name**: Get Order by ID\
 > **LLM Description**: "Use this function to retrieve a customer's order details from Shopify when they ask about their order status, delivery date, shipping address, or tracking information. The function requires a valid order ID to proceed."
 >
 > **Input Variable Name**: orderID\
 > **LLM Variable Description**: "The customer's order ID. This should be a 10-digit number that starts with 'ORD-'. Ask the customer to provide this number if they haven't already."
-
-#### Inventory Check Function
-
-> **Function Name**: Check Product Availability\
-> **LLM Description**: "Use this function when a customer asks if a product is in stock, available in a specific size or color, or when it might be back in stock. This function requires a product ID or SKU number to check availability."
->
-> **Input Variable Name**: productSKU\
-> **LLM Variable Description**: "The SKU or product ID of the item the customer is inquiring about. Valid SKUs are alphanumeric codes that typically start with 'P-' followed by numbers. If the customer mentions a product name but not the SKU, ask them for more specific information about which product they're interested in."
 
 ## Exit conditions
 
@@ -148,29 +138,19 @@ Exit conditions allow your agent to handle specific conversation flows and take 
 * **Variable Collection**: You can require specific data to be collected before entering a path
 * **Seamless Integration**: Paths work within natural conversation, without requiring specific commands
 
-**To create a path:**
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYks8l3KfGlT9yobAZqe36tMHzS78D0muRx2fLJ" />
 
-1. Open your Agent step editor
-2. Add a new exit condition with a descriptive name
-3. Define a description that explains when this exit condition should be triggered
-4. Optionally add required variables that must be collected
-5. Connect the exit condition to subsequent steps in your flow
+### Exit condition examples:
 
-### Path Examples:
-
-#### Order Return Path
-
-> **Path Name**: Process Order Return\
-> **LLM Description**: "Trigger this path when the user wants to return an item they purchased, expresses dissatisfaction with their order, mentions that an item is defective, or asks about the return policy. The user might use phrases like 'I want to return', 'how do I send this back', 'my product is broken', or 'does this have a warranty'."
+> **Exit condition name**: Process Order Return\
+> **Description**: "Trigger this path when the user wants to return an item they purchased, expresses dissatisfaction with their order, mentions that an item is defective, or asks about the return policy. The user might use phrases like 'I want to return', 'how do I send this back', 'my product is broken', or 'does this have a warranty'."
 >
 > **Required Variable**: orderID\
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
 
 This description helps the LLM understand exactly when to trigger the return process. It includes both direct mentions of returns and indirect signals of return intent, providing a comprehensive set of triggers for the path. The variable description ensures the agent knows how to collect and validate the required information before proceeding.
 
-#### Promo Code Path
-
-> **Path Name**: Get a Promo Code\
+> **Exit condition name**: Get a Promo Code\
 > **Description**: "Trigger this path when the user asks for a promo code or a discount, or says things are too expensive. Look for phrases like 'do you have any discounts', 'that's too much money', 'any coupon codes', or 'how can I save on my order'."
 >
 > **Required Variable**: email\
