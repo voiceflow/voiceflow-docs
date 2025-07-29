@@ -1,4 +1,4 @@
 ---
-title: Query
+title: Query API
 hidden: false
 ---
