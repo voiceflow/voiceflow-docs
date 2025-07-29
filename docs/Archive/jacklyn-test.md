@@ -7,6 +7,8 @@ metadata:
 ---
 <TutorialTile emoji="🦉" slug="open-the-webchat-after-one-second" title="Open the webchat after one second" />
 
+<br />
+
 <div className="tico-wrapper">
   <div className="tico-header">
     <img className="tico-avatar" src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkvBWO9UeoCzpLHrYTB54WiQMRbOxag20ujvqA" />
