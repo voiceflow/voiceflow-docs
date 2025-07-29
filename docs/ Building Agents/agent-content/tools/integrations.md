@@ -55,24 +55,22 @@ Below are the currently supported tools:
 
 ### Airtable
 
-* Use as a flexible backend to store structured data
-* Query tables for user preferences or records
-* Update fields with conversation results
+* Create records
+* Delete records
+* Get record
+* List records
+* Update records
 
 ### Make (formerly Integromat)
 
-* Trigger workflows for tasks like onboarding, notifications, or file handling
-* Connect to hundreds of other apps
-* Ideal for complex automation chains
+* Run scenario
 
 ### Twilio
 
-* Send or receive SMS
-* Trigger outbound calls
-* Use programmable messaging flows
+* Send SMS
 
 ### Hubspot
 
-* Manage leads and contacts
-* Log conversations or update properties
-* Route users based on CRM stage
+* Create contact
+* Create lead
+* Create ticket
