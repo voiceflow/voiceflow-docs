@@ -30,7 +30,7 @@ The Call Forwarding step also allows your voice agent to bypass phone menus by s
 * Dial an extension
 * Navigate call trees without human input
 
-In the **Extensions** input field of the Call Forwarding step, you can input a string of DTMF tones to be sent after the call connects. The syntax and behavior depend on the provider you're using.
+In the **Extension** input field of the Call Forwarding step, you can input a string of DTMF tones to be sent after the call connects. The syntax and behavior depend on the provider you're using.
 
 ### Twilio (use `sendDigits`)
 
