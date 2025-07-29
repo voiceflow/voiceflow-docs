@@ -12,13 +12,11 @@ Voiceflow supports native integrations with a wide range of tools—enabling you
 
 This makes your assistant not only conversational but operational—capable of resolving support tickets, sending emails, retrieving user data, and much more.
 
-<br />
-
 ![](https://files.readme.io/1ba143caec56c024d2dc331bedc2e4aee95dca847705d6213b80d9943fddefb2-CleanShot_2025-07-29_at_14.44.212x.png)
 
 <br />
 
-## Available tools & use cases
+## Available Tools & Use Cases
 
 Below are the currently supported tools and their common applications:
 
