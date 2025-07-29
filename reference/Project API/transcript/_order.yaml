@@ -1,3 +1,4 @@
+- transcripts-api
 - transcriptpubliccontroller_searchbyprojectid
 - transcriptpubliccontroller_findonewithlogs
 - transcriptpubliccontroller_deleteone
