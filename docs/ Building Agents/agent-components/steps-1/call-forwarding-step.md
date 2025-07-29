@@ -65,4 +65,4 @@ Reference: [Vonage DTMF Answer Docs](https://developer.vonage.com/en/voice/voice
 
 > 📞 The agent still requires a phone number
 >
-> While call forwarding allows the agent to transfer a call to any phone number, it will still require a number to communicate with through the <Anchor label="Voice interface" target="_blank" href="https://docs.voiceflow.com/docs/telephony#/">Voice interface</Anchor>.
+> While call forwarding allows the agent to transfer a call to any phone number, it will still require an *imported* number to originate from and communicate with through the <Anchor label="Voice interface" target="_blank" href="https://docs.voiceflow.com/docs/telephony#/">Voice interface</Anchor>.
