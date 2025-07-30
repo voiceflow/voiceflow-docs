@@ -1,6 +1,8 @@
 ---
 title: Knowledge base
-excerpt: ''
+excerpt: >-
+  The Knowledge Base lets your Voiceflow Assistant retrieve and summarize
+  answers from your own data. 
 deprecated: false
 hidden: false
 metadata:
@@ -62,6 +64,14 @@ The knowledge base can directly be integrated through the Agent step. Ensure the
 ## KB search step
 
 <br />
+
+The Knowledge Base is a vector-powered system that lets your Voiceflow Assistant retrieve and summarize answers from your own documents and website data.
+
+Ask ChatGPT
+
+The Knowledge Base is a vector-powered system that lets your Voiceflow Assistant retrieve and summarize answers from your own documents and website data.
+
+Ask ChatGPT
 
 ## Debugging the Knowledge Base
 
