@@ -21,5 +21,3 @@ If you're new to building AI agents, we recommend taking a **crawl, walk, run** 
 3. Experiment in the **Run** phase. Start to push the boundaries of your AI agent by connecting to new models and new backend tools to see if you can optimize performance. Follow along with our developer experiments on YouTube and our GitHub repo to see what experiments we're learning from with our own AI agent — Tico!
 
 <br />
-
-![](https://files.readme.io/97b00b3398e68546e61d713d6f84bbcc3ba35583674ae4e5700186d3d0aac995-CleanShot_2025-07-30_at_11.29.382x.png)
