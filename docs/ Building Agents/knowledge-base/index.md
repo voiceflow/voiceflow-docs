@@ -65,9 +65,9 @@ The knowledge base can directly be integrated through the Agent step. Ensure the
 
 ![](https://files.readme.io/19b0ee3386ee4854b46ae3c637c25ba7c62408bbd71a3448e1e8b27d78833702-CleanShot_2025-07-30_at_14.17.322x.png)
 
-<br />
-
 ## KB search step
+
+<br />
 
 ## Debugging the Knowledge Base
 
@@ -87,4 +87,4 @@ There are two reasons the KB will not provide an answer. It's important to test 
 
 To learn more about advanced ways of using the Knowledge Base, read this next guide.
 
-<LinkCard type="Doc" title="Document API reference" description="Upload files and content from websites using the Document API." href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/" />
+<LinkCard type="Doc" title="Advanced Knowledge Base usage" description="Learn how to supercharge your knowledge base with file metadata to ensure your agent delivers more accurate, relevant, and context-aware responses." href="https://docs.voiceflow.com/docs/advanced-knowledge-base#/" />
