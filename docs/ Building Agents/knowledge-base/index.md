@@ -14,7 +14,7 @@ The Knowledge Base (KB) in Voiceflow is a vector database that allows you to lev
 
 ![](https://files.readme.io/822b2438fabe08c6db61c31b93d4c23ec6eb5ad2817d0305776510e61c0e5c9f-CleanShot_2025-07-30_at_13.52.292x.png)
 
-# Overview
+# How it works
 
 **At a high level, the KB functions in the following way**
 
