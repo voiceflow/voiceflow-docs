@@ -32,7 +32,8 @@ We'll need to access the `Project API key` for the design we want to connect int
 2. Select on the ⚙️ **Settings** tab, found on the left-hand menu.
 3. Copy the `Primary key` found in the API keys section.
 
-<Image align="center" alt="Above you can see the Integrations section within an Assistant project" border={false} caption="Above you can see the Integrations section within an agent project" src="https://files.readme.io/dcf4795-small-CleanShot_2023-05-02_at_00.30.30.png" />
+
+![](https://files.readme.io/97b00b3398e68546e61d713d6f84bbcc3ba35583674ae4e5700186d3d0aac995-CleanShot_2025-07-30_at_11.29.382x.png)
 
 ## Launch
 
