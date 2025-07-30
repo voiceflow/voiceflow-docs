@@ -12,7 +12,7 @@ next:
 ---
 The Knowledge Base (KB) in Voiceflow is a vector database that allows you to leverage your own documents and website data to power answers and define variables on your Voiceflow Assistant.
 
-![](https://files.readme.io/a81ef8c-image.png)
+\[ insert kb img ]
 
 # Overview
 
@@ -55,15 +55,9 @@ To learn more about how the Knowledge Base works, read [this](https://developer.
 * The Knowledge Base (KB) provides a response in the following way
   1. It uses the question provided to search the Knowledge Base and receive relevant pieces of information. If the question does not have an answer in the KB, it will say that it cannot find an answer. *It is important that you pass a well-defined question to the Knowledge Base.*
   2. It sends those pieces of information along with your custom instructions and prompt settings to an AI model to summarize the answer. If the AI model determines that the answer to the question is not in the relevant information, it will say that it cannot find an answer.
-* Responses from the knowledge base can use the Response AI step or the Knowledge Base Query API directly. The Response AI step is the simplified version, while using the KB Query API will give you access to the raw information behind the response for further processing. Many advanced customers prefer to do this so they can do things like check for hallucinations or further customize the responses.
+* Responses from the knowledge base can use the Agent step or the Knowledge Base Query API directly.
 
-> 📘 Advanced Use
->
-> We recommend using the Response AI step to start, then migrating to using the KB Query API through the API step when you wish to have more control over your responses.
->
-> Below is an example of how you can use the Query API directly to provide additional information with your AI response.
->
-> <Embed url="https://www.youtube.com/watch?v=JotMkrO9INg" href="https://www.youtube.com/watch?v=JotMkrO9INg" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FJotMkrO9INg%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DJotMkrO9INg%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FJotMkrO9INg%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22640%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+> 📘
 
 ## AI Steps in KB Mode
 
