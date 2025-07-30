@@ -29,8 +29,8 @@ Download the API Examples repo found [here](https://github.com/voiceflow/api-exa
 We'll need to access the `Project API key` for the design we want to connect into our app. To obtain the API Key:
 
 1. Open the agent project you are using
-2. Select on the **Integrations** tab (shortcut: `3`). Found on the left-hand menu.
-3. Copy the `Dialog API Key` found in the Dialog API section.
+2. Select on the ⚙️**Settings** tab, found on the left-hand menu.
+3. Copy the `API Key` found in the API Key section.
 
 <Image align="center" alt="Above you can see the Integrations section within an Assistant project" border={false} caption="Above you can see the Integrations section within an agent project" src="https://files.readme.io/dcf4795-small-CleanShot_2023-05-02_at_00.30.30.png" />
 
