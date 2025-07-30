@@ -282,7 +282,7 @@ The API response supports pagination to efficiently manage and navigate through 
     "items": [
       {
         "period": "2025-07-16T06:00:00.000Z",
-        "projectID": "685e43867fff32e515fcac91",
+        "projectID": "62912f08e83f76001b218690",
         "count": 1,
         "successCount": 1,
         "functionID": "683e1c27abe040bae572744b",
@@ -291,12 +291,59 @@ The API response supports pagination to efficiently manage and navigate through 
       },
       {
         "period": "2025-07-24T22:00:00.000Z",
-        "projectID": "685e43867fff32e515fcac91",
+        "projectID": "62912f08e83f76001b218690",
         "count": 2,
         "successCount": 2,
         "functionID": "683e1c27abe040bae572744b",
         "environmentID": "685e43867fff32e515fcac92",
         "name": "Get joke"
+      }
+    ]
+  }
+}
+
+```
+```json Api calls
+// REQUEST body 
+
+{
+  "data": [
+    {
+      "name": "api_calls",
+      "filter": {
+        "projectID": "62912f08e83f76001b218690",
+        "startTime": "2021-08-01T00:00:00.000Z",
+        "limit": 3
+      }
+    }
+  ]
+}
+
+// ------------------------------------------
+
+// RESPONSE body
+
+{
+  "result": {
+    "cursor": 2106,
+    "items": [
+      {
+        "period": "2025-06-27T14:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "count": 1,
+        "successCount": 1,
+        "apiToolID": "683e1a51abe040bae57273eb",
+        "environmentID": "685e43867fff32e515fcac92",
+        "name": "Get weather"
+      },
+      {
+        "period": "2025-07-16T06:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "count": 2,
+        "successCount": 2,
+        "apiToolID": "683e1a51abe040bae57273eb",
+        "environmentID": "685e43867fff32e515fcac92",
+        "name": "Get weather"
       }
     ]
   }
