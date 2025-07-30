@@ -5,7 +5,7 @@ deprecated: false
 hidden: false
 link:
   new_tab: true
-  url: https://github.com/voiceflow/demos-n-examples/tree/master/voiceflow-discord
+  url: https://github.com/voiceflow-community/vf-twilio-sms-integration
 metadata:
   title: ''
   description: ''
