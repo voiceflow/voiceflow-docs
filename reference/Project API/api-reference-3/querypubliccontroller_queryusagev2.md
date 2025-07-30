@@ -400,6 +400,51 @@ The API response supports pagination to efficiently manage and navigate through 
 }
 
 ```
+```
+// REQUEST body 
+
+{
+  "data": [
+    {
+      "name": "integrations",
+      "filter": {
+        "projectID": "62912f08e83f76001b218690",
+        "startTime": "2021-08-01T00:00:00.000Z",
+        "limit": 3
+      }
+    }
+  ]
+}
+
+// ------------------------------------------
+
+// RESPONSE body
+
+{
+  "result": {
+    "cursor": 2106,
+    "items": [
+      {
+        "period": "2025-06-27T14:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "count": 1,
+        "successCount": 1,
+        "integrationToolName": "google_sheets_read_spreadsheet",
+        "environmentID": "685e43867fff32e515fcac92",
+      },
+      {
+        "period": "2025-07-16T06:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "count": 2,
+        "successCount": 2,
+        "integrationToolName": "google_sheets_append_spreadsheet",
+        "environmentID": "685e43867fff32e515fcac92",
+      }
+    ]
+  }
+}
+
+```
 
 ### `Period` field
 
