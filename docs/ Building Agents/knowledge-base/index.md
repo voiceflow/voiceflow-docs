@@ -12,7 +12,7 @@ next:
 ---
 The Knowledge Base (KB) in Voiceflow is a vector database that allows you to leverage your own documents and website data to power answers and define variables on your Voiceflow Assistant.
 
-\[ insert kb img ]
+![](https://files.readme.io/822b2438fabe08c6db61c31b93d4c23ec6eb5ad2817d0305776510e61c0e5c9f-CleanShot_2025-07-30_at_13.52.292x.png)
 
 # Overview
 
@@ -57,43 +57,11 @@ To learn more about how the Knowledge Base works, read [this](https://developer.
   2. It sends those pieces of information along with your custom instructions and prompt settings to an AI model to summarize the answer. If the AI model determines that the answer to the question is not in the relevant information, it will say that it cannot find an answer.
 * Responses from the knowledge base can use the Agent step or the Knowledge Base Query API directly.
 
-> 📘
-
-## AI Steps in KB Mode
-
-**Initiated when:**
-
-* When the conversation hits any of the AI steps in the canvas design that have `Data Source` set to `Knowledge Base`.
-
-  ![](https://files.readme.io/b2aeb52-image.png)
-
-**KB Answer Not Found:**
-
-* If the “Not found path” toggle is enabled and a KB Answer is not found, the user will be routed through the “Not found” path in your design.
-
-![](https://files.readme.io/df13ae8-image.png)
-
-* If the “Not found path” toggle is disabled and a KB Answer is not found, the user will be sent a “Unable to find relevant answer” message.
+## Knowledge Base with the Agent step
 
 <br />
 
-* `Global No Match` response initiated (either Static or Generative depending on Settings):
-
-<Image align="center" width="600px" src="https://files.readme.io/30a4d0d-image.png" />
-
-## KB Preview
-
-Initiated when you try to query the KB from the Knowledge Base CMS rather than from an AI step using KB.
-
-![](https://files.readme.io/2975bfb-CleanShot_2024-07-02_at_08.58.402x.png)
-
-**KB Answer Not Found:**
-
-* `“[not found] Unable to find relevant answer.”`
-
-## Advanced Knowledge Base usage
-
-To learn more about advanced ways of using the Knowledge Base, read this next guide.
+## Knowledge Base search step
 
 ## Debugging the Knowledge Base
 
@@ -108,3 +76,7 @@ There are two reasons the KB will not provide an answer. It's important to test 
 2. **The AI determined that the Answer to the user's question is not provided in the chunks that were returned**: It's important to remember that the KB works in two parts, like any other Vector database. 1) It uses the question to find relevant chunks. 2) It sends those to an AI to use to create an answer.
    1. **How to identify this problem**: Using the preview function in the KB, there is no answer provided, but sources are returned. If the sources are relevant, then it's a prompt and model issue.
    2. **How to fix this problem**: This is likely an issue with your prompt or (more often), the AI model you are using. Experiment with changing the model to see if that fixes the problem.
+
+## Advanced Knowledge Base usage
+
+To learn more about advanced ways of using the Knowledge Base, read this next guide.
