@@ -63,15 +63,23 @@ The knowledge base can directly be integrated through the Agent step. Ensure the
 
 ## KB search step
 
+The KB Search step lets you query your Knowledge Base directly within your flow logic—giving you precise control over how search results (chunks) are retrieved and used.
+
+This step:
+
+* Searches the Knowledge Base using a provided query.
+* Returns relevant chunks (text and metadata).
+* Lets you set fallback behavior if no results are found.
+* Doesn’t generate a summarized AI response—this step is **only** for retrieval.
+
+> Common use cases:
+>
+> * **Generate AI-powered summaries**: Use KB Search + Set AI to return concise summaries of user manuals or onboarding guides.
+> * **Extract product details**: Pull pricing or feature info from KB chunks and assign to variables for dynamic responses.
+
+***
+
 <br />
-
-The Knowledge Base is a vector-powered system that lets your Voiceflow Assistant retrieve and summarize answers from your own documents and website data.
-
-Ask ChatGPT
-
-The Knowledge Base is a vector-powered system that lets your Voiceflow Assistant retrieve and summarize answers from your own documents and website data.
-
-Ask ChatGPT
 
 ## Debugging the Knowledge Base
 
