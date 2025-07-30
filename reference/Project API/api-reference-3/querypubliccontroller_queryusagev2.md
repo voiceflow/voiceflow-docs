@@ -303,7 +303,7 @@ The API response supports pagination to efficiently manage and navigate through 
 }
 
 ```
-```json Api calls
+```json API calls
 // REQUEST body 
 
 {
@@ -344,6 +344,56 @@ The API response supports pagination to efficiently manage and navigate through 
         "apiToolID": "683e1a51abe040bae57273eb",
         "environmentID": "685e43867fff32e515fcac92",
         "name": "Get weather"
+      }
+    ]
+  }
+}
+
+```
+```json KB documents
+// REQUEST body 
+
+{
+  "data": [
+    {
+      "name": "kb_documents",
+      "filter": {
+        "projectID": "62912f08e83f76001b218690",
+        "startTime": "2021-08-01T00:00:00.000Z",
+        "limit": 3
+      }
+    }
+  ]
+}
+
+// ------------------------------------------
+
+// RESPONSE body
+
+{
+  "result": {
+    "cursor": 2106,
+    "items": [
+      {
+        "period": "2025-06-14T01:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "count": 6,
+        "documentID": "684c6d57eca71686851dd2e3"
+      },
+      {
+        "period": "2025-06-14T01:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "count": 6,
+        "documentID": "684c6d57eca71686851dd2e1"
+      },
+      {
+        "period": "2025-06-14T01:00:00.000Z",
+        "projectID": "62912f08e83f76001b218690",
+        "environmentID": "684c6d43ea3aff06439c1561",
+        "count": 2,
+        "documentID": "684c6d57eca71686851dd2e2"
       }
     ]
   }
