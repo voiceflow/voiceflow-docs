@@ -30,7 +30,7 @@ We'll need to access the `Project API key` for the design we want to connect int
 
 1. Open the agent project you are using
 2. Select on the ⚙️ **Settings** tab, found on the left-hand menu.
-3. Copy the `API Key` found in the API Key section.
+3. Copy the `Primary key` found in the API keys section.
 
 <Image align="center" alt="Above you can see the Integrations section within an Assistant project" border={false} caption="Above you can see the Integrations section within an agent project" src="https://files.readme.io/dcf4795-small-CleanShot_2023-05-02_at_00.30.30.png" />
 
