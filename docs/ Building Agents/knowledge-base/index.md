@@ -57,11 +57,17 @@ To learn more about how the Knowledge Base works, read [this](https://developer.
   2. It sends those pieces of information along with your custom instructions and prompt settings to an AI model to summarize the answer. If the AI model determines that the answer to the question is not in the relevant information, it will say that it cannot find an answer.
 * Responses from the knowledge base can use the Agent step or the Knowledge Base Query API directly.
 
-## Knowledge Base with the Agent step
+To learn how to import data into your Knowledge Base, read the <Anchor label="docs" target="_blank" href="https://docs.voiceflow.com/docs/importing-data-to-the-knowledge-base#/">docs</Anchor>.
+
+## Agent step
+
+The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled.
+
+![](https://files.readme.io/19b0ee3386ee4854b46ae3c637c25ba7c62408bbd71a3448e1e8b27d78833702-CleanShot_2025-07-30_at_14.17.322x.png)
 
 <br />
 
-## Knowledge Base search step
+## KB search step
 
 ## Debugging the Knowledge Base
 
