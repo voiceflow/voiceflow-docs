@@ -5,7 +5,7 @@ deprecated: false
 hidden: false
 link:
   new_tab: true
-  url: https://github.com/voiceflow/demos-n-examples/tree/master/voiceflow-slack
+  url: https://github.com/voiceflow-community/voiceflow-slack
 metadata:
   title: ''
   description: ''
