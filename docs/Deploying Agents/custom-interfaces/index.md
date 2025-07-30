@@ -12,7 +12,7 @@ next:
 ---
 # Overview
 
-You can use the Dialog API to integrate your <Glossary>agent</Glossary> with any custom channel or interface (voice, chat or multimodal). Any Voiceflow <Glossary>agent</Glossary> type works with a Custom Channel deployment as it uses the Dialog Manager API, which is available across every project type.
+You can use the Dialog API to integrate your agent with any custom channel or interface (voice, chat or multimodal). Any Voiceflow <Glossary>agent</Glossary> type works with a Custom Channel deployment as it uses the Dialog Manager API, which is available across every project type.
 
 The Dialog Manger API integrates through a REST API with your Custom Channel.
 
