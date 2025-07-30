@@ -57,13 +57,15 @@ To learn how to import data into your Knowledge Base, read the <Anchor label="do
 
 ## Agent step
 
-The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled.
+The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled. Once enabled, your agent will automatically reference your Knowledge Base when responding to user queries- no extra configuration needed.
 
 ![](https://files.readme.io/19b0ee3386ee4854b46ae3c637c25ba7c62408bbd71a3448e1e8b27d78833702-CleanShot_2025-07-30_at_14.17.322x.png)
 
 ## KB search step
 
 The KB Search step lets you query your Knowledge Base directly within your flow logic—giving you precise control over how search results (chunks) are retrieved and used.
+
+![](https://files.readme.io/e4a813d30ca4e2822c95d8c3dbbba9167ef185989182689a16f0c00bfba52654-CleanShot_2025-07-30_at_15.02.232x.png)
 
 This step:
 
@@ -78,8 +80,6 @@ This step:
 > * **Extract product details**: Pull pricing or feature info from KB chunks and assign to variables for dynamic responses.
 
 ***
-
-<br />
 
 ## Debugging the Knowledge Base
 
