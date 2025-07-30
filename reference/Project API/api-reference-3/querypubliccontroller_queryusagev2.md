@@ -400,7 +400,7 @@ The API response supports pagination to efficiently manage and navigate through 
 }
 
 ```
-```
+```json Integrations
 // REQUEST body 
 
 {
