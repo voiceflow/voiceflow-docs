@@ -80,3 +80,5 @@ There are two reasons the KB will not provide an answer. It's important to test 
 ## Advanced Knowledge Base usage
 
 To learn more about advanced ways of using the Knowledge Base, read this next guide.
+
+<LinkCard type="Doc" title="Document API reference" description="Upload files and content from websites using the Document API." href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/" />
