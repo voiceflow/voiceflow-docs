@@ -154,8 +154,16 @@ export function CreditsPricingTable() {
           let items = creditsData[type];
           if (!items || items.length === 0) return null;
           // Sort alphabetically by mapped item name
-          items = [...items].sort((a, b) => getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type)));
-          return (
+          //items = [...items].sort((a, b) => getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type)));
+          items = [...items].sort((a, b) => {
+            if (type === 'llm') {
+              const vendorCompare = getVendorName(a.vendor).localeCompare(getVendorName(b.vendor));
+              if (vendorCompare !== 0) return vendorCompare;
+              return (a.value ?? Infinity) - (b.value ?? Infinity);
+            }
+            return getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type));
+          });
+					return (
             <div key={type} style={{ marginBottom: '2rem' }}>
               <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{display}</h2>
               <div className="rdmd-table">
