@@ -37,6 +37,8 @@ export function CreditsPricingTable() {
       // STT
       if (category === 'asr') {
         if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - STT';
+				if (vendor && vendor.toLowerCase().includes('assemblyai')) return 'Assemblyai - STT';
+				if (vendor && vendor.toLowerCase().includes('cartesia')) return 'Cartesia - STT';
       }
       // TTS
       if (category === 'tts') {
