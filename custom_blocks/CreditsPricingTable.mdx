@@ -159,7 +159,7 @@ export function CreditsPricingTable() {
           // Sort alphabetically by mapped item name
           //items = [...items].sort((a, b) => getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type)));
           items = [...items].sort((a, b) => {
-            if (type === 'llm') {
+            if (['llm', 'asr', 'tts'].includes(type)) {
               const vendorCompare = getVendorName(a.vendor).localeCompare(getVendorName(b.vendor));
               if (vendorCompare !== 0) return vendorCompare;
               return (a.value ?? Infinity) - (b.value ?? Infinity);
