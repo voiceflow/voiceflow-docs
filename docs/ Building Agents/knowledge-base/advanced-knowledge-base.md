@@ -18,8 +18,6 @@ This article is a logical continuation of the previous [Knowledge Base](https://
 
 Instead of only interacting with the Knowledge Base from inside your agent, you can use the KB Query API to query the knowledge base, and can change more settings like the number of chunks returned or disabling synthesis, allowing you to do your own processing on the chunks retrieved. Learn more about the [API](https://developer.voiceflow.com/reference/post_knowledge-base-query), that can be called either using the API step in VF or called outside Voiceflow.
 
-**KB Answer Not Found**: `null`
-
 ## Customized tabular schema
 
 For users who require more control and flexibility, Voiceflow offers advanced formats for organizing and querying Knowledge Base content. We'll explore these features using a credit card application process example.
