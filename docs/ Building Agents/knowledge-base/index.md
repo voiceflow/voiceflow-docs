@@ -55,13 +55,13 @@ ${query}
 
 To learn how to import data into your Knowledge Base, read the <Anchor label="docs" target="_blank" href="https://docs.voiceflow.com/docs/importing-data-to-the-knowledge-base#/">docs</Anchor>.
 
-## Agent step
+## [Agent step]()
 
 The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled. Once enabled, your agent will automatically reference your Knowledge Base when responding to user queries- no extra configuration needed.
 
 ![](https://files.readme.io/19b0ee3386ee4854b46ae3c637c25ba7c62408bbd71a3448e1e8b27d78833702-CleanShot_2025-07-30_at_14.17.322x.png)
 
-## KB search step
+## [KB search step]()
 
 The KB Search step lets you query your Knowledge Base directly within your flow logic—giving you precise control over how search results (chunks) are retrieved and used. The `Chunk limit` allows you to customize how many chunks you wish the search step to retrieve from the Knowledge Base.
 
