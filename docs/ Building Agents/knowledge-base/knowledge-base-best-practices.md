@@ -81,37 +81,3 @@ The tabular data format is useful for structured information and allows for more
 Using the above data format, you’re able to have much more granular control over what information you retrieve. For example, the FAQs section adds additional vectors that would enhance the Knowledge Base’s ability to find similar information that is similar to what the user has asked.
 
 Similarly, you could dynamically filter searches by things like the “userType” field, to ensure that only information that is related to the user’s query is surfaced, i.e, business or personal.
-
-## Five Knowledge Base Optimization Practices
-
-1. **Use Markdown and Keep It Simple:**
-
-* Format your documents in markdown for better structure and easier parsing.
-* Stick to simple, clear formatting to aid in parsing.\*\*
-* Note: Voiceflow also uses Markdown to format its text responses, ensuring consistency across your agent.
-
-2. **Organize Content Effectively:**
-
-* Break down large documents into smaller, topic-focused files.
-* Maintain consistent formatting and structure across your documents.
-* For structured data, use the tabular format to allow for more precise querying and filtering.
-
-3. **Optimize Searchability:**
-
-* Make fields searchable if users are likely to query that information directly.
-* Include frequently asked questions (FAQs) as searchable terms to improve information discovery.
-* Use meaningful tags (like "userType") to categorize information for easy filtering.
-
-4. **Enhance with Metadata:**
-
-* Include relevant metadata that adds value, such as "lastUpdated" for content freshness and "pageLink" for navigation. For instance, you could use page link with a function to enable a user to click off to another webpage.
-
-5. **User-Centric Approach:**
-
-* Structure your data with the end-user in mind, anticipating how they might search for information.
-* Regularly update and review your Knowledge Base to ensure content remains current and relevant.
-* Test your Knowledge Base with various user queries to ensure it provides accurate and helpful responses.
-
-By focusing on these key practices, you can significantly enhance the effectiveness of your Voiceflow Knowledge Base, making it more accessible, accurate, and user-friendly.
-
-Next, lets look at the Workflow Builder.
