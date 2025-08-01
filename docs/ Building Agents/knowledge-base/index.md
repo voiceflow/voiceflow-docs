@@ -63,7 +63,7 @@ The knowledge base can directly be integrated through the Agent step. Ensure the
 
 ## KB search step
 
-The KB Search step lets you query your Knowledge Base directly within your flow logic—giving you precise control over how search results (chunks) are retrieved and used.
+The KB Search step lets you query your Knowledge Base directly within your flow logic—giving you precise control over how search results (chunks) are retrieved and used. The `Chunk limit` allows you to customize how many chunks you wish the search step to retrieve from the Knowledge Base.
 
 ![](https://files.readme.io/e4a813d30ca4e2822c95d8c3dbbba9167ef185989182689a16f0c00bfba52654-CleanShot_2025-07-30_at_15.02.232x.png)
 
