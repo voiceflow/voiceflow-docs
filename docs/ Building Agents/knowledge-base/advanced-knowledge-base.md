@@ -18,7 +18,7 @@ This article is a logical continuation of the previous [Knowledge Base](https://
 
 Instead of only interacting with the Knowledge Base from inside your agent, you can use the KB Query API to query the knowledge base, and can change more settings like the number of chunks returned or disabling synthesis, allowing you to do your own processing on the chunks retrieved. Learn more about the [API](https://developer.voiceflow.com/reference/post_knowledge-base-query), that can be called either using the API step in VF or called outside Voiceflow.
 
-## Customized tabular schema
+## <Anchor label="Customized tabular schema" target="_blank" href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-table-1#/">Customized tabular schema</Anchor>
 
 For users who require more control and flexibility, Voiceflow offers advanced formats for organizing and querying Knowledge Base content. We'll explore these features using a credit card application process example.
 
@@ -67,6 +67,8 @@ The tabular data format is useful for structured information and allows for more
 ```
 
 Using the above data format, you’re able to have much more granular control over what information you retrieve. For example, the FAQs section adds additional vectors that would enhance the Knowledge Base’s ability to find similar information that is similar to what the user has asked.
+
+To view the relevant endpoints, refer to the <Anchor label="API reference" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/2-document-api">API reference</Anchor> and **Upload Table Data** endpoint.
 
 ## Filter with metadata
 
