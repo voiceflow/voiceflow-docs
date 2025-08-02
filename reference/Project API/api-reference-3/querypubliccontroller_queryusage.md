@@ -4,7 +4,7 @@ excerpt: Query usage for a project
 api:
   file: analytics-api.json
   operationId: QueryPublicController_queryUsage
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   title: ''
