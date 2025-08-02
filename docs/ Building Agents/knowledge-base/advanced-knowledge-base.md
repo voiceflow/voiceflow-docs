@@ -14,7 +14,7 @@ This article is a logical continuation of the previous [Knowledge Base](https://
 
 # Advanced Use of the Knowledge Base
 
-## KB Query API
+## Document Upload API
 
 Instead of only interacting with the Knowledge Base from inside your agent, you can use the KB Query API to query the knowledge base, and can change more settings like the number of chunks returned or disabling synthesis, allowing you to do your own processing on the chunks retrieved. Learn more about the [API](https://developer.voiceflow.com/reference/post_knowledge-base-query), that can be called either using the API step in VF or called outside Voiceflow.
 
@@ -69,6 +69,10 @@ The tabular data format is useful for structured information and allows for more
 Using the above data format, you’re able to have much more granular control over what information you retrieve. For example, the FAQs section adds additional vectors that would enhance the Knowledge Base’s ability to find similar information that is similar to what the user has asked.
 
 To view the relevant endpoints, refer to the <Anchor label="API reference" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/2-document-api">API reference</Anchor> and **Upload Table Data** endpoint.
+
+## KB Query API
+
+Instead of only interacting with the Knowledge Base from inside your agent, you can use the KB Query API to query the knowledge base, and can change more settings like the number of chunks returned or disabling synthesis, allowing you to do your own processing on the chunks retrieved. Learn more about the [API](https://developer.voiceflow.com/reference/post_knowledge-base-query), that can be called either using the API step in VF or called outside Voiceflow.
 
 ## Filter with metadata
 
