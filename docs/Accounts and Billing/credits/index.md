@@ -77,7 +77,7 @@ Credits are charged differently for chat and voice agents because they run in di
 
     <tr>
       <td>
-        **LLM usage** (e.g. Agent step, Prompt step, Capture step, etc
+        **LLM usage** (e.g. Agent step, Prompt step, etc)
       </td>
 
       <td>
