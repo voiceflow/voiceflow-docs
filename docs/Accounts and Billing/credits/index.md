@@ -29,7 +29,7 @@ Credits are charged differently for chat and voice agents because they run in di
       </th>
 
       <th>
-        Credit Cost
+        **Credit Cost**
       </th>
     </tr>
   </thead>
