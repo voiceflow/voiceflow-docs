@@ -174,19 +174,19 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better.
 </Callout>
 
-\<Tabs>\
-\<Tab title="First Tab">
-Welcome to the content that you can only see inside the first Tab.
-\</Tab>
+<Tabs>
+  <Tab title="First Tab">
+    Welcome to the content that you can only see inside the first Tab.
+  </Tab>
 
-\<Tab title="Second Tab">
+  <Tab title="Second Tab">
+    Here's content that's only inside the second Tab.
+  </Tab>
 
-\</Tab>
-
-\<Tab title="Third Tab">\
-Here's content that's only inside the third Tab.
-\</Tab>
-\</Tabs>
+  <Tab title="Third Tab">
+    Here's content that's only inside the third Tab.
+  </Tab>
+</Tabs>
 
 ## Advanced Usage
 
