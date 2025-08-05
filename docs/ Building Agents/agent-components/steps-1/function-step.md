@@ -50,10 +50,10 @@ Next we will be setting up the selected function to integrate with your project.
    1. Define which variable in your flow will receive the output of the function.
    2. *Example*: The output of the function, \{ output }, is applied to \{target\_variable}.
    <br />
-   > 🚧 Input variables are `string` datatypes
-   >
-   > While using functions, please keep in mind that all input variables are treated as `string` data types. Objects, arrays or any other data structure aside from `text` are not allowed. If you wish to use numbers as input variables, keep in mind that they will be treated as `strings` unless converted.
-   <br />
+
+> 🚧 Input variables are `string` datatypes!
+>
+> While using functions, please keep in mind that all input variables are treated as `string` data types. Objects, arrays or any other data structure aside from `text` are not allowed. If you wish to use numbers as input variables, keep in mind that they will be treated as `strings` unless converted.
 
 <br />
 
