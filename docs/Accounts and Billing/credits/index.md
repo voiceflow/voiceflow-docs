@@ -13,7 +13,7 @@ Credits are the currency in Voiceflow to pay for AI usage and project hosting. V
 * **Agent hosting** - charged by messages sent by the user and minutes the agent spends on phone calls.
 * **AI service usage** - this includes LLM tokens, text-to-speech generation, and speech-to-text usage.
 
-Each Voiceflow credit costs $0.005 USD on non-Enterprise plans and can be used for either Agent hosting or AI services. Voiceflow only makes money on Agent hosting - AI service costs are passed through at cost, with no markup.
+Each Voiceflow credit costs $0.005 USD on *Business monthly* plans and can be used for either Agent hosting or AI services. Voiceflow only makes money on Agent hosting - AI service costs are passed through at cost, with no markup.
 
 ## Which actions consume credits?
 
@@ -41,7 +41,7 @@ Credits are charged differently for chat and voice agents because they run in di
       </td>
 
       <td>
-        1 credit ($0.005)
+        1 credit ($0.005) (Business monthly plan)
       </td>
     </tr>
 
@@ -89,7 +89,7 @@ Credits are charged differently for chat and voice agents because they run in di
 * Agent sends 15 messages + 3 API calls → 0 credits
 * LLM usage - GPT-4o Mini → \~1 credit
 
-Total: 6 credits ($0.03)
+Total: 6 credits ($0.03) (Business monthly pricing)
 
 <Accordion title="Example Conversation" icon="fa-comments">
   **Agent:** Hi! How can I help? *\[0.0001 Credits for LLM usage]*
@@ -115,7 +115,7 @@ Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM
 
 | Action                         | Credit Cost                                                                                      |
 | ------------------------------ | ------------------------------------------------------------------------------------------------ |
-| **Agent call time**            | 10 credits per minute ($0.05/min)                                                                |
+| **Agent call time**            | 10 credits per minute ($0.05/min) (Business monthly plan)                                        |
 | **Text-to-Speech (TTS)**       | Billed per character ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))   |
 | **Speech-to-Text (STT)**       | Billed per minute ([vendor rates](https://docs.voiceflow.com/docs/credits-pricing-table#/))      |
 | **LLM usage**                  | Based on tokens used ([billed at cost](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
@@ -130,7 +130,7 @@ Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM
 * Text-to-Speech - ElevenLabs Flash (2.5 min, \~2,140 chars, 9 credits per 1,000 characters) → 20 credits
 * Speech-to-Text - Deepgram Nova 3 - (5 min x 1 credit per minute) → 5 credits
 
-Total: 76 credits ($0.38, or $0.076 per minute)
+Total: 76 credits ($0.38, or $0.076 per minute (on the Business monthly plan)
 
 <br />
 
