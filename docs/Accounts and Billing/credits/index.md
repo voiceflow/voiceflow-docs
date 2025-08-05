@@ -17,16 +17,75 @@ Each Voiceflow credit costs $0.005 USD on non-Enterprise plans and can be used f
 
 ## Which actions consume credits?
 
-Credits are charged differently for chat and voice agents because they run in different ways: chat agents are asynchronous and cheaper, while voice agents operate in real time and cost more.
+Credits are charged differently for chat and voice agents because they run in different ways: chat agents are asynchronous and cheaper, while voice agents operate in real time and cost more.### Chat agents
 
-### Chat agents
+<Table>
+  <thead>
+    <tr>
+      <th>
+        **Action**
+      </th>
 
-| **Action**                                                                                                                    | Credit Cost                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **User sends a chat message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/)) | 1 credit ($0.005)                                                                                                   |
-| **Agent sends a chat message**                                                                                                | 0 credits (if not LLM-generated). Messages powered by LLMs will incur usage-based costs.                            |
-| **API calls, function calls, logic steps, and other similar actions**                                                         | 0 credits (free)                                                                                                    |
-| **LLM usage**                                                                                                                 | Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
+      <th>
+        Credit Cost
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **User sends a chat message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/))
+      </td>
+
+      <td>
+        1 credit ($0.005)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Agent sends a chat message (LLM-generated)**
+      </td>
+
+      <td>
+        Messages powered by LLMs will incur usage-based costs, based on tokens used.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Agent sends a chat message (non LLM-generated)**
+
+        > E.g. Static messages sent with the Message step, Card step, Carousel step, Buttons, etc
+      </td>
+
+      <td>
+        0 credits (free).
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **API calls, function calls, logic steps, and other similar actions**
+      </td>
+
+      <td>
+        0 credits (free)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **LLM usage** (e.g. Agent step, Prompt step, Capture step, etc
+      </td>
+
+      <td>
+        Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/))
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 <Callout icon="📘" theme="info">
   While sending a message is free, any message generated using an LLM (e.g. GPT-4) will incur usage-based charges based on tokens used. This includes auto-start messages or AI-generated responses.
