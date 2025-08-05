@@ -21,12 +21,12 @@ Credits are charged differently for chat and voice agents because they run in di
 
 ### Chat agents
 
-| Action                                                                                                                                 | Credit Cost                                                                                                         |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **User sends a chat or voice message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/)) | 1 credit ($0.005)                                                                                                   |
-| **Agent sends a voice or chat message**                                                                                                | 0 credits (free)                                                                                                    |
-| **API calls, function calls, logic steps, and other similar actions**                                                                  | 0 credits (free)                                                                                                    |
-| **LLM usage**                                                                                                                          | Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
+| Action                                                                                                                        | Credit Cost                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **User sends a chat message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/)) | 1 credit ($0.005)                                                                                                   |
+| **Agent sends a chat message**                                                                                                | 0 credits (free)                                                                                                    |
+| **API calls, function calls, logic steps, and other similar actions**                                                         | 0 credits (free)                                                                                                    |
+| **LLM usage**                                                                                                                 | Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
 
 <br />
 
