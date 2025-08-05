@@ -178,14 +178,13 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 
 <Tabs>
   <Tab title="Buttons">
-    <h3>Button Component</h3>
+    <h3>Button step</h3>
 
     Buttons allow your agent to offer **clickable response options** to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
 
     **Use case**: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
 
-    **Sample prompt:**
-<br />
+    **Example prompt:**
     ```
     Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.
     ```
@@ -194,7 +193,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   </Tab>
 
   <Tab title="Cards">
-    <h3>Card Component</h3>
+    <h3>Card step</h3>
 
     Cards are useful for showcasing **visual content along with links**. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
 
@@ -206,8 +205,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 
     **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
 
-    **Sample prompt:**
-<br />
+    **Example prompt:**
     ```
     If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.
     ```
@@ -216,18 +214,16 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   </Tab>
 
   <Tab title="Carousel">
-    <h3>Carousel Component</h3>
+    <h3>Carousel step</h3>
 
-    The Carousel combines the functionality of **cards and buttons**, allowing multiple scrollable cards each with their own images, text, and buttons. This is ideal for displaying **multiple options** in a compact, swipeable format.
+    The Carousel combines the functionality of **cards and buttons**, allowing multiple scrollable cards each with their own images, text, and buttons. This is ideal for displaying **multiple options** in a compact, swipeable format. You can add in links for images in the prompt- this way your agent uses your assets instead of a stock image.
 
     **Use case**: Product comparison, FAQ browsing, selecting a service tier, or anything involving multiple rich options.
 
-    **Sample prompt:**
-<br />
-
+    **Example prompt:**
     ```
     When the user asks about available service plans, display a carousel of 3 cards. Each card should have:
-    - A title: the plan name (e.g. "Starter", "Pro", "Enterprise")
+    - A title: the plan name ("Starter", "Pro", "Enterprise")
     - A short description of the plan
     - An image representing the plan
     - A button labeled "Select Plan" that sends back the plan name
