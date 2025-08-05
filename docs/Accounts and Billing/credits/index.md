@@ -17,7 +17,9 @@ Each Voiceflow credit costs $0.005 USD on non-Enterprise plans and can be used f
 
 ## Which actions consume credits?
 
-Credits are charged differently for chat and voice agents because they run in different ways: chat agents are asynchronous and cheaper, while voice agents operate in real time and cost more.### Chat agents
+Credits are charged differently for chat and voice agents because they run in different ways: chat agents are asynchronous and cheaper, while voice agents operate in real time and cost more.
+
+### Chat agents
 
 <Table>
   <thead>
