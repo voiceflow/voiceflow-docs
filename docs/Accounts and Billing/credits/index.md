@@ -24,11 +24,13 @@ Credits are charged differently for chat and voice agents because they run in di
 | Action                                                                                                                        | Credit Cost                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **User sends a chat message** (including through the [Dialogue Manager API](https://docs.voiceflow.com/reference/overview#/)) | 1 credit ($0.005)                                                                                                   |
-| **Agent sends a chat message**                                                                                                | 0 credits (free)                                                                                                    |
+| **Agent sends a chat message**                                                                                                | 0 credits (if not LLM-generated). Messages powered by LLMs will incur usage-based costs.                            |
 | **API calls, function calls, logic steps, and other similar actions**                                                         | 0 credits (free)                                                                                                    |
 | **LLM usage**                                                                                                                 | Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/)) |
 
-<br />
+<Callout icon="📘" theme="info">
+  While sending a message is free, any message generated using an LLM (e.g. GPT-4) will incur usage-based charges based on tokens used. This includes auto-start messages or AI-generated responses.
+</Callout>
 
 **Here's how this works in practice for a five turn conversation:**
 
