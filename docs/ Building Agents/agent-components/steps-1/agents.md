@@ -166,6 +166,10 @@ For example, if a user asks about a password reset but that information isn't in
 >
 > Your agent can only have access to your knowledge base if the tool is toggled on the agent step.
 
+## Agent-generated
+
+<br />
+
 ## Advanced Usage
 
 For even more powerful implementations:
