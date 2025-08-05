@@ -49,7 +49,6 @@ Next we will be setting up the selected function to integrate with your project.
 2. **Output Variable Mapping**
    1. Define which variable in your flow will receive the output of the function.
    2. *Example*: The output of the function, \{ output }, is applied to \{target\_variable}.
-   <br />
 
 > 📘 Input variables data types are treated as `strings` .
 >
