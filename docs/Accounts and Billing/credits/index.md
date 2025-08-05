@@ -47,16 +47,6 @@ Credits are charged differently for chat and voice agents because they run in di
 
     <tr>
       <td>
-        **Agent sends a chat message (LLM-generated)**
-      </td>
-
-      <td>
-        Messages powered by LLMs will incur usage-based costs, based on tokens used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
         **LLM usage (e.g. Agent step, Prompt step, or LLM-generated chat messages)**
       </td>
 
