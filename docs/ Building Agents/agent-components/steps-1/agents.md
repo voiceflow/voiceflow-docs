@@ -166,9 +166,32 @@ For example, if a user asks about a password reset but that information isn't in
 >
 > Your agent can only have access to your knowledge base if the tool is toggled on the agent step.
 
-## Agent-generated
+## Agent-generated components
 
-<br />
+The Agent step in Voiceflow allows agents to **dynamically** generate components in real time during a conversation. These components- **Buttons, Cards, and Carousel**- can be toggled on to let the agent include them in its replies. Once enabled, the agent will reference your prompt to determine how and when to use them.
+
+<Callout icon="👀">
+  **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better.
+</Callout>
+
+<Tabs>
+  <Tab title="Buttons">
+    <h3>Button Step</h3>
+    Buttons allow your agent to offer clickable response options to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
+
+    **Use case**: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
+
+    Sample prompt:
+  </Tab>
+
+  <Tab title="Second Tab">
+    Here's content that's only inside the second Tab.
+  </Tab>
+
+  <Tab title="Third Tab">
+    Here's content that's only inside the third Tab.
+  </Tab>
+</Tabs>
 
 ## Advanced Usage
 
