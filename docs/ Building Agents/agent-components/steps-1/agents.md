@@ -174,28 +174,65 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better. **Only chat interface agents** using the Agent step can dynamically generate these components.
 </Callout>
 
-\<Tabs>
-&#x20; \<Tab title="Buttons">
-&#x20;   \<h3>Button Component\</h3>
-&#x20;   Buttons allow your agent to offer clickable response options to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow. For example, if they clicked on a button named "Request refund", the agent would observe it as if they typed "Request refund" as a chat message.
+<Tabs>
+  <Tab title="Buttons">
+    <h3>Button Component</h3>
 
-&#x20;   \*\*Use case\*\*: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
+    Buttons allow your agent to offer **clickable response options** to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
 
-&#x20;   \*\*Sample prompt\*\*: \`Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.\`
+    **Use case**: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
 
+    **Sample prompt:**
 
-&#x20;   \\\[ insert img here ]
-&#x20; \</Tab>
+    ```
+    Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.
+    ```
 
-&#x20; \<Tab title="Cards">
-&#x20;   \<h3>Cards Component\</h3>
-&#x20;   Cards are useful for showcasing visual content along with links. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents. Cards should be used if you're embedding the assistant in a website environment—links will open the links in a new tab.
+    <Video src="ADD_BUTTON_VIDEO_HERE" />
+  </Tab>
 
-&#x20;   \*\*Use case\*\*: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
+  <Tab title="Cards">
+    <h3>Card Component</h3>
 
-&#x20;   \`\`\`markdown Example prompt
+    Cards are useful for showcasing **visual content along with links**. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
 
-If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https\://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https\://example.com/troubleshoot.\`\`\`
+    > ⚠️ Cards should **only** be used if you're embedding the assistant in a web environment—links will open in a new tab.
+
+    **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
+
+    **Sample prompt:**
+
+    ```
+    If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.
+    ```
+
+    <Video src="ADD_CARD_VIDEO_HERE" />
+  </Tab>
+
+  <Tab title="Carousel">
+    <h3>Carousel Component</h3>
+
+    The Carousel combines the functionality of **cards and buttons**, allowing multiple scrollable cards each with their own images, text, and buttons. This is ideal for displaying **multiple options** in a compact, swipeable format.
+
+    **Use case**: Product comparison, FAQ browsing, selecting a service tier, or anything involving multiple rich options.
+
+    **Sample prompt:**
+
+    ```
+    When the user asks about available service plans, display a carousel of 3 cards. Each card should have:
+    - A title: the plan name (e.g. "Starter", "Pro", "Enterprise")
+    - A short description of the plan
+    - An image representing the plan
+    - A button labeled "Select Plan" that sends back the plan name
+
+    Ensure the user can scroll through and pick one. After selection, proceed with a message confirming their choice and offering next steps.
+    ```
+
+    <Video src="ADD_CAROUSEL_VIDEO_HERE" />
+  </Tab>
+</Tabs>
+
+<br />
 
 <br />
 
