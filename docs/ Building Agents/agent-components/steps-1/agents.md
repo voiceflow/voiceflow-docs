@@ -190,9 +190,7 @@ Cards are useful for showcasing visual content along with links. Each card can i
 
 <br />
 
-> 📘 Cards redirect to sub-pages.
->
-> Cards should only be used if you're embedding the assistant in a website environment—links will open sub-pages in a new tab.
+
 
 \</Tab>
 
