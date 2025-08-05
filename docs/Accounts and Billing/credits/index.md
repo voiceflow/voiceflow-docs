@@ -130,7 +130,7 @@ Voice agents are billed per minute, plus text-to-speech, speech-to-text, and LLM
 * Text-to-Speech - ElevenLabs Flash (2.5 min, \~2,140 chars, 9 credits per 1,000 characters) → 20 credits
 * Speech-to-Text - Deepgram Nova 3 - (5 min x 1 credit per minute) → 5 credits
 
-Total: 76 credits ($0.38, or $0.076 per minute (on the Business monthly plan)
+Total: 76 credits ($0.38, or $0.076 per minute on the Business monthly plan)
 
 <br />
 
