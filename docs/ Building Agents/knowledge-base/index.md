@@ -14,7 +14,7 @@ next:
 ---
 The Knowledge Base (KB) in Voiceflow is a vector database that allows you to leverage your own documents and website data to power answers and define variables on your Voiceflow Assistant.
 
-![](https://files.readme.io/822b2438fabe08c6db61c31b93d4c23ec6eb5ad2817d0305776510e61c0e5c9f-CleanShot_2025-07-30_at_13.52.292x.png)
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkpGYZAwEXLKQxE4f2nd7lDXesSZFqUbmcu8Mp" />
 
 # How it works
 
@@ -59,7 +59,7 @@ To learn how to import data into your Knowledge Base, read the <Anchor label="do
 
 The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled. Once enabled, your agent will automatically reference your Knowledge Base when responding to user queries- no extra configuration needed.
 
-![](https://files.readme.io/19b0ee3386ee4854b46ae3c637c25ba7c62408bbd71a3448e1e8b27d78833702-CleanShot_2025-07-30_at_14.17.322x.png)
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkd0EZs5lpu1oeO8lNrvZq7mJiBcVy0XgAjEbS" />
 
 ## [KB search step]()
 
