@@ -203,7 +203,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 
     **Sample prompt**:
 
-    \`When the user asks about available service plans, display a carousel of 3 cards. Each card should have:
+    \`\`\`When the user asks about available service plans, display a carousel of 3 cards. Each card should have:
 
     * A title: the plan name (e.g. "Starter", "Pro", "Enterprise")
     * A short description of the plan
@@ -211,7 +211,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
     * A button labeled "Select Plan" that sends back the plan name
 
     Ensure the user can scroll through and pick one. After selection, proceed with a message confirming their choice and offering next steps.
-    \`
+    \`\`\`
   </Tab>
 </Tabs>
 
