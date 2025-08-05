@@ -170,6 +170,14 @@ For example, if a user asks about a password reset but that information isn't in
 
 The Agent step in Voiceflow allows agents to **dynamically** generate components in real time during a conversation. These components- **Buttons, Cards, and Carousel**- can be toggled on to let the agent include them in its replies. Once enabled, the agent will reference your prompt to determine how and when to use them.
 
+![](https://files.readme.io/cea9cb4921ad883e8ec018bdf0bed2ec92ef988d99c3f759106d95efbace173c-CleanShot_2025-08-05_at_14.24.382x.png)
+
+![](https://files.readme.io/6e16b53e4f10cc42dd0086cfea0b455fb7d991e9fe57fe499cfcbb4ddde6f8df-CleanShot_2025-08-05_at_14.27.262x.png)
+
+![](https://files.readme.io/4a0e1d807b2f5f9808ac43f2b7a86f5a7ea3e71dc451f6b8bf0a7a614c9933c1-CleanShot_2025-08-05_at_14.28.582x.png)
+
+<br />
+
 <Callout icon="👀" theme="default">
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better. **Only chat interface agents** using the Agent step can dynamically generate these components.
 </Callout>
@@ -196,9 +204,11 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 
     Cards are useful for showcasing **visual content along with links**. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
 
-    > ⚠️ Cards provide redirect urls.
-    >
-    > Cards should **only** be used if you're embedding the assistant in a web environment—links will open in a new tab.
+    <Callout icon="👀" theme="default">
+      ### Cards provide redirect urls.
+
+      Cards should **only** be used if you're embedding the assistant in a web environment—links will open in a new tab.
+    </Callout>
 
     **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
 
