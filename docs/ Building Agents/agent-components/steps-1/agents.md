@@ -157,9 +157,6 @@ When you enable knowledge base integration, your agent can automatically search 
 * **Knowledge Weighting**: You can adjust how much the agent relies on its built-in knowledge versus your knowledge base through the instructions
 
 For example, if a user asks about a password reset but that information isn't in your knowledge base, the agent can provide general guidance. But when asked about email confirmation—which is in your knowledge base—it can provide specific, accurate information from your documentation.
-
-![](https://files.readme.io/690a1fde9e1a9df1786ef65aa0fd4862b4d6ecbe6793df7d2d3646d323bb0749-CleanShot_2025-07-29_at_15.26.252x.png)
-
 <br />
 
 > 📘 Ensure knowledge base is toggled on!
@@ -170,9 +167,6 @@ For example, if a user asks about a password reset but that information isn't in
 
 The Agent step in Voiceflow allows agents to **dynamically** generate components in real time during a conversation. These components- **Buttons, Cards, and Carousel**- can be toggled on to let the agent include them in its replies. Once enabled, the agent will reference your prompt to determine how and when to use them.
 
-![](https://files.readme.io/cea9cb4921ad883e8ec018bdf0bed2ec92ef988d99c3f759106d95efbace173c-CleanShot_2025-08-05_at_14.24.382x.png)
-
-![](https://files.readme.io/6e16b53e4f10cc42dd0086cfea0b455fb7d991e9fe57fe499cfcbb4ddde6f8df-CleanShot_2025-08-05_at_14.27.262x.png)
 
 ![](https://files.readme.io/4a0e1d807b2f5f9808ac43f2b7a86f5a7ea3e71dc451f6b8bf0a7a614c9933c1-CleanShot_2025-08-05_at_14.28.582x.png)
 
@@ -196,7 +190,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
     Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.
     ```
 
-    <Video src="ADD_BUTTON_VIDEO_HERE" />
+    ![](https://files.readme.io/cea9cb4921ad883e8ec018bdf0bed2ec92ef988d99c3f759106d95efbace173c-CleanShot_2025-08-05_at_14.24.382x.png)
   </Tab>
 
   <Tab title="Cards">
@@ -218,7 +212,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
     If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.
     ```
 
-    <Video src="ADD_CARD_VIDEO_HERE" />
+    ![](https://files.readme.io/6e16b53e4f10cc42dd0086cfea0b455fb7d991e9fe57fe499cfcbb4ddde6f8df-CleanShot_2025-08-05_at_14.27.262x.png)
   </Tab>
 
   <Tab title="Carousel">
@@ -240,7 +234,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
     Ensure the user can scroll through and pick one. After selection, proceed with a message confirming their choice and offering next steps.
     ```
 
-    <Video src="ADD_CAROUSEL_VIDEO_HERE" />
+    ![](https://files.readme.io/690a1fde9e1a9df1786ef65aa0fd4862b4d6ecbe6793df7d2d3646d323bb0749-CleanShot_2025-07-29_at_15.26.252x.png)
   </Tab>
 </Tabs>
 
