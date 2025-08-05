@@ -57,6 +57,16 @@ Credits are charged differently for chat and voice agents because they run in di
 
     <tr>
       <td>
+        **LLM usage (e.g. Agent step, Prompt step, or LLM-generated chat messages)**
+      </td>
+
+      <td>
+        Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/))
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         **Agent sends a chat message (non LLM-generated)**
 
         > E.g. Static messages sent with the Message step, Card step, Carousel step, Buttons, etc
@@ -74,16 +84,6 @@ Credits are charged differently for chat and voice agents because they run in di
 
       <td>
         0 credits (free)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        **LLM usage (e.g. Agent step, Prompt step, or LLM-generated chat messages)**
-      </td>
-
-      <td>
-        Based on tokens used, billed at cost (see [pricing table](https://docs.voiceflow.com/docs/credits-pricing-table#/))
       </td>
     </tr>
   </tbody>
