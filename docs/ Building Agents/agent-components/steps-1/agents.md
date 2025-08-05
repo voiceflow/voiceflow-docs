@@ -192,11 +192,26 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 
     **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
 
-    **Sample prompt**:`If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.`
+    **Sample prompt**: `If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.`
   </Tab>
 
   <Tab title="Carousels">
-    Here's content that's only inside the third Tab.
+    <h3>Carousel Component</h3>
+    The Carousel combines the functionality of cards and buttons, allowing multiple scrollable cards each with their own images, text, and buttons. This is ideal for displaying multiple options in a compact, swipeable format.
+
+    **Use case**: Product comparison, FAQ browsing, selecting a service tier, or anything involving multiple rich options.
+
+    **Sample prompt**:
+
+    \`When the user asks about available service plans, display a carousel of 3 cards. Each card should have:
+
+    * A title: the plan name (e.g. "Starter", "Pro", "Enterprise")
+    * A short description of the plan
+    * An image representing the plan
+    * A button labeled "Select Plan" that sends back the plan name
+
+    Ensure the user can scroll through and pick one. After selection, proceed with a message confirming their choice and offering next steps.
+    \`
   </Tab>
 </Tabs>
 
