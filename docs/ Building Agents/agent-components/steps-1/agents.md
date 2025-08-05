@@ -178,7 +178,7 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 \<Tab title="Buttons">
 \<h3>Button Step\</h3>
 Buttons allow your agent to offer clickable response options to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
-
+\</Tab>
 ```
 ```
 
@@ -189,6 +189,7 @@ Buttons allow your agent to offer clickable response options to the user. When a
 Cards are useful for showcasing visual content along with links. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
 
 <br />
+
 > 📘 Cards redirect to sub-pages.
 >
 > Cards should only be used if you're embedding the assistant in a website environment—links will open sub-pages in a new tab.
