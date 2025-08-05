@@ -196,7 +196,9 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
 
     Cards are useful for showcasing **visual content along with links**. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
 
-    > ⚠️ Cards should **only** be used if you're embedding the assistant in a web environment—links will open in a new tab.
+    > ⚠️ Cards provide redirect urls.
+    >
+    > Cards should **only** be used if you're embedding the assistant in a web environment—links will open in a new tab.
 
     **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
 
