@@ -171,19 +171,31 @@ For example, if a user asks about a password reset but that information isn't in
 The Agent step in Voiceflow allows agents to **dynamically** generate components in real time during a conversation. These components- **Buttons, Cards, and Carousel**- can be toggled on to let the agent include them in its replies. Once enabled, the agent will reference your prompt to determine how and when to use them.
 
 <Callout icon="👀" theme="default">
-  **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better.
+  **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better. **Only chat interface agents** using the Agent step can dynamically generate these components.
 </Callout>
 
 <Tabs>
-  <Tab title="First Tab">
-    Welcome to the content that you can only see inside the first Tab.
+  <Tab title="Buttons">
+    <h3>Button Component</h3>
+    Buttons allow your agent to offer clickable response options to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow. For example, if they clicked on a button named "Request refund", the agent would observe it as if they typed "Request refund" as a chat message.
+
+    **Use case**: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
+
+    **Sample prompt**: `Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.`
+
+    \[ insert img here ]
   </Tab>
 
-  <Tab title="Second Tab">
-    Here's content that's only inside the second Tab.
+  <Tab title="Cards">
+    <h3>Cards Component</h3>
+    Cards are useful for showcasing visual content along with links. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents. Cards should be used if you're embedding the assistant in a website environment—links will open the links in a new tab.
+
+    **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
+
+    **Sample prompt**:`If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.`
   </Tab>
 
-  <Tab title="Third Tab">
+  <Tab title="Carousels">
     Here's content that's only inside the third Tab.
   </Tab>
 </Tabs>
