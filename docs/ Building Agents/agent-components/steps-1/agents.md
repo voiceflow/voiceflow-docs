@@ -174,26 +174,18 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better.
 </Callout>
 
-\<Tabs>
-&#x20; \<Tab title="First Tab">
-&#x20;   Welcome to the content that you can only see inside the first Tab.
-&#x20; \</Tab>
+\<Tabs>\
+\<Tab title="First Tab">
+Welcome to the content that you can only see inside the first Tab.
+\</Tab>
 
-&#x20; \<Tab title="Second Tab">
+\<Tab title="Second Tab">
 
-<br />
+\</Tab>
 
-> 📘 Cards redirect to sub-pages.
->
-> Cards should only be used if you're embedding the assistant in a website environment—links will open sub-pages in a new tab.
-
-<br />
-
-&#x20; \</Tab>
-
-&#x20; \<Tab title="Third Tab">
-&#x20;   Here's content that's only inside the third Tab.
-&#x20; \</Tab>
+\<Tab title="Third Tab">\
+Here's content that's only inside the third Tab.
+\</Tab>
 \</Tabs>
 
 ## Advanced Usage
