@@ -174,25 +174,30 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better.
 </Callout>
 
-\<Tabs>
-&#x20; \<Tab title="Buttons">
-&#x20;   \<h3>Button Step\</h3>
-&#x20;   Buttons allow your agent to offer clickable response options to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
+\<Tabs>\
+\<Tab title="Buttons">
+\<h3>Button Step\</h3>
+Buttons allow your agent to offer clickable response options to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
 
-&#x20;   \*\*Use case\*\*: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
+```
+```
 
-&#x20;   \*\*Sample prompt\*\*:
-\`Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.\`
-&#x20; \</Tab>
+```
+```
 
-&#x20; \<Tab title="Cards">\<h3>Card Component\</h3>
+\<Tab title="Cards">\<h3>Card Component\</h3>\
 Cards are useful for showcasing visual content along with links. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
-&#x20;  &#x20;
-&#x20; \</Tab>
 
-&#x20; \<Tab title="Third Tab">
-&#x20;   Here's content that's only inside the third Tab.
-&#x20; \</Tab>
+<br />
+> 📘 Cards redirect to sub-pages.
+>
+> Cards should only be used if you're embedding the assistant in a website environment—links will open sub-pages in a new tab.
+
+\</Tab>
+
+\<Tab title="Third Tab">\
+Here's content that's only inside the third Tab.
+\</Tab>
 \</Tabs>
 
 ## Advanced Usage
