@@ -55,7 +55,7 @@ ${query}
 
 To learn how to import data into your Knowledge Base, read the <Anchor label="docs" target="_blank" href="https://docs.voiceflow.com/docs/importing-data-to-the-knowledge-base#/">docs</Anchor>.
 
-## <Anchor label="Agent step" target="_blank" href="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkpGYZAwEXLKQxE4f2nd7lDXesSZFqUbmcu8Mp">Agent step</Anchor>
+## <Anchor label="Agent step" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step</Anchor>
 
 The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled. Once enabled, your agent will automatically reference your Knowledge Base when responding to user queries- no extra configuration needed.
 
