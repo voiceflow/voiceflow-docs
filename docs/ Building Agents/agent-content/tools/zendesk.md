@@ -37,10 +37,10 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 * Pull the latest comment from an ongoing ticket to give users real-time updates.
 * Update a ticket’s status based on a user’s spoken intent (e.g., “I want to cancel”).
 
-<Callout icon="👀">
+<Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  Each Zendesk action may require unique and different arguments. Ensure you verify them and decide whether they are to be defaulted to a value, provided in advance(hardcoded) or provided to the agent to be collected.
+  Each Zendesk action requires specific arguments. Be sure to review each one and decide whether it should be *defaulted, hardcoded, or collected by the agent*. Add an LLM description for every argument to help the assistant understand its purpose and how to populate it.
 
   ![](https://files.readme.io/8b407eebf2bd5e7dc062b9aaffdd647fa971f2ef796440c6f8ac28633abb38cb-CleanShot_2025-08-06_at_13.57.132x.png)
 </Callout>
