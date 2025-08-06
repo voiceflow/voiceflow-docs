@@ -30,13 +30,11 @@ And much more...
   All the functions, integrations and APIs available in the **Tool step** can also be toggled and selected for use in the **Agent step**.
 
   ![](https://files.readme.io/1ba143caec56c024d2dc331bedc2e4aee95dca847705d6213b80d9943fddefb2-CleanShot_2025-07-29_at_14.44.212x.png)
-
-
 </Callout>
 
 ## Example use case: *Gmail*
 
-In the example shown, the Tool Step sends a confirmation email using Gmail. The following variables were configured:
+In the example shown, the *Basic Template*'s customer support specialist agent needs to handle email functionality at the end of the conversation with the user. The tool step is used to send a confirmation email using Gmail. The following variables were configured:
 
 > * To
 > * Body
