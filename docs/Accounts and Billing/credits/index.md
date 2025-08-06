@@ -79,8 +79,8 @@ Credits are charged differently for chat and voice agents because they run in di
   </tbody>
 </Table>
 
-<Callout icon="📘" theme="info">
-  While sending a message is free, any message generated using an LLM (e.g. GPT-4) will incur usage-based charges based on tokens used. This includes auto-start messages or AI-generated responses.
+<Callout icon="ℹ️">
+  While sending a message is free, any message generated using an LLM (e.g. through the [Prompt step](doc:prompt-step) or [Agent step](doc:agents)) will incur usage-based charges based on tokens used. This includes auto-start messages or AI-generated responses.
 </Callout>
 
 **Here's how this works in practice for a five turn conversation:**
