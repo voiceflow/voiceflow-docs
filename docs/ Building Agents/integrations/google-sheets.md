@@ -1,7 +1,7 @@
 ---
 title: Google Sheets
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
