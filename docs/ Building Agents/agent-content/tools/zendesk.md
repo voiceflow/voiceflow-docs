@@ -44,3 +44,29 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 
   ![](https://files.readme.io/8b407eebf2bd5e7dc062b9aaffdd647fa971f2ef796440c6f8ac28633abb38cb-CleanShot_2025-08-06_at_13.57.132x.png)
 </Callout>
+
+<br />
+
+## Frequently asked questions
+
+### What can I do with the Zendesk integration?
+
+> You can trigger Zendesk actions such as creating tickets, finding users, adding comments, or updating tickets directly from your workflow. This allows you to build support workflows that automatically interact with your Zendesk account based on user input or logic flows.
+
+### How do I provide the required inputs for a Zendesk action?
+
+> Each Zendesk action requires specific arguments (e.g., ticket ID, user email, comment body). You can either:
+>
+> * Pre-fill these values in the tool or agent step,
+> * Collect them from the user using the agent
+> * Set default values for fallback cases.
+>
+> Always include a clear LLM description for each argument to help the agent understand how to retrieve the right data.
+
+### What happens if a ticket or user isn’t found?
+
+> If the Zendesk action fails to find the requested resource (like a ticket or user), the agent will inform the user they were unable to perform the action. You can add conditional logic in the agent's prompt to handle these cases gracefully, such as prompting the user to re-enter information or skipping to an *exit condition*.
+
+### Can I update an existing ticket based on user replies?
+
+> Yes. Use the "Update ticket" or "Add ticket comment" actions and pass in the correct ticket ID (either stored earlier in the flow or retrieved using “Find ticket”). This enables dynamic support workflows in Voiceflow that react to user responses in real time.
