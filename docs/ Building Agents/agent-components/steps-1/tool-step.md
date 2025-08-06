@@ -34,7 +34,7 @@ And much more...
 
 ## Example use case: *Gmail*
 
-In the example shown, the *Basic Template*'s customer support specialist agent needs to handle email functionality at the end of the conversation with the user. The tool step is used to send a confirmation email using Gmail. The following variables were configured:
+In the example shown, the *Basic Template*'s customer support specialist agent needs to handle email functionality at the end of the conversation with the user. The tool step is used to send a confirmation email using Gmail. The following variables were configured as variables, to be captured in the *agent step* and passed as arguments to the *tool step*:
 
 > * To
 > * Body
