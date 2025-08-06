@@ -2,7 +2,7 @@
 title: Zendesk
 excerpt: Zendesk integration into your Voiceflow agent.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
@@ -70,3 +70,7 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 ### Can I update an existing ticket based on user replies?
 
 > Yes. Use the "Update ticket" or "Add ticket comment" actions and pass in the correct ticket ID (either stored earlier in the flow or retrieved using “Find ticket”). This enables dynamic support workflows in Voiceflow that react to user responses in real time.
+
+﻿
+
+<LinkCard type="Doc" title="Voiceflow Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/" />
