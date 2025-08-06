@@ -1,5 +1,5 @@
 ---
-title: How to get your Voiceflow Project API key
+title: How to get your Voiceflow API key
 excerpt: ''
 deprecated: false
 hidden: false
@@ -14,11 +14,22 @@ next:
 >
 > Start from the [beginning](https://docs.voiceflow.com/reference/api-guide-start) here.
 
-To use the Voiceflow APIs, the first thing you need is your API key. It's specific to each agent instead of for your whole account.
+To use Voiceflow APIs, the first thing you need is your API key. The same Voiceflow Project API key can be used for all Voiceflow APIs.
 
-First, open your agent. Then go to Integrations > API Keys and copy your API key.
+<Callout icon="❗️">
+  Every Voiceflow Project has its own unique API key.
+</Callout>
 
-![](https://files.readme.io/e81b40a-CleanShot_2024-07-15_at_14.47.382x.png)
+### Find your Voiceflow API Key
+
+1. Open your Voiceflow Project
+2. Open 'Settings', then go to 'API Keys'
+3. Your 'primary key' is your Project's API key
+4. Copy it - and you're good to go!
+
+<Image align="center" src="https://files.readme.io/daa782632b0a50a4ca43f97ee6db8ba4e77db04d7f90208aa983f432a265c175-Screenshot_2025-08-06_at_12.02.26_AM.png" />
+
+<br />
 
 To learn more about API keys, see this [article](https://developer.voiceflow.com/reference/authentication) about authentication.
 
