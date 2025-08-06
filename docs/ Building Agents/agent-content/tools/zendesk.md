@@ -73,4 +73,4 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 
 ﻿
 
-<LinkCard type="Doc" title="Voiceflow Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/" />
+<LinkCard type="Doc" title="Voiceflow Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
