@@ -491,11 +491,13 @@
           },
           "startTime": {
             "description": "A timestamp in ISO-8601 format",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "endTime": {
             "description": "A timestamp in ISO-8601 format",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "limit": {
             "type": "integer",
@@ -523,6 +525,26 @@
       "lang": "cURL",
       "label": "Query interactions",
       "source": "curl --request POST \\\n     --url https://analytics-api.voiceflow.com/v2/query/usage \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: VF.DM.YOUR_API_KEY' \\\n     --data '{\n  \"data\": {\n    \"name\": \"interactions\",\n    \"filter\": {\n      \"projectID\": \"62912f08e83f76001b218690\",\n      \"limit\": 100\n    }\n  }\n}'"
+    },
+    {
+      "lang": "cURL",
+      "label": "Query top intents",
+      "source": "curl --request POST \\\n     --url https://analytics-api.voiceflow.com/v2/query/usage \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: VF.DM.YOUR_API_KEY' \\\n     --data '{\n  \"data\": {\n    \"name\": \"top_intents\",\n    \"filter\": {\n      \"projectID\": \"62912f08e83f76001b218690\",\n      \"limit\": 50\n    }\n  }\n}'"
+    },
+    {
+      "lang": "cURL",
+      "label": "Query with time range",
+      "source": "curl --request POST \\\n     --url https://analytics-api.voiceflow.com/v2/query/usage \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: VF.DM.YOUR_API_KEY' \\\n     --data '{\n  \"data\": {\n    \"name\": \"unique_users\",\n    \"filter\": {\n      \"projectID\": \"62912f08e83f76001b218690\",\n      \"startTime\": \"2024-01-01T00:00:00Z\",\n      \"endTime\": \"2024-01-31T23:59:59Z\",\n      \"limit\": 100\n    }\n  }\n}'"
+    },
+    {
+      "lang": "JavaScript",
+      "label": "JavaScript fetch",
+      "source": "const response = await fetch('https://analytics-api.voiceflow.com/v2/query/usage', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n    'Authorization': 'VF.DM.YOUR_API_KEY'\n  },\n  body: JSON.stringify({\n    data: {\n      name: 'interactions',\n      filter: {\n        projectID: '62912f08e83f76001b218690',\n        limit: 100\n      }\n    }\n  })\n});\n\nconst result = await response.json();"
+    },
+    {
+      "lang": "Python",
+      "label": "Python requests",
+      "source": "import requests\nimport json\n\nurl = 'https://analytics-api.voiceflow.com/v2/query/usage'\nheaders = {\n    'Content-Type': 'application/json',\n    'Authorization': 'VF.DM.YOUR_API_KEY'\n}\n\ndata = {\n    'data': {\n        'name': 'interactions',\n        'filter': {\n            'projectID': '62912f08e83f76001b218690',\n            'limit': 100\n        }\n    }\n}\n\nresponse = requests.post(url, headers=headers, json=data)\nresult = response.json()"
     }
   ]
 }
