@@ -64,7 +64,360 @@
                   "type": "object",
                   "properties": {
                     "result": {
-                      "$ref": "#/components/schemas/UnifiedUsageResponse"
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  },
+                                  "type": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count",
+                                  "type"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "intents": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "description": "The name of the intent",
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "description": "The number of times the intent was used in the project(s) that matched the provided filter",
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "exclusiveMinimum": false
+                                  }
+                                },
+                                "required": [
+                                  "name",
+                                  "count"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "intents"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  },
+                                  "diagramID": {
+                                    "type": "string"
+                                  },
+                                  "nodeID": {
+                                    "type": "string"
+                                  },
+                                  "model": {
+                                    "type": "string"
+                                  },
+                                  "type": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count",
+                                  "diagramID",
+                                  "nodeID",
+                                  "model",
+                                  "type"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  },
+                                  "functionID": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "successCount": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count",
+                                  "functionID",
+                                  "name",
+                                  "successCount"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  },
+                                  "apiToolID": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "successCount": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count",
+                                  "apiToolID",
+                                  "name",
+                                  "successCount"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  },
+                                  "documentID": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count",
+                                  "documentID"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "type": "integer"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "period": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "projectID": {
+                                    "type": "string"
+                                  },
+                                  "environmentID": {
+                                    "type": "string"
+                                  },
+                                  "count": {
+                                    "type": "integer"
+                                  },
+                                  "integrationToolName": {
+                                    "type": "string"
+                                  },
+                                  "successCount": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "period",
+                                  "projectID",
+                                  "environmentID",
+                                  "count",
+                                  "integrationToolName",
+                                  "successCount"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "items"
+                          ]
+                        }
+                      ]
                     }
                   },
                   "required": [
@@ -133,8 +486,8 @@
           "projectID": {
             "type": "string",
             "minLength": 1,
-            "description": "The project ID for which to query usage data",
-            "example": "62912f08e83f76001b218690"
+            "description": "The `projectID` of your assistant.  You can find this value in your assistant's **Settings** page.  Example: `62912f08e83f76001b218690`",
+            "default": "62912f08e83f76001b218690"
           },
           "startTime": {
             "description": "A timestamp in ISO-8601 format",
@@ -157,115 +510,6 @@
         "required": [
           "projectID"
         ]
-      },
-      "UnifiedUsageResponse": {
-        "type": "object",
-        "description": "Unified response structure for all usage query types",
-        "properties": {
-          "cursor": {
-            "type": "integer",
-            "description": "Pagination cursor for fetching next page of results (not applicable for top_intents)"
-          },
-          "items": {
-            "type": "array",
-            "description": "Array of usage data items (not applicable for top_intents)",
-            "items": {
-              "$ref": "#/components/schemas/UsageItem"
-            }
-          },
-          "intents": {
-            "type": "array",
-            "description": "Array of top intents (only applicable for top_intents query)",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "description": "The name of the intent",
-                  "type": "string"
-                },
-                "count": {
-                  "description": "The number of times the intent was used in the project(s) that matched the provided filter",
-                  "type": "integer",
-                  "minimum": 0,
-                  "exclusiveMinimum": false
-                }
-              },
-              "required": [
-                "name",
-                "count"
-              ]
-            }
-          }
-        }
-      },
-      "UsageItem": {
-        "type": "object",
-        "description": "Individual usage data item with all possible fields",
-        "properties": {
-          "period": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Time period for this data point"
-          },
-          "projectID": {
-            "type": "string",
-            "description": "Project identifier"
-          },
-          "environmentID": {
-            "type": "string",
-            "description": "Environment identifier"
-          },
-          "count": {
-            "type": "integer",
-            "description": "Usage count for this period"
-          },
-          "type": {
-            "type": "string",
-            "description": "Type of interaction (applicable for interactions and credit_usage queries)"
-          },
-          "diagramID": {
-            "type": "string",
-            "description": "Diagram identifier (applicable for credit_usage queries)"
-          },
-          "nodeID": {
-            "type": "string",
-            "description": "Node identifier (applicable for credit_usage queries)"
-          },
-          "model": {
-            "type": "string",
-            "description": "Model used (applicable for credit_usage queries)"
-          },
-          "functionID": {
-            "type": "string",
-            "description": "Function identifier (applicable for function_usage queries)"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the function, API tool, or integration (applicable for function_usage, api_calls, and integrations queries)"
-          },
-          "successCount": {
-            "type": "integer",
-            "description": "Number of successful calls (applicable for function_usage, api_calls, and integrations queries)"
-          },
-          "apiToolID": {
-            "type": "string",
-            "description": "API tool identifier (applicable for api_calls queries)"
-          },
-          "documentID": {
-            "type": "string",
-            "description": "Document identifier (applicable for kb_documents queries)"
-          },
-          "integrationToolName": {
-            "type": "string",
-            "description": "Integration tool name (applicable for integrations queries)"
-          }
-        },
-        "required": [
-          "period",
-          "projectID",
-          "environmentID",
-          "count"
-        ]
       }
     }
   },
@@ -273,12 +517,5 @@
     "explorer-enabled": true,
     "proxy-enabled": true,
     "samples-enabled": true
-  },
-  "x-codeSamples": [
-    {
-      "lang": "cURL",
-      "label": "Query interactions",
-      "source": "curl --request POST \\\n     --url https://analytics-api.voiceflow.com/v2/query/usage \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: VF.DM.YOUR_API_KEY' \\\n     --data '{\n  \"data\": {\n    \"name\": \"interactions\",\n    \"filter\": {\n      \"projectID\": \"62912f08e83f76001b218690\",\n      \"limit\": 100\n    }\n  }\n}'"
-    }
-  ]
+  }
 }
