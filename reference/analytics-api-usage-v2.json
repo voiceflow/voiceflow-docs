@@ -516,11 +516,6 @@
   "x-readme": {
     "explorer-enabled": true,
     "proxy-enabled": true,
-    "code-samples": [
-      {
-        "language": "Shell",
-        "code": "curl --request POST \\\n     --url https://analytics-api.voiceflow.com/v2/query/usage \\\n     --header 'accept: application/json' \\\n     --header 'content-type: application/json' \\\n     --header 'authorization: VF.DM.YOUR_API_KEY' \\\n     --data '{\n  \"data\": {\n    \"name\": \"interactions\",\n    \"filter\": {\n      \"projectID\": \"62912f08e83f76001b218690\"  /* The ID of your assistant's project (found in the assistant settings) */,\n      \"limit\": 100\n    }\n  }\n}'"
-      }
-    ]
+    "samples-enabled": true
   }
 }
