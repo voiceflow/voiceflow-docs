@@ -1,3 +1,4 @@
+- query
 - secrets-management-api
 - patch-default-secret-value
 - patch-override-secret-values
