@@ -438,7 +438,8 @@
         ],
         "security": [
           {
-            "auth": []
+            "auth": [],
+            "projectID": []
           }
         ]
       }
@@ -456,6 +457,12 @@
         "in": "header",
         "name": "authorization",
         "description": "Voiceflow Dialog Manager API key (VF.DM)"
+      },
+      "projectID": {
+        "type": "apiKey",
+        "in": "query",
+        "name": "projectID",
+        "description": "The project ID of your assistant. You can find this value in your assistant's Settings page."
       }
     },
     "schemas": {
@@ -486,7 +493,7 @@
           "projectID": {
             "type": "string",
             "minLength": 1,
-            "description": "The `projectID` of your assistant.  You can find this value in your assistant's **Settings** page.  Example: `62912f08e83f76001b218690`",
+            "description": "The `projectID` of your assistant. This can be provided via the security scheme or in the request body. You can find this value in your assistant's **Settings** page.  Example: `62912f08e83f76001b218690`",
             "default": "62912f08e83f76001b218690"
           },
           "startTime": {
@@ -507,9 +514,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "projectID"
-        ]
+        "required": []
       }
     }
   },
