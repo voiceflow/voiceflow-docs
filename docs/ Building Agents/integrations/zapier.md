@@ -5,9 +5,9 @@ hidden: true
 metadata:
   robots: index
 ---
-## Zapier integration
+## Connecting to Zapier from inside Voiceflow
 
-Voiceflow does not yet have a native Zapier integration.
+Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the near future!
 
 <br />
 
