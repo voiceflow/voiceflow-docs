@@ -30,30 +30,17 @@ Please note that Voiceflow doesn't currently support any Zapier triggers.
 
 <br />
 
-<script>// Load JS\
-const script = document.createElement("script");
-script.type = "module";
-script.src = "[https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js](https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js)";
-document.head.appendChild(script);
-// Load CSS
-const stylesheet = document.createElement("link");
-stylesheet.rel = "stylesheet";
-stylesheet.href = "[https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css](https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css)";
-document.head.appendChild(stylesheet);
-// Create and display zapier-workflow
-const element = document.createElement("zapier-workflow");
-element.signUpEmail = "[email\_of\_your\_user@example.com](mailto:email_of_your_user@example.com)";
-element.signUpFirstName = "first\_name\_of\_your\_user";
-element.signUpLastName = "last\_name\_of\_your\_user";
-element.clientId = "rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT";
-element.theme = "auto";
-element.introCopyDisplay = "hide";
-element.manageZapsDisplay = "hide";
-element.guessZapDisplay = "hide";
-element.appSearchBarDisplay = "show";
-element.appLimit = 0;
-const container = document.querySelector("#zapier-container") || document.body;
-container.appendChild(element);</script>
+<zapier-workflow
+  sign-up-email="email_of_your_user@example.com"
+  sign-up-first-name="first_name_of_your_user"
+  sign-up-last-name="last_name_of_your_user"
+  client-id="rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT"
+  theme="auto"
+  intro-copy-display="hide"
+  manage-zaps-display="hide"
+  guess-zap-display="hide"
+  app-search-bar-display="show"
+></zapier-workflow>
 
 <br />
 
