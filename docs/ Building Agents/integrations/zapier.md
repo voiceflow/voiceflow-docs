@@ -58,7 +58,7 @@ After entering these values, click the continue button to link your Voiceflow pr
 
 ### Handling outbound calls
 
-While most of Voiceflow's Zapier actions only require the project's ID and API key, the **Trigger outbound call** action requires a **Agent Phone Number ID**. This can be found by opening clicking the **Interfaces** button on your project's sidebar, selecting **Telephony**, then clicking the **View** button next to the phone number that you'd like to call from.
+While most of Voiceflow's Zapier actions only require the project's ID and API key, the **Trigger outbound call** action requires an **Agent Phone Number ID**. This can be found by opening clicking the **Interfaces** button on your project's sidebar, selecting **Telephony**, then clicking the **View** button next to the phone number that you'd like to call from.
 
 The `Agent Phone Number ID` is the set of characters shown in the cURL request.
 
