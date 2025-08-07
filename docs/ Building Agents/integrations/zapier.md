@@ -51,4 +51,6 @@ For each Voiceflow project, you'll need to provide two values:
 
 Once you've provided these values, click the continue button to link your project to Zapier.
 
+<br />
+
 ![](https://files.readme.io/b077bad6b79133a6603d59375a3d6d5d2d4b234e02d04daeea53e19d9bb8a9c8-CleanShot_2025-08-07_at_13.17.502x.png)
