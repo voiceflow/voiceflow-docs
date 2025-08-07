@@ -11,4 +11,4 @@ Voiceflow does not yet have a native Zapier integration.
 
 <br />
 
-## Zapier app
+## Trigger Voiceflow events from your Zapier zaps
