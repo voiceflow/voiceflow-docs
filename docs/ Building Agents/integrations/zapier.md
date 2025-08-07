@@ -5,9 +5,6 @@ hidden: true
 metadata:
   robots: index
 ---
-<zapier-workflow sign-up-email="email_of_your_user@example.com" sign-up-first-name="first_name_of_your_user" sign-up-last-name="last_name_of_your_user" client-id="rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT" theme="auto" intro-copy-display="hide" manage-zaps-display="hide" guess-zap-display="hide" app-search-bar-display="show" />
-
-
 ## Connecting to Zapier from inside Voiceflow
 
 Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the near future!
@@ -30,7 +27,6 @@ The following actions are available inside Zapier:
 * Trigger outbound call - [sends a call using the outbound calling API](doc:outbound-calls)
 
 Please note that Voiceflow doesn't currently support any Zapier triggers.
-
 
 ### Using Voiceflow actions in Zapier
 
@@ -66,3 +62,8 @@ While most of Voiceflow's Zapier actions only require the project's ID and API k
 The `Agent Phone Number ID` is the set of characters shown in the cURL request.
 
 ![](https://files.readme.io/8903135c9f883dc12b82c4302ef0ca0f522bb1d7887f5c52fcc926494b07f77e-CleanShot_2025-08-07_at_13.29.112x.png)
+
+<br />
+
+***
+<zapier-workflow sign-up-email="email_of_your_user@example.com" sign-up-first-name="first_name_of_your_user" sign-up-last-name="last_name_of_your_user" client-id="rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT" theme="auto" intro-copy-display="hide" manage-zaps-display="hide" guess-zap-display="hide" app-search-bar-display="show" />
