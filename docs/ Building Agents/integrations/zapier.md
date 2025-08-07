@@ -46,7 +46,7 @@ Once you've chosen the action you'd like to trigger, you'll then need to link yo
 
 For each Voiceflow project, you'll need to provide two values:
 
-* Your **Voiceflow Project API Key**, which can be found by opening your project from the dashboard, clicking the ⚙️ item on the sidebar, then selecting **API keys**. To get your API key, click the **copy** button.
+* Your **Voiceflow Project API Key**, which can be found by opening your project from the dashboard, clicking the ⚙️ icon on the sidebar, then selecting **API keys**. To get your API key, click the **copy** button.
 * Your **Voiceflow Project ID**, which is found in the **General** tab of your project's settings.
 
 After entering these values, click the continue button to link your Voiceflow project to Zapier.
