@@ -5,6 +5,9 @@ hidden: true
 metadata:
   robots: index
 ---
+<zapier-workflow sign-up-email="email_of_your_user@example.com" sign-up-first-name="first_name_of_your_user" sign-up-last-name="last_name_of_your_user" client-id="rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT" theme="auto" intro-copy-display="hide" manage-zaps-display="hide" guess-zap-display="hide" app-search-bar-display="show" />
+
+
 ## Connecting to Zapier from inside Voiceflow
 
 Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the near future!
@@ -28,21 +31,6 @@ The following actions are available inside Zapier:
 
 Please note that Voiceflow doesn't currently support any Zapier triggers.
 
-<br />
-
-<zapier-workflow
-  sign-up-email="email_of_your_user@example.com"
-  sign-up-first-name="first_name_of_your_user"
-  sign-up-last-name="last_name_of_your_user"
-  client-id="rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT"
-  theme="auto"
-  intro-copy-display="hide"
-  manage-zaps-display="hide"
-  guess-zap-display="hide"
-  app-search-bar-display="show"
-></zapier-workflow>
-
-<br />
 
 ### Using Voiceflow actions in Zapier
 
