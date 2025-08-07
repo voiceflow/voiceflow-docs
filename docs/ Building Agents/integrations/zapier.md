@@ -30,21 +30,21 @@ Please note that Voiceflow doesn't currently support any Zapier triggers.
 
 <br />
 
-<script>// Load JS
+<script>// Load JS\
 const script = document.createElement("script");
 script.type = "module";
-script.src = "https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js";
+script.src = "[https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js](https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js)";
 document.head.appendChild(script);
 // Load CSS
 const stylesheet = document.createElement("link");
 stylesheet.rel = "stylesheet";
-stylesheet.href = "https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css";
+stylesheet.href = "[https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css](https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css)";
 document.head.appendChild(stylesheet);
 // Create and display zapier-workflow
 const element = document.createElement("zapier-workflow");
-element.signUpEmail = "email_of_your_user@example.com";
-element.signUpFirstName = "first_name_of_your_user";
-element.signUpLastName = "last_name_of_your_user";
+element.signUpEmail = "[email\_of\_your\_user@example.com](mailto:email_of_your_user@example.com)";
+element.signUpFirstName = "first\_name\_of\_your\_user";
+element.signUpLastName = "last\_name\_of\_your\_user";
 element.clientId = "rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT";
 element.theme = "auto";
 element.introCopyDisplay = "hide";
