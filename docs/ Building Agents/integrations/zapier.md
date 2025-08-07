@@ -21,12 +21,14 @@ Voiceflow is available as a native integration on Zapier. This allows you to tri
 
 The following actions are available inside Zapier:
 
-* Start agent conversation - [sends a launch request to your agent](https://docs.voiceflow.com/reference/stateinteract-1#/)
-* Send message to agent - [sends a text request to your agent](https://docs.voiceflow.com/reference/stateinteract-1#/)
-* Send event to agent - [sends an event request to your agent](https://docs.voiceflow.com/reference/stateinteract-1#/)
-* Trigger outbound call - [sends a call using the outbound calling API](doc:outbound-calls)
+| Action Name              | Description                                                                                                                                                           |
+| :----------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Start agent conversation | [Sends a launch request to your agent](https://docs.voiceflow.com/reference/stateinteract-1#/). When starting a new conversation, always start with a launch request. |
+| Send message to agent    | [Sends a text request to your agent](https://docs.voiceflow.com/reference/stateinteract-1#/). This allows you to send text messages to your agent.                    |
+| Send event to agent      | [Sends an event request to your agent](https://docs.voiceflow.com/reference/stateinteract-1#/). This lets you jump to a specific part of your agent's workflow.       |
+| Make outbound call       | [Sends a call using the outbound calling API](doc:outbound-calls).                                                                                                    |
 
-Please note that Voiceflow doesn't currently support any Zapier triggers.
+Please note that Voiceflow doesn't currently have any triggers available on Zapier.
 
 ### Using Voiceflow actions in Zapier
 
