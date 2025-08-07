@@ -27,6 +27,8 @@ The following actions are available inside Zapier:
 
 Please note that Voiceflow doesn't currently have any triggers available on Zapier.
 
+<br />
+
 ### Using Voiceflow actions in Zapier
 
 Voiceflow's actions can be added to your zaps in the same way as any other integration. Simply click on an empty action, search for Voiceflow, then choose the action you'd like to trigger.
