@@ -30,34 +30,32 @@ Please note that Voiceflow doesn't currently support any Zapier triggers.
 
 <br />
 
-<script>
-  // Load JS
-  const script = document.createElement("script");
-  script.type = "module";
-  script.src = "[https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js](https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js)";
-  document.head.appendChild(script);
+\<script>// Load JS
+&#x20; const script = document.createElement("script");
+&#x20; script.type = "module";
+&#x20; script.src = "\[https\://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js]\(https\://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.esm.js)";
+&#x20; document.head.appendChild(script);
 
-  // Load CSS
-  const stylesheet = document.createElement("link");
-  stylesheet.rel = "stylesheet";
-  stylesheet.href = "[https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css](https://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css)";
-  document.head.appendChild(stylesheet);
+&#x20; // Load CSS
+&#x20; const stylesheet = document.createElement("link");
+&#x20; stylesheet.rel = "stylesheet";
+&#x20; stylesheet.href = "\[https\://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css]\(https\://cdn.zapier.com/packages/partner-sdk/v0/zapier-elements/zapier-elements.css)";
+&#x20; document.head.appendChild(stylesheet);
 
-  // Create and display zapier-workflow
-  const element = document.createElement("zapier-workflow");
-  element.signUpEmail = "[email\_of\_your\_user@example.com](mailto:email_of_your_user@example.com)";
-  element.signUpFirstName = "first\_name\_of\_your\_user";
-  element.signUpLastName = "last\_name\_of\_your\_user";
-  element.clientId = "rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT";
-  element.theme = "auto";
-  element.introCopyDisplay = "hide";
-  element.manageZapsDisplay = "hide";
-  element.guessZapDisplay = "hide";
-  element.appSearchBarDisplay = "show";
-  element.appLimit = 0;
-  const container = document.querySelector("#zapier-container") || document.body;
-  container.appendChild(element);
-</script>
+&#x20; // Create and display zapier-workflow
+&#x20; const element = document.createElement("zapier-workflow");
+&#x20; element.signUpEmail = "\[email\\\_of\\\_your\\\_user\@example.com]\(mailto:email\_of\_your\_user\@example.com)";
+&#x20; element.signUpFirstName = "first\\\_name\\\_of\\\_your\\\_user";
+&#x20; element.signUpLastName = "last\\\_name\\\_of\\\_your\\\_user";
+&#x20; element.clientId = "rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT";
+&#x20; element.theme = "auto";
+&#x20; element.introCopyDisplay = "hide";
+&#x20; element.manageZapsDisplay = "hide";
+&#x20; element.guessZapDisplay = "hide";
+&#x20; element.appSearchBarDisplay = "show";
+&#x20; element.appLimit = 0;
+&#x20; const container = document.querySelector("#zapier-container") || document.body;
+&#x20; container.appendChild(element);\</script>
 
 <br />
 
