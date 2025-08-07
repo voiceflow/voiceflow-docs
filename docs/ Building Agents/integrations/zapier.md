@@ -7,7 +7,7 @@ metadata:
 ---
 ## Connecting to Zapier from inside Voiceflow
 
-Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the near future!
+Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the future! For now, we recommend using using a [Zapier webhook trigger](https://help.zapier.com/hc/en-us/articles/8496288690317-Trigger-Zaps-from-webhooks) with the an API on the [Tool step](changelog:tools-step) to trigger zaps from inside your agent.
 
 <br />
 
@@ -66,4 +66,5 @@ The `Agent Phone Number ID` is the set of characters shown in the cURL request.
 <br />
 
 ***
+
 <zapier-workflow sign-up-email="email_of_your_user@example.com" sign-up-first-name="first_name_of_your_user" sign-up-last-name="last_name_of_your_user" client-id="rUkiqc6dl67ZP0IQF98xUmMLtiabc0rRR1lTagvT" theme="auto" intro-copy-display="hide" manage-zaps-display="hide" guess-zap-display="hide" app-search-bar-display="show" />
