@@ -14,7 +14,7 @@ Voiceflow does not yet have a native Zapier integration available in the [Agent 
 
 ## Trigger Voiceflow events from your Zapier zaps
 
-Voiceflow is available as a native integration on Zapier. This allows you to trigger outbound calls when an action happens in another tool, as well as routing conversations from a wide range of platforms into your Voiceflow agent.
+Voiceflow is available as a [native integration on Zapier](https://zapier.com/apps/voiceflow/integrations). This allows you to trigger outbound calls when an action happens in another tool, as well as routing conversations from a wide range of platforms into your Voiceflow agent.
 
 The following actions are available inside Zapier:
 
