@@ -33,7 +33,11 @@ Please note that Voiceflow doesn't currently have any triggers available on Zapi
 
 Voiceflow's actions can be added to your zaps in the same way as any other integration. Simply click on an empty action, search for Voiceflow, then choose the action you'd like to trigger.
 
-![](https://files.readme.io/fcba7239696c0984f51fc282a151d65a1435af0cc0abb6836dc2b7a561a9486a-CleanShot_2025-08-07_at_13.10.092x.png)
+<br />
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSVB2D8jhwmvNPCJSYUL25jhGKozr09iZnAIe1" />
+
+<br />
 
 <Callout icon="ℹ️" theme="info">
   **Protip:** if you're beginning a new conversation, make sure you use the **Start agent conversation** action before sending a message or an event to your agent!
