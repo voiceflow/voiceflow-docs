@@ -62,9 +62,7 @@ While most of Voiceflow's Zapier actions only require the project's ID and API k
 
 The `Agent Phone Number ID` is the set of characters shown in the cURL request.
 
-![](https://files.readme.io/8903135c9f883dc12b82c4302ef0ca0f522bb1d7887f5c52fcc926494b07f77e-CleanShot_2025-08-07_at_13.29.112x.png)
-
-<br />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSv5eRI08xoDVQXmAUr9uGNzwaYSd78tfRT6F1" />
 
 ***
 
