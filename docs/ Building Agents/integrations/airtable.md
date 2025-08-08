@@ -40,7 +40,9 @@ Here are some common ways to use Airtable in your Voiceflow agent's workflow:
 
   Each Airtable action has unique required fields. Ensure you review them and determine whether they should be *defaulted, hardcoded, or collected by the agent*. Add an LLM description for every argument — this helps the assistant understand how to populate each field appropriately.
 
-  ![](https://files.readme.io/8b407eebf2bd5e7dc062b9aaffdd647fa971f2ef796440c6f8ac28633abb38cb-CleanShot_2025-08-06_at_13.57.132x.png)
+  It is advised that fields such as `baseId` and `tableIdOrName` are defaulted as a user may not know them.
+
+  ![](https://files.readme.io/421a9c61fb5bc046a5b09978449321b0669938c28dc2ef007d228fc26d82fcec-CleanShot_2025-08-08_at_13.15.502x.png)
 </Callout>
 
 ## Frequently asked questions
