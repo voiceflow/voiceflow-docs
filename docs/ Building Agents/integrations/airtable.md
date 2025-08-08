@@ -9,7 +9,7 @@ Easily connect your Voiceflow agent with Airtable to manage and manipulate recor
 
 ## Basic usage
 
-<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkt2JusCcql98M6riPKymkZ4CSD0cowfj1JRGv" />
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkNkm8x2DqntsPVJCcKXlTDvSfiBxWbad4Rop6" />
 
 <br />
 
