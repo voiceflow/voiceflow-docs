@@ -50,11 +50,7 @@ For each Voiceflow project, you'll need to provide two values:
 
 After entering these values, click the continue button to link your Voiceflow project to Zapier.
 
-<br />
-
-![](https://files.readme.io/b077bad6b79133a6603d59375a3d6d5d2d4b234e02d04daeea53e19d9bb8a9c8-CleanShot_2025-08-07_at_13.17.502x.png)
-
-<br />
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSiyWVrS5Va6w0sMdTR4hluogEBjIFvbXzpqf7" />
 
 ### Handling outbound calls
 
