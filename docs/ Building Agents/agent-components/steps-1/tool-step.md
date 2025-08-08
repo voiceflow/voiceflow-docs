@@ -44,17 +44,6 @@ Optional fields such as cc and bcc can also be added.
 
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkxy8f4ehHB63EAecr4ldMRpWtKsU5fLaQgvGk" />
 
-## Supported integrations
+<br />
 
-| Integration   | Use case                                                    |
-| :------------ | :---------------------------------------------------------- |
-| Zendesk       | Look up or create support tickets, fetch user info.         |
-| Shopify       | Get contact, lead, or opportunity data, update CRM records. |
-| Google Sheets | Check orders, fetch product details, initiate returns.      |
-| Gmail         | Send transactional or templated emails.                     |
-| Airtable      | Query tables, update or add records, track interactions.    |
-| Make.com      | Trigger custom workflows, connect to 1000+ apps.            |
-| Twilio        | Send SMS or make calls with custom logic.                   |
-| Hubspot       | Create or update CRM contacts, log conversation outcomes.   |
-
-![](https://files.readme.io/32398dc7bad46ee4135b297610a2cc8c5aa37d22070f08f90c35dfaa66e9ee08-image.png)
+<LinkCard type="Doc" title="Integrations" description="Supercharge your agent's workflow with third party integrations with tools such as Google Sheets, Zendesk and Airtable!" href="https://docs.voiceflow.com/update/docs/integrations#/" />
