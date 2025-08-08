@@ -35,8 +35,6 @@ Voiceflow's actions can be added to your zaps in the same way as any other integ
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSVB2D8jhwmvNPCJSYUL25jhGKozr09iZnAIe1" />
 
-<br />
-
 <Callout icon="ℹ️" theme="info">
   **Protip:** if you're beginning a new conversation, make sure you use the **Start agent conversation** action before sending a message or an event to your agent!
 </Callout>
