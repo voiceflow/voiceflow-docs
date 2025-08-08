@@ -33,8 +33,6 @@ Please note that Voiceflow doesn't currently have any triggers available on Zapi
 
 Voiceflow's actions can be added to your zaps in the same way as any other integration. Simply click on an empty action, search for Voiceflow, then choose the action you'd like to trigger.
 
-<br />
-
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSVB2D8jhwmvNPCJSYUL25jhGKozr09iZnAIe1" />
 
 <br />
