@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-The Tool Step allows you to run any tool — like sending an email, querying a Google Sheet, or updating a CRM — anywhere in your workflow, not just within an agent step. This gives you more control and flexibility over when and how you trigger third-party integrations. You’ll find the Tool Step in the ‘**Dev**’ section of the tool bar.
+The Tool Step allows you to run any tool — functions, API requests or native integrations — anywhere in your workflow, not just within an agent step. This gives you more control and flexibility over when and how you trigger third-party integrations. You can integrate the tool step into your workflow, just like any other step. You’ll find the Tool Step in the ‘**Dev**’ section of the tool bar.
 
 ## Basic Usage
 
