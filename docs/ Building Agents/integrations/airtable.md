@@ -9,6 +9,10 @@ Easily connect your Voiceflow agent with Airtable to manage and manipulate recor
 
 ## Basic usage
 
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkt2JusCcql98M6riPKymkZ4CSD0cowfj1JRGv" />
+
+<br />
+
 <Callout icon="🔐" theme="info">
   To use the Airtable integration, you'll need to **OAuth into Airtable** from the Voiceflow Creator. This gives your agent secure access to your Airtable bases and tables.
 </Callout>
