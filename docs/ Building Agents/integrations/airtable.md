@@ -19,13 +19,13 @@ Easily connect your Voiceflow agent with Airtable to manage and manipulate recor
 
 Voiceflow's Airtable integration enables full CRUD (Create, Read, Update, Delete) operations on your Airtable records. Here are the available actions:
 
-| Action         | Description                                                                 |
-| :------------- | :-------------------------------------------------------------------------- |
-| Create record  | Add a new row to a specific table in your Airtable base.                    |
-| Delete record  | Remove a row from your table by specifying the record ID.                   |
-| Get record     | Fetch a single row by its unique record ID.                                 |
-| List records   | Retrieve multiple rows, optionally filtered by conditions or fields.        |
-| Update record  | Modify one or more fields in an existing row using the record ID.           |
+| Action        | Description                                                          |
+| :------------ | :------------------------------------------------------------------- |
+| Create record | Add a new row to a specific table in your Airtable base.             |
+| Delete record | Remove a row from your table by specifying the record ID.            |
+| Get record    | Fetch a single row by its unique record ID.                          |
+| List records  | Retrieve multiple rows, optionally filtered by conditions or fields. |
+| Update record | Modify one or more fields in an existing row using the record ID.    |
 
 ## Use cases
 
@@ -61,4 +61,4 @@ Here are some common ways to use Airtable in your Voiceflow agent's workflow:
 
 > Yes. When using the "Update record" action, only the fields you specify will be modified — any omitted fields will remain unchanged in Airtable.
 
-<LinkCard type="Doc" title="Voiceflow Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
+<LinkCard type="Doc" title="Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
