@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-The Tool Step allows you to run any tool — functions, API requests or native integrations — anywhere in your workflow, not just within an agent step. This gives you more control and flexibility over when and how you trigger third-party integrations. You can integrate the tool step into your workflow, just like any other step. You’ll find the Tool Step in the ‘**Dev**’ section of the tool bar.
+The Tool Step allows you to run any tool — <Anchor label="functions" target="_blank" href="https://docs.voiceflow.com/update/docs/function-step#/">functions</Anchor>, <Anchor label="API requests" target="_blank" href="https://docs.voiceflow.com/update/docs/api-step#/">API requests</Anchor> or <Anchor label="integrations" target="_blank" href="https://docs.voiceflow.com/update/docs/integrations#/">integrations</Anchor> — anywhere in your workflow, not just within an agent step. This gives you more control and flexibility over when and how you trigger third-party integrations. You can integrate the tool step into your workflow, just like any other step. You’ll find the Tool Step in the ‘**Dev**’ section of the tool bar.
 
 ## Basic Usage
 
