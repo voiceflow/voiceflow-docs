@@ -2,7 +2,7 @@
 title: Zapier
 excerpt: Connect your Voiceflow agent to all the tools your business uses.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
