@@ -1,5 +1,8 @@
 ---
 title: Airtable
+excerpt: >-
+  Use Airtable actions in both Agent and Tool steps for dynamic, real-time data
+  interactions.
 deprecated: false
 hidden: false
 metadata:
