@@ -8,7 +8,7 @@ metadata:
 ---
 ## Connecting to Zapier from inside Voiceflow
 
-Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the future! For now, we recommend using using a [Zapier webhook trigger](https://help.zapier.com/hc/en-us/articles/8496288690317-Trigger-Zaps-from-webhooks) with the an API on the [Tool step](changelog:tools-step) to trigger zaps from inside your agent.
+Voiceflow does not yet have a native Zapier integration available in the [Agent step](doc:agents) or [Tool step](changelog:tools-step), but we expect this to change in the future! For now, we recommend using using a [Zapier webhook trigger](https://help.zapier.com/hc/en-us/articles/8496288690317-Trigger-Zaps-from-webhooks) with the an API on the [Agent step](doc:agents) or [Tool step](changelog:tools-step) to trigger zaps from inside your agent.
 
 <br />
 
