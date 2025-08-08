@@ -19,9 +19,9 @@ Easily connect your Voiceflow agent with Gmail to send emails dynamically based 
 
 The Gmail integration currently supports one powerful action:
 
-| Action      | Description                                               |
-| :---------- | :-------------------------------------------------------- |
-| Send email  | Send an email to one or more recipients with custom subject, body, and optional attachments. |
+| Action     | Description                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------- |
+| Send email | Send an email to one or more recipients with custom subject, body, and optional attachments. |
 
 ## Use cases
 
@@ -43,11 +43,11 @@ Here are some common ways to use Gmail in your Voiceflow agent's workflow:
 
 ### Can I send emails to multiple people?
 
-> Yes, the `To` field can accept multiple comma-separated email addresses. Make sure the agent formats this field correctly before sending.
+> Yes, the `To` field can accept multiple comma-separated email addresses. Make sure the agent formats this field correctly before sending by instructing it to do so in its `Instructions`.
 
 ### Can I personalize the email content?
 
-> Absolutely. Use agent-collected variables (like name, order info, etc.) in the subject or body to generate fully personalized messages.
+> Absolutely. Use agent-collected variables (like name, order info, etc.) in the subject or body to generate fully personalized messages. Ensure you instruct the agent to personalize the email in its `Instructions`.
 
 ### What happens if the email fails to send?
 
