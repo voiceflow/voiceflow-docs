@@ -1,5 +1,8 @@
 ---
 title: Google Sheets
+excerpt: >-
+  Use Google Sheets actions in both Agent and Tool steps for dynamic, real-time
+  data interactions with your data.
 deprecated: false
 hidden: true
 metadata:
