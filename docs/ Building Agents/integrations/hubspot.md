@@ -9,12 +9,15 @@ metadata:
   robots: index
 ---
 # HubSpot
-Use HubSpot actions in both Agent and Tool steps for dynamic, real-time CRM interactions with your data.  
+
+Use HubSpot actions in both Agent and Tool steps for dynamic, real-time CRM interactions with your data.\
 Easily connect your Voiceflow agent with HubSpot to create and manage contacts, leads, and tickets directly from your conversations. Use the HubSpot actions in both Agent and Tool steps to create powerful sales and support workflows.
 
 ## Basic usage
 
 ![](https://files.readme.io/example-hubspot-basic-usage.png)
+
+\[ video ]
 
 <Callout icon="🔐" theme="info">
   To use the HubSpot integration, you'll need to **OAuth into HubSpot** from the Voiceflow Creator. This ensures your agent can securely create and manage CRM records from your connected account.
@@ -24,11 +27,11 @@ Easily connect your Voiceflow agent with HubSpot to create and manage contacts, 
 
 The HubSpot integration supports the following actions:
 
-| Action         | Description                                                |
-| :------------- | :--------------------------------------------------------- |
-| Create contact | Add a new contact to your HubSpot CRM.                     |
-| Create lead    | Create a new lead (prospect) in your HubSpot CRM.           |
-| Create ticket  | Log a new support or service ticket within HubSpot.        |
+| Action         | Description                                         |
+| :------------- | :-------------------------------------------------- |
+| Create contact | Add a new contact to your HubSpot CRM.              |
+| Create lead    | Create a new lead (prospect) in your HubSpot CRM.   |
+| Create ticket  | Log a new support or service ticket within HubSpot. |
 
 ## Use cases
 
@@ -38,13 +41,16 @@ Here are some common ways to use HubSpot in your Voiceflow agent's workflow:
 * Automatically create support tickets when a customer reports an issue.
 * Add new contacts to your CRM when users provide their details.
 
-Example:  
+Example:
+
 > For `Create lead`, you might provide an LLM description such as `Add a new lead to HubSpot when the user expresses interest in our services but has not yet purchased.`
 
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  Each action may require unique parameters such as `firstName`, `lastName`, `email`, or `ticketDescription`. Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input variable so the agent knows exactly how to use them.
+  Each action may require unique parameters such as `firstname`, `lastname`, `email`, or `ticketDescription`. Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input variable so the agent knows exactly how to use them.
+
+  ![](https://files.readme.io/0b08008a4bf110a9dc56b8d313ae38f44b777cbd82cb499abcb2f209d7e43242-CleanShot_2025-08-10_at_12.12.222x.png)
 
   ![](https://files.readme.io/example-hubspot-action-args.png)
 </Callout>
