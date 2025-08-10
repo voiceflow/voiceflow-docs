@@ -1,5 +1,8 @@
 ---
 title: Gmail
+excerpt: >-
+  Use Gmail actions in both Agent and Tool steps to enable your agent to send
+  emails to users.
 deprecated: false
 hidden: true
 metadata:
