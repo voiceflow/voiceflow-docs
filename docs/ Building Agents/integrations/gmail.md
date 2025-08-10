@@ -9,7 +9,7 @@ Easily connect your Voiceflow agent with Gmail to send emails dynamically based 
 
 ## Basic usage
 
-![](https://files.readme.io/f0c3d825ec547dbd2b160f55c79463c658092031280b0ecca842680084aee47e-CleanShot_2025-08-06_at_14.11.592x.png)
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkxy8f4ehHB63EAecr4ldMRpWtKsU5fLaQgvGk" />
 
 <Callout icon="🔐" theme="info">
   To use the Gmail integration, you'll need to **OAuth into Gmail** from the Voiceflow Creator. This ensures your agent can send authenticated emails securely from your connected account.
@@ -36,7 +36,7 @@ Here are some common ways to use Gmail in your Voiceflow agent's workflow:
 
   The **Send email** action requires several key arguments like `To`, `Subject`, and `Body`. Ensure you decide whether each field should be *defaulted, hardcoded, or collected by the agent*. Include LLM descriptions to help the assistant understand how to populate these values properly.
 
-  ![](https://files.readme.io/8b407eebf2bd5e7dc062b9aaffdd647fa971f2ef796440c6f8ac28633abb38cb-CleanShot_2025-08-06_at_13.57.132x.png)
+  ![](https://files.readme.io/004b710e44755d7fe74ef3949dd5ecb9fc5052272ce1d56ed643610115aa35a7-CleanShot_2025-08-10_at_11.35.412x.png)
 </Callout>
 
 ## Frequently asked questions
