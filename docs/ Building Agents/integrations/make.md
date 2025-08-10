@@ -16,6 +16,8 @@ Use Make actions in both Agent and Tool steps to trigger complex, automated work
 
 ![](https://files.readme.io/your-make-integration-image.png)
 
+\[video]
+
 <Callout icon="🔐" theme="info">
   To use the Make integration, you'll need to **OAuth into Make** from the Voiceflow Creator. This ensures your agent can securely trigger scenarios from your connected Make account.
 </Callout>
@@ -24,9 +26,9 @@ Use Make actions in both Agent and Tool steps to trigger complex, automated work
 
 The Make integration currently supports the following action:
 
-| Action        | Description                                                             |
-| :------------ | :---------------------------------------------------------------------- |
-| Run scenario  | Trigger a specific scenario in your Make account to execute automation. |
+| Action       | Description                                                             |
+| :----------- | :---------------------------------------------------------------------- |
+| Run scenario | Trigger a specific scenario in your Make account to execute automation. |
 
 ## Use cases
 
@@ -40,28 +42,30 @@ Example:
 
 > If a user asks to "sign up for the newsletter and send me a welcome package," you might use the **Run scenario** action to trigger a Make scenario that adds them to your email list, updates your CRM, and sends a Slack notification to your team.
 
-Ensure you provide an `LLM description` for each tool so the agent understands when to use it.  
+Ensure you provide an `LLM description` for each tool so the agent understands when to use it.
 
 > E.g. for `Run scenario`, you might write: `Trigger the automation scenario in Make when a user requests an action that involves multiple connected services or workflows.`
 
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  The **Run scenario** action typically requires a `scenarioID` or a unique name. Decide whether this should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
+  The **Run scenario** action typically requires a `scenarioURL` or a unique name. Decide whether this should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
+
+  \[img ]
 </Callout>
 
 ## Frequently asked questions
 
 ### Can I pass variables from Voiceflow into my Make scenario?
 
-> Yes. You can pass data such as user inputs, IDs, or conversation context to your Make scenario by mapping variables in the Tool or Agent step configuration.
+> Yes. You can pass data such as user inputs, IDs, or conversation context to your Make scenario by mapping information in the Tool or Agent step configuration's `data` input variable.
 
 ### Can I trigger multiple Make scenarios from one conversation?
 
-> Yes. You can use multiple **Run scenario** actions in different steps of your flow to trigger separate automations.
+> Asked mike, answer pending.
 
 ### Do I need to configure my scenario before using it in Voiceflow?
 
-> Yes. You must first create and test your scenario in Make, then connect it in Voiceflow by providing the correct `scenarioID` or configuration.
+> Yes. You must first create and test your scenario in Make, then connect it in Voiceflow by providing the correct `scenarioURL` and `data` configuration.
 
 <LinkCard type="Doc" title="Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
