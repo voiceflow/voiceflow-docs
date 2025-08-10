@@ -22,13 +22,13 @@ Easily connect your Voiceflow agent with Google Sheets to store, retrieve, and u
 
 The Google Sheets integration supports the following actions:
 
-| Action                | Description                                                                 |
-| :-------------------- | :-------------------------------------------------------------------------- |
-| Add to sheet           | Append a new row of data to an existing sheet.                              |
-| Create new spreadsheet | Create a completely new spreadsheet in your Google account.                 |
-| Get rows               | Retrieve one or more rows from a specific sheet.                            |
-| Get sheet              | Retrieve details and structure of a specific sheet.                         |
-| Update sheet           | Update data in existing cells or rows within a sheet.                       |
+| Action                 | Description                                                 |
+| :--------------------- | :---------------------------------------------------------- |
+| Add to sheet           | Append a new row of data to an existing sheet.              |
+| Create new spreadsheet | Create a completely new spreadsheet in your Google account. |
+| Get rows               | Retrieve one or more rows from a specific sheet.            |
+| Get sheet              | Retrieve details and structure of a specific sheet.         |
+| Update sheet           | Update data in existing cells or rows within a sheet.       |
 
 ## Use cases
 
@@ -38,6 +38,10 @@ Here are some common ways to use Google Sheets in your Voiceflow agent's workflo
 * Pull dynamic data (like product lists or prices) into a conversation.
 * Maintain an up-to-date database of customer information.
 * Track support cases or internal operations directly in Sheets.
+
+Ensure you provide an `LLM description` for each tool to provide the agent with context for when to use them.
+
+> E.g. for `Get rows`, you might provide an LLM description such as `Fetch rows from spreadsheet when user asks about all expenses from budget spreadsheet`.
 
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
@@ -65,4 +69,4 @@ Here are some common ways to use Google Sheets in your Voiceflow agent's workflo
 
 > When adding rows, ensure you include logic in your flow to check for existing entries before writing to the sheet.
 
-<LinkCard type="Doc" title="Voiceflow Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
+<LinkCard type="Doc" title="Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
