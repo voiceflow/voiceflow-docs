@@ -37,7 +37,7 @@ Here are some common ways to use Gmail in your Voiceflow agent's workflow:
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  The **Send email** action requires several key arguments like `To`, `Subject`, and `Body`. Ensure you decide whether each field should be *defaulted, hardcoded, or collected by the agent*. Include LLM descriptions to help the assistant understand how to populate these values properly.
+  The **Send email** action requires several key arguments like `To`, `Subject`, and `Body`. Ensure you decide whether each field should be *defaulted, hardcoded, or collected by the agent*. Include LLM descriptions to help the agent understand how to populate these values properly.
 
   ![](https://files.readme.io/004b710e44755d7fe74ef3949dd5ecb9fc5052272ce1d56ed643610115aa35a7-CleanShot_2025-08-10_at_11.35.412x.png)
 </Callout>
