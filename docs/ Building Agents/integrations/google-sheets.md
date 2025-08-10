@@ -46,9 +46,9 @@ Ensure you provide an `LLM description` for each tool to provide the agent with 
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  Each action may require unique parameters such as `Spreadsheet ID`, `Sheet Name`, or `Row Data`. Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each argument so the agent knows exactly how to use them.
+  Each action may require unique parameters such as `spreadsheetURL`, `sheetName`, or `rowNumber`. Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input variable so the agent knows exactly how to use them.
 
-  ![](https://files.readme.io/8b407eebf2bd5e7dc062b9aaffdd647fa971f2ef796440c6f8ac28633abb38cb-CleanShot_2025-08-06_at_13.57.132x.png)
+  ![](https://files.readme.io/f5dbb47c269102684ad642b6925440b8fa6a0b822f113a904522e2bb0175db24-CleanShot_2025-08-10_at_11.44.542x.png)
 </Callout>
 
 ## Frequently asked questions
