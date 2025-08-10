@@ -43,7 +43,7 @@ Here are some common ways to use Gmail in your Voiceflow agent's workflow:
 
 ### Can I send emails to multiple people?
 
-> Yes, the `To` field can accept multiple comma-separated email addresses. Make sure the agent formats this field correctly before sending by instructing it to do so in its `Instructions`.
+> Yes, the `To` field can accept multiple comma-separated email addresses. Make sure the agent formats this field correctly using commas before sending by instructing it in its `Instructions`.
 
 ### Can I personalize the email content?
 
@@ -51,10 +51,10 @@ Here are some common ways to use Gmail in your Voiceflow agent's workflow:
 
 ### What happens if the email fails to send?
 
-> If the Gmail action fails (e.g., due to invalid addresses or missing fields), the agent will surface an error. You can handle this with conditional prompts or fallbacks in your flow.
+> If the Gmail action fails (e.g., due to invalid addresses or missing fields), the agent will surface an error and inform the user of the unsuccessful action. You can handle this with conditional prompts or fallbacks in your flow.
 
 ### Can I include attachments?
 
 > Not currently. The Gmail integration supports plain text and HTML bodies but does not yet support file attachments.
 
-<LinkCard type="Doc" title="Voiceflow Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
+<LinkCard type="Doc" title="Integrations" description="Learn more about what integrations are available to supercharge your agent's workflow and capabilities." href="https://docs.voiceflow.com/update/docs/integrations#/" />
