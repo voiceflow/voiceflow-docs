@@ -2,7 +2,7 @@
 title: Airtable
 excerpt: >-
   Use Airtable actions in both Agent and Tool steps for dynamic, real-time data
-  interactions.
+  interactions with your data.
 deprecated: false
 hidden: false
 metadata:
