@@ -16,7 +16,9 @@ Manual creation gives you full control from the start with Voiceflow Creator, al
 
 ## Basic usage
 
-\[video]
+<br />
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSHpk6cJYEDcI1dJrGuslpUkKHt82TXNPVBFvC" />
 
 ***
 
