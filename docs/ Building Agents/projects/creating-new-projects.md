@@ -48,7 +48,7 @@ Project Generation allows you to create a starting-point agent by simply providi
 
 ## Basic Usage
 
-\[ video ]
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS7DoJLnKUJ2mGoWcAYZ4TIKVbRjQtdHvh1CLu" />
 
 ***
 
