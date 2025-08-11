@@ -24,19 +24,19 @@ Manual creation gives you full control from the start with Voiceflow Creator, al
 
 After connecting the **Agent** step to the start chip:
 
-- [ ] **Create your own custom agent**\
+- [ ]**Create your own custom agent**\
   Create your own agent from scratch with a new prompt or use a pre-created template.
   See: <Anchor label="Agent step reference" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step reference</Anchor>
 
-* **Enable necessary integrations**\
+- [ ]**Enable necessary integrations**\
   Activate 3rd-party integrations your Agent will need to complete tasks across your workspace(e.g. Google Sheets, Hubspot, Airtable, etc).
   See: <Anchor label="Integrations reference" target="_blank" href="https://docs.voiceflow.com/docs/integrations#/">Integrations reference</Anchor>
 
-* **Choose your interfaces**\
+- [ ]**Choose your interfaces**\
   Use your Voiceflow agent from phone, web and chat interfaces.
   See: <Anchor label="Interfaces guide" target="_blank" href="https://docs.voiceflow.com/docs/projects#/">Interfaces guide</Anchor>
 
-* **Extend functionality through automation**\
+- [ ]**Extend functionality through automation**\
   Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
   See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
 
@@ -66,19 +66,19 @@ This method is designed to help you go from idea to working draft quickly. You p
 
 Before you start using a generated project, we advise you double check your workflow:
 
-* **Review workflow structure**\
+- [ ]**Review workflow structure**\
   Ensure the generated steps match your intended flow of conversation and actions.
 
-* **Refine step prompts**\
+- [ ]**Refine step prompts**\
   Review and update each step’s prompt text to be more specific and tailored to your use case, if necessary.
 
-* **Confirm tool usage**\
+- [ ]**Confirm tool usage**\
   Check that all required tools are enabled and correctly configured.
 
-* **Validate logic and conditions**\
+- [ ]**Validate logic and conditions**\
   Verify branching, triggers, and conditions behave as expected.
 
-* **Be specific in future prompts**\
+- [ ]**Be specific in future prompts**\
   When regenerating or iterating, clearly describe the desired flow and Agent behavior.
 
 ***
