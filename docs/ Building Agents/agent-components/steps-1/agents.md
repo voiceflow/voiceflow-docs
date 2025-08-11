@@ -164,6 +164,10 @@ For example, if a user asks about a password reset but that information isn't in
 
 The Agent step in Voiceflow allows agents to **dynamically** generate components in real time during a conversation. These components- **Buttons, Cards, and Carousel**- can be toggled on to let the agent include them in its replies. Once enabled, the agent will reference your prompt to determine how and when to use them.
 
+<Callout icon="🚧">
+  For best results, we suggest you use the available **Anthropic models**(Claude 4, Claude 3.7 Sonnet, Claude 4 Opus, etc). OpenAI and other lower end LLM models reportedly face issues rendering and executing agent-generated components.
+</Callout>
+
 <Callout icon="👀" theme="default">
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better. **Only chat interface agents** using the Agent step can dynamically generate these components.
 </Callout>
