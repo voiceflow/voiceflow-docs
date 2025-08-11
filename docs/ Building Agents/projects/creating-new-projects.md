@@ -114,3 +114,5 @@ See also:
 * **Extend functionality through automation**\
   Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
   See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
+
+    - [ ] Task item
