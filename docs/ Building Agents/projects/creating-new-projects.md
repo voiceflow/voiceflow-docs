@@ -1,38 +1,35 @@
 ---
 title: Creating new projects
 excerpt: >-
-  Learn how to start a new Voiceflow Agent project — either from scratch or by
-  generating an initial workflow using prompt-based Project Generation.
+  Learn how to start a new Voiceflow Agent project; either from scratch or by
+  using prompt-based Project Generation.
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-Get started with Voiceflow instantly through workflow generation, or create a project from scratch with templates or the Voiceflow Creator.\
-This guide covers both methods, what to expect from each, and the steps to ensure your Agent is ready for deployment.
+Get started with Voiceflow instantly through project generation, or create a project from scratch with templates or the Voiceflow Creator. This guide covers both methods, what to expect from each, and the steps to ensure your Agent is ready for deployment.
+
+# 1. Creating a project manually
+
+Manual creation gives you full control from the start with Voiceflow Creator, allowing you to design your Agent’s workflow exactly as you intend.
+
+## Basic usage
+
+\[video]
 
 ***
 
-## 1. Creating a Project Manually
+## Checklist for manual project setup
 
-Manual creation gives you full control from the start, allowing you to design your Agent’s workflow exactly as you intend.
+After connecting the **Agent** step to the start chip:
 
-### Basic Usage
-
-*Video: Basic usage of manual project creation (mouse navigation + screenshare of process)*
-
-***
-
-### Checklist for Manual Project Setup
-
-After connecting the **Agent** step:
-
-* **Select a starting point**\
-  Create your own workflow from scratch or use a pre-created template.
+* **Create your own custom agent**\
+  Create your own agent from scratch with a new prompt or use a pre-created template.
   See: [Agent Step Reference](#)
 
 * **Enable necessary integrations**\
-  Activate 3rd-party integrations your Agent will need to complete tasks.
+  Activate 3rd-party integrations your Agent will need to complete tasks across your workspace(e.g. Google Sheets, Hubspot, Airtable, etc).
   See: [Integrations Reference](#)
 
 * **Choose your deployment channels**\
@@ -45,27 +42,27 @@ After connecting the **Agent** step:
 
 ***
 
-## 2. Creating a Project with Workflow Generation
+# 2. Using project generation
 
-Workflow Generation allows you to create a starting-point Agent by simply providing a natural language prompt that describes the intended workflow.
+Project Generation allows you to create a starting-point agent by simply providing a natural language prompt that describes the agent's intended workflow.
 
-### Basic Usage
+## Basic Usage
 
-*Video: Basic usage of workflow generation (mouse navigation + screenshare of process)*
+\[ video ]
 
 ***
 
-### About Workflow Generation
+## About project generation
 
-This method is designed to help you go from idea to working draft quickly. You provide a descriptive prompt, and Voiceflow will generate an initial Agent workflow with steps, prompts, and tool selections.
+This method is designed to help you go from idea to working draft quickly. You provide a descriptive prompt, and Voiceflow will generate an initial agent workflow with steps, prompts, and tool selections.
 
 > **Important:** Workflow Generation is best used as a foundation. Always review and refine the generated workflow to ensure accuracy and completeness.
 
 ***
 
-### Safety Checklist: Post-Generation Review
+### Post-generation review
 
-Before you start using a generated workflow, run through this checklist:
+Before you start using a generated project, we advise you double check your workflow:
 
 * **Review workflow structure**\
   Ensure the generated steps match your intended flow of conversation and actions.
@@ -84,20 +81,19 @@ Before you start using a generated workflow, run through this checklist:
 
 ***
 
-### Best Practices for Prompt Creation
+### Best practices for project generation
 
-* Include **clear goals** for what the Agent should achieve.
+* Include **clear goals and intentions** for what the generated project should achieve.
 * Describe **key user interactions** and decision points.
-* List **integrations or APIs** the Agent should use.
+* List **integrations or APIs** the project should use.
 * Specify **any unique constraints** (e.g., compliance requirements, tone of voice).
-* Avoid vague terms — precise language improves the generated workflow.
+* Avoid vague terms- precise language improves the generated workflow.
 
 ***
 
 ## Summary
 
-Whether you build manually or with Workflow Generation, the end goal is the same: an Agent ready for real-world deployment.\
-Manual creation offers granular control from the start. Workflow Generation accelerates the initial setup but requires thorough review and customization.
+Whether you build manually or with project generation, the end goal is the same: an agent ready for real-world deployment. Manual creation offers granular control from the start. Project generation accelerates the initial setup but requires thorough review and customization.
 
 See also:
 
