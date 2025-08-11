@@ -26,7 +26,7 @@ After connecting the **Agent** step to the start chip:
 
 * **Create your own custom agent**\
   Create your own agent from scratch with a new prompt or use a pre-created template.
-  See: [Agent Step Reference](#)
+  See: [Agent step reference](#)
 
 * **Enable necessary integrations**\
   Activate 3rd-party integrations your Agent will need to complete tasks across your workspace(e.g. Google Sheets, Hubspot, Airtable, etc).
