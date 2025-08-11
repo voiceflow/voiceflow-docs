@@ -26,19 +26,19 @@ After connecting the **Agent** step to the start chip:
 
 * **Create your own custom agent**\
   Create your own agent from scratch with a new prompt or use a pre-created template.
-  See: [Agent step reference](#)
+  See: <Anchor label="Agent step reference" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step reference</Anchor>
 
 * **Enable necessary integrations**\
   Activate 3rd-party integrations your Agent will need to complete tasks across your workspace(e.g. Google Sheets, Hubspot, Airtable, etc).
-  See: [Integrations Reference](#)
+  See: <Anchor label="Integrations reference" target="_blank" href="https://docs.voiceflow.com/docs/integrations#/">Integrations reference</Anchor>
 
-* **Choose your deployment channels**\
-  Use your Voiceflow Agent from Phone or Chat interfaces.
-  See: [Deployments Guide](#)
+* **Choose your interfaces**\
+  Use your Voiceflow agent from phone, web and chat interfaces.
+  See: <Anchor label="Interfaces guide" target="_blank" href="https://docs.voiceflow.com/docs/projects#/">Interfaces guide</Anchor>
 
 * **Extend functionality through automation**\
   Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
-  See: [Zapier Integration](#)
+  See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
 
 ***
 
@@ -59,8 +59,6 @@ This method is designed to help you go from idea to working draft quickly. You p
 <Callout icon="📘" theme="info">
   **Important:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
 </Callout>
-
-> **Important:** Workflow Generation is best used as a foundation. Always review and refine the generated workflow to ensure accuracy and completeness.
 
 ***
 
@@ -101,7 +99,18 @@ Whether you build manually or with project generation, the end goal is the same:
 
 See also:
 
-* [Agent Step Reference](#)
-* [Integrations Reference](#)
-* [Deployments Guide](#)
-* [Zapier Integration](#)
+* **Create your own custom agent**\
+  Create your own agent from scratch with a new prompt or use a pre-created template.
+  See: <Anchor label="Agent step reference" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step reference</Anchor>
+
+* **Enable necessary integrations**\
+  Activate 3rd-party integrations your Agent will need to complete tasks across your workspace(e.g. Google Sheets, Hubspot, Airtable, etc).
+  See: <Anchor label="Integrations reference" target="_blank" href="https://docs.voiceflow.com/docs/integrations#/">Integrations reference</Anchor>
+
+* **Choose your interfaces**\
+  Use your Voiceflow agent from phone, web and chat interfaces.
+  See: <Anchor label="Interfaces guide" target="_blank" href="https://docs.voiceflow.com/docs/projects#/">Interfaces guide</Anchor>
+
+* **Extend functionality through automation**\
+  Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
+  See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
