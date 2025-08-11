@@ -72,7 +72,7 @@ Before you start using a generated project, we advise you double check your work
   Ensure the generated steps match your intended flow of conversation and actions.
 
 * **Refine step prompts**\
-  Review and update each step’s prompt text to be more specific and tailored to your use case, if nessecary.
+  Review and update each step’s prompt text to be more specific and tailored to your use case, if necessary.
 
 * **Confirm tool usage**\
   Check that all required tools are enabled and correctly configured.
