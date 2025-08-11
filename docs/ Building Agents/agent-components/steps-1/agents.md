@@ -168,46 +168,67 @@ The Agent step in Voiceflow allows agents to **dynamically** generate components
   **Important**: These components will only be generated if you explicitly instruct the agent to use them in the prompt. The more specific you are, the better. **Only chat interface agents** using the Agent step can dynamically generate these components.
 </Callout>
 
-<Callout icon="🚧">
-  *For best results* with agent-generated components, we advise you use the latest **Anthropic models**(e.g. Claude 4, Claude 4 Opus, Claude 3.7 Sonnet). Through rigorous testing, OpenAI models have performed poorly with agent-generated components.
-</Callout>
+<Tabs>
+  <Tab title="Buttons">
+    <h3>Button step</h3>
 
-\<Tabs>
-&#x20; \<Tab title="Buttons">
-&#x20;   \<h3>Button step\</h3>
+    Buttons allow your agent to offer **clickable response options** to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
 
-&#x20;   Buttons allow your agent to offer \*\*clickable response options\*\* to the user. When a user clicks a button, it's treated as if they typed the button label as a message—triggering the next appropriate step in the flow.
+    **Use case**: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
 
-&#x20;   \*\*Use case\*\*: Great for quick selections, confirming decisions, or giving a few directions without overloading the user with text.
+    **Example prompt:**
 
-&#x20;   \*\*Example prompt:\*\*
+    ```
+    Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.
+    ```
 
-&#x20;   \`\`\`
-&#x20;   Offer the user three clear options after they describe their issue. Display buttons labeled "Speak to support", "Check order status", and "Return a product". When the user clicks one, treat it as if they typed it, and respond accordingly with follow-up questions or solutions based on their selection.
-&#x20;   \`\`\`
+    ![](https://files.readme.io/cea9cb4921ad883e8ec018bdf0bed2ec92ef988d99c3f759106d95efbace173c-CleanShot_2025-08-05_at_14.24.382x.png)
+  </Tab>
 
-&#x20;   !\[]\(https\://files.readme.io/cea9cb4921ad883e8ec018bdf0bed2ec92ef988d99c3f759106d95efbace173c-CleanShot\_2025-08-05\_at\_14.24.382x.png)
-&#x20; \</Tab>
+  <Tab title="Cards">
+    <h3>Card step</h3>
 
-&#x20; \<Tab title="Cards">
-&#x20;   \<h3>Card step\</h3>
+    Cards are useful for showcasing **visual content along with links**. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
 
-&#x20;   Cards are useful for showcasing \*\*visual content along with links\*\*. Each card can include a title, description, image, and link. They are especially helpful when referencing external resources, product listings, or support documents.
+    <Callout icon="👀" theme="default">
+      ### Cards provide redirect urls.
 
-&#x20;   \<Callout icon="👀" theme="default">
-&#x20;     \### Cards provide redirect urls.
+      Cards should **only** be used if you're embedding the assistant in a web environment—links will open in a new tab.
+    </Callout>
 
-&#x20;     Cards should \*\*only\*\* be used if you're embedding the assistant in a web environment—links will open in a new tab.
-&#x20;   \</Callout>
+    **Use case**: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
 
-&#x20;   \*\*Use case\*\*: Best used for surfacing relevant articles, support pages, or featured products with click-throughs.
+    **Example prompt:**
 
-&#x20;   \*\*Example prompt:\*\*
+    ```
+    If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https://example.com/troubleshoot.
+    ```
 
-&#x20;   \`\`\`
-&#x20;   If the user mentions needing help with setup, provide a card titled "Device Setup Guide" with a short description and a link to https\://example.com/setup. Include a relevant image. If they mention troubleshooting, show a card for "Troubleshooting Hub" with a link to https\://example.com/troubleshoot.
-&#x20;   \`\`\`
+    ![](https://files.readme.io/6e16b53e4f10cc42dd0086cfea0b455fb7d991e9fe57fe499cfcbb4ddde6f8df-CleanShot_2025-08-05_at_14.27.262x.png)
+  </Tab>
 
+  <Tab title="Carousel">
+    <h3>Carousel step</h3>
+
+    The Carousel combines the functionality of **cards and buttons**, allowing multiple scrollable cards each with their own images, text, and buttons. This is ideal for displaying **multiple options** in a compact, swipeable format. You can add in links for images in the prompt- this way your agent uses your assets instead of a stock image.
+
+    **Use case**: Product comparison, FAQ browsing, selecting a service tier, or anything involving multiple rich options.
+
+    **Example prompt:**
+
+    ```
+    When the user asks about available service plans, display a carousel of 3 cards. Each card should have:
+    - A title: the plan name ("Starter", "Pro", "Enterprise")
+    - A short description of the plan
+    - An image representing the plan
+    - A button labeled "Select Plan" that sends back the plan name
+
+    Ensure the user can scroll through and pick one. After selection, proceed with a message confirming their choice and offering next steps.
+    ```
+
+    ![](https://files.readme.io/4a0e1d807b2f5f9808ac43f2b7a86f5a7ea3e71dc451f6b8bf0a7a614c9933c1-CleanShot_2025-08-05_at_14.28.582x.png)
+  </Tab>
+</Tabs>
 
 <br />
 
