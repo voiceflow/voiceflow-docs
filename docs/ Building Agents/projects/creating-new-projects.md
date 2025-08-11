@@ -56,6 +56,10 @@ Project Generation allows you to create a starting-point agent by simply providi
 
 This method is designed to help you go from idea to working draft quickly. You provide a descriptive prompt, and Voiceflow will generate an initial agent workflow with steps, prompts, and tool selections.
 
+<Callout icon="📘" theme="info">
+  **Important:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
+</Callout>
+
 > **Important:** Workflow Generation is best used as a foundation. Always review and refine the generated workflow to ensure accuracy and completeness.
 
 ***
@@ -68,7 +72,7 @@ Before you start using a generated project, we advise you double check your work
   Ensure the generated steps match your intended flow of conversation and actions.
 
 * **Refine step prompts**\
-  Update each step’s prompt text to be more specific and tailored to your use case.
+  Review and update each step’s prompt text to be more specific and tailored to your use case, if nessecary.
 
 * **Confirm tool usage**\
   Check that all required tools are enabled and correctly configured.
