@@ -24,19 +24,19 @@ Manual creation gives you full control from the start with Voiceflow Creator, al
 
 After connecting the **Agent** step to the start chip:
 
-- [ ]**Create your own custom agent**\
+- [ ] **Create your own custom agent**\
   Create your own agent from scratch with a new prompt or use a pre-created template.
   See: <Anchor label="Agent step reference" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step reference</Anchor>
 
-- [ ]**Enable necessary integrations**\
+- [ ] **Enable necessary integrations**\
   Activate 3rd-party integrations your Agent will need to complete tasks across your workspace(e.g. Google Sheets, Hubspot, Airtable, etc).
   See: <Anchor label="Integrations reference" target="_blank" href="https://docs.voiceflow.com/docs/integrations#/">Integrations reference</Anchor>
 
-- [ ]**Choose your interfaces**\
+- [ ] **Choose your interfaces**\
   Use your Voiceflow agent from phone, web and chat interfaces.
   See: <Anchor label="Interfaces guide" target="_blank" href="https://docs.voiceflow.com/docs/projects#/">Interfaces guide</Anchor>
 
-- [ ]**Extend functionality through automation**\
+- [ ] **Extend functionality through automation**\
   Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
   See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
 
