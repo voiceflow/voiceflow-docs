@@ -24,7 +24,7 @@ Manual creation gives you full control from the start with Voiceflow Creator, al
 
 After connecting the **Agent** step to the start chip:
 
-* **Create your own custom agent**\
+- [ ] **Create your own custom agent**\
   Create your own agent from scratch with a new prompt or use a pre-created template.
   See: <Anchor label="Agent step reference" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step reference</Anchor>
 
@@ -114,5 +114,3 @@ See also:
 * **Extend functionality through automation**\
   Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
   See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
-
-    - [ ] Task item
