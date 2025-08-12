@@ -18,9 +18,9 @@ Manual creation gives you full control from the start with Voiceflow Creator, al
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSHpk6cJYEDcI1dJrGuslpUkKHt82TXNPVBFvC" />
 
-## Checklist for manual project setup
+## Enhance your agent
 
-After connecting the **Agent** step to the start chip:
+Once your agent project is set up, take it further with these improvements to expand its capabilities and performance:
 
 * [ ] **Create your own custom agent**\
   Create your own agent from scratch with a new prompt or use a pre-created template.
