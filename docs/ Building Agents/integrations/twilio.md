@@ -13,8 +13,6 @@ With this integration, your agent can notify users, send confirmations, or follo
 
 ## Basic usage
 
-![](https://files.readme.io/your-twilio-integration-image.png)
-
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkTcEeeknG49PzwjiDbWfpVlRtQEcJAv617B0Z" />
 
 <br />
