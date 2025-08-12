@@ -4,7 +4,7 @@ excerpt: >-
   Learn how to start a new Voiceflow Agent project; either from scratch or by
   using prompt-based Project Generation.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
