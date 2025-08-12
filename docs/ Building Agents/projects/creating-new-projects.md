@@ -18,8 +18,6 @@ Manual creation gives you full control from the start with Voiceflow Creator, al
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSHpk6cJYEDcI1dJrGuslpUkKHt82TXNPVBFvC" />
 
-***
-
 ## Checklist for manual project setup
 
 After connecting the **Agent** step to the start chip:
