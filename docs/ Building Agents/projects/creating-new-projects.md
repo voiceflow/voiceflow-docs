@@ -8,7 +8,7 @@ hidden: true
 metadata:
   robots: index
 ---
-Get started with Voiceflow instantly through project generation, or create a project from scratch with templates or the Voiceflow Creator. This guide covers both methods, what to expect from each, and the steps to ensure your Agent is ready for deployment.
+Get started with Voiceflow instantly through project generation, or create a project from scratch with templates or the Voiceflow Creator. This reference covers both methods, what to expect from each, and the steps to ensure your agent is ready for deployment.
 
 # 1. Creating a project manually
 
