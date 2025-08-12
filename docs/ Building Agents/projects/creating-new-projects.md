@@ -2,7 +2,7 @@
 title: Creating new projects
 excerpt: >-
   Learn how to start a new Voiceflow agent project; either from scratch or by
-  using prompt-based Project Generation.
+  using prompt-based project generation.
 deprecated: false
 hidden: true
 metadata:
