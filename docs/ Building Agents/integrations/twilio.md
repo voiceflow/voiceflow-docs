@@ -15,6 +15,10 @@ With this integration, your agent can notify users, send confirmations, or follo
 
 ![](https://files.readme.io/your-twilio-integration-image.png)
 
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkNkm8x2DqntsPVJCcKXlTDvSfiBxWbad4Rop6" />
+
+<br />
+
 <Callout icon="🔐" theme="info">
   To use the Twilio integration, you'll need to add in your **API key SID, API key secret and Account SID** from your Twilio dashboard. This ensures your agent can securely send messages from your Twilio account.
 </Callout>
@@ -50,8 +54,6 @@ Ensure you provide an `LLM description` for the tool so the agent understands wh
   The `Send SMS` action requires at least a `to` phone number and a `message body`. Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
 
   ![](https://files.readme.io/e068acabd07065b854fa73fd53d86c9823142dcd801fd5ba98fa954901b55492-CleanShot_2025-08-10_at_13.46.252x.png)
-
-
 </Callout>
 
 ## Frequently asked questions
