@@ -1,7 +1,7 @@
 ---
 title: Creating new projects
 excerpt: >-
-  Learn how to start a new Voiceflow Agent project; either from scratch or by
+  Learn how to start a new Voiceflow agent project; either from scratch or by
   using prompt-based Project Generation.
 deprecated: false
 hidden: true
