@@ -1,5 +1,5 @@
 ---
-title: Transcripts API 2
+title: Transcripts API
 excerpt: ''
 deprecated: false
 hidden: false
