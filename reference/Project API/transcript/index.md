@@ -1,4 +1,5 @@
 ---
-title: Transcripts API
+title: Legacy Transcripts API
+deprecated: true
 hidden: false
 ---
