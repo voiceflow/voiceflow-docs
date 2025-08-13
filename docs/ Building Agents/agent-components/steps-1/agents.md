@@ -134,6 +134,8 @@ Exit conditions allow your agent to handle specific conversation flows and take 
 * **Variable Collection**: You can require specific data to be collected before entering a path
 * **Seamless Integration**: Paths work within natural conversation, without requiring specific commands
 
+When an exit condition is triggered, the agent step will still retain the full conversation context. This means you can route the user through another part of your flow- such as a component or custom action- and then **return to the Agent step** *without losing memory* of the conversation.
+
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYks8l3KfGlT9yobAZqe36tMHzS78D0muRx2fLJ" />
 
 ### Exit condition examples:
@@ -143,6 +145,18 @@ Exit conditions allow your agent to handle specific conversation flows and take 
 >
 > **Required Variable**: orderID\
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
+
+<Callout icon="👍">
+  #### Tip: create looping workflows and return the agent step.
+
+  You can create looping workflows that exit the Agent step and later return to it while preserving context.
+
+  For example:
+
+  > Agent step → Exit condition → Menu carousel component → Agent step
+
+  This is useful for triggering custom workflows or components (e.g., static card/carousel components, feedback forms, navigation menu, etc) before returning and resuming the original conversation flow. Memory limits still apply, so older messages will eventually be dropped.
+</Callout>
 
 ## Knowledge Base
 
@@ -164,7 +178,7 @@ For example, if a user asks about a password reset but that information isn't in
 
 The Agent step in Voiceflow allows agents to **dynamically** generate components in real time during a conversation. These components- **Buttons, Cards, and Carousel**- can be toggled on to let the agent include them in its replies. Once enabled, the agent will reference your prompt to determine how and when to use them.
 
-<Callout icon="🚧">
+<Callout icon="🚧" theme="warn">
   For best results, we suggest you use the available **Anthropic models**(Claude 4, Claude 3.7 Sonnet, Claude 4 Opus, etc). OpenAI and other lower end LLM models reportedly face issues rendering and executing agent-generated components.
 </Callout>
 
