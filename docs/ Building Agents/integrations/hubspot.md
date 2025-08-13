@@ -15,9 +15,9 @@ Easily connect your Voiceflow agent with HubSpot to create and manage contacts, 
 
 ## Basic usage
 
-![](https://files.readme.io/example-hubspot-basic-usage.png)
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkK9h0DiEqUQ3veuBLjYnM1XTJ2ZzHV8fWlK9G" />
 
-\[ video ]
+<br />
 
 <Callout icon="🔐" theme="info">
   To use the HubSpot integration, you'll need to **OAuth into HubSpot** from the Voiceflow Creator. This ensures your agent can securely create and manage CRM records from your connected account.
