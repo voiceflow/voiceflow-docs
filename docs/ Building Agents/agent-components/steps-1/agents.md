@@ -154,7 +154,7 @@ When an exit condition is triggered, the Agent step will still retain the full c
 >
 > > Agent step → Exit condition → Menu carousel component → Agent step
 >
-> <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYks8l3KfGlT9yobAZqe36tMHzS78D0muRx2fLJ" />
+> <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkyY4Nk23hfmDYQGEyVntJoqO8RAc1Idsg7ezb" />
 >
 > This is useful for triggering custom workflows or components (e.g., static card/carousel components, feedback forms, navigation menu, etc) before returning and resuming the original conversation flow. Memory limits still apply, so older messages will eventually be dropped.
 
