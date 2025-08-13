@@ -146,17 +146,15 @@ When an exit condition is triggered, the agent step will still retain the full c
 > **Required Variable**: orderID\
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
 
-<Callout icon="👍">
-  #### Tip: create looping workflows and return the agent step.
-
-  You can create looping workflows that exit the Agent step and later return to it while preserving context.
-
-  For example:
-
-  > Agent step → Exit condition → Menu carousel component → Agent step
-
-  This is useful for triggering custom workflows or components (e.g., static card/carousel components, feedback forms, navigation menu, etc) before returning and resuming the original conversation flow. Memory limits still apply, so older messages will eventually be dropped.
-</Callout>
+> 👍 Tip: create looping workflows and return the agent step.
+>
+> You can create looping workflows that exit the agent step and later return to it while preserving context.
+>
+> For example:
+>
+> > Agent step → Exit condition → Menu carousel component → Agent step
+>
+> This is useful for triggering custom workflows or components (e.g., static card/carousel components, feedback forms, navigation menu, etc) before returning and resuming the original conversation flow. Memory limits still apply, so older messages will eventually be dropped.
 
 ## Knowledge Base
 
