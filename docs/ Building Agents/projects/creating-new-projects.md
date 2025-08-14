@@ -10,13 +10,13 @@ Voiceflow allows you to start a project from scratch or to generate an initial v
 
 ## Creating a project manually
 
-Manual creation gives you full control from the start with Voiceflow Creator, allowing you to design your Agent’s workflow exactly as you intend.
+Creating a project manually lets you start from scratch or from a pre-built template. This lets you start from an (almost) blank canvas and build our your agent.
 
-## Basic usage
+To create a project manually, choose one of the templates shown on the homepage of Voiceflow's dashboard.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSHpk6cJYEDcI1dJrGuslpUkKHt82TXNPVBFvC" />
 
-## Enhance your agent
+<br />
 
 Once your agent project is set up, take it further with these improvements to expand its capabilities and performance:
 
@@ -48,7 +48,7 @@ Alternatively, you can also use Project generation to spin up a quick project. P
 
 <br />
 
-<Callout icon="ℹ️">
+<Callout icon="ℹ️" theme="info">
   **FYI:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
 </Callout>
 
