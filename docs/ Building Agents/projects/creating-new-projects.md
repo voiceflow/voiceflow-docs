@@ -69,8 +69,10 @@ Before you start using a generated project, we advise you double check your work
 
 ### Best practices for project generation
 
+When using project generation, here are some things to keep in mind when you write your prompt:
+
 * Include **clear goals and intentions** for what the generated project should achieve.
 * Describe **key user interactions** and decision points.
 * List **integrations or APIs** the project should use.
 * Specify **any unique constraints** (e.g., compliance requirements, tone of voice).
-* Avoid vague terms- precise language improves the generated workflow.
+* Avoid vague terms - precise language improves the generated workflow.
