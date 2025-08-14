@@ -1,16 +1,14 @@
 ---
 title: Creating new projects
-excerpt: >-
-  Learn how to start a new Voiceflow agent project; either from scratch or by
-  using prompt-based project generation.
+excerpt: Start a project from scratch or generate one using a prompt
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-Get started with Voiceflow instantly through project generation, or create a project from scratch with templates or the Voiceflow Creator. This reference covers both methods, what to expect from each, and the steps to ensure your agent is ready for deployment.
+Voiceflow allows you to start a project from scratch or to generate an initial version of a project using a prompt.
 
-# 1. Creating a project manually
+## Creating a project manually
 
 Manual creation gives you full control from the start with Voiceflow Creator, allowing you to design your Agent’s workflow exactly as you intend.
 
