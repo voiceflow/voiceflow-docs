@@ -63,7 +63,7 @@ Before you start using a generated project, we advise you double check your work
 * [ ] **Be specific in future prompts**\
   When regenerating or iterating, clearly describe the desired flow and Agent behavior.
 
-***
+<br />
 
 ### Best practices for project generation
 
