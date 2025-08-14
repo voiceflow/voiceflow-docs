@@ -32,25 +32,19 @@ Once your agent project is set up, take it further with these improvements to ex
   Use your Voiceflow agent from phone, web and chat interfaces.
   See: <Anchor label="Interfaces guide" target="_blank" href="https://docs.voiceflow.com/docs/projects#/">Interfaces guide</Anchor>
 
-* [ ] **Extend functionality through automation**\
-  Connect with 7,000+ apps via Zapier to trigger external actions or sync data.
-  See: <Anchor label="Zapier integration" target="_blank" href="https://docs.voiceflow.com/docs/zapier#/">Zapier integration</Anchor>
+## Generate a project
 
-***
+Alternatively, you can also use project generation to spin up a quick project. Project generation allows you to create a starting-point agent by providing a prompt that describes the agent's intended workflow. This method is designed to help you go from idea to working draft quickly.
 
-# Using project generation
-
-Alternatively, you can also use Project generation to spin up a quick project. Project generation allows you to create a starting-point agent by simply providing a natural language prompt that describes the agent's intended workflow. This method is designed to help you go from idea to working draft quickly. You provide a descriptive prompt, and Voiceflow will generate an initial agent workflow with steps, prompts, and tool selections.
-
-## Basic Usage
+To generate a project, head to Voiceflow's dashboard and enter a prompt into the project generation input. If you're not sure what to put, we recommend starting with one of the provided templates. Once you've entered your prompt, click the blue button and your project will be generated in around 30 seconds.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS7DoJLnKUJ2mGoWcAYZ4TIKVbRjQtdHvh1CLu" />
-
-<br />
 
 <Callout icon="ℹ️" theme="info">
   **FYI:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
 </Callout>
+
+<br />
 
 Before you start using a generated project, we advise you double check your workflow:
 
