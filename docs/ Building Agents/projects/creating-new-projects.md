@@ -32,6 +32,8 @@ Once your agent project is set up, take it further with these improvements to ex
   Use your Voiceflow agent from phone, web and chat interfaces.
   See: <Anchor label="Interfaces guide" target="_blank" href="https://docs.voiceflow.com/docs/projects#/">Interfaces guide</Anchor>
 
+<br />
+
 ## Generate a project
 
 Alternatively, you can also use project generation to spin up a quick project. Project generation allows you to create a starting-point agent by providing a prompt that describes the agent's intended workflow. This method is designed to help you go from idea to working draft quickly.
