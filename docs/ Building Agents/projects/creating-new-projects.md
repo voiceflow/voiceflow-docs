@@ -36,15 +36,17 @@ Once your agent project is set up, take it further with these improvements to ex
 
 ## Generate a project
 
+<Callout icon="ℹ️" theme="info">
+  **FYI:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness.
+</Callout>
+
+<br />
+
 Alternatively, you can also use project generation to spin up a quick project. Project generation allows you to create a starting-point agent by providing a prompt that describes the agent's intended workflow. This method is designed to help you go from idea to working draft quickly.
 
 To generate a project, head to Voiceflow's dashboard and enter a prompt into the project generation input. If you're not sure what to put, we recommend starting with one of the provided templates. Once you've entered your prompt, click the blue button and your project will be generated in around 30 seconds.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS7DoJLnKUJ2mGoWcAYZ4TIKVbRjQtdHvh1CLu" />
-
-<Callout icon="ℹ️" theme="info">
-  **FYI:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
-</Callout>
 
 <br />
 
