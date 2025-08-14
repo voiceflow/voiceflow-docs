@@ -1,6 +1,6 @@
 ---
 title: Creating new projects
-excerpt: Start a project from scratch or generate one using a prompt
+excerpt: Start a project from scratch or generate one using a prompt.
 deprecated: false
 hidden: false
 metadata:
