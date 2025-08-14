@@ -48,8 +48,8 @@ Alternatively, you can also use Project generation to spin up a quick project. P
 
 <br />
 
-<Callout icon="📘" theme="info">
-  **Important:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
+<Callout icon="ℹ️">
+  **FYI:** Project generation is best used as a *starting point* for your project. Always review and refine the generated workflow to ensure accuracy and completeness. Currently, this is also a **BETA** feature, subject to changes.
 </Callout>
 
 Before you start using a generated project, we advise you double check your workflow:
