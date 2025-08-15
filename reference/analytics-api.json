@@ -2413,6 +2413,11 @@
         "tags": [
           "Transcript-Property-Value",
           "Public-Docs"
+        ],
+        "security": [
+          {
+            "auth": []
+          }
         ]
       }
     },
