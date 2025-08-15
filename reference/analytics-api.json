@@ -2281,6 +2281,11 @@
         "tags": [
           "Transcript-Property",
           "Public-Docs"
+        ],
+        "security": [
+          {
+            "auth": []
+          }
         ]
       }
     },
