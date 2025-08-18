@@ -29,7 +29,7 @@ This guide will show you how to set up and use custom actions to build sophistic
 >
 > The Call Forwarding step is designed for seamless handoffs to humans or external systems from your agent. You can forward to phone numbers, SIP addresses, or menu-based systems using DTMF tones - allowing your Agent to transfer callers without requiring manual input from the user.
 >
-> Check out <Anchor label="Call forward step" target="_blank" href="https://docs.voiceflow.com/update/docs/call-forwarding-step#/">Call forward step</Anchor>
+> Check out <Anchor label="Call forwarding step" target="_blank" href="https://docs.voiceflow.com/update/docs/call-forwarding-step#/">Call forwarding step</Anchor>
 
 ## Getting Started
 
