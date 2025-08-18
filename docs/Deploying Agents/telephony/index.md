@@ -65,6 +65,10 @@ To use our voice features, you'll need a [Twilio account](https://twilio.com) an
 
 ## Setting up voice with Vonage
 
+Importing phone numbers from Vonage lets you use your existing Vonage numbers in Voiceflow — similar to Twilio — so you can forward calls or build telephony workflows without switching providers.
+
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkeKmBft8Ygt8fiVpRXyHEGkuKxn6d7zZqL31h" />
+
 <br />
 
 ## Change the Agent Assigned to a Phone Number
