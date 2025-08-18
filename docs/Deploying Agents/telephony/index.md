@@ -92,7 +92,7 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
      4. *Optionally*, add a friendly name for your number.
      5. Click *Import* to connect your Vonage account.
 
-     <Image align="center" src="https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png" />
+     <Image align="center" width="100px" height="auto" src="https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png" />
 
   3. **Enable the integration in Voiceflow (from Agent)**
      1. Open your Voiceflow agent and go to the *Integrations* > *Telephony* tab.
