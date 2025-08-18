@@ -12,6 +12,10 @@ next:
 ---
 Voiceflow integrates with **Twilio** and **Vonage**, allowing you to connect a phone number to your agent. Agents with a phone number connected can receive inbound calls and programatically make outbound calls, subject to concurrency limits [associated with your plan](https://voiceflow.com/pricing). Our voice integration is often used for customer support hotlines, lead qualification workflows, and appointment scheduling.
 
+![](https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png)
+
+<br />
+
 <Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
 
 <br />
