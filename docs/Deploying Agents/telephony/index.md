@@ -69,8 +69,6 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
 
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkeKmBft8Ygt8fiVpRXyHEGkuKxn6d7zZqL31h" />
 
-<br />
-
 ## Change the Agent Assigned to a Phone Number
 
 1. Go to the *Integrations* > *Telephony* tab for the agent you want to unassign.
