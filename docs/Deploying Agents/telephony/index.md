@@ -110,6 +110,8 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
   5. **Test the integration by calling your agent from a real phone.**
 </Accordion>
 
+<br />
+
 ## Change the Agent Assigned to a Phone Number
 
 1. Go to the *Integrations* > *Telephony* tab for the agent you want to unassign.
