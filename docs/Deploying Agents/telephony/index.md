@@ -12,8 +12,6 @@ next:
 ---
 Voiceflow integrates with **Twilio** and **Vonage**, allowing you to connect a phone number to your agent. Agents with a phone number connected can receive inbound calls and programatically make outbound calls, subject to concurrency limits [associated with your plan](https://voiceflow.com/pricing). Our voice integration is often used for customer support hotlines, lead qualification workflows, and appointment scheduling.
 
-![](https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png)
-
 <br />
 
 <Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
@@ -94,7 +92,7 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
      4. *Optionally*, add a friendly name for your number.
      5. Click *Import* to connect your Vonage account.
 
-     <Image align="center" src="https://files.readme.io/811b8ce14d0283eff8498b64bbc5300e1c79050df1904ebfd86ebe4476c4336c-CleanShot_2024-12-02_at_11.29.53.png" />
+     <Image align="center" src="https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png" />
 
   3. **Enable the integration in Voiceflow (from Agent)**
      1. Open your Voiceflow agent and go to the *Integrations* > *Telephony* tab.
