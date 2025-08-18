@@ -63,7 +63,6 @@ To use our voice features, you'll need a [Twilio account](https://twilio.com) an
   5. **Test the integration by calling your agent from a real phone.**
 </Accordion>
 
-
 ## Setting up voice with Vonage
 
 Importing phone numbers from Vonage lets you use your existing Vonage numbers in Voiceflow — similar to Twilio — so you can forward calls or build telephony workflows without switching providers.
@@ -74,7 +73,7 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
   To set up the Vonage integration, you'll need a Vonage (Nexmo) account with an active voice-enabled phone number, as well as Editor permissions in your Voiceflow workspace. Here's how to get started:
 
   1. **Generate Vonage API credentials**
-     1. Log in to your Vonage dashboard at https://dashboard.nexmo.com.
+     1. Log in to your Vonage dashboard at [https://dashboard.nexmo.com](https://dashboard.nexmo.com).
      2. Navigate to *API Settings* and save your **API Key** and **API Secret**.
 
   > ❗️
@@ -110,7 +109,6 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
 
   5. **Test the integration by calling your agent from a real phone.**
 </Accordion>
-
 
 ## Change the Agent Assigned to a Phone Number
 
