@@ -1,4 +1,3 @@
-- transcript
 - fetchtranscripts
 - get_transcripts-projectid-hasunreadtranscripts
 - put_transcripts
@@ -9,3 +8,4 @@
 - get_transcripts-projectid-transcriptid-export
 - delete_transcripts-projectid-transcriptid-report-tag-reporttagid
 - put_transcripts-projectid-transcriptid-report-tag-reporttagid
+- transcript
