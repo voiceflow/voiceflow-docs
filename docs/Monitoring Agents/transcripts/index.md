@@ -60,3 +60,9 @@ Evaluations are a set of custom criteria you can define to determine whether spe
 > * The conversation included a proper sign-off, such as the agent saying “Let me know if you need anything else”
 
 Evaluations allow you to automate conversation review and score interactions against key success metrics, quality standards, or compliance requirements.
+
+## Legacy transcripts
+
+Voiceflow's previous transcripts system is still available to existing customers until September 28th, 2025. We recommend migrating over to the new transcripts system as soon as possible.
+
+The documentation for the old transcripts system [can be found here](https://docs.voiceflow.com/docs/transcripts) until that date.
