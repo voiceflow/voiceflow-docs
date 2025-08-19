@@ -7,5 +7,7 @@ deprecated: true
 hidden: false
 ---
 <Callout icon="❗️" theme="error">
-  This endpoint has been deprecated and will no longer be available after Sepember 28th, 2025. We recommend migrating to the new [Transcripts API](ref:transcripts-api) before then.
+  We don't recommend building new tooling with this API endpoint as it's for the old transcripts system. Voiceflow released a new transcript system on July 28th, 2025.
+
+  While this endpoint will remain available in the immediate future, allowing you to pull previously generated transcripts, all new transcripts are available via the new [Transcripts API](ref:transcripts-api).
 </Callout>
