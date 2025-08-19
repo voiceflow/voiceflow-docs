@@ -12,7 +12,7 @@ metadata:
 
 Some APIs restrict access based on the originating IP address for security or compliance reasons. If your custom API returns `403 Forbidden` or is inaccessible when called from Voiceflow, you may need to whitelist the static outbound IPs used by Voiceflow’s cloud infrastructure.
 
-***
+<br />
 
 ### Voiceflow outbound IPs
 
