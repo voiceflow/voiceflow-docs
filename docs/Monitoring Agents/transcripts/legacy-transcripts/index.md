@@ -3,6 +3,7 @@ title: Legacy transcripts
 excerpt: ''
 deprecated: false
 hidden: false
+icon: far fa-square-xmark
 metadata:
   title: ''
   description: ''
