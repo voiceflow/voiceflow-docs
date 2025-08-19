@@ -8,13 +8,13 @@ hidden: true
 metadata:
   robots: index
 ---
-# Whitelisting Voiceflow IPs for API Access
+## Whitelisting Voiceflow IPs for API Access
 
 Some APIs restrict access based on the originating IP address for security or compliance reasons. If your custom API returns `403 Forbidden` or is inaccessible when called from Voiceflow, you may need to whitelist the static outbound IPs used by Voiceflow’s cloud infrastructure.
 
 ***
 
-## Voiceflow outbound IPs
+### Voiceflow outbound IPs
 
 Add **all** of the IPs below to your API’s allowlist / firewall rules:
 
@@ -24,7 +24,7 @@ Add **all** of the IPs below to your API’s allowlist / firewall rules:
 
 ***
 
-## When to whitelist
+### When to whitelist
 
 Whitelist Voiceflow’s IPs if:
 
@@ -35,7 +35,7 @@ Whitelist Voiceflow’s IPs if:
 
 ***
 
-## Configuration steps
+### Configuration steps
 
 1. Ask your security or API team to add Voiceflow’s IPs to their permitted inbound access list.
 2. Confirm your endpoint allows **HTTPS traffic** from these IPs.
@@ -44,7 +44,7 @@ Whitelist Voiceflow’s IPs if:
 
 ***
 
-## Best Practices
+### Best Practices
 
 * Provide the full IP range to your client or network admin up front.
 * If using both **Development** and **Production** environments, confirm both are allowed.
