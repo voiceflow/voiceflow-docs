@@ -22,7 +22,7 @@ Add **all** of the IPs below to your API’s allowlist / firewall rules:
 * `35.174.43.40`
 * `50.16.0.201`
 
-***
+<br />
 
 ### When to whitelist
 
@@ -33,7 +33,7 @@ Whitelist Voiceflow’s IPs if:
 * Your API calls return a **403**, **401**, or similar when triggered inside Voiceflow
 * You are calling the API from a **Voiceflow Integration tool** or **API step** (hosted by Voiceflow)
 
-***
+<br />
 
 ### Configuration steps
 
@@ -42,7 +42,7 @@ Whitelist Voiceflow’s IPs if:
 3. Retry the API call from your Voiceflow project.
 4. Use the Logs tab or transcripts to confirm a successful response.
 
-***
+<br />
 
 ### Best Practices
 
