@@ -2,7 +2,7 @@
 title: Legacy transcripts
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 icon: fad fa-octagon-xmark
 metadata:
   title: ''
