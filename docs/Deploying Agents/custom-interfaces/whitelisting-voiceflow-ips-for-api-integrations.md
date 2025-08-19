@@ -4,7 +4,7 @@ excerpt: >-
   Whitelist Voiceflow’s public outbound IP addresses when connecting to a
   firewall-protected or geo-restricted API.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
