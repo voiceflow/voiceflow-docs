@@ -10,31 +10,79 @@ metadata:
 next:
   description: ''
 ---
-This article is a logical continuation of the previous [Knowledge Base](https://developer.voiceflow.com/v2.0/docs/knowledge-base) guide and goes over more advanced uses of the knowledge base. 
+This article is a logical continuation of the previous [Knowledge Base](https://developer.voiceflow.com/v2.0/docs/knowledge-base) guide and goes over more advanced uses of the knowledge base.
 
 # Advanced Use of the Knowledge Base
 
-If you want full control over your responses, you can use the KB Query API directly and retrieve the chunks themselves. This is especially valuable if you are dealing with sensitive information or want to provide an extremely high degree of accuracy to users when you have complex questions.
-
-The video below shows an example of Pete from our team using this advanced method to prevent hallucinations for a bank. **Start at the 12:32 Timestamp.**
-
-<Embed url="https://www.youtube.com/watch?v=BHxhFd1vqkg" title="Removing Hallucinations for a Wells Fargo Customer Support Banking Agent | Making Bots" favicon="https://www.google.com/favicon.ico" image="https://i.ytimg.com/vi/BHxhFd1vqkg/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=BHxhFd1vqkg" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FBHxhFd1vqkg%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DBHxhFd1vqkg%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252FBHxhFd1vqkg%252Fhqdefault.jpg%26key%3D7788cb384c9f4d5dbbdbeffd9fe4b92f%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
-
-# KB Query API
+## Document Upload API
 
 Instead of only interacting with the Knowledge Base from inside your agent, you can use the KB Query API to query the knowledge base, and can change more settings like the number of chunks returned or disabling synthesis, allowing you to do your own processing on the chunks retrieved. Learn more about the [API](https://developer.voiceflow.com/reference/post_knowledge-base-query), that can be called either using the API step in VF or called outside Voiceflow.
 
-**KB Answer Not Found**: `null`
+## <Anchor label="Customized tabular schema" target="_blank" href="https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-table-1#/">Customized tabular schema</Anchor>
 
-# Filter with metadata
+For users who require more control and flexibility, Voiceflow offers advanced formats for organizing and querying Knowledge Base content. We'll explore these features using a credit card application process example.
+
+#### Using a tabular data format
+
+The tabular data format is useful for structured information and allows for more precise querying and filtering of data. This format is particularly beneficial for organizing complex information like credit card application processes.
+
+**Key Features:**
+
+* Structured data representation in rows and columns
+* Ability to add detailed metadata and tags to each entry
+* Enhanced control over searchable fields
+* Improved precision in data retrieval
+* Example Structure: Here's how you might structure credit card application information using the tabular data format:
+
+```json JSON
+{  
+  "data": {  
+    "name": "credit_card_applications",  
+    "schema": {  
+      "searchableFields": ["cardType", "applicationSteps", "requirements", "faqs"],  
+      "metadataFields": ["userType", "lastUpdated", "pageLink"]  
+    },  
+    "items": [  
+      {  
+        "cardType": "Personal Rewards Card",  
+        "applicationSteps": "1. Fill out personal information. 2. Provide income details. 3. Submit application.",  
+        "requirements": "Must be 18 years or older, have a valid SSN, and annual income of at least $30,000",  
+        "faqs": "What credit score do I need? How long does the application process take? Is there an annual fee?",  
+        "userType": "personal",  
+        "lastUpdated": "2024-07-01",  
+        "pageLink": "/personal-rewards-card"  
+      },  
+      {  
+        "cardType": "Business Cash Back Card",  
+        "applicationSteps": "1. Enter business details. 2. Provide business financial information. 3. Submit application with required documents.",  
+        "requirements": "Must have a registered business, EIN, and annual business revenue of at least $50,000",  
+        "faqs": "Can I apply as a sole proprietor? What documents do I need? How is the cash back calculated?",  
+        "userType": "business",  
+        "lastUpdated": "2024-07-15",  
+        "pageLink": "/business-cash-back-card"  
+      }  
+    ]  
+  }  
+}
+```
+
+Using the above data format, you’re able to have much more granular control over what information you retrieve. For example, the FAQs section adds additional vectors that would enhance the Knowledge Base’s ability to find similar information that is similar to what the user has asked.
+
+To view the relevant endpoints, refer to the <Anchor label="API reference" target="_blank" href="https://docs.voiceflow.com/reference/knowledge-overview#/2-document-api">API reference</Anchor> and **Upload Table Data** endpoint.
+
+## KB Query API
+
+Instead of only interacting with the Knowledge Base from inside your agent, you can use the KB Query API to query the knowledge base, and can change more settings like the number of chunks returned or disabling synthesis, allowing you to do your own processing on the chunks retrieved. Learn more about the [API](https://developer.voiceflow.com/reference/post_knowledge-base-query), that can be called either using the API step in VF or called outside Voiceflow.
+
+## Filter with metadata
 
 You can refine your Knowledge Base search [queries](https://developer.voiceflow.com/reference/post_knowledge-base-query) using metadata. Voiceflow enables you to associate key-value pairs as metadata with documents and define filter expressions for your queries.
 
 When you use metadata filters, the searches precisely retrieve the number of results that match the specified criteria. Typically, these filtered searches have even lower latency compared to searches without filters.
 
-## Metadata Types and Structure
+### Metadata Types and Structure
 
-### Supported Types
+#### Supported Types
 
 * **String**: For textual data.
 * **Number**: For numeric values.
@@ -74,9 +122,9 @@ The system supports up to 10kb of metadata per chunk, allowing for detailed and 
 
 ## Metadata Query Language
 
-> 📘
->
-> Voiceflow's filtering query language is based on [MongoDB’s query and projection operators](https://docs.mongodb.com/manual/reference/operator/query/).
+<Callout icon="📘" theme="info">
+  Voiceflow's filtering query language is based on [MongoDB’s query and projection operators](https://docs.mongodb.com/manual/reference/operator/query/).
+</Callout>
 
 Voiceflow's query language for chunkDB is inspired by MongoDB, designed specifically for conversational metadata and supports a variety of operators for both straightforward and complex queries.
 
