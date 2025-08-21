@@ -1,6 +1,6 @@
 ---
 title: Upload Table Data
-excerpt: >-
+excerpt: >
   Uploads new table data to the Knowledge Base. This endpoint supports
   completely custom fields in the table data, including various data types such
   as string, number, array, or object.
