@@ -1,1 +1,648 @@
-{"openapi":"3.1.0","info":{"version":"v1","title":"Knowledge Base - Management APIs","description":""},"tags":[{"name":"API Reference"}],"paths":{"/v1/knowledge-base/docs/upload":{"parameters":[{"name":"overwrite","description":"Specify whether to overwrite existing data (optional). \"True\" means you want to overwrite.","in":"query","schema":{"type":"boolean"}},{"name":"maxChunkSize","in":"query","schema":{"$ref":"#/components/schemas/maxChunkSize"}},{"name":"markdownConversion","description":"Part of a beta for smart chunking where we will be doing automatic HTML to markdown conversion for the purposes of generating better chunks. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmGeneratedQ","description":"Part of a beta for smart chunking where we use an LLM to generate a question based on the document context and specific chunk, and prepend it to the chunk. This enhances retrieval by aligning chunks with potential user queries. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmPrependContext","description":"Part of a beta for smart chunking where we use an LLM to generate a context summary based on the document and chunk context, and prepend it to each chunk. This improves retrieval by providing additional context to each chunk. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmBasedChunking","description":"Part of a beta for smart chunking where we use an LLM to determine the optimal chunking of the document content based on semantic similarity and retrieval effectiveness. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmContentSummarization","description":"Part of a beta for smart chunking where we use an LLM to summarize and rewrite the content, removing unnecessary information and focusing on important parts to optimize for retrieval. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}}],"post":{"summary":"Upload Document (non-url)","description":"Uploads a document to the Knowledge Base (excluding type \"url\"). Limit is one file per call.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"requestBody":{"required":true,"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"file":{"type":"string","format":"binary","description":"The file for document types pdf, text, and docx. Limit is one file per call."},"metadata":{"type":"string","description":"Custom key-value pairs metadata to be included with the file upload. Format: --form metadata:{\"key\":\"value\"}. [Learn more](https://developer.voiceflow.com/docs/filter-with-metadata)"}}},"encoding":{"metadata":{"contentType":"application/json"}}}}},"responses":{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"$ref":"#/components/schemas/Document"}}}}}}}}}},"/v1/knowledge-base/docs/{documentID}":{"parameters":[{"name":"documentID","description":"A unique identifier of the document object.","in":"path","required":true,"schema":{"type":"string","description":"A unique identifier of the document object."}}],"patch":{"summary":"Update Document Metadata","description":"Updates metadata for the entire document (all chunks). Note - Does not work for document type 'table'.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"requestBody":{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"metadata":{"type":"object","description":"Custom metadata key-value pairs to update for the document's chunks"}}}}}}}},"responses":{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"$ref":"#/components/schemas/Document"}}}}}},"400":{"description":"Bad request - Table documents are not supported for whole document metadata update"}}},"delete":{"summary":"Delete Document","description":"Deletes a specific Knowledge Base document by documentID.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"responses":{"200":{"description":"Successful response with no content."}}},"get":{"summary":"Document Chunk Retrieval","description":"Retrieves the chunks for a Knowledge Base doc by documentID.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"responses":{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"$ref":"#/components/schemas/Document"}},"chunks":{"type":"array","items":{"$ref":"#/components/schemas/Chunks"}}}}}}}}}},"/v1/knowledge-base/docs":{"parameters":[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Optional pagination parameter - The page number to retrieve, defaults to 1 (which is the minimum). Order is by the date updated, descending."},{"name":"limit","in":"query","schema":{"type":"integer","default":10},"description":"Optional pagination parameter - the number of documents to return per page. Defaults to 10, range is 1-100."},{"name":"documentType","in":"query","schema":{"type":"string","enum":["url","pdf","text","docx"]},"description":"Optional pagination parameter - Filters the document list by type (url, pdf, text, docx). Defaults to all document types."}],"get":{"summary":"Document List","description":"Retrieves a list of all documents within a given project's Knowledge Base.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"responses":{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"total":{"type":"integer","description":"Total number of Knowledge Base documents."},"data":{"type":"array","items":{"$ref":"#/components/schemas/Document"}}}}}}}}}},"/v1/knowledge-base/docs/{documentID}/upload":{"parameters":[{"name":"documentID","description":"A unique identifier of the document object.","in":"path","required":true,"schema":{"type":"string","description":"A unique identifier of the document object."}},{"name":"maxChunkSize","in":"query","schema":{"$ref":"#/components/schemas/maxChunkSize"}},{"name":"markdownConversion","description":"Part of a beta for smart chunking where we will be doing automatic HTML to markdown conversion for the purposes of generating better chunks. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmGeneratedQ","description":"Part of a beta for smart chunking where we use an LLM to generate a question based on the document context and specific chunk, and prepend it to the chunk. This enhances retrieval by aligning chunks with potential user queries. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmPrependContext","description":"Part of a beta for smart chunking where we use an LLM to generate a context summary based on the document and chunk context, and prepend it to each chunk. This improves retrieval by providing additional context to each chunk. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmBasedChunking","description":"Part of a beta for smart chunking where we use an LLM to determine the optimal chunking of the document content based on semantic similarity and retrieval effectiveness. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}},{"name":"llmContentSummarization","description":"Part of a beta for smart chunking where we use an LLM to summarize and rewrite the content, removing unnecessary information and focusing on important parts to optimize for retrieval. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)","in":"query","schema":{"type":"boolean"}}],"put":{"summary":"Replace Document (non-url)","description":"Replaces the document and document name in the Knowledge Base, by documentID (excluding type \"url\"). Limit one per call.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"requestBody":{"required":true,"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"file":{"type":"string","format":"binary","description":"The file for document types pdf, text, and docx. Limit is one file per call."},"metadata":{"type":"string","description":"Custom key-value pairs metadata to be included with the file upload. Format: --form metadata:{\"key\":\"value\"}. [Learn more](https://developer.voiceflow.com/docs/filter-with-metadata)"}}},"encoding":{"metadata":{"contentType":"application/json"}}}}},"responses":{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"$ref":"#/components/schemas/Document"}}}}}}}}}},"/v1/knowledge-base/docs/{documentID}/chunk/{chunkID}":{"parameters":[{"name":"documentID","description":"A unique identifier of the document object.","in":"path","required":true,"schema":{"type":"string"}},{"name":"chunkID","description":"A unique identifier of the chunk.","in":"path","required":true,"schema":{"type":"string"}}],"patch":{"summary":"Update Chunk Metadata","description":"Updates metadata for a specific chunk while leaving all other chunks unchanged. Works with all document types.","tags":["API Reference"],"security":[{"DialogManagerAPIKey":[]}],"requestBody":{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"metadata":{"type":"object","description":"Custom metadata key-value pairs to update for the chunk"}}}}}}}},"responses":{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"$ref":"#/components/schemas/Document"}}}}}}}}}},"components":{"schemas":{"Document":{"type":"object","properties":{"status":{"$ref":"#/components/schemas/DocumentStatus"},"data":{"$ref":"#/components/schemas/DocumentData"},"updatedAt":{"type":"string","format":"date-time"},"documentID":{"type":"string","description":"A unique identifier of the document object."},"metadata":{"type":"object","description":"Custom metadata associated with the document's chunks."}}},"DocumentStatus":{"type":"string","enum":["ERROR","SUCCESS","PENDING","INITIALIZED"]},"DocumentData":{"type":"object","properties":{"type":{"type":"string","enum":["url","pdf","text","docx"],"description":"The type of the source document (url, pdf, text, or docx)."},"name":{"type":"string","description":"A readable name for the document."},"url":{"type":"string","description":"The URL for documents of type \"url\" only."}}},"DocumentDataFile":{"type":"object","properties":{"file":{"type":"string","format":"binary","description":"The file for document types pdf, text, and docx. Limit is one file per call."},"metadata":{"type":"string","description":"Custom key-value pairs metadata to be included with the file upload. Format: --form metadata:{\"key\":\"value\"}. [Learn more](https://developer.voiceflow.com/docs/filter-with-metadata)"}}},"DocumentDataUrl":{"data":{"type":"object","properties":{"type":{"type":"string","enum":["url"],"default":"url","description":"The type of the source document (url). Limit is one url per call."},"name":{"type":"string","description":"A readable name for the url document. Limit is one url per call."},"url":{"type":"string","description":"The URL for documents of type \"url\". Limit is one url per call."}}}},"Chunks":{"type":"object","properties":{"chunkID":{"type":"integer","description":"The unique identifier of the chunk. A chunk is a section of text."},"content":{"type":"string","description":"The actual content of the chunk."}}},"maxChunkSize":{"type":"integer","default":1000,"description":"Optional - Determines how granularly each document is broken up. Range available is 500-1500 tokens, default is 1000. Smaller chunk size means narrower context, faster response, less tokens consumed, and greater risk of less accurate answers. Max chunk size affects the total amount of chunks parsed from a document - i.e., larger chunks means less chunks retrieved."}},"securitySchemes":{"DialogManagerAPIKey":{"type":"apiKey","in":"header","name":"Authorization","description":"All requests made to any Knowledge Base APIs must be validated with a Dialog Manager API Key.\n\nTo obtain a Dialog Manager API key, go to the Integration tab on the project you uploaded data sources to and click the \"Copy API key\" button.\n"}}},"servers":[{"url":"https://api.voiceflow.com"}],"x-readme":{"explorer-enabled":true,"proxy-enabled":true}}
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "v1",
+    "title": "Knowledge Base - Management APIs",
+    "description": ""
+  },
+  "tags": [
+    {
+      "name": "API Reference"
+    }
+  ],
+  "paths": {
+    "/v1/knowledge-base/docs/upload": {
+      "parameters": [
+        {
+          "name": "overwrite",
+          "description": "Specify whether to overwrite existing data (optional). \"True\" means you want to overwrite.",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "maxChunkSize",
+          "in": "query",
+          "schema": {
+            "$ref": "#/components/schemas/maxChunkSize"
+          }
+        },
+        {
+          "name": "markdownConversion",
+          "description": "Part of a beta for smart chunking where we will be doing automatic HTML to markdown conversion for the purposes of generating better chunks. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmGeneratedQ",
+          "description": "Part of a beta for smart chunking where we use an LLM to generate a question based on the document context and specific chunk, and prepend it to the chunk. This enhances retrieval by aligning chunks with potential user queries. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmPrependContext",
+          "description": "Part of a beta for smart chunking where we use an LLM to generate a context summary based on the document and chunk context, and prepend it to each chunk. This improves retrieval by providing additional context to each chunk. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmBasedChunks",
+          "description": "Part of a beta for smart chunking where we use an LLM to determine the optimal chunking of the document content based on semantic similarity and retrieval effectiveness. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmContentSummarization",
+          "description": "Part of a beta for smart chunking where we use an LLM to summarize and rewrite the content, removing unnecessary information and focusing on important parts to optimize for retrieval. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "post": {
+        "summary": "Upload Document (non-url)",
+        "description": "Uploads a document to the Knowledge Base (excluding type \"url\"). Limit is one file per call.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The file for document types pdf, text, and docx. Limit is one file per call."
+                  },
+                  "metadata": {
+                    "type": "string",
+                    "description": "Custom key-value pairs metadata to be included with the file upload. Format: --form metadata:{\"key\":\"value\"}. [Learn more](https://developer.voiceflow.com/docs/filter-with-metadata)"
+                  }
+                }
+              },
+              "encoding": {
+                "metadata": {
+                  "contentType": "application/json"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Document"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/knowledge-base/docs/{documentID}": {
+      "parameters": [
+        {
+          "name": "documentID",
+          "description": "A unique identifier of the document object.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "description": "A unique identifier of the document object."
+          }
+        }
+      ],
+      "patch": {
+        "summary": "Update Document Metadata",
+        "description": "Updates metadata for the entire document (all chunks). Note - Does not work for document type 'table'.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "metadata": {
+                        "type": "object",
+                        "description": "Custom metadata key-value pairs to update for the document's chunks"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Document"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Table documents are not supported for whole document metadata update"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Document",
+        "description": "Deletes a specific Knowledge Base document by documentID.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with no content."
+          }
+        }
+      },
+      "get": {
+        "summary": "Document Chunk Retrieval",
+        "description": "Retrieves the chunks for a Knowledge Base doc by documentID.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Document"
+                      }
+                    },
+                    "chunks": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Chunks"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/knowledge-base/docs": {
+      "parameters": [
+        {
+          "name": "page",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "default": 1
+          },
+          "description": "Optional pagination parameter - The page number to retrieve, defaults to 1 (which is the minimum). Order is by the date updated, descending."
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "default": 10
+          },
+          "description": "Optional pagination parameter - the number of documents to return per page. Defaults to 10, range is 1-100."
+        },
+        {
+          "name": "documentType",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "url",
+              "pdf",
+              "text",
+              "docx"
+            ]
+          },
+          "description": "Optional pagination parameter - Filters the document list by type (url, pdf, text, docx). Defaults to all document types."
+        }
+      ],
+      "get": {
+        "summary": "Document List",
+        "description": "Retrieves a list of all documents within a given project's Knowledge Base.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer",
+                      "description": "Total number of Knowledge Base documents."
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Document"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/knowledge-base/docs/{documentID}/upload": {
+      "parameters": [
+        {
+          "name": "documentID",
+          "description": "A unique identifier of the document object.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "description": "A unique identifier of the document object."
+          }
+        },
+        {
+          "name": "maxChunkSize",
+          "in": "query",
+          "schema": {
+            "$ref": "#/components/schemas/maxChunkSize"
+          }
+        },
+        {
+          "name": "markdownConversion",
+          "description": "Part of a beta for smart chunking where we will be doing automatic HTML to markdown conversion for the purposes of generating better chunks. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmGeneratedQ",
+          "description": "Part of a beta for smart chunking where we use an LLM to generate a question based on the document context and specific chunk, and prepend it to the chunk. This enhances retrieval by aligning chunks with potential user queries. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmPrependContext",
+          "description": "Part of a beta for smart chunking where we use an LLM to generate a context summary based on the document and chunk context, and prepend it to each chunk. This improves retrieval by providing additional context to each chunk. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmBasedChunks",
+          "description": "Part of a beta for smart chunking where we use an LLM to determine the optimal chunking of the document content based on semantic similarity and retrieval effectiveness. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "llmContentSummarization",
+          "description": "Part of a beta for smart chunking where we use an LLM to summarize and rewrite the content, removing unnecessary information and focusing on important parts to optimize for retrieval. [Join the waiting list](https://beta.proxy-voiceflow.com/?beta=smartchunking)",
+          "in": "query",
+          "schema": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "put": {
+        "summary": "Replace Document (non-url)",
+        "description": "Replaces the document and document name in the Knowledge Base, by documentID (excluding type \"url\"). Limit one per call.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The file for document types pdf, text, and docx. Limit is one file per call."
+                  },
+                  "metadata": {
+                    "type": "string",
+                    "description": "Custom key-value pairs metadata to be included with the file upload. Format: --form metadata:{\"key\":\"value\"}. [Learn more](https://developer.voiceflow.com/docs/filter-with-metadata)"
+                  }
+                }
+              },
+              "encoding": {
+                "metadata": {
+                  "contentType": "application/json"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Document"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/knowledge-base/docs/{documentID}/chunk/{chunkID}": {
+      "parameters": [
+        {
+          "name": "documentID",
+          "description": "A unique identifier of the document object.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "chunkID",
+          "description": "A unique identifier of the chunk.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "patch": {
+        "summary": "Update Chunk Metadata",
+        "description": "Updates metadata for a specific chunk while leaving all other chunks unchanged. Works with all document types.",
+        "tags": [
+          "API Reference"
+        ],
+        "security": [
+          {
+            "DialogManagerAPIKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "metadata": {
+                        "type": "object",
+                        "description": "Custom metadata key-value pairs to update for the chunk"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Document"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Document": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/DocumentStatus"
+          },
+          "data": {
+            "$ref": "#/components/schemas/DocumentData"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "documentID": {
+            "type": "string",
+            "description": "A unique identifier of the document object."
+          },
+          "metadata": {
+            "type": "object",
+            "description": "Custom metadata associated with the document's chunks."
+          }
+        }
+      },
+      "DocumentStatus": {
+        "type": "string",
+        "enum": [
+          "ERROR",
+          "SUCCESS",
+          "PENDING",
+          "INITIALIZED"
+        ]
+      },
+      "DocumentData": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "url",
+              "pdf",
+              "text",
+              "docx"
+            ],
+            "description": "The type of the source document (url, pdf, text, or docx)."
+          },
+          "name": {
+            "type": "string",
+            "description": "A readable name for the document."
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL for documents of type \"url\" only."
+          }
+        }
+      },
+      "DocumentDataFile": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "description": "The file for document types pdf, text, and docx. Limit is one file per call."
+          },
+          "metadata": {
+            "type": "string",
+            "description": "Custom key-value pairs metadata to be included with the file upload. Format: --form metadata:{\"key\":\"value\"}. [Learn more](https://developer.voiceflow.com/docs/filter-with-metadata)"
+          }
+        }
+      },
+      "DocumentDataUrl": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "url"
+              ],
+              "default": "url",
+              "description": "The type of the source document (url). Limit is one url per call."
+            },
+            "name": {
+              "type": "string",
+              "description": "A readable name for the url document. Limit is one url per call."
+            },
+            "url": {
+              "type": "string",
+              "description": "The URL for documents of type \"url\". Limit is one url per call."
+            }
+          }
+        }
+      },
+      "Chunks": {
+        "type": "object",
+        "properties": {
+          "chunkID": {
+            "type": "integer",
+            "description": "The unique identifier of the chunk. A chunk is a section of text."
+          },
+          "content": {
+            "type": "string",
+            "description": "The actual content of the chunk."
+          }
+        }
+      },
+      "maxChunkSize": {
+        "type": "integer",
+        "default": 1000,
+        "description": "Optional - Determines how granularly each document is broken up. Range available is 500-1500 tokens, default is 1000. Smaller chunk size means narrower context, faster response, less tokens consumed, and greater risk of less accurate answers. Max chunk size affects the total amount of chunks parsed from a document - i.e., larger chunks means less chunks retrieved."
+      }
+    },
+    "securitySchemes": {
+      "DialogManagerAPIKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization",
+        "description": "All requests made to any Knowledge Base APIs must be validated with a Dialog Manager API Key.\n\nTo obtain a Dialog Manager API key, go to the Integration tab on the project you uploaded data sources to and click the \"Copy API key\" button.\n"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.voiceflow.com"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "proxy-enabled": true
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: Upload Document (file)
+title: Upload Document (non-url)
 excerpt: >-
   Uploads a document to the Knowledge Base (excluding type "url"). Limit is one
   file per call.
