@@ -1,5 +1,5 @@
 ---
 title: Transcripts API
-deprecated: true
+deprecated: false
 hidden: false
 ---
