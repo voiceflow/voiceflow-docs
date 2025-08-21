@@ -1,5 +1,5 @@
 ---
-title: Replace Document (file)
+title: Replace Document (non-url)
 excerpt: >-
   Replaces the document and document name in the Knowledge Base, by documentID
   (excluding type "url"). Limit one per call.

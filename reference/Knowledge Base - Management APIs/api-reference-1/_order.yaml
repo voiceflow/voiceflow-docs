@@ -1,0 +1,5 @@
+- post_v1-knowledge-base-docs-upload-2
+- patch_v1-knowledge-base-docs-documentid-1
+- delete_v1-knowledge-base-docs-documentid-2
+- get_v1-knowledge-base-docs-documentid-2
+- patch_v1-knowledge-base-docs-documentid-chunk-chunkid-1
