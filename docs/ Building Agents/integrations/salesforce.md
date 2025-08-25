@@ -4,7 +4,7 @@ excerpt: >-
   With the Salesforce integration, your agent can log notes, create leads, and
   keep cases up-to-date without leaving the conversation.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
