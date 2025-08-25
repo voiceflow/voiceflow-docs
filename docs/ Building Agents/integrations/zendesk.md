@@ -2,7 +2,7 @@
 title: Zendesk
 excerpt: Zendesk integration into your Voiceflow agent.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
