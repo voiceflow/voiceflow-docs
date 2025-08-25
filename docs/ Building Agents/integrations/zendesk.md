@@ -49,7 +49,7 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 
 Beyond ticket and user management, you can also connect your **Zendesk Help Center** to Voiceflow’s Knowledge Base. This allows your agent to surface trusted company resources — such as product guides, policies, or FAQs — alongside live ticketing actions.
 
-<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk5ow0QXzMKCWVSIegrm60uA8OXNGnvF3Zysxp" />
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkEOIUVzutlfNF8ryan6PRYp19kmhQSKxWJZC7" />
 
 By syncing Zendesk Help, your agent has access not just to Zendesk functionality (creating/updating tickets), but also Zendesk knowledge, enabling more contextual, accurate, and helpful responses for your users.
 
