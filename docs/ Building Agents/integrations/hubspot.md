@@ -4,7 +4,7 @@ excerpt: >-
   Use the HubSpot actions in both Agent and Tool steps to create powerful sales,
   support, and marketing workflows.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
