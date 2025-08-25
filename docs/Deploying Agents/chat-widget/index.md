@@ -15,6 +15,7 @@ The quickest way to launch your agent is using our web chat widget. Web chat can
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSm0VVMS3vgzMhu7msD2nISacpBK5UHfikJy9X" />
 
 <Image align="center" src="https://files.readme.io/091c04cdb845290d957dc80ee24838ca1a4862007b6901dea727069bbc286c53-Frame_48095750_2.png" />
+
 <Image align="center" src="https://files.readme.io/09dd102d7c3f2a5ae1cc5c73958608097f1dc8e84a31609d32d72867a247fe48-Frame_48095783.png" />
 
 ## How to add your agent's widget to your website
@@ -27,7 +28,7 @@ Before you can add your agent to your website, you'll need to [publish a product
 
 ## Customizing your widget
 
-Your agent should fit your brand, so we provide a variety of customization options. From the widget settings page, scroll down and you'll be able to set your agent's brand colours, icons, launcher type, the interface you'd like to use, and more. You can also add placeholder and privacy policy links. Paid users can optionally disable Voiceflow branding.
+Your agent should fit your brand, so we provide a variety of customization options. From the widget settings page, scroll down and you'll be able to set your agent's brand colours, icons, launcher type, the interface you'd like to use, and more. You can also add placeholder and privacy policy links. Customers with a Teams subscription can optionally disable Voiceflow branding.
 
 <Image align="center" src="https://files.readme.io/dafdecf7bb148515422a3217daee20e2c298ca1ac6f90f56d3adc0bc4fa1452d-Frame_48095751.png" />
 
