@@ -10,9 +10,9 @@ Easily connect your Voiceflow agent with Zendesk to manage support tickets, user
 
 ## Basic usage
 
-![](https://files.readme.io/f0c3d825ec547dbd2b160f55c79463c658092031280b0ecca842680084aee47e-CleanShot_2025-08-06_at_14.11.592x.png)
-
 <br />
+
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkSjPbKcmMCapOVQL9rmTnx1hYXiR0P3ZbNgMd" />
 
 ## What you can do with Zendesk
 
@@ -40,7 +40,7 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  Each Zendesk action requires specific arguments. Be sure to review each one and decide whether it should be *defaulted, hardcoded, or collected by the agent*. Add an LLM description for every argument to help the assistant understand its purpose and how to populate it.
+  Each Zendesk action requires specific arguments. Be sure to review each one and decide whether it should be _defaulted, hardcoded, or collected by the agent_. Add an LLM description for every argument to help the assistant understand its purpose and how to populate it.
 
   ![](https://files.readme.io/8b407eebf2bd5e7dc062b9aaffdd647fa971f2ef796440c6f8ac28633abb38cb-CleanShot_2025-08-06_at_13.57.132x.png)
 </Callout>
@@ -65,7 +65,7 @@ Here's some common use cases on when you might use Zendesk in your agent's workf
 
 ### What happens if a ticket or user isn’t found?
 
-> If the Zendesk action fails to find the requested resource (like a ticket or user), the agent will inform the user they were unable to perform the action. You can add conditional logic in the agent's prompt to handle these cases gracefully, such as prompting the user to re-enter information or skipping to an *exit condition*.
+> If the Zendesk action fails to find the requested resource (like a ticket or user), the agent will inform the user they were unable to perform the action. You can add conditional logic in the agent's prompt to handle these cases gracefully, such as prompting the user to re-enter information or skipping to an _exit condition_.
 
 ### Can I update an existing ticket based on user replies?
 
