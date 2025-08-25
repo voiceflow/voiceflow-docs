@@ -12,9 +12,9 @@ Use Salesforce actions in both Agent and Tool steps to manage customer data, tra
 
 ## Basic usage
 
-![](https://files.readme.io/your-salesforce-integration-image.png)
+<br />
 
-\[img ]
+<Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkd20NwMlpu1oeO8lNrvZq7mJiBcVy0XgAjEbS" />
 
 <Callout icon="🔐" theme="info">
   To use the Salesforce integration, you'll need to **OAuth into Salesforce** from the Voiceflow Creator. This ensures your agent can securely access and update your Salesforce account.
@@ -54,11 +54,9 @@ Ensure you provide an `LLM description` for each tool so the agent understands w
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  Each Salesforce action requires different fields (e.g., `FirstName`, `LastName`, or `Email`). Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
+  Each Salesforce action requires different fields (e.g., `FirstName`, `LastName`, or `Email`). Decide whether these should be _defaulted, hardcoded, or collected by the agent_. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
 
   ![](https://files.readme.io/8cb1508a2cc4b367d74aa1165d3fb7397be0a447d6b1efabacbbbe07251350ba-CleanShot_2025-08-10_at_13.24.202x.png)
-
-
 </Callout>
 
 ## Frequently asked questions
