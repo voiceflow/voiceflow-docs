@@ -4,7 +4,7 @@ excerpt: >-
   Use the Twilio integration to send SMS messages directly from your Voiceflow
   agent.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
