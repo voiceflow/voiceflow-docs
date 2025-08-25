@@ -12,8 +12,6 @@ Use Salesforce actions in both Agent and Tool steps to manage customer data, tra
 
 ## Basic usage
 
-<br />
-
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkd20NwMlpu1oeO8lNrvZq7mJiBcVy0XgAjEbS" />
 
 <Callout icon="🔐" theme="info">
