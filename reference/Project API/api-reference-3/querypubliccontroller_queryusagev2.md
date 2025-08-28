@@ -69,11 +69,11 @@ The API response supports pagination to efficiently manage and navigate through 
   "data": {
     "name": "top_intents",
     "filter": {
-        "projectID": "62912f08e83f76001b218690",
-        "startTime": "2021-08-01T00:00:00.000Z",
-        "endTime": "2021-08-16T00:00:00.000Z",
-        "limit": 3
-      }
+      "projectID": "62912f08e83f76001b218690",
+      "startTime": "2021-08-01T00:00:00.000Z",
+      "endTime": "2021-08-16T00:00:00.000Z",
+      "limit": 3
+    }
   }
 }
 
