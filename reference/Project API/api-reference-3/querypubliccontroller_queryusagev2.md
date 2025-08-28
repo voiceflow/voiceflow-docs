@@ -195,16 +195,14 @@ The API response supports pagination to efficiently manage and navigate through 
 // REQUEST body 
 
 {
-  "data": [
-    {
-      "name": "credit_usage",
-      "filter": {
-        "projectID": "62912f08e83f76001b218690",
-        "startTime": "2021-08-01T00:00:00.000Z",
-        "limit": 3
-      }
+  "data": {
+    "name": "credit_usage",
+    "filter": {
+      "projectID": "62912f08e83f76001b218690",
+      "startTime": "2021-08-01T00:00:00.000Z",
+      "limit": 3
     }
-  ]
+  }
 }
 
 // ------------------------------------------
