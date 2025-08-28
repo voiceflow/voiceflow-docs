@@ -18,7 +18,7 @@ With the Analytics API, you can retrieve the usage data of your conversational a
 
 ## 📋 Request Types
 
-There are different types of requests that can be sent.\
+There are different types of requests that can be sent.
 To see a list of all request types, check out the documentation for the `data.name` field below.
 
 Examples include:
@@ -34,7 +34,7 @@ Examples include:
 
 The API response supports pagination to efficiently manage and navigate through large sets of data.
 
-* **cursor**:\
+* **cursor**:
   An opaque integer or string token representing the current position in the overall dataset. This cursor can be used in subsequent API requests to fetch the next page of results. For example, when requesting the next page, the client includes this cursor to continue retrieving items after the current batch.
 * **items**:
 
@@ -66,17 +66,15 @@ The API response supports pagination to efficiently manage and navigate through 
 // REQUEST body 
 
 {
-  "data": [
-    {
-      "name": "top_intents",
-      "filter": {
+  "data": {
+    "name": "top_intents",
+    "filter": {
         "projectID": "62912f08e83f76001b218690",
         "startTime": "2021-08-01T00:00:00.000Z",
         "endTime": "2021-08-16T00:00:00.000Z",
         "limit": 3
       }
-    }
-  ]
+  }
 }
 
 // ------------------------------------------
