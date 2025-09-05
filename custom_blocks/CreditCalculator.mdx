@@ -9,21 +9,332 @@ export const CreditCalculator = () => {
 	// 
 
 
-  // State for API data
-  const [creditsData, setCreditsData] = useState(null);
-  const [plans, setPlans] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // Define all data inside the component to avoid MDX parsing issues
+  const creditsData = {
+    orchestration: [
+      { 
+        vendor: "Voiceflow", 
+        item: "Chat AI Hosting", 
+        unitType: "messages",
+        unitMultiplier: 1,
+        unit: "Agent Sent Message",
+        creditsPerUnit: 1,
+        creditsPerBaseUnit: 1
+      },
+      { 
+        vendor: "Voiceflow", 
+        item: "Voice AI Hosting", 
+        unitType: "minutes",
+        unitMultiplier: 1,
+        unit: "Minutes of Voice AI",
+        creditsPerUnit: 10,
+        creditsPerBaseUnit: 10
+      }
+    ],
+    llm: [
+      { 
+        vendor: "Anthropic", 
+        item: "claude-3-haiku-20240307", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.075,
+        creditsPerBaseUnit: 0.000075
+      },
+      { 
+        vendor: "Anthropic", 
+        item: "claude-3-5-sonnet-20241022", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.875,
+        creditsPerBaseUnit: 0.000875
+      },
+      { 
+        vendor: "Anthropic", 
+        item: "claude-3-7-sonnet-20250219", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.875,
+        creditsPerBaseUnit: 0.000875
+      },
+      { 
+        vendor: "Anthropic", 
+        item: "claude-3-opus-20240229", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 4.250,
+        creditsPerBaseUnit: 0.00425
+      },
+      { 
+        vendor: "Anthropic", 
+        item: "Claude V2.0", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 2.000,
+        creditsPerBaseUnit: 0.002
+      },
+      { 
+        vendor: "Anthropic", 
+        item: "Claude V2.1", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 2.000,
+        creditsPerBaseUnit: 0.002
+      },
+      { 
+        vendor: "Google", 
+        item: "Gemini 2.0 Flash", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.040,
+        creditsPerBaseUnit: 0.00004
+      },
+      { 
+        vendor: "Google", 
+        item: "Gemini 1.5 Pro", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.350,
+        creditsPerBaseUnit: 0.00035
+      },
+      { 
+        vendor: "Groq", 
+        item: "Llama 3.2 1B (Preview) 8k", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.010,
+        creditsPerBaseUnit: 0.00001
+      },
+      { 
+        vendor: "Groq", 
+        item: "Llama 3.1 8B Instant 128k", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.013,
+        creditsPerBaseUnit: 0.000013
+      },
+      { 
+        vendor: "Groq", 
+        item: "DeepSeek R1 Distill Llama 70B", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.190,
+        creditsPerBaseUnit: 0.00019
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-3.5-turbo-0125", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.125,
+        creditsPerBaseUnit: 0.000125
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4-turbo-2024-04-09", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 2.500,
+        creditsPerBaseUnit: 0.0025
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4-0613", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 7.000,
+        creditsPerBaseUnit: 0.007
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4o-mini-2024-07-18", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.040,
+        creditsPerBaseUnit: 0.00004
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4o-2024-05-13", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 1.250,
+        creditsPerBaseUnit: 0.00125
+      },
+      { 
+        vendor: "Open AI", 
+        item: "o3-mini-2025-01-31", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.300,
+        creditsPerBaseUnit: 0.0003
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4o-2024-08-06", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.675,
+        creditsPerBaseUnit: 0.000675
+      },
+      { 
+        vendor: "Open AI", 
+        item: "o1-mini-2024-09-12", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.300,
+        creditsPerBaseUnit: 0.0003
+      },
+      { 
+        vendor: "Open AI", 
+        item: "o1-preview-2024-09-12", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 4.000,
+        creditsPerBaseUnit: 0.004
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4.1-2025-04-14", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.575,
+        creditsPerBaseUnit: 0.000575
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4.1-mini-2025-04-14", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.115,
+        creditsPerBaseUnit: 0.000115
+      },
+      { 
+        vendor: "Open AI", 
+        item: "gpt-4.1-nano-2025-04-14", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.030,
+        creditsPerBaseUnit: 0.00003
+      },
+      { 
+        vendor: "Open AI", 
+        item: "o3-2025-04-16", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 2.875,
+        creditsPerBaseUnit: 0.002875
+      },
+      { 
+        vendor: "Open AI", 
+        item: "o4-mini-2025-04-16", 
+        unitType: "tokens",
+        unitMultiplier: 1000,
+        unit: "1K Tokens",
+        creditsPerUnit: 0.315,
+        creditsPerBaseUnit: 0.000315
+      }
+    ],
+    asr: [
+      { 
+        vendor: "Deepgram", 
+        item: "Deepgram - STT", 
+        unitType: "minutes",
+        unitMultiplier: 1,
+        unit: "Minutes",
+        creditsPerUnit: 1.000,
+        creditsPerBaseUnit: 1.000
+      }
+    ],
+    tts: [
+      { 
+        vendor: "Deepgram", 
+        item: "Deepgram - TTS", 
+        unitType: "characters",
+        unitMultiplier: 1000,
+        unit: "1K Characters",
+        creditsPerUnit: 3.250,
+        creditsPerBaseUnit: 0.00325
+      },
+      { 
+        vendor: "Eleven Labs", 
+        item: "Eleven Labs - TTS - Flash/Turbo", 
+        unitType: "characters",
+        unitMultiplier: 1000,
+        unit: "1K Characters",
+        creditsPerUnit: 9.000,
+        creditsPerBaseUnit: 0.009
+      },
+      { 
+        vendor: "Eleven Labs", 
+        item: "Eleven Labs - TTS - Multilingual", 
+        unitType: "characters",
+        unitMultiplier: 1000,
+        unit: "1K Characters",
+        creditsPerUnit: 18.000,
+        creditsPerBaseUnit: 0.018
+      },
+      { 
+        vendor: "Rime Labs", 
+        item: "Rime Labs - TTS", 
+        unitType: "characters",
+        unitMultiplier: 1000,
+        unit: "1K Characters",
+        creditsPerUnit: 6.000,
+        creditsPerBaseUnit: 0.006
+      }
+    ]
+  };
+
+  const plans = [
+    // Monthly
+    { name: "PRO", period: "Month", credits: 10000, price: 60, unitCost: 0.006 },
+    { name: "PRO", period: "Month", credits: 15000, price: 90, unitCost: 0.006 },
+    { name: "PRO", period: "Month", credits: 20000, price: 120, unitCost: 0.006 },
+    { name: "BUSINESS", period: "Month", credits: 30000, price: 150, unitCost: 0.005 },
+    { name: "BUSINESS", period: "Month", credits: 50000, price: 250, unitCost: 0.005 },
+    { name: "BUSINESS", period: "Month", credits: 100000, price: 500, unitCost: 0.005 },
+    // Annual
+    { name: "PRO", period: "Year", credits: 120000, price: 648, unitCost: 0.0054 },
+    { name: "PRO", period: "Year", credits: 180000, price: 972, unitCost: 0.0054 },
+    { name: "PRO", period: "Year", credits: 240000, price: 1296, unitCost: 0.0054 },
+    { name: "BUSINESS", period: "Year", credits: 360000, price: 1620, unitCost: 0.0045 },
+    { name: "BUSINESS", period: "Year", credits: 600000, price: 2700, unitCost: 0.0045 },
+    { name: "BUSINESS", period: "Year", credits: 1200000, price: 5400, unitCost: 0.0045 },
+  ];
 
   // State for user inputs
   const [voiceMinutes, setVoiceMinutes] = useState(500);
   const [chatMessages, setChatMessages] = useState(1000);
   const [voiceMinutesInput, setVoiceMinutesInput] = useState("500");
   const [chatMessagesInput, setChatMessagesInput] = useState("1000");
-  const [selectedLLMVoice, setSelectedLLMVoice] = useState("");
-  const [selectedLLMChat, setSelectedLLMChat] = useState("");
-  const [selectedTTS, setSelectedTTS] = useState("");
-  const [selectedASR, setSelectedASR] = useState("");
+  const [selectedLLMVoice, setSelectedLLMVoice] = useState("gpt-4.1-2025-04-14");
+  const [selectedLLMChat, setSelectedLLMChat] = useState("gpt-4o-mini-2024-07-18");
+  const [selectedTTS, setSelectedTTS] = useState("Eleven Labs - TTS - Flash/Turbo");
+  const [selectedASR, setSelectedASR] = useState("Deepgram - STT");
   const [activeTab, setActiveTab] = useState("voice"); // New state for active tab
   const [billingPeriod, setBillingPeriod] = useState("Month");
   
@@ -37,167 +348,6 @@ export const CreditCalculator = () => {
     recommendedPlan: "BUSINESS"
   });
 
-  // Fetch data from API
-  useEffect(() => {
-    async function fetchCreditsData() {
-      setLoading(true);
-      setError(null);
-      try {
-        const res = await fetch('https://realtime-api.voiceflow.com/v1alpha1/estimation/config');
-        if (!res.ok) throw new Error('Failed to fetch pricing data');
-        const data = await res.json();
-        
-        // Transform usage data to match existing structure
-        const transformedCreditsData = {
-          orchestration: [],
-          llm: [],
-          asr: [],
-          tts: []
-        };
-
-        // Group usage by category and transform to existing format
-        for (const item of data.config.usage) {
-          const transformedItem = {
-            vendor: getVendorDisplayName(item.vendor),
-            item: getItemDisplayName(item.item, item.vendor, item.category),
-            unitType: getUnitType(item.unit),
-            unitMultiplier: getUnitMultiplier(item.unit),
-            unit: getUnitDisplayName(item.unit),
-            creditsPerUnit: item.value,
-            creditsPerBaseUnit: item.value / getUnitMultiplier(item.unit)
-          };
-
-          if (transformedCreditsData[item.category]) {
-            transformedCreditsData[item.category].push(transformedItem);
-          }
-        }
-
-        // Add orchestration items that match the existing structure
-        transformedCreditsData.orchestration = [
-          { 
-            vendor: "Voiceflow", 
-            item: "Chat AI Hosting", 
-            unitType: "messages",
-            unitMultiplier: 1,
-            unit: "Agent Sent Message",
-            creditsPerUnit: data.config.usage.find(u => u.item === 'interaction')?.value || 1,
-            creditsPerBaseUnit: data.config.usage.find(u => u.item === 'interaction')?.value || 1
-          },
-          { 
-            vendor: "Voiceflow", 
-            item: "Voice AI Hosting", 
-            unitType: "minutes",
-            unitMultiplier: 1,
-            unit: "Minutes of Voice AI",
-            creditsPerUnit: data.config.usage.find(u => u.item === 'audio')?.value || 10,
-            creditsPerBaseUnit: data.config.usage.find(u => u.item === 'audio')?.value || 10
-          }
-        ];
-
-        // Transform plans data
-        const transformedPlans = [];
-        for (const planGroup of data.config.allotment) {
-          for (const plan of planGroup) {
-            transformedPlans.push({
-                             name: plan.item.includes('pro') ? "PRO" : plan.item.includes('team') ? "BUSINESS" : "ENTERPRISE",
-              period: plan.period === 'month' ? "Month" : "Year",
-              credits: plan.credits,
-              price: plan.price / 100, // Convert from cents to dollars
-              unitCost: (plan.price / 100) / plan.credits
-            });
-          }
-        }
-
-                 setCreditsData(transformedCreditsData);
-         setPlans(transformedPlans);
-         
-         // Set default selections once data is loaded
-         if (!selectedLLMVoice && transformedCreditsData.llm.length > 0) {
-           const defaultLLM = transformedCreditsData.llm.find(llm => llm.item === 'gpt-4.1-2025-04-14') || transformedCreditsData.llm[0];
-           setSelectedLLMVoice(defaultLLM.item);
-         }
-         if (!selectedLLMChat && transformedCreditsData.llm.length > 0) {
-           const defaultChatLLM = transformedCreditsData.llm.find(llm => llm.item === 'gpt-4o-mini-2024-07-18') || transformedCreditsData.llm[0];
-           setSelectedLLMChat(defaultChatLLM.item);
-         }
-         if (!selectedTTS && transformedCreditsData.tts.length > 0) {
-           const defaultTTS = transformedCreditsData.tts.find(tts => tts.item === 'Eleven Labs - TTS - Flash/Turbo') || transformedCreditsData.tts[0];
-           setSelectedTTS(defaultTTS.item);
-         }
-         if (!selectedASR && transformedCreditsData.asr.length > 0) {
-           const defaultASR = transformedCreditsData.asr.find(asr => asr.item === 'Deepgram - STT') || transformedCreditsData.asr[0];
-           setSelectedASR(defaultASR.item);
-         }
-       } catch (e) {
-         setError(e.message);
-       } finally {
-         setLoading(false);
-       }
-     }
-     fetchCreditsData();
-   }, [selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR]);
-
-  // Helper functions for data transformation
-  const getVendorDisplayName = (vendor) => {
-    const vendorMap = {
-      'open-ai': 'Open AI',
-      'anthropic': 'Anthropic',
-      'google': 'Google',
-      'groq': 'Groq',
-      'deepgram': 'Deepgram',
-      'rimelabs': 'Rime Labs',
-      'cartesia': 'Cartesia',
-      'elevenlabs': 'Eleven Labs',
-      'assemblyai': 'Assemblyai',
-      'voiceflow': 'Voiceflow'
-    };
-    return vendorMap[vendor] || vendor;
-  };
-
-  const getItemDisplayName = (item, vendor, category) => {
-    // For TTS items
-    if (category === 'tts') {
-      if (vendor === 'deepgram') return 'Deepgram - TTS';
-      if (vendor === 'rimelabs') return 'Rime Labs - TTS';
-      if (vendor === 'cartesia') return 'Cartesia - TTS';
-      if (vendor === 'elevenlabs') {
-        if (item.includes('flash')) return 'Eleven Labs - TTS - Flash/Turbo';
-        if (item.includes('turbo')) return 'Eleven Labs - TTS - Flash/Turbo';
-        if (item.includes('multilingual')) return 'Eleven Labs - TTS - Multilingual';
-        return 'Eleven Labs - TTS';
-      }
-    }
-    
-    // For ASR items
-    if (category === 'asr') {
-      if (vendor === 'deepgram') return 'Deepgram - STT';
-      if (vendor === 'cartesia') return 'Cartesia - STT';
-      if (vendor === 'assemblyai') return 'Assemblyai - STT';
-    }
-
-    // For LLM items, return the item name directly
-    return item;
-  };
-
-  const getUnitType = (unit) => {
-    if (unit.includes('tokens')) return 'tokens';
-    if (unit.includes('characters')) return 'characters';
-    if (unit.includes('minute')) return 'minutes';
-    return 'messages';
-  };
-
-  const getUnitMultiplier = (unit) => {
-    if (unit.includes('1000')) return 1000;
-    return 1;
-  };
-
-  const getUnitDisplayName = (unit) => {
-    if (unit.includes('1000 LLM tokens')) return '1K Tokens';
-    if (unit.includes('1000 characters')) return '1K Characters';
-    if (unit.includes('minute')) return 'Minutes';
-    return 'Messages';
-  };
-
   // Helper function to find service by item name
   const findService = (category, itemName) => {
     return creditsData[category].find(service => service.item === itemName);
@@ -205,8 +355,6 @@ export const CreditCalculator = () => {
 
   // Calculate credits
   useEffect(() => {
-    if (!creditsData || !plans.length) return;
-
     // Voice AI calculations
     const voiceHosting = 10; // Fixed Voiceflow Voice AI Hosting credits per minute
     const llmVoice = findService('llm', selectedLLMVoice);
@@ -277,7 +425,7 @@ export const CreditCalculator = () => {
         llm: llmCreditsPerChatMessage
       }
     });
-  }, [voiceMinutes, chatMessages, selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR, billingPeriod, creditsData, plans]);
+  }, [voiceMinutes, chatMessages, selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR, billingPeriod]);
 
   // Helper function to format numbers
   const formatNumber = (num) => {
@@ -302,7 +450,6 @@ export const CreditCalculator = () => {
 
   // Helper to get recommended plan for a given total credits and billing period
   const getRecommendedPlan = (totalCredits, billingPeriod) => {
-    if (!plans.length) return null;
     const filteredPlans = plans.filter(plan => plan.period === billingPeriod);
     const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
     return recommended || null;
@@ -372,154 +519,148 @@ export const CreditCalculator = () => {
       <div className="mb-8">
         {/* Tab Content */}
         <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
-          {loading && <p>Loading pricing data...</p>}
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-          {creditsData && (
-            <>
-              {activeTab === "voice" && (
-                <div className="p-0">
-                  {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
-                  <div className="mb-8">
-                    <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                      {billingPeriod === 'Year' ? 'Call minutes per year' : 'Call minutes per month'}
-                    </label>
-                    <input 
-                      type="text" 
-                      value={voiceMinutesInput}
-                      onChange={(e) => {
-                        const value = e.target.value;
-                        setVoiceMinutesInput(value);
-                        setVoiceMinutes(value === '' ? 0 : Number(value));
-                      }}
-                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
-                      placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
-                    />
-                    <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                      Credits per minute: 10.00
-                    </div>
+          {activeTab === "voice" && (
+            <div className="p-0">
+              {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
+              <div className="mb-8">
+                <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                  {billingPeriod === 'Year' ? 'Call minutes per year' : 'Call minutes per month'}
+                </label>
+                <input 
+                  type="text" 
+                  value={voiceMinutesInput}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setVoiceMinutesInput(value);
+                    setVoiceMinutes(value === '' ? 0 : Number(value));
+                  }}
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
+                  placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
+                />
+                <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  Credits per minute: 10.00
+                </div>
+              </div>
+              {/* Service Configuration */}
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedLLMVoice}
+                      onChange={(e) => setSelectedLLMVoice(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData.llm.map((llm) => (
+                        <option key={llm.item} value={llm.item}>
+                          {llm.vendor} - {llm.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
                   </div>
-                  {/* Service Configuration */}
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedLLMVoice}
-                          onChange={(e) => setSelectedLLMVoice(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.llm.map((llm) => (
-                            <option key={llm.item} value={llm.item}>
-                              {llm.vendor} - {llm.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per minute: {calculations.voiceBreakdown?.llm?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-speech</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedTTS}
-                          onChange={(e) => setSelectedTTS(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.tts.map((tts) => (
-                            <option key={tts.item} value={tts.item}>
-                              {tts.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per minute: {calculations.voiceBreakdown?.tts?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-text</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedASR}
-                          onChange={(e) => setSelectedASR(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.asr.map((asr) => (
-                            <option key={asr.item} value={asr.item}>
-                              {asr.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per minute: {calculations.voiceBreakdown?.asr?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per minute: {calculations.voiceBreakdown?.llm?.toFixed(2) || '0.00'}
                   </div>
                 </div>
-              )}
 
-              {activeTab === "chat" && (
-                <div className="p-0">
-                  {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
-                  <div className="mb-8">
-                    <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                      {billingPeriod === 'Year' ? 'Interactions per year' : 'Interactions per month'}
-                    </label>
-                    <input 
-                      type="text" 
-                      value={chatMessagesInput}
-                      onChange={(e) => {
-                        const value = e.target.value;
-                        setChatMessagesInput(value);
-                        setChatMessages(value === '' ? 0 : Number(value));
-                      }}
-                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
-                      placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
-                    />
-                    <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                      Credits per interaction: 1.00
-                    </div>
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-speech</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedTTS}
+                      onChange={(e) => setSelectedTTS(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData.tts.map((tts) => (
+                        <option key={tts.item} value={tts.item}>
+                          {tts.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
                   </div>
-                  {/* Service Configuration */}
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedLLMChat}
-                          onChange={(e) => setSelectedLLMChat(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.llm.map((llm) => (
-                            <option key={llm.item} value={llm.item}>
-                              {llm.vendor} - {llm.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per minute: {calculations.voiceBreakdown?.tts?.toFixed(2) || '0.00'}
                   </div>
                 </div>
-              )}
-            </>
+
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-text</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedASR}
+                      onChange={(e) => setSelectedASR(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData.asr.map((asr) => (
+                        <option key={asr.item} value={asr.item}>
+                          {asr.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per minute: {calculations.voiceBreakdown?.asr?.toFixed(2) || '0.00'}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "chat" && (
+            <div className="p-0">
+              {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
+              <div className="mb-8">
+                <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                  {billingPeriod === 'Year' ? 'Interactions per year' : 'Interactions per month'}
+                </label>
+                <input 
+                  type="text" 
+                  value={chatMessagesInput}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setChatMessagesInput(value);
+                    setChatMessages(value === '' ? 0 : Number(value));
+                  }}
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
+                  placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
+                />
+                <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  Credits per interaction: 1.00
+                </div>
+              </div>
+              {/* Service Configuration */}
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedLLMChat}
+                      onChange={(e) => setSelectedLLMChat(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData.llm.map((llm) => (
+                        <option key={llm.item} value={llm.item}>
+                          {llm.vendor} - {llm.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </div>
 
       {/* Voice summary box OUTSIDE the container */}
-      {activeTab === "voice" && !loading && creditsData && (
+      {activeTab === "voice" && (
         <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
@@ -563,7 +704,7 @@ export const CreditCalculator = () => {
       )}
 
       {/* Chat summary box OUTSIDE the container */}
-      {activeTab === "chat" && !loading && creditsData && (
+      {activeTab === "chat" && (
         <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
