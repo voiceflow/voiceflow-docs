@@ -374,146 +374,142 @@ export const CreditCalculator = () => {
         <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
           {loading && <p>Loading pricing data...</p>}
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          {creditsData && (
-            <>
-              {activeTab === "voice" && (
-                <div className="p-0">
-                  {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
-                  <div className="mb-8">
-                    <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                      {billingPeriod === 'Year' ? 'Call minutes per year' : 'Call minutes per month'}
-                    </label>
-                    <input 
-                      type="text" 
-                      value={voiceMinutesInput}
-                      onChange={(e) => {
-                        const value = e.target.value;
-                        setVoiceMinutesInput(value);
-                        setVoiceMinutes(value === '' ? 0 : Number(value));
-                      }}
-                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
-                      placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
-                    />
-                    <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                      Credits per minute: 10.00
-                    </div>
+          {activeTab === "voice" && (
+            <div className="p-0">
+              {/* Voice Minutes Input (label/placeholder changes with billingPeriod) */}
+              <div className="mb-8">
+                <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                  {billingPeriod === 'Year' ? 'Call minutes per year' : 'Call minutes per month'}
+                </label>
+                <input 
+                  type="text" 
+                  value={voiceMinutesInput}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setVoiceMinutesInput(value);
+                    setVoiceMinutes(value === '' ? 0 : Number(value));
+                  }}
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 text-lg"
+                  placeholder={billingPeriod === 'Year' ? 'Enter call minutes per year' : 'Enter call minutes per month'}
+                />
+                <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  Credits per minute: 10.00
+                </div>
+              </div>
+              {/* Service Configuration */}
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedLLMVoice}
+                      onChange={(e) => setSelectedLLMVoice(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData && creditsData.llm.map((llm) => (
+                        <option key={llm.item} value={llm.item}>
+                          {llm.vendor} - {llm.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
                   </div>
-                  {/* Service Configuration */}
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedLLMVoice}
-                          onChange={(e) => setSelectedLLMVoice(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.llm.map((llm) => (
-                            <option key={llm.item} value={llm.item}>
-                              {llm.vendor} - {llm.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per minute: {calculations.voiceBreakdown?.llm?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-speech</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedTTS}
-                          onChange={(e) => setSelectedTTS(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.tts.map((tts) => (
-                            <option key={tts.item} value={tts.item}>
-                              {tts.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per minute: {calculations.voiceBreakdown?.tts?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-text</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedASR}
-                          onChange={(e) => setSelectedASR(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.asr.map((asr) => (
-                            <option key={asr.item} value={asr.item}>
-                              {asr.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per minute: {calculations.voiceBreakdown?.asr?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per minute: {calculations.voiceBreakdown?.llm?.toFixed(2) || '0.00'}
                   </div>
                 </div>
-              )}
 
-              {activeTab === "chat" && (
-                <div className="p-0">
-                  {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
-                  <div className="mb-8">
-                    <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                      {billingPeriod === 'Year' ? 'Interactions per year' : 'Interactions per month'}
-                    </label>
-                    <input 
-                      type="text" 
-                      value={chatMessagesInput}
-                      onChange={(e) => {
-                        const value = e.target.value;
-                        setChatMessagesInput(value);
-                        setChatMessages(value === '' ? 0 : Number(value));
-                      }}
-                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
-                      placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
-                    />
-                    <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                      Credits per interaction: 1.00
-                    </div>
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-speech</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedTTS}
+                      onChange={(e) => setSelectedTTS(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData && creditsData.tts.map((tts) => (
+                        <option key={tts.item} value={tts.item}>
+                          {tts.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
                   </div>
-                  {/* Service Configuration */}
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
-                      <div className="relative">
-                        <select 
-                          value={selectedLLMChat}
-                          onChange={(e) => setSelectedLLMChat(e.target.value)}
-                          className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
-                        >
-                          {creditsData.llm.map((llm) => (
-                            <option key={llm.item} value={llm.item}>
-                              {llm.vendor} - {llm.item}
-                            </option>
-                          ))}
-                        </select>
-                        <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
-                      </div>
-                      <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                        Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
-                      </div>
-                    </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per minute: {calculations.voiceBreakdown?.tts?.toFixed(2) || '0.00'}
                   </div>
                 </div>
-              )}
-            </>
+
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-text</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedASR}
+                      onChange={(e) => setSelectedASR(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData && creditsData.asr.map((asr) => (
+                        <option key={asr.item} value={asr.item}>
+                          {asr.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per minute: {calculations.voiceBreakdown?.asr?.toFixed(2) || '0.00'}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "chat" && (
+            <div className="p-0">
+              {/* Chat Messages Input (label/placeholder changes with billingPeriod) */}
+              <div className="mb-8">
+                <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                  {billingPeriod === 'Year' ? 'Interactions per year' : 'Interactions per month'}
+                </label>
+                <input 
+                  type="text" 
+                  value={chatMessagesInput}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setChatMessagesInput(value);
+                    setChatMessages(value === '' ? 0 : Number(value));
+                  }}
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-200 text-lg"
+                  placeholder={billingPeriod === 'Year' ? 'Enter messages per year' : 'Enter messages per month'}
+                />
+                <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  Credits per interaction: 1.00
+                </div>
+              </div>
+              {/* Service Configuration */}
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
+                  <div className="relative">
+                    <select 
+                      value={selectedLLMChat}
+                      onChange={(e) => setSelectedLLMChat(e.target.value)}
+                      className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
+                    >
+                      {creditsData && creditsData.llm.map((llm) => (
+                        <option key={llm.item} value={llm.item}>
+                          {llm.vendor} - {llm.item}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">▼</span>
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    Credits per message: {calculations.chatBreakdown?.llm?.toFixed(2) || '0.00'}
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </div>
