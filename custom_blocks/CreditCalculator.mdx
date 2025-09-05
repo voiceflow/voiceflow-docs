@@ -37,7 +37,7 @@ export const CreditCalculator = () => {
     recommendedPlan: "BUSINESS"
   });
 
-  // Fetch data from API
+    // Fetch data from API
   useEffect(() => {
     async function fetchCreditsData() {
       setLoading(true);
@@ -99,7 +99,7 @@ export const CreditCalculator = () => {
         for (const planGroup of data.config.allotment) {
           for (const plan of planGroup) {
             transformedPlans.push({
-                             name: plan.item.includes('pro') ? "PRO" : plan.item.includes('team') ? "BUSINESS" : "ENTERPRISE",
+              name: plan.item.includes('pro') ? "PRO" : plan.item.includes('team') ? "BUSINESS" : "ENTERPRISE",
               period: plan.period === 'month' ? "Month" : "Year",
               credits: plan.credits,
               price: plan.price / 100, // Convert from cents to dollars
@@ -108,34 +108,36 @@ export const CreditCalculator = () => {
           }
         }
 
-                 setCreditsData(transformedCreditsData);
-         setPlans(transformedPlans);
-         
-         // Set default selections once data is loaded
-         if (!selectedLLMVoice && transformedCreditsData.llm.length > 0) {
-           const defaultLLM = transformedCreditsData.llm.find(llm => llm.item === 'gpt-4.1-2025-04-14') || transformedCreditsData.llm[0];
-           setSelectedLLMVoice(defaultLLM.item);
-         }
-         if (!selectedLLMChat && transformedCreditsData.llm.length > 0) {
-           const defaultChatLLM = transformedCreditsData.llm.find(llm => llm.item === 'gpt-4o-mini-2024-07-18') || transformedCreditsData.llm[0];
-           setSelectedLLMChat(defaultChatLLM.item);
-         }
-         if (!selectedTTS && transformedCreditsData.tts.length > 0) {
-           const defaultTTS = transformedCreditsData.tts.find(tts => tts.item === 'Eleven Labs - TTS - Flash/Turbo') || transformedCreditsData.tts[0];
-           setSelectedTTS(defaultTTS.item);
-         }
-         if (!selectedASR && transformedCreditsData.asr.length > 0) {
-           const defaultASR = transformedCreditsData.asr.find(asr => asr.item === 'Deepgram - STT') || transformedCreditsData.asr[0];
-           setSelectedASR(defaultASR.item);
-         }
-       } catch (e) {
-         setError(e.message);
-       } finally {
-         setLoading(false);
-       }
-     }
-     fetchCreditsData();
-   }, [selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR]);
+        setCreditsData(transformedCreditsData);
+        setPlans(transformedPlans);
+      } catch (e) {
+        setError(e.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchCreditsData();
+  }, []);
+
+  // Set default selections once data is loaded
+  useEffect(() => {
+    if (creditsData && !selectedLLMVoice && creditsData.llm.length > 0) {
+      const defaultLLM = creditsData.llm.find(llm => llm.item === 'gpt-4.1-2025-04-14') || creditsData.llm[0];
+      setSelectedLLMVoice(defaultLLM.item);
+    }
+    if (creditsData && !selectedLLMChat && creditsData.llm.length > 0) {
+      const defaultChatLLM = creditsData.llm.find(llm => llm.item === 'gpt-4o-mini-2024-07-18') || creditsData.llm[0];
+      setSelectedLLMChat(defaultChatLLM.item);
+    }
+    if (creditsData && !selectedTTS && creditsData.tts.length > 0) {
+      const defaultTTS = creditsData.tts.find(tts => tts.item === 'Eleven Labs - TTS - Flash/Turbo') || creditsData.tts[0];
+      setSelectedTTS(defaultTTS.item);
+    }
+    if (creditsData && !selectedASR && creditsData.asr.length > 0) {
+      const defaultASR = creditsData.asr.find(asr => asr.item === 'Deepgram - STT') || creditsData.asr[0];
+      setSelectedASR(defaultASR.item);
+    }
+  }, [creditsData, selectedLLMVoice, selectedLLMChat, selectedTTS, selectedASR]);
 
   // Helper functions for data transformation
   const getVendorDisplayName = (vendor) => {
@@ -515,7 +517,7 @@ export const CreditCalculator = () => {
       </div>
 
       {/* Voice summary box OUTSIDE the container */}
-      {activeTab === "voice" && !loading && creditsData && (
+      {activeTab === "voice" && (
         <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
@@ -559,7 +561,7 @@ export const CreditCalculator = () => {
       )}
 
       {/* Chat summary box OUTSIDE the container */}
-      {activeTab === "chat" && !loading && creditsData && (
+      {activeTab === "chat" && (
         <div className="p-8 bg-white dark:bg-gray-800 border border-gray-700 rounded-xl">
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
