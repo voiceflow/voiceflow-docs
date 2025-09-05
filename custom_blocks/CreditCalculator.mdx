@@ -102,8 +102,8 @@ export const CreditCalculator = () => {
               name: plan.item.includes('pro') ? "PRO" : plan.item.includes('team') ? "BUSINESS" : "ENTERPRISE",
               period: plan.period === 'month' ? "Month" : "Year",
               credits: plan.credits,
-              price: plan.price / 100, // Convert from cents to dollars
-              unitCost: (plan.price / 100) / plan.credits
+              price: plan.price / 10000, // Convert from API format to dollars (1500000 = $150)
+              unitCost: (plan.price / 10000) / plan.credits
             });
           }
         }
