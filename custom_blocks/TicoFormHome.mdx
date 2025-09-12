@@ -24,6 +24,7 @@ name: TicoFormHome
         if (message) {
           window.cleanStartTico();
           setTimeout(() => {
+						posthog.capture('search_input', { question: message })
             window.searchTico(message);
           }, 1500);
           input.value = '';
