@@ -16,9 +16,11 @@ With the MCP tool, your agent can connect to any MCP server directly from within
 
 ## Basic usage
 
-### Using the MCP tool inside the Agent step
-
 To connect to a MCP server from inside your Voiceflow agent, the server must be hosted and accessible from the internet. Local MCP servers are not supported by Voiceflow. You can find a [list of self-hosted, officially supported MCP servers here](https://github.com/modelcontextprotocol/servers?tab=readme-ov-file#%EF%B8%8F-official-integrations), or can use a tool such as [Zapier MCP](https://docs.zapier.com/mcp/home) to build a hosted MCP server.
+
+<br />
+
+### Using the MCP tool inside the Agent step
 
 Once your MCP server is hosted, open your [Agent step](doc:agents) and click the **MCP** option in the tools section of the sidebar. Then, click **Create MCP tool**. You'll then be asked to provide the following information:
 
@@ -34,6 +36,6 @@ Once you've inputted the required values, click **Add MCP server**. You should t
 
 <br />
 
-### Using the MCP tool inside the Tools step
+### Using the MCP tool inside the Tool step
 
-<br />
+The MCP tool can also be used with the [Tool step](doc:tool-step). To do so, add the Tool step to your canvas, select **New tool**, then **MCP**. Then, follow the same process as with the Agent step to connect your MCP server to Voiceflow.
