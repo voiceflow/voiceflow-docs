@@ -1,12 +1,16 @@
 ---
 title: Call forwarding step
-excerpt: Forward calls from your agent to another agent or a live represenative
+excerpt: Forward calls from your agent to another agent or a live represenative.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-![](https://files.readme.io/471c5d1baf916a55cb603f74be184201cb472953f59612f327196fdb989f6cc8-image.png)
+<Callout icon="ℹ️">
+  You can also forward calls from inside the [Agent step](doc:agents) using the [Call forwarding tool](doc:call-forwarding).
+</Callout>
+
+<Image border={false} src="https://files.readme.io/471c5d1baf916a55cb603f74be184201cb472953f59612f327196fdb989f6cc8-image.png" />
 
 Seamlessly connect your Voice AI agent to the real world with Call Forwarding. This step enables your agent to instantly transfer a conversation to a live person or another AI system—ensuring a smooth and intelligent handoff when automation has reached its limit.
 
@@ -63,6 +67,10 @@ Vonage supports DTMF playback using the `dtmfAnswer` parameter.
 
 Reference: [Vonage DTMF Answer Docs](https://developer.vonage.com/en/voice/voice-api/ncco-reference#phone-pstn---phone-numbers-in-e164-format)
 
-> 📞 The agent still requires a phone number
->
-> While call forwarding allows the agent to transfer a call to any phone number, it will still require an *imported* number to originate from and communicate with through the <Anchor label="Voice interface" target="_blank" href="https://docs.voiceflow.com/docs/telephony#/">Voice interface</Anchor>.
+<Callout icon="📞" theme="default">
+  ### The agent still requires a phone number
+
+  While call forwarding allows the agent to transfer a call to any phone number, it will still require an _imported_ number to originate from and communicate with through the <Anchor label="Voice interface" target="_blank" href="https://docs.voiceflow.com/docs/telephony#/">Voice interface</Anchor>.
+</Callout>
+
+.
