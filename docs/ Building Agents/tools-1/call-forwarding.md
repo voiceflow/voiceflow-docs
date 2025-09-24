@@ -1,6 +1,6 @@
 ---
 title: Call forwarding
-excerpt: Automatically forward callers to live agents
+excerpt: Automatically forward calls to a live agent
 deprecated: false
 hidden: false
 metadata:
