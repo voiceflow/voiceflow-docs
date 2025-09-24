@@ -14,7 +14,7 @@ After interacting with your AI agent, some callers may still need to speak with 
 
 <br />
 
-## Basic usage
+## Forwarding calls from inside the Agent step
 
 Inside an [Agent step](doc:agents), enable the **Call forward** option on the sidebar. Then, set the following three options:
 
@@ -26,9 +26,9 @@ Some advanced users may wish to forward the call via SIP instead. This can be do
 
 <br />
 
-## Advanced usage
+## Manually forwarding calls
 
-You can also manually forward a call 
+You can also manually forward a call using the call forwarding step.
 
 <br />
 
