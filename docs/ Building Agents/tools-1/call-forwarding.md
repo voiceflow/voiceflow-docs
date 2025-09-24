@@ -2,7 +2,7 @@
 title: Call forwarding
 excerpt: Automatically forward calls to a live agent.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
