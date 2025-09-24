@@ -30,7 +30,7 @@ Once your MCP server is hosted, open your [Agent step](doc:agents) and click the
 
 You can also optionally add an image to your server, which will be displayed inside Voiceflow.
 
-Once you've inputted the required values, click **Add MCP server**. You should then see the tools available on your server - click one to add it to your agent.
+Once you've inputted the required values, click **Add MCP server**. You should then see the tools available on your server - click one to add it to your agent. Finally, set the tool's LLM description to describe what the tool is and when it should be called, as well as providing any required input variables.
 
 <br />
 
