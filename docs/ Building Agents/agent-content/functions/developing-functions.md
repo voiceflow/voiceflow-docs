@@ -75,7 +75,7 @@ The runtime commands include:
 
 Voiceflow functions have access to a modified `fetch` API for making network requests. This enables functions to interact with third-party APIs or your own backend services.
 
-Example: GET Request with the Fetch API\
+Example: GET Request with the Fetch API
 Here's how to make a `GET` request to retrieve data from an API:
 
 ```javascript
@@ -115,7 +115,7 @@ return {
 
 The finished function should look like this. Don’t forget to add a path to the function interface with return value `success`.
 
-![](https://files.readme.io/871a754-image.png)
+<Image border={false} src="https://files.readme.io/871a754-image.png" />
 
 When you run this function within a Voiceflow project, the assistant will recite the fetched cat facts, then move on to the next step through the 'success' port. You can link this to a text step that, for example, could say "Done!" to signal the end of the interaction.
 
@@ -130,7 +130,7 @@ When you run this function within a Voiceflow project, the assistant will recite
 * Written in JavaScript / ECMAScript.
 * The JavaScript engine is V8 and the code executed supports the ES6 standard.
 * Contains a default exported main function.
-* Accepts a single argument called the **argument object**. 
+* Accepts a single argument called the **argument object**.
 * The argument object contains a field called `inputVars` containing input variable values passed by the step.
 * Returns runtime commands to dictate the assistant's actions.
 * Functions do not currently support importing modules.
@@ -139,7 +139,7 @@ When you run this function within a Voiceflow project, the assistant will recite
 
 The `RuntimeCommands` is a JSON object, which when returned, specifies the behaviour of a function step. Three types of commands are supported:
 
-* **Next Command:** Dictates the path to follow after the function executes. 
+* **Next Command:** Dictates the path to follow after the function executes.
 * **Output Variables Command:** Sets the output variables with the values to be used later in the conversation.
 * **Trace Command:** Produces traces as part of the agent's response.
 
@@ -358,7 +358,7 @@ await fetch(
 );
 ```
 
-The **main difference** with the standard Fetch API is how to access the response body of a fetch request. In the standard Fetch API, you would use the `.json()` method. However, in the Voiceflow Fetch API, the response body is available through the \`\` field.
+The **main difference** with the standard Fetch API is how to access the response body of a fetch request. In the standard Fetch API, you would use the `.json()` method. However, in the Voiceflow Fetch API, the response body is available through the `` field.
 
 ```typescript
 // Standard Fetch API
@@ -404,16 +404,16 @@ const data = (await fetch(url, requestInit, { parseType: 'text' })).text;
 
 ## Debugging functions
 
-A trace command can issue a **debug trace**, a type of trace that should include debugging information. 
+A trace command can issue a **debug trace**, a type of trace that should include debugging information.
 
-Debug traces are not visible in production, and therefore, are not seen by your users. However, they are visible on the Voiceflow prototype tool and provide diagnostic information that helps the designer resolve bugs. 
+Debug traces are not visible in production, and therefore, are not seen by your users. However, they are visible on the Voiceflow prototype tool and provide diagnostic information that helps the designer resolve bugs.
 
 For example, in the functions code below we return a debug trace:
 
 ```javascript
 export default async function main(args) {
   return {
-    traces: [
+    trace: [
       {
         type: "text",
         payload: {
@@ -433,6 +433,6 @@ export default async function main(args) {
 
 This debug trace would appear on the Prototype Tool and the Functions test modal:
 
-<Image align="center" width="35% " src="https://files.readme.io/2e2f52d-Screen_Shot_2023-12-18_at_1.47.26_AM.png" />
+<Image align="center" border={false} width="35% " src="https://files.readme.io/2e2f52d-Screen_Shot_2023-12-18_at_1.47.26_AM.png" />
 
 Use debug traces to provide helpful error messages, so that designers can troubleshoot an issue and resolve bugs when using your function step.
