@@ -30,7 +30,7 @@ Some advanced users may wish to forward the call via SIP instead. This can be do
 
 You can also manually forward a call using the [Call forwarding step](doc:call-forwarding-step).
 
-<br />
+<LinkCard type="Doc" title="Call forwarding step" description="Forward calls from outside the Agent step." href="https://www.voiceflow.com/lessons/what-are-credits" />
 
 ## Billing
 
