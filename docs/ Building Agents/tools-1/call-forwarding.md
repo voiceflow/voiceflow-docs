@@ -26,6 +26,12 @@ Some advanced users may wish to forward the call via SIP instead. This can be do
 
 <br />
 
-<br />
+## Advanced usage
+
+You can also manually forward a call 
 
 <br />
+
+## Billing
+
+Once your call has been forwarded, you'll no longer be charged Voiceflow credits for any future time spent on the call. For example, if a caller spends 2 minutes speaking with your AI agent, then the call is forwarded to a human who they spend 3 minutes talking to, you'll be billed 20 credits in per-minute fees (plus LLM, STT, and TTS usage), rather than 50 credits. [Learn more about credits pricing here](doc:credits-pricing-table).
