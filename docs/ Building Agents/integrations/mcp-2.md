@@ -1,7 +1,8 @@
 ---
 title: MCP
+excerpt: Send requests to any MCP server.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
