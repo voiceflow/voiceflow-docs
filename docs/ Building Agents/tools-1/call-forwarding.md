@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 ---
-<Callout icon="ℹ️">
+<Callout icon="ℹ️" theme="info">
   This feature is only available when calling an agent via [phone](doc:telephony).
 </Callout>
 
@@ -15,8 +15,6 @@ After interacting with your AI agent, some callers may still need to speak with 
 <br />
 
 ## Basic usage
-
-<br />
 
 Inside an [Agent step](doc:agents), enable the **Call forward** option on the sidebar. Then, set the following three options:
 
