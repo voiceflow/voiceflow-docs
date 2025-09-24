@@ -10,6 +10,8 @@ metadata:
   This feature is only available when calling an agent via [phone](doc:telephony).
 </Callout>
 
+<br />
+
 After interacting with your AI agent, some callers may still need to speak with a person for certain requests or follow-ups. Call forwarding lets you send the call to another phone number, SIP address, or extension. It’s useful when the agent collects initial details, then directs the caller to the right teammate, department, or specialist to finish the conversation.
 
 <br />
