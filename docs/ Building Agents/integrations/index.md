@@ -1,5 +1,5 @@
 ---
-title: Tools & integrations
+title: Tools and integrations
 excerpt: >-
   Supercharge your agent's capabilities with integrations to external apps and
   tools.
