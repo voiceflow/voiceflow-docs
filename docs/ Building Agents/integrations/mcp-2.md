@@ -34,8 +34,6 @@ Once you've inputted the required values, click **Add MCP server**. You should t
 
 <br />
 
-<br />
-
 ### Using the MCP tool inside the Tool step
 
 The MCP tool can also be used with the [Tool step](doc:tool-step). To do so, add the Tool step to your canvas, select **New tool**, then **MCP**. Then, follow the same process as with the Agent step to connect your MCP server to Voiceflow.
