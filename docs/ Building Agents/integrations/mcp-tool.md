@@ -42,7 +42,7 @@ The MCP tool can also be used with the [Tool step](doc:tool-step). To do so, add
 
 <br />
 
-### Managing MCP servers
+## Managing MCP servers
 
 You can manage your agent's MCP servers from **Settings** > **MCP Servers**. From here, you can add new MCP servers to your agent and modify data related to an existing MCP server (such as the server's name, image, URL, or headers). You can also re-sync a server's information to your agent, updating the endpoints available to your agent.
 
