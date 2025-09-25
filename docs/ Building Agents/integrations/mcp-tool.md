@@ -39,3 +39,15 @@ Once you've inputted the required values, click **Add MCP server**. You should t
 ### Using the MCP tool inside the Tool step
 
 The MCP tool can also be used with the [Tool step](doc:tool-step). To do so, add the Tool step to your canvas, select **New tool**, then **MCP**. Then, follow the same process as with the Agent step to connect your MCP server to Voiceflow.
+
+<br />
+
+### Managing MCP servers
+
+You can manage your agent's MCP servers from **Settings** > **MCP Servers**. From here, you can add new MCP servers to your agent and modify data related to an existing MCP server (such as the server's name, image, URL, or headers). You can also re-sync a server's information to your agent, updating the endpoints available to your agent.
+
+<Image border={false} src="https://files.readme.io/a4f8bee122fa788529b462ad18d3ca362bfcdaf757e331b21672c0cbf3f6645c-CleanShot_2025-09-25_at_20.46.272x.png" />
+
+<br />
+
+<br />
