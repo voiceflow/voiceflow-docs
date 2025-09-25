@@ -1,5 +1,5 @@
 ---
-title: LLM Fallback
+title: LLM fallback
 excerpt: >-
   Maximize agent availability by configuring secondary LLMs to take over when
   primary LLMs suffer an outage.
