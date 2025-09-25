@@ -18,6 +18,8 @@ After interacting with your AI agent, some callers may still need to speak with 
 
 ## Forwarding calls from inside the Agent step
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS9TAp2deF5NSgc7ztGr8nO1qDJyewRlHWPUv2" />
+
 Inside an [Agent step](doc:agents), enable the **Call forward** option on the sidebar. Then, set the following three options:
 
 * **LLM description** - this allows you to to describe the tool to your agent and tell it when it should be triggered.
