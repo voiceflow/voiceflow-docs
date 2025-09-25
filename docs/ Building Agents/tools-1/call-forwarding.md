@@ -1,6 +1,6 @@
 ---
 title: Call forwarding
-excerpt: Automatically forward calls to a live agent.
+excerpt: Automatically forward calls to a human.
 deprecated: false
 hidden: false
 metadata:
@@ -17,6 +17,8 @@ After interacting with your AI agent, some callers may still need to speak with 
 <br />
 
 ## Forwarding calls from inside the Agent step
+
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS9TAp2deF5NSgc7ztGr8nO1qDJyewRlHWPUv2" />
 
 Inside an [Agent step](doc:agents), enable the **Call forward** option on the sidebar. Then, set the following three options:
 
