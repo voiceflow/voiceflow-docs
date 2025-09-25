@@ -51,5 +51,3 @@ You can manage your agent's MCP servers from **Settings** > **MCP Servers**. Fro
 <Image border={false} src="https://files.readme.io/a4f8bee122fa788529b462ad18d3ca362bfcdaf757e331b21672c0cbf3f6645c-CleanShot_2025-09-25_at_20.46.272x.png" />
 
 <br />
-
-<br />
