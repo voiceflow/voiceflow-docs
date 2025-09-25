@@ -2,7 +2,7 @@
 title: Advanced Knowledge Base
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
