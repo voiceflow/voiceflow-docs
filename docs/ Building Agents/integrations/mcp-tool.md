@@ -2,7 +2,7 @@
 title: MCP
 excerpt: Send requests to any MCP (Model Context Protocol) server.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
