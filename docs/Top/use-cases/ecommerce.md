@@ -5,7 +5,7 @@ excerpt: >-
   tracking, and customer support.
 deprecated: false
 hidden: true
-icon: far fa-house-chimney-blank
+icon: far fa-cart-shopping
 metadata:
   robots: index
 ---
