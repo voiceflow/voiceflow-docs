@@ -1,6 +1,6 @@
 ---
 title: Call forwarding
-excerpt: Automatically forward calls to a live agent.
+excerpt: Automatically forward calls to a human.
 deprecated: false
 hidden: false
 metadata:
