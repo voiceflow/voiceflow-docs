@@ -22,6 +22,8 @@ To connect to a MCP server from inside your Voiceflow agent, the server must be 
 
 ### Using the MCP tool inside the Agent step
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSstyhA68zzvNuIPLsxO2KUc05GVE9RlySWktC" />
+
 Once your MCP server is hosted, open your [Agent step](doc:agents) and click the **MCP** option in the tools section of the sidebar. Then, click **Create MCP tool**. You'll then be asked to provide the following information:
 
 * **Server name** - this can be set to anything, and is a user-friendly name for your MCP server that'll be shown inside Voiceflow.
