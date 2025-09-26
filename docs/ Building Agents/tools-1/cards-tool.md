@@ -18,6 +18,8 @@ Many users pull information about products using an [Integration](doc:integratio
 
 ## Sending cards from inside the Agent step
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSAYgF4B1Kl1B6rYuRkbtVx0PgEXca7OMvFIiy" />
+
 Inside an [Agent step](doc:agents), enable the **Cards** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Cards tool.
 
 We also recommend updating your agent's **Instructions** to also specify when cards should be sent. This will dramatically increase your agent's success rate of sending cards at the correct time.
