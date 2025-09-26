@@ -18,6 +18,8 @@ Many users pull information about products using an [Integration](doc:integratio
 
 ## Sending carousels from inside the Agent step
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS0dLObqY2PgpkOf8RGh2YzjZUvq461wulWrJQ" />
+
 Inside an [Agent step](doc:agents), enable the **Carousels** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Carousels tool.
 
 We also recommend updating your agent's **Instructions** to also specify when a carousel should be sent. This will dramatically increase your agent's success rate of sending carousels at the correct time.
