@@ -1,5 +1,5 @@
 ---
-title: Call forwarding
+title: Call forwarding tool
 excerpt: Automatically forward calls to a human.
 deprecated: false
 hidden: false
