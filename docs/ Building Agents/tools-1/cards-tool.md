@@ -1,6 +1,6 @@
 ---
 title: Cards tool
-excerpt: Summarize responses with visual cards.
+excerpt: Visually display information on visual cards.
 deprecated: false
 hidden: true
 metadata:
