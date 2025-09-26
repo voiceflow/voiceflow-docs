@@ -10,7 +10,7 @@ metadata:
 
 <br />
 
-The Carousel tool lets your AI agent present several cards together in a scrollable format. Each card can include a title, image, description, and optional buttons. Carousels are useful when you want to showcase multiple products, options, or pieces of information side by side, giving users an easy way to browse and choose.
+The Carousels tool lets your AI agent present several cards together in a scrollable format. Each card can include a title, image, description, and optional buttons. Carousels are useful when you want to showcase multiple products, options, or pieces of information side by side, giving users an easy way to browse and choose.
 
 Many users pull information about products using an [Integration](doc:integrations), then visually display it using a carousel. The agent step is capable of automatically transforming JSON responses from integration tools into a carousel automatically, provided it is well-prompted and has enough information to work off.
 
