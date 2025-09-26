@@ -15,3 +15,11 @@ The Cards tool lets your AI agent present information in a card format with a ti
 Inside an [Agent step](doc:agents), enable the **Cards** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Cards tool.
 
 We also recommend updating your agent's **Instructions** to also specify when cards should be sent. This will dramatically increase your agent's success rate of sending cards at the correct time.
+
+<br />
+
+## Manually sending cards
+
+You can also manually send buttons to a user using the [Card step](doc:cards-carousels).
+
+<LinkCard type="Doc" title="Card step" description="Manually send cards from outside the Agent step." href="./cards-carousels" />
