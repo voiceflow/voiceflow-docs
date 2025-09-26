@@ -1,0 +1,17 @@
+---
+title: Buttons tool
+excerpt: Give users choices with buttons.
+deprecated: false
+hidden: true
+metadata:
+  robots: index
+---
+The Buttons tool lets your AI agent send up to five buttons at once, giving users a clear set of choices to click on. This is useful when you want to guide the conversation with specific options instead of relying only on free-text input. When a user clicks a button, the text on that button is sent back to the agent as if the user had typed it.
+
+<br />
+
+## Sending buttons from inside the Agent step
+
+Inside an [Agent step](doc:agents), enable the **Buttons** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Buttons tool.
+
+We also recommend updating your agent's **Instructions** to also specify when buttons should be sent. This will dramatically increase your agent's success rate of sending buttons at the correct time.
