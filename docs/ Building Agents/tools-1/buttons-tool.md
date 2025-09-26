@@ -16,6 +16,8 @@ The Buttons tool lets your AI agent send up to five buttons at once, giving user
 
 ## Sending buttons from inside the Agent step
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NShTQdst7RAecUY5SiGX3h7ots6mNzP01FZfr4" />
+
 Inside an [Agent step](doc:agents), enable the **Buttons** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Buttons tool.
 
 We also recommend updating your agent's **Instructions** to also specify when buttons should be sent. This will dramatically increase your agent's success rate of sending buttons at the correct time.
