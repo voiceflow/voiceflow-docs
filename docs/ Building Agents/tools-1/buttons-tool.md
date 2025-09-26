@@ -1,6 +1,6 @@
 ---
 title: Buttons tool
-excerpt: Give users choices with buttons.
+excerpt: Let users select from pre-defined choices using buttons.
 deprecated: false
 hidden: true
 metadata:
