@@ -2,7 +2,7 @@
 title: Cards tool
 excerpt: Visually display information on cards.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
