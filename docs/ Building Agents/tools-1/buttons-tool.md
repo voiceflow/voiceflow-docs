@@ -6,6 +6,10 @@ hidden: true
 metadata:
   robots: index
 ---
+<Image align="center" border={false} src="https://files.readme.io/c24f64adc5d751560e618f86c13a1792b92ac9f1ef85fc08a9f1bae471fb88e1-Image_10.png" />
+
+<br />
+
 The Buttons tool lets your AI agent send up to five buttons at once, giving users a clear set of choices to click on. This is useful when you want to guide the conversation with specific options instead of relying only on free-text input. When a user clicks a button, the text on that button is sent back to the agent as if the user had typed it.
 
 <br />
