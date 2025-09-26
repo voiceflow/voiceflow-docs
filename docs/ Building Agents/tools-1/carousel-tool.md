@@ -1,31 +1,31 @@
 ---
-title: Carousel tool
+title: Carousels tool
 excerpt: Send multiple visual cards to the user at once.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-<Image align="center" border={false} src="https://files.readme.io/0cde7195d292887a86adf8d4dbef5cb0e3b44ccf920e00567c19f8dc8bc7a836-Image_11.png" />
+<Image align="center" border={false} src="https://files.readme.io/b457530f3ffc2759341045ae7e056ab0b165d36aec9a7b709869cba0543505d3-Image_14.png" />
 
 <br />
 
-The Cards tool lets your AI agent present information in a card format with a title, image, description, and optional buttons. Cards are helpful when you want to highlight products, services, or key details in a more structured and visual way, rather than only sending plain text.
+The Carousel tool lets your AI agent present several cards together in a scrollable format. Each card can include a title, image, description, and optional buttons. Carousels are useful when you want to showcase multiple products, options, or pieces of information side by side, giving users an easy way to browse and choose.
 
-Many users pull information about products using an [Integration](doc:integrations), then visually display it using cards. The agent step is capable of automatically transforming JSON responses from integration tools into cards automatically, provided it is well-prompted and has enough information to work off.
-
-<br />
-
-## Sending cards from inside the Agent step
-
-Inside an [Agent step](doc:agents), enable the **Cards** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Cards tool.
-
-We also recommend updating your agent's **Instructions** to also specify when cards should be sent. This will dramatically increase your agent's success rate of sending cards at the correct time.
+Many users pull information about products using an [Integration](doc:integrations), then visually display it using a carousel. The agent step is capable of automatically transforming JSON responses from integration tools into a carousel automatically, provided it is well-prompted and has enough information to work off.
 
 <br />
 
-## Manually sending cards
+## Sending carousels from inside the Agent step
 
-You can also manually send buttons to a user using the [Card step](doc:cards-carousels).
+Inside an [Agent step](doc:agents), enable the **Carousels** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Carousels tool.
 
-<LinkCard type="Doc" title="Card step" description="Manually send cards from outside the Agent step." href="./cards-carousels" />
+We also recommend updating your agent's **Instructions** to also specify when a carousel should be sent. This will dramatically increase your agent's success rate of sending carousels at the correct time.
+
+<br />
+
+## Manually sending carousels
+
+You can also manually send buttons to a user using the [Carousels step](doc:cards-carousels).
+
+<LinkCard type="Doc" title="Card step" description="Manually send carousels from outside the Agent step." href="./cards-carousels" />
