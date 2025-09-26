@@ -14,6 +14,8 @@ The Cards tool lets your AI agent present information in a card format with a ti
 
 Many users pull information about products using an [Integration](doc:integrations), then visually display it using cards. The agent step is capable of automatically transforming JSON responses from integration tools into cards automatically, provided it is well-prompted and has enough information to work off.
 
+<br />
+
 ## Sending cards from inside the Agent step
 
 Inside an [Agent step](doc:agents), enable the **Cards** option on the sidebar. Then, set the **LLM description** to describe to your agent when and how it should use the Cards tool.
