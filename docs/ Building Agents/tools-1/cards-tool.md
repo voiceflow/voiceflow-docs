@@ -8,7 +8,7 @@ metadata:
 ---
 The Cards tool lets your AI agent present information in a card format with a title, image, description, and optional buttons. Cards are helpful when you want to highlight products, services, or key details in a more structured and visual way, rather than only sending plain text.
 
-<br />
+Many users pull information about products using an [Integration](doc:integrations), then visually display it using cards. The agent step is capable of automatically transforming JSON responses from integration tools into cards automatically, provided it is well-prompted and has enough information to work off.
 
 ## Sending cards from inside the Agent step
 
