@@ -1,6 +1,6 @@
 ---
 title: Cards tool
-excerpt: Visually display information on visual cards.
+excerpt: Visually display information on cards.
 deprecated: false
 hidden: true
 metadata:
