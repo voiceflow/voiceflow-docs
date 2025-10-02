@@ -10,9 +10,13 @@ metadata:
 next:
   description: ''
 ---
+<NonAgenticWarning />
+
+<br />
+
 The **Prompts CMS** is a centralized hub for creating, managing, and testing prompts used by your conversational agents. It offers a structured way to handle complex prompts, ensuring consistency and reusability across your projects. With the Prompts CMS, you can define sophisticated prompts that leverage system prompts, user-agent message pairs, variables, and more.
 
-<Image align="center" src="https://files.readme.io/55e9e1adcd558fdbcc116745a45ed1811f7571d59b40d8e36719aaf5f0d0fb13-CleanShot_2024-11-04_at_20.01.082x.png" />
+<Image align="center" border={false} src="https://files.readme.io/55e9e1adcd558fdbcc116745a45ed1811f7571d59b40d8e36719aaf5f0d0fb13-CleanShot_2024-11-04_at_20.01.082x.png" />
 
 ## Accessing the Prompts CMS
 
@@ -28,7 +32,7 @@ The Prompts CMS displays a table listing all your prompts with the following col
 * **Last Editor**: The team member who last edited the prompt.
 * **Updated**: The date and time when the prompt was last modified.
 
-<Image align="center" src="https://files.readme.io/f9bd0069818a2df27b069161ff1690612063dfeb3d41e731b687e2a2e7055c87-CleanShot_2024-11-04_at_19.52.522x.png" />
+<Image align="center" border={false} src="https://files.readme.io/f9bd0069818a2df27b069161ff1690612063dfeb3d41e731b687e2a2e7055c87-CleanShot_2024-11-04_at_19.52.522x.png" />
 
 ## Creating a New Prompt
 
@@ -47,7 +51,7 @@ The Prompts CMS displays a table listing all your prompts with the following col
 * **Prompt Name**: Enter a clear and descriptive name for your prompt.
 * **Description** (Optional): Provide additional details about the prompt’s purpose.
 
-![](https://files.readme.io/841ea77294ba5727123478863c7d121b2ca665da7e43f7e5a2ca380239462d87-CleanShot_2024-11-04_at_20.09.452x.png)
+<Image border={false} src="https://files.readme.io/841ea77294ba5727123478863c7d121b2ca665da7e43f7e5a2ca380239462d87-CleanShot_2024-11-04_at_20.09.452x.png" />
 
 ## Prompt Configuration
 
@@ -56,7 +60,7 @@ The Prompts CMS displays a table listing all your prompts with the following col
 * **Purpose**: Sets the overall behaviour or guidelines for the AI model.
 * **Usage**: Click on the **System Prompt** box to enter your instructions.
 
-![](https://files.readme.io/0137cfda5496136e9dd4574a9404d2fbcf569794f039968855d03cfc5e60a3d4-CleanShot_2024-11-04_at_20.26.272x.png)
+<Image border={false} src="https://files.readme.io/0137cfda5496136e9dd4574a9404d2fbcf569794f039968855d03cfc5e60a3d4-CleanShot_2024-11-04_at_20.26.272x.png" />
 
 ### User and Agent Messages
 
@@ -68,7 +72,7 @@ The Prompts CMS displays a table listing all your prompts with the following col
 * **Deleting Message Pairs**:
   * **Deleted Together**: Message pairs are added and deleted as a unit.
 
-<Image align="center" width="75% " src="https://files.readme.io/3fbe739b7c1945c23ef6973522a7b7558c63c2e7bb00c5644d3c9a446b25a129-CleanShot_2024-11-04_at_20.29.182x.png" />
+<Image align="center" border={false} width="75% " src="https://files.readme.io/3fbe739b7c1945c23ef6973522a7b7558c63c2e7bb00c5644d3c9a446b25a129-CleanShot_2024-11-04_at_20.29.182x.png" />
 
 ### Conversation History
 
@@ -78,19 +82,19 @@ The Prompts CMS displays a table listing all your prompts with the following col
 * **Placement**:
   * **Drag and Drop**: Move the conversation history block to the desired position within your prompt.
 
-<Image align="center" width="75% " src="https://files.readme.io/6f35155ee4baeb77a94043d7c9462af0cf3541ac8106cec50e1c16a29a7fafa4-CleanShot_2024-11-04_at_20.32.562x.png" />
+<Image align="center" border={false} width="75% " src="https://files.readme.io/6f35155ee4baeb77a94043d7c9462af0cf3541ac8106cec50e1c16a29a7fafa4-CleanShot_2024-11-04_at_20.32.562x.png" />
 
 ## Prompt Variables
 
 * **Access Variables**: Click on the **Variables** button in the header.
 * **Manage Variables**:
-  * **View Used Variables**: Displays all variables referenced in your prompt (e.g., \{agent\_persona}).
+  * **View Used Variables**: Displays all variables referenced in your prompt (e.g., \{agent_persona}).
   * **Set Test Values**: Enter values for these variables to test how the prompt behaves with different inputs.
 * **Usage in Prompt**:
   * **Syntax**: Use curly braces \{} to include variables in your prompt.
-    * **Example**: “As a helpful assistant named \{agent\_persona}, I will…”
+    * **Example**: “As a helpful assistant named \{agent_persona}, I will…”
 
-![](https://files.readme.io/cdd8a792a6da9d790b2164d163948df9f2e205c4bb5a035063466cd2234b45ca-CleanShot_2024-11-05_at_11.29.212x.png)
+<Image border={false} src="https://files.readme.io/cdd8a792a6da9d790b2164d163948df9f2e205c4bb5a035063466cd2234b45ca-CleanShot_2024-11-05_at_11.29.212x.png" />
 
 ## Prompt Settings
 
@@ -99,7 +103,7 @@ The Prompts CMS displays a table listing all your prompts with the following col
 * **Temperature**: Adjust the creativity level of the AI’s output.
 * **Max Tokens**: Set the maximum length of the generated response.
 
-![](https://files.readme.io/5e4dec822524cd57a05745bdcdc6e4096799fed36752ea84bd13ff5072ae2fac-CleanShot_2024-11-04_at_20.34.322x.png)
+<Image border={false} src="https://files.readme.io/5e4dec822524cd57a05745bdcdc6e4096799fed36752ea84bd13ff5072ae2fac-CleanShot_2024-11-04_at_20.34.322x.png" />
 
 ## Using Structured Outputs
 
@@ -117,7 +121,7 @@ Structured Outputs allow you to define the format of the data you expect the AI 
 
 Here are a couple of examples showcasing how you can define the output format using JSON Schema:
 
-*Example 1: Sentiment Analysis*
+_Example 1: Sentiment Analysis_
 
 ```json
 {
@@ -141,7 +145,7 @@ Here are a couple of examples showcasing how you can define the output format us
 
 In this example, the output format specifies that the AI should return an object with a single required property called `sentiment`. The `sentiment` property is a string that must be one of the enumerated values: "happy", "neutral", or "sad".
 
-*Example 2: Problem Solving Steps*
+_Example 2: Problem Solving Steps_
 
 ```json
 {
@@ -201,7 +205,7 @@ Structured Outputs are currently available with the `gpt-4o-mini`, `gpt-4o` and 
   * **Detailed View**: Hover over to see a breakdown of input and output tokens.
 * **Latency**: Shows the time taken to generate the response.
 
-<Image align="center" width="70% " src="https://files.readme.io/41ba9d57827cd07fecd05d710a6935a8a828bcfcc465e444964eec8c69bde383-image.png" />
+<Image align="center" border={false} width="70% " src="https://files.readme.io/41ba9d57827cd07fecd05d710a6935a8a828bcfcc465e444964eec8c69bde383-image.png" />
 
 **Iterating**
 
