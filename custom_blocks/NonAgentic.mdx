@@ -1,0 +1,14 @@
+---
+name: NonAgentic
+---
+export const NonAgentic = ({ text }) => {
+  return (
+    <Callout icon="❗️" theme="error">
+      <strong>This feature is an older way to build using Voiceflow.</strong>
+			<p>Although this feature remains available, we don't recommend using it. {text} Legacy features often consume more credits and lead to a worse user experience.</p>
+</Callout>
+
+  );
+};
+
+<NonAgentic text="Do this instead." />
