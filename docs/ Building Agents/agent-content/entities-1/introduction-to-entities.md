@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+<NonAgenticWarning />
+
 In the world of conversational agents, **entities** are the key pieces of information that you want to extract from a user's input. Think of entities as the nouns in a sentence—the who, what, where, and when that give meaning to the conversation. Whether you're capturing a user's name, booking a date, or retrieving a product code, entities enable your agent to recognize and process this crucial information accurately.
 
 In Voiceflow, entities serve as placeholders or variables that store specific data collected during a conversation. They make your agent dynamic and responsive, allowing it to handle a wide range of user inputs and ensuring that the conversation flows naturally.
@@ -28,9 +30,9 @@ This LLM-driven approach enhances accuracy and adaptability, allowing your agent
 
 ***
 
-> 📘
->
-> Rules, exit scenarios and automatic reprompt features are included as part of [new AI-powered entity collection](https://docs.voiceflow.com/changelog/ai-entity-collection) feature being rolled out to users.
+<Callout icon="📘" theme="info">
+  Rules, exit scenarios and automatic reprompt features are included as part of [new AI-powered entity collection](https://docs.voiceflow.com/changelog/ai-entity-collection) feature being rolled out to users.
+</Callout>
 
 ## Entity Extraction Rules: Fine-Tuning Data Capture
 
