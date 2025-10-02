@@ -12,15 +12,11 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/96eec3b6b1ff9caa0bd5f670d8bfe0fa144af6b3fab6328228fd0851346ed182-Image_11.png" />
+<Image align="center" border={false} src="https://files.readme.io/96eec3b6b1ff9caa0bd5f670d8bfe0fa144af6b3fab6328228fd0851346ed182-Image_11.png" />
 
 The Agent step is a flexible all-in-one tool that lets your assistant interpret user input using AI, access your knowledge base, route the conversation based on intent, and run external functions — all within a single step.
 
 Use it when you want the agent to handle an open-ended request without needing to manually define each path ahead of time.
-
-## Basic usage
-
-<Embed url="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD" href="https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DwkN04Nr7KSs%26feature%3Dyoutu.be&q=EhAmAB8YEA2fMapQNsg0Abi8GJ6C7L4GIjCBRmY8MAlUO6LKCM_7TzAyZE7E6JtV-ytVuh10NQkUt-9TRNkWivXPK6iMbWgpu00yAnJSWgFD" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Furl%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DwkN04Nr7KSs%26type%3Dtext%252Fhtml%26schema%3Dgoogle%26display_name%3DYouTube%26src%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252FwkN04Nr7KSs%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 ## Introduction to the Agent step
 
@@ -71,7 +67,7 @@ Integrations are native connections to popular third-party platforms. These requ
 | Twilio        | Send SMS or make calls with custom logic.                   |
 | Hubspot       | Create or update CRM contacts, log conversation outcomes.   |
 
-![](https://files.readme.io/1ba143caec56c024d2dc331bedc2e4aee95dca847705d6213b80d9943fddefb2-CleanShot_2025-07-29_at_14.44.212x.png)
+<Image border={false} src="https://files.readme.io/1ba143caec56c024d2dc331bedc2e4aee95dca847705d6213b80d9943fddefb2-CleanShot_2025-07-29_at_14.44.212x.png" />
 
 ## Functions
 
@@ -82,7 +78,7 @@ Functions allow your agent to connect with external services and retrieve or upd
 1. **Select Function**: Choose from available functions in the dropdown menu
 2. **LLM Description**: This is critical - you need to tell the LLM when and how to use this function
 
-![](https://files.readme.io/24eac212512d887b57d7475185ec621172dad9ffc4ab27ddac69d91c71397a73-CleanShot_2025-07-29_at_15.12.312x.png)
+<Image border={false} src="https://files.readme.io/24eac212512d887b57d7475185ec621172dad9ffc4ab27ddac69d91c71397a73-CleanShot_2025-07-29_at_15.12.312x.png" />
 
 ### LLM Description:
 
@@ -120,10 +116,10 @@ For example, for an Order ID variable:
 
 > #### Order Lookup Function (Example)
 >
-> **Function Name**: Get Order by ID\
+> **Function Name**: Get Order by ID
 > **LLM Description**: "Use this function to retrieve a customer's order details from Shopify when they ask about their order status, delivery date, shipping address, or tracking information. The function requires a valid order ID to proceed."
 >
-> **Input Variable Name**: orderID\
+> **Input Variable Name**: orderID
 > **LLM Variable Description**: "The customer's order ID. This should be a 10-digit number that starts with 'ORD-'. Ask the customer to provide this number if they haven't already."
 
 ## Exit conditions
@@ -134,16 +130,16 @@ Exit conditions allow your agent to handle specific conversation flows and take 
 * **Variable Collection**: You can require specific data to be collected before entering a path
 * **Seamless Integration**: Paths work within natural conversation, without requiring specific commands
 
-When an exit condition is triggered, the Agent step will still retain the full conversation context. This means you can route the user through another part of your flow- such as a component or custom action- and then **return to the Agent step** *without losing memory* of the conversation.
+When an exit condition is triggered, the Agent step will still retain the full conversation context. This means you can route the user through another part of your flow- such as a component or custom action- and then **return to the Agent step** _without losing memory_ of the conversation.
 
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYks8l3KfGlT9yobAZqe36tMHzS78D0muRx2fLJ" />
 
 ### Exit condition examples:
 
-> **Exit condition name**: Process Order Return\
+> **Exit condition name**: Process Order Return
 > **Description**: "Trigger this path when the user wants to return an item they purchased, expresses dissatisfaction with their order, mentions that an item is defective, or asks about the return policy. The user might use phrases like 'I want to return', 'how do I send this back', 'my product is broken', or 'does this have a warranty'."
 >
-> **Required Variable**: orderID\
+> **Required Variable**: orderID
 > **LLM Variable Description**: "This variable should contain the order ID that the customer wants to return. Valid order IDs are 10-digit numbers. If the user doesn't provide their order ID initially, ask them for it. Make sure to verify that the provided ID matches the expected format before proceeding with the return pr
 
 > 👍 Tip: create looping workflows and return the Agent step.
@@ -168,7 +164,7 @@ When you enable knowledge base integration, your agent can automatically search 
 
 For example, if a user asks about a password reset but that information isn't in your knowledge base, the agent can provide general guidance. But when asked about email confirmation—which is in your knowledge base—it can provide specific, accurate information from your documentation.
 
-![](https://files.readme.io/690a1fde9e1a9df1786ef65aa0fd4862b4d6ecbe6793df7d2d3646d323bb0749-CleanShot_2025-07-29_at_15.26.252x.png)
+<Image border={false} src="https://files.readme.io/690a1fde9e1a9df1786ef65aa0fd4862b4d6ecbe6793df7d2d3646d323bb0749-CleanShot_2025-07-29_at_15.26.252x.png" />
 
 > 📘 Ensure knowledge base is toggled on!
 >
