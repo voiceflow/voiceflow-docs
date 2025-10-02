@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
+<NonAgenticWarning />
+
 ## What Are Intents?
 
 In the realm of conversational AI, **intents** represent the underlying goals or purposes behind a user's input. They are the actions the user wants to perform or the information they seek through their queries. By identifying intents, your Voiceflow agent can understand what the user is trying to achieve and respond appropriately.
-
-<Embed url="https://www.youtube.com/watch?v=9QazOTPrzmA" title="Optimizing Your AI Agents Triggers [Part 3.1 Support Course]" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/9QazOTPrzmA/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=9QazOTPrzmA" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252F9QazOTPrzmA%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D9QazOTPrzmA%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252F9QazOTPrzmA%252Fhqdefault.jpg%26key%3D02466f963b9b4bb8845a05b53d3235d7%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 <br />
 
@@ -48,7 +48,7 @@ While **intents** capture the user's goal, **entities** represent specific piece
 * **Intent**: `showWeather`
 * **Entities**: `Date`, `City`
 
-![](https://files.readme.io/0c8fa062c4cc691148161ddccbb1b2e34ae3790a545ae1b0bae031a4e3d7cf01-image.png)
+<Image border={false} src="https://files.readme.io/0c8fa062c4cc691148161ddccbb1b2e34ae3790a545ae1b0bae031a4e3d7cf01-image.png" />
 
 Understanding the distinction between intents and entities is crucial for designing effective conversational agents. Intents determine **what** the user wants to do, and entities provide the details needed to complete that action.
 
