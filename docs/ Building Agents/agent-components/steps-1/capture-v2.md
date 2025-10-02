@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+<NonAgenticWarning />
+
 ## Introduction
 
 The **Capture Step** in Voiceflow is a powerful tool that allows you to collect user input during a conversation. Whether you want to capture the entire user reply or extract specific entities, the Capture Step provides flexibility and control over how you gather and handle user responses.
@@ -21,7 +23,7 @@ This guide will walk you through the features of the Capture Step, including how
 * Configure options like **No Reply** and **Listen for Other Triggers**.
 * Set up **Automatic Reprompts**, **Rules**, and **Exit Scenarios** to enhance the user experience.
 
-  ![](https://files.readme.io/add54950d0e18fbb0a52122f059cbe5b3af23ed5fae5feb5a70343994f00473d-CleanShot_2024-10-02_at_14.49.25.png)
+  <Image border={false} src="https://files.readme.io/add54950d0e18fbb0a52122f059cbe5b3af23ed5fae5feb5a70343994f00473d-CleanShot_2024-10-02_at_14.49.25.png" />
 
 <br />
 
@@ -44,7 +46,7 @@ When you want to capture exactly what the user says and store it for later use, 
 
 1. **Select Capture Mode**: In the Capture Step editor, you'll see a toggle to choose between **Entities** and **Entire User Reply**. Select **Entire User Reply**.
 
-   <Image align="center" src="https://files.readme.io/a38edb0cb24592a10afbaf3ad3e1c9e06205b8ab7b6cb201f33b6181c1e7ef71-CleanShot_2024-10-02_at_14.50.41.png" />
+   <Image align="center" border={false} src="https://files.readme.io/a38edb0cb24592a10afbaf3ad3e1c9e06205b8ab7b6cb201f33b6181c1e7ef71-CleanShot_2024-10-02_at_14.50.41.png" />
 2. **Set the Variable**: Specify the variable where you want to store the user's reply. This variable can be used later in your conversation flow to personalize responses or process the input.
 
 ### Options and Toggles
@@ -126,7 +128,7 @@ To enhance control over how entities are captured and how the conversation proce
 
 #### Purpose
 
-<Image align="center" src="https://files.readme.io/a978c1d1d21038e83d87716de2fc3cd492500bae021b882725c24abc663b6239-CleanShot_2024-10-02_at_14.48.32.png" />
+<Image align="center" border={false} src="https://files.readme.io/a978c1d1d21038e83d87716de2fc3cd492500bae021b882725c24abc663b6239-CleanShot_2024-10-02_at_14.48.32.png" />
 
 * **Validate User Input**: Specify conditions that the user's input must meet for the entities to be considered successfully captured.
 * **Guide the AI**: Provide instructions to the LLM to ensure accurate extraction of entities.
@@ -148,7 +150,7 @@ To enhance control over how entities are captured and how the conversation proce
 
 #### Purpose
 
-<Image align="center" src="https://files.readme.io/bf143a9dcae19402a084232eebf49fc601f7181bb79a9cce61fcf3346cb92bc9-CleanShot_2024-10-02_at_14.51.16.png" />
+<Image align="center" border={false} src="https://files.readme.io/bf143a9dcae19402a084232eebf49fc601f7181bb79a9cce61fcf3346cb92bc9-CleanShot_2024-10-02_at_14.51.16.png" />
 
 * **Manage Conversation Flow**: Define conditions under which the agent should stop trying to capture the entities and proceed differently.
 * **Enhance User Experience**: Prevent frustration by not repeatedly asking for information the user cannot or does not want to provide.
