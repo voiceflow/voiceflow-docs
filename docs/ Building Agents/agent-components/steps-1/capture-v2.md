@@ -12,6 +12,8 @@ next:
 ---
 <NonAgenticWarning />
 
+<NonAgentic text="Do this instead." />
+
 ## Introduction
 
 The **Capture Step** in Voiceflow is a powerful tool that allows you to collect user input during a conversation. Whether you want to capture the entire user reply or extract specific entities, the Capture Step provides flexibility and control over how you gather and handle user responses.
