@@ -10,7 +10,8 @@ metadata:
 next:
   description: ''
 ---
-<NonAgenticWarning />
+<NonAgentic text="We recommend migrating to the [Agent step](doc:agents), which can capture variables via [exit conditions](doc:agents#/exit-conditions)." />
+
 
 ## Introduction
 
