@@ -16,8 +16,6 @@ next:
       slug: prompts-cms-and-editor
       title: Prompts CMS
 ---
-<br />
-
 <NonAgenticWarning />
 
 # How to import a prompt
