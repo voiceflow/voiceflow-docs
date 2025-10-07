@@ -41,7 +41,7 @@ You should see a list of commands, as shown below. If you do, the installation w
 ## 2. Grab your agent's API key
 
 * Open the [Voiceflow Creator](https://creator.voiceflow.com/), and click the agent you want to use with the CLI.
-* In the sidebar, click **Interfaces** → **API keys**
+* In the sidebar, click **Settings** → **API keys**
 * Click the **copy** button to grab your API key
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSgC3lEmcdtVY8pvMo6K2ksaDj0z4g5XZ7nI3h" />
