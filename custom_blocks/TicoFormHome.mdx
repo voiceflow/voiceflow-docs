@@ -22,7 +22,7 @@ name: TicoFormHome
         const message = input?.value?.trim() || null;
 
         if (message) {
-          window.cleanStartTico();
+          //window.cleanStartTico();
           setTimeout(() => {
 						// posthog.capture('Tico Start', { question: message })
             window.searchTico(message);
