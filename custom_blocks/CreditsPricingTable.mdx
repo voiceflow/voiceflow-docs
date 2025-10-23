@@ -71,7 +71,7 @@ export function CreditsPricingTable() {
   const formatCredits = (value, priorityValue) => {
     if (value == null) return '';
     if (priorityValue != null && priorityValue !== '') {
-      return <>${value} <br /><span style={{color: "#666", fontSize: "0.85em"}}>{priorityValue} when using priority processing</span></>;
+      return <>{value} <br /><span style={{color: "#ececec", fontSize: "0.85em"}}>{priorityValue} when using priority processing</span></>;
     }
     return String(value);
   };
