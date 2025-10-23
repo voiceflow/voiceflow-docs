@@ -23,7 +23,7 @@ Transcripts are valuable for:
 >
 > Call recordings need to be enabled in **transcript settings** to retrieve audio files for a conversation's transcript. Click on the ⚙️ icon to view settings.
 >
-> ![](https://files.readme.io/3661fb308989555f5dd9d73bff0b3c98dee98dc1498f709b56fa408daf414e92-CleanShot_2025-07-30_at_11.06.542x.png)
+> <Image border={false} src="https://files.readme.io/3661fb308989555f5dd9d73bff0b3c98dee98dc1498f709b56fa408daf414e92-CleanShot_2025-07-30_at_11.06.542x.png" />
 
 ## Analyzing transcripts
 
@@ -39,7 +39,7 @@ Transcripts are tied to **individual** agents, not the overall workspace. Each t
 | Evaluations    | Displays evaluation results such as test pass/fail status or validation values. By default, no evaluations are applied to transcripts, unless created and enabled through the [Evaluations](doc:evaluations) editor. |
 | Duration       | Total length of the conversation (in minutes and seconds).                                                                                                                                                           |
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/295f22ce08418ad79a352ae61889087b722c50c822084c948f438a8748ef9c71-image.png" />
+<Image align="center" border={true} src="https://files.readme.io/295f22ce08418ad79a352ae61889087b722c50c822084c948f438a8748ef9c71-image.png" className="border" />
 
 <br />
 
@@ -47,7 +47,7 @@ Transcripts are tied to **individual** agents, not the overall workspace. Each t
 
 Agent and user conversations can be analyzed in depth for debugging through the Logs tab on each transcript. Logs display the behind-the-scenes of the Agent's interactions and what exact steps were executed within its designated workflow. They also provide additional information such as the agent's Input, Output and how many credits were consumed per action.
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/51697c4dbba0aed9a616883b7b61f4b28ca4a9b76827a0e7e23ba45f410de301-image.png" />
+<Image align="center" border={true} src="https://files.readme.io/51697c4dbba0aed9a616883b7b61f4b28ca4a9b76827a0e7e23ba45f410de301-image.png" className="border" />
 
 ## [Evaluations]()
 
@@ -60,9 +60,3 @@ Evaluations are a set of custom criteria you can define to determine whether spe
 > * The conversation included a proper sign-off, such as the agent saying “Let me know if you need anything else”
 
 Evaluations allow you to automate conversation review and score interactions against key success metrics, quality standards, or compliance requirements.
-
-## Legacy transcripts
-
-Voiceflow's previous transcripts system is still available to existing customers until September 28th, 2025. We recommend migrating over to the new transcripts system as soon as possible.
-
-The documentation for the old transcripts system [can be found here](https://docs.voiceflow.com/docs/transcripts) until that date.
