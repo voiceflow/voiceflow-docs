@@ -4,200 +4,226 @@ name: CreditsPricingTable
 import React, { useEffect, useState } from 'react';
 
 export function CreditsPricingTable() {
-    const displayNames = {
-      orchestration: "Orchestration",
-      llm: "LLMs (Large Language Models)",
-      asr: "STT (Speech-to-Text)",
-      tts: "TTS (Text-to-Speech)"
-    };
+  const displayNames = {
+    orchestration: "Orchestration",
+    llm: "LLMs (Large Language Models)",
+    asr: "STT (Speech-to-Text)",
+    tts: "TTS (Text-to-Speech)"
+  };
 
-    // Vendor mapping
-    const vendorMap = {
-      openai: 'Open AI',
-      'open-ai': 'Open AI',
-      anthropic: 'Anthropic',
-      google: 'Google',
-      groq: 'Groq',
-      deepgram: 'Deepgram',
-      rimelabs: 'Rime Labs',
-      cartesia: 'Cartesia',
-      elevenlabs: 'Eleven Labs',
-      'eleven-labs': 'Eleven Labs',
-			assemblyai: 'Assemblyai'
-    };
+  // Vendor mapping
+  const vendorMap = {
+    openai: 'Open AI',
+    'open-ai': 'Open AI',
+    anthropic: 'Anthropic',
+    google: 'Google',
+    groq: 'Groq',
+    deepgram: 'Deepgram',
+    rimelabs: 'Rime Labs',
+    cartesia: 'Cartesia',
+    elevenlabs: 'Eleven Labs',
+    'eleven-labs': 'Eleven Labs',
+    assemblyai: 'Assemblyai'
+  };
 
-    // Enhanced item mapping for all categories
-    const getItemName = (item, vendor, category) => {
-      // Orchestration
-      if (category === 'orchestration') {
-        if (item === 'interaction') return 'Chat usage';
-        if (item === 'audio') return 'Voice usage';
-        if (item === 'no-reply') return 'No-reply usage';
+  // Enhanced item mapping for all categories
+  const getItemName = (item, vendor, category) => {
+    // Orchestration
+    if (category === 'orchestration') {
+      if (item === 'interaction') return 'Chat usage';
+      if (item === 'audio') return 'Voice usage';
+      if (item === 'no-reply') return 'No-reply usage';
+    }
+    // STT
+    if (category === 'asr') {
+      if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - STT';
+      if (vendor && vendor.toLowerCase().includes('assemblyai')) return 'Assemblyai - STT';
+      if (vendor && vendor.toLowerCase().includes('cartesia')) return 'Cartesia - STT';
+    }
+    // TTS
+    if (category === 'tts') {
+      if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - TTS';
+      if (vendor && vendor.toLowerCase().includes('rimelabs')) return 'Rime Labs - TTS';
+      if (vendor && vendor.toLowerCase().includes('cartesia')) {
+        return 'Cartesia - TTS';
       }
-      // STT
-      if (category === 'asr') {
-        if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - STT';
-				if (vendor && vendor.toLowerCase().includes('assemblyai')) return 'Assemblyai - STT';
-				if (vendor && vendor.toLowerCase().includes('cartesia')) return 'Cartesia - STT';
+      if (vendor && vendor.toLowerCase().includes('elevenlabs')) {
+        if (item && item.toLowerCase().includes('flash')) return 'Eleven Labs - TTS - Flash';
+        if (item && item.toLowerCase().includes('turbo')) return 'Eleven Labs - TTS - Turbo';
+        if (item && item.toLowerCase().includes('multilingual')) return 'Eleven Labs - TTS - Multilingual';
+        return 'Eleven Labs - TTS';
       }
-      // TTS
-      if (category === 'tts') {
-        if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - TTS';
-        if (vendor && vendor.toLowerCase().includes('rimelabs')) return 'Rime Labs - TTS';
-        if (vendor && vendor.toLowerCase().includes('cartesia')) {
-          //if (item && item.toLowerCase().includes('sonic 2')) return 'Sonic 2 - TTS';
-          //if (item && item.toLowerCase().includes('turbo')) return 'Sonic Turbo - TTS';
-          return 'Cartesia - TTS';
+    }
+    // LLMs: fallback to item name
+    return item;
+  };
+
+  // Unit mapping
+  const getUnit = (unit) => {
+    if (!unit) return '';
+    if (unit.toLowerCase().includes('credits per 1000 llm tokens')) return '1K Tokens';
+    if (unit.toLowerCase().includes('credits per 1000 characters')) return '1K Characters';
+    if (unit.toLowerCase().includes('credits per minute')) return 'Minutes';
+    return unit;
+  };
+
+  // Format base + priority price text
+  const formatCredits = (value, priorityValue) => {
+    if (value == null) return '';
+    if (priorityValue != null && priorityValue !== '') {
+      return <>${value} <br /><span style={{color: "#666", fontSize: "0.85em"}}>${priorityValue} when using priority processing</span></>;
+    }
+    return String(value);
+  };
+
+  const [creditsData, setCreditsData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchCreditsData() {
+      setLoading(true);
+      setError(null);
+      try {
+        const res = await fetch('https://realtime-api.voiceflow.com/v1alpha1/estimation/config');
+        if (!res.ok) throw new Error('Failed to fetch pricing data');
+        const data = await res.json();
+        // Group usage by category
+        const grouped = {};
+        for (const item of data.config.usage) {
+          if (!grouped[item.category]) grouped[item.category] = [];
+          grouped[item.category].push(item);
         }
-        if (vendor && vendor.toLowerCase().includes('elevenlabs')) {
-          if (item && item.toLowerCase().includes('flash')) return 'Eleven Labs - TTS - Flash';
-          if (item && item.toLowerCase().includes('turbo')) return 'Eleven Labs - TTS - Turbo';
-          if (item && item.toLowerCase().includes('multilingual')) return 'Eleven Labs - TTS - Multilingual';
-          return 'Eleven Labs - TTS';
-        }
+        setCreditsData(grouped);
+      } catch (e) {
+        setError(e.message);
+      } finally {
+        setLoading(false);
       }
-      // LLMs: fallback to item name
-      return item;
-    };
+    }
+    fetchCreditsData();
+  }, []);
 
-    // Unit mapping
-    const getUnit = (unit) => {
-      if (!unit) return '';
-      if (unit.toLowerCase().includes('credits per 1000 llm tokens')) return '1K Tokens';
-      if (unit.toLowerCase().includes('credits per 1000 characters')) return '1K Characters';
-      if (unit.toLowerCase().includes('credits per minute')) return 'Minutes';
-      return unit;
-    };
+  if (loading) return <div>Loading pricing data...</div>;
+  if (error) return <div style={{ color: 'red' }}>Error: {error}</div>;
+  if (!creditsData) return null;
 
-    const [creditsData, setCreditsData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+  // Helper to get mapped vendor name
+  const getVendorName = (vendor) => {
+    if (!vendor) return '';
+    const key = vendor.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
+    return vendorMap[key] || vendorMap[vendor.toLowerCase()] || vendor;
+  };
 
-    useEffect(() => {
-      async function fetchCreditsData() {
-        setLoading(true);
-        setError(null);
-        try {
-          const res = await fetch('https://realtime-api.voiceflow.com/v1alpha1/estimation/config');
-          if (!res.ok) throw new Error('Failed to fetch pricing data');
-          const data = await res.json();
-          // Group usage by category
-          const grouped = {};
-          for (const item of data.config.usage) {
-            if (!grouped[item.category]) grouped[item.category] = [];
-            grouped[item.category].push(item);
-          }
-          setCreditsData(grouped);
-        } catch (e) {
-          setError(e.message);
-        } finally {
-          setLoading(false);
-        }
-      }
-      fetchCreditsData();
-    }, []);
+  // Pull orchestration items for optional priority display
+  const interactionItem = creditsData.orchestration?.find(i => i.item === 'interaction');
+  const noReplyItem = creditsData.orchestration?.find(i => i.item === 'no-reply');
+  const audioItem = creditsData.orchestration?.find(i => i.item === 'audio');
 
-    if (loading) return <div>Loading pricing data...</div>;
-    if (error) return <div style={{ color: 'red' }}>Error: {error}</div>;
-    if (!creditsData) return null;
-
-    // Helper to get mapped vendor name
-    const getVendorName = (vendor) => {
-      if (!vendor) return '';
-      const key = vendor.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
-      return vendorMap[key] || vendorMap[vendor.toLowerCase()] || vendor;
-    };
-
-    return (
-      <div>
-        {/* Orchestration Table: Static structure, dynamic values */}
-        <div style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{displayNames.orchestration}</h2>
-          <div className="rdmd-table">
-            <div className="rdmd-table-inner">
-              <table>
-                <thead>
-                  <tr>
-                    <th style={{ textAlign: 'left' }}>Vendor</th>
-                    <th style={{ textAlign: 'left' }}>Item</th>
-                    <th style={{ textAlign: 'left' }}>Unit</th>
-                    <th style={{ textAlign: 'left' }}>Credits per Unit</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style={{ textAlign: 'left' }}>Voiceflow</td>
-                    <td style={{ textAlign: 'left' }}>Chat usage</td>
-                    <td style={{ textAlign: 'left' }}>Every time a conversation begins, the user sends a message, or a request is sent to the Dialogue Manager API.</td>
-                    <td style={{ textAlign: 'left' }}>{
-                      creditsData.orchestration?.find(i => i.item === 'interaction')?.value ?? 1
-                    }</td>
-                  </tr>
-                  <tr>
-                    <td style={{ textAlign: 'left' }}>Voiceflow</td>
-                    <td style={{ textAlign: 'left' }}>No-reply usage</td>
-                    <td style={{ textAlign: 'left' }}>Every time a message is sent by the no-reply feature</td>
-                    <td style={{ textAlign: 'left' }}>1</td>
-                  </tr>
-                  <tr>
-                    <td style={{ textAlign: 'left' }}>Voiceflow</td>
-                    <td style={{ textAlign: 'left' }}>Voice usage</td>
-                    <td style={{ textAlign: 'left' }}>Minutes of Voice AI</td>
-                    <td style={{ textAlign: 'left' }}>{
-                      creditsData.orchestration?.find(i => i.item === 'audio')?.value ?? 10
-                    }</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+  return (
+    <div>
+      {/* Orchestration Table: Static structure, dynamic values */}
+      <div style={{ marginBottom: '2rem' }}>
+        <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{displayNames.orchestration}</h2>
+        <div className="rdmd-table">
+          <div className="rdmd-table-inner">
+            <table>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left' }}>Vendor</th>
+                  <th style={{ textAlign: 'left' }}>Item</th>
+                  <th style={{ textAlign: 'left' }}>Unit</th>
+                  <th style={{ textAlign: 'left' }}>Credits per Unit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ textAlign: 'left' }}>Voiceflow</td>
+                  <td style={{ textAlign: 'left' }}>Chat usage</td>
+                  <td style={{ textAlign: 'left' }}>
+                    Every time a conversation begins, the user sends a message, or a request is sent to the Dialogue Manager API.
+                  </td>
+                  <td style={{ textAlign: 'left' }}>
+                    {interactionItem
+                      ? formatCredits(interactionItem.value, interactionItem.priorityValue)
+                      : '1'}
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left' }}>Voiceflow</td>
+                  <td style={{ textAlign: 'left' }}>No-reply usage</td>
+                  <td style={{ textAlign: 'left' }}>Every time a message is sent by the no-reply feature</td>
+                  <td style={{ textAlign: 'left' }}>
+                    {noReplyItem
+                      ? formatCredits(noReplyItem.value, noReplyItem.priorityValue)
+                      : '1'}
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left' }}>Voiceflow</td>
+                  <td style={{ textAlign: 'left' }}>Voice usage</td>
+                  <td style={{ textAlign: 'left' }}>Minutes of Voice AI</td>
+                  <td style={{ textAlign: 'left' }}>
+                    {audioItem
+                      ? formatCredits(audioItem.value, audioItem.priorityValue)
+                      : '10'}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        {/* Other tables: dynamic as before */}
-        {Object.entries(displayNames).filter(([type]) => type !== 'orchestration').map(([type, display]) => {
-          let items = creditsData[type];
-          if (!items || items.length === 0) return null;
-          // Sort alphabetically by mapped item name
-          //items = [...items].sort((a, b) => getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type)));
-          items = [...items].sort((a, b) => {
-            if (['llm', 'asr', 'tts'].includes(type)) {
-              const vendorCompare = getVendorName(a.vendor).localeCompare(getVendorName(b.vendor));
-              if (vendorCompare !== 0) return vendorCompare;
-              return (a.value ?? Infinity) - (b.value ?? Infinity);
-            }
-            return getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type));
-          });
-					return (
-            <div key={type} style={{ marginBottom: '2rem' }}>
-              <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{display}</h2>
-              <div className="rdmd-table">
-                <div className="rdmd-table-inner">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th style={{ textAlign: 'left' }}>Vendor</th>
-                        <th style={{ textAlign: 'left' }}>Item</th>
-                        <th style={{ textAlign: 'left' }}>Unit</th>
-                        <th style={{ textAlign: 'left' }}>Credits per Unit</th>
+      </div>
+
+      {/* Other tables: dynamic */}
+      {Object.entries(displayNames).filter(([type]) => type !== 'orchestration').map(([type, display]) => {
+        let items = creditsData[type];
+        if (!items || items.length === 0) return null;
+
+        // Sort vendors alphabetically, then by value asc for LLM/ASR/TTS
+        items = [...items].sort((a, b) => {
+          if (['llm', 'asr', 'tts'].includes(type)) {
+            const vendorCompare = getVendorName(a.vendor).localeCompare(getVendorName(b.vendor));
+            if (vendorCompare !== 0) return vendorCompare;
+            return (a.value ?? Infinity) - (b.value ?? Infinity);
+          }
+          return getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type));
+        });
+
+        return (
+          <div key={type} style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{display}</h2>
+            <div className="rdmd-table">
+              <div className="rdmd-table-inner">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style={{ textAlign: 'left' }}>Vendor</th>
+                      <th style={{ textAlign: 'left' }}>Item</th>
+                      <th style={{ textAlign: 'left' }}>Unit</th>
+                      <th style={{ textAlign: 'left' }}>Credits per Unit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {items.map((item, index) => (
+                      <tr key={index}>
+                        <td style={{ textAlign: 'left' }}>{getVendorName(item.vendor)}</td>
+                        <td style={{ textAlign: 'left' }}>{getItemName(item.item, item.vendor, type)}</td>
+                        <td style={{ textAlign: 'left' }}>{getUnit(item.unit)}</td>
+                        <td style={{ textAlign: 'left' }}>
+                          {formatCredits(item.value, item.priorityValue)}
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {items.map((item, index) => (
-                        <tr key={index}>
-                          <td style={{ textAlign: 'left' }}>{getVendorName(item.vendor)}</td>
-                          <td style={{ textAlign: 'left' }}>{getItemName(item.item, item.vendor, type)}</td>
-                          <td style={{ textAlign: 'left' }}>{getUnit(item.unit)}</td>
-                          <td style={{ textAlign: 'left' }}>{item.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-          );
-        })}
-      </div>
-    );
-  }
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 <CreditsPricingTable />
