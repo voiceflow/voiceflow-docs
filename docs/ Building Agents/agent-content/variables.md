@@ -8,8 +8,6 @@ metadata:
 ---
 Variables let your agent remember and reuse information during a conversation. You can store details like a user’s name and account details, then reference them later to personalize responses or make decisions in your flow.  Variables act as your agent’s short-term memory, helping it keep track of what matters from one step to the next.
 
-<br />
-
 ## Creating variables
 
 Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To access the variables page, click the CMS button at the bottom of your project's sidebar, then select **Variables**. You can create a new variable using the button in the top right, or modify an existing variable by clicking on it.
@@ -20,6 +18,18 @@ When creating a new variable, you can optionally set a default value. We recomme
 
 <br />
 
+You can also create a new variable when you try to [use a variable in an input](https://docs.voiceflow.com/docs/variables#accessing-a-variables-value).
+
+<br />
+
+## Using variables during conversations
+
+Variables can be used inside most inputs on Voiceflow, allowing your agent to access the value of the variable. For example, you can use variables in the [Agent step](doc:agents)'s instructions box or as the value of a parameter in a [Tool step](doc:tool-step)'s API call. To use a variable, simply type `{` followed by the name of the variable. Then, click the name of the variable in the dropdown list that appears.
+
+<Image align="center" border={false} src="https://files.readme.io/dec1732e90ef369db22050f016a3a7ab5838ab587f9e0dbcd658449bccece5d7-CleanShot_2025-10-29_at_00.59.512x_1.png" />
+
+<br />
+
 ## Setting a variable's value during a conversation
 
 There are various ways to set a variable during a conversation.
@@ -27,14 +37,6 @@ There are various ways to set a variable during a conversation.
 * The [Set step](doc:variables-set) or the [JavaScript step](doc:javascript-step) allow you to set a variable to any text value.
 * The response from [integration tools](doc:integrations) can be captured and stored in a variable using the capture response feature.
 * Variables can be set agentically using [exit conditions](https://docs.voiceflow.com/docs/agents#exit-conditions) on an [Agent step](doc:agents).
-
-<br />
-
-## Accessing a variable's value
-
-Once set, the value of a variable can be accessed through most step inputs. For example, you can use variables in the [Agent step](doc:agents)'s instructions box or as the value of a parameter in a [Tool step](doc:tool-step)'s API call. To use a variable, simply type `{` followed by the name of the variable. Then, click the name of the variable in the dropdown list that appears.
-
-<Image align="center" border={false} src="https://files.readme.io/dec1732e90ef369db22050f016a3a7ab5838ab587f9e0dbcd658449bccece5d7-CleanShot_2025-10-29_at_00.59.512x_1.png" />
 
 <br />
 
@@ -85,7 +87,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                        `
+                                                                `
       </td>
     </tr>
 
