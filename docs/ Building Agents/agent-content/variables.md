@@ -20,8 +20,6 @@ When creating a new variable, you can optionally set a default value. We recomme
 
 You can also create a new variable when you try to [use a variable in an input](https://docs.voiceflow.com/docs/variables#accessing-a-variables-value).
 
-<br />
-
 ## Using variables during conversations
 
 Variables can be used inside most inputs on Voiceflow, allowing your agent to access the value of the variable. For example, you can use variables in the [Agent step](doc:agents)'s instructions box or as the value of a parameter in a [Tool step](doc:tool-step)'s API call. To use a variable, simply type `{` followed by the name of the variable. Then, click the name of the variable in the dropdown list that appears.
@@ -87,7 +85,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                `
+                                                                        `
       </td>
     </tr>
 
