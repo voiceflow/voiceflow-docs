@@ -148,6 +148,36 @@ Each project created on Voiceflow automatically has access to some built-in vari
         873700668
       </td>
     </tr>
+
+    <tr>
+      <td>
+        `user_id`
+      </td>
+
+      <td>
+        The user's unique ID, as set through the [web chat widget](doc:chat-widget) or the [API](doc:custom-interfaces). If using Voiceflow's [phone](doc:telephony) integration, this is automatically set to the phone number that the agent is calling.
+      </td>
+
+      <td>
+        **Web chat or API**: example_user  
+        **Phone**: +16471234567
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_memory`
+      </td>
+
+      <td>
+        The last ten user inputs and agent responses in a string. This also includes tool calls.
+      </td>
+
+      <td>
+        agent: Hey what's up?
+        user: I want to order maple syrup.
+      </td>
+    </tr>
   </tbody>
 </Table>
 
