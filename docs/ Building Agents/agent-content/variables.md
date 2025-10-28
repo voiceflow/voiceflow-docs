@@ -8,6 +8,8 @@ metadata:
 ---
 Variables let your agent remember and reuse information during a conversation. You can store details like a user’s name and account details, then reference them later to personalize responses or make decisions in your flow.  Variables act as your agent’s short-term memory, helping it keep track of what matters from one step to the next.
 
+<br />
+
 ## Creating variables
 
 Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To access the variables page, click the CMS button at the bottom of your project's sidebar, then select **Variables**. You can create a new variable using the button in the top right, or modify an existing variable by clicking on it.
@@ -85,7 +87,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                `
+                                                                                        `
       </td>
     </tr>
 
