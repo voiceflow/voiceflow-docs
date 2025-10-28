@@ -178,6 +178,105 @@ Each project created on Voiceflow automatically has access to some built-in vari
         user: I want to order maple syrup.
       </td>
     </tr>
+
+    <tr>
+      <td>
+        `vf_now`
+      </td>
+
+      <td>
+        The current date and time formatted in a human-readable way. You can modify the timezone in project settings.
+
+      </td>
+
+      <td>
+        Jan 1, 2025, 16:37
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_date`
+      </td>
+
+      <td>
+        The current date formatted in a human-readable way.
+      </td>
+
+      <td>
+        Jan 1, 2025
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_time`
+      </td>
+
+      <td>
+        The current time formatted in a human-readable way.
+      </td>
+
+      <td>
+        16:37
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_month`
+      </td>
+
+      <td>
+        The current month.
+      </td>
+
+      <td>
+        January
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_day`
+      </td>
+
+      <td>
+        The current day of the month.
+      </td>
+
+      <td>
+        1
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_year`
+      </td>
+
+      <td>
+        The current year.
+      </td>
+
+      <td>
+        2025
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `vf_timezone`
+      </td>
+
+      <td>
+        The user's timezone in the format. If unavailable, defaults to the project's timezone.
+      </td>
+
+      <td>
+        America/Toronto
+      </td>
+    </tr>
   </tbody>
 </Table>
 
