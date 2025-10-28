@@ -16,17 +16,17 @@ Variables let your agent remember and reuse information during a conversation. Y
 
 ## Using variables
 
-Variables can be used in most step inputs, such as the [Agent step](doc:agents)'s instructions box, or the value of a parameter in a [Tool step](doc:tool-step)'s API call. To use a variable, simply type `{` followed by the name of the variable. Then, click the name of the variable in the dropdown list that appears.
-
-<Image align="center" border={false} src="https://files.readme.io/dec1732e90ef369db22050f016a3a7ab5838ab587f9e0dbcd658449bccece5d7-CleanShot_2025-10-29_at_00.59.512x_1.png" />
-
-<br />
-
 There are various ways to set a variable during a conversation.
 
 * The [Set step](doc:variables-set) or the [JavaScript step](doc:javascript-step) allow you to set a variable to any text value.
 * The response from [integration tools](doc:integrations) can be captured and stored in a variable using the capture response feature.
 * Variables can be set agentically using [exit conditions](https://docs.voiceflow.com/docs/agents#exit-conditions) on an [Agent step](doc:agents).
+
+Once set, variables can be used in most step inputs, such as the [Agent step](doc:agents)'s instructions box, or the value of a parameter in a [Tool step](doc:tool-step)'s API call. To use a variable, simply type `{` followed by the name of the variable. Then, click the name of the variable in the dropdown list that appears.
+
+<Image align="center" border={false} src="https://files.readme.io/dec1732e90ef369db22050f016a3a7ab5838ab587f9e0dbcd658449bccece5d7-CleanShot_2025-10-29_at_00.59.512x_1.png" />
+
+<br />
 
 <br />
 
@@ -77,7 +77,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                `
+                        `
       </td>
     </tr>
 
@@ -202,7 +202,6 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         The current date and time formatted in a human-readable way. You can modify the timezone in project settings.
-
       </td>
 
       <td>
