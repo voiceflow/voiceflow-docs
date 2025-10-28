@@ -22,7 +22,7 @@ When creating a new variable, you can optionally set a default value. We recomme
 
 <br />
 
-You can also create a new variable when you try to [use a variable in an input](https://docs.voiceflow.com/docs/variables#accessing-a-variables-value).
+You can also create a new variable when you try to [use a variable in an input](https://docs.voiceflow.com/docs/variables#using-variables-during-conversations).
 
 <br />
 
@@ -97,7 +97,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                                                        `
+                                                                                                                                `
       </td>
     </tr>
 
