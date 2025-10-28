@@ -12,7 +12,7 @@ Variables are set on a per-user basis, [based on the `user_id` variable](https:/
 
 ## Creating variables
 
-Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To access the variables page, click the CMS button at the bottom of your project's sidebar, then select **Variables**. You can create a new variable using the button in the top right, or modify an existing variable by clicking on it.
+Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To access the variables page, click the CMS button at the bottom of your project's sidebar then select **Variables**. You can create a new variable using the button in the top right, or modify an existing variable by clicking on it.
 
 When creating a new variable, you can optionally set a default value. We recommend doing so, as this provides a fallback for your agent to use.
 
@@ -97,7 +97,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                                                                `
+                                                                                                                                        `
       </td>
     </tr>
 
