@@ -10,9 +10,7 @@ metadata:
 ---
 Easily connect your Voiceflow agent with Google Sheets to store, retrieve, and update spreadsheet data directly from your conversations. Use the Google Sheets actions in both Agent and Tool steps to create powerful data-driven workflows.
 
-## Basic usage
-
-![](https://files.readme.io/f0c3d825ec547dbd2b160f55c79463c658092031280b0ecca842680084aee47e-CleanShot_2025-08-06_at_14.11.592x.png)
+<br />
 
 <Callout icon="🔐" theme="info">
   To use the Google Sheets integration, you'll need to **OAuth into Google Sheets** from the Voiceflow Creator. This ensures your agent can read and write spreadsheet data securely from your connected account.
@@ -46,9 +44,9 @@ Ensure you provide an `LLM description` for each tool to provide the agent with 
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  Each action may require unique parameters such as `spreadsheetURL`, `sheetName`, or `rowNumber`. Decide whether these should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input variable so the agent knows exactly how to use them.
+  Each action may require unique parameters such as `spreadsheetURL`, `sheetName`, or `rowNumber`. Decide whether these should be _defaulted, hardcoded, or collected by the agent_. Always provide LLM descriptions for each input variable so the agent knows exactly how to use them.
 
-  ![](https://files.readme.io/f5dbb47c269102684ad642b6925440b8fa6a0b822f113a904522e2bb0175db24-CleanShot_2025-08-10_at_11.44.542x.png)
+  <Image border={false} src="https://files.readme.io/f5dbb47c269102684ad642b6925440b8fa6a0b822f113a904522e2bb0175db24-CleanShot_2025-08-10_at_11.44.542x.png" />
 </Callout>
 
 ## Frequently asked questions
