@@ -32,7 +32,7 @@ Variables can be used inside most inputs on Voiceflow, allowing your agent to ac
 
 ## Setting a variable's value during a conversation
 
-There are various ways to set a variable during a conversation.
+There are various ways to set a variable during a conversation:
 
 * The [Set step](doc:variables-set) or the [JavaScript step](doc:javascript-step) allow you to set a variable to any text value.
 * The response from [integration tools](doc:integrations) can be captured and stored in a variable using the capture response feature.
@@ -87,7 +87,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                                `
+                                                                                                        `
       </td>
     </tr>
 
