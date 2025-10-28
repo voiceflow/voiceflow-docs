@@ -14,7 +14,7 @@ Variables let your agent remember and reuse information during a conversation. Y
 
 ## Built-in variables
 
-Each project created on Voiceflow automatically has access to some built-in variables. These are automatically set when the user begins a conversation with your agent and when certain actions take place.
+Each project created on Voiceflow automatically has access to some built-in variables. These are automatically set when the user begins a conversation with your agent or when certain actions take place.
 
 <br />
 
@@ -266,7 +266,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
     <tr>
       <td>
-        `vf_timezone`
+        `vf_user_timezone`
       </td>
 
       <td>
