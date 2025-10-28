@@ -4,19 +4,15 @@ excerpt: >-
   Use Make actions in both Agent and Tool steps to trigger automated workflows
   (scenarios) from your agent.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
 ## Make (formerly Integromat)
 
-Use Make actions in both Agent and Tool steps to trigger complex, automated workflows (called *scenarios*) directly from your Voiceflow agent. With the Make integration, you can connect to hundreds of apps and services, allowing your agent to orchestrate advanced automations with a single step.
+Use Make actions in both Agent and Tool steps to trigger complex, automated workflows (called _scenarios_) directly from your Voiceflow agent. With the Make integration, you can connect to hundreds of apps and services, allowing your agent to orchestrate advanced automations with a single step.
 
-## Basic usage
-
-![](https://files.readme.io/your-make-integration-image.png)
-
-\[video]
+<br />
 
 <Callout icon="🔐" theme="info">
   To use the Make integration, you'll need to **OAuth into Make** from the Voiceflow Creator. This ensures your agent can securely trigger scenarios from your connected Make account.
@@ -49,9 +45,9 @@ Ensure you provide an `LLM description` for each tool so the agent understands w
 <Callout icon="👀" theme="default">
   ### Be wary of each action's required arguments.
 
-  The **Run scenario** action typically requires a `scenarioURL` or a unique name. Decide whether this should be *defaulted, hardcoded, or collected by the agent*. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
+  The **Run scenario** action typically requires a `scenarioURL` or a unique name. Decide whether this should be _defaulted, hardcoded, or collected by the agent_. Always provide LLM descriptions for each input so the agent knows exactly how to use them.
 
-  \[img ]
+  [img ]
 </Callout>
 
 ## Frequently asked questions
