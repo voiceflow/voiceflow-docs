@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 ---
-Voiceflow projects supp
+Variables let your agent remember and reuse information during a conversation. You can store details like a user’s name and account details, then reference them later to personalize responses or make decisions in your flow.  Variables act as your agent’s short-term memory, helping it keep track of what matters from one step to the next.
 
 <br />
 
@@ -61,7 +61,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-        `
+                `
       </td>
     </tr>
 
