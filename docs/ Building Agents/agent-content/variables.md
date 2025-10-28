@@ -16,6 +16,8 @@ Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To 
 
 When creating a new variable, you can optionally set a default value. We recommend doing so, as this provides a fallback for your agent to use.
 
+<br />
+
 <Image align="center" border={false} src="https://files.readme.io/86406222bd759bd2ea037547b38145a51da22976555002684dcecf7f71e42848-Frame_48095786_1.png" />
 
 <br />
@@ -27,6 +29,8 @@ You can also create a new variable when you try to [use a variable in an input](
 ## Using variables during conversations
 
 Variables can be used inside most inputs on Voiceflow, allowing your agent to access the value of the variable. For example, you can use variables in the [Agent step](doc:agents)'s instructions box or as the value of a parameter in a [Tool step](doc:tool-step)'s API call. To use a variable, simply type `{` followed by the name of the variable. Then, click the name of the variable in the dropdown list that appears.
+
+<br />
 
 <Image align="center" border={false} src="https://files.readme.io/dec1732e90ef369db22050f016a3a7ab5838ab587f9e0dbcd658449bccece5d7-CleanShot_2025-10-29_at_00.59.512x_1.png" />
 
@@ -93,7 +97,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                                                `
+                                                                                                                        `
       </td>
     </tr>
 
