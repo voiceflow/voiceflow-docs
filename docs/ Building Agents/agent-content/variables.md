@@ -28,7 +28,7 @@ Variables can be used inside most inputs on Voiceflow, allowing your agent to ac
 
 <Image align="center" border={false} src="https://files.readme.io/dec1732e90ef369db22050f016a3a7ab5838ab587f9e0dbcd658449bccece5d7-CleanShot_2025-10-29_at_00.59.512x_1.png" />
 
-<br />
+If you'd like to add complex logic to your agents, you can use variables inside the [Condition step](doc:logic) to do so.
 
 ## Setting a variable's value during a conversation
 
