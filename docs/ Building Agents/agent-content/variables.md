@@ -8,7 +8,7 @@ metadata:
 ---
 Variables let your agent remember and reuse information during a conversation. You can store details like a user’s name and account details, then reference them later to personalize responses or make decisions in your flow.  Variables act as your agent’s short-term memory, helping it keep track of what matters from one step to the next.
 
-Variables are set on a per-user basis, [based on the `user_id` variable](https://docs.voiceflow.com/docs/variables#built-in-variables). This means that even if your agent is having a conversation with ten different users at the same time, the values of their variables are not shared.
+Variables are set on a per-user basis, [based on the `user_id` variable](https://docs.voiceflow.com/docs/variables#built-in-variables). This means that if your agent is having a conversation with ten different users at the same time, the values of their variables are not shared.
 
 ## Creating variables
 
@@ -97,7 +97,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                                                                                                `
+                                                                                                                                                                        `
       </td>
     </tr>
 
