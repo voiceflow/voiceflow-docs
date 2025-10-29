@@ -155,6 +155,16 @@ Chunking strategies aren't a "one-size-fits-all" concept so we recommend experim
 
 <br />
 
+### Metadata
+
+You can optionally attach metadata to each document or webpage you upload to your knowledge base. This can then be used as a filter by the [Knowledge base tool](doc:knowledge-base) when querying data.
+
+This can be useful if you have multiple brands, product lines or subscription tiers and want to ensure the correct category of information is returned. For example, if you're building an agent for a SaaS platform which has different policies versus self-serve customers, you could add metadata with the key `plan` and value `enterprise` or `regular` to each data source, based on which type of customer the information is relevant for.
+
+<br />
+
+<br />
+
 ## Troubleshooting data imports
 
 If something goes wrong when importing your data, hover over the❗ icon to learn why.
