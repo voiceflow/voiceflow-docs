@@ -29,6 +29,8 @@ Voiceflow supports five different data sources:
 
 The number of data sources you can connect to your project varies depending on your plan. [Learn more on our pricing page](https://www.voiceflow.com/pricing).
 
+<br />
+
 ## Import settings
 
 ### Refresh rate settings
