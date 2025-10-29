@@ -16,8 +16,6 @@ Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To 
 
 When creating a new variable, you can optionally set a default value. We recommend doing so, as this provides a fallback for your agent to use.
 
-<br />
-
 <Image align="center" border={false} src="https://files.readme.io/86406222bd759bd2ea037547b38145a51da22976555002684dcecf7f71e42848-Frame_48095786_1.png" />
 
 <br />
@@ -97,7 +95,7 @@ Each project created on Voiceflow automatically has access to some built-in vari
 
       <td>
         `{"type":"event","payload":{"event":{"name":"buySyrup"}}}
-                                                                                                                                                `
+                                                                                                                                                        `
       </td>
     </tr>
 
