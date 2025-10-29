@@ -163,6 +163,8 @@ This can be useful if you have multiple brands, product lines or subscription ti
 
 <br />
 
+<Image align="center" border={false} src="https://files.readme.io/7b132f87b7e2e4451d0ead6becb8f05250e8ba29f715aec6dce78c680cf3687a-Frame_48095787.png" />
+
 <br />
 
 ## Troubleshooting data imports
