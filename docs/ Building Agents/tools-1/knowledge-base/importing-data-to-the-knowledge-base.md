@@ -31,9 +31,11 @@ On the **pro plan**, each project can support up to 3,000 different sources (URL
 >
 > Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
 
+<br />
+
 ## Refresh rate settings
 
-When importing data from URLs or sitemaps, you can schedule a refresh rate to automatically re-sync your content, keeping your knowledge base up to date.
+When importing data from a URL or sitemap, you can optionally set a refresh rate. This allows your project to periodically re-sync in content from your website, keeping your knowledge base up to date.
 
 | **Option**  | **Best for...**                                      |
 | ----------- | ---------------------------------------------------- |
@@ -44,7 +46,7 @@ When importing data from URLs or sitemaps, you can schedule a refresh rate to au
 
 > ⚠️ Be careful with refresh rates!
 >
-> When an LLM chunking strategy is **enabled**, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are **disabled**, re-syncs *don't* consume any credits.
+> When an LLM chunking strategy is **enabled**, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are **disabled**, re-syncs _don't_ consume any credits.
 
 ## LLM chunking strategies
 
@@ -153,7 +155,7 @@ We recommend experimenting with various combinations of chunking strategies to s
 
 If something goes wrong when importing your data, hover over the❗ icon to learn why.
 
-![](https://files.readme.io/3b34073cf8fd2fd68e0752ea707c17eb8859ed5966d2e8c03e66715d5bbafdcd-image.png)
+<Image border={false} src="https://files.readme.io/3b34073cf8fd2fd68e0752ea707c17eb8859ed5966d2e8c03e66715d5bbafdcd-image.png" />
 
 Import errors are handled gracefully. Failed files won’t break your project - the remaining files will be processed.
 
