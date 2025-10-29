@@ -1,6 +1,6 @@
 ---
 title: Knowledge base tool
-excerpt: ''
+excerpt: Query data from your agent's knowledge base to answer questions.
 deprecated: false
 hidden: false
 metadata:
