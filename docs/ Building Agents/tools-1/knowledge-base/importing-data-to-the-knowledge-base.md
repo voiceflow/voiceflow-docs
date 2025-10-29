@@ -27,11 +27,13 @@ Voiceflow supports five different data sources:
 | **Plain text**  | Paste raw content directly. Great for fast prototyping or testing.                                                                                                  |
 | **Zendesk**     | Import data from your Zendesk knowledge base. Requires Zendesk admin access.                                                                                        |
 
-On the **pro plan**, each project can support up to 3,000 different sources (URLs, documents, etc) of knowledge base content.
-
 <br />
 
-## Refresh rate settings
+The number of data sources you can connect to your project varies depending on your plan. [Learn more on our pricing page](https://www.voiceflow.com/pricing).
+
+## Import settings
+
+### Refresh rate settings
 
 When importing data from a URL or sitemap, you can optionally set a refresh rate. This allows your project to periodically re-sync in content from your website, keeping your knowledge base up to date. The following options are available:
 
@@ -48,9 +50,9 @@ Please note that when an LLM chunking strategy is enabled every re-sync will con
 
 <br />
 
-## LLM chunking strategies
+### LLM chunking strategies
 
-You can use LLM chunking strategies to optimize the data in your agent's knowledge base. The chunking strategies use AI to process your data in various ways, optimizing it for agent. The quality of your content directly impacts your agent's ability to answer user questions.
+When your agent looks up data from the knowledge base, behind the scenes, it's finding **chunks** of data that are most similar to a provided query. While you can upload manually chunked data to your knowledge base [using Voiceflow's API](https://docs.voiceflow.com/reference/post_v1-knowledge-base-docs-upload-url#/), most users will find it easiest to automatically chunk their data using an LLM chunking strategy. This will allow AI to automatically split up your data into optimized chunks, helping your agent find useful answers to your user's questions.
 
 Voiceflow supports five different chunking strategies:
 
@@ -149,7 +151,9 @@ Voiceflow supports five different chunking strategies:
   </tbody>
 </Table>
 
-We recommend experimenting with various combinations of chunking strategies to see which best fits your use-case.
+Chunking strategies aren't a "one-size-fits-all" concept so we recommend experimenting with various combinations of strategies on each of your data sources to see which helps your agent generate the best responses.
+
+<br />
 
 ## Troubleshooting data imports
 
