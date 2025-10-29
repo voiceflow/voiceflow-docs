@@ -14,11 +14,9 @@ Variables are set on a per-user basis, [based on the `user_id` variable](https:/
 
 Variables can be created and managed from inside [Voiceflow's CMS](doc:cms). To access the variables page, click the CMS button at the bottom of your project's sidebar then select **Variables**. You can create a new variable using the button in the top right, or modify an existing variable by clicking on it.
 
-When creating a new variable, you can optionally set a default value. We recommend doing so, as this provides a fallback for your agent to use.
-
 <Image align="center" border={false} src="https://files.readme.io/86406222bd759bd2ea037547b38145a51da22976555002684dcecf7f71e42848-Frame_48095786_1.png" />
 
-<br />
+When creating a new variable, you can optionally set a default value. We recommend doing so, as this provides a fallback for your agent to use.
 
 You can also create a new variable when you try to [use a variable in an input](https://docs.voiceflow.com/docs/variables#using-variables-during-conversations) by clicking the add button at the bottom of the dropdown that appears.
 
