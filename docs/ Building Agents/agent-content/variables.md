@@ -2,7 +2,7 @@
 title: Variables
 excerpt: Store information for the duration of a conversation.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
