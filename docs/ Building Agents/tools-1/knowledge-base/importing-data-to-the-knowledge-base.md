@@ -1,15 +1,17 @@
 ---
 title: Importing data
 excerpt: >-
-  Enhance agent capabilities by importing data into its knowledge base for
-  tailored and relevant responses.
+  Add company-specific knowledge to your agent, allowing accurate responses to
+  be generated.
 deprecated: false
 hidden: false
 metadata:
   title: Importing data to Voiceflow's Knowledge Base
   robots: index
 ---
-Supercharge your Voiceflow agent by importing content from websites, documents, and support articles- giving it the context it needs to respond with real, reliable information.
+The Knowledge Base lets your agent access and answer questions using your own content. You can upload documents, connect URLs, or add text directly, and the agent will use that information to provide accurate, grounded responses. It’s an easy way to give your agent expertise on your product, company, or domain without having to script every answer manually.
+
+<br />
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
 
@@ -26,10 +28,6 @@ Voiceflow supports five different data sources:
 | **Zendesk**     | Import data from your Zendesk knowledge base. Requires Zendesk admin access.                                                                                        |
 
 On the **pro plan**, each project can support up to 3,000 different sources (URLs, documents, etc) of knowledge base content.
-
-> ℹ️ Heads up!
->
-> Make sure you don't import confidential or proprietary data unless your use case allows it. Any data that you import may be included in LLM-generated responses.
 
 <br />
 
