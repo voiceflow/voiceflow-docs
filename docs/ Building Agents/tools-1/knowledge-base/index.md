@@ -16,33 +16,27 @@ The Knowledge base tool lets your agent query data from the Knowledge base from 
 
 ## Querying the knowledge base from inside the Agent step
 
-<Callout icon="ℹ️">
+<Callout icon="ℹ️" theme="info">
   This is our recommended approach to querying the knowledge base, as it allows your agent to automatically interpret the information retrieved and turn it into human-readable responses.
 </Callout>
 
 <br />
 
-The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled. Once enabled, your agent will automatically reference your Knowledge Base when responding to user queries- no extra configuration needed.
+To enable querying the knowledge base from inside an [Agent step](doc:agents), open your Agent step then turn on the **Knowledge base** toggle on the sidebar of the Agent popup.
 
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYkd0EZs5lpu1oeO8lNrvZq7mJiBcVy0XgAjEbS" />
 
-## <Anchor label="KB search step" target="_blank" href="https://docs.voiceflow.com/docs/kb-search#/">KB search step</Anchor>
+Once enabled, you can also choose to set the tool's LLM description. This tells your agent when to query the knowledge base. If you're using the knowledge base to store a specialized type of data - such as product information - we recommend updating the default instructions to be more specific.
 
-The KB Search step lets you query your Knowledge Base directly within your flow logic—giving you precise control over how search results (chunks) are retrieved and used. The `Chunk limit` allows you to customize how many chunks of information you wish the search step to retrieve from the Knowledge Base.
+The following advanced query settings are also available:
 
-<Image border={false} src="https://files.readme.io/e4a813d30ca4e2822c95d8c3dbbba9167ef185989182689a16f0c00bfba52654-CleanShot_2025-07-30_at_15.02.232x.png" />
+* **Query** - by default, Voiceflow will use the user's last message as the query used to search the knowledge base. You can override this behaviour by providing a custom query. Please note that the **exact** query entered into this box will be used - this isn't an input where you should enter a prompt!
+* **Chunk limit** - this determines the maximum number of chunks that can be returned by the knowledge base. By default, three chunks will be returned.
+* **Metadata filtering** - if you set custom metadata when [importing data to your knowledge base](doc:importing-data-to-the-knowledge-base), you can filter your agent's querying using this option. To do so, press the plus button and select a metadata key that exists in your imported data. Then, either enter a default value (to force a specific value to be used), or set the LLM description (to allow the agent to dynamically set this value).
 
-This step:
+<br />
 
-* Searches the Knowledge Base using a provided query.
-* Returns relevant chunks (text and metadata).
-* Lets you set fallback behavior if no results are found.
-* Doesn’t generate a summarized AI response—this step is **only** for retrieval.
-
-> Common use cases:
->
-> * **Generate AI-powered summaries**: Use KB Search + Set AI to return concise summaries of user manuals or onboarding guides.
-> * **Extract product details**: Pull pricing or feature info from KB chunks and assign to variables for dynamic responses.
+<br />
 
 ***
 
