@@ -27,12 +27,16 @@ export function CreditsPricingTable() {
   };
 
   // Enhanced item mapping for all categories
-  const getItemName = (item, vendor, category) => {
+  const getItemName = (item, vendor, category, io) => {
     // Orchestration
     if (category === 'orchestration') {
       if (item === 'interaction') return 'Chat usage';
       if (item === 'audio') return 'Voice usage';
       if (item === 'no-reply') return 'No-reply usage';
+    }
+    // LLM: append (input)/(output)
+    if (category === 'llm' && io) {
+      return `${item} (${io})`;
     }
     // STT
     if (category === 'asr') {
@@ -54,16 +58,19 @@ export function CreditsPricingTable() {
         return 'Eleven Labs - TTS';
       }
     }
-    // LLMs: fallback to item name
+    // Fallback
     return item;
   };
 
   // Unit mapping
   const getUnit = (unit) => {
     if (!unit) return '';
-    if (unit.toLowerCase().includes('credits per 1000 llm tokens')) return '1K Tokens';
-    if (unit.toLowerCase().includes('credits per 1000 characters')) return '1K Characters';
-    if (unit.toLowerCase().includes('credits per minute')) return 'Minutes';
+    const u = unit.toLowerCase();
+    if (u.includes('per 1000 input tokens')) return '1K Input Tokens';
+    if (u.includes('per 1000 output tokens')) return '1K Output Tokens';
+    if (u.includes('credits per 1000 llm tokens')) return '1K Tokens';
+    if (u.includes('credits per 1000 characters')) return '1K Characters';
+    if (u.includes('credits per minute')) return 'Minutes';
     return unit;
   };
 
@@ -71,7 +78,15 @@ export function CreditsPricingTable() {
   const formatCredits = (value, priorityValue) => {
     if (value == null) return '';
     if (priorityValue != null && priorityValue !== '') {
-      return <>{value} <br /><span style={{color: "#ececec", fontSize: "0.85em"}}>{priorityValue} with priority processing</span></>;
+      return (
+        <>
+          {value}
+          <br />
+          <span style={{ color: '#bdbdbd', fontSize: '0.85em' }}>
+            {priorityValue} with priority processing
+          </span>
+        </>
+      );
     }
     return String(value);
   };
@@ -88,12 +103,21 @@ export function CreditsPricingTable() {
         const res = await fetch('https://realtime-api.voiceflow.com/v1alpha1/estimation/config');
         if (!res.ok) throw new Error('Failed to fetch pricing data');
         const data = await res.json();
-        // Group usage by category
+
+        // Group usage by normalized category
         const grouped = {};
+        const normalizeCategory = (c) => (c && c.startsWith('llm') ? 'llm' : c);
+
         for (const item of data.config.usage) {
-          if (!grouped[item.category]) grouped[item.category] = [];
-          grouped[item.category].push(item);
+          const io =
+            item.category === 'llm-input' ? 'input' :
+            item.category === 'llm-output' ? 'output' : undefined;
+
+          const cat = normalizeCategory(item.category);
+          if (!grouped[cat]) grouped[cat] = [];
+          grouped[cat].push({ ...item, io });
         }
+
         setCreditsData(grouped);
       } catch (e) {
         setError(e.message);
@@ -175,7 +199,7 @@ export function CreditsPricingTable() {
         </div>
       </div>
 
-      {/* Other tables: dynamic */}
+      {/* Other tables: dynamic (LLM is normalized single table with (input)/(output)) */}
       {Object.entries(displayNames).filter(([type]) => type !== 'orchestration').map(([type, display]) => {
         let items = creditsData[type];
         if (!items || items.length === 0) return null;
@@ -185,9 +209,16 @@ export function CreditsPricingTable() {
           if (['llm', 'asr', 'tts'].includes(type)) {
             const vendorCompare = getVendorName(a.vendor).localeCompare(getVendorName(b.vendor));
             if (vendorCompare !== 0) return vendorCompare;
+            // If vendor same, sort by item name (with io for llm), then by value
+            const nameA = getItemName(a.item, a.vendor, type, a.io);
+            const nameB = getItemName(b.item, b.vendor, type, b.io);
+            const nameCompare = nameA.localeCompare(nameB);
+            if (nameCompare !== 0) return nameCompare;
             return (a.value ?? Infinity) - (b.value ?? Infinity);
           }
-          return getItemName(a.item, a.vendor, type).localeCompare(getItemName(b.item, b.vendor, type));
+          return getItemName(a.item, a.vendor, type, a.io).localeCompare(
+            getItemName(b.item, b.vendor, type, b.io)
+          );
         });
 
         return (
@@ -206,9 +237,9 @@ export function CreditsPricingTable() {
                   </thead>
                   <tbody>
                     {items.map((item, index) => (
-                      <tr key={index}>
+                      <tr key={`${item.vendor}-${item.item}-${item.io}-${index}`}>
                         <td style={{ textAlign: 'left' }}>{getVendorName(item.vendor)}</td>
-                        <td style={{ textAlign: 'left' }}>{getItemName(item.item, item.vendor, type)}</td>
+                        <td style={{ textAlign: 'left' }}>{getItemName(item.item, item.vendor, type, item.io)}</td>
                         <td style={{ textAlign: 'left' }}>{getUnit(item.unit)}</td>
                         <td style={{ textAlign: 'left' }}>
                           {formatCredits(item.value, item.priorityValue)}
