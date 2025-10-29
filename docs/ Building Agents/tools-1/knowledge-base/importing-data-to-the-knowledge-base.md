@@ -11,8 +11,6 @@ metadata:
 ---
 The Knowledge Base lets your agent access and answer questions using your own content. You can upload documents, connect URLs, or add text directly, and the agent will use that information to provide accurate, grounded responses. It’s an easy way to give your agent expertise on your product, company, or domain without having to script every answer manually.
 
-<br />
-
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NS3UKNJ6HEN5yeFarYBh6C7SkfDcgJOXVT3zqL" />
 
 ## Supported data sources
