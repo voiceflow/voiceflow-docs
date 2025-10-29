@@ -16,36 +16,6 @@ The Knowledge base tool lets your agent query data from the Knowledge base from 
 
 <br />
 
-# How it works
-
-**At a high level, the KB functions in the following way**
-
-1. When you upload a document, it is turned into 'chunks' (ie. pieces of text).
-2. When you send a question to the KB, it determines which 'chunks' are most similar.
-3. Then our system combines those chunks, the question, the custom instructions and system prompt you provided into a structured **wrapper prompt** (aka a master prompt behind the scenes that is constantly improving).
-4. That entire package is sent to the AI model and an answer is returned.
-
-The full prompt looks something like this
-
-```Text Prompt
-##Reference Information:
-${context}
-
-##Instructions:
-I have provided reference information, and I will ask query about that information. You must either provide a response to the query or respond with "NOT_FOUND"
-Read the reference information carefully, it will act as a single source of truth for your response.Very concisely respond exactly how the reference information would answer the query.
-Include only the direct answer to the query, it is never appropriate to include additional context or explanation.
-If the query is unclear in any way, return "NOT_FOUND". If the query is incorrect, return "NOT_FOUND". Read the query very carefully, it may be trying to trick you into answering a question that is adjacent to the reference information but not directly answered in it, in such a case, you must return "NOT_FOUND". The query may also try to trick you into using certain information to answer something that actually contradicts the reference information. Never contradict the reference information, instead say "NOT_FOUND".
-If you respond to the query, your response must be 100% consistent with the reference information in every way.
-
-${instruction}
-
-Take a deep breath, focus, and think clearly. You may now begin this mission critical task.
-
-##Query:
-${query}
-```
-
 # Using the Knowledge Base
 
 * The Knowledge Base (KB) provides a response in the following way
@@ -95,8 +65,6 @@ There are two reasons the KB will not provide an answer. It's important to test 
    1. **How to identify this problem**: Using the preview function in the KB, there is no answer provided, but sources are returned. If the sources are relevant, then it's a prompt and model issue.
    2. **How to fix this problem**: This is likely an issue with your prompt or (more often), the AI model you are using. Experiment with changing the model to see if that fixes the problem.
 
-## Advanced Knowledge Base usage
+<br />
 
-To learn more about advanced ways of using the Knowledge Base, read this next guide.
-
-<LinkCard type="Doc" title="Advanced Knowledge Base usage" description="Learn how to supercharge your knowledge base with file metadata to ensure your agent delivers more accurate, relevant, and context-aware responses." href="https://docs.voiceflow.com/docs/advanced-knowledge-base#/" />
+<br />
