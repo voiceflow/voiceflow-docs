@@ -35,7 +35,7 @@ On the **pro plan**, each project can support up to 3,000 different sources (URL
 
 ## Refresh rate settings
 
-When importing data from a URL or sitemap, you can optionally set a refresh rate. This allows your project to periodically re-sync in content from your website, keeping your knowledge base up to date.
+When importing data from a URL or sitemap, you can optionally set a refresh rate. This allows your project to periodically re-sync in content from your website, keeping your knowledge base up to date. The following options are available:
 
 | **Option**  | **Best for...**                                      |
 | ----------- | ---------------------------------------------------- |
@@ -44,9 +44,11 @@ When importing data from a URL or sitemap, you can optionally set a refresh rate
 | **Weekly**  | Occasionally updated info (e.g., support centers)    |
 | **Monthly** | Stable content (e.g., product policies, pricing)     |
 
-> ⚠️ Be careful with refresh rates!
->
-> When an LLM chunking strategy is **enabled**, every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. When LLM chunking strategies are **disabled**, re-syncs _don't_ consume any credits.
+<br />
+
+Please note that when an LLM chunking strategy is enabled every re-sync will consume credits. If your content doesn't change often, we'd recommend you reduce your refresh rate frequency. No credits are consumed when syncing data with no LLM chunking strategies selected.
+
+<br />
 
 ## LLM chunking strategies
 
