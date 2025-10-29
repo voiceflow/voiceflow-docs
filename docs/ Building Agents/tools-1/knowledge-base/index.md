@@ -14,18 +14,13 @@ The Knowledge base tool lets your agent query data from the Knowledge base from 
 
 <br />
 
+## Querying the knowledge base from inside the Agent step
+
+<Callout icon="ℹ️">
+  This is our recommended approach to querying the knowledge base, as it allows your agent to automatically interpret the information retrieved and turn it into human-readable responses.
+</Callout>
+
 <br />
-
-# Using the Knowledge Base
-
-* The Knowledge Base (KB) provides a response in the following way
-  1. It uses the question provided to search the Knowledge Base and receive relevant pieces of information. If the question does not have an answer in the KB, it will say that it cannot find an answer. _It is important that you pass a well-defined question to the Knowledge Base._
-  2. It sends those pieces of information along with your custom instructions and prompt settings to an AI model to summarize the answer. If the AI model determines that the answer to the question is not in the relevant information, it will say that it cannot find an answer.
-* Responses from the knowledge base can use the Agent step or the Knowledge Base Query API directly.
-
-To learn how to import data into your Knowledge Base, read the <Anchor label="docs" target="_blank" href="https://docs.voiceflow.com/docs/importing-data-to-the-knowledge-base#/">docs</Anchor>.
-
-## <Anchor label="Agent step" target="_blank" href="https://docs.voiceflow.com/docs/agents#/">Agent step</Anchor>
 
 The knowledge base can directly be integrated through the Agent step. Ensure the knowledge base toggled is enabled. Once enabled, your agent will automatically reference your Knowledge Base when responding to user queries- no extra configuration needed.
 
