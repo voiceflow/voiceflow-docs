@@ -20,6 +20,8 @@ To enable sending data to a webhook whenever key events happen within an organiz
 
 <br />
 
+Once you've entered a webhook URL, you'll be provided with a **Webhook secret**. You can use this to verify that events were sent by Voiceflow [by following these instructions](https://docs.svix.com/receiving/verifying-payloads/how-manual). 
+
 ## Supported events
 
 The following organization-level events will be sent to the provided URL:
@@ -28,7 +30,7 @@ The following organization-level events will be sent to the provided URL:
   <thead>
     <tr>
       <th>
-        Human-readable name and description
+        Human-readable name
       </th>
 
       <th>
@@ -44,8 +46,7 @@ The following organization-level events will be sent to the provided URL:
   <tbody>
     <tr>
       <td>
-        **New project created**  
-        Triggered when a new project is created in the organization.
+        New project created
       </td>
 
       <td>
@@ -72,8 +73,7 @@ The following organization-level events will be sent to the provided URL:
 
     <tr>
       <td>
-        **Project published**  
-        Triggered when a project is published in **any** environment.
+        Project published
       </td>
 
       <td>
@@ -103,8 +103,7 @@ The following organization-level events will be sent to the provided URL:
 
     <tr>
       <td>
-        **Project deleted**  
-        Triggered when a project is deleted from the organization.
+        Project deleted
       </td>
 
       <td>
