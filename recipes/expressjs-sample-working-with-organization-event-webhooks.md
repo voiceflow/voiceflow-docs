@@ -4,7 +4,7 @@ description: >-
   Learn how to receive organization-level events from Voiceflow, validate the
   request came from Voiceflow, then do an action based on the data and type of
   event received.
-hidden: true
+hidden: false
 recipe:
   color: '#018FF4'
   icon: 🪝
