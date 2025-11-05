@@ -20,7 +20,7 @@ To enable sending data to a webhook whenever key events happen within an organiz
 
 <br />
 
-## Events
+## Supported events
 
 The following organization-level events will be sent to the provided URL:
 
@@ -36,7 +36,7 @@ The following organization-level events will be sent to the provided URL:
       </th>
 
       <th>
-        Example JSON
+        Example JSON payload
       </th>
     </tr>
   </thead>
@@ -52,8 +52,8 @@ The following organization-level events will be sent to the provided URL:
       </td>
 
       <td>
-        `{
-                          "data": {
+        `{  
+            "data": {
                             "createdBy": {
                               "type": "user",
                               "userEmail": "snackmaster@voiceflow.com"
