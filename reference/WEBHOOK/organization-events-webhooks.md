@@ -22,12 +22,6 @@ To enable sending data to a webhook whenever key events happen within an organiz
 
 <br />
 
-Once you've entered a webhook URL, you'll be provided with a **webhook secret**. You can use this to verify that events were sent by Voiceflow [by following these instructions](https://docs.svix.com/receiving/verifying-payloads/how-manual) and referencing this sample Express.js app:
-
-<Recipe slug="expressjs-sample-working-with-organization-event-webhooks" title="Express.js sample: working with organization event webhooks" />
-
-<br />
-
 ## Supported events
 
 The following organization-level events will be sent to the provided URL:
@@ -61,19 +55,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{  
-                                                                                    "data": {
-                                                                                                    "createdBy": {
-                                                                                                      "type": "user",
-                                                                                                      "userEmail": "snackmaster@voiceflow.com"
-                                                                                                    },
-                                                                                                    "organizationID": "QwdEyxnVMe",
-                                                                                                    "projectID": "690b5fb272e1cdfb40f14234",
-                                                                                                    "workspaceID": "xbgjLGkdJe"
-                                                                                                  },
-                                                                                                  "resource": "organization-QwdEyxnVMe",
-                                                                                                  "time": 1762353077240,
-                                                                                                  "type": "organization.project.created"
-                                                                                                }`
+                                                                                            "data": {
+                                                                                                            "createdBy": {
+                                                                                                              "type": "user",
+                                                                                                              "userEmail": "snackmaster@voiceflow.com"
+                                                                                                            },
+                                                                                                            "organizationID": "QwdEyxnVMe",
+                                                                                                            "projectID": "690b5fb272e1cdfb40f14234",
+                                                                                                            "workspaceID": "xbgjLGkdJe"
+                                                                                                          },
+                                                                                                          "resource": "organization-QwdEyxnVMe",
+                                                                                                          "time": 1762353077240,
+                                                                                                          "type": "organization.project.created"
+                                                                                                        }`
       </td>
     </tr>
 
@@ -88,22 +82,22 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                                                                                                  "data": {
-                                                                                                    "organizationID": "QwdEyxnVMe",
-                                                                                                    "projectID": "690b5fb272e1cdfb40f14234",
-                                                                                                    "publishedBy": {
-                                                                                                      "type": "user",
-                                                                                                      "userEmail": "snackmaster@voiceflow.com"
-                                                                                                    },
-                                                                                                    "publishedFromEnvironment": "Development",
-                                                                                                    "publishedToEnvironment": "Production",
-                                                                                                    "versionID": "690b5fb272e1cdfb40f14236",
-                                                                                                    "workspaceID": "xbgjLGkdJe"
-                                                                                                  },
-                                                                                                  "resource": "organization-QwdEyxnVMe",
-                                                                                                  "time": 1762353151870,
-                                                                                                  "type": "organization.project.published"
-                                                                                                }`
+                                                                                                          "data": {
+                                                                                                            "organizationID": "QwdEyxnVMe",
+                                                                                                            "projectID": "690b5fb272e1cdfb40f14234",
+                                                                                                            "publishedBy": {
+                                                                                                              "type": "user",
+                                                                                                              "userEmail": "snackmaster@voiceflow.com"
+                                                                                                            },
+                                                                                                            "publishedFromEnvironment": "Development",
+                                                                                                            "publishedToEnvironment": "Production",
+                                                                                                            "versionID": "690b5fb272e1cdfb40f14236",
+                                                                                                            "workspaceID": "xbgjLGkdJe"
+                                                                                                          },
+                                                                                                          "resource": "organization-QwdEyxnVMe",
+                                                                                                          "time": 1762353151870,
+                                                                                                          "type": "organization.project.published"
+                                                                                                        }`
       </td>
     </tr>
 
@@ -118,19 +112,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                                                                                                  "data": {
-                                                                                                    "deletedBy": {
-                                                                                                      "type": "user",
-                                                                                                      "userEmail": "snackmaster@voiceflow.com"
-                                                                                                    },
-                                                                                                    "organizationID": "QwdEyxnVMe",
-                                                                                                    "projectID": "690b5f89916774031b9af1c6",
-                                                                                                    "workspaceID": "xbgjLGkdJe"
-                                                                                                  },
-                                                                                                  "resource": "organization-QwdEyxnVMe",
-                                                                                                  "time": 1762353206555,
-                                                                                                  "type": "organization.project.deleted"
-                                                                                                }`
+                                                                                                          "data": {
+                                                                                                            "deletedBy": {
+                                                                                                              "type": "user",
+                                                                                                              "userEmail": "snackmaster@voiceflow.com"
+                                                                                                            },
+                                                                                                            "organizationID": "QwdEyxnVMe",
+                                                                                                            "projectID": "690b5f89916774031b9af1c6",
+                                                                                                            "workspaceID": "xbgjLGkdJe"
+                                                                                                          },
+                                                                                                          "resource": "organization-QwdEyxnVMe",
+                                                                                                          "time": 1762353206555,
+                                                                                                          "type": "organization.project.deleted"
+                                                                                                        }`
       </td>
     </tr>
   </tbody>
@@ -138,8 +132,14 @@ The following organization-level events will be sent to the provided URL:
 
 <br />
 
-## Technical and security details
+## Verifying requests come from Voiceflow
 
-Behind the scenes, Voiceflow uses Svix to send events to your webhook URL. If an error occurs, Svix will periodically resending data [based on their retry schedule](https://docs.svix.com/retries). If you're receiving data from behind a restrictive firewall, you should know that events will come from one of [Svix's IP addresses](https://docs.svix.com/receiving/source-ips), rather than Voiceflow's.
+Once you enter a webhook URL into the settings page, you'll automatically be provided with a webhook secret. This can be used to verify that events received by the webhook were really sent by Voiceflow. [Follow these instructions to learn how to verify events using the webhook secret](https://docs.svix.com/receiving/verifying-payloads/how-manual), or check out this demo app:
 
-We recommend always verifying that requests come from Voiceflow using the webhook secret. If you accidentally leak your webhook secret, you can regenerate it using the 🔄 button on the settings page. Note that your previous webhook secret will remain valid for 24 hours after you regenerate it.
+<Recipe slug="expressjs-sample-working-with-organization-event-webhooks" title="Express.js sample: working with organization event webhooks" />
+
+<br />
+
+If you accidentally leak your webhook secret, you can regenerate it using the 🔄 button on the settings page. Note that your previous webhook secret will remain valid for 24 hours after you regenerate it.
+
+If you're receiving data from behind a restrictive firewall, you should know that events will come from one of [Svix's IP addresses](https://docs.svix.com/receiving/source-ips), rather than Voiceflow's.
