@@ -18,15 +18,16 @@ export function Video({ src }) {
       }}
     >
       {/* Placeholder (16:9 aspect ratio) */}
-      {!isLoaded && (
-        <div
-          style={{
-            width: '100%',
-            paddingBottom: '56.25%', // 16:9 ratio
-            backgroundColor: 'black',
-          }}
-        />
-      )}
+      <div
+        style={{
+          width: '100%',
+          paddingBottom: '56.25%', // 16:9 ratio
+          backgroundColor: 'black',
+          position: 'relative',
+          opacity: isLoaded ? 0 : 1,
+          transition: 'opacity 0.3s ease-in-out',
+        }}
+      />
 
       {/* Video */}
       <video
@@ -37,11 +38,15 @@ export function Video({ src }) {
         playsInline
         onLoadedData={() => setIsLoaded(true)}
         style={{
-          display: isLoaded ? 'block' : 'none',
+          position: 'absolute',
+          top: 0,
+          left: 0,
           width: '100%',
-          height: 'auto', // maintain natural aspect ratio
-          borderRadius: '8px',
+          height: '100%',
+          objectFit: 'contain', // keeps natural aspect ratio
+          opacity: isLoaded ? 1 : 0,
           transition: 'opacity 0.3s ease-in-out',
+          borderRadius: '8px',
         }}
       />
     </div>
