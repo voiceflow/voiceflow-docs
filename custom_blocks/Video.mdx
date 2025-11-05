@@ -4,63 +4,63 @@ name: Video
 import { useState, useEffect, useRef } from 'react';
 
 export function Video({ src }) {
-  const [ready, setReady] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
+    const video = videoRef.current;
+    if (!video) return;
 
-    // Reset whenever src changes
-    setReady(false);
+    // Reset on src change
+    setIsLoaded(false);
 
-    // If metadata or frame is already available, flip immediately
-    if (v.readyState >= 2) {
-      setReady(true);
+    // If the video is already buffered enough, mark loaded immediately
+    // 2 = HAVE_CURRENT_DATA, 4 = HAVE_ENOUGH_DATA
+    if (video.readyState >= 2) {
+      setIsLoaded(true);
       return;
     }
 
-    const markReady = () => setReady(true);
+    const markLoaded = () => setIsLoaded(true);
     const onError = (e) => {
+      // Surface errors during dev; remove or customize for prod
       console.error('Video load error:', e);
-      // Keep placeholder; don't flip to ready on error
+      // Keep placeholder visible if error occurs
     };
 
-    v.addEventListener('loadedmetadata', markReady, { once: true });
-    v.addEventListener('loadeddata', markReady, { once: true });
-    v.addEventListener('canplay', markReady, { once: true });
-    v.addEventListener('error', onError);
+    video.addEventListener('loadeddata', markLoaded, { once: true });
+    video.addEventListener('canplay', markLoaded, { once: true });
+    video.addEventListener('playing', markLoaded, { once: true });
+    video.addEventListener('loadedmetadata', () => {
+      // Some browsers need a nudge to start; attempt play silently
+      // If it fails due to autoplay policy, muted+playsInline should help.
+      video.play?.().catch(() => {});
+    }, { once: true });
+    video.addEventListener('error', onError);
 
     return () => {
-      v.removeEventListener('loadedmetadata', markReady);
-      v.removeEventListener('loadeddata', markReady);
-      v.removeEventListener('canplay', markReady);
-      v.removeEventListener('error', onError);
+      video.removeEventListener('loadeddata', markLoaded);
+      video.removeEventListener('canplay', markLoaded);
+      video.removeEventListener('playing', markLoaded);
+      video.removeEventListener('loadedmetadata', markLoaded);
+      video.removeEventListener('error', onError);
     };
   }, [src]);
 
   return (
-    <div style={{ width: '100%', margin: '2rem auto' }}>
-      {/* Placeholder exists ONLY while not ready */}
-      {!ready && (
-        <div
-          style={{
-            width: '100%',
-            background: 'black',
-            borderRadius: '8px',
-            // classic 16:9 aspect-ratio box
-            position: 'relative',
-          }}
-        >
-          <div
-            style={{
-              width: '100%',
-              paddingBottom: '56.25%', // 16:9
-            }}
-          />
-        </div>
-      )}
-
+    <div
+      style={{
+        width: '100%',
+        margin: '2rem auto',
+        borderRadius: '8px',
+        backgroundColor: 'black',
+        position: 'relative',
+        overflow: 'hidden',
+        // Reserve a 16:9 box only until loaded
+        paddingBottom: isLoaded ? 0 : '56.25%',
+      }}
+    >
+      {/* Video stays mounted; we fade it in to avoid layout jumps */}
       <video
         ref={videoRef}
         src={src}
@@ -69,16 +69,19 @@ export function Video({ src }) {
         loop
         playsInline
         preload="auto"
-        // No display:none toggling—just fade for niceness
         style={{
-          display: 'block',
+          // Before load: cover the placeholder 16:9 box
+          // After load: use natural aspect ratio (height:auto)
+          position: isLoaded ? 'static' : 'absolute',
+          top: isLoaded ? undefined : 0,
+          left: isLoaded ? undefined : 0,
           width: '100%',
-          height: 'auto',          // natural aspect, no cutoff
+          height: isLoaded ? 'auto' : '100%',
+          objectFit: isLoaded ? 'contain' : 'cover',
           borderRadius: '8px',
-          opacity: ready ? 1 : 0,  // won't affect layout
-          transition: 'opacity 200ms ease-in-out',
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out',
         }}
-        onLoadedData={() => setReady(true)}
       />
     </div>
   );
