@@ -1,6 +1,6 @@
 ---
 title: Keypad input (DTMF)
-excerpt: Let your phone agents listen to keypad inputs in real time.
+excerpt: Detect the number keys the user presses during a call.
 deprecated: false
 hidden: true
 metadata:
