@@ -31,7 +31,7 @@ From here, you can also set the following settings:
 
 ## Receiving keypad input
 
-Once keypad input is setup, any [Agent step](doc:agents) with **Listen for other triggers** enabled will be able to receive keypad input. You do not need include anything special in your agent's instructions to handle DTMF input.
+Once keypad input is setup, any [Agent step](doc:agents) with **Listen for other triggers** enabled will be able to receive keypad input. You do not need include anything special in your agent's instructions to handle DTMF input beyond what you'd include to handle any verbal numeric input.
 
 <Image align="center" border={false} src="https://files.readme.io/41893a91f2407cb89d8b2a04402d16eb27b9b01c20eb7a00120a527407d29ff0-Frame_48095788.png" />
 
