@@ -28,7 +28,7 @@ The following organization-level events will be sent to the provided URL:
   <thead>
     <tr>
       <th>
-        Human-readable name
+        Human-readable name and description
       </th>
 
       <th>
@@ -44,7 +44,8 @@ The following organization-level events will be sent to the provided URL:
   <tbody>
     <tr>
       <td>
-        New project created
+        **New project created**  
+        Triggered when a new project is created in the organization.
       </td>
 
       <td>
@@ -53,25 +54,26 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{  
-            "data": {
-                            "createdBy": {
-                              "type": "user",
-                              "userEmail": "snackmaster@voiceflow.com"
-                            },
-                            "organizationID": "QwdEyxnVMe",
-                            "projectID": "690b5fb272e1cdfb40f14234",
-                            "workspaceID": "xbgjLGkdJe"
-                          },
-                          "resource": "organization-QwdEyxnVMe",
-                          "time": 1762353077240,
-                          "type": "organization.project.created"
-                        }`
+                    "data": {
+                                    "createdBy": {
+                                      "type": "user",
+                                      "userEmail": "snackmaster@voiceflow.com"
+                                    },
+                                    "organizationID": "QwdEyxnVMe",
+                                    "projectID": "690b5fb272e1cdfb40f14234",
+                                    "workspaceID": "xbgjLGkdJe"
+                                  },
+                                  "resource": "organization-QwdEyxnVMe",
+                                  "time": 1762353077240,
+                                  "type": "organization.project.created"
+                                }`
       </td>
     </tr>
 
     <tr>
       <td>
-        Project published
+        **Project published**  
+        Triggered when a project is published in **any** environment.
       </td>
 
       <td>
@@ -80,28 +82,29 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                          "data": {
-                            "organizationID": "QwdEyxnVMe",
-                            "projectID": "690b5fb272e1cdfb40f14234",
-                            "publishedBy": {
-                              "type": "user",
-                              "userEmail": "snackmaster@voiceflow.com"
-                            },
-                            "publishedFromEnvironment": "Development",
-                            "publishedToEnvironment": "Production",
-                            "versionID": "690b5fb272e1cdfb40f14236",
-                            "workspaceID": "xbgjLGkdJe"
-                          },
-                          "resource": "organization-QwdEyxnVMe",
-                          "time": 1762353151870,
-                          "type": "organization.project.published"
-                        }`
+                                  "data": {
+                                    "organizationID": "QwdEyxnVMe",
+                                    "projectID": "690b5fb272e1cdfb40f14234",
+                                    "publishedBy": {
+                                      "type": "user",
+                                      "userEmail": "snackmaster@voiceflow.com"
+                                    },
+                                    "publishedFromEnvironment": "Development",
+                                    "publishedToEnvironment": "Production",
+                                    "versionID": "690b5fb272e1cdfb40f14236",
+                                    "workspaceID": "xbgjLGkdJe"
+                                  },
+                                  "resource": "organization-QwdEyxnVMe",
+                                  "time": 1762353151870,
+                                  "type": "organization.project.published"
+                                }`
       </td>
     </tr>
 
     <tr>
       <td>
-        Project deleted
+        **Project deleted**  
+        Triggered when a project is deleted from the organization.
       </td>
 
       <td>
@@ -110,19 +113,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                          "data": {
-                            "deletedBy": {
-                              "type": "user",
-                              "userEmail": "snackmaster@voiceflow.com"
-                            },
-                            "organizationID": "QwdEyxnVMe",
-                            "projectID": "690b5f89916774031b9af1c6",
-                            "workspaceID": "xbgjLGkdJe"
-                          },
-                          "resource": "organization-QwdEyxnVMe",
-                          "time": 1762353206555,
-                          "type": "organization.project.deleted"
-                        }`
+                                  "data": {
+                                    "deletedBy": {
+                                      "type": "user",
+                                      "userEmail": "snackmaster@voiceflow.com"
+                                    },
+                                    "organizationID": "QwdEyxnVMe",
+                                    "projectID": "690b5f89916774031b9af1c6",
+                                    "workspaceID": "xbgjLGkdJe"
+                                  },
+                                  "resource": "organization-QwdEyxnVMe",
+                                  "time": 1762353206555,
+                                  "type": "organization.project.deleted"
+                                }`
       </td>
     </tr>
   </tbody>
