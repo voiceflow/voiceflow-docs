@@ -10,11 +10,19 @@ If you're using Voiceflow inside a larger organization, you may wish to integrat
 
 ## Configuring your webhook settings
 
-To enable sending data to a webhook whenever key events happen within an organization, head to your [Voiceflow dashboard](https://creator.voiceflow.com), click the **Settings** button in the bottom left corner, then select **Organization**. You can then add the URL that you'd like to events to in the box provided.
+To enable sending data to a webhook whenever key events happen within an organization, head to your [Voiceflow dashboard](https://creator.voiceflow.com), click the **Settings** button in the bottom left corner, then select **Organization**. You can then add the URL that you'd like to send events to in the box provided.
+
+**VIDEO**
 
 <Callout icon="ℹ️">
-  Voiceflow If you're less technical, we recommend u
+  If you're less technical, we recommend using a tool like [Make](https://help.make.com/webhooks) to generate a webhook URL and run automations. If you're a developer, you can hook into your existing infrastructure using any tool that can receive and process JSON payloads.
 </Callout>
+
+<br />
+
+## Technical and security details
+
+Behind the scenes, Voiceflow uses Svix to send events to your webhook URL. If an error occurs, Svix will periodically resending data [based on their retry schedule](https://docs.svix.com/retries). If you're receiving data from behind a restrictive firewall, you should know that events will come from one of [Svix's IP addresses](https://docs.svix.com/receiving/source-ips), rather than Voiceflow's.
 
 <br />
 
