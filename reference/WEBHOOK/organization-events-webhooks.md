@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 ---
-If you're using Voiceflow within a larger organization, you can connect it to your existing observability or testing tools. Organization webhooks let you automatically receive updates whenever something happens in your org — for example, when a new project is created. Just provide a webhook URL, and Voiceflow will send event data there in real time.
+If you're using Voiceflow within a larger organization, you might want to integrate with your existing observability or testing tools. Organization events webhooks let you automatically receive updates whenever something happens in your org — for example, when a new project is created. Just provide a webhook URL, and Voiceflow will send event data there in real time.
 
 <br />
 
