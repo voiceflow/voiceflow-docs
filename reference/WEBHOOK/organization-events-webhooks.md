@@ -55,19 +55,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{  
-                            "data": {
-                                            "createdBy": {
-                                              "type": "user",
-                                              "userEmail": "snackmaster@voiceflow.com"
-                                            },
-                                            "organizationID": "QwdEyxnVMe",
-                                            "projectID": "690b5fb272e1cdfb40f14234",
-                                            "workspaceID": "xbgjLGkdJe"
-                                          },
-                                          "resource": "organization-QwdEyxnVMe",
-                                          "time": 1762353077240,
-                                          "type": "organization.project.created"
-                                        }`
+                                    "data": {
+                                                    "createdBy": {
+                                                      "type": "user",
+                                                      "userEmail": "snackmaster@voiceflow.com"
+                                                    },
+                                                    "organizationID": "QwdEyxnVMe",
+                                                    "projectID": "690b5fb272e1cdfb40f14234",
+                                                    "workspaceID": "xbgjLGkdJe"
+                                                  },
+                                                  "resource": "organization-QwdEyxnVMe",
+                                                  "time": 1762353077240,
+                                                  "type": "organization.project.created"
+                                                }`
       </td>
     </tr>
 
@@ -82,22 +82,22 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                                          "data": {
-                                            "organizationID": "QwdEyxnVMe",
-                                            "projectID": "690b5fb272e1cdfb40f14234",
-                                            "publishedBy": {
-                                              "type": "user",
-                                              "userEmail": "snackmaster@voiceflow.com"
-                                            },
-                                            "publishedFromEnvironment": "Development",
-                                            "publishedToEnvironment": "Production",
-                                            "versionID": "690b5fb272e1cdfb40f14236",
-                                            "workspaceID": "xbgjLGkdJe"
-                                          },
-                                          "resource": "organization-QwdEyxnVMe",
-                                          "time": 1762353151870,
-                                          "type": "organization.project.published"
-                                        }`
+                                                  "data": {
+                                                    "organizationID": "QwdEyxnVMe",
+                                                    "projectID": "690b5fb272e1cdfb40f14234",
+                                                    "publishedBy": {
+                                                      "type": "user",
+                                                      "userEmail": "snackmaster@voiceflow.com"
+                                                    },
+                                                    "publishedFromEnvironment": "Development",
+                                                    "publishedToEnvironment": "Production",
+                                                    "versionID": "690b5fb272e1cdfb40f14236",
+                                                    "workspaceID": "xbgjLGkdJe"
+                                                  },
+                                                  "resource": "organization-QwdEyxnVMe",
+                                                  "time": 1762353151870,
+                                                  "type": "organization.project.published"
+                                                }`
       </td>
     </tr>
 
@@ -112,19 +112,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                                          "data": {
-                                            "deletedBy": {
-                                              "type": "user",
-                                              "userEmail": "snackmaster@voiceflow.com"
-                                            },
-                                            "organizationID": "QwdEyxnVMe",
-                                            "projectID": "690b5f89916774031b9af1c6",
-                                            "workspaceID": "xbgjLGkdJe"
-                                          },
-                                          "resource": "organization-QwdEyxnVMe",
-                                          "time": 1762353206555,
-                                          "type": "organization.project.deleted"
-                                        }`
+                                                  "data": {
+                                                    "deletedBy": {
+                                                      "type": "user",
+                                                      "userEmail": "snackmaster@voiceflow.com"
+                                                    },
+                                                    "organizationID": "QwdEyxnVMe",
+                                                    "projectID": "690b5f89916774031b9af1c6",
+                                                    "workspaceID": "xbgjLGkdJe"
+                                                  },
+                                                  "resource": "organization-QwdEyxnVMe",
+                                                  "time": 1762353206555,
+                                                  "type": "organization.project.deleted"
+                                                }`
       </td>
     </tr>
   </tbody>
@@ -136,4 +136,4 @@ The following organization-level events will be sent to the provided URL:
 
 Behind the scenes, Voiceflow uses Svix to send events to your webhook URL. If an error occurs, Svix will periodically resending data [based on their retry schedule](https://docs.svix.com/retries). If you're receiving data from behind a restrictive firewall, you should know that events will come from one of [Svix's IP addresses](https://docs.svix.com/receiving/source-ips), rather than Voiceflow's.
 
-We recommend always verifying that requests come from Voiceflow using the webhook secret. If you accidentally leak your webhook secret, you can regenerate it using the 🔄 button on the settings page.
+We recommend always verifying that requests come from Voiceflow using the webhook secret. If you accidentally leak your webhook secret, you can regenerate it using the 🔄 button on the settings page. Note that your previous webhook secret will remain valid for 24 hours after you regenerate it.
