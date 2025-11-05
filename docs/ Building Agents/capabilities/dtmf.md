@@ -20,7 +20,7 @@ Voiceflow’s DTMF capability allows your agent to automatically detect and resp
 
 To use keypad input, it must first be enabled on your project. To enable it, open your project's settings, click **Behaviour**, then open the **Voice** tab. Then, scroll down and set **Keypad input** to **On**.
 
-**VIDEO**
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSGsOY3S4nRy3vf7nmBxZFkjKPItoDAUizpGWc" />
 
 From here, you can also set the following settings:
 
@@ -37,7 +37,7 @@ Once keypad input is setup, any [Agent step](doc:agents) with **Listen for other
 
 <br />
 
-<Callout icon="ℹ️">
+<Callout icon="ℹ️" theme="info">
   While you can differentiate between the type of input a conversation's debug logs, your agent cannot tell the difference between a user saying numbers and entering them using a keypad. Therefore, we recommend designing agents to say things like "say or enter your six digit passcode" rather than just "enter your six digit passcode then press the star key".
 </Callout>
 
