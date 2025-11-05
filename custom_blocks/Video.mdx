@@ -8,42 +8,31 @@ export function Video({ src }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const v = videoRef.current;
+    if (!v) return;
 
-    // Reset on src change
+    // Reset when src changes
     setIsLoaded(false);
 
-    // If the video is already buffered enough, mark loaded immediately
-    // 2 = HAVE_CURRENT_DATA, 4 = HAVE_ENOUGH_DATA
-    if (video.readyState >= 2) {
+    // If already buffered enough, mark loaded immediately
+    if (v.readyState >= 2) {
       setIsLoaded(true);
       return;
     }
 
     const markLoaded = () => setIsLoaded(true);
-    const onError = (e) => {
-      // Surface errors during dev; remove or customize for prod
-      console.error('Video load error:', e);
-      // Keep placeholder visible if error occurs
-    };
+    const onError = (e) => console.error('Video load error:', e);
 
-    video.addEventListener('loadeddata', markLoaded, { once: true });
-    video.addEventListener('canplay', markLoaded, { once: true });
-    video.addEventListener('playing', markLoaded, { once: true });
-    video.addEventListener('loadedmetadata', () => {
-      // Some browsers need a nudge to start; attempt play silently
-      // If it fails due to autoplay policy, muted+playsInline should help.
-      video.play?.().catch(() => {});
-    }, { once: true });
-    video.addEventListener('error', onError);
+    v.addEventListener('loadeddata', markLoaded, { once: true });
+    v.addEventListener('canplay', markLoaded, { once: true });
+    v.addEventListener('playing', markLoaded, { once: true });
+    v.addEventListener('error', onError);
 
     return () => {
-      video.removeEventListener('loadeddata', markLoaded);
-      video.removeEventListener('canplay', markLoaded);
-      video.removeEventListener('playing', markLoaded);
-      video.removeEventListener('loadedmetadata', markLoaded);
-      video.removeEventListener('error', onError);
+      v.removeEventListener('loadeddata', markLoaded);
+      v.removeEventListener('canplay', markLoaded);
+      v.removeEventListener('playing', markLoaded);
+      v.removeEventListener('error', onError);
     };
   }, [src]);
 
@@ -54,13 +43,21 @@ export function Video({ src }) {
         margin: '2rem auto',
         borderRadius: '8px',
         backgroundColor: 'black',
-        position: 'relative',
         overflow: 'hidden',
-        // Reserve a 16:9 box only until loaded
-        paddingBottom: isLoaded ? 0 : '56.25%',
       }}
     >
-      {/* Video stays mounted; we fade it in to avoid layout jumps */}
+      {/* 16:9 placeholder only while loading */}
+      {!isLoaded && (
+        <div
+          style={{
+            width: '100%',
+            paddingBottom: '56.25%', // 16:9
+            backgroundColor: 'black',
+            borderRadius: '8px',
+          }}
+        />
+      )}
+
       <video
         ref={videoRef}
         src={src}
@@ -69,18 +66,14 @@ export function Video({ src }) {
         loop
         playsInline
         preload="auto"
+        onLoadedData={() => setIsLoaded(true)}
         style={{
-          // Before load: cover the placeholder 16:9 box
-          // After load: use natural aspect ratio (height:auto)
-          position: isLoaded ? 'static' : 'absolute',
-          top: isLoaded ? undefined : 0,
-          left: isLoaded ? undefined : 0,
+          display: 'block',
           width: '100%',
-          height: isLoaded ? 'auto' : '100%',
-          objectFit: isLoaded ? 'contain' : 'cover',
+          height: 'auto',            // natural aspect ratio, no letterboxing
           borderRadius: '8px',
-          opacity: isLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in-out',
+          opacity: isLoaded ? 1 : 0, // fade in
+          transition: 'opacity 200ms ease-in-out',
         }}
       />
     </div>
