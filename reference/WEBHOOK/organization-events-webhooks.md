@@ -6,13 +6,13 @@ hidden: true
 metadata:
   robots: index
 ---
-If you're using Voiceflow inside a larger organization, you may wish to integrate with your existing observability and testing infrastructure. To allow you to do this, we provide the option to automatically receive updates on organization-level events through via a webhook. Once enabled, whenever an event happens in your organization, data about that event will automatically be sent to the provided webhook URL.
+If you're using Voiceflow inside a larger organization, you may wish to integrate Voiceflow with your existing observability and testing infrastructure. To allow you to do this, we provide the option to automatically receive updates on organization-level events through via a webhook. Once enabled, whenever an event happens in your organization, data about that event will automatically be sent to the provided webhook URL.
 
 ## Configuring your webhook settings
 
 To enable sending data to a webhook whenever key events happen within an organization, head to your [Voiceflow dashboard](https://creator.voiceflow.com), click the **Settings** button in the bottom left corner, then select **Organization**. You can then add the URL that you'd like to send events to in the box provided.
 
-**VIDEO**
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSNKcQlDCKSpOaw3APbLyYQzldhFjkIcM6D014" />
 
 <Callout icon="ℹ️" theme="info">
   If you're less technical, we recommend using a tool like [Make](https://help.make.com/webhooks) to generate a webhook URL and run automations. If you're a developer, you can hook into your existing infrastructure using any tool that can receive and process JSON payloads.
