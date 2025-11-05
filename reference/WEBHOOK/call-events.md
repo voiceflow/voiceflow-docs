@@ -1,5 +1,5 @@
 ---
-title: Call Events
+title: Call events webhooks
 excerpt: Send events from your project's calls to your webhook
 deprecated: false
 hidden: false
