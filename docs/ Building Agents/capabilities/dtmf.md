@@ -39,4 +39,4 @@ Once keypad input is setup, any [Agent step](doc:agents) with **Listen for other
 
 <br />
 
-While you can differentiate between the type of input a conversation's debug logs, your agent cannot tell the difference between a user saying numbers and entering them using a keypad. Therefore, we recommend designing agents to say things like "say or enter your six digit passcode" rather than just "enter your six digit passcode then press the star key".
+While you can differentiate between the type of input a conversation's debug logs, your agent cannot tell the difference between a user saying numbers and entering them using a keypad. Therefore, we recommend designing agents to say things like "say or enter your six digit passcode" rather than "enter your six digit passcode then press the star key".
