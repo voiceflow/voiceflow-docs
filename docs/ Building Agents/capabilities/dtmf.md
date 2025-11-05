@@ -1,5 +1,5 @@
 ---
-title: DTMF (keypad input)
+title: Keypad input (DTMF)
 excerpt: Let your phone agents listen to keypad inputs in real time.
 deprecated: false
 hidden: true
