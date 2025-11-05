@@ -20,10 +20,118 @@ To enable sending data to a webhook whenever key events happen within an organiz
 
 <br />
 
+## Events
+
+The following organization-level events will be sent to the provided URL:
+
+ 
+
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Human-readable name
+      </th>
+
+      <th>
+        Name
+      </th>
+
+      <th>
+        Example JSON
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        New project created
+      </td>
+
+      <td>
+        `organization.project.created`
+      </td>
+
+      <td>
+        `{
+          "data": {
+            "createdBy": {
+              "type": "user",
+              "userEmail": "snackmaster@voiceflow.com"
+            },
+            "organizationID": "QwdEyxnVMe",
+            "projectID": "690b5fb272e1cdfb40f14234",
+            "workspaceID": "xbgjLGkdJe"
+          },
+          "resource": "organization-QwdEyxnVMe",
+          "time": 1762353077240,
+          "type": "organization.project.created"
+        }`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Project published
+      </td>
+
+      <td>
+        `organization.project.published`
+      </td>
+
+      <td>
+        `{
+          "data": {
+            "organizationID": "QwdEyxnVMe",
+            "projectID": "690b5fb272e1cdfb40f14234",
+            "publishedBy": {
+              "type": "user",
+              "userEmail": "snackmaster@voiceflow.com"
+            },
+            "publishedFromEnvironment": "Development",
+            "publishedToEnvironment": "Production",
+            "versionID": "690b5fb272e1cdfb40f14236",
+            "workspaceID": "xbgjLGkdJe"
+          },
+          "resource": "organization-QwdEyxnVMe",
+          "time": 1762353151870,
+          "type": "organization.project.published"
+        }`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Project deleted
+      </td>
+
+      <td>
+        `organization.project.deleted`
+      </td>
+
+      <td>
+        `{
+          "data": {
+            "deletedBy": {
+              "type": "user",
+              "userEmail": "snackmaster@voiceflow.com"
+            },
+            "organizationID": "QwdEyxnVMe",
+            "projectID": "690b5f89916774031b9af1c6",
+            "workspaceID": "xbgjLGkdJe"
+          },
+          "resource": "organization-QwdEyxnVMe",
+          "time": 1762353206555,
+          "type": "organization.project.deleted"
+        }`
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+<br />
+
 ## Technical and security details
 
 Behind the scenes, Voiceflow uses Svix to send events to your webhook URL. If an error occurs, Svix will periodically resending data [based on their retry schedule](https://docs.svix.com/retries). If you're receiving data from behind a restrictive firewall, you should know that events will come from one of [Svix's IP addresses](https://docs.svix.com/receiving/source-ips), rather than Voiceflow's.
-
-<br />
-
-<br />
