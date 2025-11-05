@@ -7,7 +7,7 @@ metadata:
   robots: index
 ---
 <Callout icon="ℹ️" theme="info">
-  Looking to automatically run tests whenever one of your agents is deployed to production? We recommend using the [Voiceflow CLI](https://docs.voiceflow.com/docs/voiceflow-cli#/) in conjunction with this feature to do so.
+  Looking to automatically run tests whenever one of your agents is deployed to production? We recommend using this feature in conjunction with the [Voiceflow CLI](https://docs.voiceflow.com/docs/voiceflow-cli#/) to do so.
 </Callout>
 
 If you're using Voiceflow inside a larger organization, you may wish to integrate Voiceflow with your existing observability and testing infrastructure. To allow you to do this, we provide the option to automatically receive updates on organization-level events through via a webhook. Once enabled, whenever an event happens in your organization, data about that event will automatically be sent to the provided webhook URL.
