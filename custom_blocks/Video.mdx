@@ -4,88 +4,81 @@ name: Video
 import { useState, useEffect, useRef } from 'react';
 
 export function Video({ src }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const ref = useRef(null);
+  const [ready, setReady] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    const v = ref.current;
+    const v = videoRef.current;
     if (!v) return;
 
-    // Reset on src change
-    setIsLoaded(false);
+    // Reset whenever src changes
+    setReady(false);
 
-    // If the first frame is already available, flip immediately
+    // If metadata or frame is already available, flip immediately
     if (v.readyState >= 2) {
-      setIsLoaded(true);
+      setReady(true);
       return;
     }
 
-    const markLoaded = () => setIsLoaded(true);
-    const onErr = (e) => console.error('Video load error', e);
+    const markReady = () => setReady(true);
+    const onError = (e) => {
+      console.error('Video load error:', e);
+      // Keep placeholder; don't flip to ready on error
+    };
 
-    v.addEventListener('loadeddata', markLoaded, { once: true });
-    v.addEventListener('canplay', markLoaded, { once: true });
-    v.addEventListener('playing', markLoaded, { once: true });
-    v.addEventListener('error', onErr);
+    v.addEventListener('loadedmetadata', markReady, { once: true });
+    v.addEventListener('loadeddata', markReady, { once: true });
+    v.addEventListener('canplay', markReady, { once: true });
+    v.addEventListener('error', onError);
 
     return () => {
-      v.removeEventListener('loadeddata', markLoaded);
-      v.removeEventListener('canplay', markLoaded);
-      v.removeEventListener('playing', markLoaded);
-      v.removeEventListener('error', onErr);
+      v.removeEventListener('loadedmetadata', markReady);
+      v.removeEventListener('loadeddata', markReady);
+      v.removeEventListener('canplay', markReady);
+      v.removeEventListener('error', onError);
     };
   }, [src]);
 
-  // Container:
-  // - While loading: reserve space with a 16:9 box (padding-bottom trick)
-  // - After loaded: remove the constraint so the video dictates height naturally
-  const containerStyle = {
-    width: '100%',
-    margin: '2rem auto',
-    borderRadius: '8px',
-    backgroundColor: 'black',
-    position: 'relative',
-    overflow: 'hidden',
-    paddingBottom: isLoaded ? 0 : '56.25%', // 16:9 only while loading
-  };
-
-  // Video:
-  // - While loading: absolutely fill the placeholder, invisible (opacity 0)
-  // - After loaded: static flow, width 100%, height auto (natural aspect, no cropping)
-  const videoStyle = isLoaded
-    ? {
-        position: 'static',
-        display: 'block',
-        width: '100%',
-        height: 'auto',
-        borderRadius: '8px',
-        opacity: 1,
-        transition: 'opacity 200ms ease-in-out',
-      }
-    : {
-        position: 'absolute',
-        inset: 0,
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover', // just for the temporary placeholder fill
-        borderRadius: '8px',
-        opacity: 0,
-        transition: 'opacity 200ms ease-in-out',
-      };
-
   return (
-    <div style={containerStyle}>
-      {/* Optional black background already provided by container */}
+    <div style={{ width: '100%', margin: '2rem auto' }}>
+      {/* Placeholder exists ONLY while not ready */}
+      {!ready && (
+        <div
+          style={{
+            width: '100%',
+            background: 'black',
+            borderRadius: '8px',
+            // classic 16:9 aspect-ratio box
+            position: 'relative',
+          }}
+        >
+          <div
+            style={{
+              width: '100%',
+              paddingBottom: '56.25%', // 16:9
+            }}
+          />
+        </div>
+      )}
+
       <video
-        ref={ref}
+        ref={videoRef}
         src={src}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        onLoadedData={() => setIsLoaded(true)}
-        style={videoStyle}
+        // No display:none toggling—just fade for niceness
+        style={{
+          display: 'block',
+          width: '100%',
+          height: 'auto',          // natural aspect, no cutoff
+          borderRadius: '8px',
+          opacity: ready ? 1 : 0,  // won't affect layout
+          transition: 'opacity 200ms ease-in-out',
+        }}
+        onLoadedData={() => setReady(true)}
       />
     </div>
   );
