@@ -33,6 +33,10 @@ From here, you can also set the following settings:
 
 Once keypad input is setup, any [Agent step](doc:agents) with **Listen for other triggers** enabled will be able to receive keypad input. You do not need include anything special in your agent's instructions to handle DTMF input beyond what you'd include to handle any verbal numeric input.
 
+<br />
+
 <Image align="center" border={false} src="https://files.readme.io/41893a91f2407cb89d8b2a04402d16eb27b9b01c20eb7a00120a527407d29ff0-Frame_48095788.png" />
+
+<br />
 
 While you can differentiate between the type of input a conversation's debug logs, your agent cannot tell the difference between a user saying numbers and entering them using a keypad. Therefore, we recommend designing agents to say things like "say or enter your six digit passcode" rather than just "enter your six digit passcode then press the star key".
