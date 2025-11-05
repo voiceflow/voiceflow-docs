@@ -1,61 +1,87 @@
 ---
 name: Video
 ---
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export function Video({ src }) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const videoRef = useRef(null);
 
-  // While loading: container uses a 16:9 padding-box to reserve space.
-  // After load: container loses padding so the video can size naturally.
-  const containerStyle = {
-    width: '100%',
-    margin: '2rem auto',
-    borderRadius: '8px',
-    backgroundColor: 'black',
-    position: 'relative',
-    overflow: 'hidden',
-    // Reserve a 16:9 box only until the first frame is ready
-    paddingBottom: isLoaded ? 0 : '56.25%',
-  };
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
 
-  // The video is always in the DOM:
-  // - Before load: absolutely positioned to cover the placeholder box, opacity 0
-  // - After load: becomes static layout (natural aspect), width 100% / height auto, opacity 1
-  const videoStyle = isLoaded
-    ? {
-        position: 'static',
-        display: 'block',
-        width: '100%',
-        height: 'auto',         // natural aspect ratio
-        objectFit: 'contain',   // harmless when height:auto, keeps intent explicit
-        borderRadius: '8px',
-        opacity: 1,
-        transition: 'opacity 0.3s ease-in-out',
-      }
-    : {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',     // fill the 16:9 placeholder nicely
-        borderRadius: '8px',
-        opacity: 0,
-        transition: 'opacity 0.3s ease-in-out',
-      };
+    // Reset on src change
+    setIsLoaded(false);
+
+    // If the video is already buffered enough, mark loaded immediately
+    // 2 = HAVE_CURRENT_DATA, 4 = HAVE_ENOUGH_DATA
+    if (video.readyState >= 2) {
+      setIsLoaded(true);
+      return;
+    }
+
+    const markLoaded = () => setIsLoaded(true);
+    const onError = (e) => {
+      // Surface errors during dev; remove or customize for prod
+      console.error('Video load error:', e);
+      // Keep placeholder visible if error occurs
+    };
+
+    video.addEventListener('loadeddata', markLoaded, { once: true });
+    video.addEventListener('canplay', markLoaded, { once: true });
+    video.addEventListener('playing', markLoaded, { once: true });
+    video.addEventListener('loadedmetadata', () => {
+      // Some browsers need a nudge to start; attempt play silently
+      // If it fails due to autoplay policy, muted+playsInline should help.
+      video.play?.().catch(() => {});
+    }, { once: true });
+    video.addEventListener('error', onError);
+
+    return () => {
+      video.removeEventListener('loadeddata', markLoaded);
+      video.removeEventListener('canplay', markLoaded);
+      video.removeEventListener('playing', markLoaded);
+      video.removeEventListener('loadedmetadata', markLoaded);
+      video.removeEventListener('error', onError);
+    };
+  }, [src]);
 
   return (
-    <div style={containerStyle}>
+    <div
+      style={{
+        width: '100%',
+        margin: '2rem auto',
+        borderRadius: '8px',
+        backgroundColor: 'black',
+        position: 'relative',
+        overflow: 'hidden',
+        // Reserve a 16:9 box only until loaded
+        paddingBottom: isLoaded ? 0 : '56.25%',
+      }}
+    >
+      {/* Video stays mounted; we fade it in to avoid layout jumps */}
       <video
+        ref={videoRef}
         src={src}
         autoPlay
         muted
         loop
         playsInline
-        // Use onLoadedData so the first frame is decoded and ready
-        onLoadedData={() => setIsLoaded(true)}
-        style={videoStyle}
+        preload="auto"
+        style={{
+          // Before load: cover the placeholder 16:9 box
+          // After load: use natural aspect ratio (height:auto)
+          position: isLoaded ? 'static' : 'absolute',
+          top: isLoaded ? undefined : 0,
+          left: isLoaded ? undefined : 0,
+          width: '100%',
+          height: isLoaded ? 'auto' : '100%',
+          objectFit: isLoaded ? 'contain' : 'cover',
+          borderRadius: '8px',
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out',
+        }}
       />
     </div>
   );
