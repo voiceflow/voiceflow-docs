@@ -12,9 +12,9 @@ export function Video({ src }) {
       backgroundColor: "black",
       margin: '2rem auto',
       borderRadius: '8px',
-      overflow: 'hidden',
-      position: 'relative',
-      paddingBottom: '56.25%' // 16:9 aspect ratio (9/16 = 0.5625)
+      //overflow: 'hidden',
+      //position: 'relative',
+      //paddingBottom: '56.25%' // 16:9 aspect ratio (9/16 = 0.5625)
     }}>
       <video
         src={src}
@@ -24,9 +24,9 @@ export function Video({ src }) {
         playsInline
         onLoadedData={() => setIsLoaded(true)}
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
+          //position: 'absolute',
+          //top: 0,
+          //left: 0,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
