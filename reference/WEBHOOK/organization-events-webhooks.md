@@ -12,6 +12,8 @@ metadata:
 
 If you're using Voiceflow inside a larger organization, you may wish to integrate Voiceflow with your existing observability and testing infrastructure. To allow you to do this, we provide the option to automatically receive updates on organization-level events through via a webhook. Once enabled, whenever an event happens in your organization, data about that event will automatically be sent to the provided webhook URL.
 
+<br />
+
 ## Configuring your webhook settings
 
 To enable sending data to a webhook whenever key events happen within an organization, head to your [Voiceflow dashboard](https://creator.voiceflow.com), click the **Settings** button in the bottom left corner, then select **Organization**. You can then add the URL that you'd like to send events to in the box provided.
@@ -24,7 +26,9 @@ To enable sending data to a webhook whenever key events happen within an organiz
 
 <br />
 
-Once you've entered a webhook URL, you'll be provided with a **webhook secret**. You can use this to verify that events were sent by Voiceflow [by following these instructions](https://docs.svix.com/receiving/verifying-payloads/how-manual). Ensure you keep your webhook secret secure.
+Once you've entered a webhook URL, you'll be provided with a **webhook secret**. You can use this to verify that events were sent by Voiceflow [by following these instructions](https://docs.svix.com/receiving/verifying-payloads/how-manual). Ensure you keep your webhook secret secure!
+
+<br />
 
 ## Supported events
 
@@ -59,19 +63,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{  
-                                                                            "data": {
-                                                                                            "createdBy": {
-                                                                                              "type": "user",
-                                                                                              "userEmail": "snackmaster@voiceflow.com"
-                                                                                            },
-                                                                                            "organizationID": "QwdEyxnVMe",
-                                                                                            "projectID": "690b5fb272e1cdfb40f14234",
-                                                                                            "workspaceID": "xbgjLGkdJe"
-                                                                                          },
-                                                                                          "resource": "organization-QwdEyxnVMe",
-                                                                                          "time": 1762353077240,
-                                                                                          "type": "organization.project.created"
-                                                                                        }`
+                                                                                    "data": {
+                                                                                                    "createdBy": {
+                                                                                                      "type": "user",
+                                                                                                      "userEmail": "snackmaster@voiceflow.com"
+                                                                                                    },
+                                                                                                    "organizationID": "QwdEyxnVMe",
+                                                                                                    "projectID": "690b5fb272e1cdfb40f14234",
+                                                                                                    "workspaceID": "xbgjLGkdJe"
+                                                                                                  },
+                                                                                                  "resource": "organization-QwdEyxnVMe",
+                                                                                                  "time": 1762353077240,
+                                                                                                  "type": "organization.project.created"
+                                                                                                }`
       </td>
     </tr>
 
@@ -86,22 +90,22 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                                                                                          "data": {
-                                                                                            "organizationID": "QwdEyxnVMe",
-                                                                                            "projectID": "690b5fb272e1cdfb40f14234",
-                                                                                            "publishedBy": {
-                                                                                              "type": "user",
-                                                                                              "userEmail": "snackmaster@voiceflow.com"
-                                                                                            },
-                                                                                            "publishedFromEnvironment": "Development",
-                                                                                            "publishedToEnvironment": "Production",
-                                                                                            "versionID": "690b5fb272e1cdfb40f14236",
-                                                                                            "workspaceID": "xbgjLGkdJe"
-                                                                                          },
-                                                                                          "resource": "organization-QwdEyxnVMe",
-                                                                                          "time": 1762353151870,
-                                                                                          "type": "organization.project.published"
-                                                                                        }`
+                                                                                                  "data": {
+                                                                                                    "organizationID": "QwdEyxnVMe",
+                                                                                                    "projectID": "690b5fb272e1cdfb40f14234",
+                                                                                                    "publishedBy": {
+                                                                                                      "type": "user",
+                                                                                                      "userEmail": "snackmaster@voiceflow.com"
+                                                                                                    },
+                                                                                                    "publishedFromEnvironment": "Development",
+                                                                                                    "publishedToEnvironment": "Production",
+                                                                                                    "versionID": "690b5fb272e1cdfb40f14236",
+                                                                                                    "workspaceID": "xbgjLGkdJe"
+                                                                                                  },
+                                                                                                  "resource": "organization-QwdEyxnVMe",
+                                                                                                  "time": 1762353151870,
+                                                                                                  "type": "organization.project.published"
+                                                                                                }`
       </td>
     </tr>
 
@@ -116,19 +120,19 @@ The following organization-level events will be sent to the provided URL:
 
       <td>
         `{
-                                                                                          "data": {
-                                                                                            "deletedBy": {
-                                                                                              "type": "user",
-                                                                                              "userEmail": "snackmaster@voiceflow.com"
-                                                                                            },
-                                                                                            "organizationID": "QwdEyxnVMe",
-                                                                                            "projectID": "690b5f89916774031b9af1c6",
-                                                                                            "workspaceID": "xbgjLGkdJe"
-                                                                                          },
-                                                                                          "resource": "organization-QwdEyxnVMe",
-                                                                                          "time": 1762353206555,
-                                                                                          "type": "organization.project.deleted"
-                                                                                        }`
+                                                                                                  "data": {
+                                                                                                    "deletedBy": {
+                                                                                                      "type": "user",
+                                                                                                      "userEmail": "snackmaster@voiceflow.com"
+                                                                                                    },
+                                                                                                    "organizationID": "QwdEyxnVMe",
+                                                                                                    "projectID": "690b5f89916774031b9af1c6",
+                                                                                                    "workspaceID": "xbgjLGkdJe"
+                                                                                                  },
+                                                                                                  "resource": "organization-QwdEyxnVMe",
+                                                                                                  "time": 1762353206555,
+                                                                                                  "type": "organization.project.deleted"
+                                                                                                }`
       </td>
     </tr>
   </tbody>
