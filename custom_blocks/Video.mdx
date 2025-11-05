@@ -1,53 +1,61 @@
 ---
 name: Video
 ---
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Video({ src }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  return (
-    <div
-      style={{
-        width: '100%',
-        margin: '2rem auto',
-        borderRadius: '8px',
-        backgroundColor: 'black',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      {/* Placeholder (16:9 aspect ratio) */}
-      <div
-        style={{
-          width: '100%',
-          paddingBottom: '56.25%', // 16:9 ratio
-          backgroundColor: 'black',
-          position: 'relative',
-          opacity: isLoaded ? 0 : 1,
-          transition: 'opacity 0.3s ease-in-out',
-        }}
-      />
+  // While loading: container uses a 16:9 padding-box to reserve space.
+  // After load: container loses padding so the video can size naturally.
+  const containerStyle = {
+    width: '100%',
+    margin: '2rem auto',
+    borderRadius: '8px',
+    backgroundColor: 'black',
+    position: 'relative',
+    overflow: 'hidden',
+    // Reserve a 16:9 box only until the first frame is ready
+    paddingBottom: isLoaded ? 0 : '56.25%',
+  };
 
-      {/* Video */}
+  // The video is always in the DOM:
+  // - Before load: absolutely positioned to cover the placeholder box, opacity 0
+  // - After load: becomes static layout (natural aspect), width 100% / height auto, opacity 1
+  const videoStyle = isLoaded
+    ? {
+        position: 'static',
+        display: 'block',
+        width: '100%',
+        height: 'auto',         // natural aspect ratio
+        objectFit: 'contain',   // harmless when height:auto, keeps intent explicit
+        borderRadius: '8px',
+        opacity: 1,
+        transition: 'opacity 0.3s ease-in-out',
+      }
+    : {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',     // fill the 16:9 placeholder nicely
+        borderRadius: '8px',
+        opacity: 0,
+        transition: 'opacity 0.3s ease-in-out',
+      };
+
+  return (
+    <div style={containerStyle}>
       <video
         src={src}
         autoPlay
         muted
         loop
         playsInline
+        // Use onLoadedData so the first frame is decoded and ready
         onLoadedData={() => setIsLoaded(true)}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'contain', // keeps natural aspect ratio
-          opacity: isLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in-out',
-          borderRadius: '8px',
-        }}
+        style={videoStyle}
       />
     </div>
   );
