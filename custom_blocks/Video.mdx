@@ -5,61 +5,79 @@ import { useState, useEffect, useRef } from 'react';
 
 export function Video({ src }) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const videoRef = useRef(null);
+  const ref = useRef(null);
 
   useEffect(() => {
-    const v = videoRef.current;
+    const v = ref.current;
     if (!v) return;
 
-    // Reset when src changes
+    // Reset on src change
     setIsLoaded(false);
 
-    // If already buffered enough, mark loaded immediately
+    // If the first frame is already available, flip immediately
     if (v.readyState >= 2) {
       setIsLoaded(true);
       return;
     }
 
     const markLoaded = () => setIsLoaded(true);
-    const onError = (e) => console.error('Video load error:', e);
+    const onErr = (e) => console.error('Video load error', e);
 
     v.addEventListener('loadeddata', markLoaded, { once: true });
     v.addEventListener('canplay', markLoaded, { once: true });
     v.addEventListener('playing', markLoaded, { once: true });
-    v.addEventListener('error', onError);
+    v.addEventListener('error', onErr);
 
     return () => {
       v.removeEventListener('loadeddata', markLoaded);
       v.removeEventListener('canplay', markLoaded);
       v.removeEventListener('playing', markLoaded);
-      v.removeEventListener('error', onError);
+      v.removeEventListener('error', onErr);
     };
   }, [src]);
 
-  return (
-    <div
-      style={{
-        width: '100%',
-        margin: '2rem auto',
-        borderRadius: '8px',
-        backgroundColor: 'black',
-        overflow: 'hidden',
-      }}
-    >
-      {/* 16:9 placeholder only while loading */}
-      {!isLoaded && (
-        <div
-          style={{
-            width: '100%',
-            paddingBottom: '56.25%', // 16:9
-            backgroundColor: 'black',
-            borderRadius: '8px',
-          }}
-        />
-      )}
+  // Container:
+  // - While loading: reserve space with a 16:9 box (padding-bottom trick)
+  // - After loaded: remove the constraint so the video dictates height naturally
+  const containerStyle = {
+    width: '100%',
+    margin: '2rem auto',
+    borderRadius: '8px',
+    backgroundColor: 'black',
+    position: 'relative',
+    overflow: 'hidden',
+    paddingBottom: isLoaded ? 0 : '56.25%', // 16:9 only while loading
+  };
 
+  // Video:
+  // - While loading: absolutely fill the placeholder, invisible (opacity 0)
+  // - After loaded: static flow, width 100%, height auto (natural aspect, no cropping)
+  const videoStyle = isLoaded
+    ? {
+        position: 'static',
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        borderRadius: '8px',
+        opacity: 1,
+        transition: 'opacity 200ms ease-in-out',
+      }
+    : {
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover', // just for the temporary placeholder fill
+        borderRadius: '8px',
+        opacity: 0,
+        transition: 'opacity 200ms ease-in-out',
+      };
+
+  return (
+    <div style={containerStyle}>
+      {/* Optional black background already provided by container */}
       <video
-        ref={videoRef}
+        ref={ref}
         src={src}
         autoPlay
         muted
@@ -67,14 +85,7 @@ export function Video({ src }) {
         playsInline
         preload="auto"
         onLoadedData={() => setIsLoaded(true)}
-        style={{
-          display: 'block',
-          width: '100%',
-          height: 'auto',            // natural aspect ratio, no letterboxing
-          borderRadius: '8px',
-          opacity: isLoaded ? 1 : 0, // fade in
-          transition: 'opacity 200ms ease-in-out',
-        }}
+        style={videoStyle}
       />
     </div>
   );
