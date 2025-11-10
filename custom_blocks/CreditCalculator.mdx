@@ -1,12 +1,15 @@
 ---
 name: CreditCalculator
 ---
+---
+name: CreditCalculator
+---
 import { useState, useEffect } from 'react';
 
 export const CreditCalculator = () => {
   // THIS IS PRETTY MUCH ENTIRELY GENERATED WITH CURSOR
   // I DON'T RECOMMEND MODIFYING IT MANUALLY IF YOU CAN AVOID IT
-	// 
+	//
 
 
   // State for API data
@@ -26,7 +29,7 @@ export const CreditCalculator = () => {
   const [selectedASR, setSelectedASR] = useState("");
   const [activeTab, setActiveTab] = useState("voice"); // New state for active tab
   const [billingPeriod, setBillingPeriod] = useState("Month");
-  
+
   // Calculation state
   const [calculations, setCalculations] = useState({
     voiceCreditsPerMinute: 0,
@@ -46,7 +49,7 @@ export const CreditCalculator = () => {
         const res = await fetch('https://realtime-api.voiceflow.com/v1alpha1/estimation/config');
         if (!res.ok) throw new Error('Failed to fetch pricing data');
         const data = await res.json();
-        
+
         // Transform usage data to match existing structure
         const transformedCreditsData = {
           orchestration: [],
@@ -55,37 +58,71 @@ export const CreditCalculator = () => {
           tts: []
         };
 
+        // Group LLM items by model (combining input and output)
+        const llmModels = {};
+
         // Group usage by category and transform to existing format
         for (const item of data.config.usage) {
-          const transformedItem = {
-            vendor: getVendorDisplayName(item.vendor),
-            item: getItemDisplayName(item.item, item.vendor, item.category),
-            unitType: getUnitType(item.unit),
-            unitMultiplier: getUnitMultiplier(item.unit),
-            unit: getUnitDisplayName(item.unit),
-            creditsPerUnit: item.value,
-            creditsPerBaseUnit: item.value / getUnitMultiplier(item.unit)
-          };
+          // Handle LLM input/output separately to combine them
+          if (item.category === 'llm-input' || item.category === 'llm-output') {
+            if (!llmModels[item.item]) {
+              llmModels[item.item] = {
+                vendor: getVendorDisplayName(item.vendor),
+                item: item.item,
+                unitType: 'tokens',
+                unitMultiplier: 1000,
+                unit: '1K Tokens'
+              };
+            }
 
-          if (transformedCreditsData[item.category]) {
-            transformedCreditsData[item.category].push(transformedItem);
+            if (item.category === 'llm-input') {
+              llmModels[item.item].creditsPerInputToken = item.value / 1000;
+              llmModels[item.item].inputCreditsPerUnit = item.value;
+            } else {
+              llmModels[item.item].creditsPerOutputToken = item.value / 1000;
+              llmModels[item.item].outputCreditsPerUnit = item.value;
+            }
+          } else {
+            // Handle other categories (tts, asr, orchestration)
+            const transformedItem = {
+              vendor: getVendorDisplayName(item.vendor),
+              item: getItemDisplayName(item.item, item.vendor, item.category),
+              unitType: getUnitType(item.unit),
+              unitMultiplier: getUnitMultiplier(item.unit),
+              unit: getUnitDisplayName(item.unit),
+              creditsPerUnit: item.value,
+              creditsPerBaseUnit: item.value / getUnitMultiplier(item.unit)
+            };
+
+            if (transformedCreditsData[item.category]) {
+              transformedCreditsData[item.category].push(transformedItem);
+            }
+          }
+        }
+
+        // Add combined LLM models to the llm array
+        for (const modelName in llmModels) {
+          const model = llmModels[modelName];
+          // Only add if both input and output costs are present
+          if (model.creditsPerInputToken !== undefined && model.creditsPerOutputToken !== undefined) {
+            transformedCreditsData.llm.push(model);
           }
         }
 
         // Add orchestration items that match the existing structure
         transformedCreditsData.orchestration = [
-          { 
-            vendor: "Voiceflow", 
-            item: "Chat AI Hosting", 
+          {
+            vendor: "Voiceflow",
+            item: "Chat AI Hosting",
             unitType: "messages",
             unitMultiplier: 1,
             unit: "Agent Sent Message",
             creditsPerUnit: data.config.usage.find(u => u.item === 'interaction')?.value || 1,
             creditsPerBaseUnit: data.config.usage.find(u => u.item === 'interaction')?.value || 1
           },
-          { 
-            vendor: "Voiceflow", 
-            item: "Voice AI Hosting", 
+          {
+            vendor: "Voiceflow",
+            item: "Voice AI Hosting",
             unitType: "minutes",
             unitMultiplier: 1,
             unit: "Minutes of Voice AI",
@@ -169,7 +206,7 @@ export const CreditCalculator = () => {
         return 'Eleven Labs - TTS';
       }
     }
-    
+
     // For ASR items
     if (category === 'asr') {
       if (vendor === 'deepgram') return 'Deepgram - STT';
@@ -214,38 +251,52 @@ export const CreditCalculator = () => {
     const llmVoice = findService('llm', selectedLLMVoice);
     const tts = findService('tts', selectedTTS);
     const asr = findService('asr', selectedASR);
-    
+
     // Voice AI assumptions from the sheet
     const ttsUtilizationRate = 0.70; // 70%
     const ttsCharsPerMinute = 700;
     const asrUtilizationRate = 0.85; // 85%
     const llmTokensPerMinute = 600;
-    
+
+    // LLM token distribution (voice tends to be more balanced between input/output)
+    const voiceInputRatio = 0.60;  // 60% input tokens
+    const voiceOutputRatio = 0.40; // 40% output tokens
+
     // Calculate effective usage
     const effectiveTtsCharsPerMinute = ttsCharsPerMinute * ttsUtilizationRate; // 490 chars
-    
-    // Calculate credits using the new structure
-    const llmCreditsPerVoiceMinute = llmVoice ? (llmVoice.creditsPerBaseUnit * llmTokensPerMinute) : 0;
+
+    // Calculate credits using the new structure with input/output tokens
+    const llmCreditsPerVoiceMinute = llmVoice ? (
+      (llmVoice.creditsPerInputToken * llmTokensPerMinute * voiceInputRatio) +
+      (llmVoice.creditsPerOutputToken * llmTokensPerMinute * voiceOutputRatio)
+    ) : 0;
     const ttsCreditsPerVoiceMinute = tts ? (tts.creditsPerBaseUnit * effectiveTtsCharsPerMinute) : 0;
     const asrCreditsPerVoiceMinute = asr ? (asr.creditsPerBaseUnit * asrUtilizationRate) : 0;
-    
+
     const voiceCreditsPerMinute = voiceHosting + llmCreditsPerVoiceMinute + ttsCreditsPerVoiceMinute + asrCreditsPerVoiceMinute;
     const voiceTotalCredits = voiceCreditsPerMinute * (voiceMinutes || 0);
 
     // Chat AI calculations
     const chatHosting = 1; // Fixed Voiceflow Chat AI Hosting credits per message
     const llmChat = findService('llm', selectedLLMChat);
-    
+
     // Chat AI assumptions from the sheet
     const llmTokensPerMessage = 600;
-    
-    // Calculate credits using the new structure
-    const llmCreditsPerChatMessage = llmChat ? (llmChat.creditsPerBaseUnit * llmTokensPerMessage) : 0;
+
+    // LLM token distribution (chat tends to have more input context)
+    const chatInputRatio = 0.70;  // 70% input tokens
+    const chatOutputRatio = 0.30; // 30% output tokens
+
+    // Calculate credits using the new structure with input/output tokens
+    const llmCreditsPerChatMessage = llmChat ? (
+      (llmChat.creditsPerInputToken * llmTokensPerMessage * chatInputRatio) +
+      (llmChat.creditsPerOutputToken * llmTokensPerMessage * chatOutputRatio)
+    ) : 0;
     const chatCreditsPerMessage = chatHosting + llmCreditsPerChatMessage;
     const chatTotalCredits = chatCreditsPerMessage * (chatMessages || 0);
 
     const totalCredits = voiceTotalCredits + chatTotalCredits;
-    
+
     // Determine recommended plan
     const filteredPlans = plans.filter(plan => plan.period === billingPeriod);
     const recommended = filteredPlans.find(plan => plan.credits >= totalCredits);
@@ -289,16 +340,16 @@ export const CreditCalculator = () => {
   // Helper function to format currency
   const formatCurrency = (num) => {
     if (num < 0.01) {
-      return new Intl.NumberFormat('en-US', { 
-        style: 'currency', 
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 4,
-        maximumFractionDigits: 4 
+        maximumFractionDigits: 4
       }).format(num);
     }
-    return new Intl.NumberFormat('en-US', { 
-      style: 'currency', 
-      currency: 'USD' 
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
     }).format(num);
   };
 
@@ -383,8 +434,8 @@ export const CreditCalculator = () => {
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                   {billingPeriod === 'Year' ? 'Call minutes per year' : 'Call minutes per month'}
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={voiceMinutesInput}
                   onChange={(e) => {
                     const value = e.target.value;
@@ -403,7 +454,7 @@ export const CreditCalculator = () => {
                 <div>
                   <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
                   <div className="relative">
-                    <select 
+                    <select
                       value={selectedLLMVoice}
                       onChange={(e) => setSelectedLLMVoice(e.target.value)}
                       className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
@@ -424,7 +475,7 @@ export const CreditCalculator = () => {
                 <div>
                   <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Text-to-speech</label>
                   <div className="relative">
-                    <select 
+                    <select
                       value={selectedTTS}
                       onChange={(e) => setSelectedTTS(e.target.value)}
                       className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
@@ -445,7 +496,7 @@ export const CreditCalculator = () => {
                 <div>
                   <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Speech-to-text</label>
                   <div className="relative">
-                    <select 
+                    <select
                       value={selectedASR}
                       onChange={(e) => setSelectedASR(e.target.value)}
                       className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
@@ -473,8 +524,8 @@ export const CreditCalculator = () => {
                 <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">
                   {billingPeriod === 'Year' ? 'Interactions per year' : 'Interactions per month'}
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={chatMessagesInput}
                   onChange={(e) => {
                     const value = e.target.value;
@@ -493,7 +544,7 @@ export const CreditCalculator = () => {
                 <div>
                   <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">LLM model</label>
                   <div className="relative">
-                    <select 
+                    <select
                       value={selectedLLMChat}
                       onChange={(e) => setSelectedLLMChat(e.target.value)}
                       className="appearance-none w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-200"
