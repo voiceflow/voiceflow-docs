@@ -2,7 +2,7 @@
 title: Keypad input (DTMF)
 excerpt: Detect the number keys the user presses during a call.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
