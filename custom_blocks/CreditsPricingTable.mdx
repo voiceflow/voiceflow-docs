@@ -11,7 +11,6 @@ export function CreditsPricingTable() {
     tts: "TTS (Text-to-Speech)"
   };
 
-  // Vendor mapping
   const vendorMap = {
     openai: 'OpenAI',
     'open-ai': 'OpenAI',
@@ -26,31 +25,22 @@ export function CreditsPricingTable() {
     assemblyai: 'AssemblyAI'
   };
 
-  // Enhanced item mapping for all categories
   const getItemName = (item, vendor, category, io) => {
-    // Orchestration
     if (category === 'orchestration') {
       if (item === 'interaction') return 'Chat usage';
       if (item === 'audio') return 'Voice usage';
       if (item === 'no-reply') return 'No-reply usage';
     }
-    // LLM: append (input)/(output)
-    if (category === 'llm' && io) {
-      return `${item} (${io})`;
-    }
-    // STT
+    if (category === 'llm' && io) return `${item} (${io})`;
     if (category === 'asr') {
       if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - STT';
       if (vendor && vendor.toLowerCase().includes('assemblyai')) return 'Assemblyai - STT';
       if (vendor && vendor.toLowerCase().includes('cartesia')) return 'Cartesia - STT';
     }
-    // TTS
     if (category === 'tts') {
       if (vendor && vendor.toLowerCase().includes('deepgram')) return 'Deepgram - TTS';
       if (vendor && vendor.toLowerCase().includes('rimelabs')) return 'Rime Labs - TTS';
-      if (vendor && vendor.toLowerCase().includes('cartesia')) {
-        return 'Cartesia - TTS';
-      }
+      if (vendor && vendor.toLowerCase().includes('cartesia')) return 'Cartesia - TTS';
       if (vendor && vendor.toLowerCase().includes('elevenlabs')) {
         if (item && item.toLowerCase().includes('flash')) return 'Eleven Labs - TTS - Flash';
         if (item && item.toLowerCase().includes('turbo')) return 'Eleven Labs - TTS - Turbo';
@@ -58,11 +48,9 @@ export function CreditsPricingTable() {
         return 'Eleven Labs - TTS';
       }
     }
-    // Fallback
     return item;
   };
 
-  // Unit mapping
   const getUnit = (unit) => {
     if (!unit) return '';
     const u = unit.toLowerCase();
@@ -74,7 +62,6 @@ export function CreditsPricingTable() {
     return unit;
   };
 
-  // Format base + priority price text
   const formatCredits = (value, priorityValue) => {
     if (value == null) return '';
     if (priorityValue != null && priorityValue !== '') {
@@ -104,7 +91,6 @@ export function CreditsPricingTable() {
         if (!res.ok) throw new Error('Failed to fetch pricing data');
         const data = await res.json();
 
-        // Group usage by normalized category
         const grouped = {};
         const normalizeCategory = (c) => (c && c.startsWith('llm') ? 'llm' : c);
 
@@ -132,21 +118,18 @@ export function CreditsPricingTable() {
   if (error) return <div style={{ color: 'red' }}>Error: {error}</div>;
   if (!creditsData) return null;
 
-  // Helper to get mapped vendor name
   const getVendorName = (vendor) => {
     if (!vendor) return '';
     const key = vendor.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
     return vendorMap[key] || vendorMap[vendor.toLowerCase()] || vendor;
   };
 
-  // Pull orchestration items for optional priority display
   const interactionItem = creditsData.orchestration?.find(i => i.item === 'interaction');
   const noReplyItem = creditsData.orchestration?.find(i => i.item === 'no-reply');
   const audioItem = creditsData.orchestration?.find(i => i.item === 'audio');
 
   return (
     <div>
-      {/* Orchestration Table: Static structure, dynamic values */}
       <div style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{displayNames.orchestration}</h2>
         <div className="rdmd-table">
@@ -199,17 +182,14 @@ export function CreditsPricingTable() {
         </div>
       </div>
 
-      {/* Other tables: dynamic (LLM is normalized single table with (input)/(output)) */}
       {Object.entries(displayNames).filter(([type]) => type !== 'orchestration').map(([type, display]) => {
         let items = creditsData[type];
         if (!items || items.length === 0) return null;
 
-        // Sort vendors alphabetically, then by value asc for LLM/ASR/TTS
         items = [...items].sort((a, b) => {
           if (['llm', 'asr', 'tts'].includes(type)) {
             const vendorCompare = getVendorName(a.vendor).localeCompare(getVendorName(b.vendor));
             if (vendorCompare !== 0) return vendorCompare;
-            // If vendor same, sort by item name (with io for llm), then by value
             const nameA = getItemName(a.item, a.vendor, type, a.io);
             const nameB = getItemName(b.item, b.vendor, type, b.io);
             const nameCompare = nameA.localeCompare(nameB);
@@ -221,6 +201,20 @@ export function CreditsPricingTable() {
           );
         });
 
+        const isLLM = type === 'llm';
+
+        let combinedItems = items;
+        if (isLLM) {
+          const map = {};
+          for (const it of items) {
+            const key = `${it.vendor}||${it.item}`;
+            if (!map[key]) map[key] = { vendor: it.vendor, item: it.item, input: null, output: null };
+            if (it.io === 'input') map[key].input = it;
+            if (it.io === 'output') map[key].output = it;
+          }
+          combinedItems = Object.values(map);
+        }
+
         return (
           <div key={type} style={{ marginBottom: '2rem' }}>
             <h2 style={{ fontWeight: 600, marginBottom: '1rem' }}>{display}</h2>
@@ -231,19 +225,40 @@ export function CreditsPricingTable() {
                     <tr>
                       <th style={{ textAlign: 'left' }}>Vendor</th>
                       <th style={{ textAlign: 'left' }}>Item</th>
-                      <th style={{ textAlign: 'left' }}>Unit</th>
-                      <th style={{ textAlign: 'left' }}>Credits per Unit</th>
+                      {isLLM ? (
+                        <>
+                          <th style={{ textAlign: 'left' }}>Cost per 1000 output tokens</th>
+                          <th style={{ textAlign: 'left' }}>Cost per 1000 input tokens</th>
+                        </>
+                      ) : (
+                        <>
+                          <th style={{ textAlign: 'left' }}>Unit</th>
+                          <th style={{ textAlign: 'left' }}>Credits per Unit</th>
+                        </>
+                      )}
                     </tr>
                   </thead>
                   <tbody>
-                    {items.map((item, index) => (
+                    {(isLLM ? combinedItems : items).map((item, index) => (
                       <tr key={`${item.vendor}-${item.item}-${item.io}-${index}`}>
                         <td style={{ textAlign: 'left' }}>{getVendorName(item.vendor)}</td>
                         <td style={{ textAlign: 'left' }}>{getItemName(item.item, item.vendor, type, item.io)}</td>
-                        <td style={{ textAlign: 'left' }}>{getUnit(item.unit)}</td>
-                        <td style={{ textAlign: 'left' }}>
-                          {formatCredits(item.value, item.priorityValue)}
-                        </td>
+
+                        {isLLM ? (
+                          <>
+                            <td style={{ textAlign: 'left' }}>
+                              {item.output ? formatCredits(item.output.value, item.output.priorityValue) : ''}
+                            </td>
+                            <td style={{ textAlign: 'left' }}>
+                              {item.input ? formatCredits(item.input.value, item.input.priorityValue) : ''}
+                            </td>
+                          </>
+                        ) : (
+                          <>
+                            <td style={{ textAlign: 'left' }}>{getUnit(item.unit)}</td>
+                            <td style={{ textAlign: 'left' }}>{formatCredits(item.value, item.priorityValue)}</td>
+                          </>
+                        )}
                       </tr>
                     ))}
                   </tbody>
@@ -257,4 +272,4 @@ export function CreditsPricingTable() {
   );
 }
 
-<CreditsPricingTable />
+<CreditsPricingTable />}
