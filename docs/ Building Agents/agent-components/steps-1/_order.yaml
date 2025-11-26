@@ -1,8 +1,8 @@
 - agents
 - crew-step
 - message
-- mcp-step
 - integration-step
+- mcp-step
 - logic
 - variables-set
 - todo-end-step
