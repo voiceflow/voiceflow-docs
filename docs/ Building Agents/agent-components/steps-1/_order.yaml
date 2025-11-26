@@ -4,8 +4,8 @@
 - integration-step
 - mcp-step
 - api-step
+- function-step
 - logic
 - variables-set
 - todo-end-step
-- function-step
 - tool-step
