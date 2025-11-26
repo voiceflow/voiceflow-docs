@@ -1,6 +1,7 @@
 - agents
 - crew-step
 - message
+- mcp-step
 - integration-step
 - logic
 - variables-set
@@ -8,4 +9,3 @@
 - function-step
 - api-step
 - tool-step
-- mcp-step
