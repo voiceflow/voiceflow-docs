@@ -1,5 +1,5 @@
 ---
-title: Interface
+title: Getting started
 excerpt: >-
   Each project is its own AI agent - complete with workflows, logic, and
   knowledge.
