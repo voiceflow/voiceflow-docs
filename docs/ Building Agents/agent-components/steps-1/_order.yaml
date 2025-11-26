@@ -3,9 +3,9 @@
 - message
 - integration-step
 - mcp-step
+- api-step
 - logic
 - variables-set
 - todo-end-step
 - function-step
-- api-step
 - tool-step
