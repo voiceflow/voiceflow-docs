@@ -1,6 +1,7 @@
 - agents
 - crew-step
 - message
+- integration-step
 - prompt-step
 - images
 - buttons-v2
@@ -16,4 +17,3 @@
 - custom-actions
 - call-forwarding-step
 - tool-step
-- integration-step
