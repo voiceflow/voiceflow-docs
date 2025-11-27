@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" border={false} src="https://files.readme.io/0d3626af1d4ce85801f9004b70181cb96e7427dfaf4d39e30674d30952b3d79f-Cover_-_Message.png" />
+<Image align="center" border={false} src="https://files.readme.io/590bc87704f1a2f8c202c0a70d857c9fd981eb2dc0a8b1070dbdcbf07f44aae4-Cover_-_Message.png" />
 
 The Message step outputs a pre-written message to the user. This is commonly used to provide information, confirm an action, display errors, or give feedback. Messages can be static (single response), dynamic (conditional variants), or reused across your agent for consistency.
 
