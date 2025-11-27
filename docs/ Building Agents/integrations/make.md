@@ -56,9 +56,7 @@ Ensure you provide an `LLM description` for each tool so the agent understands w
 
 > Yes. You can pass data such as user inputs, IDs, or conversation context to your Make scenario by mapping information in the Tool or Agent step configuration's `data` input variable.
 
-### Can I trigger multiple Make scenarios from one conversation?
-
-> Asked mike, answer pending.
+<br />
 
 ### Do I need to configure my scenario before using it in Voiceflow?
 
