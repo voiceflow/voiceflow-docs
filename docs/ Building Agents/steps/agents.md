@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" border={false} src="https://files.readme.io/96eec3b6b1ff9caa0bd5f670d8bfe0fa144af6b3fab6328228fd0851346ed182-Image_11.png" />
+<Image align="center" border={false} src="https://files.readme.io/320508329ffd2b0a13aaef1cf7711716dc8c0645a85616cc5c1a56e8fb7bb812-agent.png" />
 
 The Agent step is a flexible all-in-one tool that lets your assistant interpret user input using AI, access your knowledge base, route the conversation based on intent, and run external functions — all within a single step.
 
