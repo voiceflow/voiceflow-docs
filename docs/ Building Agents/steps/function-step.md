@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" border={false} src="https://files.readme.io/05d69c5d3b025932c06ff07bc22c9fa0d24d4acde9594fc9192d866cfae369dd-Cover_-_Function.svg" />
+<Image align="center" border={false} src="https://files.readme.io/659a54bc9447b9fc041993edeb6b98fdae35f0c3e03e6a1dd8c75bf295422898-Cover_-_Function.svg" />
 
 The Function step is a powerful feature that allows developers to create custom logic and operations within their AI Agents. This document will guide you through the process of creating, configuring, and using a Function step on the canvas.
 
