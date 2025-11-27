@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/322d0fc7059fbd27fcc8a1f3f232d936e072703f37a7afe23b55e9d0f28316a4-Message.png" />
+<Image align="center" border={false} src="https://files.readme.io/0d3626af1d4ce85801f9004b70181cb96e7427dfaf4d39e30674d30952b3d79f-Cover_-_Message.png" />
 
 The Message step outputs a pre-written message to the user. This is commonly used to provide information, confirm an action, display errors, or give feedback. Messages can be static (single response), dynamic (conditional variants), or reused across your agent for consistency.
 
@@ -40,7 +40,7 @@ Below is an example of variants in action. If the user is chatting with our agen
 
 ## Formatting
 
-<Image align="center" src="https://files.readme.io/729eb38edd0c337081f63b6dd6c6d79faf957aaa9b67ccf92ec95ae24fc776ed-Frame_48095756.png" />
+<Image align="center" border={false} src="https://files.readme.io/729eb38edd0c337081f63b6dd6c6d79faf957aaa9b67ccf92ec95ae24fc776ed-Frame_48095756.png" />
 
 The Message step supports rich text formatting, such as bold, underlined, and italic. You can also include external links and emojis in messages.
 
@@ -48,7 +48,7 @@ The Message step supports rich text formatting, such as bold, underlined, and it
 
 ## Message delay
 
-<Image align="center" width="600px" src="https://files.readme.io/4e6a4e0f352bca1d70f8c1f2a3ef7a86bb9477df401818f2129942f2b01b2c7e-Frame_48095759.png" />
+<Image align="center" border={false} width="600px" src="https://files.readme.io/4e6a4e0f352bca1d70f8c1f2a3ef7a86bb9477df401818f2129942f2b01b2c7e-Frame_48095759.png" />
 
 The message delay option allows you to add a delay between the step in the agent's flow being reached and the message being sent. The message delay is set in milliseconds - for example, if the message delay is set to 500 would add a 0.5 second delay before the message is sent.
 
@@ -58,7 +58,7 @@ One example use-case of message delay is if you're sending multiple pieces of in
 
 ## Reusing messages
 
-<Image align="center" src="https://files.readme.io/9f5516d556408f026ab9dec7efcfb545dccf4ef2bcad309238934a07f6378615-Frame_48095758.png" />
+<Image align="center" border={false} src="https://files.readme.io/9f5516d556408f026ab9dec7efcfb545dccf4ef2bcad309238934a07f6378615-Frame_48095758.png" />
 
 Sometimes you’ll want to use the same message in multiple places - like a legal disclaimer or a standard confirmation message. To reuse a message, type `/` in the message input and start typing part of the message. Then, select the message you'd like to use from the list that appears.
 
