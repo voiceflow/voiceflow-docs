@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" border={false} src="https://files.readme.io/99f6b2689c32a0661417d66527cd5c3f83726f15ae925ba780c282e57071c014-Cover_-_Set.svg" />
+<Image align="center" border={false} src="https://files.readme.io/8ac08a7cba3550a5426481c191bab25dd6521d7a608d38bec4720a205f1ae51a-Cover_-_Set.svg" />
 
 ### How do I assign or set values of variables in my agent?
 
