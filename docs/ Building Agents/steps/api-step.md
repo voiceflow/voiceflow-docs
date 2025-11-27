@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<Image align="center" src="https://files.readme.io/abf9aa8877633d39e03198a600fd1f5522b4854ce1f8c4c86b2b19e1c5cbdf8e-Image_6.png" />
+<Image align="center" border={false} src="https://files.readme.io/13f5be6e57c524037b551aa761fa0e52645671b8fbcd6de4dc7f0aece07734f1-Cover_-_API.svg" />
 
 The API Step allows you to make custom API calls to connect your assistant with external APIs and data.
 
@@ -22,7 +22,7 @@ The API block consists of several parts:
 * **Capture** Response — entering respective keys & saving/capturing to variables
 * **Send** Request — a button to test the API Step or call/request directly from Canvas
 
-![](https://files.readme.io/6b71e44ac054a7db0101f55156f5a00e015425ec7c5c7058c0fda1a5f1d9fad9-CleanShot_2024-12-17_at_10.39.24.png)
+<Image border={false} src="https://files.readme.io/6b71e44ac054a7db0101f55156f5a00e015425ec7c5c7058c0fda1a5f1d9fad9-CleanShot_2024-12-17_at_10.39.24.png" />
 
 There are 5 standard request types available through the API block.
 
@@ -32,7 +32,7 @@ There are 5 standard request types available through the API block.
 * **DELETE** — Deletes information in your data source
 * **PATCH** — Partially updates information in your data source
 
-<Image align="center" src="https://files.readme.io/6e1cc0fcbd1b49b580221b2ea55923146b4ad46ae608a52514e424137a827ae8-CleanShot_2024-12-17_at_10.41.21.png" />
+<Image align="center" border={false} src="https://files.readme.io/6e1cc0fcbd1b49b580221b2ea55923146b4ad46ae608a52514e424137a827ae8-CleanShot_2024-12-17_at_10.41.21.png" />
 
 Depending on your assistant design, you should consider using an API step for functions that involve retrieving data from an external database or sending data to another source. Some use cases involve making a new Zendesk (or other similar customer support platforms) ticket request, sending and getting data from an Airtable database, or registering a potential client prospect in an internal repository.
 
@@ -72,7 +72,7 @@ Once you have successfully made an API call, you will receive back a JSON object
 
 You can do this using the “Capture Response” section. If you preview the request, you will be able to select the path of the value you want to store in a variables. Simply select the path key and assign it to an agent variable. Once selected, this will be populated in the API editor.
 
-![](https://files.readme.io/593dbf7bae6ca05b3ebe87ec7759dd009c48d67c2c15f9c3ffb82e51ba195345-CleanShot_2025-01-06_at_09.53.262x.png)
+<Image border={false} src="https://files.readme.io/593dbf7bae6ca05b3ebe87ec7759dd009c48d67c2c15f9c3ffb82e51ba195345-CleanShot_2025-01-06_at_09.53.262x.png" />
 
 <br />
 
@@ -91,9 +91,9 @@ You can map the **name** to a variable using `response.name`.
 
 ## Failure Paths
 
-Should you wish to expose a path if the request returns an error, you can optionally toggle on the *Failure path* and it will render a new port for you to connect into your fallback flow.
+Should you wish to expose a path if the request returns an error, you can optionally toggle on the _Failure path_ and it will render a new port for you to connect into your fallback flow.
 
-![](https://files.readme.io/6432b2068bdbea0319bbe278808b5fd7984dabc0ed45ec99eaa47e18f824570f-CleanShot_2024-12-17_at_10.53.30.png)
+<Image border={false} src="https://files.readme.io/6432b2068bdbea0319bbe278808b5fd7984dabc0ed45ec99eaa47e18f824570f-CleanShot_2024-12-17_at_10.53.30.png" />
 
 ## Send and Test Request
 
