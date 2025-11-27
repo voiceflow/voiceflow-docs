@@ -5,4 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-<Image align="center" border={false} src="https://files.readme.io/3250650b71b1168aed3387761d33fd7703041b6fa8051a7eac37f309deefa503-Cover_-_MCP.svg" />
+<Image align="center" border={false} src="https://files.readme.io/e60556b6180635db3b8137ab5cb78ceca8eef8113a5227b30cd4baa56fd5be3f-Cover_-_MCP.svg" />
+
+<br />
