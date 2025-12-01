@@ -47,7 +47,7 @@ In your agent’s design:
 
 Update your client application to send event requests to the Voiceflow runtime when specific user actions occur. This can be done via:
 
-* **REST API Calls**: Use Voiceflow’s runtime REST API to send requests containing the event name and any relevant data.
+* **REST API Calls**: When building for use-cases that don't use Voiceflow's [web chat widget](doc:chat-widget), use Voiceflow’s runtime REST API to send requests containing the event name and any relevant data.
 * **Voiceflow Web Chat Widget**: Utilize the window.voiceflow.chat.interact() method to trigger events directly from the web chat widget.
 
 **4. Test and Refine**
@@ -193,20 +193,20 @@ Place this code within the `<body>` tags of your HTML page:
 * Within the `.then()` block, an event listener is added to the button with `id="myButton"`.
 * When the button is clicked:
   * The chat widget is opened using `window.voiceflow.chat.open()`.
-  * An event named 'button\_clicked' is sent to the agent using `window.voiceflow.chat.interact()`.
+  * An event named 'button_clicked' is sent to the agent using `window.voiceflow.chat.interact()`.
 
 **Steps to Implement**
 
 1. **Define the Event in Voiceflow**:
 
 * Go to the **Event CMS** in your Voiceflow project.
-* Create a new event named button\_clicked.
+* Create a new event named button_clicked.
 * Add a description if desired.
 
 2. **Associate the Event with a Flow**:
 
 * In your agent’s canvas, add a **Trigger** step where you want the flow to start.
-* Set the trigger type to **Event** and select button\_clicked from the list.
+* Set the trigger type to **Event** and select button_clicked from the list.
 
 3. **Add the Button to Your Web Page**:
 
@@ -220,7 +220,7 @@ Place this code within the `<body>` tags of your HTML page:
 
 * Open your web page in a browser.
 * Click the button labeled “Click Me”.
-* The chat widget should open, and the agent should respond according to the flow you’ve designed for the button\_clicked event.
+* The chat widget should open, and the agent should respond according to the flow you’ve designed for the button_clicked event.
 
 **Additional Notes**
 
