@@ -12,7 +12,7 @@ next:
 ---
 Voiceflow's extensions feature lets you add advanced functionality to your web chat experience. Extensions allow your assistant to render custom widgets or trigger custom effects directly on your website.
 
-<Image align="center" src="https://files.readme.io/d4bdbf6-extensions.gif" />
+<Image align="center" border={false} src="https://files.readme.io/d4bdbf6-extensions.gif" />
 
 <br />
 
@@ -23,15 +23,15 @@ There are two types of extensions:
 
 <br />
 
-> 📘
->
-> Want to jump into code? [Find examples on GitHub](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5).
+<Callout icon="📘" theme="info">
+  Want to jump into code? [Find examples on GitHub](https://github.com/voiceflow-gallagan/vf-extensions-demo/tree/c7a5eda8116dc915f0b85cf9014baeefe92a22c5).
+</Callout>
 
 <br />
 
 ## How extensions work
 
-Extensions are triggered by a [Custom action step](doc:custom-actions) or a [Function step](doc:function-step) in your Voiceflow assistant. You define them in your site’s code and register them in the [web chat snippet](https://docs.voiceflow.com/docs/chat-widget#how-to-add-your-agents-widget-to-your-website).
+Extensions are triggered by a [Custom action step](doc:custom-actions) or a [Function step](doc:function-step) in your Voiceflow assistant. You define them in your site’s code and register them in the [web chat snippet](https://docs.voiceflow.com/docs/chat-widget#how-to-add-your-agents-widget-to-your-website). Note that you should use the same action name in all extension code, [Custom action steps](doc:custom-actions), and [Function steps](doc:function-step) that trigger a single action.
 
 An extension follows the pattern below:
 
