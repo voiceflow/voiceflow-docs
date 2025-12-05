@@ -12,7 +12,7 @@ Depending on your use-case, you might want to build **text** or **voice**-based 
 
 ## Setting your modality
 
-To set your web chat widget's modality, open the widget settings by pressing the **Interfaces** button on your canvas' sidebar then clicking **Interfaces**. 
+To set your web chat widget's modality, open the widget settings by pressing the **Interfaces** button on your canvas' sidebar then clicking **Interfaces**.
 
 <Image align="center" border={false} src="https://files.readme.io/4642be086623ea0872af9fe87480df0446906474e77b8504183964f5adcd520b-Frame_48095762.png" />
 
@@ -26,11 +26,11 @@ When building with the chat modality, you can also optionally enable voice-focus
 
 * **Dictation** - allows your agent's users to input text using speech-to-text.
 * **Voice output** - allows your agent's users to hear your agent's responses using the text-to-speech model set in your project's settings.
-* **Voice mode** - when enabled, once the user presses the blue "voice" button in the message input (shown below), they will be able to talk to the agent for the rest of the conversation without pressing it again, similar to a phone call. If this option is disabled, the user must press the microphone button each time before saying their message.
+* **Voice mode** - when enabled, this setting allows conversations to take place hands-free. Once the user presses the blue "voice" button in the message input (shown below), they will be able to talk to the agent for the rest of the conversation without pressing it again, similar to a phone call. If this option is disabled, the user must press the microphone button each time before saying their message.
 
 <br />
 
-<Callout icon="ℹ️">
+<Callout icon="ℹ️" theme="info">
   Voice related features, such as speech-to-text and text-to-speech consume credits. [Learn more about credits](doc:credits).
 </Callout>
 
