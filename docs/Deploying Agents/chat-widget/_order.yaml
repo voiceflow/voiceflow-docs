@@ -1,3 +1,4 @@
+- modalities
 - custom-configurations
 - chat-persistence
 - customization-configuration
@@ -8,4 +9,3 @@
 - web-chat-developer-information
 - legacy-webchat
 - domain-whitelisting-implementation-guide
-- modalities
