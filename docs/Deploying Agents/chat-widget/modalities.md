@@ -26,7 +26,7 @@ To set your web chat widget's modality, open the widget settings by pressing the
 
 ## Chat modality
 
-The chat modality is the default version of the web chat widget. When enabled, users can type messages your agent, and will see the agent's responses as text. Most people building for the web use the chat modality.
+The chat modality is the default version of the web chat widget. When enabled, users can type messages to your agent, and will see the agent's responses as text. Most people building for the web use the chat modality.
 
 When building with the chat modality, you can also optionally enable voice-focused features. These are:
 
