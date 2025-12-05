@@ -40,7 +40,9 @@ When building with the chat modality, you can also optionally enable voice-focus
 
 ## Voice modality
 
-When the voice modality is enabled, the conversation will act similarly to a phone call. This means that the conversation's message history will not be shown to the user, and the user will not need to press a button to send their message. When voice mode is enabled, the user can also interrupt the agent by speaking at the same time as it.
+When the voice modality is enabled, the conversation will act similarly to a phone call. This means that the conversation's message history will not be shown to the user, and the user will not need to press a button to send their message. However, the written message history will be saved in the conversation's transcript.
+
+When voice mode is enabled, the user can also interrupt the agent by speaking at the same time as it.
 
 <Image align="center" border={false} src="https://files.readme.io/4f5f822e92e831ac79a9b70842e7f8a69b4ec37a7019feafc7fd6e5800d4700a-Frame_48095763.png" />
 
