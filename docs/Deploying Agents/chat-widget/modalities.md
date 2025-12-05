@@ -8,7 +8,7 @@ metadata:
 ---
 Depending on your use-case, you might want to build text or voice-based conversational agents and embed them onto your website. For example:
 
-* A **law firm** may wish to have a text-only agent to ensure that all details collected are exactly what the user inputted, and not subject to text-to-speech transcriptions.
+* A **law firm** may wish to have a text-only agent to ensure that all details collected are exactly what a user inputs and not subject to text-to-speech transcriptions.
 * An **online fashion store** might use the text modality with certain voice features enabled, allowing users to have voice conversations with an agent while also allowing for [cards](doc:cards-tool) promoting products to be shown during the conversation.
 * A **car rental company** might embed a voice-only widget into their app, allowing customers from outside their home country to call customer support while driving without incurring international call charges.
 
