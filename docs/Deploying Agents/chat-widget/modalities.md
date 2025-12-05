@@ -12,7 +12,11 @@ Depending on your use-case, you might want to build text or voice-based conversa
 * An **online fashion store** might use the text modality with certain voice features enabled, allowing users to have voice conversations with an agent while also allowing for [cards](doc:cards-tool) promoting products to be shown during the conversation.
 * A **car rental company** might embed a voice-only widget into their app, allowing customers from outside their home country to call customer support while driving without incurring international call charges.
 
-Voiceflow's web chat widget supports all of these options.
+Voiceflow's web chat widget supports all of these options, allowing for almost any use-case to be built.
+
+<Callout icon="ℹ️" theme="info">
+  Voice related features, such as speech-to-text and text-to-speech consume credits. [Learn more about credits](doc:credits).
+</Callout>
 
 <br />
 
@@ -35,10 +39,6 @@ When building with the chat modality, you can also optionally enable voice-focus
 * **Voice mode** - when enabled, this setting allows conversations to take place hands-free. Once the user presses the blue "voice" button in the message input (shown below), they will be able to talk to the agent for the rest of the conversation without pressing it again, similar to a phone call. If this option is disabled, the user must press the microphone button each time before saying their message.
 
 <br />
-
-<Callout icon="ℹ️" theme="info">
-  Voice related features, such as speech-to-text and text-to-speech consume credits. [Learn more about credits](doc:credits).
-</Callout>
 
 <Image align="center" border={false} src="https://files.readme.io/a562d6bf8c6fc102f853d53b543789a16d01d5565aa13bf71add1af638cbba5d-Frame_48095764.png" />
 
