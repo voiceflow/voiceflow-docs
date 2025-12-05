@@ -12,7 +12,7 @@ Depending on your use-case, you might want to build text or voice-based conversa
 * An **online fashion store** might use the text modality with certain voice features enabled, allowing users to have voice conversations with an agent while also allowing for [cards](doc:cards-tool) promoting products to be shown during the conversation.
 * A **car rental company** might embed a voice-only widget into their app, allowing customers from outside their home country to call customer support while driving without incurring international call charges.
 
-Voiceflow's web chat widget supports all of these options, allowing for almost any use-case to be built.
+Voiceflow's web chat widget supports all of these options, allowing almost any use-case to be built.
 
 <Callout icon="ℹ️" theme="info">
   Voice related features, such as speech-to-text and text-to-speech consume credits. [Learn more about credits](doc:credits).
