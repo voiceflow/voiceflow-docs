@@ -1,5 +1,5 @@
 ---
-title: Modalities
+title: Web chat modalities
 excerpt: Embed text or voice conversational agents on the web.
 deprecated: false
 hidden: false
