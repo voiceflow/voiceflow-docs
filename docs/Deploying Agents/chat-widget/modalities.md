@@ -14,10 +14,6 @@ Depending on your use-case, you might want to build text or voice-based conversa
 
 Voiceflow's web chat widget supports all of these options, allowing almost any use-case to be built.
 
-<Callout icon="ℹ️" theme="info">
-  Voice related features, such as speech-to-text and text-to-speech consume credits. [Learn more about credits](doc:credits).
-</Callout>
-
 <br />
 
 ## Setting your modality
@@ -45,6 +41,10 @@ When building with the chat modality, you can also optionally enable voice-focus
 <br />
 
 ## Voice modality
+
+<Callout icon="ℹ️" theme="info">
+  Voice related features, such as speech-to-text and text-to-speech consume credits. [Learn more about credits](doc:credits).
+</Callout>
 
 When the voice modality is enabled, the conversation will act similarly to a phone call. This means that the conversation's message history will not be shown to the user, and the user will not need to press a button to send their message. However, the written message history will be saved in the conversation's transcript.
 
