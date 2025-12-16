@@ -18,10 +18,10 @@ name: Example Suite
 description: Suite used as an example
 # Environment name of your Voiceflow agent. It could be development, or production.
 environmentName: development
-# You can have multiple tests defined in separated files
 # Optional: Create a new user session for each test (default: false)
 # When enabled, each test will run with a fresh user session
 newSessionPerTest: true
+# You can have multiple tests defined in separated files
 tests:
   # ID of the test.
   - id: test_id
