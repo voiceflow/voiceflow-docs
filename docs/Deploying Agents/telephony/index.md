@@ -14,7 +14,7 @@ Voiceflow integrates with **Twilio** and **Vonage**, allowing you to connect a p
 
 <br />
 
-<Image align="center" src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
+<Image align="center" border={false} src="https://files.readme.io/8428ebe6c40486a6eebd700a972125273115c25bd3d4c0ea56ae7abf3533e507-Voiceflow_Slack.png" />
 
 <br />
 
@@ -92,7 +92,7 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
      4. *Optionally*, add a friendly name for your number.
      5. Click *Import* to connect your Vonage account.
 
-     <Image align="center" width="350px" height="auto" src="https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png" />
+     <Image align="center" src="https://files.readme.io/4de3cae624ebbfe750d85b790a0299a851cf0f6ecf92a68cab88750c78efcc18-CleanShot_2025-08-18_at_16.25.382x.png" width="350px" height="auto" />
 
   3. **Enable the integration in Voiceflow (from Agent)**
      1. Open your Voiceflow agent and go to the *Integrations* > *Telephony* tab.
@@ -116,11 +116,11 @@ Importing phone numbers from Vonage lets you use your existing Vonage numbers in
 
 ## Change the Agent Assigned to a Phone Number
 
-1. Go to the *Integrations* > *Telephony* tab for the agent you want to unassign.
-2. Under Phone Numbers, click the *Unassign* option in the more menu next to the number.
+1. Go to the _Interfaces_ > _Telephony_ tab for the agent you want to unassign.
+2. Under Phone Numbers, click the _Unassign_ option in the more menu next to the number.
 3. Navigate to the same tab in the agent you want to reassign the number to.
-4. Click *Assign existing number* and select the newly unassigned number.
-5. Choose the environment and click *Assign number*.
+4. Click _Assign existing number_ and select the newly unassigned number.
+5. Choose the environment and click _Assign number_.
 
 <br />
 
