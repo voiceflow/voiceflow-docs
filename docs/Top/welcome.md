@@ -11,10 +11,6 @@ metadata:
   description: ''
   robots: index
 ---
-<TicoFormHome />
-
-<br />
-
 ## Build an AI agent
 
 <div class="home-grid">
