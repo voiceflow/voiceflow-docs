@@ -13,10 +13,6 @@ metadata:
 ---
 <TicoFormHome />
 
-## New on Voiceflow
-
-<NewFeaturePromo />
-
 <br />
 
 ## Build an AI agent
