@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Each conversation that a user has with a Voiceflow agent happens within a **chat session**. This chat session is tied to a `user_id` and contains everything related to a single conversation's state, such as its message history, [variables](doc:variables), and other data visible through the [Dialogue Manager API](ref:stateinteract-1). This means that as the user continues to interact with your agent using the same `user_id`, they will remain in the same chat session, meaning they'll continue where they left off in the conversation..
+Each conversation that a user has with a Voiceflow agent happens within a **chat session**. This chat session is tied to a `user_id` and contains everything related to a single conversation's state, such as its message history, [variables](doc:variables), and other data visible through the [Dialogue Manager API](ref:stateinteract-1). This means that as the user continues to interact with your agent using the same `user_id`, they will remain in the same chat session, meaning they'll continue where they left off in the conversation.
 
 <br />
 
