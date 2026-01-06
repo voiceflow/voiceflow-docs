@@ -16,7 +16,7 @@ By default, chat sessions will only end when:
 * **The user chooses to end the session** - for example, they hang up on a voice call, or click the close button on the web chat widget.
 * **The project reaches a point where there is no continuing** - such as an [End step](doc:todo-end-step) or an [exit condition](https://docs.voiceflow.com/docs/agents#exit-conditions) that isn't linked to any further steps.
 * **A technical issue forces the conversation to end** - such as the user's connection to a voice call dropping.
-* **When using the web chat widget, the [chat persistence](doc:chat-persistence) results in the conversation expiring**.
+* **When using the web chat widget, the [chat persistence](doc:chat-persistence) results in the conversation expiring** - for example, the `sessionStorage` option is enabled and the user closes all of their browser's tabs.
 
 This means that in some cases, a chat session can last for a significant amount of time. For example, if a conversation takes place via Voiceflow's [Dialogue Manager API](ref:stateinteract-1) or [Zapier integration](doc:zapier) and is connected to an email tool, a chat session could last weeks on a back-and-forth email thread.
 
