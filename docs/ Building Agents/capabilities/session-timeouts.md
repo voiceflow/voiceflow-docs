@@ -54,8 +54,14 @@ For example, imagine a user with the`user_id` of `Connor`  is mid-way through a 
 
 ### What happens to a transcript when a chat session ends?
 
-Each [transcript](doc:transcripts) is tied to a chat session, meaning all messages within a single chat session will be shown in a single transcript (and only those messages). 
+Each [transcript](doc:transcripts) is tied to a chat session, meaning all messages within a single chat session will be shown in a single transcript (and only those messages).
 
 When a chat session ends, the transcript will no longer be marked as **in progress** when viewed on Voiceflow. When using [Voiceflow's API to pull a transcript](ref:transcriptpubliccontroller_findonewithlogs), the `endedAt` value will be set to the time that the chat session ended.
 
 Once a transcript is no longer marked as in progress and has a `endedAt` value set, it is guaranteed to no longer update. Any further messages sent by the user will begin the conversation from the default state in a new chat session and transcript.
+
+<br />
+
+### How do my chat sessions affect my evaluations?
+
+To ensure useful analytics are available, [Evaluations](doc:evaluations) are only run when a chat session is finished. If you're a heavy user of evaluations, you may wish to [enable the idle timeout setting](https://docs.voiceflow.com/docs/session-timeouts#enabling-session-inactivity-timeouts) to ensure the timely generation of evaluation results.
