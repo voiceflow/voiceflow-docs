@@ -19,12 +19,6 @@ Transcripts are valuable for:
 
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk3UGza4xvHiSLdUJE7T2askXuFCm1RcjpZWMz" />
 
-> ⚠️ Ensure audio recordings are toggled on!
->
-> Call recordings need to be enabled in **transcript settings** to retrieve audio files for a conversation's transcript. Click on the ⚙️ icon to view settings.
->
-> <Image border={false} src="https://files.readme.io/3661fb308989555f5dd9d73bff0b3c98dee98dc1498f709b56fa408daf414e92-CleanShot_2025-07-30_at_11.06.542x.png" />
-
 ## Analyzing transcripts
 
 Transcripts are tied to **individual** agents, not the overall workspace. Each transcript provides information including:
