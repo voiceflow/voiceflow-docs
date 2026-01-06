@@ -6,9 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-## What are transcripts?
-
-Transcripts are automatically generated logs of conversations between users and your agent. They capture both user input and agent responses across voice and chat interactions.
+Transcripts are automatically generated logs of conversations between users and your agent. They capture both user input and agent responses across voice and chat interactions. Each transcript is tied to a [chat session](doc:session-timeouts).
 
 Transcripts are valuable for:
 
