@@ -47,6 +47,6 @@ If a user continues interacting with your agent using the same `user_id`, they'l
 
 ### What happens if a chat session tied to a specific `user_id` ends, but then I send a message or event using the same `user_id`?
 
-If a chat session tied to a s
+If a chat session tied to a `user_id` ends, but then the same `user_id` is used to send a new message or event, the conversation will reset to the beginning.
 
 For example, imagine a user with the`user_id` of `Connor`  is mid-way through a conversation your agent on his laptop. Your agent has the idle timeout option enabled and set to 3600 seconds (one hour). If Connor decides to go on a four hour hike mid-conversation, when he returns, his conversation will have ended. If he sends another message with the same `user_id` (`Connor`), he'll start the conversation from the beginning your agent's workflow.
