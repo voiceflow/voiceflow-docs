@@ -1,5 +1,6 @@
 ---
 title: Session timeouts
+excerpt: Manage when a conversation ends and evaluations are generated.
 deprecated: false
 hidden: false
 metadata:
