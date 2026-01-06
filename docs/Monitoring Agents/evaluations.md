@@ -14,7 +14,7 @@ You might use evaluations to check if:
 * The agent responded with a specific confirmation (e.g. “I’ve uploaded that for you”).
 * The agent avoided restricted terms or phrases.
 
-Evaluations run automatically on transcripts and surface their results directly in the transcript view.
+Evaluations are automatically run on complete transcripts and surface their results directly in the transcript view.
 
 <Callout icon="ℹ️" theme="info">
   **Evaluations consume credits.**
