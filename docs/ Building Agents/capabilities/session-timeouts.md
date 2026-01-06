@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Each conversation that a user has with a Voiceflow agent happens within a **chat session**. This chat session is tied to a `user_id` and contains everything related to a single conversation's state, such as its message history, [variables](doc:variables), and other data visible through the [Dialogue Manager API](ref:stateinteract-1). This means that as the user continues to interact with your agent using the same `user_id`, they will remain in the same chat session, meaning they'll continue where they left off in the conversation.
+Each conversation that a user has with a Voiceflow agent happens within a **chat session**. This chat session is tied to a `user_id` and contains everything related to a single conversation's state, such as its message history, [variables](doc:variables), and other data visible through the [Dialogue Manager API](ref:stateinteract-1). This means that as the user continues to interact with your agent using the same `user_id`, they will remain in the same chat session, meaning they'll continue where they left off in the conversation..
 
 <br />
 
@@ -30,7 +30,6 @@ To enable the inactivity timeout, open your agent's settings, then select **Beha
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSRtWX4tFNQ3iypoMFaJZwq9en7SuAdfDmCvL1" />
 
-
 ## Frequently asked questions
 
 ### What is the `user_id` variable?
@@ -50,3 +49,13 @@ If a user continues interacting with your agent using the same `user_id`, they'l
 If a chat session tied to a `user_id` ends, but then the same `user_id` is used to send a new message or event, the conversation will reset to the beginning. No variables or chat history will persist in the new conversation, and a new transcript will be generated.
 
 For example, imagine a user with the`user_id` of `Connor`  is mid-way through a conversation your agent on his laptop. Your agent has the idle timeout option enabled and set to 3600 seconds (one hour). If Connor decides to go on a four hour hike mid-conversation, when he returns, his conversation will have ended. If he sends another message with the same `user_id` (`Connor`), he'll start the conversation from the beginning your agent's workflow.
+
+<br />
+
+### What happens to a transcript when a chat session ends?
+
+Each [transcript](doc:transcripts) is tied to a chat session, meaning all messages within a single chat session will be shown in a single transcript (and only those messages). 
+
+When a chat session ends, the transcript will no longer be marked as **in progress** when viewed on Voiceflow. When using [Voiceflow's API to pull a transcript](ref:transcriptpubliccontroller_findonewithlogs), the `endedAt` value will be set to the time that the chat session ended.
+
+Once a transcript is no longer marked as in progress and has a `endedAt` value set, it is guaranteed to no longer update. Any further messages sent by the user will begin the conversation from the default state in a new chat session and transcript.
