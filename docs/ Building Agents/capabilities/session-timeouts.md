@@ -27,6 +27,8 @@ For some use-cases, you may wish to automatically end all chat sessions after a 
 
 To enable the inactivity timeout, open your agent's settings, then select **Behaviour** > **General**. Then, toggle on the **Timeout** option. You'll be able to configure your **idle timeout** setting to any value between 60 seconds and 43200 seconds (12 hours).
 
+<Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSRtWX4tFNQ3iypoMFaJZwq9en7SuAdfDmCvL1" />
+
 ## Frequently asked questions
 
 ### What is the `user_id` variable?
