@@ -30,6 +30,7 @@ To enable the inactivity timeout, open your agent's settings, then select **Beha
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSRtWX4tFNQ3iypoMFaJZwq9en7SuAdfDmCvL1" />
 
+
 ## Frequently asked questions
 
 ### What is the `user_id` variable?
@@ -41,3 +42,11 @@ The `user_id` variable is a unique value that identifies a specific chat session
 * When working with the [Dialogue Manager API](ref:stateinteract-1), you must manually set the `user_id`.
 
 If a user continues interacting with your agent using the same `user_id`, they'll continue with the same conversation, provided the chat session has not ended.
+
+<br />
+
+### What happens if a chat session tied to a specific `user_id` ends, but then I send a message or event using the same `user_id`?
+
+If a chat session tied to a s
+
+For example, imagine a user with the`user_id` of `Connor`  is mid-way through a conversation your agent on his laptop. Your agent has the idle timeout option enabled and set to 3600 seconds (one hour). If Connor decides to go on a four hour hike mid-conversation, when he returns, his conversation will have ended. If he sends another message with the same `user_id` (`Connor`), he'll start the conversation from the beginning your agent's workflow.
