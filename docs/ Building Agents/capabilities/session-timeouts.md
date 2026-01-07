@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Each conversation that a user has with a Voiceflow agent happens within a **chat session**. This chat session is tied to a `user_id` and contains everything related to a single conversation's state, such as its message history, [variables](doc:variables), and other data visible through the [Dialogue Manager API](ref:stateinteract-1). This means that as the user continues to interact with your agent using the same `user_id`, they will remain in the same chat session, meaning they'll continue where they left off in the conversation.
+Each conversation that a user has with a Voiceflow agent happens within a **chat session**. This chat session is tied to a `user_id` and contains everything related to a single conversation's state, such as its message history and other data visible through the [Dialogue Manager API](ref:stateinteract-1). This means that as the user continues to interact with your agent using the same `user_id`, they will remain in the same chat session, meaning they'll continue where they left off in the conversation.
 
 <br />
 
@@ -14,7 +14,7 @@ Each conversation that a user has with a Voiceflow agent happens within a **chat
 
 By default, chat sessions will only end when:
 
-* **The user chooses to end the session** - for example, they hang up on a voice call, or click the close button on the web chat widget.
+* **The user chooses to end the session** - for example, they hang up on a voice call.
 * **The project reaches a point where there is no continuing** - such as an [End step](doc:todo-end-step) or an [exit condition](https://docs.voiceflow.com/docs/agents#exit-conditions) that isn't linked to any further steps.
 * **A technical issue forces the conversation to end** - such as the user's connection to a voice call dropping.
 * **When using the web chat widget, the [chat persistence settings](doc:chat-persistence) result in the conversation expiring** - for example, the `sessionStorage` option is enabled and the user closes all of their browser's tabs.
@@ -47,7 +47,7 @@ If a user continues interacting with your agent using the same `user_id`, they'l
 
 ### What happens if a chat session tied to a specific `user_id` ends, but then I send a message or event using the same `user_id`?
 
-If a chat session tied to a `user_id` ends, but then the same `user_id` is used to send a new message or event, the conversation will reset to the beginning. No variables or chat history will persist in the new conversation, and a new transcript will be generated.
+If a chat session tied to a `user_id` ends, but then the same `user_id` is used to send a new message or event, the conversation will reset to the beginning. No chat history will persist in the new conversation, and a new transcript will be generated. Variables tied to a `user_id` will persist between chat sessions.
 
 For example, imagine a user with the`user_id` of `Connor`  is mid-way through a conversation your agent on his laptop. Your agent has the idle timeout option enabled and set to 3600 seconds (one hour). If Connor decides to go on a four hour hike mid-conversation, when he returns, his conversation will have ended. If he sends another message with the same `user_id` (`Connor`), he'll start the conversation from the beginning your agent's workflow.
 
