@@ -11,8 +11,6 @@ metadata:
   description: ''
   robots: index
 ---
-<br />
-
 <TicoFormHome />
 
 ## Build an AI agent
