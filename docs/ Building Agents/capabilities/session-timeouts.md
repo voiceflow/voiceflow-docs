@@ -66,3 +66,9 @@ Once a transcript is no longer marked as in progress and has a `endedAt` value s
 ### How do my chat sessions affect my evaluations?
 
 To ensure useful analytics are available, [Evaluations](doc:evaluations) are only run when a chat session is finished. If you're a heavy user of evaluations, you may wish to [enable the idle timeout setting](https://docs.voiceflow.com/docs/session-timeouts#enabling-session-inactivity-timeouts) to ensure the timely generation of evaluation results.
+
+<br />
+
+### Are session timeouts fully supported on all Voiceflow interfaces?
+
+Session timeouts are currently only fully supported when using Voiceflow's [Web chat widget](doc:chat-widget) an [Phone](doc:telephony) integration. Conversations taking place through Voiceflow's [Dialogue Manager API](ref:stateinteract-1) may experience unexpected behaviour if the timeout option is enabled.
