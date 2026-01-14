@@ -25,6 +25,10 @@ This means that in some cases, a chat session can last for a significant amount 
 
 ## Enabling session inactivity timeouts
 
+<Callout icon="❗️">
+  Session timeouts are currently only fully supported when using Voiceflow's [Web chat widget](doc:chat-widget) an [Phone](doc:telephony) [Dialogue Manager API]( integration. Conversations taking place through Voiceflow's ref:stateinteract-1) may experience unexpected behaviour if the timeout option is enabled.
+</Callout>
+
 For some use-cases, you may wish to automatically end all chat sessions after a period of inactivity. This can be useful if you're using an external tool to analyze previous conversations via [Voiceflow's transcript API](ref:transcriptpubliccontroller_findonewithlogs) and want to build guardrails around processing incomplete conversations.
 
 To enable the inactivity timeout, open your agent's settings, then select **Behaviour** > **General**. Then, toggle on the **Timeout** option. You'll be able to configure your **idle timeout** setting to any value between 60 seconds and 43200 seconds (12 hours).
@@ -66,9 +70,3 @@ Once a transcript is no longer marked as in progress and has a `endedAt` value s
 ### How do my chat sessions affect my evaluations?
 
 To ensure useful analytics are available, [Evaluations](doc:evaluations) are only run when a chat session is finished. If you're a heavy user of evaluations, you may wish to [enable the idle timeout setting](https://docs.voiceflow.com/docs/session-timeouts#enabling-session-inactivity-timeouts) to ensure the timely generation of evaluation results.
-
-<br />
-
-### Are session timeouts fully supported on all Voiceflow interfaces?
-
-Session timeouts are currently only fully supported when using Voiceflow's [Web chat widget](doc:chat-widget) an [Phone](doc:telephony) integration. Conversations taking place through Voiceflow's [Dialogue Manager API](ref:stateinteract-1) may experience unexpected behaviour if the timeout option is enabled.
