@@ -35,6 +35,8 @@ To enable the inactivity timeout, open your agent's settings, then select **Beha
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSRtWX4tFNQ3iypoMFaJZwq9en7SuAdfDmCvL1" />
 
+<br />
+
 ## Frequently asked questions
 
 ### What is the `user_id` variable?
