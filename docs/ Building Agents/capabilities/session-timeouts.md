@@ -26,7 +26,7 @@ This means that in some cases, a chat session can last for a significant amount 
 ## Enabling session inactivity timeouts
 
 <Callout icon="❗️" theme="error">
-  Session timeouts are currently only fully supported when using Voiceflow's [Web chat widget](doc:chat-widget) and [Phone](doc:telephony) integration. Conversations taking place through Voiceflow's [Dialogue Manager API](ref:stateinteract-1) may experience unexpected behaviour if the timeout option is enabled.
+  Session timeouts are currently only fully supported when using Voiceflow's [Web chat widget](doc:chat-widget) and [Phone](doc:telephony) integration. Conversations taking place through Voiceflow's [Dialogue Manager API](ref:stateinteract-1) may experience unexpected behaviour if the timeout option is enabled. We recommend leaving this option disabled if you're working with the Dialogue Manager API.
 </Callout>
 
 For some use-cases, you may wish to automatically end all chat sessions after a period of inactivity. This can be useful if you're using an external tool to analyze previous conversations via [Voiceflow's transcript API](ref:transcriptpubliccontroller_findonewithlogs) and want to build guardrails around processing incomplete conversations.
