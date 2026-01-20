@@ -6,9 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-## What are transcripts?
-
-Transcripts are automatically generated logs of conversations between users and your agent. They capture both user input and agent responses across voice and chat interactions.
+Transcripts are automatically generated logs of conversations between users and your agent. They capture both user input and agent responses across voice and chat interactions. Each transcript is tied to a [chat session](doc:session-timeouts).
 
 Transcripts are valuable for:
 
@@ -18,12 +16,6 @@ Transcripts are valuable for:
 * Maintaining a history of conversations for review or auditing
 
 <Video src="https://w17llroiln.ufs.sh/f/JH4JLc5mceYk3UGza4xvHiSLdUJE7T2askXuFCm1RcjpZWMz" />
-
-> ⚠️ Ensure audio recordings are toggled on!
->
-> Call recordings need to be enabled in **transcript settings** to retrieve audio files for a conversation's transcript. Click on the ⚙️ icon to view settings.
->
-> <Image border={false} src="https://files.readme.io/3661fb308989555f5dd9d73bff0b3c98dee98dc1498f709b56fa408daf414e92-CleanShot_2025-07-30_at_11.06.542x.png" />
 
 ## Analyzing transcripts
 
