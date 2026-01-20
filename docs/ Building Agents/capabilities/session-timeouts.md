@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-<Callout icon="ℹ️">
+<Callout icon="ℹ️" theme="info">
   This feature is currently being rolled out to all users and may not be available to you yet.
 </Callout>
 
@@ -37,7 +37,7 @@ This means that in some cases, a chat session can last for a significant amount 
 
 For some use-cases, you may wish to automatically end all chat sessions after a period of inactivity. This can be useful if you're using an external tool to analyze previous conversations via [Voiceflow's transcript API](ref:transcriptpubliccontroller_findonewithlogs) and want to build guardrails around processing incomplete conversations.
 
-To enable the inactivity timeout, open your agent's settings, then select **Behaviour** > **General**. Then, toggle on the **Timeout** option. You'll be able to configure your **idle timeout** setting to any value between 60 seconds and 43200 seconds (12 hours).
+To enable the inactivity timeout, open your agent's settings, then select **Behaviour** > **General**. Then, toggle on the **Timeout** option. You'll be able to configure your **idle timeout** setting.
 
 <Video src="https://yz5du1veb1.ufs.sh/f/9fKud4NeF5NSRtWX4tFNQ3iypoMFaJZwq9en7SuAdfDmCvL1" />
 
