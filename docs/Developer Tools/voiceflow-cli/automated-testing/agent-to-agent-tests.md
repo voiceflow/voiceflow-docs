@@ -22,11 +22,11 @@ There are two types of agent-to-agent testing available:
 
 <br />
 
-1. **🚀 Initialization**: An AI agent is configured with a specific goal, persona, and user information
-2. **💬 Conversation Start**: The AI agent launches a conversation with your Voiceflow agent
-3. **🤖 Dynamic Interaction**: The AI agent responds naturally to your agent's messages, adapting to different conversation paths
-4. **📋 Information Requests**: When your agent requests user information, the AI agent provides predefined data or generates realistic responses
-5. **🎯 Goal Tracking**: The system continuously evaluates progress toward the specified goal
+1. **🚀 Initialization**: Two Voiceflow agents are configured - one as the tester and one as the target
+2. **💬 Conversation Start**: Both agents are launched simultaneously
+3. **🔧 Variable Setup**: Optional variables are set in both agents using the State Variables API
+4. **🤖 Agent Interaction**: The tester agent conducts a conversation with your target agent
+5. **🎯 Goal Tracking**: OpenAI evaluates whether the specified goal is achieved based on the conversation
 6. **✅ Completion**: The test succeeds when the goal is achieved or times out after maximum steps
 
 ### Voiceflow Agent-to-Agent Testing Flow
@@ -87,6 +87,12 @@ agent:
   openAIConfig:
     model: gpt-4o
     temperature: 0.3
+  # Optional: Variables to set in the target agent being tested after launch
+  # Note: Target agent variables are only set when newSessionPerTest is enabled in the suite
+  voiceflowAgentTargetConfig:
+    variables:
+      service_list: "basic, premium, enterprise"
+      greeting_message: "Welcome to our service! How can I assist you today?"
   voiceflowAgentTesterConfig:
     environmentName: "production"  # Environment of the tester agent
     apiKey: "VF.DM.your-tester-agent-api-key"
@@ -176,6 +182,22 @@ Configures a Voiceflow agent to act as the tester instead of using OpenAI. When 
 * Variables are set immediately after the launch event, allowing you to initialize the tester agent's state for each test
 * OpenAI is still used for goal evaluation even when using Voiceflow agent testing
 
+<br />
+
+#### `voiceflowAgentTargetConfig` (Voiceflow Agent-to-Agent Testing Only)
+
+Configures variables for the target Voiceflow agent being tested. This allows you to initialize the target agent's state for each test run.
+
+**Properties:**
+
+* `variables` (Optional): A map of variables to set in the target agent after the launch event. These variables will be set using the [Voiceflow State Variables API](https://docs.voiceflow.com/reference/updatestatevariables-1) after launching the target agent.
+
+**Important Notes:**
+
+* Variables are only set when `newSessionPerTest` is enabled (since the target agent needs to be launched)
+* This is useful for setting up test data or initial state in the agent being tested
+* Variables are set after the launch event but before the conversation begins
+
 **Example:**
 
 ```yaml
@@ -197,6 +219,12 @@ agent:
   openAIConfig:
     model: gpt-4o
     temperature: 0.3  # Used only for goal evaluation
+  # Optional: Variables to set in the target agent being tested after launch
+  # Note: Target agent variables are only set when newSessionPerTest is enabled in the suite
+  voiceflowAgentTargetConfig:
+    variables:
+      service_list: "basic, premium, enterprise"
+      greeting_message: "Welcome to our service! How can I assist you today?"
   voiceflowAgentTesterConfig:
     environmentName: "production"
     apiKey: "VF.DM.your-tester-agent-key"
