@@ -92,6 +92,12 @@ agent:
     apiKey: "VF.DM.your-tester-agent-api-key"
   # Note: userInformation is not used with Voiceflow agent testing
   # The tester agent should be pre-configured with any needed information
+    # Optional: Set variables in the tester agent
+    variables:
+      user_name: "John Doe"
+      user_id: "12345"
+      booking_type: "hotel"
+      check_in_date: "2026-02-15"
 ```
 
 ### Configuration Properties
