@@ -158,7 +158,7 @@
   },
   "servers": [
     {
-      "url": "https://tests.voiceflow.com/"
+      "url": "//localhost:8080"
     }
   ],
   "components": {
@@ -527,10 +527,13 @@
           },
           "environmentName": {
             "type": "string"
+          },
+          "variables": {
+            "type": "object",
+            "additionalProperties": true
           }
         }
       }
     }
-  },
-  "x-readme": {}
+  }
 }
