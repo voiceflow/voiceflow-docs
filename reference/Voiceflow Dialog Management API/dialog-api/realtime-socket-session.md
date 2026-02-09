@@ -66,3 +66,9 @@ socket.on('connect', () => {
 ```
 
 <br />
+
+# Client events
+
+# Server events
+
+<br />
