@@ -31,12 +31,13 @@ const socket = io('https://general-runtime.voiceflow.com', {
 
 ### Initialization Lifecycle
 
-1. wait for `'connect'`. This is a socket.io level connection established.
-2. send `'client.start'`. Send voiceflow project metadata/config + optional `sessionKey`
-3. wait for `'client.created'`. Voiceflow client handshake.
-   If `newSessionRequired`:
-   1. send `'session.create'`
-   2. wait for `'session.created'`, save returned `sessionKey` for future use
+1. wait for `connect`. This is a socket.io level connection established.
+2. send `client.start`. Send voiceflow project metadata/config + optional `sessionKey`
+3. wait for `client.created`. Voiceflow client handshake.
+   <br />
+   If `newSessionRequired === true`:
+   1. send `session.create`
+   2. wait for `session.created`, save returned `sessionKey` for future use
 4. agent is now ready for interactions
 
 ```
