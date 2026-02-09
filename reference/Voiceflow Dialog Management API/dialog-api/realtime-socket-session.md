@@ -31,9 +31,11 @@ const socket = io('https://general-runtime.voiceflow.com', {
 
 ### Initialization Lifecycle
 
-1. wait for `socket.on('connect')`. This is a socket.io level connection established.
-2. send `socket.emit('client.start', metadata)`. Voiceflow level metadata for client initialization.
-3. wait for `socket.on('client.created')`. Voiceflow level client handshake
+1. wait for `'connect'`. This is a socket.io level connection established.
+2. send `'client.start'`. Voiceflow level metadata, and optional existing `sessionKey` for client initialization.
+3. wait for `'client.created'`. Voiceflow level client handshake, that specifies `newSessionRequired: true | false`. If `newSessionRequired`:
+   1. send `'session.create'`
+   2. wait for `'session.created'`, save returned `sessionKey` to use for future reconnections as part of  the `client.start` payload.
 
 ```
 // save sessionKey on client side for future reconnections
@@ -43,13 +45,17 @@ let sessionKey: string | undefined;
 socket.on('connect', () => { 
 
   // voiceflow client handshake
-  socket.emit('client.start', { ...metadata, sessionKey });
+  socket.emit('client.start', { sessionKey, ...metadata });
   socket.once('client.started', (payload) => {
-    if (payload.newSessionRequired) {
-      socket.emit('session.create');	
+    if (payload.newSessionRequired === true) {
+			// session create handshake
+      socket.emit('session.create', {});	
       socket.once('session.created', (payload) => {
-        sessionKey = payload.sessionKey; // ready to send actions }); 
+        sessionKey = payload.sessionKey;
+        ready();
       });
+    } else {
+			ready();
 		}
   });
 })
