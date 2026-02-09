@@ -41,6 +41,7 @@ let sessionKey: string | undefined;
 
 // socket.io level connection
 socket.on('connect', () => { 
+
   // voiceflow client handshake
   socket.emit('client.start', { ...metadata, sessionKey });
   socket.once('client.started', (payload) => {
