@@ -6,13 +6,13 @@ hidden: true
 metadata:
   robots: index
 ---
-### Overview
+# Overview
 
 The Voiceflow WebSocket runtime uses [socket.io](https://socket.io/) to establish persistent, bidirectional connections for real-time conversational AI interactions.
 
 Find the [socket.io client](https://github.com/socketio) in your respective development language. This documentation will use javascript, but the fundamentals remain the same.
 
-### Connection Configuration
+### Connection configuration
 
 ```javascript
 import { io } from 'socket.io-client';
@@ -29,7 +29,9 @@ const socket = io('https://general-runtime.voiceflow.com', {
 });
 ```
 
-### Initialization Lifecycle
+# Lifecycle
+
+### Initialization sequence
 
 1. Wait for `connect`. This is a socket.io level connection established.
 2. Send `client.start`. Send voiceflow project metadata/config + optional `sessionKey`.
@@ -62,3 +64,5 @@ socket.on('connect', () => {
   });
 })
 ```
+
+<br />
