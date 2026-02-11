@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 ---
-<Callout icon="🚧">
+<Callout icon="🚧" theme="warn">
   The `/v4/interact/socket` endpoint is still in beta and potentially subject to minor changes.
 </Callout>
 
@@ -37,7 +37,7 @@ const socket = io('https://general-runtime.voiceflow.com', {
 
 For more information on socket.io lifecycle management, reference [documentation](https://socket.io/docs/v4/client-api/).
 
-### Initialization sequence
+## Initialization sequence
 
 1. Wait for `connect`. This is a socket.io level connection established.
 2. Send `client.start`. Send voiceflow project metadata/config + optional `sessionKey`.
@@ -71,9 +71,9 @@ socket.on('connect', () => {
 })
 ```
 
-### Action Lifecycle
+## Action Lifecycle
 
-Once the session is ready, you can now send actions to the agent and get responses back.  
+Once the session is ready, you can now send actions to the agent and get responses back.
 
 1. send new action with `action.send`, i.e. `{ type: 'text', payload: 'hello' }`
 2. get back a status `action.status` either `status: 'accepted' | 'rejected'`
@@ -81,15 +81,15 @@ Once the session is ready, you can now send actions to the agent and get respons
    1. get back agent responses with `action.trace`, display to user
    2. get `action.status` with `status: 'completed'`
 
-This represents the back and forth conversation with the agent.  
+This represents the back and forth conversation with the agent.
 
 <Callout icon="📘" theme="info">
-  Try to not send a new action while an existing action is running. While this is supported, it can make it harder to debug user state and lead to certain race conditions.  
+  Try to not send a new action while an existing action is running. While this is supported, it can make it harder to debug user state and lead to certain race conditions.
 
   Instead wait for `status: 'completed'` or `status: 'rejected'` after sending an action.
 </Callout>
 
-### Conversation Lifecycle
+## Conversation Lifecycle
 
 To start the conversation from the beginning, your first action should be:
 
@@ -111,11 +111,11 @@ socket.emit('action.send', {
 
 # Client events
 
-### `client.start`
+## `client.start`
 
 Initial Voiceflow metadata and configuration to validate and set up the client. This is aways the first message that the client should send to the server after socket.io successfully connects. Server will respond with `client.started`.
 
-#### Payload
+### Payload
 
 `?:` denotes optional properties.
 
@@ -139,7 +139,7 @@ interface ClientStartPayload {
 }
 ```
 
-#### Example Call
+### Example Call
 
 ```typescript
 socket.emit('client.start', {
@@ -157,7 +157,7 @@ socket.emit('client.start', {
 
 <br />
 
-### `session.create`
+## `session.create`
 
 Creates a new session for the user. Should be sent after `client.started` indicates `newSessionRequired: true`. Server will respond with `session.created`.
 
@@ -169,13 +169,13 @@ socket.emit('session.create', {});
 
 <br />
 
-### `action.send`
+## `action.send`
 
-Sends a user action to the server. A valid session must already exist. Server will respond with `action.status` and `action.trace` events. 
+Sends a user action to the server. A valid session must already exist. Server will respond with `action.status` and `action.trace` events.
 
 [See possible action types in the `action` body of interaction requests.](https://docs.voiceflow.com/reference/stateinteract-1#body-params).
 
-#### Payload
+### Payload
 
 ```typescript
 interface ActionSendPayload {
@@ -199,11 +199,11 @@ socket.emit('action.send', {
 
 # Server events
 
-### `client.started`
+## `client.started`
 
 Server ack to `client.start`,  informs if a new session needs to be created
 
-#### Payload
+### Payload
 
 ```typescript
 interface ClientStartedPayload {
@@ -225,11 +225,11 @@ socket.on('client.started', (payload: ClientStartedPayload) => {
 
 <br />
 
-### `session.created`
+## `session.created`
 
 Confirms that a new session has been created. Client should store the `sessionKey` for future reconnections.
 
-#### Payload
+### Payload
 
 ```typescript
 interface SessionCreatedPayload {
@@ -248,11 +248,11 @@ socket.on('session.created', (payload: SessionCreatedPayload) => {
 
 <br />
 
-### `session.ended`
+## `session.ended`
 
 Indicates that the conversation session has ended. Client should close the session and optionally display a workflow to create a new one.
 
-#### Payload
+### Payload
 
 ```typescript
 interface SessionEndedPayload {
@@ -262,11 +262,11 @@ interface SessionEndedPayload {
 
 <br />
 
-### `action.trace`
+## `action.trace`
 
 Represents agent responses and debugging information for an action. [See possible trace types](https://docs.voiceflow.com/reference/trace-types).
 
-#### Payload
+### Payload
 
 ```typescript
 type ActionTracePayload = {
@@ -286,7 +286,7 @@ socket.on('action.trace', (payload: ActionTracePayload) => {
 
 <br />
 
-### `action.status`
+## `action.status`
 
 Indicates the status of an action that was sent via `action.send`. This event is sent when an action is accepted, rejected, or completed.
 
@@ -302,11 +302,11 @@ interface ActionStatusPayload {
 
 <br />
 
-### `server.restart`
+## `server.restart`
 
 Server is gracefully shutting down and informing the client to reconnect to a different server instance.
 
-#### Payload
+### Payload
 
 ```typescript
 interface ServerRestartPayload {
@@ -321,11 +321,11 @@ interface ServerRestartPayload {
 
 <br />
 
-### `error`
+## `error`
 
 General error message from the server. May occur at any point during the connection.
 
-#### Payload
+### Payload
 
 ```typescript
 interface ErrorPayload {
