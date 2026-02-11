@@ -247,7 +247,7 @@ socket.on('client.started', (payload: ClientStartedPayload) => {
     socket.emit('session.create', {});
   } else {
     // session is now ready for interactions
-	}
+  }
 });
 ```
 
