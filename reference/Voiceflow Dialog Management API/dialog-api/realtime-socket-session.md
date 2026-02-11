@@ -65,7 +65,7 @@ socket.on('connect', () => {
       return ready();
     }
     
-		// session create handshake
+    // session create handshake
     socket.emit('session.create', {});	
     socket.once('session.created', (payload: { sessionKey: string }) => {
       sessionKey = payload.sessionKey;
