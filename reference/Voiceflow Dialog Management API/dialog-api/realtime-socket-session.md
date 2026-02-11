@@ -41,7 +41,7 @@ const socket = io('https://general-runtime.voiceflow.com', {
 
 For more information on socket.io lifecycle management, reference [documentation](https://socket.io/docs/v4/client-api/).
 
-## Initialization sequence
+### Initialization sequence
 
 1. Wait for `connect`. This is a socket.io level connection established.
 2. Send `client.start`. Send voiceflow project metadata/config + optional `sessionKey`.
@@ -75,7 +75,7 @@ socket.on('connect', () => {
 })
 ```
 
-## Action Lifecycle
+### Action Lifecycle
 
 Once the session is ready, you can now send actions to the agent and get responses back.
 
@@ -93,7 +93,7 @@ This represents the back and forth conversation with the agent.
   Instead wait for `status: 'completed'` or `status: 'rejected'` after sending an action.
 </Callout>
 
-## Conversation Lifecycle
+### Conversation Lifecycle
 
 #### Start
 
