@@ -62,7 +62,7 @@ socket.on('connect', () => {
   socket.emit('client.start', { sessionKey, ...metadata });
   socket.once('client.started', (payload: { newSessionRequired: boolean }) => {
     if (payload.newSessionRequired === false) {
-			return ready();
+      return ready();
     }
     
 		// session create handshake
@@ -144,7 +144,7 @@ interface ClientStartPayload {
   // session to reconnect to, ignore if new session
   sessionKey?: string | null;
 
-  // voiceflow project API Key (find under settings), do not set for public facing clients
+  // voiceflow project API Key (under settings), do not set for public facing clients
   authorization?: string;
 
   config?: {
@@ -241,12 +241,12 @@ interface ClientStartedPayload {
 
 #### Example
 
-```
+```typescript
 socket.on('client.started', (payload: ClientStartedPayload) => {
   if (payload.newSessionRequired) {
     socket.emit('session.create', {});
   } else {
-		// session is now ready for interactions
+    // session is now ready for interactions
 	}
 });
 ```
