@@ -99,17 +99,17 @@ This represents the back and forth conversation with the agent.
 
 To start the conversation from the beginning, your first action should be:
 
-```
+```typescript
 socket.emit('action.send', {
-	action: { type: 'launch', payload: {} }
+  action: { type: 'launch', payload: {} }
 });
 ```
 
 It is also possible to launch from specific points in the conversation with [events](https://docs.voiceflow.com/docs/introduction-to-events):
 
-```
+```typescript
 socket.emit('action.send', {
-	action: { type: 'event', payload: { event: { name: 'event_name' } } }
+  action: { type: 'event', payload: { event: { name: 'event_name' } } }
 });
 ```
 
@@ -117,9 +117,9 @@ socket.emit('action.send', {
 
 The session ending also signals that the conversation has ended. This can also occur because of timeouts.
 
-```
+```typescript
 socket.on('session.ended', () => {
-	// cleanup code
+  // cleanup code
 })
 ```
 
@@ -138,17 +138,24 @@ interface ClientStartPayload {
   userID: string; // primary user identifier
   projectID: string; // voiceflow projectID
 
-  environmentID?: string; // (versionID) environment to use, [default: "development"]
+  // (versionID) environment to use, [default: "development"]
+  environmentID?: string;
 
-  sessionKey?: string | null; // session to reconnect to, ignore if new session
-  authorization?: string; // voiceflow project API Key (find under settings), do not set for public facing clients
+  // session to reconnect to, ignore if new session
+  sessionKey?: string | null;
+
+  // voiceflow project API Key (find under settings), do not set for public facing clients
+  authorization?: string;
 
   config?: {
-    completionEvents: boolean; // break up LLM responses into live chunks [default: false]
-    userTimezone?: string; // timezone in IANA (tz database) for the vf_user_timezone variable
+    // break up LLM responses into live chunks [default: false]
+    completionEvents: boolean;
 
-		audioEvents: boolean; // enable TTS audio chunk responses
-		audioEncoding?: 'audio/x-mulaw' | 'audio/pcm'; // audio response format
+    // timezone in IANA (tz database) for the vf_user_timezone variable
+    userTimezone?: string;
+
+    audioEvents: boolean; // enable TTS audio chunk responses
+    audioEncoding?: 'audio/x-mulaw' | 'audio/pcm'; // audio response format
   };
 }
 ```
@@ -157,7 +164,7 @@ interface ClientStartPayload {
 
 ```typescript
 socket.emit('client.start', {
-	userID: 'test@test.com',
+  userID: 'test@test.com',
   projectID: '6939bedf69c7ce5ee7a108ed',
 
   environmentID: 'production',
@@ -194,8 +201,11 @@ Sends a user action to the server. A valid session must already exist. Server wi
 ```typescript
 interface ActionSendPayload {
   action: {
-    type: string; // request type: "text" | "intent" | "launch" | "event" | "action" | etc.
-    payload?: string | object; // action-specific payload
+    // request type: "text" | "intent" | "launch" | "event" | "action" | etc.
+    type: string;
+    
+    // action-specific payload
+    payload?: string | object;
   };
 }
 ```
@@ -225,7 +235,7 @@ Server ack to `client.start`,  informs if a new session needs to be created
 
 ```typescript
 interface ClientStartedPayload {
-	newSessionRequired: boolean
+  newSessionRequired: boolean
 }
 ```
 
@@ -274,7 +284,8 @@ Indicates that the conversation session has ended. Client should close the sessi
 
 ```typescript
 interface SessionEndedPayload {
-  reason: string; // reason for session ending (e.g., "end_of_diagram", "inactivity_timeout", etc.)
+  // reason for session ending (e.g., "end_of_diagram", "inactivity_timeout", etc.)
+  reason: string;
 }
 ```
 
@@ -288,8 +299,11 @@ Represents agent responses and debugging information for an action. [See possibl
 
 ```typescript
 type ActionTracePayload = {
-  trace: Trace; // trace object containing agent response data (speak, text, audio, etc.)
-  messageID: string; // message identifier matching the action.send messageID
+  // trace object containing agent response data (speak, text, audio, etc.)
+  trace: Trace;
+  
+  // message identifier matching the action.send messageID
+  messageID: string;
 }
 ```
 
@@ -347,7 +361,7 @@ General error message from the server. May occur at any point during the connect
 
 ```typescript
 interface ErrorPayload {
-	code?: string; // optional error code
+  code?: string; // optional error code
   error: string; // error message
 }
 ```
