@@ -225,7 +225,7 @@ Server ack to `client.start`,  informs if a new session needs to be created
 
 ```typescript
 interface ClientStartedPayload {
-	newSessionRequired: true
+	newSessionRequired: boolean
 }
 ```
 
