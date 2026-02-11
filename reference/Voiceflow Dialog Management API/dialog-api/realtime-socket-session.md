@@ -35,6 +35,10 @@ const socket = io('https://general-runtime.voiceflow.com', {
 
 # Lifecycle
 
+<Callout icon="📘" theme="info">
+  A session is not the same as the socket.io connection. You can disconnect/reconnect multiple times and still continue the same conversation session.
+</Callout>
+
 For more information on socket.io lifecycle management, reference [documentation](https://socket.io/docs/v4/client-api/).
 
 ## Initialization sequence
@@ -91,6 +95,8 @@ This represents the back and forth conversation with the agent.
 
 ## Conversation Lifecycle
 
+#### Start
+
 To start the conversation from the beginning, your first action should be:
 
 ```
@@ -107,7 +113,15 @@ socket.emit('action.send', {
 });
 ```
 
-<br />
+#### End
+
+The session ending also signals that the conversation has ended. This can also occur because of timeouts.
+
+```
+socket.on('session.ended', () => {
+	// cleanup code
+})
+```
 
 # Client events
 
@@ -196,6 +210,10 @@ socket.emit('action.send', {
   }
 });
 ```
+
+<br />
+
+<br />
 
 # Server events
 
