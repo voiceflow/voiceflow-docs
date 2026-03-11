@@ -65,7 +65,7 @@ next:
         Max chunk size affects the total amount of chunks parsed from a document.
         (i.e. larger chunks means less chunks retrieved)
 
-        *Smaller chunk size means:*
+        _Smaller chunk size means:_
 
         * narrower context
         * faster response
@@ -77,9 +77,11 @@ next:
   </tbody>
 </Table>
 
-> 👨‍💻 Tags API has been deprecated
->
-> Tags API stills offers legacy support, subject to change. For the latest tag functionality, you can now use file metadata when uploading files.
+<Callout icon="👨‍💻" theme="default">
+  ### Tags API has been deprecated
+
+  Tags API stills offers legacy support, subject to change. For the latest tag functionality, you can now use file metadata when uploading files.
+</Callout>
 
 ## Example
 
@@ -112,8 +114,7 @@ next:
 			"updatedAt": "2025-06-28T20:06:34.049Z",
 			"status": {
 				"type": "PENDING"
-			},
-			"tags": []
+			}
 		}
 }
 ```
